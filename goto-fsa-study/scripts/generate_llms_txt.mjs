@@ -13,6 +13,9 @@ const deck = JSON.parse(
 const assignments = JSON.parse(
   fs.readFileSync(path.join(dataDir, 'all_assignments_bundle.json'), 'utf8')
 );
+const lectures = JSON.parse(
+  fs.readFileSync(path.join(dataDir, 'structured_lectures.json'), 'utf8')
+);
 
 const lines = [];
 
@@ -85,6 +88,31 @@ for (const slide of deck) {
       lines.push(`| ${cells.join(' | ')} |`);
     }
     lines.push('');
+
+    if (Array.isArray(slide.table.row_details) && slide.table.row_details.length > 0) {
+      lines.push('#### Row-by-Row Formulas & Calculations');
+      slide.table.row_details.forEach((rd, idx) => {
+        if (!rd) return;
+        const rowLabel = slide.table.rows[idx]?.[0] ?? `Row ${idx + 1}`;
+        lines.push(`- **${rowLabel}**`);
+        if (rd.detail_explanation) {
+          lines.push(`  - Explanation: ${rd.detail_explanation}`);
+        }
+        if (rd.formula) {
+          lines.push(`  - Formula: \`${rd.formula}\``);
+        }
+        if (Array.isArray(rd.calc_steps) && rd.calc_steps.length > 0) {
+          lines.push('  - Steps:');
+          for (const step of rd.calc_steps) {
+            lines.push(`    - ${step}`);
+          }
+        }
+        if (rd.data_origin) {
+          lines.push(`  - Source: ${rd.data_origin}`);
+        }
+      });
+      lines.push('');
+    }
   }
 
   if (Array.isArray(slide.cards) && slide.cards.length > 0) {
@@ -119,6 +147,34 @@ for (const slide of deck) {
 
   lines.push('---');
   lines.push('');
+}
+
+if (Array.isArray(lectures) && lectures.length > 0) {
+  lines.push('## Course Frameworks (12-Week FSA Lectures & GoTo Application)');
+  lines.push('');
+  for (const lec of lectures) {
+    lines.push(`### ${lec.week}: ${lec.title}`);
+    if (lec.reading) {
+      lines.push(`*Reading: ${lec.reading}*`);
+    }
+    if (lec.core_question) {
+      lines.push(`- **Core Question:** ${lec.core_question}`);
+    }
+    if (lec.goto_application) {
+      const ga = lec.goto_application;
+      if (ga.title || ga.context || ga.decision) {
+        const parts = [ga.title, ga.context, ga.decision].filter(Boolean);
+        lines.push(`- **GoTo Application:** ${parts.join(' — ')}`);
+      }
+    }
+    if (Array.isArray(lec.study_takeaways) && lec.study_takeaways.length > 0) {
+      lines.push('- **Key Takeaways:**');
+      for (const t of lec.study_takeaways) {
+        lines.push(`  - ${t}`);
+      }
+    }
+    lines.push('');
+  }
 }
 
 if (Array.isArray(assignments) && assignments.length > 0) {
