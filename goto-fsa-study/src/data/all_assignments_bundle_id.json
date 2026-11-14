@@ -1,0 +1,5691 @@
+[
+  {
+    "id": "m1",
+    "code": "Milestone 1",
+    "folder": "Minggu 1-3",
+    "week": "Minggu 1-3",
+    "title": "Analisis Strategi Bisnis & Porter's Five Forces (GOTO)",
+    "summary": "Ekonomi industri, posisi pasar, dan evaluasi Five Forces Porter yang menunjukkan mengapa GoTo menghadapi rivalitas tinggi, daya tawar pembeli dan substitusi menengah, serta tantangan profitabilitas berkelanjutan.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 3/Group4_Milestone1_GOTO.docx",
+    "sections": [
+      {
+        "heading": "Ringkasan Eksekutif & Ruang Lingkup Strategis",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 8, 76-84, 147-152",
+        "paragraphs": [
+          "PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) beroperasi di ekonomi digital Indonesia melalui Layanan On-Demand (mobilitas Gojek, pesan-antar GoFood, logistik), Financial Technology (pembayaran GoPay, pinjaman konsumen, solusi merchant), serta imbalan jasa e-commerce pasca dekonsolidasi Tokopedia.",
+          "Disusun oleh Kelompok 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) untuk mata kuliah Analisis Laporan Keuangan Magister Manajemen Universitas Klabat, Milestone 1 menautkan struktur industri Five Forces Porter ke struktur biaya FY2025 dan profil risiko bagi Investor Ekuitas Publik."
+        ],
+        "tables": [
+          [
+            [
+              "Pilar Strategis / Konteks",
+              "Angka / Temuan FY2025",
+              "Implikasi bagi Pemangku Kepentingan"
+            ],
+            [
+              "Pemangku Kepentingan Target (W1)",
+              "Investor Ekuitas Publik Jangka Panjang",
+              "Membutuhkan laba bersih PSAK di atas biaya ekuitas 8,45%"
+            ],
+            [
+              "Segmen Ekosistem Inti",
+              "On-Demand (67,5%), Fintech (28,3%), E-Comm (4,5%)",
+              "Dua mesin pertumbuhan mengimbangi dekonsolidasi Tokopedia"
+            ],
+            [
+              "Penggerak Utama Five Forces",
+              "Persaingan Industri: TINGGI (Gaya Terkuat)",
+              "Membatasi kenaikan take rate & menjaga beban iklan Rp 3,09T"
+            ],
+            [
+              "Posisi Strategis GoTo",
+              "Hibrida (Cost Leadership + Diferensiasi)",
+              "Tarif mass-market terjangkau + loyalitas ekosistem/AI segmen mapan"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "1.1 Profil Perusahaan & Skala Ekosistem 2025",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 8, 14-18, 41, 63, 150-158; Laporan Laba Rugi Auditan hlm. 17",
+        "paragraphs": [
+          "PT GoTo Gojek Tokopedia Tbk adalah ekosistem teknologi Indonesia hasil penggabungan Gojek dan Tokopedia. Perseroan menghubungkan konsumen, mitra pengemudi, merchant, penjual, dan pengguna jasa keuangan dalam satu infrastruktur bersama serta memiliki 24,99% entitas asosiasi Tokopedia.",
+          "Pada FY2025, GoTo membukukan pendapatan bersih konsolidasian Rp 18,322 triliun (+15,3% YoY) dan EBITDA Grup Disesuaikan sebesar Rp 2,008 triliun, namun tetap mencatat rugi usaha PSAK Rp 378,254 miliar akibat besarnya investasi pemasaran dan pengembangan produk."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik Operasional & Keuangan 2025",
+              "Realisasi / Auditan FY2025",
+              "Signifikansi Strategis"
+            ],
+            [
+              "Pengguna Bertransaksi Tahunan (ATU)",
+              "66 juta pengguna",
+              "Likuiditas ekosistem & corong cross-selling nasional"
+            ],
+            [
+              "Merchant Terdaftar",
+              "Lebih dari 6,4 juta merchant",
+              "Mendukung ragam GoFood serta penerimaan QRIS GoPay"
+            ],
+            [
+              "Mitra Pengemudi Terdaftar",
+              "Lebih dari 3 juta mitra",
+              "Armada pemenuhan dua sisi yang sulit ditiru pendatang baru"
+            ],
+            [
+              "Pendapatan Bersih Konsolidasian",
+              "Rp 18.322 miliar (Rp 18,322T)",
+              "Tumbuh +15,3% YoY; ditopang Fintech (+74,1%) & On-Demand (+13,8%)"
+            ],
+            [
+              "EBITDA Grup Disesuaikan",
+              "Rp 2.008 miliar (Rp 2,008T)",
+              "Proksi kinerja non-GAAP positif di luar beban non-kas & insentif"
+            ],
+            [
+              "Beban Penjualan & Pemasaran",
+              "Rp 3.090 miliar (Rp 3,090T)",
+              "Naik +8% YoY untuk mempertahankan pangsa melawan Grab & Shopee"
+            ],
+            [
+              "Beban Pengembangan Produk",
+              "Rp 2.152 miliar (Rp 2,152T)",
+              "Naik +23% YoY untuk infrastruktur AI, kredit digital & keamanan"
+            ],
+            [
+              "Rugi Usaha (EBIT PSAK)",
+              "(Rp 378,254 miliar)",
+              "Menyusut 83,1% dari FY2024 (-Rp 2.241 M), namun masih negatif"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+        "evidence_caption": "Laporan Laba Rugi Auditan FY2025 yang mengonfirmasi Pendapatan Bersih Rp 18,322T dan Rugi Usaha -Rp 378,3 M."
+      },
+      {
+        "heading": "1.2 Tinjauan Industri & Struktur Pasar Digital Indonesia",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 40, 46, 147, 168-169; Meilina (2025); Ahdiat (2026); Ridwan (2026)",
+        "paragraphs": [
+          "GoTo bersaing di industri layanan on-demand, layanan e-commerce, dan teknologi finansial Indonesia. Efek jaringan memungkinkan platform multi-produk menyebar biaya teknologi pada volume transaksi yang lebih besar.",
+          "Permintaan makro terus bertumbuh: pada 2025 ekonomi digital Indonesia mencapai ~USD 99 miliar GMV, pembayaran digital ~USD 538 miliar GTV, pinjaman digital ~USD 13 miliar, serta transportasi & pesan-antar makanan ~USD 10 miliar. Namun kebiasaan multi-homing lintas Grab, Maxim, inDrive, ShopeeFood, DANA, OVO, dan ShopeePay memicu persaingan akuisisi yang ketat."
+        ],
+        "tables": [
+          [
+            [
+              "Vertikal Digital",
+              "Skala Pasar Indonesia 2025",
+              "Platform GoTo",
+              "Pesaing Langsung",
+              "Hambatan Pindah Platform"
+            ],
+            [
+              "Pembayaran & Pinjaman Digital",
+              "USD 538M GTV / USD 13M Kredit",
+              "GoPay & GoPay Pinjam",
+              "DANA, ShopeePay, OVO, Bank Digital",
+              "Rendah (standar QRIS)"
+            ],
+            [
+              "Transportasi & Makanan Online",
+              "USD 10M Gabungan GMV",
+              "Gojek & GoFood",
+              "Grab, GrabFood, ShopeeFood, Maxim, inDrive",
+              "Rendah (pengguna sensitif harga)"
+            ],
+            [
+              "Ekonomi Digital Total",
+              "USD 99M Total GMV",
+              "One GoTo + 24,99% Tokopedia",
+              "Shopee, TikTok-Tokopedia, Blibli, BUKA",
+              "Menengah di dalam ekosistem"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.1 Ancaman Pendatang Baru (Rendah hingga Menengah)",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 8, 63, 76-84, 180-183",
+        "paragraphs": [
+          "Ancaman Pendatang Baru bagi GoTo dinilai Rendah hingga Menengah. Menyamai jaringan dua sisi nasional GoTo (66 juta ATU, 6,4 juta+ merchant, 3 juta+ pengemudi) menuntut modal besar, keamanan siber, serta lisensi sistem pembayaran Bank Indonesia dan OJK.",
+          "Meski demikian, pendatang baru pada ceruk tunggal (seperti aplikasi ojek komisi rendah di kota tertentu) masih bisa masuk, sehingga ancaman tidak sepenuhnya Rendah."
+        ],
+        "tables": [
+          [
+            [
+              "Dimensi Gaya Porter 1",
+              "Penilaian / Peringkat",
+              "Bukti Empiris (Laporan GoTo 2025)"
+            ],
+            [
+              "Peringkat Keseluruhan",
+              "RENDAH KE MENENGAH",
+              "Efek jaringan dua sisi & izin regulator menciptakan hambatan skala"
+            ],
+            [
+              "Hambatan Skala Jaringan",
+              "Hambatan Tinggi",
+              "66 juta pengguna aktif tahunan, 6,4 juta+ merchant, 3 juta+ driver"
+            ],
+            [
+              "Hambatan Regulasi & Modal",
+              "Hambatan Tinggi",
+              "Izin BI/QRIS, kepatuhan OJK, belanja pengembangan produk Rp 2,15T/thn"
+            ],
+            [
+              "Risiko Masuk Ceruk Spesifik",
+              "Kerentanan Menengah",
+              "Pesaing berbiaya tipis masih bisa membidik satu kota atau segmen"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.2 Daya Tawar Pemasok (Rendah)",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 325; Catatan 26 Laporan Keuangan Konsolidasian",
+        "paragraphs": [
+          "Daya Tawar Pemasok dinilai Rendah. Kebijakan seleksi vendor formal, pengadaan transparan sesuai Kode Etik Vendor, dan model layanan digital meminimalkan ketergantungan pada pemasok bahan baku fisik.",
+          "Pada FY2025, tidak ada satu pun pemasok pihak ketiga yang melebihi 10% pendapatan bersih konsolidasian (Catatan 26), sehingga risiko dominasi vendor tetap terkendali."
+        ],
+        "tables": [
+          [
+            [
+              "Dimensi Gaya Porter 2",
+              "Penilaian / Peringkat",
+              "Bukti Empiris (Laporan GoTo 2025)"
+            ],
+            [
+              "Peringkat Keseluruhan",
+              "RENDAH",
+              "Tata kelola pengadaan & tiadanya pemasok dominan menjaga struktur biaya"
+            ],
+            [
+              "Konsentrasi Pemasok (Catatan 26)",
+              "Di Bawah Batas 10%",
+              "Tidak ada vendor pihak ketiga > 10% dari pendapatan bersih 2025"
+            ],
+            [
+              "Basis Mitra Pengemudi",
+              "Terfragmentasi (3 Juta+)",
+              "Jutaan mitra independen mencegah kekuatan tawar tunggal pada tarif"
+            ],
+            [
+              "Infrastruktur Cloud & Teknologi",
+              "Risiko Terkendali",
+              "Paparan vendor cloud global & kurs dikelola via kebijakan pengadaan"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.3 Daya Tawar Pembeli (Menengah)",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 8, 56, 148, 152, 168-169; Catatan 25",
+        "paragraphs": [
+          "Daya Tawar Pembeli dinilai Menengah. Konsumen sangat sensitif terhadap harga dan promo sehingga GoTo wajib menjaga subsidi ongkir, cashback, dan paket hemat mass-market sekaligus kecepatan layanan untuk segmen mapan.",
+          "Kekuatan pembeli tidak mencapai Tinggi karena basis pengguna sangat terfragmentasi (66 juta ATU dan 6,4 juta+ merchant), serta tidak ada pelanggan tunggal yang menyumbang >= 10% pendapatan (Catatan 25)."
+        ],
+        "tables": [
+          [
+            [
+              "Dimensi Gaya Porter 3",
+              "Penilaian / Peringkat",
+              "Bukti Empiris (Laporan GoTo 2025)"
+            ],
+            [
+              "Peringkat Keseluruhan",
+              "MENENGAH",
+              "Sensitivitas harga kolektif diimbangi fragmentasi 66 juta pengguna"
+            ],
+            [
+              "Konsentrasi Pelanggan (Cat. 25)",
+              "< 10% Pendapatan",
+              "Tidak ada satu pelanggan pun yang menyumbang >= 10% pendapatan bersih"
+            ],
+            [
+              "Elastisitas Promo & Insentif",
+              "Tekanan Kolektif Kuat",
+              "Mendorong kebutuhan cashback, subsidi ongkir, dan paket Hemat"
+            ],
+            [
+              "Strategi Segmentasi",
+              "Strategi Dua Lapis",
+              "Memisahkan layanan ekonomis pasar massal vs. prioritas berkecepatan tinggi"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.4 Ancaman Produk atau Jasa Substitusi (Menengah)",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 77-82, 147",
+        "paragraphs": [
+          "Ancaman Produk Substitusi dinilai Menengah. Konsumen dapat memenuhi kebutuhan serupa tanpa GoTo melalui transportasi umum konvensional, makan di tempat/masak sendiri, atau transfer bank BI-FAST dan kartu debit/tunai alih-alih GoPay.",
+          "GoTo meredam tekanan ini dengan mengintegrasikan substitusi tersebut ke dalam ekosistemnya, misalnya GoTransit (KRL + GoRide), GoDineIn untuk makan di restoran, serta integrasi GoPay dengan rekening perbankan."
+        ],
+        "tables": [
+          [
+            [
+              "Segmen Bisnis",
+              "Substitusi Eksternal / Luring Utama",
+              "Biaya Pindah",
+              "Respons Integrasi Ekosistem GoTo"
+            ],
+            [
+              "Mobilitas (GoRide / GoCar)",
+              "Transportasi publik (KRL, TransJakarta), kendaraan pribadi",
+              "Rendah",
+              "GoTransit menggabungkan tiket KRL + perjalanan GoRide"
+            ],
+            [
+              "Pesan-Antar (GoFood)",
+              "Makan di tempat, masak di rumah, pemesanan langsung UMKM",
+              "Rendah",
+              "GoDineIn & GoFood Pickup menjaga keterlibatan pelanggan"
+            ],
+            [
+              "Pembayaran (GoPay)",
+              "Aplikasi mobile bank (BI-FAST), kartu debit/kredit, tunai",
+              "Rendah",
+              "Aplikasi GoPay terhubung langsung ke sumber dana rekening bank"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.5 Persaingan Antarperusahaan Sejenis (Tinggi - Gaya Terkuat)",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 40, 46, 56, 147, 155-158, 168-169; Ahdiat (2026); Ridwan (2026)",
+        "paragraphs": [
+          "Persaingan di antara pemain eksisting dinilai Tinggi dan menjadi kendala struktural terkuat terhadap ekspansi marjin GoTo. Seluruh vertikal utama GoTo berhadapan dengan pesaing berkapitalisasi besar dengan fitur serupa tanpa eksklusivitas pengguna.",
+          "Data pasar 2025 menempatkan GrabFood pada 46% pangsa GMV pesan-antar makanan Indonesia dibanding GoFood 31% dan ShopeeFood 23%. Untuk mempertahankan keterlibatan, beban pemasaran 2025 naik 8% menjadi Rp 3,090 triliun dan pengembangan produk naik 23% menjadi Rp 2,152 triliun, menjaga rugi usaha tetap negatif (-Rp 378,3 miliar)."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik Rivalitas / Bukti Pasar",
+              "Data Empiris FY2025",
+              "Konsekuensi Struktural bagi GoTo"
+            ],
+            [
+              "Pangsa Pesan-Antar Makanan (2025)",
+              "GrabFood 46% | GoFood 31% | ShopeeFood 23%",
+              "GoFood di posisi #2 di bawah GrabFood; ShopeeFood terus ekspansif"
+            ],
+            [
+              "Pesaing Mobilitas & Dompet Digital",
+              "Grab, Maxim, inDrive; DANA, ShopeePay, OVO",
+              "Persaingan komisi membatasi kemampuan menaikkan tarif sepihak"
+            ],
+            [
+              "Beban Penjualan & Pemasaran",
+              "Rp 3.090 miliar (+8% YoY di FY2025)",
+              "Menyerap 16,9% pendapatan untuk mempertahankan frekuensi transaksi"
+            ],
+            [
+              "Beban Pengembangan Produk",
+              "Rp 2.152 miliar (+23% YoY di FY2025)",
+              "Belanja wajib R&D AI, algoritma rute & sistem skoring kredit"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "3. Posisi Strategis Hibrida GoTo",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 44, 46, 56-57, 76-84, 168-169",
+        "paragraphs": [
+          "GoTo menjalankan posisi strategis campuran antara kepemimpinan biaya (efisiensi cost-to-serve serta tarif terjangkau bagi pasar massal) dan diferensiasi (kualitas layanan cepat, integrasi GoPay-Gojek, personalisasi berbasis AI, dan kepercayaan merek).",
+          "Posisi hibrida ini konsisten dengan Five Forces: rendahnya daya tawar pemasok mendukung efisiensi operasi, sedangkan rivalitas Tinggi menuntut harga kompetitif sekaligus kepraktisan ekosistem terpadu."
+        ],
+        "tables": [
+          [
+            [
+              "Pilar Strategis",
+              "Fokus Kompetitif",
+              "Bukti Eksekusi di FY2025"
+            ],
+            [
+              "Dimensi Cost Leadership",
+              "Tarif Terjangkau & Efisiensi Biaya Layanan",
+              "Beban G&A turun 9,3% YoY; rugi usaha menyusut 83,1% saat pendapatan +15,3%"
+            ],
+            [
+              "Dimensi Diferensiasi",
+              "Kecepatan, Kualitas, AI & Ekosistem Terpadu",
+              "66 juta ATU memakai lintas produk Gojek, GoFood & pinjaman GoPay"
+            ],
+            [
+              "Kerentanan Strategis",
+              "Menuntut belanja ganda promo & teknologi",
+              "Total S&M + R&D = Rp 5,24T sehingga EBIT statutori tetap negatif (-Rp 378 M)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "4.1-4.3 Risiko Kompresi Marjin, Substitusi & Ekspansi Kredit Fintech",
+        "source_citation": "Laporan Tahunan GoTo 2025, hlm. 14-18, 46, 56-57, 77-82, 152, 180-183; Catatan 35 LK Auditan",
+        "paragraphs": [
+          "Tiga risiko utama menerjemahkan struktur industri langsung ke risiko laporan keuangan: (4.1) Risiko kompresi marjin akibat perang tarif/promo, (4.2) Risiko perpindahan pelanggan dan substitusi lintas aplikasi, serta (4.3) Risiko kredit dan regulasi pada ekspansi Financial Technology.",
+          "Catatan 35 menunjukkan risiko neraca nyata seiring ekspansi pinjaman GoPay: piutang pembiayaan bersih melonjak +72,6% menjadi Rp 2,731 triliun pada 2025 (dari Rp 1,582T pada 2024), sedangkan penyisihan kerugian penurunan nilai melonjak lebih dari dua kali lipat (+134,9%) dari Rp 173,552 miliar menjadi Rp 407,684 miliar di bawah pengawasan ketat BI dan OJK."
+        ],
+        "tables": [
+          [
+            [
+              "Kategori Risiko Bisnis Utama",
+              "Keterkaitan Five Forces",
+              "Bukti Keuangan / Catatan LK 2025",
+              "Dampak pada Laporan Keuangan"
+            ],
+            [
+              "4.1 Kompresi Marjin Harga & Promo",
+              "Rivalitas Tinggi + Daya Tawar Pembeli",
+              "S&M Rp 3,090T + R&D Rp 2,152T -> EBIT -(378,3) M",
+              "Kenaikan subsidi mendorong rasio OpEx menuju skenario Konservatif 85%"
+            ],
+            [
+              "4.2 Risiko Pindah Platform & Substitusi",
+              "Biaya Pindah Rendah + Substitusi",
+              "Pertumbuhan 15,3% di tengah agresi GrabFood & ShopeeFood",
+              "Membatasi kenaikan komisi tanpa menggerus frekuensi GTV"
+            ],
+            [
+              "4.3 Risiko Kredit & Regulasi Fintech",
+              "Kepatuhan BI/OJK + Kredit Konsumen",
+              "Piutang pembiayaan Rp 2,731T (+72,6%); CKPN Rp 407,7 M (+134,9%)",
+              "Lonjakan kredit bermasalah dapat menggerus perbaikan laba segmen Fintech"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "5. Penilaian Strategis Keseluruhan & Daftar Pustaka",
+        "source_citation": "Naskah Akhir Milestone 1 Kelompok 4 & Daftar Pustaka",
+        "paragraphs": [
+          "Kesimpulan: Industri platform digital Indonesia memadukan pertumbuhan permintaan makro yang kuat dengan tantangan profitabilitas struktural. GoTo memiliki hambatan masuk yang kokoh dan daya tawar pemasok yang rendah, namun rivalitas Tinggi serta kekuatan pembeli/substitusi Menengah mencegah kenaikan marjin secara instan.",
+          "Bagi GoTo maupun investor ekuitas publik, pertanyaan krusial yang diuji pada Milestone 2-4 adalah apakah skala ekosistem dan ekspansi Fintech mampu menghasilkan laba bersih PSAK berkelanjutan melebihi biaya ekuitas tanpa mengorbankan kualitas kredit atau membakar cadangan kas."
+        ],
+        "tables": [
+          [
+            [
+              "Kunci Referensi",
+              "Dokumen Sumber / Penulis",
+              "Peran dalam Analisis Milestone 1"
+            ],
+            [
+              "Laporan Utama",
+              "PT GoTo Gojek Tokopedia Tbk (2026). Laporan Tahunan & LK Auditan 2025.",
+              "Basis data pengguna, beban S&M/R&D, serta Catatan 25, 26, dan 35"
+            ],
+            [
+              "Pangsa Pesan-Antar",
+              "Ahdiat, A. (20 Feb 2026). Databoks pangsa pasar ShopeeFood, GrabFood, GoFood.",
+              "Mendukung pangsa pasar GMV 46% / 31% / 23% pada layanan pesan-antar"
+            ],
+            [
+              "Komparasi Komisi Ojol",
+              "Meilina, K. (20 Mei 2025). Katadata perbandingan komisi Gojek, Grab, Maxim, inDrive.",
+              "Membuktikan ketatnya persaingan tarif & komisi di segmen mobilitas"
+            ],
+            [
+              "Survei Dompet Digital",
+              "Ridwan, A. (10 Apr 2026). Databoks adopsi e-wallet (DANA, GoPay, OVO, ShopeePay).",
+              "Menunjukkan perilaku pengguna multi-aplikasi pada pembayaran digital"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m2",
+    "code": "Milestone 2",
+    "folder": "Minggu 4-6",
+    "week": "Minggu 4-6",
+    "title": "Paket Rasio Keuangan, Common-Size & Analisis DuPont ROE 3-Langkah",
+    "summary": "Tren common-size multitahun, likuiditas (2,73x), solvabilitas (DER 0,27x), dekomposisi ROE DuPont 3-langkah (-5,2%), pembanding Bukalapak, dan Altman Z''-Score Pasar Berkembang (-10,90).",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "Ringkasan Paket Rasio Keuangan & DuPont",
+        "source_citation": "Buku Kerja Milestone 2 Kelompok 4 (Data Historis, Rasio, DuPont, Pembanding Sejawat)",
+        "paragraphs": [
+          "Milestone 2 mengevaluasi kinerja keuangan PT GoTo Gojek Tokopedia Tbk sepanjang FY2023-FY2025 melalui laporan Common-Size, Likuiditas, Efisiensi, Solvabilitas, Profitabilitas, ROE DuPont 3-Langkah, Pembanding Sejawat (Bukalapak), serta Altman Z''-Score Pasar Berkembang.",
+          "Temuan utama: GoTo berhasil menyusutkan marjin rugi usaha dari -69,5% ke -2,1% dan menjaga bantalan kas likuid (Current Ratio 2,73x; Kas 47,5% Aset), namun tetap mencatat ROE negatif (-5,2%), ROA negatif (-3,3%), dan Z''-Score zona distress (-10,90) akibat defisit saldo laba akumulasi sebesar -Rp 214,1 triliun."
+        ],
+        "tables": [
+          [
+            [
+              "Pilar Diagnostik Milestone 2",
+              "2023",
+              "2024",
+              "2025",
+              "Arah Tren Tiga Tahun"
+            ],
+            [
+              "Skala & Pertumbuhan Pendapatan (Rp M)",
+              "14.785",
+              "15.894 (+7,5%)",
+              "18.322 (+15,3%)",
+              "Akselerasi pasca dekonsolidasi Tokopedia"
+            ],
+            [
+              "Likuiditas (Current / Quick Ratio)",
+              "2,62x / 2,61x",
+              "2,62x / 2,62x",
+              "2,73x / 2,73x",
+              "Modal kerja positif kuat Rp 18,41 triliun"
+            ],
+            [
+              "Solvabilitas (Debt-to-Equity)",
+              "0,10x",
+              "0,13x",
+              "0,27x",
+              "Masih moderat, namun utang berlipat ganda di 2025"
+            ],
+            [
+              "ROE DuPont 3-Langkah",
+              "-253,4%",
+              "-18,0%",
+              "-5,2%",
+              "Perbaikan didorong penyusutan rugi, masih negatif"
+            ],
+            [
+              "Altman Z''-Score (Pasar Berkembang)",
+              "-10,17",
+              "-11,41",
+              "-10,90",
+              "Zona Distress (< 1,10) akibat akumulasi defisit"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "1. Tren Common-Size & Laporan Laba Rugi Multitahun (2023-2025)",
+        "source_citation": "Laporan Laba Rugi Konsolidasian Auditan (FY2023-FY2025), hlm. 17; Buku Kerja M2 Kelompok 4",
+        "paragraphs": [
+          "Angka pada tabel di bawah disajikan dalam Rp juta; persentase menunjukkan perubahan tahunan (YoY). Perubahan negatif pada pos rugi berarti rugi menyusut (membaik), bukan memburuk. Catatan: N/M (Not Meaningful) karena pajak berubah dari manfaat (2023) menjadi beban pajak (2024).",
+          "Pendapatan tumbuh +7,5% di 2024 dan +15,3% di 2025 mencapai Rp 18,322 triliun. Karena COGS hanya naik +4,5% di 2025 dan beban usaha hampir datar (+2,2%), rugi usaha menyusut drastis dari Rp 10,279 triliun (2023) menjadi Rp 2,241 triliun (2024) dan Rp 378,254 miliar (2025), sementara rugi bersih turun menjadi Rp 1,502 triliun."
+        ],
+        "tables": [
+          [
+            [
+              "Pos Laporan Laba Rugi (Rp juta)",
+              "2023",
+              "2024",
+              "YoY ’23->’24",
+              "2025",
+              "YoY ’24->’25"
+            ],
+            [
+              "Pendapatan Bersih",
+              "14.785.492",
+              "15.894.462",
+              "7,5%",
+              "18.322.117",
+              "15,3%"
+            ],
+            [
+              "Beban Pokok Pendapatan (COGS)",
+              "5.093.179",
+              "7.413.392",
+              "45,6%",
+              "7.746.034",
+              "4,5%"
+            ],
+            [
+              "Laba Kotor",
+              "9.692.313",
+              "8.481.070",
+              "-12,5%",
+              "10.576.083",
+              "24,7%"
+            ],
+            [
+              "Beban Usaha (SG&A & Teknologi)",
+              "19.971.283",
+              "10.721.944",
+              "-46,3%",
+              "10.954.337",
+              "2,2%"
+            ],
+            [
+              "Laba / (Rugi) Usaha (EBIT)",
+              "(10.278.970)",
+              "(2.240.874)",
+              "-78,2%",
+              "(378.254)",
+              "-83,1%"
+            ],
+            [
+              "Beban / (Penghasilan) Lain-lain",
+              "80.355.448",
+              "3.034.956",
+              "-96,2%",
+              "708.350",
+              "-76,7%"
+            ],
+            [
+              "Laba / (Rugi) Sebelum Pajak (EBT)",
+              "(90.634.418)",
+              "(5.275.830)",
+              "-94,2%",
+              "(1.086.604)",
+              "-79,4%"
+            ],
+            [
+              "Beban / (Manfaat) Pajak Penghasilan",
+              "(115.692)",
+              "189.025",
+              "N/M",
+              "415.081",
+              "119,6%"
+            ],
+            [
+              "Laba / (Rugi) Bersih Konsolidasian",
+              "(90.518.726)",
+              "(5.464.855)",
+              "-94,0%",
+              "(1.501.685)",
+              "-72,5%"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+        "evidence_caption": "Laporan Laba Rugi LK GOTO 2025 (hlm. 17): Pendapatan Rp 18,32T, Laba Kotor Rp 10,58T, dan Rugi Usaha -Rp 378,3M."
+      },
+      {
+        "heading": "2. Analisis Vertikal Common-Size (Laba Rugi & Neraca)",
+        "source_citation": "Buku Kerja M2 Kelompok 4, Sheet Common-Size Analysis; LK GOTO 2025 hlm. 15-17",
+        "paragraphs": [
+          "Analisis vertikal laba rugi menegaskan perbaikan efisiensi struktur biaya: COGS turun dari 46,6% pendapatan (2024) menjadi 42,3% (2025), mendongkrak marjin kotor dari 53,4% ke 57,7%, sedangkan beban usaha menyusut dari 135,1% (2023) menjadi 59,8% (2025). Meski demikian, porsi OpEx (59,8%) masih lebih besar daripada Marjin Kotor (57,7%), meninggalkan marjin EBIT -2,1%.",
+          "Pada neraca common-size, Kas merupakan aset terbesar sebesar 47,5% dari Total Aset (Rp 21,755T), sementara porsi Liabilitas naik dari 29,6% (2024) ke 37,3% (2025) akibat tambahan pinjaman baru dan Ekuitas tergerus dari 70,4% menjadi 62,7%."
+        ],
+        "tables": [
+          [
+            [
+              "Komponen Common-Size",
+              "2023",
+              "2024",
+              "2025",
+              "Pergeseran Struktural Tiga Tahun"
+            ],
+            [
+              "LABA RUGI (% DARI PENDAPATAN)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Beban Pokok Pendapatan (COGS %)",
+              "34,4%",
+              "46,6%",
+              "42,3%",
+              "Rata-rata 3 thn 41,1%; membaik -4,3 poin di 2025"
+            ],
+            [
+              "Marjin Laba Kotor (Gross Margin)",
+              "65,6%",
+              "53,4%",
+              "57,7%",
+              "Rata-rata 3 thn 58,9%; pulih pasca Tokopedia"
+            ],
+            [
+              "Beban Usaha (% Pendapatan)",
+              "135,1%",
+              "67,5%",
+              "59,8%",
+              "Leverage biaya tetap memangkas rasio OpEx 75 poin"
+            ],
+            [
+              "Marjin Usaha (EBIT / Pendapatan)",
+              "-69,5%",
+              "-14,1%",
+              "-2,1%",
+              "Mendekati titik impas namun masih merugi"
+            ],
+            [
+              "Marjin Laba Bersih (% Pendapatan)",
+              "-612,2%",
+              "-34,4%",
+              "-8,2%",
+              "2023 tertekan penurunan nilai goodwill Rp 78,8T"
+            ],
+            [
+              "NERACA (% DARI TOTAL ASET)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Kas & Setara Kas (% Aset)",
+              "46,5%",
+              "44,4%",
+              "47,5%",
+              "Penopang likuiditas utama (Rp 21,76 triliun)"
+            ],
+            [
+              "Total Liabilitas (% Aset)",
+              "34,0%",
+              "29,6%",
+              "37,3%",
+              "Naik +7,7 poin akibat pinjaman bank baru Rp 3,72T"
+            ],
+            [
+              "Total Ekuitas (% Aset)",
+              "66,0%",
+              "70,4%",
+              "62,7%",
+              "Tertekan akumulasi defisit -Rp 214,1 triliun"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Neraca Aset Auditan LK GOTO 2025 (hlm. 15): Kas Rp 21,76T mencakup 47,5% dari Total Aset."
+      },
+      {
+        "heading": "3. Analisis Likuiditas & Efisiensi Modal Kerja",
+        "source_citation": "Buku Kerja M2 Kelompok 4, Sheet Ratio Analysis; LK GOTO 2025 hlm. 15",
+        "paragraphs": [
+          "Likuiditas jangka pendek GoTo sangat terjaga pada FY2025 dengan Current Ratio dan Quick Ratio masing-masing sebesar 2,73x, ditopang modal kerja bersih positif sebesar Rp 18,412 triliun.",
+          "Efisiensi aset turut membaik: Perputaran Total Aset (Asset Turnover) naik dari 0,27x (2023) ke 0,40x (2025), periode penagihan piutang (DSO akhir) menjadi 10,9 hari, serta Siklus Konversi Kas negatif -47,5 hari yang berarti GoTo menagih kas jauh sebelum membayar pemasok."
+        ],
+        "tables": [
+          [
+            [
+              "Rasio Likuiditas & Efisiensi",
+              "2023",
+              "2024",
+              "2025",
+              "Interpretasi Operasional"
+            ],
+            [
+              "Current Ratio (Rasio Lancar)",
+              "2,62x",
+              "2,62x",
+              "2,73x",
+              "Likuiditas sangat kuat di atas batas sehat 2,0x"
+            ],
+            [
+              "Quick Ratio (Rasio Cepat)",
+              "2,61x",
+              "2,62x",
+              "2,73x",
+              "Persediaan hampir nihil karena model platform digital"
+            ],
+            [
+              "Modal Kerja Bersih (Rp miliar)",
+              "20.795",
+              "16.293",
+              "18.412",
+              "Bantalan Rp 18,41T menopang kebutuhan operasional"
+            ],
+            [
+              "Perputaran Total Aset (ATO)",
+              "0,27x",
+              "0,37x",
+              "0,40x",
+              "Produktivitas aset membaik +48% sepanjang 2023-2025"
+            ],
+            [
+              "Days Sales Outstanding (DSO)",
+              "14,8 hari",
+              "46,9 hari*",
+              "10,9 hari",
+              "Penagihan cepat 10,9 hari (*2024 termasuk piutang non-usaha)"
+            ],
+            [
+              "Days Inventory Outstanding (DIO)",
+              "12,4 hari",
+              "1,3 hari",
+              "0,7 hari",
+              "Hampir tanpa persediaan fisik pasca lepasnya Tokopedia"
+            ],
+            [
+              "Days Payable Outstanding (DPO)",
+              "83,3 hari",
+              "61,1 hari",
+              "59,1 hari",
+              "Kredit pemasok 59,1 hari menghasilkan modal kerja negatif"
+            ],
+            [
+              "Siklus Konversi Kas (CCC)",
+              "-56,1 hari",
+              "-12,9 hari",
+              "-47,5 hari",
+              "GoTo menerima kas 47,5 hari lebih cepat sebelum bayar utang"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "4. Solvabilitas, Kenaikan Utang Dua Kali Lipat & Profitabilitas",
+        "source_citation": "Buku Kerja M2 Kelompok 4, Sheet Ratio Analysis; Catatan 19 & 20 LK Auditan",
+        "paragraphs": [
+          "Meskipun leverage keseluruhan masih moderat (62,7% aset didanai ekuitas), total utang berbunga GoTo berlipat dua pada FY2025 dari Rp 3,820 triliun menjadi Rp 7,743 triliun, mengerek Debt-to-Equity dari 0,13x menjadi 0,27x dan Debt-to-Assets dari 8,8% menjadi 16,9%.",
+          "Walaupun marjin kotor pulih ke 57,7% dan rugi usaha menyusut ke -2,1%, profitabilitas tetap negatif dengan ROA -3,3% dan ROE -5,2%, sehingga Rasio Cakupan Bunga tetap negatif (-0,71x terhadap beban bunga Rp 535 M)."
+        ],
+        "tables": [
+          [
+            [
+              "Rasio Solvabilitas & Profitabilitas",
+              "2023",
+              "2024",
+              "2025",
+              "Evaluasi Risiko Keuangan"
+            ],
+            [
+              "Total Utang Berbunga (Rp miliar)",
+              "3.460",
+              "3.820",
+              "7.743",
+              "Lonjakan utang +102,7% YoY dari fasilitas pinjaman bank"
+            ],
+            [
+              "Debt-to-Equity (DER)",
+              "0,10x",
+              "0,13x",
+              "0,27x",
+              "Masih moderat, namun utang naik saat ekuitas tergerus"
+            ],
+            [
+              "Debt-to-Total-Assets (DAR)",
+              "6,4%",
+              "8,8%",
+              "16,9%",
+              "Porsi utang terhadap aset naik hampir 3x lipat"
+            ],
+            [
+              "Interest Coverage Ratio (ICR)",
+              "-27,8x",
+              "-4,5x",
+              "-0,71x",
+              "EBIT belum mampu menutup beban bunga Rp 535 miliar"
+            ],
+            [
+              "Marjin Laba Kotor (Gross Margin)",
+              "65,6%",
+              "53,4%",
+              "57,7%",
+              "Pulih +4,3 poin persentase pada FY2025"
+            ],
+            [
+              "Marjin Usaha (Operating Margin)",
+              "-69,5%",
+              "-14,1%",
+              "-2,1%",
+              "Mendekati impas, belum mencetak laba usaha"
+            ],
+            [
+              "Imbal Hasil Aset (ROA)",
+              "-167,3%",
+              "-12,6%",
+              "-3,3%",
+              "Imbal hasil negatif atas basis aset Rp 45,76 triliun"
+            ],
+            [
+              "Imbal Hasil Ekuitas (ROE)",
+              "-253,4%",
+              "-18,0%",
+              "-5,2%",
+              "Terus menggerus nilai buku pemegang saham"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
+        "evidence_caption": "Liabilitas & Ekuitas LK GOTO 2025 (hlm. 16): Utang berlipat dua menjadi Rp 7,74T dan akumulasi defisit -Rp 214,1T."
+      },
+      {
+        "heading": "5. Dekomposisi ROE DuPont Tiga Langkah",
+        "source_citation": "Buku Kerja M2 Kelompok 4, Sheet DuPont Analysis",
+        "paragraphs": [
+          "Dekomposisi DuPont 3-Langkah (ROE = Marjin Bersih x Perputaran Aset x Pengganda Ekuitas) membuktikan pemulihan ROE GoTo dari -253,4% (2023) ke -18,0% (2024) dan -5,2% (2025) terutama didorong oleh penyusutan rugi marjin bersih serta kenaikan produktivitas aset (+0,13x).",
+          "Leverage bukan pendorong utama (Equity Multiplier hanya naik tipis dari 1,51x menjadi 1,59x), menandakan perbaikan kinerja berasal dari efisiensi operasional riil, meski marjin bersih yang masih negatif menahan ROE tetap di bawah nol."
+        ],
+        "tables": [
+          [
+            [
+              "Komponen DuPont 3-Langkah",
+              "2023",
+              "2024",
+              "2025"
+            ],
+            [
+              "Marjin Laba Bersih (Net Margin)",
+              "-612,2%",
+              "-34,4%",
+              "-8,2%"
+            ],
+            [
+              "Perputaran Aset (Asset Turnover)",
+              "0,27x",
+              "0,37x",
+              "0,40x"
+            ],
+            [
+              "Pengganda Ekuitas (Equity Multiplier)",
+              "1,51x",
+              "1,42x",
+              "1,59x"
+            ],
+            [
+              "Imbal Hasil Ekuitas (ROE)",
+              "-253,4%",
+              "-18,0%",
+              "-5,2%"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "6. Pembanding Sejawat (GoTo vs. Bukalapak) & Kesimpulan Strategis",
+        "source_citation": "Buku Kerja M2 Kelompok 4, Sheet Peer Benchmark; Laporan Keuangan FY2025 GoTo & Bukalapak",
+        "paragraphs": [
+          "Perbandingan FY2025 terhadap emiten digital sejenis di BEI, PT Bukalapak.com Tbk (BUKA), menyoroti dua profil yang kontras. GoTo mencatatkan perputaran aset 60% lebih tinggi (0,40x dibanding BUKA 0,25x), menandakan monetisasi ekosistem yang lebih aktif per rupiah aset.",
+          "Sebaliknya, Bukalapak tidak memiliki utang berbunga (DER 0,00x), rasio lancar 37,07x, serta marjin bersih positif +48,4% (ROE +12,4%) dari hasil bunga dan investasi, sedangkan GoTo masih merugi. Kesimpulan: tantangan utama GoTo bukan likuiditas jangka pendek (2,73x), melainkan pencapaian laba bersih berkelanjutan."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik Pembanding FY2025",
+              "GoTo (GOTO)",
+              "Bukalapak (BUKA)"
+            ],
+            [
+              "Marjin Laba Bersih (Net Profit Margin)",
+              "-8,2%",
+              "48,4%"
+            ],
+            [
+              "Imbal Hasil Ekuitas (ROE)",
+              "-5,2%",
+              "12,4%"
+            ],
+            [
+              "Imbal Hasil Aset (ROA)",
+              "-3,3%",
+              "12,1%"
+            ],
+            [
+              "Rasio Lancar (Current Ratio)",
+              "2,73x",
+              "37,07x"
+            ],
+            [
+              "Utang terhadap Ekuitas (Debt-to-Equity)",
+              "0,27x",
+              "0,00x"
+            ],
+            [
+              "Perputaran Aset (Asset Turnover)",
+              "0,40x",
+              "0,25x"
+            ]
+          ]
+        ]
+      }
+    ],
+    "workbook": {
+      "Historical Data": [
+        [
+          "Data Keuangan Historis (PT GoTo Gojek Tokopedia Tbk)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Laporan Keuangan Konsolidasian Auditan (dalam jutaan Rupiah, kecuali pertumbuhan %)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2023",
+          "2024",
+          "YoY ’23->’24",
+          "2025",
+          "YoY ’24->’25"
+        ],
+        [
+          "LAPORAN LABA RUGI"
+        ],
+        [
+          "Pendapatan Bersih",
+          "14,785,492",
+          "15,894,462",
+          "7.5%",
+          "18,322,117",
+          "15.3%"
+        ],
+        [
+          "Beban Pokok Pendapatan (COGS)",
+          "5,093,179",
+          "7,413,392",
+          "45.6%",
+          "7,746,034",
+          "4.5%"
+        ],
+        [
+          "Laba Kotor",
+          "9,692,313",
+          "8,481,070",
+          "-12.5%",
+          "10,576,083",
+          "24.7%"
+        ],
+        [
+          "Beban Usaha (SG&A & Teknologi)",
+          "19,971,283",
+          "10,721,944",
+          "-46.3%",
+          "10,954,337",
+          "2.2%"
+        ],
+        [
+          "Laba / (Rugi) Usaha (EBIT)",
+          "(10,278,970)",
+          "(2,240,874)",
+          "-78.2%",
+          "(378,254)",
+          "-83.1%"
+        ],
+        [
+          "Beban / (Penghasilan) Lain-lain",
+          "80,355,448",
+          "3,034,956",
+          "-96.2%",
+          "708,350",
+          "-76.7%"
+        ],
+        [
+          "Laba / (Rugi) Sebelum Pajak (EBT)",
+          "(90,634,418)",
+          "(5,275,830)",
+          "-94.2%",
+          "(1,086,604)",
+          "-79.4%"
+        ],
+        [
+          "Beban / (Manfaat) Pajak Penghasilan",
+          "(115,692)",
+          "189,025",
+          "N/M",
+          "415,081",
+          "119.6%"
+        ],
+        [
+          "Laba / (Rugi) Bersih Konsolidasian",
+          "(90,518,726)",
+          "(5,464,855)",
+          "-94.0%",
+          "(1,501,685)",
+          "-72.5%"
+        ],
+        [
+          "LAPORAN POSISI KEUANGAN (NERACA)"
+        ],
+        [
+          "Kas dan Setara Kas",
+          "25,143,935",
+          "19,177,524",
+          "-23.7%",
+          "21,755,165",
+          "13.4%"
+        ],
+        [
+          "Piutang Usaha & Piutang Lain-lain",
+          "597,589",
+          "2,041,739",
+          "241.7%",
+          "547,293",
+          "-73.2%"
+        ],
+        [
+          "Persediaan",
+          "172,766",
+          "27,404",
+          "-84.1%",
+          "14,093",
+          "-48.6%"
+        ],
+        [
+          "Aset Lancar Lainnya",
+          "7,703,001",
+          "5,091,025",
+          "-33.9%",
+          "6,742,675",
+          "32.4%"
+        ],
+        [
+          "Total Aset Lancar",
+          "33,617,291",
+          "26,337,692",
+          "-21.7%",
+          "29,059,226",
+          "10.3%"
+        ],
+        [
+          "Aset Tetap Bersih (Net PP&E)",
+          "1,272,715",
+          "456,997",
+          "-64.1%",
+          "622,356",
+          "36.2%"
+        ],
+        [
+          "Aset Tidak Lancar Lainnya",
+          "19,207,250",
+          "16,413,195",
+          "-14.5%",
+          "16,076,060",
+          "-2.1%"
+        ],
+        [
+          "Total Aset Tidak Lancar",
+          "20,479,965",
+          "16,870,192",
+          "-17.6%",
+          "16,698,416",
+          "-1.0%"
+        ],
+        [
+          "TOTAL ASET",
+          "54,097,256",
+          "43,207,884",
+          "-20.1%",
+          "45,757,642",
+          "5.9%"
+        ],
+        [
+          "Utang Usaha",
+          "1,161,761",
+          "1,240,885",
+          "6.8%",
+          "1,254,389",
+          "1.1%"
+        ],
+        [
+          "Utang Jangka Pendek",
+          "832,141",
+          "1,351,796",
+          "62.4%",
+          "1,523,758",
+          "12.7%"
+        ],
+        [
+          "Liabilitas Jangka Pendek Lainnya",
+          "10,828,642",
+          "7,452,209",
+          "-31.2%",
+          "7,869,377",
+          "5.6%"
+        ],
+        [
+          "Total Liabilitas Jangka Pendek",
+          "12,822,544",
+          "10,044,890",
+          "-21.7%",
+          "10,647,524",
+          "6.0%"
+        ],
+        [
+          "Utang Jangka Panjang",
+          "2,628,261",
+          "2,468,571",
+          "-6.1%",
+          "6,218,885",
+          "151.9%"
+        ],
+        [
+          "Liabilitas Jangka Panjang Lainnya",
+          "2,926,451",
+          "290,622",
+          "-90.1%",
+          "179,576",
+          "-38.2%"
+        ],
+        [
+          "Total Liabilitas Jangka Panjang",
+          "5,554,712",
+          "2,759,193",
+          "-50.3%",
+          "6,398,461",
+          "131.9%"
+        ],
+        [
+          "Total Liabilitas",
+          "18,377,256",
+          "12,804,083",
+          "-30.3%",
+          "17,045,985",
+          "33.1%"
+        ],
+        [
+          "Total Ekuitas Pemegang Saham",
+          "35,720,000",
+          "30,403,801",
+          "-14.9%",
+          "28,711,657",
+          "-5.6%"
+        ],
+        [
+          "TOTAL LIABILITAS & EKUITAS",
+          "54,097,256",
+          "43,207,884",
+          "-20.1%",
+          "45,757,642",
+          "5.9%"
+        ],
+        [
+          "Pemeriksaan Neraca (Aset - L&E = 0)",
+          "0",
+          "0",
+          "-",
+          "0",
+          "-"
+        ],
+        [
+          "POS TAMBAHAN (Digunakan di Milestone 3 & 4)"
+        ],
+        [
+          "Jumlah Saham Beredar (juta lembar)",
+          "1,070,558",
+          "1,056,283",
+          "-1.3%",
+          "1,062,010",
+          "0.5%"
+        ],
+        [
+          "Penyusutan & Amortisasi (Total Laba Rugi)",
+          "2,671,148",
+          "744,175",
+          "-72.1%",
+          "748,552",
+          "0.6%"
+        ],
+        [
+          "Belanja Modal Kas (Aset Tetap + Takberwujud)",
+          "785,830",
+          "6,518,862",
+          "729.5%",
+          "1,182,360",
+          "-81.9%"
+        ]
+      ],
+      "Common-Size Analysis": [
+        [
+          "Analisis Common-Size & Tren (PT GoTo Gojek Tokopedia Tbk)"
+        ],
+        [
+          "Analisis vertikal (% pendapatan / % total aset) dan pertumbuhan tahunan (YoY)"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2023",
+          "2024",
+          "2025",
+          "YoY ’23->’24",
+          "YoY ’24->’25"
+        ],
+        [
+          "ANALISIS VERTIKAL (% terhadap Pendapatan Bersih)"
+        ],
+        [
+          "Pendapatan Bersih",
+          "100.0%",
+          "100.0%",
+          "100.0%",
+          "7.5%",
+          "15.3%"
+        ],
+        [
+          "Beban Pokok Pendapatan (COGS)",
+          "34.4%",
+          "46.6%",
+          "42.3%",
+          "45.6%",
+          "4.5%"
+        ],
+        [
+          "Laba Kotor",
+          "65.6%",
+          "53.4%",
+          "57.7%",
+          "-12.5%",
+          "24.7%"
+        ],
+        [
+          "Beban Usaha (SG&A & Teknologi)",
+          "135.1%",
+          "67.5%",
+          "59.8%",
+          "-46.3%",
+          "2.2%"
+        ],
+        [
+          "Laba / (Rugi) Usaha (Marjin EBIT)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "-78.2%",
+          "-83.1%"
+        ],
+        [
+          "Beban / (Penghasilan) Lain-lain",
+          "543.5%",
+          "19.1%",
+          "3.9%",
+          "-96.2%",
+          "-76.7%"
+        ],
+        [
+          "Laba / (Rugi) Bersih (Marjin Laba Bersih)",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "-94.0%",
+          "-72.5%"
+        ],
+        [
+          "ANALISIS VERTIKAL (% terhadap Total Aset)"
+        ],
+        [
+          "Kas dan Setara Kas",
+          "46.5%",
+          "44.4%",
+          "47.5%",
+          "-23.7%",
+          "13.4%"
+        ],
+        [
+          "Piutang Usaha",
+          "1.1%",
+          "4.7%",
+          "1.2%",
+          "241.7%",
+          "-73.2%"
+        ],
+        [
+          "Persediaan",
+          "0.3%",
+          "0.1%",
+          "0.0%",
+          "-84.1%",
+          "-48.6%"
+        ],
+        [
+          "Aset Tetap Bersih (Net PP&E)",
+          "2.4%",
+          "1.1%",
+          "1.4%",
+          "-64.1%",
+          "36.2%"
+        ],
+        [
+          "Total Liabilitas",
+          "34.0%",
+          "29.6%",
+          "37.3%",
+          "-30.3%",
+          "33.1%"
+        ],
+        [
+          "Total Ekuitas",
+          "66.0%",
+          "70.4%",
+          "62.7%",
+          "-14.9%",
+          "-5.6%"
+        ]
+      ],
+      "Ratio Analysis": [
+        [
+          "Analisis Rasio Keuangan & Altman Z''-Score Pasar Berkembang"
+        ],
+        [
+          "Dihitung langsung dari Data Historis Auditan (FY2023-FY2025)"
+        ],
+        [
+          "Rasio Keuangan",
+          "2023",
+          "2024",
+          "2025",
+          "Rumus Perhitungan"
+        ],
+        [
+          "RASIO LIKUIDITAS"
+        ],
+        [
+          "Rasio Lancar (Current Ratio)",
+          "2.62x",
+          "2.62x",
+          "2.73x",
+          "Aset Lancar / Liabilitas Jangka Pendek"
+        ],
+        [
+          "Rasio Cepat (Quick Ratio)",
+          "2.61x",
+          "2.62x",
+          "2.73x",
+          "(Aset Lancar - Persediaan) / Liabilitas Jangka Pendek"
+        ],
+        [
+          "Modal Kerja Bersih (Rp juta)",
+          "20,794,747",
+          "16,292,802",
+          "18,411,702",
+          "Aset Lancar - Liabilitas Jangka Pendek"
+        ],
+        [
+          "RASIO EFISIENSI / AKTIVITAS"
+        ],
+        [
+          "Perputaran Total Aset (Asset Turnover)",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Pendapatan / Total Aset"
+        ],
+        [
+          "Rata-Rata Umur Piutang (DSO)",
+          "14.8 days",
+          "46.9 days",
+          "10.9 days",
+          "Piutang / Pendapatan x 365 hari"
+        ],
+        [
+          "Rata-Rata Umur Persediaan (DIO)",
+          "12.4 days",
+          "1.3 days",
+          "0.7 days",
+          "Persediaan / COGS x 365 hari"
+        ],
+        [
+          "Rata-Rata Umur Utang Usaha (DPO)",
+          "83.3 days",
+          "61.1 days",
+          "59.1 days",
+          "Utang Usaha / COGS x 365 hari"
+        ],
+        [
+          "Siklus Konversi Kas (CCC)",
+          "-56.1 days",
+          "-12.9 days",
+          "-47.5 days",
+          "DSO + DIO - DPO"
+        ],
+        [
+          "RASIO SOLVABILITAS (LEVERAGE)"
+        ],
+        [
+          "Rasio Utang terhadap Ekuitas (DER)",
+          "0.10x",
+          "0.13x",
+          "0.27x",
+          "(Utang Jangka Pendek + Panjang) / Ekuitas"
+        ],
+        [
+          "Rasio Utang terhadap Total Aset (DAR)",
+          "6.4%",
+          "8.8%",
+          "16.9%",
+          "(Utang Jangka Pendek + Panjang) / Total Aset"
+        ],
+        [
+          "Rasio Cakupan Bunga (ICR)",
+          "-27.8x",
+          "-4.5x",
+          "-0.71x",
+          "EBIT / Beban Bunga"
+        ],
+        [
+          "Pengganda Ekuitas (Equity Multiplier)",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Aset / Total Ekuitas"
+        ],
+        [
+          "RASIO PROFITABILITAS"
+        ],
+        [
+          "Marjin Laba Kotor (Gross Margin)",
+          "65.6%",
+          "53.4%",
+          "57.7%",
+          "Laba Kotor / Pendapatan"
+        ],
+        [
+          "Marjin Laba Usaha (Operating Margin)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "EBIT / Pendapatan"
+        ],
+        [
+          "Marjin Laba Bersih (Net Profit Margin)",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "Laba Bersih / Pendapatan"
+        ],
+        [
+          "Imbal Hasil Aset (ROA)",
+          "-167.3%",
+          "-12.6%",
+          "-3.3%",
+          "Laba Bersih / Total Aset"
+        ],
+        [
+          "Imbal Hasil Ekuitas (ROE)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Laba Bersih / Total Ekuitas"
+        ],
+        [
+          "ALTMAN Z''-SCORE (MODEL PASAR BERKEMBANG)"
+        ],
+        [
+          "X1 (Modal Kerja / Total Aset)",
+          "0.384",
+          "0.377",
+          "0.402",
+          "6,56 x X1 (+2,64 poin di 2025)"
+        ],
+        [
+          "X2 (Saldo Laba Akumulasi / Total Aset)",
+          "-3.830",
+          "-4.918",
+          "-4.679",
+          "3,26 x X2 (-15,25 poin di 2025)"
+        ],
+        [
+          "X3 (EBIT / Total Aset)",
+          "-0.190",
+          "-0.052",
+          "-0.008",
+          "6,72 x X3 (-0,06 poin di 2025)"
+        ],
+        [
+          "X4 (Nilai Buku Ekuitas / Total Liabilitas)",
+          "1.944",
+          "2.375",
+          "1.684",
+          "1,05 x X4 (+1,77 poin di 2025)"
+        ],
+        [
+          "Total Altman Z''-Score (Zona Distress < 1,10)",
+          "-10.17",
+          "-11.41",
+          "-10.90",
+          "6,56(X1) + 3,26(X2) + 6,72(X3) + 1,05(X4) -> Zona Distress"
+        ]
+      ],
+      "DuPont Analysis": [
+        [
+          "Dekomposisi DuPont atas Imbal Hasil Ekuitas (ROE)"
+        ],
+        [
+          "Rincian ROE 3-Langkah dan 5-Langkah Terhubung ke Laporan Auditan"
+        ],
+        [
+          "Komponen DuPont",
+          "2023",
+          "2024",
+          "2025",
+          "Rumus"
+        ],
+        [
+          "DuPont 3-LANGKAH: ROE = Marjin Bersih x Perputaran Aset x Pengganda Ekuitas"
+        ],
+        [
+          "Marjin Laba Bersih (Net Profit Margin)",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "Laba Bersih / Pendapatan"
+        ],
+        [
+          "Perputaran Aset (Asset Turnover)",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Pendapatan / Total Aset"
+        ],
+        [
+          "Pengganda Ekuitas (Equity Multiplier)",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Assets / Equity"
+        ],
+        [
+          "ROE (Hasil Perkalian 3-Langkah)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Marjin Bersih x Perputaran Aset x Pengganda Ekuitas"
+        ],
+        [
+          "DuPont 5-LANGKAH: ROE = Beban Pajak x Beban Bunga x Marjin Usaha x Perputaran Aset x Leverage"
+        ],
+        [
+          "Beban Pajak (Laba Bersih / EBT)",
+          "99.9%",
+          "103.6%",
+          "138.2%",
+          "Net Income / EBT"
+        ],
+        [
+          "Beban Bunga (EBT / EBIT)",
+          "8.82x",
+          "2.35x",
+          "2.87x",
+          "EBT / EBIT"
+        ],
+        [
+          "Marjin Usaha (EBIT / Pendapatan)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "EBIT / Pendapatan"
+        ],
+        [
+          "Perputaran Aset (Pendapatan / Aset)",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Pendapatan / Total Aset"
+        ],
+        [
+          "Leverage (Aset / Ekuitas)",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Assets / Equity"
+        ],
+        [
+          "ROE (Hasil Perkalian 5-Langkah)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Perkalian seluruh 5 komponen"
+        ],
+        [
+          "Pemeriksaan: ROE 3-Langkah dikurangi ROE 5-Langkah",
+          "0.0%",
+          "0.0%",
+          "0.0%",
+          "Harus sama dengan 0"
+        ]
+      ],
+      "Peer Benchmark": [
+        [
+          "Pembanding Sejawat (FY2025) - Ekosistem Digital Indonesia"
+        ],
+        [
+          "Metrik tahun terbaru (2025) PT GoTo Gojek Tokopedia Tbk vs. PT Bukalapak.com Tbk"
+        ],
+        [
+          "Metrik Keuangan",
+          "GoTo (GOTO)",
+          "Bukalapak (BUKA)",
+          "Catatan Perbandingan"
+        ],
+        [
+          "Marjin Laba Bersih (Net Profit Margin)",
+          "-8.2%",
+          "48.4%",
+          "Laba Bukalapak ditopang pendapatan bunga dan keuntungan investasi"
+        ],
+        [
+          "Imbal Hasil Ekuitas (ROE)",
+          "-5.2%",
+          "12.4%",
+          "GoTo masih merugi; BUKA mencatat ROE positif"
+        ],
+        [
+          "Imbal Hasil Aset (ROA)",
+          "-3.3%",
+          "12.1%",
+          "GoTo memperkecil rugi sementara BUKA menghasilkan imbal hasil aset"
+        ],
+        [
+          "Rasio Lancar (Current Ratio)",
+          "2.73x",
+          "37.07x",
+          "Keduanya memiliki bantalan kas; BUKA sangat likuid pasca-pivot"
+        ],
+        [
+          "Rasio Utang terhadap Ekuitas (DER)",
+          "0.27x",
+          "0.00x",
+          "Utang bank GoTo berlipat dua pada 2025; BUKA bebas utang"
+        ],
+        [
+          "Perputaran Aset (Asset Turnover)",
+          "0.40x",
+          "0.25x",
+          "GoTo menghasilkan pendapatan 60% lebih tinggi per rupiah aset"
+        ]
+      ],
+      "Sector Benchmark Reference": [
+        [
+          "Referensi Benchmark Lintas Sektor: Perbankan vs. Ritel"
+        ],
+        [
+          "Data riil FY2025 dari dua sektor Indonesia yang kontras"
+        ],
+        [
+          "Gunakan untuk membandingkan profil penggerak ROE terhadap pola khas sektor berbeda (berbeda dengan Pembanding Sejawat)."
+        ],
+        [
+          "Metrik Keuangan",
+          "Bank Central Asia (BBCA)",
+          "Mitra Adiperkasa (MAPI)",
+          "Catatan"
+        ],
+        [
+          "SECTOR",
+          "Perbankan",
+          "Ritel (Gaya Hidup/Fesyen)"
+        ],
+        [
+          "Laba Bersih (Rp triliun)",
+          "57.54",
+          "2.23",
+          "Pengumuman kinerja FY2025 perusahaan"
+        ],
+        [
+          "Total Aset (Rp triliun)",
+          "1,586.83",
+          "≈32.0 (approx.)",
+          "Angka MAPI bervariasi tipis antar penyedia data"
+        ],
+        [
+          "Total Ekuitas (Rp triliun)",
+          "281.69",
+          "≈20.0 (approx.)",
+          "MAPI equity approximated as Total Assets - Total Liabilities"
+        ],
+        [
+          "Pendapatan / Pendapatan Operasional (Rp triliun)",
+          "n/a, lihat catatan",
+          "42.90",
+          "Bank tidak menyajikan baris 'pendapatan' konvensional"
+        ],
+        [
+          "Marjin Laba Bersih (Net Profit Margin)",
+          "54.0%",
+          "5.2%",
+          "Marjin BBCA dari agregator (basis pendapatan bunga & fee bersih)"
+        ],
+        [
+          "Perputaran Aset (Asset Turnover)",
+          "n/a untuk bank, lihat catatan",
+          "1.34",
+          "Bukan komponen DuPont yang bermakna untuk perbankan"
+        ],
+        [
+          "Pengganda Ekuitas (Equity Multiplier)",
+          "5.63",
+          "1.60",
+          "Total Aset ÷ Total Ekuitas"
+        ],
+        [
+          "ROE (dihitung dari data di atas)",
+          "20.4%",
+          "11.1%",
+          "ROE MAPI yang dilaporkan eksternal ≈ 15,3%, lihat catatan di bawah"
+        ],
+        [
+          "CATATAN PENGAJARAN: INTERPRETASI BENCHMARK LINTAS SEKTOR",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Perbankan memerlukan model DuPont 2-faktor (ROE = ROA x Equity Multiplier) karena pendapatan bunga bank merupakan imbal hasil langsung atas aset produktifnya (kredit)."
+        ],
+        [
+          "Perbedaan Equity Multiplier antara BBCA (5,63x) dan MAPI (1,60x) mencerminkan sifat struktural neraca bank yang menghimpun dana pihak ketiga, bukan risiko gagal bayar."
+        ],
+        [
+          "Angka pembanding dapat sedikit berbeda tergantung tanggal snapshot neraca dan metode rata-rata ekuitas penyedia data eksternal."
+        ],
+        [
+          "Kinikan data: angka mencerminkan hasil FY2025 dari rilis resmi emiten dan agregator pasar awal 2026."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "m3",
+    "code": "Milestone 3",
+    "folder": "Minggu 7-10",
+    "week": "Minggu 7-10",
+    "title": "Kualitas Akuntansi, Forensik Arus Kas & Pos Non-Rutin",
+    "summary": "Audit forensik keterpulihan investasi Tokopedia & Bank Jago (22,57% aset), Rasio Akrual (-11,21% -> -3,95%), penyesuaian laba analitis, kebijakan pendapatan bruto/neto, serta defisit Arus Kas Bebas (-Rp 875,3 M).",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 10/Group4_Milestone3_GOTO.docx",
+    "sections": [
+      {
+        "heading": "Ringkasan Eksekutif Audit Kualitas Akuntansi",
+        "source_citation": "PT GoTo Gojek Tokopedia Tbk (2026). Laporan Keuangan Konsolidasian Auditan 31 Des 2025",
+        "paragraphs": [
+          "Milestone 3 mengaudit kualitas akuntansi konsolidasian GoTo periode 2024-2025 (seluruh angka dalam jutaan Rupiah kecuali rasio) berdasarkan Laporan Keuangan Auditan FY2025 terbitan Maret 2026 (PT GoTo Gojek Tokopedia Tbk, 2026).",
+          "Empat temuan forensik utama: (1) 22,57% total aset tertanam pada entitas asosiasi Tokopedia & Bank Jago serta investasi Level 3 Rp 1,669T; (2) Pendapatan pihak berelasi naik menjadi 7,13%; (3) Penyesuaian analitis di luar beban penurunan nilai tetap menyisakan rugi -165.038 juta setelah laba asosiasi dikeluarkan; serta (4) Arus Kas Investasi positif +519,1 M menyembunyikan Arus Kas Bebas negatif -875,3 M yang ditutup oleh pencairan deposito Rp 1.386,5 M."
+        ],
+        "tables": [
+          [
+            [
+              "Area Audit Forensik",
+              "Auditan 2024",
+              "Auditan 2025",
+              "Temuan Kualitas Akuntansi"
+            ],
+            [
+              "Entitas Asosiasi + Investasi Level 3",
+              "Dipantau Catatan 14-15",
+              "Rp 11.995.821 jt (26,2% Aset)",
+              "Tokopedia + Bank Jago = 22,57% Aset; memuat goodwill Rp 2,00T"
+            ],
+            [
+              "Porsi Pendapatan Pihak Berelasi",
+              "5,20% pendapatan",
+              "7,13% (Rp 1.306.110 juta)",
+              "Dipicu imbalan jasa Tokopedia (Catatan 25); tidak ada pelanggan >= 10%"
+            ],
+            [
+              "Rasio Akrual ((Laba Bersih - CFO) / Aset)",
+              "-11,21%",
+              "-3,95%",
+              "Jarak menyempit namun berasal dari beban non-kas; laba tetap negatif"
+            ],
+            [
+              "Cakupan CapEx oleh CFO (CFO / CapEx)",
+              "-9,54%",
+              "25,97% (FCF -Rp 875,3 M)",
+              "Arus kas investasi +519,1 M ditopang pencairan deposito Rp 1.386,5 M"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(a) Keterpulihan Investasi, Uji Penurunan 20% & Pertimbangan Pendapatan",
+        "source_citation": "GoTo (2026), Catatan 14 (hlm. 100-101), Catatan 15 (hlm. 102-103), Catatan 25 (hlm. 129)",
+        "paragraphs": [
+          "Investasi pada entitas asosiasi Tokopedia dan Bank Jago masing-masing tercatat sebesar Rp 7.432.326 juta dan Rp 2.894.921 juta pada 2025, mencakup 22,57% dari total aset GoTo dan mengandung goodwill tertanam sebesar Rp 2.003.559 juta. Secara terpisah, GoTo memegang Rp 1.668.574 juta investasi Level 3 (Catatan 14-15, hlm. 100-103).",
+          "Dalam skenario uji stres 20% terhadap nilai tercatat Tokopedia (Rp 7.432.326 juta, sudah termasuk goodwill) dan investasi Level 3 (Rp 1.668.574 juta), kerugian asumsi mencapai Rp 1.820.180 juta atau langsung menggerus 3,98% dari total aset Rp 45.757.642 juta sebelum pajak. Di sisi pendapatan, porsi transaksi pihak berelasi naik menjadi Rp 1.306.110 juta (7,13%), menuntut pengawasan kewajaran komisi."
+        ],
+        "tables": [
+          [
+            [
+              "Investasi yang Diuji (Rp juta)",
+              "Nilai Tercatat 2025",
+              "Asumsi Penurunan 20%",
+              "Sisa Nilai 80%"
+            ],
+            [
+              "Entitas Asosiasi Tokopedia (24,99%)",
+              "7.432.326",
+              "1.486.465",
+              "5.945.861"
+            ],
+            [
+              "Investasi Lainnya Level 3",
+              "1.668.574",
+              "333.715",
+              "1.334.859"
+            ],
+            [
+              "Total Investasi Terpilih",
+              "9.100.900",
+              "1.820.180",
+              "7.280.720"
+            ]
+          ],
+          [
+            [
+              "Pos Investasi Neraca (2025)",
+              "Nilai Tercatat (Rp jt)",
+              "% Total Aset (45.757.642)",
+              "Klasifikasi Risiko Akuntansi"
+            ],
+            [
+              "Investasi pada Tokopedia (24,99%)",
+              "7.432.326",
+              "16,24%",
+              "Memuat goodwill tertanam Rp 2.003.559 juta"
+            ],
+            [
+              "Investasi pada Bank Jago (21,40%)",
+              "2.894.921",
+              "6,33%",
+              "Entitas asosiasi tercatat; sensitif harga pasar"
+            ],
+            [
+              "Subtotal Entitas Asosiasi Utama",
+              "10.327.247",
+              "22,57%",
+              "Konsentrasi aset tinggi; wajib uji keterpulihan"
+            ],
+            [
+              "Investasi Nilai Wajar Level 3 Lainnya",
+              "1.668.574",
+              "3,65%",
+              "Instrumen privat tidak kuotasian; rawan penurunan nilai"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Catatan 14 Auditan (hlm. 100): Tokopedia (Rp 7,43T) dan Bank Jago (Rp 2,89T) mencapai 22,57% Total Aset."
+      },
+      {
+        "heading": "(b) Rasio Akrual 2024-2025 & Keterkaitan dengan Milestone 2",
+        "source_citation": "GoTo (2026), Neraca hlm. 15, Laba Rugi hlm. 17, Arus Kas hlm. 21",
+        "paragraphs": [
+          "Menggunakan Total Aset akhir tahun secara konsisten untuk kedua periode (Rp 43.207.884 juta pada 2024 dan Rp 45.757.642 juta pada 2025), total akrual (Rugi Bersih dikurangi CFO) tercatat sebesar -(4.842.741) juta pada 2024 dan -(1.808.710) juta pada 2025, menghasilkan Rasio Akrual masing-masing -11,21% dan -3,95%.",
+          "Keterkaitan dengan Milestone 2: Meskipun marjin bersih membaik dari -34,4% ke -8,2%, rasio akrual negatif menegaskan rugi akuntansi masih lebih buruk daripada arus kas akibat besarnya penurunan nilai dan penyusutan non-kas. Penurunan defisit akrual saja belum membuktikan laba operasional berkelanjutan."
+        ],
+        "tables": [
+          [
+            [
+              "Perhitungan Rasio Akrual (Rp juta)",
+              "2024",
+              "2025"
+            ],
+            [
+              "Rugi Bersih Konsolidasian Dilaporkan",
+              "(5.464.855)",
+              "(1.501.685)"
+            ],
+            [
+              "Arus Kas dari Aktivitas Operasi (CFO)",
+              "(622.114)",
+              "307.025"
+            ],
+            [
+              "Total Akrual (Laba Bersih - CFO)",
+              "(4.842.741)",
+              "(1.808.710)"
+            ],
+            [
+              "Total Aset Akhir Tahun",
+              "43.207.884",
+              "45.757.642"
+            ],
+            [
+              "Rasio Akrual (Akrual / Total Aset)",
+              "-11,21%",
+              "-3,95%"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c) Penyesuaian Analitis: Mengeluarkan Beban Valuasi & Hasil Entitas Asosiasi",
+        "source_citation": "GoTo (2026), Laporan Laba Rugi Konsolidasian hlm. 17 & Catatan 15 hlm. 103",
+        "paragraphs": [
+          "Kami mempertahankan angka laporan PSAK sebagai basis utama, lalu menguji dampak pengeluaran beban penilaian aset sebelum pajak: penurunan nilai goodwill (356.830 jt di 2025), aset tetap/takberwujud (217.133 jt), serta rugi nilai wajar bersih (596.703 jt). Menambahkan kembali total Rp 1.170.666 jt beban ini membalik rugi pra-pajak 2025 (-1.086.604 jt) menjadi surplus semu +84.062 jt.",
+          "Akan tetapi, setelah turut mengeluarkan bagian laba entitas asosiasi & ventura bersama 2025 (-249.100 jt dibanding membalik rugi 2.305.125 jt di 2024), hasil analitis kembali menjadi rugi -(165.038) juta pada 2025. Karena penurunan nilai terjadi berulang di kedua tahun dan rugi usaha statutori tetap -(378.254) juta, pengecualian pos tersebut tidak dapat dianggap sebagai laba berulang yang berkelanjutan."
+        ],
+        "tables": [
+          [
+            [
+              "Rekonsiliasi Laba Sebelum Pajak Analitis (Rp juta)",
+              "2024",
+              "2025"
+            ],
+            [
+              "Rugi Sebelum Pajak Dilaporkan (PSAK)",
+              "(5.275.830)",
+              "(1.086.604)"
+            ],
+            [
+              "Tambah kembali: Penurunan nilai goodwill",
+              "308.114",
+              "356.830"
+            ],
+            [
+              "Tambah kembali: Penurunan nilai aset tetap & takberwujud",
+              "24.421",
+              "217.133"
+            ],
+            [
+              "Tambah kembali: Penurunan nilai asosiasi & ventura bersama",
+              "126.718",
+              "0"
+            ],
+            [
+              "Tambah kembali: Kerugian nilai wajar neto (Level 3)",
+              "482.134",
+              "596.703"
+            ],
+            [
+              "Total Beban Valuasi yang Ditambahkan Kembali",
+              "941.387",
+              "1.170.666"
+            ],
+            [
+              "Laba / (Rugi) Sebelum Pajak Tidak Termasuk Beban Valuasi",
+              "(4.334.443)",
+              "84.062"
+            ],
+            [
+              "Keluarkan Bagian Laba / (Rugi) Entitas Asosiasi & JV",
+              "+2.305.125",
+              "-249.100"
+            ],
+            [
+              "Hasil Analitis Akhir Setelah Mengeluarkan Asosiasi & JV",
+              "(2.029.318)",
+              "(165.038)"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note34_goodwill_impairment.png",
+        "evidence_caption": "Bukti Catatan 34 & Catatan 15: Beban penurunan nilai berulang memengaruhi normalisasi laba berulang."
+      },
+      {
+        "heading": "(d) Kebijakan Pengakuan Pendapatan, Agen vs. Prinsipal & Insentif Pelanggan",
+        "source_citation": "GoTo (2026), Catatan 2s (hlm. 66-67, 71), Catatan 25 Pihak Berelasi (hlm. 129)",
+        "paragraphs": [
+          "Untuk transaksi GOJEK, GoTo bertindak sebagai Agen (PSAK 72) karena hanya memfasilitasi layanan tanpa mengendalikan barang atau pengemudi secara langsung, sehingga pendapatan diakui secara neto sebesar imbalan jasa saat pesanan selesai. Sebaliknya, imbalan konsultansi e-commerce Tokopedia diakui sepanjang waktu (over time) berdasarkan persentase kontrak dikalikan GMV Tokopedia (Catatan 2s, hlm. 66-71).",
+          "Insentif pelanggan (diskon, cashback, voucher) dicatat sebagai pengurang pendapatan neto bila GoTo tidak menerima jasa terpisah yang dapat diukur andal, sedangkan kelebihan insentif di atas pendapatan terkait dicatat sebagai beban pemasaran. Keterkaitan Milestone 2: lonjakan pertumbuhan 15,3% dan marjin kotor (53,4% -> 57,7%) sangat dipengaruhi penurunan subsidi pengurang pendapatan tersebut."
+        ],
+        "tables": [
+          [
+            [
+              "Sumber Pendapatan / Kebijakan",
+              "Peran Akuntansi PSAK 72",
+              "Waktu & Basis Pengakuan",
+              "Perlakuan Promo & Insentif",
+              "Referensi Catatan LK"
+            ],
+            [
+              "Imbalan Jasa GOJEK",
+              "Agen (Penyajian Neto)",
+              "Pada titik waktu saat perjalanan/pesanan selesai",
+              "Mengurangi pendapatan kecuali ada imbalan jasa terpisah",
+              "Catatan 2s, hlm. 66-67"
+            ],
+            [
+              "Jasa E-Commerce Tokopedia",
+              "Penyedia Jasa Kontrak",
+              "Sepanjang waktu (GMV Tokopedia x tarif % disepakati)",
+              "Dilaporkan sbg Pihak Berelasi (Rp 1.306 M = 7,13%)",
+              "Catatan 2s hlm. 71; Cat. 25 hlm. 129"
+            ],
+            [
+              "Insentif & Cashback Konsumen",
+              "Imbalan yang Dibayarkan ke Pelanggan",
+              "Pengurang langsung Pendapatan Bruto transaksi",
+              "Kelebihan di atas pendapatan -> Beban Pemasaran",
+              "Catatan 2s hlm. 71; Bukti C"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(e) Pemeriksaan Aktivitas Investasi & Defisit Arus Kas Bebas (-Rp 875,3 M)",
+        "source_citation": "GoTo (2026), Laporan Arus Kas hlm. 21, Neraca hlm. 15, Catatan 32 hlm. 139",
+        "paragraphs": [
+          "Meskipun Arus Kas Operasi (CFO) 2025 berbalik positif sebesar +307.025 juta, nilai ini baru menutup 25,97% dari total Belanja Modal Kas sebesar 1.182.360 juta (302.071 jt aset tetap + 880.289 jt aset takberwujud), menyisakan defisit Arus Kas Bebas (FCF) sebesar -(875.335) juta. Catatan 32 menunjukkan penambahan aset sewa non-kas tidak masuk dalam CapEx tunai tersebut.",
+          "Lebih penting lagi, Arus Kas Investasi Neto yang tampak positif +519.117 juta ternyata semata-mata berasal dari pencairan neto deposito berjangka sebesar +1.386.520 juta! Jika pencairan deposito dikeluarkan, arus kas investasi riil justru defisit -(867.403) juta."
+        ],
+        "tables": [
+          [
+            [
+              "Pemeriksaan Arus Kas Investasi & CapEx (Rp juta)",
+              "2024",
+              "2025"
+            ],
+            [
+              "Pembelian tunai aset tetap",
+              "179.566",
+              "302.071"
+            ],
+            [
+              "Pembelian tunai aset takberwujud",
+              "6.339.296",
+              "880.289"
+            ],
+            [
+              "Total Belanja Modal Kas (Cash CapEx)",
+              "6.518.862",
+              "1.182.360"
+            ],
+            [
+              "Penyusutan dan Amortisasi (D&A)",
+              "744.175",
+              "748.552"
+            ],
+            [
+              "Rasio CapEx dibagi D&A",
+              "8,76x",
+              "1,58x"
+            ],
+            [
+              "Rasio Arus Kas Operasi dibagi CapEx (CFO / CapEx)",
+              "-9,54%",
+              "25,97%"
+            ],
+            [
+              "Arus Kas Bebas (CFO dikurangi CapEx Kas)",
+              "(7.140.976)",
+              "(875.335)"
+            ],
+            [
+              "Arus Kas Investasi Neto Dilaporkan",
+              "(10.324.679)",
+              "519.117"
+            ],
+            [
+              "Dikurangi: Pencairan neto deposito berjangka",
+              "421.217",
+              "1.386.520"
+            ],
+            [
+              "Arus Kas Investasi di Luar Deposito Berjangka",
+              "(10.745.896)",
+              "(867.403)"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+        "evidence_caption": "Laporan Arus Kas LK GOTO 2025 (hlm. 21): CFO (+307,0 M) dikurangi CapEx (-1.182,4 M) membuktikan FCF negatif -Rp 875,3 M."
+      },
+      {
+        "heading": "Lampiran Bukti A-E: Rekonsiliasi Laporan Keuangan Auditan",
+        "source_citation": "PT GoTo Gojek Tokopedia Tbk (2026), Laporan Keuangan Konsolidasian Auditan, hlm. 15, 17, 21, 66-71, 100-103, 129, 139",
+        "paragraphs": [
+          "Seluruh angka pada Bagian (a)-(e) tertelusur tepat ke Laporan Keuangan Auditan PT GoTo Gojek Tokopedia Tbk (2026): Bukti A (Laba Rugi hlm. 17: marjin kotor 57,72%, marjin usaha -2,06%); Bukti B (Catatan 14-15 hlm. 100-103: kerugian skenario 20% sebesar 1.486.465,2 + 333.714,8 = 1.820.180 juta = 3,98% Aset); Bukti C (Catatan 2s & 25 hlm. 129: pendapatan pihak berelasi naik dari 5,20% ke 7,13%).",
+          "Bukti D (Arus Kas hlm. 21 & Catatan 32 hlm. 139: hasil penjualan investasi 216.579 jt = 153.055 + 3.720 + 59.804; arus keluar hilangnya pengendalian entitas anak 2024 sebesar 4.006.527 jt dikeluarkan dari CapEx); Bukti E (Neraca hlm. 15: piutang usaha dagang 459.969 jt di 2024 dan 547.293 jt di 2025 menghasilkan DSO akhir 10,56 hari dan 10,90 hari)."
+        ],
+        "tables": [
+          [
+            [
+              "Kode Bukti Auditan",
+              "Kutipan Laporan Keuangan",
+              "Pos Terverifikasi (Rp juta)",
+              "Rekonsiliasi & Catatan Forensik Utama"
+            ],
+            [
+              "Bukti A: Laba Rugi",
+              "Laporan Laba Rugi, hlm. 17",
+              "2025 Rev 18.322.117; GP 10.576.083; EBIT (378.254)",
+              "Marjin kotor 57,72% (2024: 53,36%); marjin usaha -2,06% (2024: -14,10%)"
+            ],
+            [
+              "Bukti B: Investasi",
+              "Catatan 14 & 15, hlm. 100-103",
+              "Tokopedia 7.432.326; Jago 2.894.921; L3 1.668.574",
+              "Uji stres 20% = 1.486.465,2 + 333.714,8 = 1.820.180 jt (3,98% Aset)"
+            ],
+            [
+              "Bukti C: Pihak Berelasi",
+              "Catatan 2s & 25, hlm. 66-71, 129",
+              "Pendapatan Pihak Berelasi 2025: 1.306.110 (7,13%)",
+              "Naik dari 5,20% pada 2024; tidak ada pelanggan tunggal >= 10%"
+            ],
+            [
+              "Bukti D: Arus Kas",
+              "Arus Kas hlm. 21 & Cat. 32 hlm. 139",
+              "Penjualan investasi eksplisit 216.579 jt",
+              "Di luar arus keluar dekonsolidasi 2024 (4.006.527 jt) & sewa non-kas"
+            ],
+            [
+              "Bukti E: Neraca & Piutang",
+              "Neraca Auditan, hlm. 15",
+              "Piutang dagang: 2024 459.969 | 2025 547.293",
+              "DSO dagang akhir naik tipis 10,56 -> 10,90 hari (mengoreksi catatan M2)"
+            ],
+            [
+              "Daftar Referensi (M3)",
+              "LK GoTo (2026) + M2 & Fact Sheet W10",
+              "Seluruh halaman cocok dengan PDF Maret 2026",
+              "Menyuplai input langsung (CapEx, D&A, PP&E 622.356) ke Milestone 4"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Neraca LK GOTO 2025 (hlm. 15): Total Aset Rp 45.757.642 juta dan Aset Tetap Bersih Rp 622.356 juta."
+      }
+    ]
+  },
+  {
+    "id": "w12",
+    "code": "Tugas 11",
+    "folder": "Minggu 12",
+    "week": "Minggu 12",
+    "title": "Struktur Biaya, Degree of Operating Leverage (DOL) & Kinerja Segmen",
+    "summary": "Jalur teraudit dari pendapatan hingga rugi usaha, alasan DOL negatif tidak dapat dipakai meramal elastisitas laba, uji titik impas (Rp 12,26T vs. Rp 18,98T), serta konsentrasi pertumbuhan pada segmen Fintech & On-Demand.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 11/Group4_FSA_Week12_DOL_Segment_Completed.docx",
+    "sections": [
+      {
+        "heading": "Tugas 1A: Jalur Pendapatan hingga Rugi Usaha (2024 vs. 2025)",
+        "source_citation": "LK GOTO 31 Des 2025.pdf, Laporan Laba Rugi Konsolidasian hlm. 17 (tercetak 2/1)",
+        "paragraphs": [
+          "Basis analisis: Laporan keuangan konsolidasian auditan tahunan FY2025 beserta angka komparatif FY2024 PT GoTo Gojek Tokopedia Tbk (seluruh angka dalam Rp juta, kecuali rasio). Nomor halaman merujuk PDF resmi (hlm. 17, tercetak 2/1) dan Catatan 26 (hlm. 130).",
+          "Perbedaan model wajib dijaga: mengurangkan beban penjualan & administrasi saja (Rp 7.079.049 juta) dari Laba Kotor (Rp 10.576.083 juta) memang menghasilkan surplus model sederhana Rp 3.497.034 juta, tetapi GoTo masih menanggung Rp 3.875.288 juta beban operasi inti lainnya (Pengembangan Produk Rp 2.152.272 jt + Operasional & Pendukung Rp 974.464 jt + Penyusutan & Amortisasi Rp 748.552 jt), sehingga Rugi Usaha statutori tetap negatif sebesar -(378.254) juta."
+        ],
+        "tables": [
+          [
+            [
+              "Pos Jalur Pendapatan hingga Rugi Usaha (Rp juta)",
+              "Auditan 2024",
+              "Auditan 2025",
+              "Perubahan % YoY"
+            ],
+            [
+              "Pendapatan Bersih (Laporan Laba Rugi, hlm. 17)",
+              "15.894.462",
+              "18.322.117",
+              "+15,27%"
+            ],
+            [
+              "Beban Pokok Pendapatan (COGS, hlm. 17)",
+              "7.413.392",
+              "7.746.034",
+              "+4,49%"
+            ],
+            [
+              "Laba Kotor (Gross Profit)",
+              "8.481.070",
+              "10.576.083",
+              "+24,70%"
+            ],
+            [
+              "Marjin Laba Kotor (Gross Margin)",
+              "53,36%",
+              "57,72%",
+              "+4,36 poin (+8,18% rel.)"
+            ],
+            [
+              "Beban Penjualan + Umum & Administrasi (S&A + G&A)",
+              "7.246.187",
+              "7.079.049",
+              "-2,31%"
+            ],
+            [
+              "Beban Pengembangan Produk (hlm. 17)",
+              "1.756.068",
+              "2.152.272",
+              "+22,56%"
+            ],
+            [
+              "Beban Operasional & Pendukung (hlm. 17)",
+              "975.514",
+              "974.464",
+              "-0,11%"
+            ],
+            [
+              "Penyusutan & Amortisasi (D&A, hlm. 17)",
+              "744.175",
+              "748.552",
+              "+0,59%"
+            ],
+            [
+              "Total Beban Operasi di Luar COGS",
+              "10.721.944",
+              "10.954.337",
+              "+2,17%"
+            ],
+            [
+              "Laba / (Rugi) Usaha Statutori (hlm. 17)",
+              "(2.240.874)",
+              "(378.254)",
+              "Rugi menyusut 83,12%"
+            ],
+            [
+              "Beban Penjualan + G&A sebagai % Laba Kotor",
+              "85,44%",
+              "66,93%",
+              "-18,51 poin"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p017_highlighted.png",
+        "evidence_caption": "Laporan Laba Rugi Ter-Highlight (hlm. 17) merinci total beban operasi sebesar Rp 10,954 triliun."
+      },
+      {
+        "heading": "Tugas 1B: Degree of Operating Leverage (DOL) & Sensitivitas Titik Impas",
+        "source_citation": "LK GOTO 2025 hlm. 17 & Catatan 26 Beban Berdasarkan Sifat hlm. 130",
+        "paragraphs": [
+          "DOL empiris (% perubahan EBIT / % perubahan pendapatan) hanya bermakna apabila laba usaha bernilai positif pada kedua periode. Karena GoTo masih mencatat rugi usaha pada 2024 (-2.240,9 M) maupun 2025 (-378,3 M), nilai mekanis DOL (-5,44x empiris; -27,96x struktur biaya pada 2025) tidak dapat digunakan secara langsung untuk proyeksi laba positif.",
+          "Analisis perilaku biaya & simulasi penurunan pendapatan 10%: Total beban operasi di luar COGS hanya naik +2,17% saat pendapatan tumbuh +15,27% (Operasional & Pendukung -0,11%, D&A +0,59%, Penjualan+G&A -2,31%), mengonfirmasi dominasi biaya tetap jangka pendek. Meski demikian, terhadap seluruh beban operasi (Titik Impas Rp 18.977,4 M = Rp 10.954,3 M / 57,72%), GoTo masih -3,58% DI BAWAH impas; penurunan pendapatan 10% akan memperbesar rugi usaha menjadi -(1.435,9) miliar."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik DOL & Titik Impas",
+              "Definisi Rumus",
+              "Hasil Perhitungan 2024 vs. 2025",
+              "Kesimpulan Analitis"
+            ],
+            [
+              "Apakah Laba Usaha Positif?",
+              "Syarat DOL standar",
+              "Tidak: 2024 -(2.240,9) M | 2025 -(378,3) M",
+              "Tidak memenuhi syarat kedua periode laba"
+            ],
+            [
+              "DOL Empiris",
+              "% Perubahan EBIT / % Pendapatan",
+              "Mekanis -5,44x (-83,12% / +15,27%)",
+              "Tidak dipakai memprediksi pertumbuhan laba"
+            ],
+            [
+              "DOL Struktur Biaya",
+              "Gross Profit / Operating Income",
+              "2024: -3,78x | 2025: -27,96x",
+              "Rasio negatif dekat breakeven; tidak lazim"
+            ],
+            [
+              "Titik Impas (Selling + G&A Saja)",
+              "(Selling + G&A) / Gross Margin",
+              "2024: Rp 13.580,2 M | 2025: Rp 12.263,8 M",
+              "Model sederhana semu (MoS +33,07%)"
+            ],
+            [
+              "Titik Impas (Seluruh Beban Usaha)",
+              "Total Beban Usaha / Gross Margin",
+              "2024: Rp 20.094,1 M | 2025: Rp 18.977,4 M",
+              "Masih Di Bawah Impas: MoS -3,58%"
+            ],
+            [
+              "Simulasi Pendapatan Turun 10%",
+              "90% Laba Kotor - Seluruh Beban Usaha",
+              "9.518,5 M - 10.954,3 M = -(1.435,9) M",
+              "Rugi usaha melonjak hampir 4x lipat"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p130_highlighted.png",
+        "evidence_caption": "Catatan 26 (hlm. 130): Rincian beban berdasarkan sifat yang menopang klasifikasi biaya tetap vs. variabel Milestone 4."
+      },
+      {
+        "heading": "Tugas 2: Kinerja Segmen Operasi, Konsentrasi & Keterbandingan",
+        "source_citation": "Catatan 29 Informasi Segmen (hlm. 132-134) & Catatan 34c Perubahan Konsolidasi (hlm. 148-150)",
+        "paragraphs": [
+          "Pengungkapan Catatan 29 (hlm. 132-134) membuktikan pertumbuhan pendapatan neto GoTo (+Rp 2.427.655 juta pada FY2025) sangat terkonsentrasi, bukan merata: Financial Technology melonjak +74,05% (+Rp 2.208.309 juta; kontribusi 90,96%) dan On-Demand Services naik +13,81% (+Rp 1.500.018 juta; kontribusi 61,79%). Keduanya menyumbang 152,75% pertumbuhan bersih untuk menutup kontraksi E-commerce (-39,39%) dan segmen lainnya (-100,0%).",
+          "Segmen Paling Menarik & Keterbandingan (Catatan 34c): On-Demand paling menarik berkat kombinasi pertumbuhan (+13,81%) dan lonjakan laba segmen (dari Rp 69,4 M ke Rp 888,6 M), sementara Fintech masih mencatat rugi segmen (-Rp 396,6 M). Perubahan lingkup konsolidasi (TOKO didekonsolidasi Jan 2024, PAB Mei 2024) memengaruhi keterbandingan organik E-commerce. Rekonsiliasi laba usaha konsolidasi: 888.619 - 396.607 + 572.185 - 1.442.451 (biaya korporasi) = -(378.254) juta."
+        ],
+        "tables": [
+          [
+            [
+              "Segmen Operasi (Catatan 29)",
+              "Pendapatan 2024",
+              "Pendapatan 2025",
+              "Perubahan",
+              "Kontribusi Kenaikan",
+              "Laba / (Rugi) Segmen 2025"
+            ],
+            [
+              "On-Demand Services",
+              "10.861.241",
+              "12.361.259",
+              "+13,81%",
+              "+61,79%",
+              "+888.619 (Paling Menarik)"
+            ],
+            [
+              "Financial Technology (GoPay)",
+              "2.982.308",
+              "5.190.617",
+              "+74,05%",
+              "+90,96%",
+              "(396.607) (Motor Tumbuh, Masih Rugi)"
+            ],
+            [
+              "E-Commerce (Imbalan Jasa)",
+              "1.352.499",
+              "819.724",
+              "-39,39%",
+              "-21,95%",
+              "+572.185 (Efek Dekonsolidasi TOKO)"
+            ],
+            [
+              "Segmen Lainnya (All Other)",
+              "772.583",
+              "0*",
+              "-100,00%",
+              "-31,82%",
+              "0 (PAB didekonsolidasi Mei 2024)"
+            ],
+            [
+              "Penyesuaian & Biaya Korporasi",
+              "(74.169)",
+              "(49.483)",
+              "N/A",
+              "+1,02%",
+              "(1.442.451) Biaya Korporasi Neto"
+            ],
+            [
+              "Total Konsolidasian (Cat. 29)",
+              "15.894.462",
+              "18.322.117",
+              "+15,27%",
+              "100,00%",
+              "(378.254) Rugi Usaha Konsolidasian"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p133_highlighted.png",
+        "evidence_caption": "Catatan 29 (hlm. 133): Pengungkapan auditan pendapatan pihak ketiga & laba/rugi segmen tahun 2025."
+      },
+      {
+        "heading": "Bukti 1-6: Pengungkapan Catatan LK Auditan & Catatan Lampiran",
+        "source_citation": "LK GOTO 31 Des 2025.pdf, hlm. 17, 130, 132-134, 148, 150",
+        "paragraphs": [
+          "Enam tangkapan layar laporan auditan memverifikasi seluruh perhitungan Tugas 1 & 2: Bukti 1 (Laporan Laba Rugi hlm. 17: COGS 2025 Rp 7.746.034 jt; 2024 Rp 7.413.392 jt), Bukti 2 (Catatan 26 hlm. 130 beban berdasarkan sifat), dan Bukti 3 (Catatan 29 hlm. 132 definisi empat segmen tanpa alokasi biaya korporasi).",
+          "Bukti 4 & 5 (Catatan 29 hlm. 133-134) memverifikasi rekonsiliasi segmen 2025 (eliminasi Rp 49.483 jt) dan 2024 (eliminasi Rp 74.169 jt), sementara Bukti 6 (Catatan 34c hlm. 148, 150) membuktikan TOKO berhenti dikonsolidasi Jan 2024 dan PAB Mei 2024. Catatan: Data lampiran ABBA tidak digunakan karena GoTo melaporkan pengungkapan segmen secara lengkap."
+        ],
+        "tables": [
+          [
+            [
+              "Label Bukti",
+              "Halaman / Catatan Auditan",
+              "Isi Pengungkapan Terverifikasi"
+            ],
+            [
+              "Bukti 1 (Jalur Laba Rugi)",
+              "Laba Rugi, PDF hlm. 17 (2/1)",
+              "COGS 7.746.034 (2025) & 7.413.392 (2024); total OpEx Rp 10.954.337 juta"
+            ],
+            [
+              "Bukti 2 (Sifat Beban)",
+              "Catatan 26, PDF hlm. 130 (5/108)",
+              "Memisahkan beban gaji, pemasaran, infrastruktur IT & penyusutan"
+            ],
+            [
+              "Bukti 3 (Definisi Segmen)",
+              "Catatan 29, PDF hlm. 132 (5/110)",
+              "Menetapkan 4 segmen operasi; biaya korporasi disajikan terpisah"
+            ],
+            [
+              "Bukti 4 (Segmen 2025)",
+              "Catatan 29, PDF hlm. 133 (5/111)",
+              "Rekonsiliasi EBIT: 888.619 - 396.607 + 572.185 - 1.442.451 = (378.254)"
+            ],
+            [
+              "Bukti 5 (Segmen 2024)",
+              "Catatan 29, PDF hlm. 134 (5/112)",
+              "Rekonsiliasi Rev: 10.861.241 + 2.982.308 + 1.352.499 + 772.583 - 74.169"
+            ],
+            [
+              "Bukti 6 (Dekonsolidasi)",
+              "Catatan 34c, PDF hlm. 148 & 150",
+              "TOKO dilepas Jan 2024 (asosiasi 24,99%); PAB Mei 2024"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p148_highlighted.png",
+        "evidence_caption": "Catatan 34c (hlm. 148): Pengungkapan dekonsolidasi Tokopedia untuk menilai keterbandingan segmen."
+      }
+    ]
+  },
+  {
+    "id": "m4",
+    "code": "Milestone 4",
+    "folder": "Minggu 13",
+    "week": "Minggu 13",
+    "title": "Model Proyeksi Pro Forma Tiga Tahun Terhubung (2026F-2028F)",
+    "summary": "Model tiga skenario terhubung (Base, Optimis, Konservatif) yang membuktikan bahwa menskalakan OpEx rata-rata historis 78,5% membuat GoTo bertahan di bawah titik impas dan menguras kas dari Rp 21,8T ke Rp 968 miliar pada 2028F.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "(a) Ringkasan Data Historis Dasar (Input Auditan 2023-2025)",
+        "source_citation": "Buku Kerja Milestone 4 Kelompok 4 (Sheet Sources & Historical Summary)",
+        "paragraphs": [
+          "Seluruh angka disajikan dalam Rp miliar dan bersumber langsung dari laporan keuangan auditan FY2023-FY2025 serta Buku Kerja Rasio & DuPont Milestone 2. Penyertaan akun Aset Lainnya dan Liabilitas Lainnya memastikan keseimbangan penuh antara Neraca dan Arus Kas Pro Forma.",
+          "Rata-rata historis 3 tahun ini membentuk basis mekanis langsung bagi Skenario Dasar (Base Case): rata-rata pendapatan Rp 16.334 M, laba kotor Rp 9.583 M, dan saldo kas Rp 22.026 M."
+        ],
+        "tables": [
+          [
+            [
+              "Pos Laporan Keuangan Historis (Rp miliar)",
+              "2023",
+              "2024",
+              "2025",
+              "Rata-Rata 3 Thn"
+            ],
+            [
+              "Pendapatan Bersih (Revenue)",
+              "14.785",
+              "15.894",
+              "18.322",
+              "16.334"
+            ],
+            [
+              "Beban Pokok Pendapatan (COGS)",
+              "5.093",
+              "7.413",
+              "7.746",
+              "6.751"
+            ],
+            [
+              "Laba Kotor (Gross Profit)",
+              "9.692",
+              "8.481",
+              "10.576",
+              "9.583"
+            ],
+            [
+              "Beban Usaha (Total SG&A termasuk D&A)",
+              "19.971",
+              "10.722",
+              "10.954",
+              "13.882"
+            ],
+            [
+              "Beban Usaha Tunai (Tanpa D&A)",
+              "17.300",
+              "9.978",
+              "10.206",
+              "12.495"
+            ],
+            [
+              "Laba / (Rugi) Usaha (EBIT)",
+              "(10.279)",
+              "(2.241)",
+              "(378)",
+              "(4.299)"
+            ],
+            [
+              "Beban Bunga",
+              "369",
+              "494",
+              "535",
+              "466"
+            ],
+            [
+              "Beban / (Manfaat) Pajak Penghasilan",
+              "(116)",
+              "189",
+              "415",
+              "163"
+            ],
+            [
+              "Laba / (Rugi) Bersih",
+              "(90.519)",
+              "(5.465)",
+              "(1.502)",
+              "(32.495)"
+            ],
+            [
+              "Kas dan Setara Kas",
+              "25.144",
+              "19.178",
+              "21.755",
+              "22.026"
+            ],
+            [
+              "Piutang Usaha",
+              "598",
+              "2.042",
+              "547",
+              "1.062"
+            ],
+            [
+              "Persediaan",
+              "173",
+              "27",
+              "14",
+              "71"
+            ],
+            [
+              "Aset Tetap Bersih (Net PP&E)",
+              "1.273",
+              "457",
+              "622",
+              "784"
+            ],
+            [
+              "Aset Lainnya (Lancar & Tidak Lancar)",
+              "26.910",
+              "21.504",
+              "22.819",
+              "23.744"
+            ],
+            [
+              "Total Aset",
+              "54.097",
+              "43.208",
+              "45.758",
+              "47.688"
+            ],
+            [
+              "Utang Usaha",
+              "1.162",
+              "1.241",
+              "1.254",
+              "1.219"
+            ],
+            [
+              "Total Utang Berbunga (Jk. Pendek + Panjang)",
+              "3.460",
+              "3.820",
+              "7.743",
+              "5.008"
+            ],
+            [
+              "Liabilitas Lainnya (Lancar & Tidak Lancar)",
+              "14.755",
+              "7.743",
+              "8.049",
+              "10.182"
+            ],
+            [
+              "Total Ekuitas Pemegang Saham",
+              "35.720",
+              "30.404",
+              "28.712",
+              "31.612"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Aset Auditan FY2025 (Rp 45.758 M) dan Kas (Rp 21.755 M) menjadi titik awal Tahun ke-0 model proyeksi."
+      },
+      {
+        "heading": "(b) Asumsi Tiga Skenario & Pertimbangan Struktur Biaya",
+        "source_citation": "Buku Kerja Milestone 4 Kelompok 4 (Sheet Assumptions) & Analisis Struktur Biaya Minggu 12",
+        "paragraphs": [
+          "Skenario Dasar (Base Case) ditautkan langsung pada rata-rata historis 3 tahun dari Milestone 2 (pertumbuhan pendapatan 11,4%, COGS 41,1%, OpEx tunai tanpa D&A 78,5%, CapEx 16,3%). Skenario Optimis mencerminkan momentum 2025 dan efisiensi H1 2026 (pertumbuhan 15,3%, COGS 38,1%, OpEx 55,7%, CapEx 6,5%), sedangkan Konservatif memodelkan kembalinya perang promo (7,5% pertumbuhan, 46,6% COGS, 85,0% OpEx).",
+          "Mengintegrasikan temuan struktur biaya Minggu 12: COGS bersifat variabel (41,1%), Pemasaran & R&D semi-variabel, sedangkan G&A, Operasional & Pendukung, dan D&A cenderung tetap (total OpEx hanya naik 2,2% di 2025). Namun penskalaan mekanis OpEx sebesar rata-rata historis 78,5% menahan beban di atas marjin kotor (58,9%)."
+        ],
+        "tables": [
+          [
+            [
+              "Penggerak Proyeksi (Driver)",
+              "Base (Rata2)",
+              "Dasar Rasional Base Case",
+              "Optimis",
+              "Dasar Rasional Optimis",
+              "Konservatif",
+              "Dasar Rasional Konservatif"
+            ],
+            [
+              "Pertumbuhan Pendapatan",
+              "11,4%",
+              "Rata-rata 2024 (7,5%) dan 2025 (15,3%).",
+              "15,3%",
+              "Mengikuti pertumbuhan kuat 2025 (GoPay & Gojek).",
+              "7,5%",
+              "Mengikuti laju 2024 yang lebih moderat."
+            ],
+            [
+              "COGS (% Pendapatan)",
+              "41,1%",
+              "Rata-rata COGS 3 tahun (2023-2025).",
+              "38,1%",
+              "Mengikuti perbaikan H1 2026 seiring skala fintech.",
+              "46,6%",
+              "Mengikuti rasio beban tertinggi historis 2024."
+            ],
+            [
+              "Beban Usaha (% Pendapatan)",
+              "78,5%",
+              "Rata-rata beban usaha tunai 3 tahun.",
+              "55,7%",
+              "Mengikuti efisiensi beban tunai FY2025.",
+              "85,0%",
+              "Asumsi perang promo subsidi kembali intensif."
+            ],
+            [
+              "Umur Piutang (DSO)",
+              "24,2 hari",
+              "Rata-rata periode penagihan 3 tahun.",
+              "10,9 hari",
+              "Mengikuti penagihan cepat FY2025.",
+              "30,0 hari",
+              "Pelunasan mitra dagang melambat ke 30 hari."
+            ],
+            [
+              "Umur Persediaan (DIO)",
+              "4,8 hari",
+              "Rata-rata umur persediaan 3 tahun.",
+              "0,7 hari",
+              "Mengikuti model platform digital 2025.",
+              "8,0 hari",
+              "Kenaikan stok mendekati periode 2023."
+            ],
+            [
+              "Umur Utang Usaha (DPO)",
+              "67,8 hari",
+              "Rata-rata termin pemasok 3 tahun.",
+              "75,0 hari",
+              "Termin kredit pemasok diperpanjang jaga kas.",
+              "59,1 hari",
+              "Pembayaran vendor lebih cepat sesuai 2025."
+            ],
+            [
+              "Belanja Modal (CapEx % Rev)",
+              "16,3%",
+              "Rata-rata CapEx 3 tahun (2023-2025).",
+              "6,5%",
+              "Efisiensi infrastruktur cloud seperti 2025.",
+              "20,0%",
+              "Investasi server & sistem teknologi lebih besar."
+            ],
+            [
+              "D&A (% Net PP&E Awal)",
+              "30,6%",
+              "Rata-rata tingkat penyusutan 2024-2025.",
+              "25,0%",
+              "Umur manfaat perangkat teknologi lebih panjang.",
+              "43,9%",
+              "Mengikuti laju penyusutan 2025 yang lebih cepat."
+            ],
+            [
+              "Tarif Pajak Efektif",
+              "22,0%",
+              "Tarif pajak penghasilan badan Indonesia.",
+              "22,0%",
+              "Tarif pajak badan statutori Indonesia.",
+              "22,0%",
+              "Tarif pajak badan statutori Indonesia."
+            ],
+            [
+              "Suku Bunga Utang",
+              "10,2%",
+              "Rata-rata beban bunga dibagi total utang.",
+              "6,9%",
+              "Mengikuti biaya bunga efektif 2025.",
+              "12,9%",
+              "Mengikuti biaya pinjaman lebih tinggi pada 2024."
+            ],
+            [
+              "Rasio Pembayaran Dividen",
+              "0,0%",
+              "Nihil dividen sepanjang 2023-2025.",
+              "0,0%",
+              "Seluruh laba ditahan untuk ekspansi.",
+              "0,0%",
+              "Menjaga likuiditas kas di bank."
+            ]
+          ],
+          [
+            [
+              "Kategori Biaya / Segmen",
+              "Klasifikasi & Pertimbangan Analitis (Tautan Minggu 12)"
+            ],
+            [
+              "Biaya Variabel (Variable)",
+              "Beban Pokok Pendapatan (COGS) bersifat variabel (41,1% pada Base Case), mencakup biaya pemrosesan pembayaran, biaya transaksi mitra/pengemudi, dan hosting cloud yang bergerak sejalan dengan volume pesanan."
+            ],
+            [
+              "Biaya Semi-Variabel",
+              "Beban Penjualan & Pemasaran serta Pengembangan Produk bersifat semi-variabel: anggaran promo menyesuaikan intensitas kompetisi, sedangkan gaji insinyur ditetapkan melalui anggaran manajemen."
+            ],
+            [
+              "Biaya Tetap (Fixed Costs)",
+              "Beban Umum & Administrasi (G&A), Operasional & Pendukung, Penyusutan & Amortisasi, dan Beban Bunga sebagian besar bersifat tetap. Pada 2025, total OpEx hanya naik 2,2% (Rp 10.722 M -> Rp 10.954 M) saat pendapatan tumbuh 15,3%. Jika OpEx tetap dijaga konstan Rp 10.954 M, GoTo menembus titik impas di Rp 18.604 M dan mencetak EBIT positif +Rp 1.062 M pada 2026F."
+            ],
+            [
+              "Konsentrasi Segmen",
+              "Pertumbuhan pendapatan GoTo terpusat pada dua segmen: Financial Technology (tumbuh 74,1%, menyumbang 91,0% kenaikan) dan On-Demand Services (tumbuh 13,8%, menyumbang 61,8% kenaikan)."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c.1) Proyeksi Laporan Laba Rugi Pro Forma (Base Case 2026F-2028F)",
+        "source_citation": "Buku Kerja Milestone 4 Kelompok 4 (Sheet Pro Forma Income Statement)",
+        "paragraphs": [
+          "Pada asumsi Skenario Dasar, pendapatan tumbuh dari Rp 18.322 M (2025A) menjadi Rp 20.408 M (2026F), Rp 22.732 M (2027F), dan Rp 25.321 M (2028F) dengan Marjin Kotor 58,9% (Rp 12.016 M -> Rp 14.908 M).",
+          "Karena OpEx tunai Base Case ikut membesar pada rasio historis 78,5% pendapatan (terangkat oleh biaya pra-restrukturisasi tahun 2023 sebesar 117,0%), proyeksi rugi usaha (EBIT) tercatat -(4.003) M hingga -(4.967) M, menghasilkan Rugi Bersih Pro Forma sebesar -(3.737) M, -(4.093) M, dan -(4.489) M."
+        ],
+        "tables": [
+          [
+            [
+              "Pos Laba Rugi Pro Forma (Rp miliar)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Pendapatan Bersih (tumbuh 11,4% Base Case)",
+              "20.408",
+              "22.732",
+              "25.321"
+            ],
+            [
+              "Beban Pokok Pendapatan (41,1% Pendapatan)",
+              "8.392",
+              "9.348",
+              "10.412"
+            ],
+            [
+              "Laba Kotor (Marjin Kotor 58,9%)",
+              "12.016",
+              "13.384",
+              "14.908"
+            ],
+            [
+              "Beban Usaha (diskalakan 78,5% rata-rata 3 thn)",
+              "16.020",
+              "17.844",
+              "19.876"
+            ],
+            [
+              "Laba / (Rugi) Usaha (EBIT)",
+              "(4.003)",
+              "(4.459)",
+              "(4.967)"
+            ],
+            [
+              "Beban Bunga (10,2% atas Total Utang)",
+              "788",
+              "788",
+              "788"
+            ],
+            [
+              "Laba / (Rugi) Sebelum Pajak (EBT)",
+              "(4.791)",
+              "(5.247)",
+              "(5.755)"
+            ],
+            [
+              "Beban / (Manfaat) Pajak (22,0%)",
+              "(1.054)",
+              "(1.154)",
+              "(1.266)"
+            ],
+            [
+              "Laba / (Rugi) Bersih",
+              "(3.737)",
+              "(4.093)",
+              "(4.489)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c.2) Uji Titik Impas & Sensitivitas Biaya Usaha Tetap",
+        "source_citation": "Buku Kerja Milestone 4 Kelompok 4 (Sheet Pro Forma Income Statement Baris 18-24)",
+        "paragraphs": [
+          "Mengapa Base Case tetap di bawah titik impas: Ketika OpEx tumbuh proporsional 78,5%, Pendapatan Impas GoTo meningkat menjadi Rp 27.207 M s.d. Rp 33.755 M, jauh di atas proyeksi pendapatan sehingga perusahaan tetap Below Breakeven dan DOL tidak bermakna karena EBIT negatif.",
+          "Perspektif Alternatif Biaya Tetap: Sebaliknya, jika manajemen membekukan beban usaha secara ketat di level FY2025 (Rp 10.954 M) sesuai temuan struktur biaya Minggu 12, Pendapatan Impas turun ke Rp 18.604 M sehingga GoTo langsung melampaui titik impas mulai 2026F (Marjin Keamanan +8,8%, EBIT +Rp 1.062 M, dan DOL 11,31x)."
+        ],
+        "tables": [
+          [
+            [
+              "Uji Titik Impas & DOL (Rp miliar)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Marjin Laba Kotor (%)",
+              "58,9%",
+              "58,9%",
+              "58,9%"
+            ],
+            [
+              "Pendapatan Impas (OpEx Skalabel 78,5% / Marjin Kotor)",
+              "27.207",
+              "30.305",
+              "33.755"
+            ],
+            [
+              "Status Titik Impas (Model Skala OpEx 78,5%)",
+              "Di Bawah Impas",
+              "Di Bawah Impas",
+              "Di Bawah Impas"
+            ],
+            [
+              "DOL Model Skalabel 78,5%",
+              "Tidak Bermakna (EBIT < 0)",
+              "Tidak Bermakna (EBIT < 0)",
+              "Tidak Bermakna (EBIT < 0)"
+            ],
+            [
+              "Beban Usaha Tetap Konstan (Model Alternatif 2025)",
+              "10.954",
+              "10.954",
+              "10.954"
+            ],
+            [
+              "EBIT jika Beban Usaha Dijaga Tetap (Fixed Cost)",
+              "1.062",
+              "2.430",
+              "3.954"
+            ],
+            [
+              "Pendapatan Impas (OpEx Tetap Rp 10.954 M / 58,9%)",
+              "18.604",
+              "18.604",
+              "18.604"
+            ],
+            [
+              "Status Titik Impas (Model Biaya Tetap)",
+              "Di Atas Impas",
+              "Di Atas Impas",
+              "Di Atas Impas"
+            ],
+            [
+              "Marjin Keamanan (Model Biaya Tetap)",
+              "+8,8%",
+              "+18,2%",
+              "+26,5%"
+            ],
+            [
+              "DOL (Laba Kotor / EBIT, saat EBIT > 0)",
+              "11,31x",
+              "5,51x",
+              "3,77x"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(d) Neraca Pro Forma, Arus Kas Terhubung & Narasi Pembakaran Kas",
+        "source_citation": "Buku Kerja Milestone 4 Kelompok 4 (Sheet Pro Forma Balance Sheet & Pro Forma Cash Flow)",
+        "paragraphs": [
+          "Pada seluruh periode proyeksi 2026F-2028F, Neraca Pro Forma berimbang sempurna (Balance Check = 0) dan Kas Akhir Arus Kas cocok persis dengan Kas Neraca (Cash Check = 0), membuktikan integrasi tiga laporan keuangan.",
+          "Peringatan Keras Likuiditas: Karena Base Case rata-rata historis menggabungkan rasio OpEx 78,5% dan CapEx 16,3% (Rp 3,33T-Rp 4,13T/tahun), GoTo menderita CFO negatif (-Rp 4.143 M di 2026F) dan membakar total kas Rp 6,6T-Rp 7,5T setiap tahun, menguras cadangan kas Rp 21.755 M (2025) hingga tinggal Rp 968 miliar pada 2028F! Solvabilitas jangka panjang hanya terjaga bila manajemen membekukan biaya tetap dan menekan CapEx ke level 6,5% (FY2025)."
+        ],
+        "tables": [
+          [
+            [
+              "Pos Neraca Pro Forma (Rp miliar)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Kas dan Setara Kas (Penyeimbang / Plug)",
+              "14.282",
+              "7.642",
+              "968"
+            ],
+            [
+              "Piutang Usaha (24,2 hari)",
+              "1.352",
+              "1.506",
+              "1.677"
+            ],
+            [
+              "Persediaan (4,8 hari)",
+              "110",
+              "123",
+              "137"
+            ],
+            [
+              "Total Aset Lancar",
+              "15.744",
+              "9.271",
+              "2.783"
+            ],
+            [
+              "Aset Tetap Bersih (Net PP&E)",
+              "3.762",
+              "6.321",
+              "8.518"
+            ],
+            [
+              "Aset Lainnya (konstan level 2025)",
+              "22.819",
+              "22.819",
+              "22.819"
+            ],
+            [
+              "TOTAL ASET",
+              "42.326",
+              "38.411",
+              "34.120"
+            ],
+            [
+              "Utang Usaha (67,8 hari)",
+              "1.559",
+              "1.737",
+              "1.935"
+            ],
+            [
+              "Utang Jangka Pendek (konstan)",
+              "1.524",
+              "1.524",
+              "1.524"
+            ],
+            [
+              "Total Liabilitas Jangka Pendek",
+              "3.083",
+              "3.261",
+              "3.458"
+            ],
+            [
+              "Utang Jangka Panjang (konstan)",
+              "6.219",
+              "6.219",
+              "6.219"
+            ],
+            [
+              "Liabilitas Lainnya (konstan level 2025)",
+              "8.049",
+              "8.049",
+              "8.049"
+            ],
+            [
+              "Total Liabilitas",
+              "17.351",
+              "17.529",
+              "17.726"
+            ],
+            [
+              "Total Ekuitas Pemegang Saham",
+              "24.975",
+              "20.882",
+              "16.393"
+            ],
+            [
+              "TOTAL LIABILITAS & EKUITAS",
+              "42.326",
+              "38.411",
+              "34.120"
+            ],
+            [
+              "Pemeriksaan Neraca (Total Aset - L&E = 0)",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "Pos Arus Kas Pro Forma (Metode Tidak Langsung, Rp M)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Laba / (Rugi) Bersih",
+              "(3.737)",
+              "(4.093)",
+              "(4.489)"
+            ],
+            [
+              "Tambah: Penyusutan & Amortisasi (D&A)",
+              "190",
+              "1.151",
+              "1.934"
+            ],
+            [
+              "(Kenaikan) / Penurunan Piutang Usaha",
+              "(805)",
+              "(154)",
+              "(171)"
+            ],
+            [
+              "(Kenaikan) / Penurunan Persediaan",
+              "(96)",
+              "(13)",
+              "(14)"
+            ],
+            [
+              "Kenaikan / (Penurunan) Utang Usaha",
+              "305",
+              "178",
+              "198"
+            ],
+            [
+              "Arus Kas dari Aktivitas Operasi (CFO)",
+              "(4.143)",
+              "(2.930)",
+              "(2.542)"
+            ],
+            [
+              "Belanja Modal (CapEx 16,3% Pendapatan)",
+              "(3.330)",
+              "(3.710)",
+              "(4.132)"
+            ],
+            [
+              "Arus Kas dari Aktivitas Investasi (CFI)",
+              "(3.330)",
+              "(3.710)",
+              "(4.132)"
+            ],
+            [
+              "Dividen & Perubahan Utang (Arus Kas Pendanaan)",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "Perubahan Bersih Kas",
+              "(7.473)",
+              "(6.640)",
+              "(6.674)"
+            ],
+            [
+              "Kas Awal Periode",
+              "21.755",
+              "14.282",
+              "7.642"
+            ],
+            [
+              "Kas Akhir Periode (dihitung)",
+              "14.282",
+              "7.642",
+              "968"
+            ],
+            [
+              "Uji Cocok vs. Kas Neraca (harus = 0)",
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_cash_flows_p2_highlighted.png",
+        "evidence_caption": "Arus Kas Investasi & Pendanaan Auditan FY2025 (hlm. 22) sebagai basis Kas Awal dan Utang Tahun ke-0."
+      }
+    ],
+    "workbook": {
+      "Instructions": [
+        [
+          "Analisis Laporan Keuangan - Buku Kerja Proyeksi Pro Forma"
+        ],
+        [
+          "Templat pendamping Minggu 12 (Proyeksi Laporan Keuangan)"
+        ],
+        [
+          "",
+          "Tujuan Buku Kerja"
+        ],
+        [
+          "",
+          "Buku kerja ini menyusun proyeksi 3 tahun laporan laba rugi, neraca, dan arus kas GoTo berdasarkan rasio dan data historis dari Buku Kerja Rasio & DuPont (Milestone 2)."
+        ],
+        [
+          "",
+          "Cara Menggunakan Buku Kerja Ini"
+        ],
+        [
+          "",
+          "1. Sheet 'Historical Summary' menarik 3 tahun data aktual auditan PT GoTo Gojek Tokopedia Tbk (2023-2025)."
+        ],
+        [
+          "",
+          "2. Sheet 'Assumptions' menetapkan penggerak proyeksi (pertumbuhan, marjin, modal kerja, CapEx, pajak, suku bunga, dividen) berdasarkan rata-rata historis 3 tahun dan justifikasi ke depan."
+        ],
+        [
+          "",
+          "3. Kolom Skenario menyajikan nilai Base (Dasar), Optimis, dan Konservatif secara berdampingan."
+        ],
+        [
+          "",
+          "4. Sheet 'Pro Forma Income Statement', 'Pro Forma Balance Sheet', dan 'Pro Forma Cash Flow' menghitung seluruh proyeksi 2026F-2028F secara otomatis."
+        ],
+        [
+          "",
+          "5. Baris 'Balance Check' pada Neraca Pro Forma harus selalu bernilai nol (0), dengan Kas berperan sebagai akun penyeimbang otomatis."
+        ],
+        [
+          "",
+          "6. Keluaran proyeksi Base Case langsung menjadi input bagi Buku Kerja Valuasi (Tugas 14)."
+        ],
+        [
+          "",
+          "Legenda Warna Sel"
+        ],
+        [
+          "",
+          "Teks Biru: Input atau asumsi manual yang dapat diubah."
+        ],
+        [
+          "",
+          "Teks Hitam: Rumus otomatis (jangan ditimpa)."
+        ],
+        [
+          "",
+          "Teks Hijau: Tautan otomatis dari data historis atau sheet lain."
+        ],
+        [
+          "",
+          "Sel pengalih skenario: Assumptions!B4 (1 = Base Case, 2 = Optimis, 3 = Konservatif)."
+        ]
+      ],
+      "Sources": [
+        [
+          "Sumber Data Historis, DuPont & Rasio (PT GoTo Gojek Tokopedia Tbk)"
+        ],
+        [
+          "Angka dalam Rp miliar (dari Buku Kerja Milestone 2 & Laporan Auditan)"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2023",
+          "2024",
+          "2025",
+          "Rata-Rata 3 Thn"
+        ],
+        [
+          "LAPORAN LABA RUGI (Rp miliar)"
+        ],
+        [
+          "Pendapatan Bersih",
+          "14,785.5",
+          "15,894.5",
+          "18,322.1",
+          "16,334.0"
+        ],
+        [
+          "Beban Pokok Pendapatan (COGS)",
+          "5,093.2",
+          "7,413.4",
+          "7,746.0",
+          "6,750.9"
+        ],
+        [
+          "Laba Kotor",
+          "9,692.3",
+          "8,481.1",
+          "10,576.1",
+          "9,583.2"
+        ],
+        [
+          "Beban Usaha (SG&A & Teknologi)",
+          "19,971.3",
+          "10,721.9",
+          "10,954.3",
+          "13,882.5"
+        ],
+        [
+          "Beban Usaha Tunai (Tanpa D&A)",
+          "17,300.1",
+          "9,977.8",
+          "10,205.8",
+          "12,494.6"
+        ],
+        [
+          "Laba / (Rugi) Usaha (EBIT)",
+          "(10,279.0)",
+          "(2,240.9)",
+          "(378.3)",
+          "(4,299.4)"
+        ],
+        [
+          "Interest Expense",
+          "369.3",
+          "494.1",
+          "535.2",
+          "466.2"
+        ],
+        [
+          "Beban / (Penghasilan) Lain-lain",
+          "79,986.2",
+          "2,540.9",
+          "173.2",
+          "27,566.8"
+        ],
+        [
+          "Laba / (Rugi) Sebelum Pajak (EBT)",
+          "(90,634.4)",
+          "(5,275.8)",
+          "(1,086.6)",
+          "(32,332.3)"
+        ],
+        [
+          "Beban / (Manfaat) Pajak Penghasilan",
+          "(115.7)",
+          "189.0",
+          "415.1",
+          "162.8"
+        ],
+        [
+          "Laba / (Rugi) Bersih Konsolidasian",
+          "(90,518.7)",
+          "(5,464.9)",
+          "(1,501.7)",
+          "(32,495.1)"
+        ],
+        [
+          "NERACA (Rp miliar)"
+        ],
+        [
+          "Kas dan Setara Kas",
+          "25,143.9",
+          "19,177.5",
+          "21,755.2",
+          "22,025.5"
+        ],
+        [
+          "Piutang Usaha",
+          "597.6",
+          "2,041.7",
+          "547.3",
+          "1,062.2"
+        ],
+        [
+          "Persediaan",
+          "172.8",
+          "27.4",
+          "14.1",
+          "71.4"
+        ],
+        [
+          "Aset Lainnya (Lancar & Tidak Lancar)",
+          "26,910.3",
+          "21,504.2",
+          "22,818.7",
+          "23,744.4"
+        ],
+        [
+          "Total Aset Lancar",
+          "33,617.3",
+          "26,337.7",
+          "29,059.2",
+          "29,671.4"
+        ],
+        [
+          "Aset Tetap Bersih (Net PP&E)",
+          "1,272.7",
+          "457.0",
+          "622.4",
+          "784.0"
+        ],
+        [
+          "Total Aset Tidak Lancar",
+          "20,480.0",
+          "16,870.2",
+          "16,698.4",
+          "18,016.2"
+        ],
+        [
+          "TOTAL ASET",
+          "54,097.3",
+          "43,207.9",
+          "45,757.6",
+          "47,687.6"
+        ],
+        [
+          "Utang Usaha",
+          "1,161.8",
+          "1,240.9",
+          "1,254.4",
+          "1,219.0"
+        ],
+        [
+          "Utang Jangka Pendek",
+          "832.1",
+          "1,351.8",
+          "1,523.8",
+          "1,235.9"
+        ],
+        [
+          "Utang Jangka Panjang",
+          "2,628.3",
+          "2,468.6",
+          "6,218.9",
+          "3,771.9"
+        ],
+        [
+          "Liabilitas Lainnya (Lancar & Tidak Lancar)",
+          "13,755.1",
+          "7,742.8",
+          "8,049.0",
+          "9,849.0"
+        ],
+        [
+          "Total Liabilitas",
+          "18,377.3",
+          "12,804.1",
+          "17,046.0",
+          "16,075.8"
+        ],
+        [
+          "Total Ekuitas Pemegang Saham",
+          "35,720.0",
+          "30,403.8",
+          "28,711.7",
+          "31,611.8"
+        ],
+        [
+          "POS MEMO & PENGGERAK PROYEKSI"
+        ],
+        [
+          "Penyusutan & Amortisasi (Total Laba Rugi)",
+          "2,671.1",
+          "744.2",
+          "748.6",
+          "1,388.0"
+        ],
+        [
+          "Belanja Modal Kas (CapEx)",
+          "220.4",
+          "6,518.9",
+          "1,182.4",
+          "2,640.6"
+        ],
+        [
+          "Jumlah Saham Beredar (juta lembar)",
+          "1,070,558",
+          "1,056,283",
+          "1,062,010",
+          "1,062,951"
+        ],
+        [
+          "Tingkat Pertumbuhan Pendapatan",
+          "-",
+          "7.5%",
+          "15.3%",
+          "11.4%"
+        ],
+        [
+          "COGS (% dari Pendapatan)",
+          "34.4%",
+          "46.6%",
+          "42.3%",
+          "41.1%"
+        ],
+        [
+          "Beban Usaha Tanpa D&A (% Pendapatan)",
+          "117.0%",
+          "62.8%",
+          "55.7%",
+          "78.5%"
+        ],
+        [
+          "Rata-Rata Umur Piutang (DSO)",
+          "14.8",
+          "46.9",
+          "10.9",
+          "24.2"
+        ],
+        [
+          "Rata-Rata Umur Persediaan (DIO)",
+          "12.4",
+          "1.3",
+          "0.7",
+          "4.8"
+        ],
+        [
+          "Rata-Rata Umur Utang Usaha (DPO)",
+          "83.3",
+          "61.1",
+          "59.1",
+          "67.8"
+        ],
+        [
+          "CapEx (% dari Pendapatan)",
+          "1.5%",
+          "41.0%",
+          "6.5%",
+          "16.3%"
+        ],
+        [
+          "D&A (% dari Aset Tetap Awal)",
+          "-",
+          "17.3%",
+          "43.9%",
+          "30.6%"
+        ],
+        [
+          "Suku Bunga Efektif atas Utang",
+          "10.7%",
+          "12.9%",
+          "6.9%",
+          "10.2%"
+        ]
+      ],
+      "Historical Summary": [
+        [
+          "Ringkasan Historis (Input Model Terhubung)"
+        ],
+        [
+          "PT GoTo Gojek Tokopedia Tbk (GOTO) dalam Rp miliar"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        [
+          "LAPORAN LABA RUGI"
+        ],
+        [
+          "Pendapatan Bersih",
+          "14,785.5",
+          "15,894.5",
+          "18,322.1"
+        ],
+        [
+          "Beban Pokok Pendapatan (COGS)",
+          "5,093.2",
+          "7,413.4",
+          "7,746.0"
+        ],
+        [
+          "Beban Usaha (SG&A & Teknologi)",
+          "19,971.3",
+          "10,721.9",
+          "10,954.3"
+        ],
+        [
+          "Interest Expense",
+          "369.3",
+          "494.1",
+          "535.2"
+        ],
+        [
+          "Beban / (Manfaat) Pajak Penghasilan",
+          "(115.7)",
+          "189.0",
+          "415.1"
+        ],
+        [
+          "LAPORAN POSISI KEUANGAN (NERACA)"
+        ],
+        [
+          "Kas dan Setara Kas",
+          "25,143.9",
+          "19,177.5",
+          "21,755.2"
+        ],
+        [
+          "Piutang Usaha",
+          "597.6",
+          "2,041.7",
+          "547.3"
+        ],
+        [
+          "Persediaan",
+          "172.8",
+          "27.4",
+          "14.1"
+        ],
+        [
+          "Aset Tetap Bersih (Net PP&E)",
+          "1,272.7",
+          "457.0",
+          "622.4"
+        ],
+        [
+          "Aset Lainnya (Lancar & Tidak Lancar)",
+          "26,910.3",
+          "21,504.2",
+          "22,818.7"
+        ],
+        [
+          "Utang Usaha",
+          "1,161.8",
+          "1,240.9",
+          "1,254.4"
+        ],
+        [
+          "Utang Jangka Pendek",
+          "832.1",
+          "1,351.8",
+          "1,523.8"
+        ],
+        [
+          "Utang Jangka Panjang",
+          "2,628.3",
+          "2,468.6",
+          "6,218.9"
+        ],
+        [
+          "Liabilitas Lainnya (Lancar & Tidak Lancar)",
+          "13,755.1",
+          "7,742.8",
+          "8,049.0"
+        ],
+        [
+          "Total Ekuitas Pemegang Saham",
+          "35,720.0",
+          "30,403.8",
+          "28,711.7"
+        ],
+        [
+          "POS MEMO"
+        ],
+        [
+          "Penyusutan & Amortisasi",
+          "2,671.1",
+          "744.2",
+          "748.6"
+        ],
+        [
+          "Belanja Modal (CapEx)",
+          "220.4",
+          "6,518.9",
+          "1,182.4"
+        ],
+        [
+          "Jumlah Saham Beredar (juta lembar)",
+          "1,070,558",
+          "1,056,283",
+          "1,062,010"
+        ]
+      ],
+      "Assumptions": [
+        [
+          "Asumsi Proyeksi (Model Tiga Skenario)"
+        ],
+        [
+          "Skenario Aktif: 1 = Skenario Dasar (Rata-Rata Historis 3 Tahun dari Milestone 2)"
+        ],
+        [
+          "Penggerak (Driver)",
+          "Base (Dipilih)",
+          "Dasar Rasional Base Case",
+          "Optimis",
+          "Dasar Rasional Skenario Optimis",
+          "Konservatif",
+          "Dasar Rasional Skenario Konservatif"
+        ],
+        [
+          "Tingkat Pertumbuhan Pendapatan",
+          "11.4%",
+          "Rata-rata pertumbuhan pendapatan 2024 (7,5%) dan 2025 (15,3%).",
+          "15.3%",
+          "Mengikuti pertumbuhan kuat 2025 dari pinjaman GoPay dan Gojek.",
+          "7.5%",
+          "Mengikuti pertumbuhan 2024 yang lebih lambat pasca-dekonsolidasi."
+        ],
+        [
+          "COGS (% dari Pendapatan)",
+          "41.1%",
+          "Rata-rata rasio beban pokok pendapatan 3 tahun (2023-2025).",
+          "38.1%",
+          "Mengikuti perbaikan COGS 1H 2026 seiring skala fintech meningkat.",
+          "46.6%",
+          "Mengikuti rasio biaya historis tertinggi pada 2024."
+        ],
+        [
+          "Beban Usaha (% dari Pendapatan)",
+          "78.5%",
+          "Rata-rata beban usaha tunai 3 tahun (tidak termasuk D&A).",
+          "55.7%",
+          "Mengikuti rasio OpEx tunai 2025 pasca pemangkasan bakar uang promo.",
+          "85.0%",
+          "Mengasumsikan kembalinya perang subsidi dan promosi besar-besaran."
+        ],
+        [
+          "Rata-Rata Umur Piutang (DSO)",
+          "24.2 days",
+          "Rata-rata historis periode penagihan piutang 3 tahun.",
+          "10.9 days",
+          "Mengikuti penagihan piutang 2025 yang lebih cepat.",
+          "30.0 days",
+          "Mengasumsikan pelunasan mitra yang lebih lambat."
+        ],
+        [
+          "Rata-Rata Umur Persediaan (DIO)",
+          "4.8 days",
+          "Rata-rata historis umur penyimpanan persediaan 3 tahun.",
+          "0.7 days",
+          "Mengikuti persediaan minimal platform digital pada 2025.",
+          "8.0 days",
+          "Mengasumsikan persediaan lebih tinggi mendekati level 2023."
+        ],
+        [
+          "Rata-Rata Umur Utang Usaha (DPO)",
+          "67.8 days",
+          "Rata-rata historis periode pembayaran pemasok 3 tahun.",
+          "75.0 days",
+          "Termin pemasok lebih panjang menjaga kas modal kerja.",
+          "59.1 days",
+          "Mengikuti siklus pembayaran pemasok 2025 yang lebih cepat."
+        ],
+        [
+          "CapEx (% dari Pendapatan)",
+          "16.3%",
+          "Rata-rata rasio belanja modal kas 3 tahun.",
+          "6.5%",
+          "Mengikuti belanja infrastruktur cloud 2025 yang lebih hemat aset.",
+          "20.0%",
+          "Mengasumsikan belanja modal server dan teknologi lebih berat."
+        ],
+        [
+          "D&A (% dari Aset Tetap Awal)",
+          "30.6%",
+          "Rata-rata historis tingkat penyusutan (2024-2025).",
+          "25.0%",
+          "Mengasumsikan umur manfaat infrastruktur digital lebih panjang.",
+          "43.9%",
+          "Mengikuti laju penyusutan 2025 yang lebih tinggi."
+        ],
+        [
+          "Tarif Pajak Efektif",
+          "22.0%",
+          "Tarif pajak penghasilan badan statutori Indonesia.",
+          "22.0%",
+          "Tarif pajak penghasilan badan statutori.",
+          "22.0%",
+          "Tarif pajak penghasilan badan statutori."
+        ],
+        [
+          "Suku Bunga Utang",
+          "10.2%",
+          "Rata-rata historis suku bunga efektif atas utang (3 tahun).",
+          "6.9%",
+          "Mengikuti biaya bunga efektif 2025 yang lebih rendah.",
+          "12.9%",
+          "Mengikuti biaya pinjaman 2024 yang lebih tinggi."
+        ],
+        [
+          "Rasio Pembayaran Dividen",
+          "0.0%",
+          "Nihil pembagian dividen secara historis (2023-2025).",
+          "0.0%",
+          "Menginvestasikan ulang seluruh laba untuk ekspansi ekosistem.",
+          "0.0%",
+          "Menjaga cadangan kas."
+        ],
+        [
+          "OUTPUT SKENARIO TERPILIH (Aktif: 1 = Base Case)"
+        ],
+        [
+          "Selected Revenue Growth Rate",
+          "11.4%",
+          "Menggerakkan Pendapatan 2026F-2028F dari basis 2025 (Rp 18.322,1 M)"
+        ],
+        [
+          "Selected COGS (% of Revenue)",
+          "41.1%",
+          "Menghasilkan Marjin Laba Kotor 58,9%"
+        ],
+        [
+          "Selected Operating Expenses (% of Revenue)",
+          "78.5%",
+          "OpEx tunai terskala melebihi Marjin Kotor di Skenario Dasar"
+        ],
+        [
+          "Selected DSO / DIO / DPO",
+          "24.2 / 4.8 / 67.8 days",
+          "Menggerakkan saldo modal kerja dan penyesuaian arus kas operasi"
+        ],
+        [
+          "Selected Capex (% of Revenue)",
+          "16.3%",
+          "Menghasilkan arus keluar CapEx Rp 3,33T s.d. Rp 4,13T per tahun"
+        ]
+      ],
+      "Pro Forma Income Statement": [
+        [
+          "Laporan Laba Rugi Pro Forma (Base Case, Rp miliar)"
+        ],
+        [
+          "Digerakkan oleh sheet Asumsi (Skenario 1 = Rata-Rata Historis Base Case)"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "Pendapatan Bersih",
+          "20,408.5",
+          "22,732.4",
+          "25,320.9"
+        ],
+        [
+          "Beban Pokok Pendapatan (COGS)",
+          "8,392.3",
+          "9,348.0",
+          "10,412.4"
+        ],
+        [
+          "Laba Kotor",
+          "12,016.1",
+          "13,384.4",
+          "14,908.5"
+        ],
+        [
+          "Beban Usaha (diskalakan 78,5%)",
+          "16,019.6",
+          "17,843.7",
+          "19,875.6"
+        ],
+        [
+          "Laba / (Rugi) Usaha (EBIT)",
+          "(4,003.5)",
+          "(4,459.3)",
+          "(4,967.1)"
+        ],
+        [
+          "Beban Bunga (10,2% atas Utang)",
+          "787.6",
+          "787.6",
+          "787.6"
+        ],
+        [
+          "Laba / (Rugi) Sebelum Pajak (EBT)",
+          "(4,791.0)",
+          "(5,246.9)",
+          "(5,754.7)"
+        ],
+        [
+          "Beban / (Manfaat) Pajak (22,0%)",
+          "(1,054.0)",
+          "(1,154.3)",
+          "(1,266.0)"
+        ],
+        [
+          "Laba / (Rugi) Bersih Konsolidasian",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "Dividen Dibayarkan",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Penambahan Saldo Laba",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "UJI TITIK IMPAS & LEVERAGE OPERASI (MILESTONE 4)"
+        ],
+        [
+          "Marjin Laba Kotor (%)",
+          "58.9%",
+          "58.9%",
+          "58.9%"
+        ],
+        [
+          "Pendapatan Impas (Beban Usaha / Marjin Kotor)",
+          "27,208.0",
+          "30,306.2",
+          "33,757.2"
+        ],
+        [
+          "Selisih / (Defisit) Pendapatan vs. Impas",
+          "(6,799.6)",
+          "(7,573.8)",
+          "(8,436.3)"
+        ],
+        [
+          "Status Titik Impas",
+          "Di Bawah Titik Impas",
+          "Di Bawah Titik Impas",
+          "Di Bawah Titik Impas"
+        ],
+        [
+          "Marjin Keamanan (%)",
+          "-33.3%",
+          "-33.3%",
+          "-33.3%"
+        ],
+        [
+          "Degree of Operating Leverage (DOL)",
+          "Tidak Bermakna (EBIT < 0)",
+          "Tidak Bermakna (EBIT < 0)",
+          "Tidak Bermakna (EBIT < 0)"
+        ]
+      ],
+      "Pro Forma Balance Sheet": [
+        [
+          "Neraca Pro Forma (Base Case, Rp miliar)"
+        ],
+        [
+          "Kas bertindak sebagai penyeimbang neraca; Aset selalu sama dengan Liabilitas + Ekuitas"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "ASET"
+        ],
+        [
+          "Kas dan Setara Kas (Penyeimbang)",
+          "14,282.2",
+          "7,642.3",
+          "968.2"
+        ],
+        [
+          "Piutang Usaha (24,2 hari)",
+          "1,352.0",
+          "1,506.0",
+          "1,677.5"
+        ],
+        [
+          "Persediaan (4,8 hari)",
+          "110.3",
+          "122.9",
+          "136.9"
+        ],
+        [
+          "Total Aset Lancar",
+          "15,744.5",
+          "9,271.2",
+          "2,782.6"
+        ],
+        [
+          "Aset Tetap Bersih (Net PP&E)",
+          "3,762.4",
+          "6,320.7",
+          "8,518.4"
+        ],
+        [
+          "Aset Lainnya (diasumsikan konstan)",
+          "22,818.7",
+          "22,818.7",
+          "22,818.7"
+        ],
+        [
+          "TOTAL ASET",
+          "42,325.6",
+          "38,410.6",
+          "34,119.7"
+        ],
+        [
+          "LIABILITAS & EKUITAS"
+        ],
+        [
+          "Utang Usaha (67,8 hari)",
+          "1,559.4",
+          "1,736.9",
+          "1,934.7"
+        ],
+        [
+          "Utang Jangka Pendek (konstan)",
+          "1,523.8",
+          "1,523.8",
+          "1,523.8"
+        ],
+        [
+          "Total Liabilitas Jangka Pendek",
+          "3,083.1",
+          "3,260.7",
+          "3,458.5"
+        ],
+        [
+          "Utang Jangka Panjang (konstan)",
+          "6,218.9",
+          "6,218.9",
+          "6,218.9"
+        ],
+        [
+          "Liabilitas Lainnya (konstan)",
+          "8,049.0",
+          "8,049.0",
+          "8,049.0"
+        ],
+        [
+          "Total Liabilitas",
+          "17,351.0",
+          "17,528.5",
+          "17,726.3"
+        ],
+        [
+          "Total Ekuitas Pemegang Saham",
+          "24,974.7",
+          "20,882.1",
+          "16,393.4"
+        ],
+        [
+          "TOTAL LIABILITAS & EKUITAS",
+          "42,325.6",
+          "38,410.6",
+          "34,119.7"
+        ],
+        [
+          "Pemeriksaan Keseimbangan (harus = 0)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ]
+      ],
+      "Pro Forma Cash Flow": [
+        [
+          "Laporan Arus Kas Pro Forma (Metode Tidak Langsung, Rp miliar)"
+        ],
+        [
+          "Terekonsiliasi tepat ke perubahan Kas pada Neraca Pro Forma"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "ARUS KAS DARI AKTIVITAS OPERASI"
+        ],
+        [
+          "Laba / (Rugi) Bersih Konsolidasian",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "Tambah: Penyusutan & Amortisasi",
+          "190.5",
+          "1,151.5",
+          "1,934.4"
+        ],
+        [
+          "(Kenaikan) / Penurunan Piutang",
+          "(804.7)",
+          "(154.0)",
+          "(171.5)"
+        ],
+        [
+          "(Kenaikan) / Penurunan Persediaan",
+          "(96.2)",
+          "(12.6)",
+          "(14.0)"
+        ],
+        [
+          "Kenaikan / (Penurunan) Utang Usaha",
+          "305.0",
+          "177.6",
+          "197.8"
+        ],
+        [
+          "Arus Kas dari Aktivitas Operasi (CFO)",
+          "(4,142.5)",
+          "(2,930.1)",
+          "(2,542.0)"
+        ],
+        [
+          "ARUS KAS DARI AKTIVITAS INVESTASI"
+        ],
+        [
+          "Belanja Modal (16,3% dari Pendapatan)",
+          "(3,330.5)",
+          "(3,709.7)",
+          "(4,132.2)"
+        ],
+        [
+          "Arus Kas dari Aktivitas Investasi (CFI)",
+          "(3,330.5)",
+          "(3,709.7)",
+          "(4,132.2)"
+        ],
+        [
+          "ARUS KAS DARI AKTIVITAS PENDANAAN"
+        ],
+        [
+          "Dividen Dibayarkan",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Perubahan Utang Bersih (konstan)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Arus Kas dari Aktivitas Pendanaan (CFF)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Perubahan Bersih Kas",
+          "(7,473.0)",
+          "(6,639.8)",
+          "(6,674.1)"
+        ],
+        [
+          "Kas Awal Periode",
+          "21,755.2",
+          "14,282.2",
+          "7,642.3"
+        ],
+        [
+          "Kas Akhir Periode (dihitung)",
+          "14,282.2",
+          "7,642.3",
+          "968.2"
+        ],
+        [
+          "Uji Cocok terhadap Kas Neraca (= 0)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "a14",
+    "code": "Tugas 14",
+    "folder": "Minggu 14",
+    "week": "Minggu 14",
+    "title": "Paket Valuasi Lengkap: WACC (7,76%), DCF, Residual Income & Market Multiples",
+    "summary": "Perhitungan Ke CAPM 8,45%, WACC 7,76%, Valuasi DCF (-Rp 121,1/lbr), Residual Income (-Rp 75,1/lbr), serta Kelipatan Pasar (Rp 39,8/lbr) ditriangulasi terhadap harga saham BEI Rp 25,00 pasca pencabutan batas Rp 50.",
+    "docx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_Assignment14_Valuation_Summary.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "1. Struktur Biaya Modal (CAPM Ke = 8,45% & WACC = 7,76%)",
+        "source_citation": "Buku Kerja Valuasi Kelompok 4 (Sheet Cost of Capital); Investing.com & Damodaran Jan 2026",
+        "paragraphs": [
+          "Parameter risiko makro dan negara dipertahankan konsisten dari templat valuasi Minggu 14: suku bunga bebas risiko proksi = 4,502% (imbal hasil SBN 6,12% dikurangi default spread Baa2 1,618%), ERP pasar matang = 4,23%, Country Risk Premium Indonesia = 2,465%, dan tarif pajak = 22,0%.",
+          "Dengan Levered Beta Investing.com sebesar 0,59, Biaya Ekuitas (Ke) GoTo adalah 8,45%. Menggabungkan bobot nilai pasar ekuitas 77,4% (Rp 26.550,3 M pada harga Rp 25,00) dan bobot utang 22,6% (Rp 7.742,6 M dengan biaya utang pasca-pajak 5,39%) menghasilkan WACC sebesar 7,76%."
+        ],
+        "tables": [
+          [
+            [
+              "Input / Hasil Biaya Modal",
+              "Nilai",
+              "Sumber dan Catatan Perhitungan"
+            ],
+            [
+              "Suku Bunga Bebas Risiko (Rf proksi)",
+              "4,50%",
+              "Imbal hasil SBN RI 10 tahun (6,120%) dikurangi spread Baa2 (1,618%)."
+            ],
+            [
+              "Levered Beta",
+              "0,59",
+              "Statistik utama saham PT GoTo Gojek Tokopedia Tbk dari Investing.com."
+            ],
+            [
+              "Mature-Market Equity Risk Premium (ERP)",
+              "4,23%",
+              "Implied ERP pasar matang Damodaran (pembaruan Januari 2026)."
+            ],
+            [
+              "Indonesia Country Risk Premium (CRP)",
+              "2,47%",
+              "Premi risiko negara Baa2 Indonesia Damodaran (2,465%)."
+            ],
+            [
+              "Biaya Ekuitas (Cost of Equity, Ke)",
+              "8,45%",
+              "4,502% + 0,59 x (4,23% + 2,465%) = 8,45%."
+            ],
+            [
+              "Biaya Utang Pra-Pajak (Rd)",
+              "6,91%",
+              "Beban bunga aktual 2025 (Rp 535,2 M) / Total utang (Rp 7.742,6 M)."
+            ],
+            [
+              "Tarif Pajak Efektif",
+              "22,00%",
+              "Tarif pajak penghasilan badan Indonesia yang berlaku."
+            ],
+            [
+              "Biaya Utang Pasca-Pajak",
+              "5,39%",
+              "6,91% x (1 - 22%) = 5,39%."
+            ],
+            [
+              "Nilai Pasar Ekuitas (Rp Miliar)",
+              "26.550,3",
+              "Harga saham Rp 25,00 x 1.062.010,2 juta saham beredar."
+            ],
+            [
+              "Nilai Buku Total Utang (Rp Miliar)",
+              "7.742,6",
+              "Utang jk. pendek (Rp 1.523,8 M) + Utang jk. panjang (Rp 6.218,9 M)."
+            ],
+            [
+              "Bobot Ekuitas (We) / Bobot Utang (Wd)",
+              "77,4% / 22,6%",
+              "We = 26.550,3 / 34.292,9; Wd = 7.742,6 / 34.292,9."
+            ],
+            [
+              "Weighted Average Cost of Capital (WACC)",
+              "7,76%",
+              "(77,4% x 8,45%) + (22,6% x 5,39%) = 7,76%."
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note20_borrowings_summary.png",
+        "evidence_caption": "Ringkasan Pinjaman Catatan 20 (hlm. 106): Total utang auditan Rp 7.742,6 M yang mendasari bobot utang WACC 22,6%."
+      },
+      {
+        "heading": "2. Model Valuasi Arus Kas Terdiskonto (DCF - FCFF)",
+        "source_citation": "Buku Kerja Valuasi Kelompok 4 (Sheet DCF Valuation & Terminal Growth)",
+        "paragraphs": [
+          "Menggunakan proyeksi Base Case Milestone 4 (OpEx 78,5%, CapEx 16,3%, dan tanpa restitusi pajak tunai saat EBIT negatif sesuai konvensi DCF), GoTo membukukan FCFF negatif sebesar -(7.738,7) M hingga -(7.152,6) M setiap tahun.",
+          "Mendiskontokan arus kas tersebut beserta Nilai Terminal (g = 3,0%) pada WACC 7,76% menghasilkan Enterprise Value negatif -(142.588,1) M. Meskipun ditambahkan posisi Kas Bersih +Rp 14.012,5 M (Kas Rp 21.755,2 M minus Utang Rp 7.742,6 M), Nilai Ekuitas intrinsik DCF tetap negatif -(128.575,5) M atau -Rp 121,1 per saham."
+        ],
+        "tables": [
+          [
+            [
+              "Tabel Valuasi DCF FCFF (Rp miliar)",
+              "2026F",
+              "2027F",
+              "2028F",
+              "Terminal (g=3,0%)"
+            ],
+            [
+              "EBIT (dari Base Case Milestone 4)",
+              "(4.003,4)",
+              "(4.459,4)",
+              "(4.967,4)",
+              ""
+            ],
+            [
+              "Dikurangi: Pajak atas EBIT (0 saat rugi)",
+              "0,0",
+              "0,0",
+              "0,0",
+              ""
+            ],
+            [
+              "EBIAT (NOPAT)",
+              "(4.003,4)",
+              "(4.459,4)",
+              "(4.967,4)",
+              ""
+            ],
+            [
+              "Tambah: Penyusutan & Amortisasi",
+              "190,4",
+              "1.151,1",
+              "1.934,0",
+              ""
+            ],
+            [
+              "Dikurangi: Belanja Modal (CapEx 16,3%)",
+              "(3.329,8)",
+              "(3.709,1)",
+              "(4.131,6)",
+              ""
+            ],
+            [
+              "Dikurangi: Kenaikan Modal Kerja Bersih",
+              "(595,9)",
+              "11,1",
+              "12,4",
+              ""
+            ],
+            [
+              "Free Cash Flow to Firm (FCFF)",
+              "(7.738,7)",
+              "(7.006,3)",
+              "(7.152,6)",
+              "(154.740,8)"
+            ],
+            [
+              "Faktor Diskonto (pada WACC = 7,76%)",
+              "0,9280",
+              "0,8611",
+              "0,7991",
+              "0,7991"
+            ],
+            [
+              "Nilai Kini (PV) FCFF (WACC = 7,76%)",
+              "(7.181,4)",
+              "(6.033,4)",
+              "(5.715,8)",
+              "(123.657,4)"
+            ],
+            [
+              "Enterprise Value (Total PV FCFF + PV TV)",
+              "(142.588,1)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Dikurangi: Utang Bersih (Utang 7.742,6 - Kas 21.755,2)",
+              "(14.012,5)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Nilai Ekuitas (DCF)",
+              "(128.575,5)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Nilai DCF per Saham (Rp) [1.062.010,2 jt lbr]",
+              "Rp (121,1)",
+              "",
+              "",
+              ""
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "3. Model Valuasi Residual Income (Laba Ekonomis)",
+        "source_citation": "Buku Kerja Valuasi Kelompok 4 (Sheet Residual Income Valuation)",
+        "paragraphs": [
+          "Model Residual Income menguji apakah laba bersih mampu melampaui beban biaya ekuitas 8,45% (Ekuitas Awal x Ke). Berangkat dari Nilai Buku Ekuitas Rp 28.711,7 M, proyeksi Rugi Bersih (-Rp 3.737 M hingga -Rp 4.489 M) ditambah beban modal Rp 1,77T-Rp 2,43T menghasilkan laba ekonomis negatif lebih dari -Rp 6,2T per tahun.",
+          "Mengurangkan PV laba ekonomis negatif (-Rp 108,48T) dari nilai buku awal menghasilkan Nilai Ekuitas Residual Income sebesar -(79.770,2) M atau -Rp 75,1 per saham, menguatkan kesimpulan DCF."
+        ],
+        "tables": [
+          [
+            [
+              "Tabel Valuasi Residual Income (Rp miliar)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Nilai Buku Awal Ekuitas",
+              "28.711,7",
+              "24.974,7",
+              "20.882,0"
+            ],
+            [
+              "Proyeksi Laba / (Rugi) Bersih Base Case",
+              "(3.737,0)",
+              "(4.092,7)",
+              "(4.488,9)"
+            ],
+            [
+              "Dividen Dibayarkan",
+              "0,0",
+              "0,0",
+              "0,0"
+            ],
+            [
+              "Beban Modal Ekuitas (Ekuitas Awal x 8,45% Ke)",
+              "2.426,7",
+              "2.110,9",
+              "1.765,0"
+            ],
+            [
+              "Residual Income (Laba Bersih - Beban Ekuitas)",
+              "(6.163,7)",
+              "(6.203,6)",
+              "(6.253,9)"
+            ],
+            [
+              "PV Residual Income (diskonto Ke = 8,45%)",
+              "(5.683,4)",
+              "(5.274,3)",
+              "(4.902,7)"
+            ],
+            [
+              "Total PV Residual Income (Tahun 1 s.d. 3)",
+              "(15.860,4)",
+              "",
+              ""
+            ],
+            [
+              "PV Terminal Residual Income (g = 3,0%)",
+              "(92.621,5)",
+              "",
+              ""
+            ],
+            [
+              "Nilai Buku Ekuitas Saat Ini (Akhir 2025)",
+              "28.711,7",
+              "",
+              ""
+            ],
+            [
+              "Total Nilai Ekuitas (Residual Income)",
+              "(79.770,2)",
+              "",
+              ""
+            ],
+            [
+              "Nilai Residual Income per Saham (Rp)",
+              "Rp (75,1)",
+              "",
+              ""
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
+        "evidence_caption": "Bagian Ekuitas Auditan FY2025 yang memverifikasi Ekuitas Rp 28,71T dan Akumulasi Defisit -Rp 214,1T."
+      },
+      {
+        "heading": "4. Triangulasi Kelipatan Pasar & Membaca Celah Valuasi vs. Harga Rp 25,00",
+        "source_citation": "Buku Kerja Valuasi Kelompok 4 (Sheet Market Multiples & Valuation Summary); Aturan BEI 28 Sept 2026",
+        "paragraphs": [
+          "Kelipatan Pasar memberikan estimasi gabungan Rp 39,8 per saham (rata-rata Median P/B 2,30x x BVPS Rp 27,03 = Rp 62,2 dan EV/EBITDA disesuaikan kas bersih 13,25x = Rp 17,4 dari BUKA, GRAB, SE, BELI; P/E dikecualikan karena EPS -Rp 1,41). Angka ini lebih tinggi karena kelipatan peers tidak menghukum proyeksi pembakaran kas Base Case.",
+          "Mengapa harga GoTo turun ke Rp 25,00 setelah pencabutan batas gocap BEI: Saham GOTO sebelumnya tertahan artifisial di batas minimum pasar reguler Rp 50. Setelah BEI resmi menurunkan batas harga minimum menjadi Rp 1 pada 28 September 2026, tekanan jual terpendam memicu ARB dan memotong harga 50% menjadi Rp 25,00 (0,9x nilai buku), tepat di atas lantai likuidasi kas bersih Rp 13,20/lembar berkat prinsip tanggung jawab terbatas ekuitas."
+        ],
+        "tables": [
+          [
+            [
+              "Metode Valuasi",
+              "Nilai per Saham (Rp)",
+              "Penjelasan & Rekonsiliasi"
+            ],
+            [
+              "Arus Kas Terdiskonto (DCF - FCFF)",
+              "Rp (121,1)",
+              "Negatif karena pembakaran FCFF Base Case (-Rp 7,0T s.d. -Rp 7,7T/thn) menghancurkan nilai perusahaan."
+            ],
+            [
+              "Residual Income (Laba Ekonomis)",
+              "Rp (75,1)",
+              "Negatif karena rugi bersih berulang ditambah beban ekuitas 8,45% terus menggerus nilai buku ekuitas."
+            ],
+            [
+              "Kelipatan Pasar (Rata-Rata P/B & EV/EBITDA)",
+              "Rp 39,8",
+              "Median P/B pembanding (2,30x -> Rp 62,2) & EV/EBITDA disesuaikan kas bersih (13,25x -> Rp 17,4) dari BUKA, GRAB, SE, BELI (P/E dikeluarkan karena EPS -Rp 1,41)."
+            ],
+            [
+              "Harga Pasar Saat Ini (IDX / Investing.com)",
+              "Rp 25,0",
+              "Diperdagangkan 0,9x nilai buku (turun 93% dari harga IPO Rp 338) setelah batas harga minimum BEI Rp 50 dicabut menjadi Rp 1."
+            ]
+          ]
+        ]
+      }
+    ],
+    "workbook": {
+      "Instructions": [
+        [
+          "Analisis Laporan Keuangan: Buku Kerja Valuasi"
+        ],
+        [
+          "Templat pendamping Minggu 14 (Biaya Modal & Aplikasi Valuasi)"
+        ],
+        [
+          "",
+          "Tujuan Buku Kerja"
+        ],
+        [
+          "",
+          "Buku kerja ini menghitung Biaya Modal (CAPM Ke & WACC) PT GoTo Gojek Tokopedia Tbk, lalu menilainya dengan tiga metode independen: DCF, Residual Income, dan Market Multiples."
+        ],
+        [
+          "",
+          "Cara Menggunakan Buku Kerja Ini"
+        ],
+        [
+          "",
+          "1. Mulai dari 'Cost of Capital' untuk menghitung Biaya Ekuitas CAPM disesuaikan pasar berkembang (8,45%) dan WACC (7,76%)."
+        ],
+        [
+          "",
+          "2. Sheet 'DCF Valuation' menarik proyeksi EBIT, D&A, CapEx, dan Perubahan Modal Kerja Bersih dari Buku Kerja Milestone 4."
+        ],
+        [
+          "",
+          "3. Sheet 'Residual Income Valuation' menggunakan proyeksi Laba/(Rugi) Bersih Base Case, Nilai Buku Ekuitas awal, dan Biaya Ekuitas 8,45%."
+        ],
+        [
+          "",
+          "4. Sheet 'Market Multiples' menerapkan median kelipatan P/B (2,30x) dan EV/EBITDA (13,25x) dari 4 emiten pembanding digital regional."
+        ],
+        [
+          "",
+          "5. Sheet 'Valuation Summary' merangkum perbandingan football-field antara seluruh metode valuasi dan harga pasar Rp 25,00."
+        ],
+        [
+          "",
+          "Legenda Warna Sel"
+        ],
+        [
+          "",
+          "Teks Biru: Input manual yang diisi oleh analis."
+        ],
+        [
+          "",
+          "Teks Hitam: Rumus otomatis (jangan ditimpa)."
+        ],
+        [
+          "",
+          "Teks Hijau: Tautan antar sheet dalam buku kerja ini."
+        ],
+        [
+          "",
+          "Catatan biaya modal pasar berkembang: Risiko negara Indonesia (CRP 2,465% pada peringkat Baa2) ditambahkan ke premi risiko pasar matang (4,23%) untuk transparansi asumsi."
+        ]
+      ],
+      "Cost of Capital": [
+        [
+          "Biaya Modal (CAPM & WACC)"
+        ],
+        [
+          "PT GoTo Gojek Tokopedia Tbk (GOTO), tanggal valuasi 30 Desember 2025"
+        ],
+        [
+          "Input / Hasil Perhitungan",
+          "Nilai",
+          "Catatan"
+        ],
+        [
+          "BIAYA EKUITAS (CAPM, Disesuaikan Pasar Berkembang)"
+        ],
+        [
+          "Suku Bunga Bebas Risiko (Proksi SBN 10 Tahun)",
+          "4.50%",
+          "Imbal hasil SBN 6,120% dikurangi spread gagal bayar Baa2 1,618%."
+        ],
+        [
+          "Beta Terungkit (Levered Beta)",
+          "0.59",
+          "Dari Investing.com (statistik utama saham GOTO)."
+        ],
+        [
+          "Premi Risiko Ekuitas Pasar Matang (Mature ERP)",
+          "4.23%",
+          "Implied ERP pasar matang Damodaran (pembaruan Jan 2026)."
+        ],
+        [
+          "Premi Risiko Negara Indonesia (CRP)",
+          "2.47%",
+          "CRP Indonesia berbasis peringkat Baa2 Damodaran (2,465%)."
+        ],
+        [
+          "Biaya Ekuitas (Ke)",
+          "8.45%",
+          "Rf (4.502%) + 0.59 x (4.23% + 2.465%) = 8.45%."
+        ],
+        [
+          "BIAYA UTANG (COST OF DEBT)"
+        ],
+        [
+          "Biaya Utang Pra-Pajak",
+          "6.91%",
+          "Beban bunga 2025 Rp 535,2 M / Total utang Rp 7.742,6 M."
+        ],
+        [
+          "Tarif Pajak Efektif",
+          "22.00%",
+          "Tarif pajak penghasilan badan statutori Indonesia."
+        ],
+        [
+          "Biaya Utang Pasca-Pajak",
+          "5.39%",
+          "6.91% x (1 - 22%) = 5.39%."
+        ],
+        [
+          "STRUKTUR MODAL & WACC"
+        ],
+        [
+          "Nilai Pasar Ekuitas (Rp M)",
+          "26,550.3",
+          "Harga pasar Rp 25,00 x 1.062.010,2 juta saham beredar."
+        ],
+        [
+          "Nilai Buku Total Utang (Rp M)",
+          "7,742.6",
+          "Utang jk. pendek (Rp 1.523,8 M) + Utang jk. panjang (Rp 6.218,9 M)."
+        ],
+        [
+          "Bobot Ekuitas (We)",
+          "77.4%",
+          "26,550.3 / 34,292.9 = 77.42%."
+        ],
+        [
+          "Bobot Utang (Wd)",
+          "22.6%",
+          "7,742.6 / 34,292.9 = 22.58%."
+        ],
+        [
+          "WACC",
+          "7.76%",
+          "(77.42% x 8.45%) + (22.58% x 5.39%) = 7.76%."
+        ]
+      ],
+      "DCF Valuation": [
+        [
+          "Valuasi DCF: Arus Kas Bebas Perusahaan (FCFF, Rp miliar)"
+        ],
+        [
+          "Angka proyeksi dari Base Case Milestone 4 (tanpa restitusi pajak tunai saat EBIT negatif)"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2026F",
+          "2027F",
+          "2028F",
+          "Terminal"
+        ],
+        [
+          "EBIT (dari Base Case Milestone 4)",
+          "(4,003.4)",
+          "(4,459.4)",
+          "(4,967.4)",
+          ""
+        ],
+        [
+          "Dikurangi: Pajak atas EBIT (0 saat EBIT < 0)",
+          "0.0",
+          "0.0",
+          "0.0",
+          ""
+        ],
+        [
+          "Laba Usaha Pasca-Pajak (NOPAT)",
+          "(4,003.4)",
+          "(4,459.4)",
+          "(4,967.4)",
+          ""
+        ],
+        [
+          "Tambah: Penyusutan & Amortisasi",
+          "190.4",
+          "1,151.1",
+          "1,934.0",
+          ""
+        ],
+        [
+          "Dikurangi: Belanja Modal (CapEx)",
+          "(3,329.8)",
+          "(3,709.1)",
+          "(4,131.6)",
+          ""
+        ],
+        [
+          "Dikurangi: Kenaikan Modal Kerja Bersih",
+          "(595.9)",
+          "11.1",
+          "12.4",
+          ""
+        ],
+        [
+          "Arus Kas Bebas untuk Perusahaan (FCFF)",
+          "(7,738.7)",
+          "(7,006.3)",
+          "(7,152.6)",
+          "(154,740.8)"
+        ],
+        [
+          "DISKONTO & NILAI TERMINAL"
+        ],
+        [
+          "Tingkat Pertumbuhan Terminal (g)",
+          "3.00%",
+          "Terhubung dari sheet Pertumbuhan Terminal",
+          "",
+          ""
+        ],
+        [
+          "Tingkat Diskonto (WACC)",
+          "7.76%",
+          "Terhubung dari sheet Biaya Modal",
+          "",
+          ""
+        ],
+        [
+          "Faktor Diskonto",
+          "0.9280",
+          "0.8611",
+          "0.7991",
+          "0.7991"
+        ],
+        [
+          "Nilai Kini FCFF",
+          "(7,181.4)",
+          "(6,033.4)",
+          "(5,715.8)",
+          "(123,657.4)"
+        ],
+        [
+          "JEMBATAN NILAI PERUSAHAAN KE NILAI PER SAHAM"
+        ],
+        [
+          "Total Nilai Kini FCFF (Tahun 1 s.d. 3)",
+          "(18,930.7)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nilai Kini Nilai Terminal",
+          "(123,657.4)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nilai Perusahaan (Enterprise Value)",
+          "(142,588.1)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Dikurangi: Utang Bersih (Utang Rp 7.742,6 - Kas Rp 21.755,2)",
+          "(14,012.5)",
+          "Negatif = Kas Bersih +14.012,5 M",
+          "",
+          ""
+        ],
+        [
+          "Nilai Ekuitas (DCF)",
+          "(128,575.5)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Jumlah Saham Beredar (juta lembar)",
+          "1,062,010.2",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nilai DCF per Saham (Rp)",
+          "Rp (121.1)",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "Terminal Growth": [
+        [
+          "Analisis Tingkat Pertumbuhan Terminal (g)"
+        ],
+        [
+          "Menguji pertumbuhan reinvestasi fundamental vs. batas wajar untuk DCF & Residual Income"
+        ],
+        [
+          "Pendekatan / Parameter",
+          "Nilai",
+          "Catatan Analitis"
+        ],
+        [
+          "A. PENDEKATAN FUNDAMENTAL: g = Rasio Reinvestasi x ROIC"
+        ],
+        [
+          "NOPAT, 2028F (Rp bn)",
+          "(4,967.4)",
+          "Tahun proyeksi akhir, terhubung dari Valuasi DCF."
+        ],
+        [
+          "Capital Expenditures, 2028F (Rp bn)",
+          "4,131.6",
+          "Arus keluar di 2028F."
+        ],
+        [
+          "Less: Depreciation & Amortization, 2028F",
+          "1,934.0",
+          "Penambahan kembali penyusutan non-kas."
+        ],
+        [
+          "Add: Working Capital Reduction / Adjustment",
+          "(12.4)",
+          "Perubahan modal kerja bersih pada 2028F."
+        ],
+        [
+          "Net Reinvestment (2028F)",
+          "2,185.2",
+          "Investasi modal baru untuk menopang pertumbuhan."
+        ],
+        [
+          "Reinvestment Rate (Net Reinv / NOPAT)",
+          "n.m.",
+          "Tidak bermakna (n.m.) ketika NOPAT bernilai negatif."
+        ],
+        [
+          "ROIC (2028F NOPAT / Invested Capital)",
+          "n.m.",
+          "Tidak bermakna (n.m.) ketika NOPAT bernilai negatif."
+        ],
+        [
+          "Fundamental g = Reinvestment Rate x ROIC",
+          "n.m.",
+          "Tidak dapat menurunkan g positif dari NOPAT yang merugi."
+        ],
+        [
+          "B. BATAS KEWAJARAN"
+        ],
+        [
+          "Cap: Risk-Free Rate Proxy",
+          "4.50%",
+          "Batas wajar pertumbuhan nominal jangka panjang."
+        ],
+        [
+          "Discount Rate (WACC) / Cost of Equity (Ke)",
+          "7.76% / 8.45%",
+          "g harus berada jauh di bawah WACC dan Ke."
+        ],
+        [
+          "C. TINGKAT PERTUMBUHAN TERMINAL TERPILIH"
+        ],
+        [
+          "Analyst Judgement g (Selected Input)",
+          "3.00%",
+          "Asumsi jangka panjang konservatif 3,0% untuk emiten yang masih merugi."
+        ],
+        [
+          "Check: g below WACC & Cost of Equity?",
+          "OK (3.00% < 7.76%)",
+          "Memenuhi syarat konvergensi perpetuitas model Gordon Growth."
+        ]
+      ],
+      "Residual Income Valuation": [
+        [
+          "Valuasi Residual Income (Laba Ekonomis, Rp miliar)"
+        ],
+        [
+          "Menilai ekuitas sebagai Nilai Buku Awal + Nilai Kini Laba Ekonomis di atas Ke"
+        ],
+        [
+          "Pos Laporan Keuangan",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "Nilai Buku Awal Ekuitas",
+          "28,711.7",
+          "24,974.7",
+          "20,882.0"
+        ],
+        [
+          "Proyeksi Laba / (Rugi) Bersih (Base Case)",
+          "(3,737.0)",
+          "(4,092.7)",
+          "(4,488.9)"
+        ],
+        [
+          "Dividen Dibayarkan",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Biaya Ekuitas (Ke, terhubung)",
+          "8.45%",
+          "8.45%",
+          "8.45%"
+        ],
+        [
+          "Beban Modal Ekuitas (Ekuitas Awal x Ke)",
+          "2,426.7",
+          "2,110.9",
+          "1,765.0"
+        ],
+        [
+          "Residual Income (Laba Bersih - Beban Ekuitas)",
+          "(6,163.7)",
+          "(6,203.6)",
+          "(6,253.9)"
+        ],
+        [
+          "DISKONTO & NILAI TERMINAL"
+        ],
+        [
+          "Tingkat Pertumbuhan Terminal (g)",
+          "3.00%",
+          "Menggunakan g yang sama dengan sheet DCF",
+          ""
+        ],
+        [
+          "Discount Factor (at Ke = 8.45%)",
+          "0.9221",
+          "0.8502",
+          "0.7840"
+        ],
+        [
+          "Nilai Kini Residual Income",
+          "(5,683.4)",
+          "(5,274.3)",
+          "(4,902.7)"
+        ],
+        [
+          "Nilai Kini Terminal Residual Income (g = 3,0%)",
+          "(92,621.5)",
+          "",
+          ""
+        ],
+        [
+          "NILAI EKUITAS"
+        ],
+        [
+          "Nilai Buku Ekuitas Saat Ini (Akhir 2025)",
+          "28,711.7",
+          "",
+          ""
+        ],
+        [
+          "Total Nilai Kini Residual Income (Tahun 1-3)",
+          "(15,860.4)",
+          "",
+          ""
+        ],
+        [
+          "Nilai Kini Terminal Residual Income",
+          "(92,621.5)",
+          "",
+          ""
+        ],
+        [
+          "Nilai Ekuitas (Nilai Buku + Total PV RI)",
+          "(79,770.2)",
+          "",
+          ""
+        ],
+        [
+          "Jumlah Saham Beredar (juta lembar)",
+          "1,062,010.2",
+          "",
+          ""
+        ],
+        [
+          "Nilai Residual Income per Saham (Rp)",
+          "Rp (75.1)",
+          "",
+          ""
+        ]
+      ],
+      "Market Multiples": [
+        [
+          "Valuasi Kelipatan Pasar (Valuasi Relatif Peers)"
+        ],
+        [
+          "Harga penutupan Desember 2025 pada perusahaan digital BEI dan ASEAN"
+        ],
+        [
+          "Perusahaan Pembanding",
+          "Price (Rp)",
+          "EPS (Rp)",
+          "BVPS (Rp)",
+          "P/E",
+          "P/B",
+          "EV/EBITDA"
+        ],
+        [
+          "PT Bukalapak.com Tbk (BUKA)",
+          "120",
+          "11.6",
+          "245",
+          "10.3x",
+          "0.49x",
+          "6.50x"
+        ],
+        [
+          "Grab Holdings Ltd (GRAB)",
+          "54,400",
+          "1,700",
+          "25,900",
+          "32.0x",
+          "2.10x",
+          "14.50x"
+        ],
+        [
+          "Sea Limited (SE - Shopee)",
+          "1,600,000",
+          "42,100",
+          "381,000",
+          "38.0x",
+          "4.20x",
+          "16.00x"
+        ],
+        [
+          "PT Global Digital Niaga Tbk (BELI)",
+          "450",
+          "0",
+          "180",
+          "-",
+          "2.50x",
+          "12.00x"
+        ],
+        [
+          "Rata-Rata Pembanding",
+          "-",
+          "-",
+          "-",
+          "26.8x",
+          "2.32x",
+          "12.25x"
+        ],
+        [
+          "Median Pembanding (Diterapkan ke GoTo)",
+          "-",
+          "-",
+          "-",
+          "32.0x",
+          "2.30x",
+          "13.25x"
+        ],
+        [
+          "PENERAPAN KELIPATAN MEDIAN PEMBANDING KE GOTO"
+        ],
+        [
+          "Metrik Keuangan",
+          "Nilai GoTo",
+          "Median Peers",
+          "Nilai Wajar Implied / Lbr",
+          "Catatan Analitis",
+          "",
+          ""
+        ],
+        [
+          "EPS (Rp)",
+          "-1.41",
+          "32.00x",
+          "N/M (-)",
+          "Dikecualikan karena EPS FY2025 GoTo negatif (-Rp 1,41).",
+          "",
+          ""
+        ],
+        [
+          "BVPS (Rp)",
+          "27.03",
+          "2.30x",
+          "Rp 62.2",
+          "Nilai Buku per Saham x Median P/B Pembanding (2,30x).",
+          "",
+          ""
+        ],
+        [
+          "EBITDA per Share (Rp) + Net Cash/sh",
+          "0.32",
+          "13.25x",
+          "Rp 17.4",
+          "(0,32 x 13,25) + Kas bersih Rp 13,20/lbr = Rp 17,43/lbr.",
+          "",
+          ""
+        ],
+        [
+          "Rata-Rata Nilai Implied (P/B & EV/EBITDA)",
+          "-",
+          "-",
+          "Rp 39.8",
+          "Rata-rata gabungan valuasi relatif = Rp 39,80/lembar.",
+          "",
+          ""
+        ]
+      ],
+      "Valuation Summary": [
+        [
+          "Ringkasan Valuasi: Rekonsiliasi Football-Field"
+        ],
+        [
+          "Rekonsiliasi Metode DCF, Residual Income, dan Kelipatan Pasar untuk PT GoTo Gojek Tokopedia Tbk"
+        ],
+        [
+          "Metode Valuasi",
+          "Nilai per Saham (Rp)",
+          "Sumber & Penjelasan"
+        ],
+        [
+          "Arus Kas Terdiskonto (DCF)",
+          "Rp (121.1)",
+          "Sheet Valuasi DCF (EV Base Case -142,6T + Kas Bersih 14,0T)"
+        ],
+        [
+          "Residual Income (Laba Ekonomis)",
+          "Rp (75.1)",
+          "Sheet Residual Income (Ekuitas Awal 28,7T - PV RI 108,5T)"
+        ],
+        [
+          "Kelipatan Pasar (Rata-Rata P/B & EV/EBITDA)",
+          "Rp 39.8",
+          "Sheet Kelipatan Pasar (Rata-rata P/B Rp 62,2 & EV/EBITDA Rp 17,4)"
+        ],
+        [
+          "Rentang (Terendah ke Tertinggi)",
+          "Rp (121.1) to Rp 39.8",
+          "Selisih lebar antara pembakaran kas intrinsik vs. kelipatan peers"
+        ],
+        [
+          "Rata-Rata Sederhana Tiga Metode",
+          "Rp (52.1)",
+          "Rata-rata sederhana tidak tertimbang (-121,1; -75,1; +39,8)"
+        ],
+        [
+          "Lantai Likuidasi Kas Bersih per Saham",
+          "Rp 13.2",
+          "Kas Bersih Rp 14.012,5 M / 1.062,01 miliar saham beredar"
+        ],
+        [
+          "Harga Pasar Saat Ini (sebagai referensi)",
+          "Rp 25.0",
+          "Pasca aturan BEI Rp 1 per 28 Sept 2026 (0,9x Nilai Buku)"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "a15",
+    "code": "Tugas 15",
+    "folder": "Minggu 15",
+    "week": "Minggu 15",
+    "title": "Laporan Tertulis Akhir Terpadu Analisis Laporan Keuangan (Langkah 1-6)",
+    "summary": "Laporan akhir semester terintegrasi yang menyatukan Strategi (M1), Kualitas Akuntansi (M3), Rasio & Altman Z''-Score (-10,90) (M2), Proyeksi Pro Forma (M4), Valuasi (T14), dan Rekomendasi Investor Ekuitas Publik.",
+    "docx_file": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
+    "sections": [
+      {
+        "heading": "(a) Ringkasan Eksekutif & Sintesis Laporan Akhir Terpadu",
+        "source_citation": "Sintesis Terpadu Milestone 1-4 & Valuasi Tugas 14 Kelompok 4",
+        "paragraphs": [
+          "Disusun oleh Kelompok 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) untuk PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), laporan akhir terpadu ini menghubungkan Langkah 1-6 menjadi keputusan investasi nyata bagi Investor Ekuitas Publik pada harga Rp 25,00/lembar.",
+          "Temuan Utama Lintas Tahap: (1) Strategi (M1): Rivalitas tinggi vs Grab/Shopee/Maxim mengunci belanja pemasaran Rp 3,09T & R&D Rp 2,15T; (2) Kualitas Akuntansi (M3): Rugi bersih tetap negatif (-Rp 1.502 M), 22,57% aset ada di Tokopedia/Bank Jago, dan CFO hanya menutup 26,0% CapEx (FCF -Rp 875,3 M); (3) Rasio (M2): ROE -5,2% dan Altman Z''-Score -10,90; (4) Proyeksi (M4): Base Case menguras kas ke Rp 968 M di 2028F; (5) Valuasi (T14): Kedua model intrinsik (DCF -Rp 121,1; RI -Rp 75,1) berada di bawah harga pasar Rp 25,00 maupun kelipatan peers Rp 39,8."
+        ],
+        "tables": [
+          [
+            [
+              "Tahap Analisis (Langkah 1-6)",
+              "Metrik Utama / Hasil Model",
+              "Implikasi Keputusan bagi Investor"
+            ],
+            [
+              "Langkah 1: Strategi Five Forces (M1)",
+              "Rivalitas Pasar: TINGGI | Posisi Hibrida",
+              "Membatasi kekuatan harga & kenaikan komisi"
+            ],
+            [
+              "Langkah 2: Kualitas Akuntansi (M3)",
+              "FCF 2025: -(875,3) M | Asosiasi: 22,57% Aset",
+              "Waspadai risiko penurunan nilai & konversi kas"
+            ],
+            [
+              "Langkah 3: Rasio & Z''-Score (M2)",
+              "Current Ratio 2,73x | ROE -5,2% | Z'' -10,90",
+              "Likuid jangka pendek, namun defisit menekan modal"
+            ],
+            [
+              "Langkah 4: Proyeksi Base Case (M4)",
+              "Kas Akhir 2028F: Rp 968 M | EBIT -(4,97T)",
+              "Wajib membekukan OpEx tetap untuk tembus titik impas"
+            ],
+            [
+              "Langkah 5-6: Valuasi & Putusan (T14)",
+              "DCF -121,1 | RI -75,1 | Peers 39,8 | Harga 25,0",
+              "Memerlukan laba bersih positif di atas 8,45% Ke"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(b) Analisis Bisnis, Ekosistem & Lima Kekuatan Porter (Milestone 1)",
+        "source_citation": "Laporan Milestone 1; Laporan Tahunan GoTo 2025 & Catatan 35",
+        "paragraphs": [
+          "GoTo menghubungkan 66 juta pengguna aktif tahunan (ATU), 6,4 juta+ merchant, dan 3 juta+ mitra pengemudi. Pasca dekonsolidasi Tokopedia pada awal 2024 (menyisakan 24,99% entitas asosiasi), GoTo bertumpu pada On-Demand Services (Rp 12.361 M) dan Financial Technology (+74,1% menjadi Rp 5.191 M), serta imbalan jasa e-commerce Rp 820 M.",
+          "Sinergi strategi dengan risiko keuangan: rivalitas Tinggi dan biaya pindah pengguna yang rendah menahan kenaikan komisi, sementara ekspansi kredit konsumen GoPay mendorong piutang pembiayaan bersih ke Rp 2.731 M disertai lonjakan pencadangan risiko kredit (CKPN) dari Rp 174 M ke Rp 408 M."
+        ],
+        "tables": [
+          [
+            [
+              "Gaya Porter",
+              "Peringkat",
+              "Bukti Analitis Utama dari Laporan GoTo & Data Pasar"
+            ],
+            [
+              "Ancaman Pendatang Baru",
+              "Rendah ke Menengah",
+              "Membangun jaringan dua sisi 66 jt pengguna, 6,4 jt merchant & 3 jt pengemudi serta izin BI/OJK butuh modal raksasa."
+            ],
+            [
+              "Daya Tawar Pemasok",
+              "Rendah",
+              "Tidak ada vendor pihak ketiga > 10% pendapatan bersih (Catatan 26), dan jutaan mitra pengemudi terfragmentasi."
+            ],
+            [
+              "Daya Tawar Pembeli",
+              "Menengah",
+              "Tidak ada pelanggan > 10% pendapatan (Cat. 25), tetapi pengguna ritel sensitif harga dan mudah berburu diskon."
+            ],
+            [
+              "Ancaman Produk Substitusi",
+              "Menengah",
+              "Transportasi umum, makan langsung, transfer bank & tunai dapat menggantikan GoTo dengan biaya pindah mendekati nol."
+            ],
+            [
+              "Persaingan Industri (Rivalitas)",
+              "Tinggi",
+              "Gaya terkuat: Gojek melawan Grab, Maxim, inDrive; GoFood (31% GMV) di bawah GrabFood (46%); GoPay bersaing dengan DANA/OVO/ShopeePay."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c) Evaluasi Kualitas Akuntansi & Audit Arus Kas Bebas (Milestone 3)",
+        "source_citation": "Laporan Milestone 3; LK GOTO 2025 hlm. 15, 17, 21-22, Catatan 14-15 & 25",
+        "paragraphs": [
+          "Penerapan kerangka forensik Minggu 7 atas LK auditan Maret 2026 mengungkap dua titik pengawasan utama: (1) Risiko Nilai Aset - 22,57% aset tertanam pada asosiasi Tokopedia (Rp 7.432 M termasuk goodwill Rp 2.004 M) dan Bank Jago (Rp 2.895 M) serta investasi Level 3 Rp 1.669 M; (2) Kualitas Pendapatan - diskon/promo dikurangkan langsung dari pendapatan bruto (PSAK 72) dan pendapatan pihak berelasi naik menjadi 7,13% (Rp 1.306 M).",
+          "Temuan Kas Krusial: Arus Kas Operasi FY2025 (+Rp 307,0 M) baru menutup 25,97% Belanja Modal Kas (Rp 1.182,4 M), menghasilkan defisit Arus Kas Bebas -Rp 875,3 miliar. Saldo kas akhir hanya naik karena pencairan deposito berjangka Rp 1.386,5 M serta penarikan utang baru Rp 3.718,0 M."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik Kualitas Akuntansi & Arus Kas (Rp juta)",
+              "Auditan 2024",
+              "Auditan 2025",
+              "Temuan Audit Analitis"
+            ],
+            [
+              "Rugi Bersih Konsolidasian Dilaporkan",
+              "(5.464.855)",
+              "(1.501.685)",
+              "Tetap negatif pada kedua tahun pembukuan."
+            ],
+            [
+              "Arus Kas Operasi (CFO, Arus Kas hlm. 21)",
+              "(622.114)",
+              "307.025",
+              "Baru berbalik positif tipis (+Rp 307 M)."
+            ],
+            [
+              "Total Akrual (Laba Bersih dikurangi CFO)",
+              "(4.842.741)",
+              "(1.808.710)",
+              "Dipengaruhi besarnya beban D&A & penurunan nilai non-kas."
+            ],
+            [
+              "Total Aset Akhir Tahun",
+              "43.207.884",
+              "45.757.642",
+              "47,5% total aset tersimpan dalam kas."
+            ],
+            [
+              "Rasio Akrual ((Laba Bersih - CFO) / Total Aset)",
+              "-11,21%",
+              "-3,95%",
+              "Jarak menyempit, namun profitabilitas inti tetap negatif."
+            ],
+            [
+              "Total Belanja Modal Kas (Aset Tetap + Takberwujud)",
+              "6.518.862",
+              "1.182.360",
+              "CapEx mencapai 1,58x lipat beban D&A (Rp 748,6 M)."
+            ],
+            [
+              "Cakupan CapEx oleh CFO (CFO / CapEx Kas)",
+              "-9,54%",
+              "25,97%",
+              "Arus kas operasi 2025 baru menutup 26% kebutuhan CapEx!"
+            ],
+            [
+              "Arus Kas Bebas (CFO dikurangi CapEx Kas)",
+              "(7.140.976)",
+              "(875.335)",
+              "Arus kas bebas tetap defisit setelah belanja modal."
+            ],
+            [
+              "Pencairan Neto Deposito Berjangka (Investasi)",
+              "421.217",
+              "1.386.520",
+              "Arus kas investasi 2025 tampak positif berkat pencairan deposito."
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Catatan 14 (hlm. 100): Kepemilikan Entitas Asosiasi Auditan (Tokopedia + Bank Jago = 22,57% Aset)."
+      },
+      {
+        "heading": "(d) Analisis Common-Size, Rasio Keuangan, DuPont ROE & Altman Z''-Score (Milestone 2)",
+        "source_citation": "Buku Kerja Rasio & DuPont Milestone 2; Neraca Auditan hlm. 15-16",
+        "paragraphs": [
+          "Profil common-size menunjukkan perbaikan efisiensi nyata (marjin kotor pulih ke 57,7%; marjin rugi usaha menyempit ke -2,1%), namun ROE tetap negatif sepanjang tiga tahun (-253,4% -> -18,0% -> -5,2%), total utang berlipat dua ke Rp 7.743 M (DER 0,27x), dan ketahanan bertumpu pada kas Rp 21.755 M (Current Ratio 2,73x).",
+          "Evaluasi Distress Altman Z''-Score: Penerapan model Pasar Berkembang (Z'' = 6,56 X1 + 3,26 X2 + 6,72 X3 + 1,05 X4) pada data auditan 2025 (X1 Modal Kerja/Aset = +0,402 -> +2,64; X2 Defisit/Aset = -4,679 -> -15,25; X3 EBIT/Aset = -0,008 -> -0,06; X4 Ekuitas/Liabilitas = +1,684 -> +1,77) menghasilkan Z''-Score sebesar -10,90 (Zona Distress < 1,10) akibat beban defisit historis -Rp 214,1 triliun."
+        ],
+        "tables": [
+          [
+            [
+              "Metrik Common-Size",
+              "2023",
+              "2024",
+              "2025",
+              "Analisis Tren Tiga Tahun"
+            ],
+            [
+              "COGS (% Pendapatan)",
+              "34,4%",
+              "46,6%",
+              "42,3%",
+              "Rata-rata 3 tahun 41,1% dari pendapatan."
+            ],
+            [
+              "Marjin Laba Kotor (%)",
+              "65,6%",
+              "53,4%",
+              "57,7%",
+              "Rata-rata 3 tahun 58,9% dari pendapatan."
+            ],
+            [
+              "Total Beban Usaha (% Pendapatan)",
+              "135,1%",
+              "67,5%",
+              "59,8%",
+              "Turun pasca dekonsolidasi Tokopedia, namun masih > Marjin Kotor."
+            ],
+            [
+              "Marjin Usaha (EBIT / Pendapatan)",
+              "-69,5%",
+              "-14,1%",
+              "-2,1%",
+              "Tetap negatif pada seluruh tahun (-Rp 378 M pada 2025)."
+            ],
+            [
+              "Marjin Laba Bersih (% Pendapatan)",
+              "-612,2%",
+              "-34,4%",
+              "-8,2%",
+              "Tetap negatif pada seluruh tahun (-Rp 1.502 M pada 2025)."
+            ],
+            [
+              "Kas & Setara Kas (% Total Aset)",
+              "46,5%",
+              "44,4%",
+              "47,5%",
+              "Aset terbesar pada neraca (Rp 21,76 triliun)."
+            ],
+            [
+              "Total Liabilitas (% Total Aset)",
+              "34,0%",
+              "29,6%",
+              "37,3%",
+              "Meningkat di 2025 akibat penarikan pinjaman bank baru."
+            ],
+            [
+              "Total Ekuitas (% Total Aset)",
+              "66,0%",
+              "70,4%",
+              "62,7%",
+              "Menyusut dari Rp 35,72T ke Rp 28,71T akibat akumulasi rugi."
+            ]
+          ],
+          [
+            [
+              "Metrik Rasio / DuPont",
+              "2023",
+              "2024",
+              "2025",
+              "Interpretasi Sejawat / Sektor"
+            ],
+            [
+              "Current Ratio / Quick Ratio",
+              "2,62x / 2,61x",
+              "2,62x / 2,62x",
+              "2,73x / 2,73x",
+              "Likuiditas jangka pendek kuat ditopang cadangan kas."
+            ],
+            [
+              "Days Sales Outstanding (DSO)",
+              "14,8 hari",
+              "46,9 hari",
+              "10,9 hari",
+              "Rata-rata 3 tahun 24,2 hari."
+            ],
+            [
+              "Days Inventory Outstanding (DIO)",
+              "12,4 hari",
+              "1,3 hari",
+              "0,7 hari",
+              "Rata-rata 3 tahun 4,8 hari (platform digital)."
+            ],
+            [
+              "Days Payable Outstanding (DPO)",
+              "83,3 hari",
+              "61,1 hari",
+              "59,1 hari",
+              "Rata-rata 3 tahun 67,8 hari (siklus kas negatif)."
+            ],
+            [
+              "Debt-to-Equity (Total Utang / Ekuitas)",
+              "0,10x",
+              "0,13x",
+              "0,27x",
+              "Utang berlipat dua menjadi Rp 7.743 M (vs BUKA 0,00x)."
+            ],
+            [
+              "Debt-to-Total-Assets",
+              "6,4%",
+              "8,8%",
+              "16,9%",
+              "Peningkatan pendanaan utang bank meski menyimpan kas besar."
+            ],
+            [
+              "Interest Coverage (EBIT / Bunga)",
+              "-27,8x",
+              "-4,5x",
+              "-0,71x",
+              "EBIT belum mampu menutup beban bunga Rp 535 miliar."
+            ],
+            [
+              "DuPont 1: Marjin Laba Bersih",
+              "-612,2%",
+              "-34,4%",
+              "-8,2%",
+              "Penekan utama ROE (vs BUKA +48,4% dari laba investasi)."
+            ],
+            [
+              "DuPont 2: Perputaran Aset (ATO)",
+              "0,27x",
+              "0,37x",
+              "0,40x",
+              "Membaik dari 0,27x menjadi 0,40x (vs BUKA 0,25x)."
+            ],
+            [
+              "DuPont 3: Equity Multiplier",
+              "1,51x",
+              "1,42x",
+              "1,59x",
+              "Naik ke 1,59x karena ekuitas menyusut & utang bertambah."
+            ],
+            [
+              "Return on Equity (ROE DuPont 3-Langkah)",
+              "-253,4%",
+              "-18,0%",
+              "-5,2%",
+              "ROE negatif di ketiga tahun (vs BUKA +12,4%)."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(e) Proyeksi Pro Forma Tiga Tahun & Uji Titik Impas (Milestone 4)",
+        "source_citation": "Buku Kerja Proyeksi Tiga Laporan Milestone 4 Kelompok 4 (Base Case 2026F-2028F)",
+        "paragraphs": [
+          "Pada Base Case Milestone 4 yang ditambatkan pada rata-rata historis 3 tahun (pertumbuhan pendapatan 11,4%, COGS 41,1%, OpEx tunai 78,5%, CapEx 16,3%), seluruh neraca dan arus kas proyeksi 2026F-2028F berimbang tepat (Balance Check = 0 & Cash Check = 0).",
+          "Peringatan Arus Kas: Karena OpEx 78,5% melebihi Marjin Kotor 58,9%, titik impas meningkat ke Rp 27.207 M s.d. Rp 33.755 M, membuat GoTo tetap Below Breakeven dan menguras kas dari Rp 21.755 M menjadi hanya Rp 968 miliar di akhir 2028F! GoTo hanya menembus titik impas (Rp 18.604 M; EBIT +Rp 1.062 M pada 2026F) jika OpEx tetap dibekukan secara disiplin pada Rp 10.954 M dan CapEx ditekan kembali ke level 6,5%."
+        ],
+        "tables": [
+          [
+            [
+              "Penggerak Proyeksi (Driver)",
+              "Base (Rata2 3 Thn)",
+              "Optimis",
+              "Konservatif",
+              "Basis Rasio Milestone 2"
+            ],
+            [
+              "Pertumbuhan Pendapatan",
+              "11,4%",
+              "15,3%",
+              "7,5%",
+              "Rata-rata YoY 2024 (7,5%) dan 2025 (15,3%)."
+            ],
+            [
+              "COGS (% Pendapatan)",
+              "41,1%",
+              "38,1%",
+              "46,6%",
+              "Rata-rata COGS 3 tahun (34,4%; 46,6%; 42,3%)."
+            ],
+            [
+              "Beban Usaha (% Pendapatan)",
+              "78,5%",
+              "55,7%",
+              "85,0%",
+              "Rata-rata OpEx tunai 3 tahun (117,0%; 62,8%; 55,7%)."
+            ],
+            [
+              "DSO / DIO / DPO (hari)",
+              "24,2 / 4,8 / 67,8",
+              "10,9 / 0,7 / 75,0",
+              "30,0 / 8,0 / 59,1",
+              "Rata-rata hari modal kerja 3 tahun."
+            ],
+            [
+              "CapEx (% Pendapatan)",
+              "16,3%",
+              "6,5%",
+              "20,0%",
+              "Rata-rata CapEx 3 tahun (1,5%; 41,0%; 6,5%)."
+            ],
+            [
+              "D&A (% PP&E Awal)",
+              "30,6%",
+              "25,0%",
+              "43,9%",
+              "Rata-rata tingkat penyusutan 2024 (17,3%) & 2025 (43,9%)."
+            ],
+            [
+              "Pajak / Suku Bunga / Dividen",
+              "22,0% / 10,2% / 0%",
+              "22,0% / 6,9% / 0%",
+              "22,0% / 12,9% / 0%",
+              "Rata-rata suku bunga efektif 3 tahun 10,2%."
+            ]
+          ],
+          [
+            [
+              "Ringkasan 3 Laporan Pro Forma (Rp Miliar)",
+              "2025A",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Pendapatan Bersih (tumbuh 11,4% Base Case)",
+              "18.322",
+              "20.408",
+              "22.732",
+              "25.321"
+            ],
+            [
+              "Beban Pokok Pendapatan (41,1%)",
+              "7.746",
+              "8.392",
+              "9.348",
+              "10.412"
+            ],
+            [
+              "Laba Kotor (Marjin 58,9%)",
+              "10.576",
+              "12.016",
+              "13.384",
+              "14.908"
+            ],
+            [
+              "Beban Usaha (diskalakan 78,5%)",
+              "10.954",
+              "16.020",
+              "17.844",
+              "19.876"
+            ],
+            [
+              "EBIT (Rugi Usaha)",
+              "(378)",
+              "(4.003)",
+              "(4.459)",
+              "(4.967)"
+            ],
+            [
+              "Beban Bunga (10,2% atas Total Utang Rp 7.743 M)",
+              "535",
+              "788",
+              "788",
+              "788"
+            ],
+            [
+              "Laba / (Rugi) Sebelum Pajak (EBT)",
+              "(1.087)",
+              "(4.791)",
+              "(5.247)",
+              "(5.755)"
+            ],
+            [
+              "Manfaat / (Beban) Pajak (22,0%)",
+              "415",
+              "(1.054)",
+              "(1.154)",
+              "(1.266)"
+            ],
+            [
+              "Laba / (Rugi) Bersih",
+              "(1.502)",
+              "(3.737)",
+              "(4.093)",
+              "(4.489)"
+            ],
+            [
+              "Kas & Setara Kas (Penyeimbang Neraca)",
+              "21.755",
+              "14.282",
+              "7.642",
+              "968"
+            ],
+            [
+              "Piutang Usaha & Persediaan",
+              "561",
+              "1.462",
+              "1.629",
+              "1.814"
+            ],
+            [
+              "Aset Tetap Bersih (Net PP&E)",
+              "622",
+              "3.762",
+              "6.321",
+              "8.518"
+            ],
+            [
+              "Aset Lainnya (konstan)",
+              "22.819",
+              "22.819",
+              "22.819",
+              "22.819"
+            ],
+            [
+              "TOTAL ASET",
+              "45.758",
+              "42.326",
+              "38.411",
+              "34.120"
+            ],
+            [
+              "Utang Usaha",
+              "1.254",
+              "1.559",
+              "1.737",
+              "1.935"
+            ],
+            [
+              "Total Utang Berbunga (Jk. Pendek + Panjang)",
+              "7.743",
+              "7.743",
+              "7.743",
+              "7.743"
+            ],
+            [
+              "Liabilitas Lainnya (konstan)",
+              "8.049",
+              "8.049",
+              "8.049",
+              "8.049"
+            ],
+            [
+              "Total Ekuitas Pemegang Saham",
+              "28.712",
+              "24.975",
+              "20.882",
+              "16.393"
+            ],
+            [
+              "TOTAL LIABILITAS & EKUITAS (Balance Check = 0)",
+              "45.758",
+              "42.326",
+              "38.411",
+              "34.120"
+            ],
+            [
+              "Arus Kas dari Aktivitas Operasi (CFO)",
+              "307",
+              "(4.143)",
+              "(2.930)",
+              "(2.542)"
+            ],
+            [
+              "Belanja Modal (CFI)",
+              "(1.182)",
+              "(3.330)",
+              "(3.710)",
+              "(4.132)"
+            ],
+            [
+              "Perubahan Bersih Kas (Cash Flow Check = 0)",
+              "2.714",
+              "(7.473)",
+              "(6.640)",
+              "(6.674)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(f) Rekonsiliasi Multi-Metode Valuasi terhadap Harga Pasar Rp 25,00 (Tugas 14)",
+        "source_citation": "Buku Kerja Valuasi Tugas 14 & Peraturan Batas Harga Minimum BEI (28 Sept 2026)",
+        "paragraphs": [
+          "Dengan WACC 7,76% dan Biaya Ekuitas 8,45% (Beta 0,59), kedua model intrinsik Base Case menghasilkan nilai ekuitas negatif (DCF -Rp 121,1/lbr; Residual Income -Rp 75,1/lbr), sedangkan kelipatan pasar (median P/B 2,30x & EV/EBITDA kas bersih 13,25x dari BUKA, GRAB, SE, BELI) menghasilkan Rp 39,8/lbr karena kelipatan peers mengabaikan proyeksi pembakaran kas historis.",
+          "Penjelasan Katalis Harga Rp 25,00: Setelah lama tertahan di batas bawah gocap Rp 50, saham GOTO turun 50% menyentuh ARB hingga Rp 25,00 (0,9x nilai buku; -93% dari harga IPO Rp 338) segera setelah BEI menurunkan batas harga minimum pasar reguler menjadi Rp 1 pada 28 September 2026. Prinsip tanggung jawab terbatas menjaga harga di atas lantai likuidasi kas bersih Rp 13,20/lembar."
+        ],
+        "tables": [
+          [
+            [
+              "Metode Valuasi",
+              "Nilai Perusahaan / Ekuitas (Rp M)",
+              "Nilai per Saham (Rp)",
+              "Alasan Hasil Valuasi"
+            ],
+            [
+              "1. Discounted Cash Flow (DCF - FCFF)",
+              "EV: (142.588,1) / Eq: (128.575,5)",
+              "Rp (121,1)",
+              "Base Case membakar Rp 7,0T-7,7T FCFF per tahun; meski ditambah kas bersih Rp 14,01T, nilai ekuitas intrinsik tetap negatif."
+            ],
+            [
+              "2. Residual Income (Laba Ekonomis)",
+              "BVE: 28.711,7 / Eq: (79.770,2)",
+              "Rp (75,1)",
+              "Rugi bersih (-Rp 3,7T s.d. -Rp 4,5T) ditambah beban modal ekuitas 8,45% menghasilkan -Rp 6,2T laba ekonomis negatif/tahun."
+            ],
+            [
+              "3. Kelipatan Pasar (P/B & EV/EBITDA)",
+              "Implied P/B: 62,2 / EV-EBITDA: 17,4",
+              "Rp 39,8",
+              "Median P/B peers (2,30x -> Rp 62,2) & EV/EBITDA disesuaikan kas bersih (13,25x -> Rp 17,4) dari BUKA, GRAB, SE, BELI (P/E dikeluarkan)."
+            ],
+            [
+              "Harga Pasar Saat Ini (Investing.com)",
+              "Kapitalisasi Pasar: Rp 26.550,3 M",
+              "Rp 25,0",
+              "Diperdagangkan pada 0,9x nilai buku setelah aturan batas minimum BEI Rp 50 diturunkan menjadi Rp 1 pada Sept 2026."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(g) Keputusan Investor Ekuitas Publik & Lampiran Pendukung",
+        "source_citation": "Laporan Akhir Tugas 15 Bagian 6; Buku Kerja Milestone 2, Milestone 4 & Valuasi",
+        "paragraphs": [
+          "Pemangku Kepentingan Target: Investor Ekuitas Publik Jangka Panjang yang mengevaluasi PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) pada harga pasar Rp 25,00/lembar.",
+          "Rekomendasi Satu Kalimat: SELL (JUAL) GOTO di Rp 25,00 karena ROE negatif (-5,2%), Arus Kas Bebas negatif (-Rp 875,3 M), serta proyeksi pembakaran kas Base Case menghasilkan nilai intrinsik negatif pada metode DCF (-Rp 121,1/saham) maupun Residual Income (-Rp 75,1/saham). Dalam Base Case Milestone 4, penskalaan OpEx historis 78,5% dan CapEx 16,3% menguras kas dari Rp 21,76T menjadi Rp 968 M pada 2028F. Meskipun kas bersih Rp 13,20/lembar memberi bantalan likuiditas jangka pendek, investor disarankan SELL sampai manajemen membuktikan pembekuan biaya tetap (OpEx <= Rp 10,95T), Arus Kas Bebas positif dua tahun beruntun, dan laba bersih PSAK di atas beban modal ekuitas (~Rp 2,43T/tahun pada Ke 8,45%)."
+        ],
+        "tables": [
+          [
+            [
+              "Kondisi / Pemicu Keputusan",
+              "Ambang Batas Kuantitatif Kunci",
+              "Keputusan Investasi Ekuitas",
+              "Buku Kerja Pendukung"
+            ],
+            [
+              "Putusan Saat Ini: Base Case Historis",
+              "OpEx 78,5% + CapEx 16,3% kuras kas ke Rp 968 M; DCF -Rp 121,1",
+              "SELL (JUAL) - Nilai intrinsik & FCF negatif",
+              "Group4_Milestone4_GOTO.xlsx"
+            ],
+            [
+              "Syarat 1: Pembekuan Biaya Tetap",
+              "Jaga OpEx <= Rp 10,95T (<= 55,7%) & lewati impas Rp 18,6T",
+              "Wajib untuk membalik EBIT PSAK & FCF jadi positif",
+              "Group4_Milestone4_GOTO.xlsx + Analisis M12"
+            ],
+            [
+              "Syarat 2: Laba Ekonomis (Model RI)",
+              "2 thn FCF positif + Laba Bersih > Rp 2,43T/thn (Ke 8,45%)",
+              "Syarat mutlak sebelum meninjau ulang peringkat SELL",
+              "Group4_FSA_Valuation_Workbook_GOTO.xlsx"
+            ]
+          ]
+        ]
+      }
+    ]
+  }
+]

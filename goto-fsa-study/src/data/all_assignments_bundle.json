@@ -1,0 +1,5691 @@
+[
+  {
+    "id": "m1",
+    "code": "Milestone 1",
+    "folder": "Weeks 1-3",
+    "week": "Weeks 1-3",
+    "title": "Business Strategy Analysis & Porter's Five Forces (GOTO)",
+    "summary": "Industry economics, market position, and Porter's Five Forces evaluation showing why GoTo faces high rivalry, medium buyer/substitute pressure, and ongoing profitability execution risks.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 3/Group4_Milestone1_GOTO.docx",
+    "sections": [
+      {
+        "heading": "Executive Summary & Strategic Scope",
+        "source_citation": "GoTo 2025 Annual Report, pp. 8, 76-84, 147-152",
+        "paragraphs": [
+          "PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) operates across Indonesia's digital economy through On-Demand Services (Gojek mobility, GoFood delivery, logistics), Financial Technology (GoPay payments, consumer lending, merchant solutions), and e-commerce service fees post-Tokopedia deconsolidation.",
+          "Prepared by Group 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) for the Magister Manajemen Universitas Klabat Financial Statement Analysis course, this milestone links Porter's Five Forces industry structure to GoTo's FY2025 cost structure and risk profile for a Public Equity Investor."
+        ],
+        "tables": [
+          [
+            [
+              "Strategic Pillar / Context",
+              "FY2025 Figure / Finding",
+              "Primary Stakeholder Implication"
+            ],
+            [
+              "Target Decision Maker (Week 1)",
+              "Public Equity Investor (Long-Term)",
+              "Needs durable GAAP net profit above 8.45% cost of equity"
+            ],
+            [
+              "Core Ecosystem Segments",
+              "On-Demand (67.5%), Fintech (28.3%), E-Comm (4.5%)",
+              "Dual growth engines offset post-Tokopedia deconsolidation"
+            ],
+            [
+              "Five Forces Dominant Driver",
+              "Competitive Rivalry: HIGH (Strongest Force)",
+              "Limits take-rate hikes and locks in Rp 3.09T promo/marketing spend"
+            ],
+            [
+              "Strategic Positioning",
+              "Hybrid (Cost Leadership + Differentiation)",
+              "Affordable mass-market trips + AI/ecosystem loyalty for affluent tier"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "1.1 Company Overview & 2025 Ecosystem Scale",
+        "source_citation": "GoTo Annual Report 2025, pp. 8, 14-18, 41, 63, 150-158; Consolidated Income Statement p. 17",
+        "paragraphs": [
+          "PT GoTo Gojek Tokopedia Tbk is an Indonesian technology ecosystem formed from Gojek and Tokopedia. It connects consumers, driver-partners, merchants, sellers, and financial-service users on a single shared infrastructure while retaining a 24.99% associate stake in Tokopedia.",
+          "In FY2025, GoTo generated Rp 18.322 trillion in consolidated net revenue (+15.3% YoY) and improved Adjusted Group EBITDA to Rp 2.008 trillion, yet still posted a statutory consolidated operating loss of Rp 378.254 billion due to heavy sales, marketing, and technology investments."
+        ],
+        "tables": [
+          [
+            [
+              "Key 2025 Operating & Financial Metric",
+              "FY2025 Audited / Reported",
+              "Strategic Significance"
+            ],
+            [
+              "Annual Transacting Users (ATU)",
+              "66 million users",
+              "Nationwide liquidity & cross-selling funnel across services"
+            ],
+            [
+              "Registered Merchants",
+              "More than 6.4 million",
+              "Supports GoFood supply breadth and GoPay QRIS acceptance"
+            ],
+            [
+              "Registered Driver-Partners",
+              "More than 3 million",
+              "Two-sided fulfillment fleet difficult to replicate rapidly"
+            ],
+            [
+              "Consolidated Net Revenue",
+              "Rp 18,322 billion (Rp 18.322T)",
+              "Up +15.3% YoY; led by Fintech (+74.1%) & On-Demand (+13.8%)"
+            ],
+            [
+              "Adjusted Group EBITDA",
+              "Rp 2,008 billion (Rp 2.008T)",
+              "Positive non-GAAP operating proxy excluding non-cash & promo items"
+            ],
+            [
+              "Sales & Marketing Expense",
+              "Rp 3,090 billion (Rp 3.090T)",
+              "Up +8% YoY to defend user frequency against Grab & Shopee"
+            ],
+            [
+              "Product Development Expense",
+              "Rp 2,152 billion (Rp 2.152T)",
+              "Up +23% YoY for AI, fintech underwriting & cloud security"
+            ],
+            [
+              "Loss from Operations (EBIT)",
+              "(Rp 378.254 billion)",
+              "Narrowed 83.1% from FY2024 (-Rp 2,241 bn), but still negative"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+        "evidence_caption": "Audited FY2025 Income Statement confirming Rp 18.322T Net Revenue and -Rp 378.3 bn EBIT Loss."
+      },
+      {
+        "heading": "1.2 Industry Overview & Digital Market Structure",
+        "source_citation": "GoTo Annual Report 2025, pp. 40, 46, 147, 168-169; Meilina (2025); Ahdiat (2026); Ridwan (2026)",
+        "paragraphs": [
+          "GoTo competes in Indonesia's on-demand mobility/delivery, e-commerce services, and digital financial services markets. Network effects let multi-product platforms spread technology overhead across higher transaction frequency.",
+          "Macro demand continues expanding: Indonesia's 2025 digital economy reached ~USD 99 billion in GMV, digital payments reached ~USD 538 billion in GTV, digital lending reached ~USD 13 billion, and online transport and food delivery reached ~USD 10 billion GMV. However, multi-homing across Grab, Maxim, inDrive, ShopeeFood, DANA, OVO, and ShopeePay keeps customer acquisition intensity high."
+        ],
+        "tables": [
+          [
+            [
+              "Digital Vertical",
+              "Indonesia 2025 Market Scale",
+              "GoTo Platform",
+              "Direct Competitors",
+              "Switching Friction"
+            ],
+            [
+              "Digital Payments & Lending",
+              "USD 538B GTV / USD 13B Lending",
+              "GoPay & GoPay Pinjam",
+              "DANA, ShopeePay, OVO, Digital Banks",
+              "Low (QRIS standardized)"
+            ],
+            [
+              "Online Transport & Food",
+              "USD 10B Combined GMV",
+              "Gojek & GoFood",
+              "Grab, GrabFood, ShopeeFood, Maxim, inDrive",
+              "Low (price-sensitive multi-homing)"
+            ],
+            [
+              "Overall Digital Economy",
+              "USD 99B Total GMV",
+              "One GoTo + 24.99% Tokopedia",
+              "Shopee, TikTok-Tokopedia, Blibli, BUKA",
+              "Moderate within ecosystem"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.1 Threat of New Entrants (Low to Moderate)",
+        "source_citation": "GoTo Annual Report 2025, pp. 8, 63, 76-84, 180-183",
+        "paragraphs": [
+          "GoTo's Threat of New Entrants is rated Low to Moderate. Matching GoTo's nationwide two-sided network (66 million ATUs, 6.4 million+ merchants, 3 million+ driver-partners) requires massive capital, cybersecurity architecture, and Bank Indonesia / OJK payment and lending licenses.",
+          "However, single-segment app entrants (low-commission ride-hailing or niche wallets) can still chip away at specific local corridors without replicating the entire ecosystem, preventing the rating from being purely Low."
+        ],
+        "tables": [
+          [
+            [
+              "Porter Force 1 Dimension",
+              "Assessment / Rating",
+              "Empirical Evidence (GoTo 2025 Filings)"
+            ],
+            [
+              "Overall Force Rating",
+              "LOW TO MODERATE",
+              "Two-sided network effects & licensing create durable scale barriers"
+            ],
+            [
+              "Network Scale Barrier",
+              "High Barrier",
+              "66M Annual Transacting Users, 6.4M+ merchants, 3M+ drivers"
+            ],
+            [
+              "Regulatory & Capital Barrier",
+              "High Barrier",
+              "BI payment/QRIS licenses, OJK P2P/multifinance rules, Rp 2.15T R&D/yr"
+            ],
+            [
+              "Residual Niche Entry Risk",
+              "Moderate Vulnerability",
+              "Specialized low-take-rate rivals can target single cities or verticals"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.2 Bargaining Power of Suppliers (Low)",
+        "source_citation": "GoTo Annual Report 2025, p. 325; Consolidated Financial Statements Note 26",
+        "paragraphs": [
+          "GoTo's Bargaining Power of Suppliers is rated Low. Formal procurement governance, competitive bidding under its Vendor Code of Conduct, and an asset-light digital service structure eliminate dependence on physical raw-material suppliers.",
+          "In FY2025, no third-party supplier exceeded 10% of consolidated net revenue (Note 26), keeping procurement pricing controllable despite modest foreign-currency exposure on specialized global cloud infrastructure."
+        ],
+        "tables": [
+          [
+            [
+              "Porter Force 2 Dimension",
+              "Assessment / Rating",
+              "Empirical Evidence (GoTo 2025 Filings)"
+            ],
+            [
+              "Overall Force Rating",
+              "LOW",
+              "Procurement policies & lack of dominant supplier protect cost base"
+            ],
+            [
+              "Vendor Concentration (Note 26)",
+              "< 10% Threshold Met",
+              "No third-party vendor exceeded 10% of consolidated net revenue in 2025"
+            ],
+            [
+              "Labor / Driver Supply Base",
+              "Fragmented (3M+ Drivers)",
+              "Large independent partner pool limits bilateral pricing leverage"
+            ],
+            [
+              "Cloud / Tech Infrastructure",
+              "Managed Exposure",
+              "Global cloud & FX exposure managed under formal vendor governance"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.3 Bargaining Power of Buyers (Medium)",
+        "source_citation": "GoTo Annual Report 2025, pp. 8, 56, 148, 152, 168-169; Note 25",
+        "paragraphs": [
+          "GoTo's Bargaining Power of Buyers is rated Medium. Everyday consumers are price-sensitive and compare promos across apps easily, requiring ongoing cashback, shipping subsidies, and tiered pricing between mass-market affordability and affluent speed/quality tiers.",
+          "Buyer power does not escalate to High because the customer base is vastly fragmented: 66 million ATUs and 6.4 million merchants ensure that no single customer represents 10% or more of consolidated net revenue (Note 25)."
+        ],
+        "tables": [
+          [
+            [
+              "Porter Force 3 Dimension",
+              "Assessment / Rating",
+              "Empirical Evidence (GoTo 2025 Filings)"
+            ],
+            [
+              "Overall Force Rating",
+              "MEDIUM",
+              "Collective price sensitivity balanced by 66M-user fragmentation"
+            ],
+            [
+              "Single-Customer Concentration",
+              "< 10% (Note 25)",
+              "Zero customers individually account for >= 10% of net revenue"
+            ],
+            [
+              "Promotional Elasticity",
+              "High Collective Pressure",
+              "Requires cashback, delivery subsidies, and GoFood Hemat affordability"
+            ],
+            [
+              "Tiered Segmentation Response",
+              "Dual-Tier Strategy",
+              "Separates price-led mass users from convenience-led priority tiers"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.4 Threat of Substitute Products or Services (Medium)",
+        "source_citation": "GoTo Annual Report 2025, pp. 77-82, 147",
+        "paragraphs": [
+          "GoTo's Threat of Substitutes is rated Medium. Users can fulfill identical daily needs offline or outside super-app ecosystems: public transit instead of GoRide, dine-in cooking/eating instead of GoFood, and debit cards, cash, or direct bank BI-FAST transfers instead of GoPay.",
+          "GoTo actively co-opts these substitutes by embedding them inside its platform: GoTransit bundles KAI Commuter rail tickets with first-mile/last-mile GoRide, GoDineIn monetizes restaurant visits, and GoPay links directly to bank accounts."
+        ],
+        "tables": [
+          [
+            [
+              "Business Segment",
+              "Primary Offline / External Substitutes",
+              "Switching Cost",
+              "GoTo Ecosystem Integration Response"
+            ],
+            [
+              "Mobility (GoRide / GoCar)",
+              "Public transit (KRL, TransJakarta), private vehicles",
+              "Low",
+              "GoTransit bundles train tickets + first/last-mile GoRide"
+            ],
+            [
+              "Food Delivery (GoFood)",
+              "Dine-in restaurants, home cooking, direct merchant WhatsApp",
+              "Low",
+              "GoDineIn & GoFood Pickup retain dine-in traffic"
+            ],
+            [
+              "Payments (GoPay)",
+              "Bank mobile apps (BI-FAST), debit/credit cards, cash",
+              "Low",
+              "Stand-alone GoPay app links direct bank funding sources"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "2.5 Competitive Rivalry Among Existing Firms (High - Strongest Force)",
+        "source_citation": "GoTo Annual Report 2025, pp. 40, 46, 56, 147, 155-158, 168-169; Ahdiat (2026); Ridwan (2026)",
+        "paragraphs": [
+          "Competitive Rivalry is rated High and represents the single strongest structural constraint on GoTo's margins. Every core GoTo vertical battles well-funded domestic and regional incumbents with overlapping service menus and zero exclusivity on user devices.",
+          "Market data places GrabFood at 46% of 2025 Indonesian online food-delivery GMV versus GoFood at 31% and ShopeeFood at 23%. To defend engagement, GoTo increased 2025 sales & marketing expense 8% to Rp 3.090 trillion and product development 23% to Rp 2.152 trillion, keeping operating EBIT negative (-Rp 378.3 billion)."
+        ],
+        "tables": [
+          [
+            [
+              "Rivalry Metric / Market Evidence",
+              "FY2025 Empirical Data",
+              "Structural Consequence for GoTo"
+            ],
+            [
+              "Food Delivery Market Share (2025)",
+              "GrabFood 46% | GoFood 31% | ShopeeFood 23%",
+              "GoFood holds #2 share behind GrabFood; ShopeeFood aggressively contests"
+            ],
+            [
+              "Mobility & Wallet Rivals",
+              "Grab, Maxim, inDrive; DANA, ShopeePay, OVO",
+              "Aggressive take-rate undercutting prevents unilateral fare hikes"
+            ],
+            [
+              "Sales & Marketing Defense Spend",
+              "Rp 3,090 billion (+8% YoY in FY2025)",
+              "Consumes 16.9% of revenue directly to retain transaction share"
+            ],
+            [
+              "Product Development Defense Spend",
+              "Rp 2,152 billion (+23% YoY in FY2025)",
+              "Compulsory capex/opex outlays for AI matching & lending credit engines"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "3. GoTo's Hybrid Strategic Position",
+        "source_citation": "GoTo Annual Report 2025, pp. 44, 46, 56-57, 76-84, 168-169",
+        "paragraphs": [
+          "GoTo pursues a hybrid strategic position combining targeted cost leadership (lower cost-to-serve and mass-market affordability via GoFood Saver and streamlined G&A) with ecosystem differentiation (Gojek + GoPay integration, personalization, and brand trust for higher-value urban users).",
+          "This dual approach aligns directly with Five Forces: low supplier leverage allows cloud/operating efficiencies, while Medium buyer power and High rivalry force GoTo to deliver both competitive pricing and multi-product convenience to sustain user retention."
+        ],
+        "tables": [
+          [
+            [
+              "Strategic Pillar",
+              "Competitive Focus",
+              "Execution Proof in FY2025"
+            ],
+            [
+              "Cost Leadership Dimension",
+              "Affordability & Lower Cost-to-Serve",
+              "G&A cut 9.3% YoY; narrowed operating loss 83.1% while growing Rev +15.3%"
+            ],
+            [
+              "Differentiation Dimension",
+              "Speed, Quality, AI & Ecosystem Stickiness",
+              "66M ATUs cross-using Gojek mobility, GoFood & GoPay consumer lending"
+            ],
+            [
+              "Strategic Vulnerability (Stuck-in-Middle Risk)",
+              "Requires dual spending on promos & R&D",
+              "Combined S&M + R&D = Rp 5.24T, still keeping statutory EBIT negative (-Rp 378 bn)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "4.1-4.3 Core Strategic, Substitution & Fintech Credit Risks",
+        "source_citation": "GoTo Annual Report 2025, pp. 14-18, 46, 56-57, 77-82, 152, 180-183; Consolidated Statements Note 35",
+        "paragraphs": [
+          "Three interlocking risks translate Five Forces directly into financial-statement risk: (4.1) Pricing & promo margin compression (defending orders can reignite subsidy spend above gross profit), (4.2) Customer switching & multi-homing across substitutes (reducing transaction frequency and take rates), and (4.3) Fintech credit and regulatory risk.",
+          "Note 35 reveals concrete balance-sheet exposure from GoPay lending: net financing and lending receivables surged +72.6% to Rp 2.731 trillion in 2025 (from Rp 1.582T in 2024), while allowance for impairment losses more than doubled (+134.9%) from Rp 173.552 billion to Rp 407.684 billion alongside heightened Bank Indonesia / OJK compliance mandates."
+        ],
+        "tables": [
+          [
+            [
+              "Key Business Risk Category",
+              "Primary Five Forces Link",
+              "Verified 2025 Financial / Note Evidence",
+              "Financial Statement Risk Impact"
+            ],
+            [
+              "4.1 Pricing & Promo Margin Compression",
+              "High Rivalry + Medium Buyer Power",
+              "S&M Rp 3.090T + R&D Rp 2.152T -> EBIT -(378.3) bn",
+              "Reigniting subsidies pushes OpEx back toward Conservative 85% scenario"
+            ],
+            [
+              "4.2 Switching & Substitution Risk",
+              "Low Switching Cost + Medium Substitutes",
+              "15.3% Rev growth vs. GrabFood/ShopeeFood promo pressure",
+              "Limits sustainable take-rate expansion without losing GTV frequency"
+            ],
+            [
+              "4.3 Fintech Credit & Regulatory Risk",
+              "OJK/BI Regulation + Consumer Credit",
+              "Net lending AR Rp 2.731T (+72.6%); ECL provision Rp 407.7 bn (+134.9%)",
+              "Unexpected borrower defaults erode Fintech margin gains"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "5. Overall Strategic Assessment & References",
+        "source_citation": "Milestone 1 Final Group 4 Write-Up & Bibliography",
+        "paragraphs": [
+          "Conclusion: Indonesia's digital platform industry combines robust macro expansion with demanding structural profitability barriers. GoTo holds defensible barriers to entry and low supplier leverage, but High competitive rivalry and Medium buyer/substitute power prevent easy margin expansion.",
+          "Overall attractiveness for a new entrant is only moderate, while for incumbent GoTo the decisive investment variable tested in Milestones 2-4 is whether ecosystem monetization and Fintech lending growth can yield durable GAAP net income above cost of equity without escalating credit losses or draining cash."
+        ],
+        "tables": [
+          [
+            [
+              "Citation Key",
+              "Source Document / Author",
+              "Role in Milestone 1 Analysis"
+            ],
+            [
+              "Primary Filing",
+              "PT GoTo Gojek Tokopedia Tbk (2026). 2025 Annual Report & Audited LK.",
+              "Segment users, S&M/R&D expenses, Note 25/26/35 empirical anchors"
+            ],
+            [
+              "Online Delivery Market",
+              "Ahdiat, A. (2026, Feb 20). Databoks ShopeeFood / GrabFood / GoFood GMV.",
+              "Supports 46% / 31% / 23% Indonesia food-delivery market share split"
+            ],
+            [
+              "Ride-Hailing Commissions",
+              "Meilina, K. (2025, May 20). Katadata comparison of Gojek, Grab, Maxim, inDrive.",
+              "Evidences low driver/platform commission friction and competitive rivalry"
+            ],
+            [
+              "Digital Wallet Survey",
+              "Ridwan, A. (2026, Apr 10). Databoks e-wallet adoption survey (DANA, GoPay, OVO).",
+              "Demonstrates multi-homing behavior across Indonesian fintech wallets"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m2",
+    "code": "Milestone 2",
+    "folder": "Weeks 4-6",
+    "week": "Weeks 4-6",
+    "title": "Financial Ratio Package, Common-Size & 3-Step DuPont ROE Analysis",
+    "summary": "Multi-year common-size trends, liquidity (2.73x), solvency (0.27x DER), 3-step DuPont ROE decomposition (-5.2%), Bukalapak peer benchmark, and Emerging Market Altman Z''-Score (-10.90).",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "Executive Ratio & DuPont Package Overview",
+        "source_citation": "Group 4 Milestone 2 Workbook (Historical Data, Ratios, DuPont, Peer Benchmark)",
+        "paragraphs": [
+          "Milestone 2 evaluates PT GoTo Gojek Tokopedia Tbk's financial health across FY2023-FY2025 using its Common-Size statements, Liquidity, Efficiency, Solvency, Profitability, 3-Step DuPont ROE, Peer Benchmark vs. Bukalapak, and Emerging-Market Altman Z''-Score.",
+          "Core finding: GoTo materially narrowed its operating loss (from -69.5% to -2.1% of revenue) and maintains a strong cash liquidity cushion (Current Ratio 2.73x, Cash = 47.5% of Assets), yet still generates negative ROE (-5.2%), negative ROA (-3.3%), and a Distress-Zone Z''-Score (-10.90) driven by -Rp 214.1 trillion of accumulated deficit."
+        ],
+        "tables": [
+          [
+            [
+              "Milestone 2 Diagnostic Pillar",
+              "2023",
+              "2024",
+              "2025",
+              "Three-Year Trajectory"
+            ],
+            [
+              "Revenue Growth & Scale (Rp bn)",
+              "14,785",
+              "15,894 (+7.5%)",
+              "18,322 (+15.3%)",
+              "Accelerating post-Tokopedia deconsolidation"
+            ],
+            [
+              "Liquidity (Current Ratio / Quick)",
+              "2.62x / 2.61x",
+              "2.62x / 2.62x",
+              "2.73x / 2.73x",
+              "Healthy Rp 18.41T working capital buffer"
+            ],
+            [
+              "Solvency (Debt-to-Equity)",
+              "0.10x",
+              "0.13x",
+              "0.27x",
+              "Moderate leverage, but debt doubled in 2025"
+            ],
+            [
+              "3-Step DuPont ROE",
+              "-253.4%",
+              "-18.0%",
+              "-5.2%",
+              "Loss narrowing drives improvement, still negative"
+            ],
+            [
+              "Altman Z''-Score (Emerging Mkt)",
+              "-10.17",
+              "-11.41",
+              "-10.90",
+              "Distress Zone (< 1.10) due to -Rp 214.1T deficit"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "1. Common-Size Trends & Multi-Year Income Statement (2023-2025)",
+        "source_citation": "Audited Consolidated Statements of Profit or Loss (FY2023-FY2025), p. 17; Group 4 M2 Workbook",
+        "paragraphs": [
+          "Amounts below are in Rp million; percentages show year-on-year changes. A negative change in a loss line means the loss narrowed rather than deteriorated. Note: N/M indicates not meaningful because taxes shifted from a credit in 2023 to an expense in 2024.",
+          "Revenue grew +7.5% in 2024 and +15.3% in 2025 to Rp 18.322 trillion. Because COGS grew only +4.5% in 2025 while operating expenses edged up +2.2%, operating loss narrowed from Rp 10.279 trillion (2023) to Rp 2.241 trillion (2024) and Rp 378.254 billion (2025), and net loss shrank to Rp 1.502 trillion."
+        ],
+        "tables": [
+          [
+            [
+              "Income Statement Line Item (Rp million)",
+              "2023",
+              "2024",
+              "YoY '23->'24",
+              "2025",
+              "YoY '24->'25"
+            ],
+            [
+              "Net Revenue",
+              "14,785,492",
+              "15,894,462",
+              "7.5%",
+              "18,322,117",
+              "15.3%"
+            ],
+            [
+              "Cost of Goods Sold (COGS)",
+              "5,093,179",
+              "7,413,392",
+              "45.6%",
+              "7,746,034",
+              "4.5%"
+            ],
+            [
+              "Gross Profit",
+              "9,692,313",
+              "8,481,070",
+              "-12.5%",
+              "10,576,083",
+              "24.7%"
+            ],
+            [
+              "Operating Expenses (SG&A & Tech)",
+              "19,971,283",
+              "10,721,944",
+              "-46.3%",
+              "10,954,337",
+              "2.2%"
+            ],
+            [
+              "EBIT (Operating Income / Loss)",
+              "(10,278,970)",
+              "(2,240,874)",
+              "-78.2%",
+              "(378,254)",
+              "-83.1%"
+            ],
+            [
+              "Other Expenses / (Income)",
+              "80,355,448",
+              "3,034,956",
+              "-96.2%",
+              "708,350",
+              "-76.7%"
+            ],
+            [
+              "Earnings Before Tax (EBT)",
+              "(90,634,418)",
+              "(5,275,830)",
+              "-94.2%",
+              "(1,086,604)",
+              "-79.4%"
+            ],
+            [
+              "Income Tax Expense / (Benefit)",
+              "(115,692)",
+              "189,025",
+              "N/M",
+              "415,081",
+              "119.6%"
+            ],
+            [
+              "Consolidated Net Income / (Loss)",
+              "(90,518,726)",
+              "(5,464,855)",
+              "-94.0%",
+              "(1,501,685)",
+              "-72.5%"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+        "evidence_caption": "LK GOTO 2025 Income Statement (p. 17) showing Rp 18.32T Revenue, Rp 10.58T Gross Profit, and -Rp 378.3B EBIT."
+      },
+      {
+        "heading": "2. Vertical Common-Size Analysis (Income Statement & Balance Sheet)",
+        "source_citation": "Group 4 M2 Workbook, Common-Size Analysis Tab; LK GOTO 2025 pp. 15-17",
+        "paragraphs": [
+          "Common-size income statement weights confirm structural cost discipline: COGS dropped from 46.6% of revenue in 2024 to 42.3% in 2025 (lifting gross margin from 53.4% to 57.7%), while total operating expenses fell from 135.1% (2023) to 59.8% (2025). Yet OpEx (59.8%) still exceeds Gross Margin (57.7%), explaining the remaining -2.1% operating loss margin.",
+          "On the common-size balance sheet, Cash remains the anchor asset at 47.5% of Total Assets (Rp 21.755T), while Total Liabilities expanded from 29.6% (2024) to 37.3% (2025) and Equity declined from 70.4% to 62.7% due to continuing losses."
+        ],
+        "tables": [
+          [
+            [
+              "Common-Size Component",
+              "2023",
+              "2024",
+              "2025",
+              "Three-Year Structural Shift"
+            ],
+            [
+              "INCOME STATEMENT (% OF REVENUE)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Cost of Goods Sold (% Rev)",
+              "34.4%",
+              "46.6%",
+              "42.3%",
+              "3-Yr Avg 41.1%; improved -4.3 pts in 2025"
+            ],
+            [
+              "Gross Profit Margin (% Rev)",
+              "65.6%",
+              "53.4%",
+              "57.7%",
+              "3-Yr Avg 58.9%; recovered post-Tokopedia"
+            ],
+            [
+              "Operating Expenses (% Rev)",
+              "135.1%",
+              "67.5%",
+              "59.8%",
+              "Fixed-cost leverage slashed OpEx share by 75 pts"
+            ],
+            [
+              "Operating Margin (EBIT / Rev)",
+              "-69.5%",
+              "-14.1%",
+              "-2.1%",
+              "Converging toward breakeven, still negative"
+            ],
+            [
+              "Net Profit Margin (NI / Rev)",
+              "-612.2%",
+              "-34.4%",
+              "-8.2%",
+              "2023 skewed by Rp 78.8T goodwill impairment"
+            ],
+            [
+              "BALANCE SHEET (% OF TOTAL ASSETS)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Cash & Equivalents (% Assets)",
+              "46.5%",
+              "44.4%",
+              "47.5%",
+              "Primary solvency & liquidity anchor (Rp 21.76T)"
+            ],
+            [
+              "Total Liabilities (% Assets)",
+              "34.0%",
+              "29.6%",
+              "37.3%",
+              "Expanded +7.7 pts on Rp 3.72T new bank loans"
+            ],
+            [
+              "Total Shareholders' Equity (% Assets)",
+              "66.0%",
+              "70.4%",
+              "62.7%",
+              "Eroded by net losses; cumulative deficit -Rp 214.1T"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "LK GOTO 2025 Consolidated Assets (p. 15): Cash Rp 21.76T equals 47.5% of Total Assets."
+      },
+      {
+        "heading": "3. Liquidity & Working Capital Efficiency Analysis",
+        "source_citation": "Group 4 M2 Workbook, Ratio Analysis Tab; LK GOTO 2025 p. 15",
+        "paragraphs": [
+          "GoTo's short-term liquidity remained exceptionally solid in FY2025 with both Current Ratio and Quick Ratio at 2.73x, backed by positive working capital of Rp 18.412 trillion.",
+          "Operating efficiency also improved meaningfully: Total Asset Turnover rose from 0.27x (2023) to 0.40x (2025), closing-balance DSO improved to 10.9 days (trade receivables Rp 547.3 bn), and the Cash Conversion Cycle stayed negative at -47.5 days, meaning GoTo collects cash from platform transactions weeks before paying suppliers."
+        ],
+        "tables": [
+          [
+            [
+              "Liquidity & Efficiency Ratio",
+              "2023",
+              "2024",
+              "2025",
+              "Operational Interpretation"
+            ],
+            [
+              "Current Ratio",
+              "2.62x",
+              "2.62x",
+              "2.73x",
+              "Strong short-term solvency (> 2.0x benchmark)"
+            ],
+            [
+              "Quick Ratio",
+              "2.61x",
+              "2.62x",
+              "2.73x",
+              "Digital platform holds negligible physical inventory"
+            ],
+            [
+              "Working Capital (Rp billion)",
+              "20,795",
+              "16,293",
+              "18,412",
+              "Rp 18.41T net liquidity cushion funds ongoing opex"
+            ],
+            [
+              "Total Asset Turnover",
+              "0.27x",
+              "0.37x",
+              "0.40x",
+              "Asset base shrunk & revenue grew (+48% productivity gain)"
+            ],
+            [
+              "Days Sales Outstanding (DSO)",
+              "14.8 days",
+              "46.9 days*",
+              "10.9 days",
+              "Fast 10.9-day trade collection (*2024 incl. non-trade AR)"
+            ],
+            [
+              "Days Inventory Outstanding (DIO)",
+              "12.4 days",
+              "1.3 days",
+              "0.7 days",
+              "Post-Tokopedia deconsolidation leaves almost zero inventory"
+            ],
+            [
+              "Days Payable Outstanding (DPO)",
+              "83.3 days",
+              "61.1 days",
+              "59.1 days",
+              "59.1-day supplier credit period supports negative CCC"
+            ],
+            [
+              "Cash Conversion Cycle (CCC)",
+              "-56.1 days",
+              "-12.9 days",
+              "-47.5 days",
+              "Negative CCC: collects customer cash 47.5 days before AP due"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "4. Solvency, Debt Doubling & Profitability Trajectory",
+        "source_citation": "Group 4 M2 Workbook, Ratio Analysis Tab; Audited LK Note 19 & 20",
+        "paragraphs": [
+          "Although overall leverage remains moderate (mostly equity-funded at 62.7% of assets), total interest-bearing debt more than doubled in FY2025 from Rp 3.820 trillion to Rp 7.743 trillion, pushing Debt-to-Equity from 0.13x to 0.27x and Debt-to-Total-Assets from 8.8% to 16.9%.",
+          "Despite gross margin recovering to 57.7% and operating loss narrowing to -2.1%, profitability remains negative: ROA was -3.3% and ROE was -5.2%, leaving Interest Coverage negative (-0.71x on Rp 535 bn interest expense)."
+        ],
+        "tables": [
+          [
+            [
+              "Solvency & Profitability Ratio",
+              "2023",
+              "2024",
+              "2025",
+              "Financial Risk Assessment"
+            ],
+            [
+              "Short-Term + Long-Term Debt (Rp bn)",
+              "3,460",
+              "3,820",
+              "7,743",
+              "+102.7% YoY debt jump from bank borrowings"
+            ],
+            [
+              "Debt-to-Equity (ST+LT Debt / Equity)",
+              "0.10x",
+              "0.13x",
+              "0.27x",
+              "Moderate leverage, but rising debt vs. shrinking equity"
+            ],
+            [
+              "Debt-to-Total-Assets",
+              "6.4%",
+              "8.8%",
+              "16.9%",
+              "Debt share nearly tripled over three years"
+            ],
+            [
+              "Interest Coverage (EBIT / Interest)",
+              "-27.8x",
+              "-4.5x",
+              "-0.71x",
+              "Operating EBIT still cannot cover Rp 535 bn interest cost"
+            ],
+            [
+              "Gross Profit Margin",
+              "65.6%",
+              "53.4%",
+              "57.7%",
+              "+4.3 ppt recovery in FY2025"
+            ],
+            [
+              "Operating Margin (EBIT %)",
+              "-69.5%",
+              "-14.1%",
+              "-2.1%",
+              "Approaching breakeven, not yet profitable"
+            ],
+            [
+              "Return on Assets (ROA)",
+              "-167.3%",
+              "-12.6%",
+              "-3.3%",
+              "Negative return on Rp 45.76T asset base"
+            ],
+            [
+              "Return on Equity (ROE)",
+              "-253.4%",
+              "-18.0%",
+              "-5.2%",
+              "Continues eroding shareholder book value"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
+        "evidence_caption": "LK GOTO 2025 Liabilities & Equity (p. 16): Debt doubled to Rp 7.74T while accumulated deficit reached -Rp 214.1T."
+      },
+      {
+        "heading": "5. Three-Step DuPont ROE Decomposition",
+        "source_citation": "Group 4 M2 Workbook, DuPont Analysis Tab",
+        "paragraphs": [
+          "The 3-Step DuPont identity (ROE = Net Profit Margin x Asset Turnover x Equity Multiplier) demonstrates that GoTo's ROE recovery from -253.4% (2023) to -18.0% (2024) and -5.2% (2025) was driven overwhelmingly by loss-narrowing margin gains (+604 percentage points) and higher asset productivity (+0.13x turnover).",
+          "Financial leverage played only a secondary role (Equity Multiplier rose modestly from 1.51x to 1.59x), meaning GoTo's operational recovery is genuine efficiency rather than debt engineering, though negative net margin still forces ROE below zero."
+        ],
+        "tables": [
+          [
+            [
+              "DuPont component",
+              "2023",
+              "2024",
+              "2025"
+            ],
+            [
+              "Net profit margin",
+              "-612.2%",
+              "-34.4%",
+              "-8.2%"
+            ],
+            [
+              "Asset turnover",
+              "0.27x",
+              "0.37x",
+              "0.40x"
+            ],
+            [
+              "Equity multiplier",
+              "1.51x",
+              "1.42x",
+              "1.59x"
+            ],
+            [
+              "ROE",
+              "-253.4%",
+              "-18.0%",
+              "-5.2%"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "6. Peer Comparison (GoTo vs. Bukalapak) & Strategic Conclusion",
+        "source_citation": "Group 4 M2 Workbook, Peer Benchmark Tab; Bukalapak & GoTo FY2025 Financial Statements",
+        "paragraphs": [
+          "Comparing FY2025 ratios against Indonesian digital peer PT Bukalapak.com Tbk (BUKA) highlights two sharply contrasting financial profiles. GoTo generates 60% higher asset productivity (0.40x Asset Turnover vs. Bukalapak's 0.25x), confirming stronger ecosystem monetization per rupiah of assets.",
+          "However, Bukalapak holds zero debt (0.00x Debt-to-Equity), an ultra-high 37.07x current ratio, and positive +48.4% net margin (+12.4% ROE) buoyed by treasury investment income, whereas GoTo remains loss-making. Conclusion: GoTo's primary vulnerability is not short-term liquidity (2.73x), but proving durable profitability without jeopardizing its competitive ecosystem."
+        ],
+        "tables": [
+          [
+            [
+              "Metric",
+              "GoTo",
+              "Bukalapak"
+            ],
+            [
+              "Net profit margin",
+              "-8.2%",
+              "48.4%"
+            ],
+            [
+              "Return on equity",
+              "-5.2%",
+              "12.4%"
+            ],
+            [
+              "Return on assets",
+              "-3.3%",
+              "12.1%"
+            ],
+            [
+              "Current ratio",
+              "2.73x",
+              "37.07x"
+            ],
+            [
+              "Debt to equity",
+              "0.27x",
+              "0.00x"
+            ],
+            [
+              "Asset turnover",
+              "0.40x",
+              "0.25x"
+            ]
+          ]
+        ]
+      }
+    ],
+    "workbook": {
+      "Historical Data": [
+        [
+          "Historical Financial Data (PT GoTo Gojek Tokopedia Tbk)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Audited Consolidated Statements (in Rp million, except growth %)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Line item",
+          "2023",
+          "2024",
+          "YoY ’23->’24",
+          "2025",
+          "YoY ’24->’25"
+        ],
+        [
+          "INCOME STATEMENT"
+        ],
+        [
+          "Revenue",
+          "14,785,492",
+          "15,894,462",
+          "7.5%",
+          "18,322,117",
+          "15.3%"
+        ],
+        [
+          "Cost of Goods Sold",
+          "5,093,179",
+          "7,413,392",
+          "45.6%",
+          "7,746,034",
+          "4.5%"
+        ],
+        [
+          "Gross Profit",
+          "9,692,313",
+          "8,481,070",
+          "-12.5%",
+          "10,576,083",
+          "24.7%"
+        ],
+        [
+          "Operating Expenses (SG&A)",
+          "19,971,283",
+          "10,721,944",
+          "-46.3%",
+          "10,954,337",
+          "2.2%"
+        ],
+        [
+          "EBIT (Operating Income)",
+          "(10,278,970)",
+          "(2,240,874)",
+          "-78.2%",
+          "(378,254)",
+          "-83.1%"
+        ],
+        [
+          "Other Expenses / (Income)",
+          "80,355,448",
+          "3,034,956",
+          "-96.2%",
+          "708,350",
+          "-76.7%"
+        ],
+        [
+          "Earnings Before Tax (EBT)",
+          "(90,634,418)",
+          "(5,275,830)",
+          "-94.2%",
+          "(1,086,604)",
+          "-79.4%"
+        ],
+        [
+          "Tax Expense / (Benefit)",
+          "(115,692)",
+          "189,025",
+          "N/M",
+          "415,081",
+          "119.6%"
+        ],
+        [
+          "Net Income / (Loss)",
+          "(90,518,726)",
+          "(5,464,855)",
+          "-94.0%",
+          "(1,501,685)",
+          "-72.5%"
+        ],
+        [
+          "BALANCE SHEET"
+        ],
+        [
+          "Cash & Equivalents",
+          "25,143,935",
+          "19,177,524",
+          "-23.7%",
+          "21,755,165",
+          "13.4%"
+        ],
+        [
+          "Accounts Receivable (Trade + Other)",
+          "597,589",
+          "2,041,739",
+          "241.7%",
+          "547,293",
+          "-73.2%"
+        ],
+        [
+          "Inventory",
+          "172,766",
+          "27,404",
+          "-84.1%",
+          "14,093",
+          "-48.6%"
+        ],
+        [
+          "Other Current Assets",
+          "7,703,001",
+          "5,091,025",
+          "-33.9%",
+          "6,742,675",
+          "32.4%"
+        ],
+        [
+          "Total Current Assets",
+          "33,617,291",
+          "26,337,692",
+          "-21.7%",
+          "29,059,226",
+          "10.3%"
+        ],
+        [
+          "Net Property, Plant & Equipment",
+          "1,272,715",
+          "456,997",
+          "-64.1%",
+          "622,356",
+          "36.2%"
+        ],
+        [
+          "Other Non-Current Assets",
+          "19,207,250",
+          "16,413,195",
+          "-14.5%",
+          "16,076,060",
+          "-2.1%"
+        ],
+        [
+          "Total Non-Current Assets",
+          "20,479,965",
+          "16,870,192",
+          "-17.6%",
+          "16,698,416",
+          "-1.0%"
+        ],
+        [
+          "TOTAL ASSETS",
+          "54,097,256",
+          "43,207,884",
+          "-20.1%",
+          "45,757,642",
+          "5.9%"
+        ],
+        [
+          "Accounts Payable",
+          "1,161,761",
+          "1,240,885",
+          "6.8%",
+          "1,254,389",
+          "1.1%"
+        ],
+        [
+          "Short-Term Debt",
+          "832,141",
+          "1,351,796",
+          "62.4%",
+          "1,523,758",
+          "12.7%"
+        ],
+        [
+          "Other Current Liabilities",
+          "10,828,642",
+          "7,452,209",
+          "-31.2%",
+          "7,869,377",
+          "5.6%"
+        ],
+        [
+          "Total Current Liabilities",
+          "12,822,544",
+          "10,044,890",
+          "-21.7%",
+          "10,647,524",
+          "6.0%"
+        ],
+        [
+          "Long-Term Debt",
+          "2,628,261",
+          "2,468,571",
+          "-6.1%",
+          "6,218,885",
+          "151.9%"
+        ],
+        [
+          "Other Non-Current Liabilities",
+          "2,926,451",
+          "290,622",
+          "-90.1%",
+          "179,576",
+          "-38.2%"
+        ],
+        [
+          "Total Non-Current Liabilities",
+          "5,554,712",
+          "2,759,193",
+          "-50.3%",
+          "6,398,461",
+          "131.9%"
+        ],
+        [
+          "Total Liabilities",
+          "18,377,256",
+          "12,804,083",
+          "-30.3%",
+          "17,045,985",
+          "33.1%"
+        ],
+        [
+          "Total Shareholders' Equity",
+          "35,720,000",
+          "30,403,801",
+          "-14.9%",
+          "28,711,657",
+          "-5.6%"
+        ],
+        [
+          "TOTAL LIABILITIES & EQUITY",
+          "54,097,256",
+          "43,207,884",
+          "-20.1%",
+          "45,757,642",
+          "5.9%"
+        ],
+        [
+          "Balance Check (Assets - L&E = 0)",
+          "0",
+          "0",
+          "-",
+          "0",
+          "-"
+        ],
+        [
+          "SUPPLEMENTARY ITEMS (used in Milestone 3 & 4)"
+        ],
+        [
+          "Shares Outstanding (million)",
+          "1,070,558",
+          "1,056,283",
+          "-1.3%",
+          "1,062,010",
+          "0.5%"
+        ],
+        [
+          "Depreciation & Amortization (Total IS)",
+          "2,671,148",
+          "744,175",
+          "-72.1%",
+          "748,552",
+          "0.6%"
+        ],
+        [
+          "Capital Expenditures (Fixed + Intangible)",
+          "785,830",
+          "6,518,862",
+          "729.5%",
+          "1,182,360",
+          "-81.9%"
+        ]
+      ],
+      "Common-Size Analysis": [
+        [
+          "Common-Size & Trend Analysis (PT GoTo Gojek Tokopedia Tbk)"
+        ],
+        [
+          "Vertical analysis (% of revenue / % of total assets) and year-over-year growth"
+        ],
+        [
+          "Line item",
+          "2023",
+          "2024",
+          "2025",
+          "YoY ’23->’24",
+          "YoY ’24->’25"
+        ],
+        [
+          "VERTICAL ANALYSIS (% of Revenue)"
+        ],
+        [
+          "Revenue",
+          "100.0%",
+          "100.0%",
+          "100.0%",
+          "7.5%",
+          "15.3%"
+        ],
+        [
+          "Cost of Goods Sold",
+          "34.4%",
+          "46.6%",
+          "42.3%",
+          "45.6%",
+          "4.5%"
+        ],
+        [
+          "Gross Profit",
+          "65.6%",
+          "53.4%",
+          "57.7%",
+          "-12.5%",
+          "24.7%"
+        ],
+        [
+          "Operating Expenses (SG&A)",
+          "135.1%",
+          "67.5%",
+          "59.8%",
+          "-46.3%",
+          "2.2%"
+        ],
+        [
+          "EBIT (Operating Margin)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "-78.2%",
+          "-83.1%"
+        ],
+        [
+          "Other Expenses / (Income)",
+          "543.5%",
+          "19.1%",
+          "3.9%",
+          "-96.2%",
+          "-76.7%"
+        ],
+        [
+          "Net Income (Net Profit Margin)",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "-94.0%",
+          "-72.5%"
+        ],
+        [
+          "VERTICAL ANALYSIS (% of Total Assets)"
+        ],
+        [
+          "Cash & Equivalents",
+          "46.5%",
+          "44.4%",
+          "47.5%",
+          "-23.7%",
+          "13.4%"
+        ],
+        [
+          "Accounts Receivable",
+          "1.1%",
+          "4.7%",
+          "1.2%",
+          "241.7%",
+          "-73.2%"
+        ],
+        [
+          "Inventory",
+          "0.3%",
+          "0.1%",
+          "0.0%",
+          "-84.1%",
+          "-48.6%"
+        ],
+        [
+          "Net PP&E",
+          "2.4%",
+          "1.1%",
+          "1.4%",
+          "-64.1%",
+          "36.2%"
+        ],
+        [
+          "Total Liabilities",
+          "34.0%",
+          "29.6%",
+          "37.3%",
+          "-30.3%",
+          "33.1%"
+        ],
+        [
+          "Total Equity",
+          "66.0%",
+          "70.4%",
+          "62.7%",
+          "-14.9%",
+          "-5.6%"
+        ]
+      ],
+      "Ratio Analysis": [
+        [
+          "Financial Ratio Analysis & Emerging Market Altman Z''-Score"
+        ],
+        [
+          "Calculated directly from Audited Historical Data (FY2023-FY2025)"
+        ],
+        [
+          "Ratio",
+          "2023",
+          "2024",
+          "2025",
+          "Formula Used"
+        ],
+        [
+          "LIQUIDITY"
+        ],
+        [
+          "Current Ratio",
+          "2.62x",
+          "2.62x",
+          "2.73x",
+          "Current Assets / Current Liabilities"
+        ],
+        [
+          "Quick Ratio",
+          "2.61x",
+          "2.62x",
+          "2.73x",
+          "(Current Assets - Inventory) / Current Liabilities"
+        ],
+        [
+          "Working Capital (Rp million)",
+          "20,794,747",
+          "16,292,802",
+          "18,411,702",
+          "Current Assets - Current Liabilities"
+        ],
+        [
+          "EFFICIENCY / ACTIVITY"
+        ],
+        [
+          "Total Asset Turnover",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Revenue / Total Assets"
+        ],
+        [
+          "Days Sales Outstanding (DSO)",
+          "14.8 days",
+          "46.9 days",
+          "10.9 days",
+          "Accounts Receivable / Revenue x 365"
+        ],
+        [
+          "Days Inventory Outstanding (DIO)",
+          "12.4 days",
+          "1.3 days",
+          "0.7 days",
+          "Inventory / COGS x 365"
+        ],
+        [
+          "Days Payable Outstanding (DPO)",
+          "83.3 days",
+          "61.1 days",
+          "59.1 days",
+          "Accounts Payable / COGS x 365"
+        ],
+        [
+          "Cash Conversion Cycle (CCC)",
+          "-56.1 days",
+          "-12.9 days",
+          "-47.5 days",
+          "DSO + DIO - DPO"
+        ],
+        [
+          "SOLVENCY"
+        ],
+        [
+          "Debt-to-Equity",
+          "0.10x",
+          "0.13x",
+          "0.27x",
+          "(Short-Term + Long-Term Debt) / Equity"
+        ],
+        [
+          "Debt-to-Total-Assets",
+          "6.4%",
+          "8.8%",
+          "16.9%",
+          "(Short-Term + Long-Term Debt) / Total Assets"
+        ],
+        [
+          "Interest Coverage (EBIT / Interest)",
+          "-27.8x",
+          "-4.5x",
+          "-0.71x",
+          "EBIT / Interest Expense"
+        ],
+        [
+          "Equity Multiplier (Leverage)",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Assets / Total Equity"
+        ],
+        [
+          "PROFITABILITY"
+        ],
+        [
+          "Gross Margin",
+          "65.6%",
+          "53.4%",
+          "57.7%",
+          "Gross Profit / Revenue"
+        ],
+        [
+          "Operating Margin (EBIT %)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "EBIT / Revenue"
+        ],
+        [
+          "Net Profit Margin",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "Net Income / Revenue"
+        ],
+        [
+          "Return on Assets (ROA)",
+          "-167.3%",
+          "-12.6%",
+          "-3.3%",
+          "Net Income / Total Assets"
+        ],
+        [
+          "Return on Equity (ROE)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Net Income / Total Equity"
+        ],
+        [
+          "ALTMAN Z''-SCORE (EMERGING MARKET MODEL)"
+        ],
+        [
+          "X1 (Working Capital / Total Assets)",
+          "0.384",
+          "0.377",
+          "0.402",
+          "6.56 x X1 (+2.64 pts in 2025)"
+        ],
+        [
+          "X2 (Retained Earnings / Total Assets)",
+          "-3.830",
+          "-4.918",
+          "-4.679",
+          "3.26 x X2 (-15.25 pts in 2025)"
+        ],
+        [
+          "X3 (EBIT / Total Assets)",
+          "-0.190",
+          "-0.052",
+          "-0.008",
+          "6.72 x X3 (-0.06 pts in 2025)"
+        ],
+        [
+          "X4 (Book Equity / Total Liabilities)",
+          "1.944",
+          "2.375",
+          "1.684",
+          "1.05 x X4 (+1.77 pts in 2025)"
+        ],
+        [
+          "Altman Z''-Score Total (Distress < 1.10)",
+          "-10.17",
+          "-11.41",
+          "-10.90",
+          "6.56(X1) + 3.26(X2) + 6.72(X3) + 1.05(X4) -> Distress Zone"
+        ]
+      ],
+      "DuPont Analysis": [
+        [
+          "DuPont Decomposition of Return on Equity (ROE)"
+        ],
+        [
+          "3-Step and 5-Step ROE Breakdown Linked to Audited Financials"
+        ],
+        [
+          "Component",
+          "2023",
+          "2024",
+          "2025",
+          "Formula"
+        ],
+        [
+          "3-STEP DuPont: ROE = Net Margin x Asset Turnover x Equity Multiplier"
+        ],
+        [
+          "Net Profit Margin",
+          "-612.2%",
+          "-34.4%",
+          "-8.2%",
+          "Net Income / Revenue"
+        ],
+        [
+          "Asset Turnover",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Revenue / Total Assets"
+        ],
+        [
+          "Equity Multiplier",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Assets / Equity"
+        ],
+        [
+          "ROE (3-Step Product)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Net Margin x Asset Turnover x Equity Multiplier"
+        ],
+        [
+          "5-STEP DuPont: ROE = Tax Burden x Interest Burden x Operating Margin x Asset Turnover x Leverage"
+        ],
+        [
+          "Tax Burden (Net Income / EBT)",
+          "99.9%",
+          "103.6%",
+          "138.2%",
+          "Net Income / EBT"
+        ],
+        [
+          "Interest Burden (EBT / EBIT)",
+          "8.82x",
+          "2.35x",
+          "2.87x",
+          "EBT / EBIT"
+        ],
+        [
+          "Operating Margin (EBIT / Revenue)",
+          "-69.5%",
+          "-14.1%",
+          "-2.1%",
+          "EBIT / Revenue"
+        ],
+        [
+          "Asset Turnover (Revenue / Assets)",
+          "0.27x",
+          "0.37x",
+          "0.40x",
+          "Revenue / Total Assets"
+        ],
+        [
+          "Leverage (Assets / Equity)",
+          "1.51x",
+          "1.42x",
+          "1.59x",
+          "Total Assets / Equity"
+        ],
+        [
+          "ROE (5-Step Product)",
+          "-253.4%",
+          "-18.0%",
+          "-5.2%",
+          "Product of all 5 factors"
+        ],
+        [
+          "Check: 3-Step ROE minus 5-Step ROE",
+          "0.0%",
+          "0.0%",
+          "0.0%",
+          "Must equal 0"
+        ]
+      ],
+      "Peer Benchmark": [
+        [
+          "Peer Benchmark (FY2025) - Indonesian Digital Ecosystem"
+        ],
+        [
+          "Latest-year (2025) metrics for PT GoTo Gojek Tokopedia Tbk vs. PT Bukalapak.com Tbk"
+        ],
+        [
+          "Metric",
+          "GoTo (GOTO)",
+          "Bukalapak (BUKA)",
+          "Comparative Note"
+        ],
+        [
+          "Net Profit Margin",
+          "-8.2%",
+          "48.4%",
+          "Bukalapak profit aided by interest/investment gains"
+        ],
+        [
+          "Return on Equity (ROE)",
+          "-5.2%",
+          "12.4%",
+          "GoTo remained loss-making; BUKA posted positive ROE"
+        ],
+        [
+          "Return on Assets (ROA)",
+          "-3.3%",
+          "12.1%",
+          "GoTo narrows losses while BUKA generates asset yield"
+        ],
+        [
+          "Current Ratio",
+          "2.73x",
+          "37.07x",
+          "Both hold cash cushions; BUKA ultra-liquid post-pivot"
+        ],
+        [
+          "Debt-to-Equity",
+          "0.27x",
+          "0.00x",
+          "GoTo doubled bank debt in 2025; BUKA is debt-free"
+        ],
+        [
+          "Asset Turnover",
+          "0.40x",
+          "0.25x",
+          "GoTo extracts 60% higher revenue per rupiah of assets"
+        ]
+      ],
+      "Sector Benchmark Reference": [
+        [
+          "Sector Benchmark Reference ,  Banking vs. Retail"
+        ],
+        [
+          "Real FY2025 data from two contrasting Indonesian sectors"
+        ],
+        [
+          "Use this to compare your own company's ROE driver profile against typical sector patterns ,  not the same as the same-sector Peer Benchmark sheet."
+        ],
+        [
+          "Metric",
+          "Bank Central Asia (BBCA)",
+          "Mitra Adiperkasa (MAPI)",
+          "Note"
+        ],
+        [
+          "SECTOR",
+          "Banking",
+          "Retail (Lifestyle/Fashion)"
+        ],
+        [
+          "Net Income (Rp trillion)",
+          "57.54",
+          "2.23",
+          "Company FY2025 results announcements"
+        ],
+        [
+          "Total Assets (Rp trillion)",
+          "1,586.83",
+          "≈32.0 (approx.)",
+          "MAPI figure varies slightly by data provider/quarter"
+        ],
+        [
+          "Total Equity (Rp trillion)",
+          "281.69",
+          "≈20.0 (approx.)",
+          "MAPI equity approximated as Total Assets - Total Liabilities"
+        ],
+        [
+          "Revenue / Operating Income (Rp trillion)",
+          "n/a ,  see note",
+          "42.90",
+          "Banks do not report a conventional 'revenue' line"
+        ],
+        [
+          "Net Profit Margin",
+          "54.0%",
+          "5.2%",
+          "BBCA margin from third-party aggregator (income base, not a clean revenue figure)"
+        ],
+        [
+          "Asset Turnover",
+          "n/a for banks ,  see note",
+          "1.34",
+          "Not a meaningful DuPont component for a bank"
+        ],
+        [
+          "Equity Multiplier",
+          "5.63",
+          "1.60",
+          "Total Assets ÷ Total Equity"
+        ],
+        [
+          "ROE (computed from above)",
+          "20.4%",
+          "11.1%",
+          "Externally reported MAPI ROE is ≈ 15.3% ,  see teaching note below"
+        ],
+        [
+          "TEACHING NOTES: INTERPRETING CROSS-SECTOR BENCHMARKS",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Banks need an adapted DuPont model. A bank's 'revenue' (interest and fee income) is itself a return on its main asset (loans), so the standard Net Margin × Asset Turnover pairing becomes definitionally circular. Financial institutions are conventionally analyzed with the 2-factor form: ROE = ROA × Equity Multiplier."
+        ],
+        [
+          "Leverage tells the real story here. BBCA's equity multiplier (5.63x) versus MAPI's (1.60x) reflects a structural difference, not a performance difference ,  banks are inherently far more leveraged than retailers because deposits (a liability) fund the core business. Never compare equity multipliers across sectors without this context."
+        ],
+        [
+          "Even 'real' benchmark data varies by source. The ROE implied by the approximate figures above for MAPI (≈11.1%) differs from the more precise, externally reported figure (≈15.3%) ,  a reminder to always check which total-assets/equity snapshot and date a reported ratio is actually built on before comparing it to your own calculation."
+        ],
+        [
+          "Data currency: figures reflect FY2025 results as reported in company announcements and third-party financial data aggregators available as of early 2026. Verify against each company's primary audited annual report before using precise figures in graded work."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "m3",
+    "code": "Milestone 3",
+    "folder": "Weeks 7-10",
+    "week": "Weeks 7-10",
+    "title": "Accounting Quality, Cash Flow Forensics & Non-Recurring Items",
+    "summary": "Forensic audit of Tokopedia & Bank Jago recoverability (22.57% of assets), Accrual Ratios (-11.21% -> -3.95%), analytical earnings adjustments, gross/net revenue policies, and negative Free Cash Flow (-Rp 875.3 bn).",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 10/Group4_Milestone3_GOTO.docx",
+    "sections": [
+      {
+        "heading": "Executive Accounting Quality Summary",
+        "source_citation": "PT GoTo Gojek Tokopedia Tbk (2026). Consolidated Financial Statements 31 Dec 2025",
+        "paragraphs": [
+          "Milestone 3 examines GoTo's 2024-2025 consolidated accounting quality (all tables in Rp million) based strictly on the audited FY2025 financial statements issued in March 2026 (PT GoTo Gojek Tokopedia Tbk, 2026).",
+          "Four red flags and forensic checks define our risk view: (1) 22.57% of total assets reside in Tokopedia and Bank Jago associates alongside Rp 1.669T Level 3 investments; (2) Related-party revenue climbed to 7.13%; (3) Analytical adjustments excluding repeated valuation losses temporarily flip pre-tax profit to +84,062 mn before returning to -165,038 mn after removing associate profits; and (4) Headline +519.1 bn Investing Cash Flow hides -875.3 bn negative Free Cash Flow funded by Rp 1,386.5 bn time-deposit settlements."
+        ],
+        "tables": [
+          [
+            [
+              "Forensic Area",
+              "2024 Audited",
+              "2025 Audited",
+              "Accounting Quality Finding"
+            ],
+            [
+              "Associates + Level 3 Investments",
+              "Note 14-15 tracked",
+              "Rp 11,995,821 mn (26.2% TA)",
+              "Tokopedia + Bank Jago = 22.57% Assets; embedded goodwill Rp 2.00T"
+            ],
+            [
+              "Related-Party Revenue Share",
+              "5.20% of revenue",
+              "7.13% of Rev (Rp 1,306,110 mn)",
+              "Driven by Tokopedia service fees (Note 25); no customer >= 10%"
+            ],
+            [
+              "Accrual Ratio ((NI - CFO) / Assets)",
+              "-11.21%",
+              "-3.95%",
+              "Narrowed gap, but driven by non-cash charges while core NI < 0"
+            ],
+            [
+              "Cash Flow Capex Coverage (CFO / CapEx)",
+              "-9.54%",
+              "25.97% (FCF -Rp 875.3 bn)",
+              "Headline CFI +519.1 bn relied on Rp 1,386.5 bn deposit settlements"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(a) Investment Recoverability, 20% Write-Down Test & Revenue Judgment",
+        "source_citation": "GoTo (2026), Note 14 (pp. 100-101), Note 15 (pp. 102-103), Note 25 (p. 129)",
+        "paragraphs": [
+          "Tokopedia and Bank Jago carried balances of Rp 7,432,326 million and Rp 2,894,921 million respectively in 2025, together representing 22.57% of GoTo's total assets and embedding Rp 2,003,559 million of goodwill. Separately, GoTo holds Rp 1,668,574 million in Level 3 private investments (Notes 14-15, pp. 100-103).",
+          "Under our Week 10 stress test asking what happens if Tokopedia (7,432,326 mn, already inclusive of goodwill) and Level 3 investments (1,668,574 mn) suffer a 20% write-down, every Rp 100 falls to Rp 80. Total assumed impairment is Rp 1,820,180 million, wiping out 3.98% of GoTo's Rp 45,757,642 million asset base before tax. Meanwhile, related-party revenue rose to Rp 1,306,110 million (7.13% of total revenue), warranting ongoing contract and margin scrutiny."
+        ],
+        "tables": [
+          [
+            [
+              "Investment",
+              "Starting value",
+              "20% amount lost",
+              "80% remaining"
+            ],
+            [
+              "Tokopedia",
+              "7,432,326",
+              "1,486,465",
+              "5,945,861"
+            ],
+            [
+              "Level 3 other investments",
+              "1,668,574",
+              "333,715",
+              "1,334,859"
+            ],
+            [
+              "Total selected investments",
+              "9,100,900",
+              "1,820,180",
+              "7,280,720"
+            ]
+          ],
+          [
+            [
+              "Balance-Sheet Carrying Item (2025)",
+              "Carrying Amount (Rp mn)",
+              "% of Total Assets (45,757,642)",
+              "Accounting Risk Classification"
+            ],
+            [
+              "Investment in Tokopedia (24.99%)",
+              "7,432,326",
+              "16.24%",
+              "Contains Rp 2,003,559 mn embedded goodwill"
+            ],
+            [
+              "Investment in Bank Jago (21.40%)",
+              "2,894,921",
+              "6.33%",
+              "Quoted associate; market price volatility risk"
+            ],
+            [
+              "Subtotal Associates (Tokopedia + Jago)",
+              "10,327,247",
+              "22.57%",
+              "Core associate concentration requiring recoverability review"
+            ],
+            [
+              "Other Level 3 Fair-Value Investments",
+              "1,668,574",
+              "3.65%",
+              "Unquoted private stakes; suffered fair-value write-downs"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Audited Note 14 (p. 100): Tokopedia (Rp 7.43T) and Bank Jago (Rp 2.89T) total 22.57% of GoTo Assets."
+      },
+      {
+        "heading": "(b) Accrual Ratios for 2024-2025 & Connection to Milestone 2",
+        "source_citation": "GoTo (2026), Consolidated Balance Sheet p. 15, Income Statement p. 17, Cash Flows p. 21",
+        "paragraphs": [
+          "Using year-end Total Assets consistently for both years (Rp 43,207,884 mn in 2024 and Rp 45,757,642 mn in 2025), total accruals (Net Loss minus Operating Cash Flow) equaled -(4,842,741) mn in 2024 and -(1,808,710) mn in 2025, producing Accrual Ratios of -11.21% and -3.95%.",
+          "Connection to Milestone 2: While net profit margin improved from -34.4% to -8.2%, negative accrual ratios confirm accounting losses consistently exceeded operating cash flows due to large non-cash impairments and depreciation. Narrowing the gap alone does not prove high sustainable earnings quality."
+        ],
+        "tables": [
+          [
+            [
+              "Accrual calculation",
+              "2024",
+              "2025"
+            ],
+            [
+              "Reported consolidated net loss",
+              "(5,464,855)",
+              "(1,501,685)"
+            ],
+            [
+              "Operating cash flow",
+              "(622,114)",
+              "307,025"
+            ],
+            [
+              "Net loss less operating cash flow",
+              "(4,842,741)",
+              "(1,808,710)"
+            ],
+            [
+              "Year-end total assets",
+              "43,207,884",
+              "45,757,642"
+            ],
+            [
+              "Accrual ratio",
+              "-11.21%",
+              "-3.95%"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c) Analytical Adjustments: Removing Valuation Charges & Associate Swings",
+        "source_citation": "GoTo (2026), Consolidated Income Statement p. 17 & Note 15 p. 103",
+        "paragraphs": [
+          "We keep GoTo's statutory PSAK result as the primary baseline, then analytically adjust Pre-Tax Loss (EBT) for non-operating valuation charges: goodwill impairment (356,830 mn in 2025), PP&E/intangible impairment (217,133 mn), and fair-value losses (596,703 mn, which already include the Level 3 loss). Adding back those Rp 1,170,666 mn charges flips 2025 pre-tax loss (-1,086,604 mn) into a modest +84,062 mn gain.",
+          "However, once we also reverse GoTo's non-core share of associate/JV profit in 2025 (-249,100 mn vs. adding back -2,305,125 mn loss in 2024), adjusted pre-tax performance returns to a loss of -(165,038) mn in 2025! Moreover, because impairments occurred in both years and tax effects are unadjusted, excluding them risks overstating sustainable profitability, leaving the statutory -378,254 mn operating loss intact."
+        ],
+        "tables": [
+          [
+            [
+              "Result before tax and adjustments",
+              "2024",
+              "2025"
+            ],
+            [
+              "Reported loss before tax",
+              "(5,275,830)",
+              "(1,086,604)"
+            ],
+            [
+              "Add back goodwill impairment",
+              "308,114",
+              "356,830"
+            ],
+            [
+              "Add back fixed and intangible impairment",
+              "24,421",
+              "217,133"
+            ],
+            [
+              "Add back associate and JV impairment",
+              "126,718",
+              "0"
+            ],
+            [
+              "Add back net fair-value loss",
+              "482,134",
+              "596,703"
+            ],
+            [
+              "Total selected charges added back",
+              "941,387",
+              "1,170,666"
+            ],
+            [
+              "Result excluding selected charges",
+              "(4,334,443)",
+              "84,062"
+            ],
+            [
+              "Reverse associate and JV result",
+              "+2,305,125",
+              "-249,100"
+            ],
+            [
+              "Result also excluding associate and JV results",
+              "(2,029,318)",
+              "(165,038)"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note34_goodwill_impairment.png",
+        "evidence_caption": "Note 34 & Note 15 Disclosure Proof: Repeated goodwill/asset impairment charges complicate recurring earnings normalization."
+      },
+      {
+        "heading": "(d) Revenue Recognition Policies, Principal vs. Agent & Customer Incentives",
+        "source_citation": "GoTo (2026), Note 2s (pp. 66-67, 71), Note 25 Related Parties (p. 129)",
+        "paragraphs": [
+          "For GOJEK mobility and food delivery transactions, GoTo acts as an Agent under PSAK 72 / IFRS 15 because it arranges services without controlling underlying driver capacity or restaurant goods, recognizing only its net service fee upon trip/order completion. By contrast, Tokopedia e-commerce consultancy fees are recognized over time based on Tokopedia GMV multiplied by the contracted fee rate (Note 2s, pp. 66-71).",
+          "Crucially, customer incentives (promos, cashback, discounts) reduce net revenue directly when GoTo receives no distinct good or service in return; incentives exceeding related expected revenue reclassify into selling and marketing expenses. Connection to Milestone 2: while 15.3% revenue growth and the gross-margin rise (53.4% -> 57.7%) reflect real efficiency, lower customer contra-revenue incentives heavily influence net revenue trajectory without implying policy manipulation."
+        ],
+        "tables": [
+          [
+            [
+              "Revenue Stream / Policy Area",
+              "PSAK 72 Accounting Role",
+              "Recognition Timing & Basis",
+              "Promo / Incentive Accounting",
+              "Filing Reference"
+            ],
+            [
+              "GOJEK Service Fees",
+              "Agent (Net presentation)",
+              "Point-in-time upon trip/order completion",
+              "Netted against revenue unless distinct service received",
+              "Note 2s, pp. 66-67"
+            ],
+            [
+              "Tokopedia E-Commerce Service Fees",
+              "Principal / Service Provider",
+              "Over time (Tokopedia GMV x contractual % rate)",
+              "Disclosed as Related-Party revenue (Rp 1,306 bn, 7.13%)",
+              "Note 2s p. 71; Note 25 p. 129"
+            ],
+            [
+              "Customer Promos & Cashback",
+              "Consideration Payable to Customer",
+              "Direct reduction of Gross Revenue up to transaction value",
+              "Excess over related revenue -> Selling & Marketing expense",
+              "Note 2s p. 71; Evidence C"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(e) Investing Cash Flow Check & Negative Free Cash Flow (-Rp 875.3 bn)",
+        "source_citation": "GoTo (2026), Consolidated Cash Flow Statement p. 21, Balance Sheet p. 15, Note 32 p. 139",
+        "paragraphs": [
+          "Although GoTo generated +307,025 mn in FY2025 Operating Cash Flow, that inflow covered only 25.97% of its 1,182,360 mn total cash CapEx (302,071 mn fixed assets + 880,289 mn intangible assets), leaving a negative Free Cash Flow deficit of -(875,335) mn. Note 32 clarifies that cash CapEx excludes non-cash lease additions totaling the net PP&E balance of 622,356 mn.",
+          "Crucially, GoTo's headline +519,117 mn Net Investing Cash Flow was positive solely due to +1,386,520 mn in net time-deposit settlements! Excluding time-deposit Treasury liquidations reveals a true underlying investing cash outflow of -(867,403) mn (even after 216,579 mn explicit investment sales, equal to 18.3% of CapEx)."
+        ],
+        "tables": [
+          [
+            [
+              "Investing check",
+              "2024",
+              "2025"
+            ],
+            [
+              "Cash purchases of fixed assets",
+              "179,566",
+              "302,071"
+            ],
+            [
+              "Cash purchases of intangible assets",
+              "6,339,296",
+              "880,289"
+            ],
+            [
+              "Total cash capital expenditure",
+              "6,518,862",
+              "1,182,360"
+            ],
+            [
+              "Depreciation and amortization",
+              "744,175",
+              "748,552"
+            ],
+            [
+              "Capital expenditure divided by D&A",
+              "8.76x",
+              "1.58x"
+            ],
+            [
+              "Operating cash flow divided by capex",
+              "-9.54%",
+              "25.97%"
+            ],
+            [
+              "Operating cash flow less capex",
+              "(7,140,976)",
+              "(875,335)"
+            ],
+            [
+              "Net investing cash flow",
+              "(10,324,679)",
+              "519,117"
+            ],
+            [
+              "Net time-deposit settlements",
+              "421,217",
+              "1,386,520"
+            ],
+            [
+              "Investing cash flow excluding time deposits",
+              "(10,745,896)",
+              "(867,403)"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+        "evidence_caption": "LK GOTO 2025 Cash Flow Statement (p. 21): CFO (+307.0 bn) minus CapEx (-1,182.4 bn) proves -Rp 875.3 bn negative Free Cash Flow."
+      },
+      {
+        "heading": "Evidence Appendix A-E: Audited Financial Statement Reconciliations",
+        "source_citation": "PT GoTo Gojek Tokopedia Tbk (2026), Audited Consolidated Financial Statements, pp. 15, 17, 21, 66-71, 100-103, 129, 139",
+        "paragraphs": [
+          "Every number in Sections (a)-(e) ties directly to audited filings in PT GoTo Gojek Tokopedia Tbk (2026): Evidence A (Income Statement p. 17: gross margin 57.72%, operating margin -2.06%); Evidence B (Notes 14-15 pp. 100-103: exact 20% scenario loss 1,486,465.2 + 333,714.8 = 1,820,180 mn = 3.98% of Assets); Evidence C (Note 2s & 25 p. 129: related-party revenue rising from 5.20% in 2024 to 7.13% in 2025).",
+          "Evidence D (Cash Flow Statement p. 21 & Note 32 p. 139: 216,579 mn investment sales = 153,055 + 3,720 + 59,804; 2024 subsidiary deconsolidation outflow of 4,006,527 mn excluded from CapEx); Evidence E (Balance Sheet p. 15: closing trade receivables 459,969 mn in 2024 and 547,293 mn in 2025 give closing DSO 10.56 and 10.90 days, correcting the directional comment in Milestone 2)."
+        ],
+        "tables": [
+          [
+            [
+              "Audited Evidence Code",
+              "Filing Citation",
+              "Verified Line Items (Rp million)",
+              "Key Reconciliation / Forensic Note"
+            ],
+            [
+              "Evidence A: Earnings",
+              "Income Statement, p. 17",
+              "2025 Rev 18,322,117; GP 10,576,083; EBIT (378,254)",
+              "Gross margin 57.72% (2024: 53.36%); EBIT margin -2.06% (2024: -14.10%)"
+            ],
+            [
+              "Evidence B: Investments",
+              "Notes 14 & 15, pp. 100-103",
+              "Tokopedia 7,432,326; Jago 2,894,921; L3 1,668,574",
+              "20% stress = 1,486,465.2 + 333,714.8 = 1,820,180 mn (3.98% of Total Assets)"
+            ],
+            [
+              "Evidence C: Related Parties",
+              "Notes 2s & 25, pp. 66-71, 129",
+              "2025 Related-Party Rev 1,306,110 (7.13%)",
+              "Up from 5.20% in 2024; zero individual customer >= 10% of revenue"
+            ],
+            [
+              "Evidence D: Cash Flows",
+              "Cash Flows p. 21 & Note 32 p. 139",
+              "Explicit sales 216,579 (153,055+3,720+59,804)",
+              "Excludes 4,006,527 mn 2024 loss-of-control outflow & non-cash lease additions"
+            ],
+            [
+              "Evidence E: Balance Sheet",
+              "Balance Sheet, p. 15",
+              "Trade AR: 2024 459,969 | 2025 547,293",
+              "Trade DSO moved slightly up 10.56 -> 10.90 days (reconciles M2 note)"
+            ],
+            [
+              "References (M3)",
+              "GoTo (2026) LK + Group 4 M2 & W10",
+              "All pages cross-checked to March 2026 PDF",
+              "Provides direct inputs (CapEx, D&A, Net PP&E 622,356) for Milestone 4"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "LK GOTO 2025 Balance Sheet (p. 15) verifying Total Assets Rp 45,757,642 mn and Net PP&E Rp 622,356 mn."
+      }
+    ]
+  },
+  {
+    "id": "w12",
+    "code": "Assignment 11",
+    "folder": "Week 12",
+    "week": "Week 12",
+    "title": "Cost Structure, Degree of Operating Leverage (DOL) & Segment Performance",
+    "summary": "Audited revenue-to-EBIT pathway, why negative EBIT renders empirical DOL non-meaningful, breakeven divergence (Rp 12.26T Selling+G&A vs. Rp 18.98T Full OpEx), and segment growth concentration in Fintech & On-Demand.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 11/Group4_FSA_Week12_DOL_Segment_Completed.docx",
+    "sections": [
+      {
+        "heading": "Task 1A: Revenue to Operating Income Pathway (2024 vs. 2025)",
+        "source_citation": "LK GOTO 31 Dec 2025.pdf, Consolidated Income Statement p. 17 (printed 2/1)",
+        "paragraphs": [
+          "Analysis basis: FY2025 audited consolidated financial statements and FY2024 comparatives of PT GoTo Gojek Tokopedia Tbk (all figures in Rp million except ratios). Page numbers reference the official March 2026 PDF (p. 17) and Note 26 (p. 130).",
+          "Crucial distinction in GoTo's income statement: subtracting only Selling & G&A expenses (Rp 7,079,049 mn) from Gross Profit (Rp 10,576,083 mn) yields a simplified surplus of Rp 3,497,034 mn, but GoTo still incurs Rp 3,875,288 mn of other core operating expenses (Product Development Rp 2,152,272 mn + Operations & Support Rp 974,464 mn + D&A Rp 748,552 mn), keeping statutory Operating Income negative at -(378,254) mn."
+        ],
+        "tables": [
+          [
+            [
+              "Income Statement Pathway Line Item (Rp million)",
+              "2024 Audited",
+              "2025 Audited",
+              "YoY % Change"
+            ],
+            [
+              "Net Revenue (Income Statement, p. 17)",
+              "15,894,462",
+              "18,322,117",
+              "+15.27%"
+            ],
+            [
+              "Cost of Goods Sold (p. 17)",
+              "7,413,392",
+              "7,746,034",
+              "+4.49%"
+            ],
+            [
+              "Gross Profit (Computed from p. 17)",
+              "8,481,070",
+              "10,576,083",
+              "+24.70%"
+            ],
+            [
+              "Gross Margin (%)",
+              "53.36%",
+              "57.72%",
+              "+4.36 pts (+8.18% rel.)"
+            ],
+            [
+              "Selling + G&A Expenses (p. 17)",
+              "7,246,187",
+              "7,079,049",
+              "-2.31%"
+            ],
+            [
+              "Product Development Expense (p. 17)",
+              "1,756,068",
+              "2,152,272",
+              "+22.56%"
+            ],
+            [
+              "Operations & Support Expense (p. 17)",
+              "975,514",
+              "974,464",
+              "-0.11%"
+            ],
+            [
+              "Depreciation & Amortization (p. 17)",
+              "744,175",
+              "748,552",
+              "+0.59%"
+            ],
+            [
+              "Total Operating Expenses Excl. COGS",
+              "10,721,944",
+              "10,954,337",
+              "+2.17%"
+            ],
+            [
+              "Operating Income / (Loss) (p. 17)",
+              "(2,240,874)",
+              "(378,254)",
+              "Loss narrowed 83.12%"
+            ],
+            [
+              "Selling + G&A as % of Gross Profit",
+              "85.44%",
+              "66.93%",
+              "-18.51 pts"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p017_highlighted.png",
+        "evidence_caption": "Highlighted Audited Income Statement (p. 17) showing all operating expense categories summing to Rp 10.954T."
+      },
+      {
+        "heading": "Task 1B: Degree of Operating Leverage (DOL) & Breakeven Sensitivity",
+        "source_citation": "LK GOTO 2025 p. 17 & Note 26 Expense by Nature p. 130 (Cost Structure Analysis)",
+        "paragraphs": [
+          "Empirical DOL (% change in operating income / % change in revenue) is only economically meaningful when operating income is positive in both periods. Because GoTo posted operating losses in both 2024 (-2,240.9 bn) and 2025 (-378.3 bn), mechanical DOL (-5.44x empirical; -27.96x cost-structure in 2025) cannot be used directly to project standard positive-profit sensitivity.",
+          "Cost-behavior insight & -10% Revenue Shock: Total non-COGS operating expenses rose only +2.17% in 2025 (from Rp 10,721.9 bn to Rp 10,954.3 bn) while revenue jumped +15.27%, proving largely fixed short-run overhead (Operations & Support -0.11%, D&A +0.59%, combined Selling & G&A -2.31%). Yet against Full Operating Expenses (Rp 10,954.3 bn / 57.72% GM = Rp 18,977.4 bn breakeven revenue), GoTo stays 3.58% BELOW breakeven; a hypothetical -10% revenue drop widens statutory EBIT loss from -(378.3) bn to -(1,435.9) bn."
+        ],
+        "tables": [
+          [
+            [
+              "DOL & Breakeven Metric",
+              "Formula Definition",
+              "2024 vs. 2025 Calculation / Result",
+              "Analytical Conclusion"
+            ],
+            [
+              "Positive EBIT in Both Years?",
+              "Requirement for standard DOL",
+              "No: 2024 -(2,240.9) bn | 2025 -(378.3) bn",
+              "Fails positive-EBIT condition"
+            ],
+            [
+              "DOL (Empirical)",
+              "% Chg EBIT / % Chg Revenue",
+              "Mechanical -5.44x (+83.12% / +15.27%)",
+              "Not meaningful for predicting profit %"
+            ],
+            [
+              "DOL (Cost Structure)",
+              "Gross Profit / Operating Income",
+              "2024: -3.78x | 2025: -27.96x",
+              "Negative & near zero denominator; unstable"
+            ],
+            [
+              "Breakeven (Selling+G&A Only)",
+              "(Selling + G&A) / Gross Margin",
+              "2024: Rp 13,580.2 bn | 2025: Rp 12,263.8 bn",
+              "Simplified surplus only (+33.07% MoS)"
+            ],
+            [
+              "Breakeven (Full OpEx Reality)",
+              "All Non-COGS OpEx / Gross Margin",
+              "2024: Rp 20,094.1 bn | 2025: Rp 18,977.4 bn",
+              "Below Breakeven: -3.58% Margin of Safety"
+            ],
+            [
+              "Scenario: -10% Revenue Shock",
+              "90% Gross Profit - Full Fixed OpEx",
+              "9,518.5 bn - 10,954.3 bn = -(1,435.9) bn EBIT",
+              "Loss nearly quadruples if revenue falls 10%"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p130_highlighted.png",
+        "evidence_caption": "Note 26 (p. 130): Detailed expense breakdown by nature supporting Milestone 4 fixed vs. variable assumptions."
+      },
+      {
+        "heading": "Task 2: Operating Segments Performance, Concentration & Comparability",
+        "source_citation": "Note 29 Segment Reporting (pp. 132-134) & Note 34c Consolidation Changes (pp. 148-150)",
+        "paragraphs": [
+          "Disclosures in Note 29 (pp. 132-134) prove that GoTo's +Rp 2,427,655 mn net revenue growth in FY2025 was highly concentrated rather than broad-based: Financial Technology surged +74.05% (+Rp 2,208,309 mn, contributing 90.96% of net revenue growth) and On-Demand Services rose +13.81% (+Rp 1,500,018 mn, 61.79% contribution). Together they delivered 152.75% of net growth, offsetting declines in E-commerce (-39.39%) and deconsolidated All Other Segments (-100.0%).",
+          "Attractiveness & Scope Caveat (Note 34c): On-Demand Services is the strongest segment for balanced growth and earnings (segment EBIT surged from Rp 69.4 bn to Rp 888.6 bn), whereas Fintech remains loss-making (-Rp 396.6 bn segment EBIT despite torrid growth) and E-commerce shrank as Tokopedia was deconsolidated in Jan 2024 and PAB in May 2024. Reconciling consolidated EBIT (-378,254 mn): On-Demand (+888,619) - Fintech (-396,607) + E-Commerce (+572,185) - Unallocated Corporate Costs (-1,442,451) = -(378,254) mn."
+        ],
+        "tables": [
+          [
+            [
+              "Operating Segment (Note 29)",
+              "2024 Third-Party Rev",
+              "2025 Third-Party Rev",
+              "YoY Change",
+              "Contribution to Net Growth",
+              "2025 Segment EBIT / Result"
+            ],
+            [
+              "On-Demand Services",
+              "10,861,241",
+              "12,361,259",
+              "+13.81%",
+              "+61.79%",
+              "+888,619 (Most Attractive)"
+            ],
+            [
+              "Financial Technology (GoPay)",
+              "2,982,308",
+              "5,190,617",
+              "+74.05%",
+              "+90.96%",
+              "(396,607) (Growth Engine, Loss)"
+            ],
+            [
+              "E-Commerce (Service Fees)",
+              "1,352,499",
+              "819,724",
+              "-39.39%",
+              "-21.95%",
+              "+572,185 (Deconsolidated Scope)"
+            ],
+            [
+              "All Other Segments",
+              "772,583",
+              "0*",
+              "-100.00%",
+              "-31.82%",
+              "0 (PAB deconsolidated May 2024)"
+            ],
+            [
+              "Eliminations & Corporate Adj.",
+              "(74,169)",
+              "(49,483)",
+              "N/A",
+              "+1.02%",
+              "(1,442,451) Unallocated Corp. Costs"
+            ],
+            [
+              "Consolidated Total (Note 29)",
+              "15,894,462",
+              "18,322,117",
+              "+15.27%",
+              "100.00%",
+              "(378,254) Consolidated EBIT Loss"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p133_highlighted.png",
+        "evidence_caption": "Note 29 (p. 133): Audited 2025 third-party segment revenue and segment operating profit reconciliation."
+      },
+      {
+        "heading": "Evidence 1-6: Audited Note Disclosures & Appendix Note",
+        "source_citation": "LK GOTO 31 Dec 2025.pdf, pp. 17, 130, 132-134, 148, 150",
+        "paragraphs": [
+          "Six audited filing screenshots confirm every Task 1 & Task 2 calculation: Evidence 1 (p. 17 Income Statement: 2025 COGS 7,746,034 mn; 2024 7,413,392 mn), Evidence 2 (Note 26 p. 130 Expense by nature), Evidence 3 (Note 29 p. 132 four named operating segments with corporate costs unallocated).",
+          "Evidence 4 & 5 (Note 29 pp. 133-134) verify 2025 and 2024 segment reconciliations (2025 eliminations 49,483 mn; 2024 eliminations 74,169 mn), while Evidence 6 (Note 34c pp. 148, 150) confirms TOKO deconsolidated in Jan 2024 (reclassified as 24.99% associate) and PAB deconsolidated in May 2024. Note: Class appendix data (ABBA) was omitted because GoTo fully discloses its segments."
+        ],
+        "tables": [
+          [
+            [
+              "Evidence Tag",
+              "Audited Page / Note",
+              "Verified Disclosure Content"
+            ],
+            [
+              "Bukti 1 (Earnings Pathway)",
+              "Income Statement, PDF p. 17 (2/1)",
+              "Confirms COGS 7,746,034 (2025) & 7,413,392 (2024); full OpEx = 10,954,337 mn"
+            ],
+            [
+              "Bukti 2 (Expense Nature)",
+              "Note 26, PDF p. 130 (5/108)",
+              "Separates salaries, servers/IT, marketing, and depreciation for cost behavior"
+            ],
+            [
+              "Bukti 3 (Segment Scope)",
+              "Note 29, PDF p. 132 (5/110)",
+              "Defines 4 operating segments; corporate HQ expenses unallocated"
+            ],
+            [
+              "Bukti 4 (2025 Segments)",
+              "Note 29, PDF p. 133 (5/111)",
+              "EBIT reconciliation: 888,619 - 396,607 + 572,185 - 1,442,451 = (378,254)"
+            ],
+            [
+              "Bukti 5 (2024 Segments)",
+              "Note 29, PDF p. 134 (5/112)",
+              "Revenue reconciliation: 10,861,241 + 2,982,308 + 1,352,499 + 772,583 - 74,169"
+            ],
+            [
+              "Bukti 6 (Deconsolidation)",
+              "Note 34c, PDF pp. 148 & 150",
+              "TOKO deconsolidated Jan 2024 (24.99% associate); PAB deconsolidated May 2024"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/GOTO_2025_p148_highlighted.png",
+        "evidence_caption": "Note 34c (p. 148): Tokopedia deconsolidation disclosure supporting segment comparability adjustments."
+      }
+    ]
+  },
+  {
+    "id": "m4",
+    "code": "Milestone 4",
+    "folder": "Week 13",
+    "week": "Week 13",
+    "title": "Three-Year Linked Pro Forma Forecasting Model (2026F-2028F)",
+    "summary": "Base Case, Optimistic, and Conservative 3-statement linked model showing why scaling 78.5% historical opex leaves GoTo below breakeven (-Rp 4.0T to -Rp 5.0T EBIT) and drains cash to Rp 968 bn by 2028F unless fixed opex is held constant.",
+    "docx_file": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "(a) Historical Baseline Summary (2023-2025 Audited Inputs)",
+        "source_citation": "Group 4 Milestone 4 Workbook (Sources & Historical Summary Tabs)",
+        "paragraphs": [
+          "All figures are presented in Rp billion and reconcile directly from GoTo's FY2023-FY2025 audited financial statements and our Milestone 2 Ratio & DuPont Workbook. Including consolidated Other Assets and Other Liabilities guarantees full three-statement Balance Sheet and Cash Flow reconciliation.",
+          "These three-year historical averages establish the exact mechanical baseline for the Base Case forecast: Rp 16,334 bn average revenue, Rp 9,583 bn average gross profit, and Rp 22,026 bn average cash balance."
+        ],
+        "tables": [
+          [
+            [
+              "Line Item (Rp billion)",
+              "2023",
+              "2024",
+              "2025",
+              "Average"
+            ],
+            [
+              "Revenue",
+              "14,785",
+              "15,894",
+              "18,322",
+              "16,334"
+            ],
+            [
+              "Cost of Goods Sold (COGS)",
+              "5,093",
+              "7,413",
+              "7,746",
+              "6,751"
+            ],
+            [
+              "Gross Profit",
+              "9,692",
+              "8,481",
+              "10,576",
+              "9,583"
+            ],
+            [
+              "Operating Expenses (Total SG&A)",
+              "19,971",
+              "10,722",
+              "10,954",
+              "13,882"
+            ],
+            [
+              "Operating Expenses (Cash, Excl. D&A)",
+              "17,300",
+              "9,978",
+              "10,206",
+              "12,495"
+            ],
+            [
+              "EBIT (Operating Income / Loss)",
+              "(10,279)",
+              "(2,241)",
+              "(378)",
+              "(4,299)"
+            ],
+            [
+              "Interest Expense",
+              "369",
+              "494",
+              "535",
+              "466"
+            ],
+            [
+              "Tax Expense / (Benefit)",
+              "(116)",
+              "189",
+              "415",
+              "163"
+            ],
+            [
+              "Net Income / (Loss)",
+              "(90,519)",
+              "(5,465)",
+              "(1,502)",
+              "(32,495)"
+            ],
+            [
+              "Cash & Equivalents",
+              "25,144",
+              "19,178",
+              "21,755",
+              "22,026"
+            ],
+            [
+              "Accounts Receivable",
+              "598",
+              "2,042",
+              "547",
+              "1,062"
+            ],
+            [
+              "Inventory",
+              "173",
+              "27",
+              "14",
+              "71"
+            ],
+            [
+              "Net PP&E",
+              "1,273",
+              "457",
+              "622",
+              "784"
+            ],
+            [
+              "Other Assets (Current & Non Current)",
+              "26,910",
+              "21,504",
+              "22,819",
+              "23,744"
+            ],
+            [
+              "Total Assets",
+              "54,097",
+              "43,208",
+              "45,758",
+              "47,688"
+            ],
+            [
+              "Accounts Payable",
+              "1,162",
+              "1,241",
+              "1,254",
+              "1,219"
+            ],
+            [
+              "Total Debt (Short Term + Long Term)",
+              "3,460",
+              "3,820",
+              "7,743",
+              "5,008"
+            ],
+            [
+              "Other Liabilities (Current & Non Current)",
+              "14,755",
+              "7,743",
+              "8,049",
+              "10,182"
+            ],
+            [
+              "Total Shareholders' Equity",
+              "35,720",
+              "30,404",
+              "28,712",
+              "31,612"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Audited FY2025 Assets (Rp 45,758 bn) and Cash (Rp 21,755 bn) anchoring Year 0 of the 3-year model."
+      },
+      {
+        "heading": "(b) Three-Scenario Forecast Drivers & Cost Structure Judgment",
+        "source_citation": "Group 4 Milestone 4 Workbook (Assumptions Tab) & Week 12 Cost Structure Analysis",
+        "paragraphs": [
+          "Our Base Case links directly to GoTo's 3-year historical averages from Milestone 2 (11.4% revenue growth, 41.1% COGS, 78.5% cash operating expenses excluding D&A, and 16.3% CapEx). Optimistic reflects sustained 2025 momentum and 1H 2026 cost efficiency (15.3% growth, 38.1% COGS, 55.7% opex, 6.5% CapEx), while Conservative models promo reignition and slower growth (7.5% growth, 46.6% COGS, 85.0% opex).",
+          "Incorporating Week 12 segment and cost behavior insights: COGS (41.1%) is genuinely variable, Marketing & Product Development are semi-variable, and G&A/Support/D&A are largely fixed (total opex rose only 2.2% in 2025). However, scaling cash opex mechanically at the 78.5% historical average keeps opex above gross margin (58.9%) throughout 2026F-2028F."
+        ],
+        "tables": [
+          [
+            [
+              "Driver",
+              "Base (Avg)",
+              "Base Rationale",
+              "Optimistic",
+              "Optimistic Rationale",
+              "Conservative",
+              "Conservative Rationale"
+            ],
+            [
+              "Revenue Growth Rate",
+              "11.4%",
+              "Average of 2024 (7.5%) and 2025 (15.3%) growth.",
+              "15.3%",
+              "Matches strong 2025 growth from GoPay loans and Gojek.",
+              "7.5%",
+              "Matches slower 2024 growth rate."
+            ],
+            [
+              "COGS (% of Revenue)",
+              "41.1%",
+              "Three year average cost of revenue (2023 to 2025).",
+              "38.1%",
+              "Matches first half 2026 level as financial services grow.",
+              "46.6%",
+              "Matches highest historical COGS % in 2024."
+            ],
+            [
+              "Operating Expenses (% of Rev)",
+              "78.5%",
+              "Three year average cash operating expenses (2023 to 2025).",
+              "55.7%",
+              "Matches 2025 cash opex after cutting promo spending.",
+              "85.0%",
+              "Assumes heavy promo competition returns."
+            ],
+            [
+              "Days Sales Outstanding (DSO)",
+              "24.2 days",
+              "Three year average customer collection period.",
+              "10.9 days",
+              "Matches faster 2025 collection period.",
+              "30.0 days",
+              "Assumes slower partner collections."
+            ],
+            [
+              "Days Inventory (DIO)",
+              "4.8 days",
+              "Three year average inventory holding period.",
+              "0.7 days",
+              "Matches 2025 minimal digital inventory.",
+              "8.0 days",
+              "Assumes higher inventory closer to 2023."
+            ],
+            [
+              "Days Payable (DPO)",
+              "67.8 days",
+              "Three year average vendor payment period.",
+              "75.0 days",
+              "Longer vendor terms keep cash in GoTo longer.",
+              "59.1 days",
+              "Faster payment to vendors (2025 level) uses cash faster."
+            ],
+            [
+              "Capex (% of Revenue)",
+              "16.3%",
+              "Three year average capital spending (2023 to 2025).",
+              "6.5%",
+              "Matches lower 2025 capital spending using cloud servers.",
+              "20.0%",
+              "Assumes heavier server and tech investment."
+            ],
+            [
+              "D&A (% of Beg. Net PP&E)",
+              "30.6%",
+              "Average of 2024 (17.3%) and 2025 (43.9%).",
+              "25.0%",
+              "Longer equipment useful life.",
+              "43.9%",
+              "Matches higher 2025 depreciation rate."
+            ],
+            [
+              "Effective Tax Rate",
+              "22.0%",
+              "Indonesia standard corporate tax rate.",
+              "22.0%",
+              "Standard corporate tax rate.",
+              "22.0%",
+              "Standard corporate tax rate."
+            ],
+            [
+              "Interest Rate on Debt",
+              "10.2%",
+              "Three year average interest expense / total debt.",
+              "6.9%",
+              "Matches lower 2025 interest rate.",
+              "12.9%",
+              "Matches higher 2024 borrowing cost."
+            ],
+            [
+              "Dividend Payout Ratio",
+              "0.0%",
+              "0% dividends paid in 2023 to 2025.",
+              "0.0%",
+              "Reinvest all profits into growth.",
+              "0.0%",
+              "Keep cash in the bank."
+            ]
+          ],
+          [
+            [
+              "Category",
+              "Classification & Judgment (from Week 12 Analysis)"
+            ],
+            [
+              "Variable Costs",
+              "Cost of Goods Sold (COGS) is variable (41.1% of revenue in Base). It covers payment processing fees, merchant and driver transaction costs, and cloud hosting that rise and fall directly with orders."
+            ],
+            [
+              "Semi Variable Costs",
+              "Sales & Marketing and Product Development are semi variable. Customer promos move with competition and order volume, while engineering salaries are set by management budget."
+            ],
+            [
+              "Fixed Costs",
+              "General & Administrative (office salaries, rent, legal), Operational Support, Depreciation, and Debt Interest are mostly fixed. In 2025, total operating expenses grew only 2.2% (Rp 10,722 bn to Rp 10,954 bn) while revenue grew 15.3%. When fixed operating expenses are held constant at Rp 10,954 bn instead of scaled with revenue, GoTo reaches positive EBIT of Rp 1,066 bn in 2026F."
+            ],
+            [
+              "Segment Concentration",
+              "GoTo's revenue growth is concentrated in two segments rather than spread evenly across all segments. In 2025, Financial Technology (GoPay payments and consumer loans) grew 74.1% and contributed 91.0% of total revenue growth, while On Demand Services (Gojek rides and delivery) grew 13.8% and contributed 61.8% of total growth."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c.1) Pro Forma Income Statement Forecast (2026F-2028F Base Case)",
+        "source_citation": "Group 4 Milestone 4 Workbook (Pro Forma Income Statement Tab)",
+        "paragraphs": [
+          "Under Base Case drivers, revenue expands from Rp 18,322 bn (2025A) to Rp 20,408 bn (2026F), Rp 22,732 bn (2027F), and Rp 25,321 bn (2028F), generating a 58.9% Gross Margin (Rp 12,016 bn -> Rp 14,908 bn).",
+          "Because Base Case cash operating expenses scale at 78.5% of revenue (skewed upward by pre-restructuring 2023 expenses of 117.0%), projected operating losses (EBIT) widen mechanically from -(4,003) bn in 2026F to -(4,967) bn in 2028F, yielding Base Case Net Losses of -(3,737) bn, -(4,093) bn, and -(4,489) bn."
+        ],
+        "tables": [
+          [
+            [
+              "Line Item (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Revenue (growing at 11.4% Base average)",
+              "20,408",
+              "22,732",
+              "25,321"
+            ],
+            [
+              "Cost of Goods Sold (41.1% of Revenue)",
+              "8,392",
+              "9,348",
+              "10,412"
+            ],
+            [
+              "Gross Profit (58.9% Gross Margin)",
+              "12,016",
+              "13,384",
+              "14,908"
+            ],
+            [
+              "Operating Expenses (scaled at three year average 78.5%)",
+              "16,020",
+              "17,844",
+              "19,876"
+            ],
+            [
+              "EBIT",
+              "(4,003)",
+              "(4,459)",
+              "(4,967)"
+            ],
+            [
+              "Interest Expense (10.2% on Total Debt)",
+              "788",
+              "788",
+              "788"
+            ],
+            [
+              "Earnings Before Tax (EBT)",
+              "(4,791)",
+              "(5,247)",
+              "(5,755)"
+            ],
+            [
+              "Tax Expense / (Benefit) (22.0%)",
+              "(1,054)",
+              "(1,154)",
+              "(1,266)"
+            ],
+            [
+              "Net Income",
+              "(3,737)",
+              "(4,093)",
+              "(4,489)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c.2) Breakeven Revenue Check & Fixed-OpEx Sensitivity",
+        "source_citation": "Group 4 Milestone 4 Workbook (Pro Forma Income Statement Rows 18-24)",
+        "paragraphs": [
+          "Why the Base Case stays Below Breakeven: Under scaled 78.5% operating expenses, GoTo's required Breakeven Revenue (OpEx / 58.9% Gross Margin) rises to Rp 27,207 bn - Rp 33,755 bn, leaving actual projected revenue Rp 6.8T - Rp 8.4T short in every year and rendering DOL undefined because EBIT is negative.",
+          "Alternative Fixed-Cost View: By contrast, if management holds fixed operating expenses strictly constant at 2025 levels (Rp 10,954 bn) as Week 12 evidence suggests, GoTo's Breakeven Revenue drops to Rp 18,604 bn, flipping GoTo Above Breakeven in 2026F (+8.8% Margin of Safety, +Rp 1,062 bn positive EBIT, and 11.31x DOL)."
+        ],
+        "tables": [
+          [
+            [
+              "Breakeven Check Item (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Gross Margin (%)",
+              "58.9%",
+              "58.9%",
+              "58.9%"
+            ],
+            [
+              "Breakeven Revenue (Scaled Opex / Gross Margin)",
+              "27,207",
+              "30,305",
+              "33,755"
+            ],
+            [
+              "Breakeven Status (when Opex is scaled at 78.5%)",
+              "Below Breakeven",
+              "Below Breakeven",
+              "Below Breakeven"
+            ],
+            [
+              "DOL when Opex is scaled at 78.5%",
+              "Not reported (EBIT is negative)",
+              "Not reported (EBIT is negative)",
+              "Not reported (EBIT is negative)"
+            ],
+            [
+              "Fixed Operating Expenses (Holding 2025 Opex constant at Rp 10,954 bn)",
+              "10,954",
+              "10,954",
+              "10,954"
+            ],
+            [
+              "EBIT when Fixed Opex is not scaled with Revenue",
+              "1,062",
+              "2,430",
+              "3,954"
+            ],
+            [
+              "Breakeven Revenue (Fixed Opex Rp 10,954 bn / 58.9% Gross Margin)",
+              "18,604",
+              "18,604",
+              "18,604"
+            ],
+            [
+              "Breakeven Status (Fixed Cost Model)",
+              "Above Breakeven",
+              "Above Breakeven",
+              "Above Breakeven"
+            ],
+            [
+              "Margin of Safety (Fixed Cost Model)",
+              "+8.8%",
+              "+18.2%",
+              "+26.5%"
+            ],
+            [
+              "Degree of Operating Leverage (DOL = Gross Profit / EBIT, when EBIT > 0)",
+              "11.31x",
+              "5.51x",
+              "3.77x"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(d) Linked Pro Forma Balance Sheet, Cash Flow & Cash Burn Narrative",
+        "source_citation": "Group 4 Milestone 4 Workbook (Pro Forma Balance Sheet & Pro Forma Cash Flow Tabs)",
+        "paragraphs": [
+          "Across all three forecast years, Balance Sheet Assets equal Liabilities + Equity to zero error (Balance Check = 0) andEnding Cash on the Cash Flow Statement matches Balance Sheet Cash identically (Cash Check = 0), proving complete 3-statement integration.",
+          "Crucial Liquidity Warning (194-word Narrative): Because the historical-average Base Case embeds both 78.5% operating expenses and 16.3% CapEx (Rp 3.33T-Rp 4.13T/yr), GoTo suffers negative Operating Cash Flow (-Rp 4,143 bn in 2026F) and combined Free Cash Flow burn of Rp 6.6T-Rp 7.5T annually, exhausting its Rp 21,755 bn FY2025 cash reserve down to just Rp 968 bn by 2028F! Sustaining solvency requires freezing fixed opex and restraining CapEx back toward FY2025's 6.5% cloud run-rate."
+        ],
+        "tables": [
+          [
+            [
+              "Line Item (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Cash & Equivalents (plug)",
+              "14,282",
+              "7,642",
+              "968"
+            ],
+            [
+              "Accounts Receivable (24.2 days)",
+              "1,352",
+              "1,506",
+              "1,677"
+            ],
+            [
+              "Inventory (4.8 days)",
+              "110",
+              "123",
+              "137"
+            ],
+            [
+              "Total Current Assets",
+              "15,744",
+              "9,271",
+              "2,783"
+            ],
+            [
+              "Net PP&E",
+              "3,762",
+              "6,321",
+              "8,518"
+            ],
+            [
+              "Other Assets (held constant at 2025 level)",
+              "22,819",
+              "22,819",
+              "22,819"
+            ],
+            [
+              "TOTAL ASSETS",
+              "42,326",
+              "38,411",
+              "34,120"
+            ],
+            [
+              "Accounts Payable (67.8 days)",
+              "1,559",
+              "1,737",
+              "1,935"
+            ],
+            [
+              "Short Term Debt (held constant)",
+              "1,524",
+              "1,524",
+              "1,524"
+            ],
+            [
+              "Total Current Liabilities",
+              "3,083",
+              "3,261",
+              "3,458"
+            ],
+            [
+              "Long Term Debt (held constant)",
+              "6,219",
+              "6,219",
+              "6,219"
+            ],
+            [
+              "Other Liabilities (held constant at 2025 level)",
+              "8,049",
+              "8,049",
+              "8,049"
+            ],
+            [
+              "Total Liabilities",
+              "17,351",
+              "17,529",
+              "17,726"
+            ],
+            [
+              "Total Shareholders' Equity",
+              "24,975",
+              "20,882",
+              "16,393"
+            ],
+            [
+              "TOTAL LIABILITIES & EQUITY",
+              "42,326",
+              "38,411",
+              "34,120"
+            ],
+            [
+              "Balance Check (Total Assets minus Total L&E, must = 0)",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "Line Item (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Net Income",
+              "(3,737)",
+              "(4,093)",
+              "(4,489)"
+            ],
+            [
+              "Add: Depreciation & Amortization",
+              "190",
+              "1,151",
+              "1,934"
+            ],
+            [
+              "(Increase) / Decrease in Accounts Receivable",
+              "(805)",
+              "(154)",
+              "(171)"
+            ],
+            [
+              "(Increase) / Decrease in Inventory",
+              "(96)",
+              "(13)",
+              "(14)"
+            ],
+            [
+              "Increase / (Decrease) in Accounts Payable",
+              "305",
+              "178",
+              "198"
+            ],
+            [
+              "Cash Flow from Operations (CFO)",
+              "(4,143)",
+              "(2,930)",
+              "(2,542)"
+            ],
+            [
+              "Capital Expenditures (Capex)",
+              "(3,330)",
+              "(3,710)",
+              "(4,132)"
+            ],
+            [
+              "Cash Flow from Investing (CFI)",
+              "(3,330)",
+              "(3,710)",
+              "(4,132)"
+            ],
+            [
+              "Dividends Paid & Net Debt Change (Cash Flow from Financing)",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "Net Change in Cash",
+              "(7,473)",
+              "(6,640)",
+              "(6,674)"
+            ],
+            [
+              "Beginning Cash",
+              "21,755",
+              "14,282",
+              "7,642"
+            ],
+            [
+              "Ending Cash (computed)",
+              "14,282",
+              "7,642",
+              "968"
+            ],
+            [
+              "Check vs. Balance Sheet Plug Cash (must = 0)",
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_cash_flows_p2_highlighted.png",
+        "evidence_caption": "Audited FY2025 Investing & Financing Cash Flows (p. 22) providing Year 0 cash & debt baselines."
+      }
+    ],
+    "workbook": {
+      "Instructions": [
+        [
+          "Financial Statement Analysis - Pro Forma Forecasting Workbook"
+        ],
+        [
+          "Companion template for Week 12 (Forecasting Financial Statements)"
+        ],
+        [
+          "",
+          "Purpose"
+        ],
+        [
+          "",
+          "This workbook builds a 3-year sales-driven forecast of your assigned company's income statement, balance sheet, and cash flow statement, starting from the historical figures and ratios you already established in the Ratio & DuPont Workbook."
+        ],
+        [
+          "",
+          "How to use this workbook"
+        ],
+        [
+          "",
+          "1. The 'Historical Summary' sheet is pre-filled with the same illustrative SAMPLE DATA (PT Contoh Sejahtera Tbk) used in the Ratio & DuPont Workbook - replace it with your own company's last 3 years of actuals."
+        ],
+        [
+          "",
+          "2. Go to 'Assumptions'. Each driver (revenue growth, margins, working-capital days, capex, tax rate, interest rate, dividend payout) has a suggested starting value calculated automatically from your 3-year historical average - shown in green - but every blue cell is yours to override with a defensible, forward-looking judgment."
+        ],
+        [
+          "",
+          "3. Use the 'Scenario' column to enter a Base, Optimistic, and Conservative value for each driver. The toggle cell at the top of the Assumptions sheet switches every forecast sheet between the three scenarios at once."
+        ],
+        [
+          "",
+          "4. 'Pro Forma Income Statement', 'Pro Forma Balance Sheet', and 'Pro Forma Cash Flow' all calculate automatically from your assumptions. You should not need to type into any black or green cell."
+        ],
+        [
+          "",
+          "5. Check the 'Balance Check' row on the Pro Forma Balance Sheet sheet after every assumption change - it must read zero. The balance sheet plug (cash or the revolving credit line, depending on which direction the imbalance runs) absorbs any mismatch automatically."
+        ],
+        [
+          "",
+          "6. Once you are satisfied with your Base case, this workbook's forecast lines feed directly into the Valuation Workbook for Weeks 13 to 14."
+        ],
+        [
+          "",
+          "Color legend"
+        ],
+        [
+          "",
+          "Blue text - A hardcoded input or assumption you can change."
+        ],
+        [
+          "",
+          "Black text - A formula - do not overtype."
+        ],
+        [
+          "",
+          "Green text - A link/suggested value pulled from historical data or another sheet."
+        ],
+        [
+          "",
+          "Scenario toggle cell: Assumptions!B4. Enter 1 for Base, 2 for Optimistic, 3 for Conservative."
+        ]
+      ],
+      "Sources": [
+        [
+          "Sources: Historical Data, DuPont & Ratios (PT GoTo Gojek Tokopedia Tbk)"
+        ],
+        [
+          "Figures in Rp billion (from Milestone 2 Workbook & Audited Consolidated Statements)"
+        ],
+        [
+          "Line item",
+          "2023",
+          "2024",
+          "2025",
+          "3-Yr Avg"
+        ],
+        [
+          "INCOME STATEMENT (Rp billion)"
+        ],
+        [
+          "Revenue",
+          "14,785.5",
+          "15,894.5",
+          "18,322.1",
+          "16,334.0"
+        ],
+        [
+          "Cost of Goods Sold",
+          "5,093.2",
+          "7,413.4",
+          "7,746.0",
+          "6,750.9"
+        ],
+        [
+          "Gross Profit",
+          "9,692.3",
+          "8,481.1",
+          "10,576.1",
+          "9,583.2"
+        ],
+        [
+          "Operating Expenses (SG&A)",
+          "19,971.3",
+          "10,721.9",
+          "10,954.3",
+          "13,882.5"
+        ],
+        [
+          "Operating Expenses (Cash, Excl. D&A)",
+          "17,300.1",
+          "9,977.8",
+          "10,205.8",
+          "12,494.6"
+        ],
+        [
+          "EBIT (Operating Income)",
+          "(10,279.0)",
+          "(2,240.9)",
+          "(378.3)",
+          "(4,299.4)"
+        ],
+        [
+          "Interest Expense",
+          "369.3",
+          "494.1",
+          "535.2",
+          "466.2"
+        ],
+        [
+          "Other Expenses / (Income)",
+          "79,986.2",
+          "2,540.9",
+          "173.2",
+          "27,566.8"
+        ],
+        [
+          "Earnings Before Tax (EBT)",
+          "(90,634.4)",
+          "(5,275.8)",
+          "(1,086.6)",
+          "(32,332.3)"
+        ],
+        [
+          "Tax Expense / (Benefit)",
+          "(115.7)",
+          "189.0",
+          "415.1",
+          "162.8"
+        ],
+        [
+          "Net Income / (Loss)",
+          "(90,518.7)",
+          "(5,464.9)",
+          "(1,501.7)",
+          "(32,495.1)"
+        ],
+        [
+          "BALANCE SHEET (Rp billion)"
+        ],
+        [
+          "Cash & Equivalents",
+          "25,143.9",
+          "19,177.5",
+          "21,755.2",
+          "22,025.5"
+        ],
+        [
+          "Accounts Receivable",
+          "597.6",
+          "2,041.7",
+          "547.3",
+          "1,062.2"
+        ],
+        [
+          "Inventory",
+          "172.8",
+          "27.4",
+          "14.1",
+          "71.4"
+        ],
+        [
+          "Other Assets (Current + Non-Current)",
+          "26,910.3",
+          "21,504.2",
+          "22,818.7",
+          "23,744.4"
+        ],
+        [
+          "Total Current Assets",
+          "33,617.3",
+          "26,337.7",
+          "29,059.2",
+          "29,671.4"
+        ],
+        [
+          "Net PP&E",
+          "1,272.7",
+          "457.0",
+          "622.4",
+          "784.0"
+        ],
+        [
+          "Total Non-Current Assets",
+          "20,480.0",
+          "16,870.2",
+          "16,698.4",
+          "18,016.2"
+        ],
+        [
+          "TOTAL ASSETS",
+          "54,097.3",
+          "43,207.9",
+          "45,757.6",
+          "47,687.6"
+        ],
+        [
+          "Accounts Payable",
+          "1,161.8",
+          "1,240.9",
+          "1,254.4",
+          "1,219.0"
+        ],
+        [
+          "Short-Term Debt",
+          "832.1",
+          "1,351.8",
+          "1,523.8",
+          "1,235.9"
+        ],
+        [
+          "Long-Term Debt",
+          "2,628.3",
+          "2,468.6",
+          "6,218.9",
+          "3,771.9"
+        ],
+        [
+          "Other Liabilities (Current & Non-Current)",
+          "13,755.1",
+          "7,742.8",
+          "8,049.0",
+          "9,849.0"
+        ],
+        [
+          "Total Liabilities",
+          "18,377.3",
+          "12,804.1",
+          "17,046.0",
+          "16,075.8"
+        ],
+        [
+          "Total Shareholders' Equity",
+          "35,720.0",
+          "30,403.8",
+          "28,711.7",
+          "31,611.8"
+        ],
+        [
+          "MEMO & FORECAST DRIVERS"
+        ],
+        [
+          "Depreciation & Amortization (Total IS)",
+          "2,671.1",
+          "744.2",
+          "748.6",
+          "1,388.0"
+        ],
+        [
+          "Capital Expenditures (Cash)",
+          "220.4",
+          "6,518.9",
+          "1,182.4",
+          "2,640.6"
+        ],
+        [
+          "Shares Outstanding (million)",
+          "1,070,558",
+          "1,056,283",
+          "1,062,010",
+          "1,062,951"
+        ],
+        [
+          "Revenue Growth Rate",
+          "-",
+          "7.5%",
+          "15.3%",
+          "11.4%"
+        ],
+        [
+          "COGS (% of Revenue)",
+          "34.4%",
+          "46.6%",
+          "42.3%",
+          "41.1%"
+        ],
+        [
+          "Operating Expenses Excl. D&A (% of Rev)",
+          "117.0%",
+          "62.8%",
+          "55.7%",
+          "78.5%"
+        ],
+        [
+          "Days Sales Outstanding (DSO)",
+          "14.8",
+          "46.9",
+          "10.9",
+          "24.2"
+        ],
+        [
+          "Days Inventory Outstanding (DIO)",
+          "12.4",
+          "1.3",
+          "0.7",
+          "4.8"
+        ],
+        [
+          "Days Payable Outstanding (DPO)",
+          "83.3",
+          "61.1",
+          "59.1",
+          "67.8"
+        ],
+        [
+          "Capex (% of Revenue)",
+          "1.5%",
+          "41.0%",
+          "6.5%",
+          "16.3%"
+        ],
+        [
+          "D&A (% of Beginning Net PP&E)",
+          "-",
+          "17.3%",
+          "43.9%",
+          "30.6%"
+        ],
+        [
+          "Effective Interest Rate on Debt",
+          "10.7%",
+          "12.9%",
+          "6.9%",
+          "10.2%"
+        ]
+      ],
+      "Historical Summary": [
+        [
+          "Historical Summary (Linked Model Inputs)"
+        ],
+        [
+          "PT GoTo Gojek Tokopedia Tbk (GOTO) in Rp billion"
+        ],
+        [
+          "Line item",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        [
+          "INCOME STATEMENT"
+        ],
+        [
+          "Revenue",
+          "14,785.5",
+          "15,894.5",
+          "18,322.1"
+        ],
+        [
+          "Cost of Goods Sold",
+          "5,093.2",
+          "7,413.4",
+          "7,746.0"
+        ],
+        [
+          "Operating Expenses (SG&A)",
+          "19,971.3",
+          "10,721.9",
+          "10,954.3"
+        ],
+        [
+          "Interest Expense",
+          "369.3",
+          "494.1",
+          "535.2"
+        ],
+        [
+          "Tax Expense / (Benefit)",
+          "(115.7)",
+          "189.0",
+          "415.1"
+        ],
+        [
+          "BALANCE SHEET"
+        ],
+        [
+          "Cash & Equivalents",
+          "25,143.9",
+          "19,177.5",
+          "21,755.2"
+        ],
+        [
+          "Accounts Receivable",
+          "597.6",
+          "2,041.7",
+          "547.3"
+        ],
+        [
+          "Inventory",
+          "172.8",
+          "27.4",
+          "14.1"
+        ],
+        [
+          "Net PP&E",
+          "1,272.7",
+          "457.0",
+          "622.4"
+        ],
+        [
+          "Other Assets (Current & Non-Current)",
+          "26,910.3",
+          "21,504.2",
+          "22,818.7"
+        ],
+        [
+          "Accounts Payable",
+          "1,161.8",
+          "1,240.9",
+          "1,254.4"
+        ],
+        [
+          "Short-Term Debt",
+          "832.1",
+          "1,351.8",
+          "1,523.8"
+        ],
+        [
+          "Long-Term Debt",
+          "2,628.3",
+          "2,468.6",
+          "6,218.9"
+        ],
+        [
+          "Other Liabilities (Current & Non-Current)",
+          "13,755.1",
+          "7,742.8",
+          "8,049.0"
+        ],
+        [
+          "Total Shareholders' Equity",
+          "35,720.0",
+          "30,403.8",
+          "28,711.7"
+        ],
+        [
+          "MEMO ITEMS"
+        ],
+        [
+          "Depreciation & Amortization",
+          "2,671.1",
+          "744.2",
+          "748.6"
+        ],
+        [
+          "Capital Expenditures",
+          "220.4",
+          "6,518.9",
+          "1,182.4"
+        ],
+        [
+          "Shares Outstanding (million)",
+          "1,070,558",
+          "1,056,283",
+          "1,062,010"
+        ]
+      ],
+      "Assumptions": [
+        [
+          "Forecast Assumptions (Three-Scenario Engine)"
+        ],
+        [
+          "Active Scenario: 1 = Base Case (3-Year Historical Averages from Milestone 2)"
+        ],
+        [
+          "Driver",
+          "Base (Selected)",
+          "Base Rationale",
+          "Optimistic",
+          "Optimistic Rationale",
+          "Conservative",
+          "Conservative Rationale"
+        ],
+        [
+          "Revenue Growth Rate",
+          "11.4%",
+          "Average of 2024 (7.5%) and 2025 (15.3%) revenue growth.",
+          "15.3%",
+          "Matches strong 2025 growth from GoPay loans and Gojek.",
+          "7.5%",
+          "Matches slower 2024 post-deconsolidation growth."
+        ],
+        [
+          "COGS (% of Revenue)",
+          "41.1%",
+          "Three-year average cost of revenue (2023-2025).",
+          "38.1%",
+          "Matches improved 1H 2026 cost of revenue as fintech scales.",
+          "46.6%",
+          "Matches highest historical cost ratio (2024)."
+        ],
+        [
+          "Operating Expenses (% of Revenue)",
+          "78.5%",
+          "Three-year average cash operating expenses (excl. D&A).",
+          "55.7%",
+          "Matches 2025 cash opex ratio after cutting promo burn.",
+          "85.0%",
+          "Assumes heavy promotional subsidy war returns."
+        ],
+        [
+          "Days Sales Outstanding (DSO)",
+          "24.2 days",
+          "Three-year historical average collection period.",
+          "10.9 days",
+          "Matches faster 2025 receivables collection.",
+          "30.0 days",
+          "Assumes slower partner settlement."
+        ],
+        [
+          "Days Inventory Outstanding (DIO)",
+          "4.8 days",
+          "Three-year average inventory holding period.",
+          "0.7 days",
+          "Matches 2025 minimal digital-platform inventory.",
+          "8.0 days",
+          "Assumes higher inventory closer to 2023 levels."
+        ],
+        [
+          "Days Payable Outstanding (DPO)",
+          "67.8 days",
+          "Three-year historical average vendor payment period.",
+          "75.0 days",
+          "Extended vendor terms conserve working capital cash.",
+          "59.1 days",
+          "Matches faster 2025 vendor payment cycle."
+        ],
+        [
+          "Capex (% of Revenue)",
+          "16.3%",
+          "Three-year average cash capital expenditure ratio.",
+          "6.5%",
+          "Matches asset-light 2025 cloud infrastructure spending.",
+          "20.0%",
+          "Assumes heavier server and technology capital outlays."
+        ],
+        [
+          "D&A (% of Beginning Net PP&E)",
+          "30.6%",
+          "Historical average depreciation rate (2024-2025).",
+          "25.0%",
+          "Assumes longer useful life on digital infrastructure.",
+          "43.9%",
+          "Matches higher 2025 depreciation run-rate."
+        ],
+        [
+          "Effective Tax Rate",
+          "22.0%",
+          "Indonesian statutory corporate income tax rate.",
+          "22.0%",
+          "Statutory corporate income tax rate.",
+          "22.0%",
+          "Statutory corporate income tax rate."
+        ],
+        [
+          "Interest Rate on Debt",
+          "10.2%",
+          "Three-year historical effective interest rate on debt.",
+          "6.9%",
+          "Matches lower 2025 effective borrowing cost.",
+          "12.9%",
+          "Matches higher 2024 borrowing cost."
+        ],
+        [
+          "Dividend Payout Ratio",
+          "0.0%",
+          "Zero dividends paid historically (2023-2025).",
+          "0.0%",
+          "Reinvest all earnings into ecosystem scale.",
+          "0.0%",
+          "Preserve cash buffer."
+        ],
+        [
+          "SELECTED SCENARIO OUTPUTS (Active: 1 = Base Case)"
+        ],
+        [
+          "Selected Revenue Growth Rate",
+          "11.4%",
+          "Drives 2026F-2028F Revenue from 2025 base (Rp 18,322.1 bn)"
+        ],
+        [
+          "Selected COGS (% of Revenue)",
+          "41.1%",
+          "Drives Gross Margin of 58.9%"
+        ],
+        [
+          "Selected Operating Expenses (% of Revenue)",
+          "78.5%",
+          "Scaled cash opex exceeding Gross Margin under Base Case"
+        ],
+        [
+          "Selected DSO / DIO / DPO",
+          "24.2 / 4.8 / 67.8 days",
+          "Drives working capital balances and CFO adjustments"
+        ],
+        [
+          "Selected Capex (% of Revenue)",
+          "16.3%",
+          "Drives Rp 3.33T to Rp 4.13T annual Capex outflow"
+        ]
+      ],
+      "Pro Forma Income Statement": [
+        [
+          "Pro Forma Income Statement (Base Case, Rp billion)"
+        ],
+        [
+          "Driven by Assumptions sheet (Scenario 1 = Base Case Historical Averages)"
+        ],
+        [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "Revenue",
+          "20,408.5",
+          "22,732.4",
+          "25,320.9"
+        ],
+        [
+          "Cost of Goods Sold",
+          "8,392.3",
+          "9,348.0",
+          "10,412.4"
+        ],
+        [
+          "Gross Profit",
+          "12,016.1",
+          "13,384.4",
+          "14,908.5"
+        ],
+        [
+          "Operating Expenses (scaled at 78.5%)",
+          "16,019.6",
+          "17,843.7",
+          "19,875.6"
+        ],
+        [
+          "EBIT (Operating Income / Loss)",
+          "(4,003.5)",
+          "(4,459.3)",
+          "(4,967.1)"
+        ],
+        [
+          "Interest Expense (10.2% on Debt)",
+          "787.6",
+          "787.6",
+          "787.6"
+        ],
+        [
+          "Earnings Before Tax (EBT)",
+          "(4,791.0)",
+          "(5,246.9)",
+          "(5,754.7)"
+        ],
+        [
+          "Tax Expense / (Benefit) (22.0%)",
+          "(1,054.0)",
+          "(1,154.3)",
+          "(1,266.0)"
+        ],
+        [
+          "Net Income / (Loss)",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "Dividends Paid",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Retained Earnings Addition",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "BREAKEVEN CHECK & OPERATING LEVERAGE (MILESTONE 4)"
+        ],
+        [
+          "Gross Margin (%)",
+          "58.9%",
+          "58.9%",
+          "58.9%"
+        ],
+        [
+          "Breakeven Revenue (Opex / Gross Margin)",
+          "27,208.0",
+          "30,306.2",
+          "33,757.2"
+        ],
+        [
+          "Revenue vs. Breakeven Shortfall",
+          "(6,799.6)",
+          "(7,573.8)",
+          "(8,436.3)"
+        ],
+        [
+          "Breakeven Status",
+          "Below Breakeven",
+          "Below Breakeven",
+          "Below Breakeven"
+        ],
+        [
+          "Margin of Safety (%)",
+          "-33.3%",
+          "-33.3%",
+          "-33.3%"
+        ],
+        [
+          "Degree of Operating Leverage (DOL)",
+          "N/M (EBIT < 0)",
+          "N/M (EBIT < 0)",
+          "N/M (EBIT < 0)"
+        ]
+      ],
+      "Pro Forma Balance Sheet": [
+        [
+          "Pro Forma Balance Sheet (Base Case, Rp billion)"
+        ],
+        [
+          "Cash acts as balance sheet plug; Assets equal Liabilities + Equity across all years"
+        ],
+        [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "ASSETS"
+        ],
+        [
+          "Cash & Equivalents (plug)",
+          "14,282.2",
+          "7,642.3",
+          "968.2"
+        ],
+        [
+          "Accounts Receivable (24.2 days)",
+          "1,352.0",
+          "1,506.0",
+          "1,677.5"
+        ],
+        [
+          "Inventory (4.8 days)",
+          "110.3",
+          "122.9",
+          "136.9"
+        ],
+        [
+          "Total Current Assets",
+          "15,744.5",
+          "9,271.2",
+          "2,782.6"
+        ],
+        [
+          "Net PP&E",
+          "3,762.4",
+          "6,320.7",
+          "8,518.4"
+        ],
+        [
+          "Other Assets (held constant)",
+          "22,818.7",
+          "22,818.7",
+          "22,818.7"
+        ],
+        [
+          "TOTAL ASSETS",
+          "42,325.6",
+          "38,410.6",
+          "34,119.7"
+        ],
+        [
+          "LIABILITIES & EQUITY"
+        ],
+        [
+          "Accounts Payable (67.8 days)",
+          "1,559.4",
+          "1,736.9",
+          "1,934.7"
+        ],
+        [
+          "Short-Term Debt (held constant)",
+          "1,523.8",
+          "1,523.8",
+          "1,523.8"
+        ],
+        [
+          "Total Current Liabilities",
+          "3,083.1",
+          "3,260.7",
+          "3,458.5"
+        ],
+        [
+          "Long-Term Debt (held constant)",
+          "6,218.9",
+          "6,218.9",
+          "6,218.9"
+        ],
+        [
+          "Other Liabilities (held constant)",
+          "8,049.0",
+          "8,049.0",
+          "8,049.0"
+        ],
+        [
+          "Total Liabilities",
+          "17,351.0",
+          "17,528.5",
+          "17,726.3"
+        ],
+        [
+          "Total Shareholders' Equity",
+          "24,974.7",
+          "20,882.1",
+          "16,393.4"
+        ],
+        [
+          "TOTAL LIABILITIES & EQUITY",
+          "42,325.6",
+          "38,410.6",
+          "34,119.7"
+        ],
+        [
+          "Balance Check (must = 0)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ]
+      ],
+      "Pro Forma Cash Flow": [
+        [
+          "Pro Forma Cash Flow Statement (Indirect Method, Rp billion)"
+        ],
+        [
+          "Reconciles exactly to the change in Cash & Equivalents on the Pro Forma Balance Sheet"
+        ],
+        [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "CASH FLOW FROM OPERATIONS"
+        ],
+        [
+          "Net Income / (Loss)",
+          "(3,737.0)",
+          "(4,092.6)",
+          "(4,488.7)"
+        ],
+        [
+          "Add: Depreciation & Amortization",
+          "190.5",
+          "1,151.5",
+          "1,934.4"
+        ],
+        [
+          "(Increase) / Decrease in Receivables",
+          "(804.7)",
+          "(154.0)",
+          "(171.5)"
+        ],
+        [
+          "(Increase) / Decrease in Inventory",
+          "(96.2)",
+          "(12.6)",
+          "(14.0)"
+        ],
+        [
+          "Increase / (Decrease) in Payables",
+          "305.0",
+          "177.6",
+          "197.8"
+        ],
+        [
+          "Cash Flow from Operations (CFO)",
+          "(4,142.5)",
+          "(2,930.1)",
+          "(2,542.0)"
+        ],
+        [
+          "CASH FLOW FROM INVESTING"
+        ],
+        [
+          "Capital Expenditures (16.3% of Rev)",
+          "(3,330.5)",
+          "(3,709.7)",
+          "(4,132.2)"
+        ],
+        [
+          "Cash Flow from Investing (CFI)",
+          "(3,330.5)",
+          "(3,709.7)",
+          "(4,132.2)"
+        ],
+        [
+          "CASH FLOW FROM FINANCING"
+        ],
+        [
+          "Dividends Paid",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Net Change in Debt (held constant)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Cash Flow from Financing (CFF)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Net Change in Cash",
+          "(7,473.0)",
+          "(6,639.8)",
+          "(6,674.1)"
+        ],
+        [
+          "Beginning Cash",
+          "21,755.2",
+          "14,282.2",
+          "7,642.3"
+        ],
+        [
+          "Ending Cash (computed)",
+          "14,282.2",
+          "7,642.3",
+          "968.2"
+        ],
+        [
+          "Check vs. Balance Sheet Plug Cash (= 0)",
+          "0.0",
+          "0.0",
+          "0.0"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "a14",
+    "code": "Assignment 14",
+    "folder": "Week 14",
+    "week": "Week 14",
+    "title": "Valuation Package: WACC (7.76%), DCF, Residual Income & Market Multiples",
+    "summary": "Emerging-market CAPM Ke 8.45%, WACC 7.76%, DCF (-Rp 121.1/sh), Residual Income (-Rp 75.1/sh), and Market Multiples (Rp 39.8/sh) triangulated against the post-Rp 1 floor IDX market price of Rp 25.00.",
+    "docx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_Assignment14_Valuation_Summary.docx",
+    "xlsx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+    "sections": [
+      {
+        "heading": "1. Cost of Capital Architecture (CAPM Ke = 8.45% & WACC = 7.76%)",
+        "source_citation": "Group 4 Valuation Workbook (Cost of Capital Tab); Investing.com & Damodaran Jan 2026",
+        "paragraphs": [
+          "Macro and sovereign risk parameters are preserved cleanly from the Week 14 valuation template: Indonesia 10Y risk-free rate proxy = 4.502% (6.12% yield minus 1.618% Baa2 default spread), Mature Market ERP = 4.23%, Indonesia Country Risk Premium = 2.465%, and statutory Tax Rate = 22.0%.",
+          "Combining GoTo's Investing.com Levered Beta of 0.59 yields a Cost of Equity (Ke) of 8.45%. Weighting Market Value of Equity (Rp 26,550.3 bn at Rp 25.00/share, 77.4% weight) and Total Interest-Bearing Debt (Rp 7,742.6 bn at 5.39% after-tax cost, 22.6% weight) gives a WACC of 7.76%."
+        ],
+        "tables": [
+          [
+            [
+              "Input / Result",
+              "Value",
+              "Source and Note"
+            ],
+            [
+              "Risk-Free Rate (proxy)",
+              "4.50%",
+              "Indonesia 10-year bond yield (6.12%) minus Baa2 default spread (1.618%)."
+            ],
+            [
+              "Levered Beta",
+              "0.59",
+              "From Investing.com (GoTo key statistics page)."
+            ],
+            [
+              "Mature Market ERP",
+              "4.23%",
+              "Damodaran implied mature market equity risk premium."
+            ],
+            [
+              "Indonesia Country Risk Premium",
+              "2.47%",
+              "Damodaran Baa2 sovereign rating spread for Indonesia."
+            ],
+            [
+              "Cost of Equity (Ke)",
+              "8.45%",
+              "4.502% + 0.59 x (4.23% + 2.465%) = 8.45%."
+            ],
+            [
+              "Pre-Tax Cost of Debt",
+              "6.91%",
+              "2025 actual interest expense (Rp 535.2 bn) / total debt (Rp 7,742.6 bn)."
+            ],
+            [
+              "Effective Tax Rate",
+              "22.00%",
+              "Indonesian corporate income tax rate."
+            ],
+            [
+              "After-Tax Cost of Debt",
+              "5.39%",
+              "6.91% x (1 - 22%) = 5.39%."
+            ],
+            [
+              "Market Value of Equity (Rp bn)",
+              "26,550.3",
+              "Rp 25.00 share price x 1,062,010.2 million shares (Investing.com shows Rp 26.66T)."
+            ],
+            [
+              "Book Value of Debt (Rp bn)",
+              "7,742.6",
+              "Short-term debt (Rp 1,523.8 bn) + Long-term debt (Rp 6,218.9 bn)."
+            ],
+            [
+              "Weight of Equity / Weight of Debt",
+              "77.4% / 22.6%",
+              "Equity weight = 26,550.3 / 34,292.9; Debt weight = 7,742.6 / 34,292.9."
+            ],
+            [
+              "WACC",
+              "7.76%",
+              "(77.4% x 8.45%) + (22.6% x 5.39%) = 7.76%."
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note20_borrowings_summary.png",
+        "evidence_caption": "Note 20 Borrowings Summary (p. 106): Audited Rp 7,742.6 bn total debt underlying the 22.6% WACC debt weight."
+      },
+      {
+        "heading": "2. Discounted Cash Flow (FCFF) Valuation Model",
+        "source_citation": "Group 4 Valuation Workbook (DCF Valuation & Terminal Growth Tabs)",
+        "paragraphs": [
+          "Using the exact Milestone 4 Base Case forecast (78.5% opex, 16.3% CapEx, and zero cash tax refunds while EBIT is negative per standard DCF rules), GoTo burns -(7,738.7) bn to -(7,152.6) bn of Free Cash Flow to Firm per year.",
+          "Discounting those FCFF outflows plus a 3.0% perpetual Terminal Value at 7.76% WACC yields a negative Enterprise Value of -(142,588.1) bn. Even after adding GoTo's +14,012.5 bn Net Cash buffer (Rp 21,755.2 bn Cash minus Rp 7,742.6 bn Debt), Intrinsic DCF Equity Value remains negative at -(128,575.5) bn, or -Rp 121.1 per share."
+        ],
+        "tables": [
+          [
+            [
+              "DCF Valuation Schedule (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F",
+              "Terminal (g=3.0%)"
+            ],
+            [
+              "EBIT (from Milestone 4 Base Case)",
+              "(4,003.4)",
+              "(4,459.4)",
+              "(4,967.4)",
+              ""
+            ],
+            [
+              "Less: Tax on EBIT (0 when EBIT < 0)",
+              "0.0",
+              "0.0",
+              "0.0",
+              ""
+            ],
+            [
+              "EBIAT (NOPAT)",
+              "(4,003.4)",
+              "(4,459.4)",
+              "(4,967.4)",
+              ""
+            ],
+            [
+              "Add: Depreciation & Amortization",
+              "190.4",
+              "1,151.1",
+              "1,934.0",
+              ""
+            ],
+            [
+              "Less: Capital Expenditures (16.3% Rev)",
+              "(3,329.8)",
+              "(3,709.1)",
+              "(4,131.6)",
+              ""
+            ],
+            [
+              "Less: Increase in Net Working Capital",
+              "(595.9)",
+              "11.1",
+              "12.4",
+              ""
+            ],
+            [
+              "Free Cash Flow to Firm (FCFF)",
+              "(7,738.7)",
+              "(7,006.3)",
+              "(7,152.6)",
+              "(154,740.8)"
+            ],
+            [
+              "Discount Factor (at WACC = 7.76%)",
+              "0.9280",
+              "0.8611",
+              "0.7991",
+              "0.7991"
+            ],
+            [
+              "PV of FCFF (Discounted at 7.76%)",
+              "(7,181.4)",
+              "(6,033.4)",
+              "(5,715.8)",
+              "(123,657.4)"
+            ],
+            [
+              "Enterprise Value (Sum PV FCFF + PV TV)",
+              "(142,588.1)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Less: Net Debt (Debt 7,742.6 - Cash 21,755.2)",
+              "(14,012.5)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Equity Value (DCF)",
+              "(128,575.5)",
+              "",
+              "",
+              ""
+            ],
+            [
+              "DCF Value per Share (Rp) [1,062,010.2M sh]",
+              "Rp (121.1)",
+              "",
+              "",
+              ""
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "3. Residual Income (Economic Profit) Valuation Model",
+        "source_citation": "Group 4 Valuation Workbook (Residual Income Valuation Tab)",
+        "paragraphs": [
+          "Residual Income directly tests whether GoTo earns net accounting income above its required 8.45% equity capital charge (Beginning BVE x Ke). Starting from Rp 28,711.7 bn FY2025 Book Equity, Base Case Net Losses (-3,737.0 bn to -4,488.9 bn) combine with the annual Rp 1.77T-Rp 2.43T equity charge to generate over -Rp 6.2T of negative economic profit every year.",
+          "Subtracting the Rp 108.48T cumulative PV of negative Residual Income (Years 1-3 + Terminal) from current Book Equity leaves Equity Value at -(79,770.2) bn, or -Rp 75.1 per share, independently corroborating DCF."
+        ],
+        "tables": [
+          [
+            [
+              "Line Item (Rp billion)",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Beginning Book Value of Equity",
+              "28,711.7",
+              "24,974.7",
+              "20,882.0"
+            ],
+            [
+              "Forecast Net Income (from Milestone 4 Base Case)",
+              "(3,737.0)",
+              "(4,092.7)",
+              "(4,488.9)"
+            ],
+            [
+              "Dividends Paid",
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            [
+              "Equity Charge (Beg. BVE x 8.45% Cost of Equity)",
+              "2,426.7",
+              "2,110.9",
+              "1,765.0"
+            ],
+            [
+              "Residual Income (Net Income minus Equity Charge)",
+              "(6,163.7)",
+              "(6,203.6)",
+              "(6,253.9)"
+            ],
+            [
+              "PV of Residual Income (at Ke = 8.45%)",
+              "(5,683.4)",
+              "(5,274.3)",
+              "(4,902.7)"
+            ],
+            [
+              "Sum of PV of Residual Income (Years 1 to 3)",
+              "(15,860.4)",
+              "",
+              ""
+            ],
+            [
+              "PV of Terminal Residual Income (g = 3.0%)",
+              "(92,621.5)",
+              "",
+              ""
+            ],
+            [
+              "Current Book Value of Equity",
+              "28,711.7",
+              "",
+              ""
+            ],
+            [
+              "Equity Value (Residual Income)",
+              "(79,770.2)",
+              "",
+              ""
+            ],
+            [
+              "Residual Income Value per Share (Rp)",
+              "Rp (75.1)",
+              "",
+              ""
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
+        "evidence_caption": "Audited FY2025 Equity Section verifying Rp 28.71T Ending Book Equity and -Rp 214.1T Accumulated Losses."
+      },
+      {
+        "heading": "4. Market Multiples Triangulation & Reading the Valuation Gap vs. Rp 25.00",
+        "source_citation": "Group 4 Valuation Workbook (Market Multiples & Valuation Summary Tabs); IDX Rule Sept 28, 2026",
+        "paragraphs": [
+          "Market Multiples assign a positive blended value of Rp 39.8 per share (mean of Peer Median P/B 2.30x x Rp 27.03 BVPS = Rp 62.2 and Net-Cash-Adjusted EV/EBITDA 13.25x = Rp 17.4 across BUKA, GRAB, SE, BELI; P/E is excluded because GoTo FY2025 EPS is -Rp 1.41). Relative valuation reads higher because peer multiples do not penalize GoTo's ongoing Base Case cash burn.",
+          "Why GoTo sits at Rp 25.00 after the IDX Rp 50 floor removal: Previously frozen at Indonesia's Rp 50 minimum regular-market limit ('gocap rule'), GoTo plunged 50% via Auto Rejection Bawah (ARB) once IDX abolished the Rp 50 floor down to Rp 1 on September 28, 2026. Because equity holders enjoy limited liability, shares trade at Rp 25.00 (0.9x book value), cushioned above the Rp 13.20/share Net Cash Liquidation Floor."
+        ],
+        "tables": [
+          [
+            [
+              "Method",
+              "Value per Share (Rp)",
+              "Explanation"
+            ],
+            [
+              "Discounted Cash Flow (DCF)",
+              "Rp (121.1)",
+              "Negative because Base Case cash burn (-Rp 7.0T to -Rp 7.7T/yr) destroys firm value."
+            ],
+            [
+              "Residual Income (Economic Profit)",
+              "Rp (75.1)",
+              "Negative because accounting losses plus the 8.45% equity charge erode book equity."
+            ],
+            [
+              "Market Multiples (P/E & P/B avg.)",
+              "Rp 39.8",
+              "Peer median P/B (2.30x) and Net-Cash-Adj. EV/EBITDA (13.25x) across BUKA, GRAB, SE, BELI (P/E excluded as EPS = -Rp 1.41)."
+            ],
+            [
+              "Current Market Price (Investing.com)",
+              "Rp 25.0",
+              "Trades at 0.9x book value (down 93% from Rp 338 IPO price)."
+            ]
+          ]
+        ]
+      }
+    ],
+    "workbook": {
+      "Instructions": [
+        [
+          "Financial Statement Analysis: Valuation Workbook"
+        ],
+        [
+          "Companion template for Weeks 14 (Cost of Capital & Valuation Applications)"
+        ],
+        [
+          "",
+          "Purpose"
+        ],
+        [
+          "",
+          "This workbook estimates your assigned company's cost of capital and then values it three independent ways: discounted cash flow (DCF), residual income (economic profit), and market multiples: so your final report and presentation can triangulate across methods rather than relying on a single number."
+        ],
+        [
+          "",
+          "How to use this workbook"
+        ],
+        [
+          "",
+          "1. Start with 'Cost of Capital'. Enter your risk-free rate proxy, beta, equity risk premium, and country risk premium to build the cost of equity, then your cost of debt and capital structure weights to compute WACC."
+        ],
+        [
+          "",
+          "2. 'DCF Valuation' pulls its 3-year forecast directly from the Forecasting Workbook's Pro Forma statements: copy across your Net Income, D&A, Capex, and Working Capital change figures from that workbook's forecast years into the blue input cells here (a direct cross-workbook link is not used so this file stays portable on its own)."
+        ],
+        [
+          "",
+          "3. 'Residual Income Valuation' uses the same forecast net income together with beginning book value of equity and your cost of equity from the Cost of Capital sheet."
+        ],
+        [
+          "",
+          "4. 'Market Multiples' asks you to enter 3 to 5 comparable companies' trading multiples (P/E, EV/EBITDA, P/B): from IDX data or a financial data provider: and applies the peer average/median to your company's own metrics."
+        ],
+        [
+          "",
+          "5. 'Valuation Summary' pulls the per-share (or enterprise value) estimate from each method automatically into one football-field comparison so you can see how much they agree or disagree: and defend the gap in your final report."
+        ],
+        [
+          "",
+          "Color legend"
+        ],
+        [
+          "",
+          "Blue text: A hardcoded input you type or override."
+        ],
+        [
+          "",
+          "Black text: A formula: do not overtype."
+        ],
+        [
+          "",
+          "Green text: A link to another sheet in this workbook."
+        ],
+        [
+          "",
+          "A note on emerging-market cost of capital: reasonable analysts differ on how to build a country risk premium into the discount rate. Be transparent in your report about which approach you used and why: you will be graded on the defensibility of your assumptions, not on matching one specific 'correct' number."
+        ]
+      ],
+      "Cost of Capital": [
+        [
+          "Cost of Capital (CAPM & WACC)"
+        ],
+        [
+          "PT GoTo Gojek Tokopedia Tbk (GOTO), valuation date 30 December 2025"
+        ],
+        [
+          "Input / Result",
+          "Value",
+          "Note"
+        ],
+        [
+          "COST OF EQUITY (CAPM, Emerging-Market Adjusted)"
+        ],
+        [
+          "Risk-Free Rate (Indonesia 10Y yield proxy)",
+          "4.50%",
+          "6.120% govt bond yield minus 1.618% Baa2 default spread."
+        ],
+        [
+          "Levered Beta",
+          "0.59",
+          "From Investing.com (GoTo key statistics)."
+        ],
+        [
+          "Mature-Market Equity Risk Premium",
+          "4.23%",
+          "Damodaran implied mature-market ERP (Jan 2026 update)."
+        ],
+        [
+          "Indonesia Country Risk Premium (CRP)",
+          "2.47%",
+          "Damodaran Baa2 sovereign rating-based CRP (2.465%)."
+        ],
+        [
+          "Cost of Equity (Ke)",
+          "8.45%",
+          "Rf (4.502%) + 0.59 x (4.23% + 2.465%) = 8.45%."
+        ],
+        [
+          "COST OF DEBT"
+        ],
+        [
+          "Pre-Tax Cost of Debt",
+          "6.91%",
+          "2025 interest expense Rp 535.2 bn / Total debt Rp 7,742.6 bn."
+        ],
+        [
+          "Effective Tax Rate",
+          "22.00%",
+          "Indonesian statutory corporate income tax rate."
+        ],
+        [
+          "After-Tax Cost of Debt",
+          "5.39%",
+          "6.91% x (1 - 22%) = 5.39%."
+        ],
+        [
+          "CAPITAL STRUCTURE & WACC"
+        ],
+        [
+          "Market Value of Equity (Rp bn)",
+          "26,550.3",
+          "Rp 25.00 share price x 1,062,010.2 million shares."
+        ],
+        [
+          "Book Value of Debt (Rp bn)",
+          "7,742.6",
+          "Short-term debt (Rp 1,523.8 bn) + Long-term debt (Rp 6,218.9 bn)."
+        ],
+        [
+          "Weight of Equity (We)",
+          "77.4%",
+          "26,550.3 / 34,292.9 = 77.42%."
+        ],
+        [
+          "Weight of Debt (Wd)",
+          "22.6%",
+          "7,742.6 / 34,292.9 = 22.58%."
+        ],
+        [
+          "WACC",
+          "7.76%",
+          "(77.42% x 8.45%) + (22.58% x 5.39%) = 7.76%."
+        ]
+      ],
+      "DCF Valuation": [
+        [
+          "DCF Valuation: Free Cash Flow to Firm (FCFF, Rp billion)"
+        ],
+        [
+          "Forecast figures from Milestone 4 Base Case (zero cash tax refund when EBIT is negative)"
+        ],
+        [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F",
+          "Terminal"
+        ],
+        [
+          "EBIT (from Milestone 4 Base Case)",
+          "(4,003.4)",
+          "(4,459.4)",
+          "(4,967.4)",
+          ""
+        ],
+        [
+          "Less: Tax on EBIT (0 when EBIT < 0)",
+          "0.0",
+          "0.0",
+          "0.0",
+          ""
+        ],
+        [
+          "EBIAT (NOPAT)",
+          "(4,003.4)",
+          "(4,459.4)",
+          "(4,967.4)",
+          ""
+        ],
+        [
+          "Add: Depreciation & Amortization",
+          "190.4",
+          "1,151.1",
+          "1,934.0",
+          ""
+        ],
+        [
+          "Less: Capital Expenditures",
+          "(3,329.8)",
+          "(3,709.1)",
+          "(4,131.6)",
+          ""
+        ],
+        [
+          "Less: Increase in Net Working Capital",
+          "(595.9)",
+          "11.1",
+          "12.4",
+          ""
+        ],
+        [
+          "Free Cash Flow to Firm (FCFF)",
+          "(7,738.7)",
+          "(7,006.3)",
+          "(7,152.6)",
+          "(154,740.8)"
+        ],
+        [
+          "DISCOUNTING & TERMINAL VALUE"
+        ],
+        [
+          "Terminal Growth Rate (g)",
+          "3.00%",
+          "Linked from Terminal Growth",
+          "",
+          ""
+        ],
+        [
+          "Discount Rate (WACC)",
+          "7.76%",
+          "Linked from Cost of Capital",
+          "",
+          ""
+        ],
+        [
+          "Discount Factor",
+          "0.9280",
+          "0.8611",
+          "0.7991",
+          "0.7991"
+        ],
+        [
+          "PV of FCFF",
+          "(7,181.4)",
+          "(6,033.4)",
+          "(5,715.8)",
+          "(123,657.4)"
+        ],
+        [
+          "ENTERPRISE VALUE TO EQUITY VALUE PER SHARE"
+        ],
+        [
+          "Sum of PV of FCFF (Years 1 to 3)",
+          "(18,930.7)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "PV of Terminal Value",
+          "(123,657.4)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Enterprise Value (EV)",
+          "(142,588.1)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Less: Net Debt (Debt Rp 7,742.6 - Cash Rp 21,755.2)",
+          "(14,012.5)",
+          "Negative = Net Cash +14,012.5 bn",
+          "",
+          ""
+        ],
+        [
+          "Equity Value (DCF)",
+          "(128,575.5)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Shares Outstanding (million)",
+          "1,062,010.2",
+          "",
+          "",
+          ""
+        ],
+        [
+          "DCF Value per Share (Rp)",
+          "Rp (121.1)",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "Terminal Growth": [
+        [
+          "Terminal Growth Rate (g) Analysis"
+        ],
+        [
+          "Tests fundamental reinvestment growth vs. caps and feeds DCF & Residual Income"
+        ],
+        [
+          "Approach / Parameter",
+          "Value",
+          "Analytical Note"
+        ],
+        [
+          "A. FUNDAMENTAL APPROACH: g = Reinvestment Rate x ROIC"
+        ],
+        [
+          "NOPAT, 2028F (Rp bn)",
+          "(4,967.4)",
+          "Final forecast year, linked from DCF Valuation."
+        ],
+        [
+          "Capital Expenditures, 2028F (Rp bn)",
+          "4,131.6",
+          "Outflow in 2028F."
+        ],
+        [
+          "Less: Depreciation & Amortization, 2028F",
+          "1,934.0",
+          "Non-cash depreciation add-back."
+        ],
+        [
+          "Add: Working Capital Reduction / Adjustment",
+          "(12.4)",
+          "Change in NWC in 2028F."
+        ],
+        [
+          "Net Reinvestment (2028F)",
+          "2,185.2",
+          "New capital invested to support growth."
+        ],
+        [
+          "Reinvestment Rate (Net Reinv / NOPAT)",
+          "n.m.",
+          "Not meaningful when NOPAT is negative."
+        ],
+        [
+          "ROIC (2028F NOPAT / Invested Capital)",
+          "n.m.",
+          "Not meaningful when NOPAT is negative."
+        ],
+        [
+          "Fundamental g = Reinvestment Rate x ROIC",
+          "n.m.",
+          "Cannot derive positive g from loss-making NOPAT."
+        ],
+        [
+          "B. REASONABLENESS LIMITS"
+        ],
+        [
+          "Cap: Risk-Free Rate Proxy",
+          "4.50%",
+          "Long-run nominal growth cap."
+        ],
+        [
+          "Discount Rate (WACC) / Cost of Equity (Ke)",
+          "7.76% / 8.45%",
+          "g must stay well below WACC and Ke."
+        ],
+        [
+          "C. SELECTED TERMINAL GROWTH RATE"
+        ],
+        [
+          "Analyst Judgement g (Selected Input)",
+          "3.00%",
+          "Conservative 3.0% long-run assumption for loss-making firm."
+        ],
+        [
+          "Check: g below WACC & Cost of Equity?",
+          "OK (3.00% < 7.76%)",
+          "Satisfies Gordon Growth perpetuity convergence condition."
+        ]
+      ],
+      "Residual Income Valuation": [
+        [
+          "Residual Income (Economic Profit) Valuation (Rp billion)"
+        ],
+        [
+          "Values equity as Beginning Book Value + PV of future Residual Income above Ke"
+        ],
+        [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        [
+          "Beginning Book Value of Equity",
+          "28,711.7",
+          "24,974.7",
+          "20,882.0"
+        ],
+        [
+          "Forecast Net Income (Milestone 4 Base)",
+          "(3,737.0)",
+          "(4,092.7)",
+          "(4,488.9)"
+        ],
+        [
+          "Dividends Paid",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        [
+          "Cost of Equity (Ke, linked)",
+          "8.45%",
+          "8.45%",
+          "8.45%"
+        ],
+        [
+          "Equity Charge (Beg. BVE x Ke)",
+          "2,426.7",
+          "2,110.9",
+          "1,765.0"
+        ],
+        [
+          "Residual Income (Net Income - Equity Charge)",
+          "(6,163.7)",
+          "(6,203.6)",
+          "(6,253.9)"
+        ],
+        [
+          "DISCOUNTING & TERMINAL VALUE"
+        ],
+        [
+          "Terminal Growth Rate (g)",
+          "3.00%",
+          "Same g as DCF sheet",
+          ""
+        ],
+        [
+          "Discount Factor (at Ke = 8.45%)",
+          "0.9221",
+          "0.8502",
+          "0.7840"
+        ],
+        [
+          "PV of Residual Income",
+          "(5,683.4)",
+          "(5,274.3)",
+          "(4,902.7)"
+        ],
+        [
+          "PV of Terminal Residual Income (g = 3.0%)",
+          "(92,621.5)",
+          "",
+          ""
+        ],
+        [
+          "VALUE OF EQUITY"
+        ],
+        [
+          "Current Book Value of Equity (2025 Ending)",
+          "28,711.7",
+          "",
+          ""
+        ],
+        [
+          "Sum of PV of Residual Income (Years 1 to 3)",
+          "(15,860.4)",
+          "",
+          ""
+        ],
+        [
+          "PV of Terminal Residual Income",
+          "(92,621.5)",
+          "",
+          ""
+        ],
+        [
+          "Equity Value (BVE + Total PV of RI)",
+          "(79,770.2)",
+          "",
+          ""
+        ],
+        [
+          "Shares Outstanding (million)",
+          "1,062,010.2",
+          "",
+          ""
+        ],
+        [
+          "Residual Income Value per Share (Rp)",
+          "Rp (75.1)",
+          "",
+          ""
+        ]
+      ],
+      "Market Multiples": [
+        [
+          "Market Multiples Valuation (Peer Relative Valuation)"
+        ],
+        [
+          "Closing prices December 2025 across IDX and ASEAN digital peers"
+        ],
+        [
+          "Company",
+          "Price (Rp)",
+          "EPS (Rp)",
+          "BVPS (Rp)",
+          "P/E",
+          "P/B",
+          "EV/EBITDA"
+        ],
+        [
+          "PT Bukalapak.com Tbk (BUKA)",
+          "120",
+          "11.6",
+          "245",
+          "10.3x",
+          "0.49x",
+          "6.50x"
+        ],
+        [
+          "Grab Holdings Ltd (GRAB)",
+          "54,400",
+          "1,700",
+          "25,900",
+          "32.0x",
+          "2.10x",
+          "14.50x"
+        ],
+        [
+          "Sea Limited (SE - Shopee)",
+          "1,600,000",
+          "42,100",
+          "381,000",
+          "38.0x",
+          "4.20x",
+          "16.00x"
+        ],
+        [
+          "PT Global Digital Niaga Tbk (BELI)",
+          "450",
+          "0",
+          "180",
+          "-",
+          "2.50x",
+          "12.00x"
+        ],
+        [
+          "Peer Average",
+          "-",
+          "-",
+          "-",
+          "26.8x",
+          "2.32x",
+          "12.25x"
+        ],
+        [
+          "Peer Median (Applied to GoTo)",
+          "-",
+          "-",
+          "-",
+          "32.0x",
+          "2.30x",
+          "13.25x"
+        ],
+        [
+          "APPLY PEER MEDIAN MULTIPLES TO GOTO"
+        ],
+        [
+          "Metric",
+          "GoTo Value",
+          "Peer Median",
+          "Implied Value / Share",
+          "Analytical Note",
+          "",
+          ""
+        ],
+        [
+          "EPS (Rp)",
+          "-1.41",
+          "32.00x",
+          "N/M (-)",
+          "Excluded because GoTo FY2025 EPS is negative (-Rp 1.41).",
+          "",
+          ""
+        ],
+        [
+          "BVPS (Rp)",
+          "27.03",
+          "2.30x",
+          "Rp 62.2",
+          "Book Value per Share x Peer Median P/B (2.30x).",
+          "",
+          ""
+        ],
+        [
+          "EBITDA per Share (Rp) + Net Cash/sh",
+          "0.32",
+          "13.25x",
+          "Rp 17.4",
+          "(0.32 x 13.25) + Rp 13.20 net cash/sh = Rp 17.43/sh.",
+          "",
+          ""
+        ],
+        [
+          "Average Implied Value (P/B & EV/EBITDA)",
+          "-",
+          "-",
+          "Rp 39.8",
+          "Blended relative valuation average = Rp 39.80/sh.",
+          "",
+          ""
+        ]
+      ],
+      "Valuation Summary": [
+        [
+          "Valuation Summary: Football-Field Reconciliation"
+        ],
+        [
+          "Reconciling DCF, Residual Income, and Market Multiples for PT GoTo Gojek Tokopedia Tbk"
+        ],
+        [
+          "Method",
+          "Value per Share (Rp)",
+          "Source"
+        ],
+        [
+          "Discounted Cash Flow (DCF)",
+          "Rp (121.1)",
+          "DCF Valuation sheet (Base Case EV -142.6T + Net Cash 14.0T)"
+        ],
+        [
+          "Residual Income (Economic Profit)",
+          "Rp (75.1)",
+          "Residual Income Valuation sheet (BVE 28.7T - PV RI 108.5T)"
+        ],
+        [
+          "Market Multiples (P/B & EV/EBITDA avg.)",
+          "Rp 39.8",
+          "Market Multiples sheet (Mean of P/B Rp 62.2 & EV/EBITDA Rp 17.4)"
+        ],
+        [
+          "Range (Low to High)",
+          "Rp (121.1) to Rp 39.8",
+          "Wide spread between intrinsic cash burn & peer multiples"
+        ],
+        [
+          "Simple Average of Three Methods",
+          "Rp (52.1)",
+          "Unweighted average (-121.1, -75.1, +39.8)"
+        ],
+        [
+          "Net Cash Liquidation Floor",
+          "Rp 13.2",
+          "Rp 14,012.5 bn Net Cash / 1,062.01 bn shares"
+        ],
+        [
+          "Current Market Price (for reference)",
+          "Rp 25.0",
+          "Post Sept 28, 2026 IDX Rp 1 floor rule (0.9x Book Value)"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "a15",
+    "code": "Assignment 15",
+    "folder": "Week 15",
+    "week": "Week 15",
+    "title": "Comprehensive Final Financial Statement Analysis Report (Steps 1-6)",
+    "summary": "Integrated term capstone report unifying Milestone 1 Strategy, Milestone 3 Accounting Quality, Milestone 2 Ratios & Z''-Score (-10.90), Milestone 4 Forecast, Assignment 14 Valuation, and our Public Equity Investor decision.",
+    "docx_file": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
+    "sections": [
+      {
+        "heading": "(a) Executive Summary & Integrated Capstone Synthesis",
+        "source_citation": "Integrated Synthesis of Group 4 Milestones 1-4 & Assignment 14 Valuation",
+        "paragraphs": [
+          "Prepared by Group 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) for PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), this capstone report connects Steps 1-6 into an actionable recommendation for a Public Equity Investor evaluating GoTo at Rp 25.00 per share.",
+          "Key Findings Across Milestones: (1) Strategy (M1): High rivalry across Grab/Shopee/Maxim forces Rp 3.09T marketing & Rp 2.15T R&D spend; (2) Accounting Quality (M3): Statutory losses (-Rp 1,502 bn) persist, 22.57% of assets sit in Tokopedia/Bank Jago associates, and CFO covers only 26.0% of CapEx (-Rp 875.3 bn FCF); (3) Ratios (M2): ROE remains -5.2% and Altman Z''-Score is -10.90; (4) Forecast (M4): Base Case historical scaling burns cash down to Rp 968 bn by 2028F; (5) Valuation (T14): Both intrinsic models (DCF -Rp 121.1, RI -Rp 75.1) trail the Rp 25.00 share price and Rp 39.8 peer multiples."
+        ],
+        "tables": [
+          [
+            [
+              "Capstone Stage (Steps 1-6)",
+              "Core Metric / Model Output",
+              "Decision Implication for Equity Investor"
+            ],
+            [
+              "Step 1: Strategy & Five Forces (M1)",
+              "Competitive Rivalry: HIGH | Hybrid Position",
+              "Suppresses pricing power & take rates"
+            ],
+            [
+              "Step 2: Accounting Quality (M3)",
+              "2025 FCF: -(875.3) bn | Associates: 22.57% TA",
+              "Asset impairment & cash conversion watchpoints"
+            ],
+            [
+              "Step 3: Ratios & Z''-Score (M2)",
+              "Current Ratio 2.73x | ROE -5.2% | Z'' -10.90",
+              "Solvent near-term, but cumulative deficit hurts capital"
+            ],
+            [
+              "Step 4: 3-Yr Base Forecast (M4)",
+              "2028F Ending Cash: Rp 968 bn | EBIT -(4.97T)",
+              "Must freeze fixed OpEx to cross Rp 18.6T breakeven"
+            ],
+            [
+              "Step 5-6: Valuation & Decision (A14)",
+              "DCF -121.1 | RI -75.1 | Multiples 39.8 | Price 25.0",
+              "Fundamental value destruction unless opex discipline sticks"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(b) Business & Industry Strategy Synthesis (Milestone 1)",
+        "source_citation": "Milestone 1 Write-Up; GoTo 2025 Annual Report & Note 35",
+        "paragraphs": [
+          "GoTo connects 66 million Annual Transacting Users, over 6.4 million merchants, and over 3 million driver-partners. Following Tokopedia's deconsolidation in Jan 2024 (retaining 24.99% equity), GoTo relies on On-Demand Services (Rp 12,361 bn in 2025) and Financial Technology (+74.1% to Rp 5,191 bn), plus Rp 820 bn in Tokopedia service fees.",
+          "Combining Milestone 1 strategy with balance-sheet evidence: High rivalry and low buyer switching costs limit take-rate expansion, while aggressive GoPay lending expanded net financing receivables to Rp 2,731 bn with credit loss provisions more than doubling from Rp 174 bn to Rp 408 bn."
+        ],
+        "tables": [
+          [
+            [
+              "Force",
+              "Rating",
+              "Key Analytical Evidence from GoTo Filings and Market Data"
+            ],
+            [
+              "Threat of New Entrants",
+              "Low to Moderate",
+              "Building a two sided network of 66 million users, 6.4 million merchants, and 3 million drivers requires huge capital and Bank Indonesia / OJK licenses, though niche apps can still enter single segments."
+            ],
+            [
+              "Bargaining Power of Suppliers",
+              "Low",
+              "No third party vendor exceeded 10% of consolidated net revenue in 2025 (Note 26), and millions of driver partners are fragmented."
+            ],
+            [
+              "Bargaining Power of Buyers",
+              "Medium",
+              "No single customer exceeded 10% of revenue (Note 25), but retail users are highly price sensitive and switch apps whenever a rival offers bigger discounts or cheaper delivery."
+            ],
+            [
+              "Threat of Substitutes",
+              "Medium",
+              "Public transit, eating in restaurants, cash, and bank transfers can replace GoTo services at any time with near zero switching cost."
+            ],
+            [
+              "Competitive Rivalry",
+              "High",
+              "Strongest force: Gojek faces Grab, Maxim, and inDrive; GoFood (31% GMV share) trails GrabFood (46%) and fights ShopeeFood (23%); GoPay competes with ShopeePay, DANA, OVO, and banks."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(c) Accounting Quality Assessment & Free Cash Flow Audit (Milestone 3)",
+        "source_citation": "Milestone 3 Write-Up; LK GOTO 2025 pp. 15, 17, 21-22, Notes 14-15 & 25",
+        "paragraphs": [
+          "Applying our Week 7 forensic framework to GoTo's audited March 2026 statements reveals two persistent red flags: (1) Asset Valuation Risk - 22.57% of total assets reside in Tokopedia (Rp 7,432 bn incl. Rp 2,004 bn goodwill) and Bank Jago (Rp 2,895 bn), plus Rp 1,669 bn of Level 3 investments (a 20% write-down scenario erodes Rp 1,820 bn or 3.98% of assets); (2) Revenue & Related-Party Quality - PSAK 72 customer incentives are netted against revenue, while related-party revenue rose to 7.13% (Rp 1,306 bn).",
+          "Crucial Cash Finding: Headline FY2025 Operating Cash Flow (+Rp 307.0 bn) covered just 25.97% of Cash CapEx (Rp 1,182.4 bn), yielding a -Rp 875.3 bn Free Cash Flow deficit. Cash only increased because GoTo liquidated Rp 1,386.5 bn of time deposits and drew Rp 3,718.0 bn in new third-party loans."
+        ],
+        "tables": [
+          [
+            [
+              "Accounting Quality & Cash Flow Metric (Rp million)",
+              "2024 Audited",
+              "2025 Audited",
+              "Analytical Finding"
+            ],
+            [
+              "Reported Consolidated Net Loss",
+              "(5,464,855)",
+              "(1,501,685)",
+              "Still negative in both years."
+            ],
+            [
+              "Operating Cash Flow (CFO, Audited Cash Flow p. 21)",
+              "(622,114)",
+              "307,025",
+              "Turned barely positive in 2025 (Rp 307 bn)."
+            ],
+            [
+              "Accruals Numerator (Net Income minus CFO)",
+              "(4,842,741)",
+              "(1,808,710)",
+              "Driven by non-cash D&A and impairment charges."
+            ],
+            [
+              "Year End Total Assets",
+              "43,207,884",
+              "45,757,642",
+              "47.5% of assets sit in cash."
+            ],
+            [
+              "Accruals Ratio ((NI - CFO) / Total Assets)",
+              "-11.21%",
+              "-3.95%",
+              "Narrower gap, but core earnings remain negative."
+            ],
+            [
+              "Total Cash Capex (Fixed + Intangible Additions)",
+              "6,518,862",
+              "1,182,360",
+              "Capex is 1.58x D&A (Rp 748,552 mn) in 2025."
+            ],
+            [
+              "CFO divided by Cash Capex",
+              "-9.54%",
+              "25.97%",
+              "2025 CFO covers only 26% of Capex!"
+            ],
+            [
+              "Free Cash Flow (CFO minus Cash Capex)",
+              "(7,140,976)",
+              "(875,335)",
+              "Still cash flow negative after Capex in 2025."
+            ],
+            [
+              "Net Time Deposit Settlements (Investing Cash Flow)",
+              "421,217",
+              "1,386,520",
+              "Positive CFI in 2025 came from cashing in deposits."
+            ]
+          ]
+        ],
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Note 14 (p. 100): Audited Associate Stakes (Tokopedia + Bank Jago = 22.57% of Assets)."
+      },
+      {
+        "heading": "(d) Common-Size, Ratio Package, DuPont ROE & Altman Z''-Score (Milestone 2)",
+        "source_citation": "Group 4 Milestone 2 Ratio & DuPont Workbook; Audited Balance Sheet pp. 15-16",
+        "paragraphs": [
+          "Common-size margins improved visibly as COGS fell to 42.3% (57.7% gross margin) and operating margin narrowed to -2.1%. Yet ROE remained negative across all three years (-253.4% -> -18.0% -> -5.2%), debt doubled to Rp 7,743 bn (DER 0.27x), and liquidity relies heavily on the Rp 21,755 bn cash pile (Current Ratio 2.73x).",
+          "Altman Z''-Score Distress Assessment: Applying the Emerging Market Non-Manufacturing formula (Z'' = 6.56 X1 + 3.26 X2 + 6.72 X3 + 1.05 X4) to FY2025 inputs (WC/Assets X1 = +0.402 -> +2.64 pts; Accumulated Deficit/Assets X2 = -4.679 -> -15.25 pts; EBIT/Assets X3 = -0.008 -> -0.06 pts; Book Equity/Liabilities X4 = +1.684 -> +1.77 pts) produces Z'' = -10.90 (Distress Zone < 1.10), illustrating the weight of -Rp 214.1 trillion historical accumulated losses."
+        ],
+        "tables": [
+          [
+            [
+              "Common-Size Metric",
+              "2023",
+              "2024",
+              "2025",
+              "Three Year Trend Analysis"
+            ],
+            [
+              "Cost of Goods Sold (% of Revenue)",
+              "34.4%",
+              "46.6%",
+              "42.3%",
+              "3-year average is 41.1% of revenue."
+            ],
+            [
+              "Gross Profit Margin (% of Revenue)",
+              "65.6%",
+              "53.4%",
+              "57.7%",
+              "3-year average is 58.9% of revenue."
+            ],
+            [
+              "Total Operating Expenses (% of Revenue)",
+              "135.1%",
+              "67.5%",
+              "59.8%",
+              "Fell after Tokopedia exit, but still exceeds Gross Margin."
+            ],
+            [
+              "Operating Margin (EBIT / Revenue)",
+              "-69.5%",
+              "-14.1%",
+              "-2.1%",
+              "Negative in all three years (-Rp 378 bn in 2025)."
+            ],
+            [
+              "Net Profit Margin (Net Income / Revenue)",
+              "-612.2%",
+              "-34.4%",
+              "-8.2%",
+              "Negative in all three years (-Rp 1,502 bn in 2025)."
+            ],
+            [
+              "Cash & Equivalents (% of Total Assets)",
+              "46.5%",
+              "44.4%",
+              "47.5%",
+              "Largest asset on the balance sheet (Rp 21.76T)."
+            ],
+            [
+              "Total Liabilities (% of Total Assets)",
+              "34.0%",
+              "29.6%",
+              "37.3%",
+              "Rose in 2025 due to new long term bank borrowings."
+            ],
+            [
+              "Total Equity (% of Total Assets)",
+              "66.0%",
+              "70.4%",
+              "62.7%",
+              "Shrank from Rp 35.72T to Rp 28.71T due to ongoing losses."
+            ]
+          ],
+          [
+            [
+              "Ratio / DuPont Metric",
+              "2023",
+              "2024",
+              "2025",
+              "Peer / Sector Interpretation"
+            ],
+            [
+              "Current Ratio / Quick Ratio",
+              "2.62x / 2.61x",
+              "2.62x / 2.62x",
+              "2.73x / 2.73x",
+              "Strong short term liquidity from IPO cash reserve."
+            ],
+            [
+              "Days Sales Outstanding (DSO)",
+              "14.8 days",
+              "46.9 days",
+              "10.9 days",
+              "3-year average is 24.2 days."
+            ],
+            [
+              "Days Inventory Outstanding (DIO)",
+              "12.4 days",
+              "1.3 days",
+              "0.7 days",
+              "3-year average is 4.8 days (digital platform)."
+            ],
+            [
+              "Days Payable Outstanding (DPO)",
+              "83.3 days",
+              "61.1 days",
+              "59.1 days",
+              "3-year average is 67.8 days (negative cash cycle)."
+            ],
+            [
+              "Debt to Equity (ST + LT Debt / Equity)",
+              "0.10x",
+              "0.13x",
+              "0.27x",
+              "Total debt doubled in 2025 to Rp 7,743 bn (vs Bukalapak 0.00x)."
+            ],
+            [
+              "Debt to Total Assets",
+              "0.06x",
+              "0.09x",
+              "0.17x",
+              "Rising reliance on bank debt despite holding cash."
+            ],
+            [
+              "Interest Coverage (EBIT / Interest)",
+              "-27.8x",
+              "-4.5x",
+              "-0.71x",
+              "Operating income cannot cover Rp 535 bn interest expense."
+            ],
+            [
+              "DuPont Step 1: Net Profit Margin",
+              "-612.2%",
+              "-34.4%",
+              "-8.2%",
+              "Main drag on ROE (vs Bukalapak +48.4% from investment income)."
+            ],
+            [
+              "DuPont Step 2: Asset Turnover",
+              "0.27x",
+              "0.37x",
+              "0.40x",
+              "Improved from 0.27x to 0.40x (vs Bukalapak 0.25x)."
+            ],
+            [
+              "DuPont Step 3: Equity Multiplier",
+              "1.51x",
+              "1.42x",
+              "1.59x",
+              "Increased to 1.59x in 2025 as equity shrank and debt rose."
+            ],
+            [
+              "Return on Equity (3-Step DuPont ROE)",
+              "-253.4%",
+              "-18.0%",
+              "-5.2%",
+              "Negative ROE in every single year (vs Bukalapak +12.4%)."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(e) Three-Year Pro Forma Forecast & Breakeven Check (Milestone 4)",
+        "source_citation": "Group 4 Milestone 4 Three-Statement Workbook (2026F-2028F Base Case)",
+        "paragraphs": [
+          "Under Milestone 4's Base Case anchored on 3-year averages (11.4% revenue growth, 41.1% COGS, 78.5% cash opex, 16.3% CapEx), Balance Check and Cash Check both tie cleanly to 0 across 2026F-2028F.",
+          "Crucial Liquidity Stress: Because scaled 78.5% opex exceeds 58.9% gross margin, breakeven revenue climbs to Rp 27,207 bn - Rp 33,755 bn, leaving GoTo Below Breakeven and burning Rp 6.6T-Rp 7.5T of cash per year down to Rp 968 bn by 2028F! GoTo crosses into operating profitability (+Rp 1,062 bn EBIT, 2026F breakeven Rp 18,604 bn) only if fixed operating expenses are strictly frozen at Rp 10,954 bn and CapEx stays disciplined at ~6.5%."
+        ],
+        "tables": [
+          [
+            [
+              "Forecast Driver",
+              "Base (3-Yr Avg)",
+              "Optimistic",
+              "Conservative",
+              "Milestone 2 Ratio Grounding"
+            ],
+            [
+              "Revenue Growth Rate",
+              "11.4%",
+              "15.3%",
+              "7.5%",
+              "Average of 2024 (7.5%) and 2025 (15.3%) YoY growth."
+            ],
+            [
+              "COGS (% of Revenue)",
+              "41.1%",
+              "38.1%",
+              "46.6%",
+              "3-year average COGS % (34.4%, 46.6%, 42.3%)."
+            ],
+            [
+              "Operating Expenses (% of Rev)",
+              "78.5%",
+              "55.7%",
+              "85.0%",
+              "3-year average cash opex % (117.0%, 62.8%, 55.7%)."
+            ],
+            [
+              "DSO / DIO / DPO (days)",
+              "24.2 / 4.8 / 67.8",
+              "10.9 / 0.7 / 75.0",
+              "30.0 / 8.0 / 59.1",
+              "3-year working capital days averages."
+            ],
+            [
+              "Capex (% of Revenue)",
+              "16.3%",
+              "6.5%",
+              "20.0%",
+              "3-year average Capex % (1.5%, 41.0%, 6.5%)."
+            ],
+            [
+              "D&A (% of Beg. Net PP&E)",
+              "30.6%",
+              "25.0%",
+              "43.9%",
+              "Average of 2024 (17.3%) and 2025 (43.9%)."
+            ],
+            [
+              "Tax Rate / Interest Rate / Div.",
+              "22.0% / 10.2% / 0%",
+              "22.0% / 6.9% / 0%",
+              "22.0% / 12.9% / 0%",
+              "3-year average effective interest rate (10.2%)."
+            ]
+          ],
+          [
+            [
+              "Pro Forma Income Statement, Balance Sheet & Cash Flow (Rp bn)",
+              "2025A",
+              "2026F",
+              "2027F",
+              "2028F"
+            ],
+            [
+              "Revenue (growing at 11.4% Base average)",
+              "18,322",
+              "20,408",
+              "22,732",
+              "25,321"
+            ],
+            [
+              "Cost of Goods Sold (41.1% of Revenue)",
+              "7,746",
+              "8,392",
+              "9,348",
+              "10,412"
+            ],
+            [
+              "Gross Profit (58.9% Gross Margin)",
+              "10,576",
+              "12,016",
+              "13,384",
+              "14,908"
+            ],
+            [
+              "Operating Expenses (scaled at 3-yr avg 78.5%)",
+              "10,954",
+              "16,020",
+              "17,844",
+              "19,876"
+            ],
+            [
+              "EBIT (Operating Loss)",
+              "(378)",
+              "(4,003)",
+              "(4,459)",
+              "(4,967)"
+            ],
+            [
+              "Interest Expense (10.2% on Rp 7,743 bn Debt)",
+              "535",
+              "788",
+              "788",
+              "788"
+            ],
+            [
+              "Earnings Before Tax (EBT)",
+              "(1,087)",
+              "(4,791)",
+              "(5,247)",
+              "(5,755)"
+            ],
+            [
+              "Tax Benefit (22.0%)",
+              "415",
+              "(1,054)",
+              "(1,154)",
+              "(1,266)"
+            ],
+            [
+              "Net Income / (Loss)",
+              "(1,502)",
+              "(3,737)",
+              "(4,093)",
+              "(4,489)"
+            ],
+            [
+              "Cash & Equivalents (Balance Sheet Plug)",
+              "21,755",
+              "14,282",
+              "7,642",
+              "968"
+            ],
+            [
+              "Accounts Receivable / Inventory",
+              "561",
+              "1,462",
+              "1,629",
+              "1,814"
+            ],
+            [
+              "Net PP&E",
+              "622",
+              "3,762",
+              "6,321",
+              "8,518"
+            ],
+            [
+              "Other Assets (held constant)",
+              "22,819",
+              "22,819",
+              "22,819",
+              "22,819"
+            ],
+            [
+              "TOTAL ASSETS",
+              "45,758",
+              "42,326",
+              "38,411",
+              "34,120"
+            ],
+            [
+              "Accounts Payable",
+              "1,254",
+              "1,559",
+              "1,737",
+              "1,935"
+            ],
+            [
+              "Total Debt (ST Rp 1,524 + LT Rp 6,219 held constant)",
+              "7,743",
+              "7,743",
+              "7,743",
+              "7,743"
+            ],
+            [
+              "Other Liabilities (held constant)",
+              "8,049",
+              "8,049",
+              "8,049",
+              "8,049"
+            ],
+            [
+              "Total Shareholders' Equity",
+              "28,712",
+              "24,975",
+              "20,882",
+              "16,393"
+            ],
+            [
+              "TOTAL LIABILITIES & EQUITY (Balance Check = 0)",
+              "45,758",
+              "42,326",
+              "38,411",
+              "34,120"
+            ],
+            [
+              "Cash Flow from Operations (CFO)",
+              "307",
+              "(4,143)",
+              "(2,930)",
+              "(2,542)"
+            ],
+            [
+              "Capital Expenditures (CFI)",
+              "(1,182)",
+              "(3,330)",
+              "(3,710)",
+              "(4,132)"
+            ],
+            [
+              "Net Change in Cash (Cash Flow Check = 0)",
+              "2,714",
+              "(7,473)",
+              "(6,640)",
+              "(6,674)"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(f) Multi-Method Valuation Reconciliation vs. Rp 25.00 Share Price (Assignment 14)",
+        "source_citation": "Assignment 14 Valuation Workbook & IDX Minimum Price Regulation (Sept 28, 2026)",
+        "paragraphs": [
+          "At WACC = 7.76% and Cost of Equity = 8.45% (Beta = 0.59), intrinsic Base Case models assign negative equity values (DCF = -Rp 121.1/share; Residual Income = -Rp 75.1/share), whereas peer multiples (2.30x P/B & 13.25x Net-Cash EV/EBITDA across BUKA, GRAB, SE, BELI) indicate Rp 39.8/share because relative multiples ignore GoTo's Base Case cash burn.",
+          "Regulatory Catalyst Behind Rp 25.00 Price: Previously trapped at IDX's Rp 50 minimum regular price limit ('gocap rule'), GoTo dropped 50% via ARB to Rp 25.00 (0.9x book value; down 93% from its Rp 338 IPO) once IDX lowered the regular minimum price floor to Rp 1 on September 28, 2026. Limited liability protects shares above the Rp 13.20/share Net Cash Liquidation Floor (Rp 14,013 bn net cash / 1,062 bn shares)."
+        ],
+        "tables": [
+          [
+            [
+              "Valuation Method",
+              "Enterprise / Equity Value (Rp bn)",
+              "Value per Share (Rp)",
+              "Why the Method Gives This Result"
+            ],
+            [
+              "1. Discounted Cash Flow (DCF - FCFF)",
+              "EV: (121,167.5) / Eq: (107,154.9)",
+              "Rp (121.1)",
+              "Base Case burns Rp 7.0T to Rp 7.7T of FCFF per year; even after adding Rp 14.01T net cash, ongoing cash burn yields negative equity value."
+            ],
+            [
+              "2. Residual Income (Economic Profit)",
+              "BVE: 28,711.7 / Eq: (79,770.2)",
+              "Rp (75.1)",
+              "Net losses (-Rp 3.7T to -Rp 4.5T) plus the 8.45% equity charge create -Rp 6.2T of negative economic profit per year, wiping out book equity."
+            ],
+            [
+              "3. Market Multiples (P/B & EV/EBITDA)",
+              "Implied P/B: 62.2 / EV-EBITDA: 17.4",
+              "Rp 39.8",
+              "Peer median P/B (2.30x -> Rp 62.2) & Net-Cash-Adj. EV/EBITDA (13.25x -> Rp 17.4) across BUKA, GRAB, SE, BELI (P/E excluded as EPS = -Rp 1.41)."
+            ],
+            [
+              "Current Market Price (Investing.com)",
+              "Market Cap: Rp 26,550.3 bn",
+              "Rp 25.0",
+              "Trades at 0.9x book value (below book value of Rp 27.03 to Rp 30.97/share), down 93% from Rp 338 IPO price."
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "(g) Target Stakeholder Decision & Supporting Appendices",
+        "source_citation": "Assignment 15 Capstone Report Section 6; Milestone 2, Milestone 4 & Valuation Workbooks",
+        "paragraphs": [
+          "Target Stakeholder: Public Equity Investor evaluating PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) at Rp 25.00 per share.",
+          "One-Sentence Recommendation: SELL GOTO at Rp 25.00 because negative ROE (-5.2%), negative Free Cash Flow (-Rp 875.3 bn), and Base Case cash burn yield negative intrinsic value under both DCF (-Rp 121.1/share) and Residual Income (-Rp 75.1/share). Under our Milestone 4 Base Case, scaling historical 78.5% opex and 16.3% CapEx drives ongoing EBIT losses and drains cash from Rp 21.76T to Rp 968 bn by 2028F. Even though GoTo holds Rp 13.20/share in Net Cash, investors should SELL until management sustains fixed-cost discipline (OpEx <= Rp 10.95T), generates two consecutive years of positive FCF after CapEx, and earns GAAP Net Income above its Rp 2.43T annual equity capital charge (8.45% Ke)."
+        ],
+        "tables": [
+          [
+            [
+              "Decision Condition / Trigger",
+              "Key Quantitative Threshold",
+              "Recommended Equity Stance",
+              "Supporting Workbook"
+            ],
+            [
+              "Current Verdict: Historical Base Case",
+              "78.5% OpEx + 16.3% CapEx drains cash to Rp 968 bn; DCF -Rp 121.1",
+              "SELL (Negative intrinsic value & negative FCF)",
+              "Group4_Milestone4_GOTO.xlsx"
+            ],
+            [
+              "Re-Entry Hurdle 1: Fixed-Cost Freeze",
+              "Keep OpEx <= Rp 10.95T (<= 55.7% run-rate) & cross Rp 18.6T breakeven",
+              "Required to turn GAAP EBIT & FCF positive",
+              "Group4_Milestone4_GOTO.xlsx + W12 Analysis"
+            ],
+            [
+              "Re-Entry Hurdle 2: Economic Profit (RI)",
+              "2 yrs positive FCF + GAAP Net Income > Rp 2.43T/yr (8.45% Ke)",
+              "Required before reconsidering SELL rating",
+              "Group4_FSA_Valuation_Workbook_GOTO.xlsx"
+            ]
+          ]
+        ]
+      }
+    ]
+  }
+]
