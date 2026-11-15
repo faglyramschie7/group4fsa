@@ -1743,7 +1743,7 @@
             "3,954"
           ],
           "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Fixed-OpEx Upside Regime"
+          "evidence_caption": "Fixed-OpEx Upside Scenario"
         }
       ]
     },
@@ -1784,7 +1784,7 @@
         ],
         "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
         "evidence_caption": "Scenario Bounds",
-        "title": "Scenarios & Structural Regime Break",
+        "title": "Pro Forma Scenario Comparison (Base vs. Fixed-OpEx)",
         "tone": "amber",
         "bullets": [
           {

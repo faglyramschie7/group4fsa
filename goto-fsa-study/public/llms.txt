@@ -344,7 +344,7 @@ Follow Milestone 3: (−1,501,685 − 307,025) / 45,757,642 = −3.952804%. Inpu
 - **Costs & Capex:** 3-yr historical averages avoid cherry-picking: COGS 41.1%, Cash OpEx 78.5%, Capex 16.3%, Working Capital (24.2 DSO, 4.8 DIO, 67.8 DPO).
 - *Context:* Satisfies rubric requirement to justify each assumption rather than guessing rates.
 
-#### Scenarios & Structural Regime Break
+#### Pro Forma Scenario Comparison (Base vs. Fixed-OpEx)
 - **Optimistic vs. Conservative:** Optimistic (15.3% rev, 55.7% opex, 6.5% capex) nears profitability; Conservative (7.5% rev, 85% opex, 20% capex) accelerates cash depletion.
 - **Crucial Operational Condition:** Management must hold OpEx fixed near Rp 10,954 bn to cross the Rp 18,604 bn breakeven and unlock 11.31x operating leverage.
 - *Context:* Frames the exact operational condition separating Base Case cash burn from Optimistic turnaround.
