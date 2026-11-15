@@ -4063,9 +4063,10 @@ const isColNumeric = (tbl, cIdx) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  gap: 16px;
+  padding: 0 20px;
+  gap: 12px;
   flex-shrink: 0;
+  min-width: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
   z-index: 10;
 }
@@ -4073,7 +4074,9 @@ const isColNumeric = (tbl, cIdx) => {
 .header-left {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .breadcrumb-container {
@@ -4084,6 +4087,9 @@ const isColNumeric = (tbl, cIdx) => {
   padding: 4px 10px 4px 5px;
   border-radius: 7px;
   border: 1px solid #e5e9e6;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .context-badge {
@@ -4126,6 +4132,10 @@ const isColNumeric = (tbl, cIdx) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .segmented-control {
@@ -7110,6 +7120,16 @@ const isColNumeric = (tbl, cIdx) => {
   border: 1px solid #e2e8f0;
   background: #f8fafc;
   color: #0f172a;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.mode-context-pill > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 .mode-context-pill.pres-context {
@@ -7128,6 +7148,24 @@ const isColNumeric = (tbl, cIdx) => {
   width: 8px;
   height: 8px;
   border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1180px) {
+  .top-nav {
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .mode-context-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .ticker-divider,
+  .ticker-audit {
+    display: none;
+  }
 }
 
 .pres-dot { background: #00aa13; }
