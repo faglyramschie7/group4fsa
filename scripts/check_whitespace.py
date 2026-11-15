@@ -1,3 +1,6 @@
+import os as _os, pathlib as _pathlib
+_os.chdir(_pathlib.Path(__file__).resolve().parent.parent)
+
 import fitz
 
 doc = fitz.open("GOTO FINANCIAL REPORT/LK GOTO 31 Dec 2025.pdf")

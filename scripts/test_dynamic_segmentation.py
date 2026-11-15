@@ -1,3 +1,6 @@
+import os as _os, pathlib as _pathlib
+_os.chdir(_pathlib.Path(__file__).resolve().parent.parent)
+
 import re
 
 def tokenize_note(note, rows):

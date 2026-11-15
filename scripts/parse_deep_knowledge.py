@@ -1,3 +1,6 @@
+import os as _os, pathlib as _pathlib
+_os.chdir(_pathlib.Path(__file__).resolve().parent.parent)
+
 import json
 
 with open("goto-fsa-study/src/data/fsa_knowledgebase.json") as f:

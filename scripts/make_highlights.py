@@ -1,3 +1,6 @@
+import os as _os, pathlib as _pathlib
+_os.chdir(_pathlib.Path(__file__).resolve().parent.parent)
+
 import fitz
 from PIL import Image, ImageDraw, ImageFont
 
@@ -145,11 +148,11 @@ draw.line([(base_img.width - 20, (oploss_y0 + oploss_y1) / 2), (sb_x, c3_y + 60)
 draw.polygon([(base_img.width - 20, (oploss_y0 + oploss_y1) / 2), (base_img.width - 10, (oploss_y0 + oploss_y1) / 2 - 6), (base_img.width - 10, (oploss_y0 + oploss_y1) / 2 + 6)], fill=(220, 38, 38))
 
 # Save full highlighted image
-canvas.save("test_full_highlighted.png", "PNG", quality=95)
-print("Saved test_full_highlighted.png successfully, size:", canvas.size)
+canvas.save("scripts/test_full_highlighted.png", "PNG", quality=95)
+print("Saved scripts/test_full_highlighted.png successfully, size:", canvas.size)
 
 # Focused Crop for Slide 5: Operating Statement Focus
 # Crop region: y=250 to y=1160 (captures table headers down through Operating Loss and Finance income)
 focused_crop = canvas.crop((0, 240, total_width, 1140))
-focused_crop.save("test_focused_highlighted.png", "PNG", quality=95)
-print("Saved test_focused_highlighted.png, size:", focused_crop.size)
+focused_crop.save("scripts/test_focused_highlighted.png", "PNG", quality=95)
+print("Saved scripts/test_focused_highlighted.png, size:", focused_crop.size)
