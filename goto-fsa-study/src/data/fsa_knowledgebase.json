@@ -5759,13 +5759,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Companion template for Weeks 14 (Cost of Capital & Valuation Applications)",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -5781,13 +5786,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "",
           "This workbook estimates your assigned company's cost of capital and then values it three independent ways: discounted cash flow (DCF), residual income (economic profit), and market multiples: so your final report and presentation can triangulate across methods rather than relying on a single number.",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -5803,15 +5813,11 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "",
           "1. Start with 'Cost of Capital'. Enter your risk-free rate proxy, beta, equity risk premium, and country risk premium to build the cost of equity, then your cost of debt and capital structure weights to compute WACC.",
-          "",
-          "",
           "",
           "",
           "",
@@ -5825,8 +5831,6 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
@@ -5836,15 +5840,20 @@
           "",
           "",
           "",
+          ""
+        ],
+        [
+          "",
+          "4. Market Multiples now applies Grab FY2025 P/B only, using parent equity and year-end ordinary shares for both companies. P/E and EV/EBITDA are excluded. Shopee/Sea, BUKA and BELI are excluded from valuation comparables.",
+          "",
+          "",
           "",
           "",
           ""
         ],
         [
           "",
-          "4. 'Market Multiples' asks you to enter 3 to 5 comparable companies' trading multiples (P/E, EV/EBITDA, P/B): from IDX data or a financial data provider: and applies the peer average/median to your company's own metrics.",
-          "",
-          "",
+          "5. Valuation Summary compares the retained DCF and residual-income models with the Grab P/B benchmark. No simple average or combined target is used.",
           "",
           "",
           "",
@@ -5852,8 +5861,6 @@
           ""
         ],
         [
-          "",
-          "5. 'Valuation Summary' pulls the per-share (or enterprise value) estimate from each method automatically into one football-field comparison so you can see how much they agree or disagree: and defend the gap in your final report.",
           "",
           "",
           "",
@@ -5869,15 +5876,11 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "",
           "Blue text: A hardcoded input you type or override.",
-          "",
-          "",
           "",
           "",
           "",
@@ -5891,13 +5894,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "",
           "Green text: A link to another sheet in this workbook.",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -5913,8 +5921,6 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ]
       ],
@@ -5926,13 +5932,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "CAPM cost of equity, after-tax cost of debt, and WACC: PT GoTo Gojek Tokopedia Tbk (GOTO), valuation date 30 December 2025",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -5948,8 +5959,6 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
@@ -5959,16 +5968,12 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Risk-Free Rate (Indonesian govt bond yield proxy)",
-          "",
+          0.045020000000000004,
           "Indonesia 10-year government yield on 30 Dec 2025 (6.120%, Investing.com) less the Damodaran rating-based default spread for Baa2 (1.618%). The yield contains default risk, so the spread is removed to approximate a risk-free rate. The Default Spreads sheet of the same Damodaran file shows 1.19% (Rf would be 4.93%), so verify before publication.",
-          "",
-          "",
           "",
           "",
           "",
@@ -5976,10 +5981,8 @@
         ],
         [
           "Levered Beta",
-          "0.59",
+          0.59,
           "From Investing.com (PT GoTo Gojek Tokopedia Tbk key statistics), levered beta = 0.59.",
-          "",
-          "",
           "",
           "",
           "",
@@ -5987,10 +5990,8 @@
         ],
         [
           "Mature-Market Equity Risk Premium",
-          "0.0423",
+          0.0423,
           "Damodaran ctryprem.xlsx (update 1 Jan 2026): implied mature-market ERP of 4.23%, already net of the U.S. default spread adjustment shown in the file.",
-          "",
-          "",
           "",
           "",
           "",
@@ -5998,10 +5999,8 @@
         ],
         [
           "Indonesia Country Risk Premium",
-          "0.02465",
+          0.02465,
           "Damodaran ctryprem.xlsx (1 Jan 2026), Indonesia (Baa2): rating-based country risk premium of 2.465% (default spread 1.618% x 1.5234). The CDS-based alternative in the file is 1.60%.",
-          "",
-          "",
           "",
           "",
           "",
@@ -6009,8 +6008,15 @@
         ],
         [
           "Cost of Equity",
-          "",
+          0.0845205,
           "Risk-Free Rate + Beta x (Mature ERP + Country Risk Premium) = 4.50% + 0.59 x 6.70% = 8.45%.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
           "",
           "",
           "",
@@ -6025,16 +6031,12 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Pre-Tax Cost of Debt",
-          "0.0691",
+          0.0691,
           "GoTo 2025 effective interest rate on debt: Rp 535.2 bn interest expense / Rp 7,742.6 bn total debt = 6.91% (from Milestone 4 Sources).",
-          "",
-          "",
           "",
           "",
           "",
@@ -6042,10 +6044,8 @@
         ],
         [
           "Effective Tax Rate",
-          "0.22",
+          0.22,
           "Indonesian statutory corporate tax rate",
-          "",
-          "",
           "",
           "",
           "",
@@ -6053,8 +6053,15 @@
         ],
         [
           "After-Tax Cost of Debt",
-          "",
+          0.053897999999999995,
           "Pre-Tax Cost of Debt x (1 - Tax Rate) = 6.91% x (1 - 0.22) = 5.39%.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
           "",
           "",
           "",
@@ -6069,16 +6076,12 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Market Value of Equity (Rp bn)",
-          "26550.255",
+          26550.255,
           "Rp 25.00 share price (Investing.com) x 1,062,010.2 million shares outstanding (excluding treasury shares) = Rp 26,550.3 bn (Investing.com reports Rp 26.66T).",
-          "",
-          "",
           "",
           "",
           "",
@@ -6086,10 +6089,8 @@
         ],
         [
           "Market (or Book) Value of Debt (Rp bn)",
-          "7742.643",
+          7742.643,
           "Total interest-bearing debt at 31 Dec 2025: Short-Term Debt (Rp 1,523.8 bn) + Long-Term Debt (Rp 6,218.9 bn) = Rp 7,742.6 bn.",
-          "",
-          "",
           "",
           "",
           "",
@@ -6097,9 +6098,7 @@
         ],
         [
           "Weight of Equity",
-          "",
-          "",
-          "",
+          0.7742202190086123,
           "",
           "",
           "",
@@ -6108,9 +6107,7 @@
         ],
         [
           "Weight of Debt",
-          "",
-          "",
-          "",
+          0.22577978099138776,
           "",
           "",
           "",
@@ -6119,10 +6116,8 @@
         ],
         [
           "WACC",
-          "",
+          0.07760655865659122,
           "(Weight of Equity x Cost of Equity) + (Weight of Debt x After-Tax Cost of Debt) = 77.4% x 8.45% + 22.6% x 5.39% = 7.76%.",
-          "",
-          "",
           "",
           "",
           "",
@@ -6137,13 +6132,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Forecast figures from the Forecasting Workbook (Pro Forma sheets) for PT GoTo Gojek Tokopedia Tbk",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6159,79 +6159,81 @@
           "2028F",
           "Terminal",
           "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
           "",
           "",
           ""
         ],
         [
           "EBIT",
-          "-4003.4",
-          "-4459.4",
-          "-4967.4",
-          "",
-          "",
+          -4003.4,
+          -4459.4,
+          -4967.4,
           "",
           "",
           ""
         ],
         [
           "Less: Tax on EBIT",
-          "",
-          "",
-          "",
-          "",
-          "",
+          0,
+          0,
+          0,
           "",
           "",
           ""
         ],
         [
           "EBIAT (NOPAT)",
-          "",
-          "",
-          "",
-          "",
-          "",
+          -4003.4,
+          -4459.4,
+          -4967.4,
           "",
           "",
           ""
         ],
         [
           "Add: Depreciation & Amortization",
-          "190.4",
-          "1151.1",
-          "1934",
-          "",
-          "",
+          190.4,
+          1151.1,
+          1934,
           "",
           "",
           ""
         ],
         [
           "Less: Capital Expenditures",
-          "-3329.8",
-          "-3709.1",
-          "-4131.6",
-          "",
-          "",
+          -3329.8,
+          -3709.1,
+          -4131.6,
           "",
           "",
           ""
         ],
         [
           "Less: Increase in Net Working Capital",
-          "-595.9",
-          "11.1",
-          "12.4",
-          "",
-          "",
+          -595.9,
+          11.1,
+          12.4,
           "",
           "",
           ""
         ],
         [
           "Free Cash Flow to Firm (FCFF)",
+          -7738.7,
+          -7006.299999999999,
+          -7152.6,
           "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6247,26 +6249,20 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Terminal Growth Rate",
-          "",
+          0.03,
           "",
           "",
           "Linked to Terminal Growth sheet (3.0% long-run sustainable rate, well below WACC).",
           "Linked to the Terminal Growth sheet (manual 3.5% by default; see selector there). Should not exceed long-run nominal GDP growth",
-          "",
-          "",
           ""
         ],
         [
           "Discount Rate (WACC, linked)",
-          "",
-          "",
-          "",
+          0.07760655865659122,
           "",
           "",
           "",
@@ -6277,27 +6273,30 @@
           "Terminal Value (at end of Year 3)",
           "",
           "",
-          "",
+          -154751.3243530784,
           "FCFF Year 3 x (1+g) / (WACC - g), Gordon growth model.",
           "FCFF Year 3 x (1+g) / (WACC - g), Gordon growth model",
-          "",
-          "",
           ""
         ],
         [
           "Discount Factor",
-          "",
-          "",
-          "",
-          "",
-          "",
+          0.927982473720891,
+          0.8611514715331442,
+          0.7991334728017125,
           "",
           "",
           ""
         ],
         [
           "PV of FCFF",
+          -7181.37796938386,
+          -6033.485555002668,
+          -5715.8820775615295,
+          -123666.96325093978,
           "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6313,15 +6312,11 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Sum of PV of FCFF (Years 1 to 3)",
-          "",
-          "",
-          "",
+          -18930.74560194806,
           "",
           "",
           "",
@@ -6330,9 +6325,7 @@
         ],
         [
           "PV of Terminal Value",
-          "",
-          "",
-          "",
+          -123666.96325093978,
           "",
           "",
           "",
@@ -6341,9 +6334,7 @@
         ],
         [
           "Enterprise Value",
-          "",
-          "",
-          "",
+          -142597.70885288785,
           "",
           "",
           "",
@@ -6352,20 +6343,16 @@
         ],
         [
           "Less: Net Debt (Total Debt - Cash)",
-          "-14012.522",
+          -14012.522,
           "",
           "",
           "",
           "Total debt (Rp 7,742.6 bn) minus cash (Rp 21,755.2 bn). Negative net debt means GoTo has net cash, which adds to Equity Value.",
-          "",
-          "",
           ""
         ],
         [
           "Equity Value",
-          "",
-          "",
-          "",
+          -128585.18685288785,
           "",
           "",
           "",
@@ -6374,9 +6361,7 @@
         ],
         [
           "Shares Outstanding (million)",
-          "1062010.2",
-          "",
-          "",
+          1062010.2,
           "",
           "",
           "",
@@ -6385,13 +6370,11 @@
         ],
         [
           "DCF Value per Share (Rp)",
+          -121.07716748190164,
           "",
           "",
           "",
-          "",
-          "Negative DCF value (-Rp 121.1/share) because under the Base Case (78.5% opex and 16.3% capex), GoTo burns Rp 7.0T to Rp 7.7T of cash per year and drains its Rp 21.8T cash down to Rp 968 bn by 2028F.",
-          "",
-          "",
+          "Negative DCF value (-Rp 121.1/share) because under the Base Case (78.5% opex, 16.3% capex, and zero cash tax refunds on losses), GoTo burns Rp 7.0T to Rp 7.7T of FCFF per year.",
           ""
         ]
       ],
@@ -6399,130 +6382,261 @@
         [
           "Terminal Growth Rate (g)",
           "",
+          "",
+          "",
+          "",
+          "",
           ""
         ],
         [
           "Derives g from the forecast, tests it against reasonable limits, and feeds the DCF sheet (cell B15)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "A. FUNDAMENTAL APPROACH: g = Reinvestment rate x ROIC",
           "Value",
-          "Note"
+          "Note",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "NOPAT, 2028F (Rp bn)",
+          -4967.4,
+          "Final forecast year, linked from DCF Valuation.",
           "",
-          "Final forecast year, linked from DCF Valuation."
+          "",
+          "",
+          ""
         ],
         [
           "Capital expenditures, 2028F",
+          4131.6,
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "Less: depreciation & amortisation, 2028F",
+          1934,
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "Add: increase in net working capital, 2028F",
+          -12.4,
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "Net reinvestment = Capex - D&A + increase in NWC",
+          2185.2000000000003,
+          "New capital the firm must put in to support growth.",
           "",
-          "New capital the firm must put in to support growth."
+          "",
+          "",
+          ""
         ],
         [
           "Reinvestment rate = Net reinvestment / NOPAT",
+          "n.m.",
+          "Not meaningful when NOPAT is zero or negative.",
           "",
-          "Not meaningful when NOPAT is zero or negative."
+          "",
+          "",
+          ""
         ],
         [
           "Invested capital at start of 2026F (proxy)",
+          14699.134999999998,
+          "Book equity + net debt. Proxy only for invested capital.",
           "",
-          "Book equity + net debt. Proxy only. If book equity is negative (e.g. ABBA consolidated), enter a better estimate by overwriting this cell."
+          "",
+          "",
+          ""
         ],
         [
           "Add: net reinvestment 2026F and 2027F",
+          6282.200000000001,
+          "Rolls invested capital forward to the start of 2028F.",
           "",
-          "Rolls invested capital forward to the start of 2028F."
+          "",
+          "",
+          ""
         ],
         [
           "Invested capital at start of 2028F",
+          20981.335,
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "ROIC = NOPAT 2028F / Invested capital",
+          "n.m.",
+          "Compare with WACC: value is created only if ROIC > WACC.",
           "",
-          "Compare with WACC: value is created only if ROIC > WACC."
+          "",
+          "",
+          ""
         ],
         [
           "Fundamental g = Reinvestment rate x ROIC",
+          "n.m.",
+          "Growth the firm can fund from its own reinvestment.",
           "",
-          "Growth the firm can fund from its own reinvestment."
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "B. REASONABLENESS LIMITS",
           "Value",
-          "Note"
+          "Note",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Cap: long-run nominal growth (default = risk-free rate)",
+          0.045020000000000004,
+          "Replace with long-run nominal GDP growth (real growth + inflation) from BPS / Bank Indonesia if you prefer; verify the source.",
           "",
-          "Replace with long-run nominal GDP growth (real growth + inflation) from BPS / Bank Indonesia if you prefer; verify the source."
+          "",
+          "",
+          ""
         ],
         [
           "Discount rate (WACC)",
+          0.07760655865659122,
+          "g must stay well below WACC.",
           "",
-          "g must stay well below WACC."
+          "",
+          "",
+          ""
         ],
         [
           "Fundamental g, capped at the limit above",
+          "n.m.",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "C. CHOOSE THE g USED IN THE DCF",
           "Value",
-          "Note"
+          "Note",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Analyst judgement g (manual input)",
-          "0.03",
-          "For loss-making firms with negative NOPAT (like GoTo under the Base Case), ROIC and reinvestment rate show 'n.m.' and g is set by analyst judgment (3.0%)."
+          0.03,
+          "For loss-making firms with negative NOPAT (like GoTo under the Base Case), ROIC and reinvestment rate show 'n.m.' and g is set by analyst judgment (3.0%).",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Selector: 1 = manual input, 2 = fundamental g (capped)",
-          "1",
-          "Falls back to the manual input when the fundamental g is \"n.m.\"."
+          1,
+          "Falls back to the manual input when the fundamental g is \"n.m.\".",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Terminal growth rate used in DCF",
+          0.03,
+          "Linked to DCF Valuation!B15 and Residual Income Valuation!B14 (one g for both methods).",
           "",
-          "Linked to DCF Valuation!B15 and Residual Income Valuation!B14 (one g for both methods)."
+          "",
+          "",
+          ""
         ],
         [
           "Check: g below WACC?",
+          "OK",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "Check: g at or below the cap?",
+          "OK",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "Check: g below cost of equity (needed for residual income)?",
+          "OK",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
           "How to read this sheet. A firm can only grow in the long run if it reinvests, and each rupiah reinvested earns ROIC. A high fundamental g (above the cap) means the forecast reinvests heavily at a high return, which cannot continue forever, so the cap applies. For loss-making firms such as ABBA, NOPAT is negative, ROIC and the reinvestment rate are not meaningful, and g must be a reasoned judgement (0% to 3% is a defensible range when net reinvestment is close to zero).",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ]
@@ -6535,13 +6649,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Values equity as book value plus the present value of income earned above the cost of equity",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6557,68 +6676,72 @@
           "2028F",
           "",
           "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
           "",
           "",
           ""
         ],
         [
           "Beginning Book Value of Equity",
-          "28711.657",
-          "",
-          "",
-          "",
-          "",
+          28711.657,
+          24974.657,
+          20881.957,
           "",
           "",
           ""
         ],
         [
           "Forecast Net Income",
-          "-3737",
-          "-4092.7",
-          "-4488.9",
-          "",
-          "",
+          -3737,
+          -4092.7,
+          -4488.9,
           "",
           "",
           ""
         ],
         [
           "Dividends Paid (reduces equity)",
-          "0",
-          "0",
-          "0",
-          "",
-          "",
+          0,
+          0,
+          0,
           "",
           "",
           ""
         ],
         [
           "Cost of Equity (linked)",
-          "",
-          "",
-          "",
-          "",
-          "",
+          0.0845205,
+          0.0845205,
+          0.0845205,
           "",
           "",
           ""
         ],
         [
           "Equity Charge (Beg. BVE x Cost of Equity)",
-          "",
-          "",
-          "",
-          "",
-          "",
+          2426.7236054685,
+          2110.8704969685,
+          1764.9534466184998,
           "",
           "",
           ""
         ],
         [
           "Residual Income",
+          -6163.7236054685,
+          -6203.570496968499,
+          -6253.853446618499,
           "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6634,16 +6757,12 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Terminal Growth Rate of Residual Income (same g as DCF)",
-          "",
+          0.03,
           "Linked to the Terminal Growth sheet, so DCF and residual income use one long-run growth assumption.",
-          "",
-          "",
           "",
           "",
           "",
@@ -6651,22 +6770,18 @@
         ],
         [
           "Discount Factor (at Cost of Equity)",
-          "",
-          "",
-          "",
-          "",
-          "",
+          0.9220664800711467,
+          0.8502065936707943,
+          0.7839470011593089,
           "",
           "",
           ""
         ],
         [
           "PV of Residual Income",
-          "",
-          "",
-          "",
-          "",
-          "",
+          -5683.362929025777,
+          -5274.316540824225,
+          -4902.68965516638,
           "",
           "",
           ""
@@ -6674,6 +6789,13 @@
         [
           "Terminal Value of Residual Income (Year 3+)",
           "",
+          "",
+          -92621.4973234173,
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6689,15 +6811,11 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Sum of PV of Residual Income (Years 1 to 3)",
-          "",
-          "",
-          "",
+          -15860.369125016383,
           "",
           "",
           "",
@@ -6706,9 +6824,7 @@
         ],
         [
           "PV of Terminal Residual Income",
-          "",
-          "",
-          "",
+          -92621.4973234173,
           "",
           "",
           "",
@@ -6717,9 +6833,7 @@
         ],
         [
           "Current Book Value of Equity",
-          "",
-          "",
-          "",
+          28711.657,
           "",
           "",
           "",
@@ -6728,9 +6842,7 @@
         ],
         [
           "Equity Value (BVE + PV of Residual Income)",
-          "",
-          "",
-          "",
+          -79770.20944843368,
           "",
           "",
           "",
@@ -6739,9 +6851,7 @@
         ],
         [
           "Shares Outstanding (million)",
-          "1062010.2",
-          "",
-          "",
+          1062010.2,
           "",
           "",
           "",
@@ -6750,11 +6860,9 @@
         ],
         [
           "Residual Income Value per Share (Rp)",
-          "",
+          -75.11247015182498,
           "",
           "Equity Value (Rp bn) / Shares (million), scaled to Rp per share",
-          "",
-          "",
           "",
           "",
           ""
@@ -6762,8 +6870,78 @@
       ],
       "Market Multiples": [
         [
-          "Market Multiples Valuation",
+          "Grab-only P/B comparison",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "FY2025 retrospective comparison. Parent equity and ordinary shares on both sides.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Share price: 31 Dec 2025. Audited accounts published after year-end.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab input / calculation",
+          "Value",
+          "Unit",
+          "Basis",
+          "Source",
+          "",
+          ""
+        ],
+        [
+          "Grab close",
+          4.99,
+          "USD/share",
+          "31 Dec 2025",
+          "GRAB historical close (Yahoo / Quiver)",
+          "",
+          ""
+        ],
+        [
+          "Parent equity",
+          6728,
+          "USD million",
+          "FY2025 audited",
+          "COMPETITORS/GRAB.pdf, PDF p149 (F-5)",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares",
+          4097.646678,
+          "million shares",
+          "Class A + B",
+          "GRAB.pdf, PDF p2: 3,969,290,878 + 128,355,800",
+          "",
+          ""
+        ],
+        [
+          "Grab BVPS",
+          1.6419180394742663,
+          "USD/share",
+          "Parent basis",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6773,8 +6951,24 @@
           ""
         ],
         [
-          "Comparable companies current trading data; peer averages and medians applied to GoTo metrics",
+          "Grab P/B",
+          3.039128555769917,
+          "x",
           "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo parent equity",
+          31805.025,
+          "Rp billion",
+          "FY2025 audited",
+          "GoTo FY2025 audited statements, PDF p16",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6784,8 +6978,51 @@
           ""
         ],
         [
-          "Peer data from IDX and regional market reports (closing prices December 2025)",
+          "APPLY GRAB P/B TO GOTO",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo metric",
+          "Value",
+          "Grab P/B (x)",
+          "Rp/share",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares (bn)",
+          1062.010200395,
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Parent BVPS (Rp)",
+          29.947946816490614,
+          3.039128555769917,
+          91.0156603566754,
+          "",
+          "",
+          ""
+        ],
+        [
+          "P/E and EV/EBITDA",
+          "Excluded",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6795,63 +7032,15 @@
           ""
         ],
         [
-          "Company",
-          "Price (Rp)",
-          "EPS (Rp)",
-          "BVPS (Rp)",
-          "P/E",
-          "P/B",
-          "EV/EBITDA",
+          "Grab P/B benchmark (Rp/share)",
+          "",
+          "",
+          91.0156603566754,
+          "Single-company benchmark. No median, averaging or net cash add-on.",
           "",
           ""
         ],
         [
-          "PT Bukalapak.com Tbk (BUKA)",
-          "120",
-          "11.6",
-          "245",
-          "",
-          "",
-          "6.5",
-          "",
-          ""
-        ],
-        [
-          "Grab Holdings Ltd (GRAB)",
-          "54400",
-          "1700",
-          "25900",
-          "",
-          "",
-          "14.5",
-          "",
-          ""
-        ],
-        [
-          "Sea Limited (SE - Shopee)",
-          "1600000",
-          "42100",
-          "381000",
-          "",
-          "",
-          "16",
-          "",
-          ""
-        ],
-        [
-          "PT Global Digital Niaga Tbk (BELI)",
-          "450",
-          "0",
-          "180",
-          "",
-          "",
-          "12",
-          "",
-          ""
-        ],
-        [
-          "Peer Average",
-          "",
           "",
           "",
           "",
@@ -6861,8 +7050,24 @@
           ""
         ],
         [
-          "Peer Median",
+          "Basis and exclusions",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6872,8 +7077,15 @@
           ""
         ],
         [
-          "APPLY PEER MULTIPLES TO YOUR COMPANY",
+          "P/E: GoTo loss-making. EV/EBITDA: adjusted and reported bases not harmonized.",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6883,10 +7095,8 @@
           ""
         ],
         [
-          "Metric",
-          "Your Company Value",
-          "x Peer Median Multiple",
-          "Implied Value",
+          "Parent BVPS normalizes this relative comparison only. DCF / RI model equity bases remain unchanged.",
+          "",
           "",
           "",
           "",
@@ -6894,19 +7104,6 @@
           ""
         ],
         [
-          "EPS (Rp)",
-          "-1.41",
-          "",
-          "-",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "BVPS (Rp)",
-          "27.03",
           "",
           "",
           "",
@@ -6916,9 +7113,7 @@
           ""
         ],
         [
-          "EBITDA per Share (Rp)",
-          "0.32",
-          "",
+          "Market source: https://ca.finance.yahoo.com/quote/GRAB/history/",
           "",
           "",
           "",
@@ -6927,11 +7122,9 @@
           ""
         ],
         [
-          "Average Implied Value per Share (P/E & P/B methods)",
+          "Audited shares/equity: https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
           "",
           "",
-          "",
-          "Primary equity multiple: P/B method (Book Value per Share x Peer Median P/B of 2.10x). P/E is not yet meaningful because GoTo is at breakeven.",
           "",
           "",
           "",
@@ -6946,13 +7139,18 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Reconciling DCF, residual income, and market multiple estimates for PT GoTo Gojek Tokopedia Tbk",
           "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -6968,16 +7166,12 @@
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
           "Discounted Cash Flow (DCF)",
-          "",
+          -121.07716748190164,
           "DCF Valuation sheet",
-          "",
-          "",
           "",
           "",
           "",
@@ -6985,29 +7179,23 @@
         ],
         [
           "Residual Income (Economic Profit)",
-          "",
+          -75.11247015182498,
           "Residual Income Valuation sheet",
           "",
           "",
           "",
-          "",
-          "",
           ""
         ],
         [
-          "Market Multiples (P/E & P/B avg.)",
-          "",
-          "Market Multiples sheet",
-          "",
-          "",
+          "Grab-only P/B benchmark",
+          91.0156603566754,
+          "Parent-equity normalized, single comparator",
           "",
           "",
           "",
           ""
         ],
         [
-          "Range (Low to High)",
-          "",
           "",
           "",
           "",
@@ -7017,8 +7205,24 @@
           ""
         ],
         [
-          "Simple Average of Methods",
+          "Interpretation",
           "",
+          "Different assumptions. No combined target.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Simple average not used",
+          "",
+          "Do not blend intrinsic outputs and peer benchmark.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
           "",
           "",
           "",
@@ -7028,9 +7232,16 @@
           ""
         ],
         [
-          "Current Market Price (for reference)",
-          "25",
-          "GoTo current traded share price on IDX (Rp 25.00 per Investing.com screenshot; down from Rp 338 IPO).",
+          "Assignment reference price",
+          25,
+          "Rp25 from the submitted assignment; not a live quote.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
           "",
           "",
           "",
@@ -7039,9 +7250,7 @@
           ""
         ],
         [
-          "Reading the Gap (Week 14 PPT Slide 20): Under the Base Case forecast (historical average 78.5% opex and 16.3% capex), GoTo continues to post operating losses (-Rp 4.0T to -Rp 5.0T) and burns through its cash pile, yielding negative intrinsic values under DCF (-Rp 121.1/share) and Residual Income (-Rp 75.1/share). Market Multiples (Rp 39.8/share) are higher because relative valuation applies profitable peers' multiples (P/B 2.30x, EV/EBITDA 13.25x) to GoTo without penalizing its ongoing cash burn. Meanwhile, after IDX removed the Rp 50 minimum price floor on Sept 28, 2026 (lowering it to Rp 1), GoTo dropped from Rp 50 to Rp 25.00 (0.9x book value), trading just above its net cash liquidation floor of Rp 13.20/share.",
-          "",
-          "",
+          "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
           "",
           "",
           "",
@@ -7055,15 +7264,15 @@
       "PT GoTo Gojek Tokopedia Tbk (IDX: GOTO)",
       "Financial Statement Analysis: Final Project Written Report",
       "Integrated Analysis Across Strategy, Accounting Quality, Ratios, Pro Forma Forecast, and Valuation",
-      "Prepared by Group 4: Fagly Ramschie | Anggreini Ruitan | Galatia Rompas",
+      "Prepared by Group 4: Fagly Ramschie  |  Anggreini Ruitan  |  Galatia Rompas",
       "Magister Manajemen Universitas Klabat",
       "(a) Executive Summary",
       "This report presents an integrated financial statement analysis and valuation of PT GoTo Gojek Tokopedia Tbk (GOTO) for 2023 to 2025, connecting our findings from Milestones 1 through 4 into an actionable decision for an equity investor. GoTo is Indonesia's largest digital ecosystem across On Demand Services (Gojek), Financial Technology (GoPay), and e-commerce service fees (from Tokopedia). However, our analysis shows that scale and user reach have not yet translated into sustainable economic profit.",
       "1. Industry and Strategic Position (Milestone 1): GoTo operates in a high rivalry industry where customers have low switching costs and easily compare prices across Grab, Maxim, inDrive, ShopeeFood, OVO, and DANA. GoTo uses a mix of cost leadership and differentiation, which forces it to spend heavily on promotions (Rp 3.09 trillion in 2025 sales and marketing) and product development (Rp 2.15 trillion) just to defend its market share.",
-      "2. Accounting Quality and Red Flags (Milestone 3): GoTo remains unprofitable under Indonesian financial accounting standards (PSAK), reporting consolidated net losses of Rp 90,519 billion in 2023, Rp 5,465 billion in 2024, and Rp 1,502 billion in 2025. Total equity fell from Rp 35,720 billion in 2023 to Rp 28,712 billion in 2025 because of Rp 214.1 trillion in accumulated losses. Furthermore, 22.57% of GoTo's assets sit in Tokopedia (Rp 7,432 billion) and Bank Jago (Rp 2,895 billion) investments, alongside Rp 1,669 billion of Level 3 investments that carry impairment risk. Operating cash flow was only Rp 307 billion in 2025, covering just 26.0% of its Rp 1,182 billion capital expenditure.",
+      "2. Accounting Quality and Red Flags (Milestone 3): GoTo remains unprofitable under Indonesian financial accounting standards (PSAK), reporting consolidated net losses of Rp 90,519 billion in 2023, Rp 5,465 billion in 2024, and Rp 1,502 billion in 2025. Total equity fell from Rp 35,720 billion in 2023 to Rp 28,712 billion in 2025 because of Rp 215.3 trillion in accumulated losses. Furthermore, 22.57% of GoTo's assets sit in Tokopedia (Rp 7,432 billion) and Bank Jago (Rp 2,895 billion) investments, alongside Rp 1,669 billion of Level 3 investments that carry impairment risk. Operating cash flow was only Rp 307 billion in 2025, covering just 26.0% of its Rp 1,182 billion capital expenditure.",
       "3. Financial Ratios and DuPont Analysis (Milestone 2): While operating loss narrowed from -69.5% of revenue in 2023 to -2.1% in 2025, Return on Equity (ROE) remained negative in all three years (-253.4% in 2023, -18.0% in 2024, and -5.2% in 2025). Debt doubled in 2025 from Rp 3,820 billion to Rp 7,743 billion (raising Debt to Equity from 0.13x to 0.27x). GoTo's survival is currently supported by its Rp 21,755 billion cash balance (current ratio of 2.73x), which acts as a buffer while operations attempt to break even.",
       "4. Three Year Forecast and Breakeven (Milestone 4): In our Base Case forecast anchored on GoTo's 2023 to 2025 historical averages (11.4% revenue growth, 41.1% COGS, 78.5% cash operating expenses, and 16.3% capex), GoTo stays below breakeven in all three forecast years (2026F to 2028F), posting annual EBIT losses of Rp 4,003 billion to Rp 4,967 billion and burning its cash balance down from Rp 21,755 billion in 2025 to just Rp 968 billion by 2028F. GoTo only breaks even if management freezes fixed operating expenses in rupiah terms instead of letting costs grow with revenue.",
-      "5. Valuation and Recommendation (Assignment 14): At a WACC of 7.76% and Cost of Equity of 8.45% (Beta = 0.59 from Investing.com), Base Case DCF value is negative (-Rp 121.1 per share) and Residual Income value is negative (-Rp 75.1 per share), while peer multiples imply Rp 39.8 per share against the actual traded share price of Rp 25.00 (0.9x book value, down 93% from its Rp 338 IPO). For an equity investor, our recommendation is AVOID / SELL: until GoTo proves it can earn net income above its 8.45% cost of equity without draining cash or taking on more debt, the stock destroys shareholder value.",
+      "5. Valuation and Recommendation (Assignment 14): WACC 7.76%, Ke 8.45%, DCF -Rp121.1/share and residual income -Rp75.1/share retain the submitted assumptions. The revised Grab-only P/B benchmark is Rp91.0/share. At the assignment reference price of Rp25, our SELL / AVOID recommendation follows the milestone cash-burn forecast and negative economic profit, rather than an average of incompatible valuation methods.",
       "(b) Business and Industry Analysis (Milestone 1)",
       "1. Company and Industry Overview",
       "PT GoTo Gojek Tokopedia Tbk connects 66 million Annual Transacting Users, more than 6.4 million merchants, and over 3 million driver partners in Indonesia. After deconsolidating Tokopedia in early 2024 (retaining a 24.99% associate stake), GoTo now relies on two active operating engines: On Demand Services (Gojek mobility, GoFood delivery, and logistics, which generated Rp 12,361 billion in 2025 revenue) and Financial Technology (GoPay payments and consumer loans, which grew 74.1% to Rp 5,191 billion in 2025), alongside Rp 820 billion in e-commerce service fees from Tokopedia.",
@@ -7073,38 +7282,38 @@
       "(c) Accounting Quality Assessment (Milestone 3)",
       "1. Red Flags in Investing Activities and Revenue Recognition",
       "Using the Week 7 accounting quality framework and GoTo's audited 2025 financial statements (issued March 2026), we identified two critical red flags that directly impact valuation:",
-      "Red Flag 1 - Carrying Value of Associates, Goodwill, and Level 3 Investments: Following the deconsolidation of Tokopedia, GoTo carries Rp 7,432,326 million in Tokopedia (including Rp 2,003,559 million of goodwill) and Rp 2,894,921 million in Bank Jago, totaling 22.57% of GoTo's total assets. GoTo also holds Rp 1,668,574 million in Level 3 private investments (Note 14 and 15). Because GoTo recorded repeated impairment and fair value losses in 2023 to 2025, we tested a 20% write down on Tokopedia and Level 3 investments (Rp 9,100,900 million combined), which would wipe out Rp 1,820,180 million (3.98% of total assets).",
-      "Red Flag 2 - Gross vs. Net Revenue Judgments and Related Parties: Under PSAK 72, GoTo nets customer promotions against gross revenue. When competition heats up, higher promo incentives directly reduce reported net revenue. In addition, related party revenue rose to Rp 1,306,110 million (7.13% of 2025 revenue, Note 25), mainly e-commerce service fees from Tokopedia.",
+      "Red Flag 1 - Carrying Value of Associates, Goodwill, and Level 3 Investments: Following the deconsolidation of Tokopedia, GoTo carries Rp 7,432,326 million in Tokopedia (including Rp 2,003,559 million of goodwill) and Rp 2,894,921 million in Bank Jago, totaling 22.57% of GoTo's total assets. GoTo also holds Rp 1,668,574 million in Level 3 private investments (Note 14 and 15). Because GoTo recorded repeated impairment and fair value losses in 2023 to 2025, we tested a 20% write down on Tokopedia and Level 3 investments (Rp 9,100,900 million combined), which would wipe out Rp 1,820,180 million (3.98% of total assets). This is a hypothetical before-tax sensitivity, not a recognized impairment. Embedded goodwill is included in the associate carrying amount and is not written down a second time.",
+      "Red Flag 2 - Revenue Judgments and Related Parties: Customer incentives reduce revenue when no distinct good or service is received, or its fair value cannot be measured reliably. Payments for distinct services are treated according to their substance, with excess incentives expensed as marketing. Related-party revenue was Rp1,306,110 million (7.13% of FY2025 revenue, Note 25), mainly Tokopedia service fees.",
       "2. Accruals Ratio and Investing Cash Flow Check (2024 to 2025)",
-      "Crucial Finding: Although GoTo's headline operating cash flow was +Rp 307.0 billion in 2025, it covered only 25.97% of GoTo's Rp 1,182.4 billion capital expenditures, leaving a Free Cash Flow deficit of -Rp 875.3 billion. GoTo's cash balance only rose in 2025 because it cashed in Rp 1,386.5 billion of time deposits and borrowed Rp 3,718.0 billion in new third party loans (Cash Flow Statement, pp. 21 to 22).",
+      "FY2025 CFO of Rp307.0 billion covered 25.97% of Rp1,182.4 billion cash capex, leaving FCF of -Rp875.3 billion. Time-deposit settlements of Rp1,386.5 billion and new third-party borrowing of Rp3,718.0 billion contributed to liquidity. The change in cash also includes other investing and financing flows and exchange effects. These two inflows alone do not reconcile it.",
       "(d) Financial Analysis: Common-Size, Ratios, DuPont, and Altman Z-Score (Milestone 2)",
       "1. Common-Size Income Statement and Balance Sheet Summary (2023 to 2025)",
       "2. Liquidity, Efficiency, Solvency, Profitability, and 3-Step DuPont ROE",
       "3. Altman Z-Score Analysis (Distress Assessment)",
-      "Applying the Emerging Market / Non-Manufacturing Altman Z''-Score model (Z'' = 6.56 X1 + 3.26 X2 + 6.72 X3 + 1.05 X4) to GoTo's 2025 audited balance sheet (Total Assets = Rp 45,758 bn, Working Capital = Rp 18,412 bn, Accumulated Deficit = -Rp 214,119 bn, EBIT = -Rp 378 bn, Book Equity = Rp 28,712 bn, Total Liabilities = Rp 17,046 bn):",
-      "X1 (Working Capital / Assets = +0.402): Contributes +2.64 points because of the Rp 21.76T cash balance.",
-      "X2 (Retained Earnings / Assets = -4.679): Subtracts -15.25 points due to Rp 214.1 trillion of cumulative historical losses.",
-      "X3 (EBIT / Assets = -0.008): Subtracts -0.06 points due to negative operating income.",
-      "X4 (Book Equity / Total Liabilities = +1.684): Contributes +1.77 points.",
-      "Resulting Z''-Score = -10.90 (Distress Zone, below 1.10 threshold): The deeply negative Z''-Score proves why historical cost burns matter. GoTo avoids immediate bankruptcy only because X1 (its remaining cash pile) is still positive, but if operating losses continue at historical averages, that cash cushion will be exhausted.",
+      "Applying the completed Week 6 five-factor worksheet: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses the worksheet book-equity proxy. Assets are Rp45,757,642 million and FY2025 accumulated losses are -Rp215,334,000 million.",
+      "X1 = Working capital / Assets = 18,411,702 / 45,757,642 = 0.402374. Weighted contribution = +0.482849.",
+      "X2 = Accumulated losses / Assets = -215,334,000 / 45,757,642 = -4.705968. Weighted contribution = -6.588355.",
+      "X3 = EBIT / Assets = -378,254 / 45,757,642 = -0.008266. Weighted contribution = -0.027279.",
+      "X4 = Book equity / Liabilities = 28,711,657 / 17,045,985 = 1.684365 (contribution +1.010619). X5 = Revenue / Assets = 18,322,117 / 45,757,642 = 0.400417 (contribution +0.400417).",
+      "Z = -4.721750 (rounded -4.72), below 1.81: course distress zone. Grey zone is 1.81-2.99 and safe is above 2.99. Accumulated losses dominate the score. This is a screening signal, not proof of imminent bankruptcy. Source: completed Week 6 project and Milestone 2 workbook, Ratio Analysis C36.",
       "(e) Three-Year Pro Forma Forecast & Breakeven Analysis (Milestone 4)",
       "1. Base, Optimistic, and Conservative Assumptions (Linked from Milestone 2 Averages)",
       "In Milestone 4, our Base Case links directly to GoTo's 3-year historical averages (2023 to 2025). Because 2023 had pre-restructuring cash operating expenses of 117.0% of revenue (vs 62.8% in 2024 and 55.7% in 2025), the 3-year average cash operating expense is 78.5% of revenue and 3-year average Capex is 16.3% of revenue:",
       "2. Three Linked Pro Forma Statements - Base Case (Rp billion)",
       "3. Breakeven Check: Why the Base Case Drains GoTo's Cash to Nearly Zero",
-      "Look at Row 10 of the Balance Sheet table above: under the Base Case (where operating expenses are scaled at the 3-year average of 78.5% of revenue and Capex at 16.3%), GoTo's Breakeven Revenue (Operating Expenses / 58.9% Gross Margin) is Rp 27,207 bn in 2026F, Rp 30,305 bn in 2027F, and Rp 33,755 bn in 2028F. Because actual forecast revenue is only Rp 20,408 bn to Rp 25,321 bn, GoTo is Below Breakeven in every year (DOL is not reported because EBIT is negative). As a result, GoTo burns Rp 6.6 trillion to Rp 7.5 trillion of cash every year, draining its cash balance from Rp 21,755 billion in 2025 down to just Rp 968 billion by the end of 2028F! GoTo can only reach breakeven (at Rp 18,604 bn revenue) if management strictly freezes fixed operating expenses at Rp 10,954 bn and cuts Capex back to 2025 levels (6.5% of revenue).",
+      "Under the Milestone 4 Base Case, operating expenses scale at 78.5% of revenue while gross margin is 58.9%, so forecast EBIT remains negative. Year-specific operating breakeven revenues are approximately Rp27,207-33,755 billion, above forecast sales of Rp20,408-25,321 billion. Cash falls to Rp968 billion by 2028F. The separate fixed-cost illustration holds operating expenses at Rp10,954 billion, yielding breakeven revenue of Rp18,604 billion and positive EBIT. Capex discipline improves free cash flow but does not itself change EBIT or operating breakeven. These are conditional illustrations, not the only possible route to profitability.",
       "(f) Valuation: WACC, DCF, Residual Income, and Multiples (Assignment 14)",
       "1. Cost of Capital (WACC = 7.76%, Ke = 8.45%)",
       "Keeping all country risk parameters persistent from the Week 14 template (Risk-Free Rate = 4.502%, Mature ERP = 4.23%, Indonesia Country Risk Premium = 2.465%, Tax Rate = 22.0%) and using GoTo's Investing.com Levered Beta of 0.59, Cost of Equity (Ke) is 8.45%. Using GoTo's 2025 effective debt interest rate of 6.91% (after-tax Kd = 5.39%), Market Value of Equity of Rp 26,550.3 billion (Rp 25.00 share price x 1,062,010.2 million shares), and Book Value of Debt of Rp 7,742.6 billion (77.4% equity weight, 22.6% debt weight), GoTo's WACC is 7.76%.",
       "2. Reconciling DCF, Residual Income, and Market Multiples Against the Rp 25 Share Price",
-      "Explaining the Valuation Gap and the IDX Price Floor Regulation: Why do DCF (-Rp 121.1) and Residual Income (-Rp 75.1) produce deeply negative values, and why did GoTo drop to Rp 25.00? First, in mathematical DCF and Residual Income models, if a company's historical average cost structure (78.5% opex and 16.3% capex) is projected into perpetuity, the present value of unending cash burn is negative. Second, in the real world, GoTo's share price was artificially stuck at Rp 50 per share for a long time because the Indonesia Stock Exchange (IDX / BEI) enforced a Rp 50 minimum price floor (known in Indonesia as the gocap rule) on the regular market. On September 28, 2026, IDX officially abolished the Rp 50 minimum price floor and lowered the minimum regular market stock price to Rp 1 per share to allow true price discovery. Immediately after the Rp 50 regulatory floor was removed, pent-up selling pressure hit GoTo, triggering Auto Rejection Bawah (ARB) and cutting the stock price in half from Rp 50 to Rp 25.00 (0.9x book value, a 20% discount to book equity). Third, because common stock has limited liability (it cannot trade below zero), the stock now sits at Rp 25.00, just above its net cash liquidation floor of Rp 13.20 per share (Rp 14,013 bn net cash / 1,062 bn shares).",
+      "Grab is the sole valuation comparable. Its 31 December 2025 close of US$4.99 divided by parent BVPS (US$6,728 million / 4,097,646,678 ordinary shares) gives P/B of 3.0391x. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares gives BVPS Rp29.9479. Applying Grab P/B yields Rp91.0157/share, rounded Rp91.0. Sources: Grab FY2025 audited 20-F cover and F-5; GoTo FY2025 equity statement; GRAB historical close. Grab is closest in mobility, delivery and financial services, with different geography and profitability. Shopee is not separately listed, and Sea includes Garena and Monee. BUKA has investment gains and a different investment, gaming and Mitra mix. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. P/E is excluded because GoTo is loss-making; EV/EBITDA bases have not been harmonized. The benchmark is not a median, combined target or intrinsic valuation. DCF -Rp121.1 and RI -Rp75.1 retain the milestone assumptions. Their negative outputs indicate an unsustainable modeled cost structure, not executable negative share prices. Rp25 is the assignment reference price. Net cash around Rp13.20/share is not a guaranteed liquidation floor. This FY2025 comparison is retrospective because audited accounts were published after year-end.",
       "(g) Recommendation to Target User (Week 1 User: Public Equity Investor)",
       "Target User: Long-Term Public Equity Investor evaluating PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) at the current market price of Rp 25.00 per share.",
       "Recommendation: SELL / AVOID.",
       "Our recommendation follows directly from our strategic, accounting quality, ratio, forecast, and valuation findings:",
       "1. High Rivalry Prevents Easy Margin Expansion (Milestone 1): Because GoTo faces intense competition from Grab, ShopeeFood, Maxim, and DANA with low customer switching costs, it cannot easily raise commission rates or eliminate promotions without losing users.",
       "2. Unprofitable Core Operations and Negative Free Cash Flow (Milestones 2 & 3): GoTo lost money in every historical year (ROE of -253.4%, -18.0%, and -5.2%), doubled its debt to Rp 7.74 trillion in 2025, and generated only Rp 307 billion of operating cash flow against Rp 1,182 billion of Capex (negative Free Cash Flow of -Rp 875 billion). Meanwhile, 22.6% of its assets are tied up in Tokopedia and Bank Jago investments that carry write down risk, and consumer lending credit losses more than doubled in 2025.",
-      "3. Negative Intrinsic Value Under Base Case (Milestone 4 & Assignment 14): Both DCF (-Rp 121.1/share) and Residual Income (-Rp 75.1/share) confirm that GoTo destroys shareholder value unless it permanently freezes fixed costs and slashes Capex. Even at Rp 25.00 per share (0.9x book value), equity investors face continued book value erosion until net income exceeds the 8.45% cost of equity (which requires over +Rp 2.43 trillion of positive net profit per year, something GoTo has never achieved). Investors should avoid the stock until GoTo demonstrates positive free cash flow after Capex and positive GAAP net income for at least two consecutive years.",
+      "3. Negative Intrinsic Value Under Base Case (Milestone 4 & Assignment 14): DCF -Rp121.1/share and residual income -Rp75.1/share reflect continued losses under the historical cost assumptions. The Grab P/B benchmark of Rp91.0/share is a relative reference and does not overturn those forecast concerns. Reconsider SELL / AVOID when GoTo demonstrates sustained positive free cash flow after capex and returns above its cost of equity. The initial equity charge is approximately Rp2.43 trillion (8.45% of the retained model book-equity base), and changes with equity.",
       "(h) Appendices: Supporting Workbooks and Full Ratio Summary",
       "Supporting Workbook 1 (Milestone 2): Group4_Milestone2_GOTO.xlsx (Common-Size, Liquidity, Efficiency, Solvency, Profitability, and 3-Step / 5-Step DuPont ROE).",
       "Supporting Workbook 2 (Milestone 4): Group4_Milestone4_GOTO.xlsx (Sources, Historical Summary, Scenario Assumptions, Linked Pro Forma Statements, and Breakeven Check).",

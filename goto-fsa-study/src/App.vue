@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
+import FinancialSlide from './FinancialSlide.vue'
 import fullModulesData from './data/full_slides_knowledgebase.json'
 import assignmentsData from './data/all_assignments_bundle.json'
 import assignmentsIdData from './data/all_assignments_bundle_id.json'
@@ -300,6 +301,39 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
   let formula = `= Audited Filing LK GOTO 31 Dec 2025`
   let sources = []
 
+  // Revised worked tables use their current schema, rather than old row positions.
+  const report = getLectureReportObj(selectedWeekId.value, slideNum)
+  const reportTitle = String(report?.title || '').toLowerCase()
+  const isCurrentZ = selectedWeekId.value === 'week6' && slideNum >= 14 && slideNum <= 21
+  if (isCurrentZ || reportTitle.includes('five-factor z') || reportTitle.includes('z-score lima')) {
+    const contributions = {
+      x1: '(18,411,702 / 45,757,642) * 1.2 = +0.482849',
+      x2: '(-215,334,000 / 45,757,642) * 1.4 = -6.588355',
+      x3: '(-378,254 / 45,757,642) * 3.3 = -0.027279',
+      x4: '(28,711,657 / 17,045,985) * 0.6 = +1.010619 (worksheet book-equity proxy)',
+      x5: '18,322,117 / 45,757,642 = +0.400417'
+    }
+    const factor = Object.keys(contributions).find(key => rowTitle.startsWith(key))
+    formula = factor ? `= ${contributions[factor]}` : '= 0.482849 - 6.588355 - 0.027279 + 1.010619 + 0.400417 = -4.721750 (Week 6 worksheet)'
+    return { ref: cellRef, formula, val: String(val), sources: [] }
+  }
+  if (reportTitle.includes('grab-only') || reportTitle.includes('tolok ukur p/b')) {
+    formula = rowTitle.includes('benchmark') || rowTitle.includes('tolok ukur')
+      ? '= 3.039128556 * Rp29.94794682 = Rp91.01566036/share; single comparable'
+      : rowTitle.includes('goto parent bvps')
+        ? '= Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.94794682'
+        : rowTitle.includes('grab bvps')
+          ? '= US$6,728 million / 4,097.646678 million shares = US$1.64191804; P/B = US$4.99 / BVPS = 3.039128556x'
+          : '= FY2025 audited input or 31 Dec 2025 closing price; see table basis and source notes'
+    return { ref: cellRef, formula, val: String(val), sources: [] }
+  }
+  if (reportTitle === 'valuation reconciliation' || reportTitle === 'rekonsiliasi valuasi') {
+    formula = rowTitle.includes('grab') ? '= 3.039128556 * Rp29.94794682 = Rp91.01566036/share'
+      : rowTitle.includes('net cash') ? '= (21,755.165 - 7,742.643) / 1,062.010200395 = Rp13.1943/share; no guaranteed floor'
+      : '= Retained Assignment 14 model output or assignment reference price; compare assumptions separately'
+    return { ref: cellRef, formula, val: String(val), sources: [] }
+  }
+
   // YoY column or % change column
   if (colChar === 'E' || (cIdx > 1 && String(val).includes('%') && !rowTitle.includes('revenue') && !rowTitle.includes('margin'))) {
     const dCell = `D${rowNum}`
@@ -319,7 +353,7 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= Beginning Book Equity (28,711.7 bn) + PV(Future Residual Income) / 1,062,012.1M shares = ${val}`
         sources = []
       } else if (rowTitle.includes('market multiples')) {
-        formula = `= AVERAGE(P/B Valuation Rp 62.17, Net-Cash-Adj. EV/EBITDA Valuation Rp 17.43) = ${val}`
+        formula = `= Grab P/B 3.039128556 * GoTo parent BVPS Rp29.94794682 = Rp91.01566036/share`
         sources = []
       } else if (rowTitle.includes('net cash liquidation floor')) {
         formula = `= (Cash 21,755.1 bn - Total Debt 7,742.6 bn) / 1,062,012.1M shares = ${val}`
@@ -327,7 +361,7 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
       }
     } else if (slideNum === 7) {
       if (rowTitle.includes('observed beta')) {
-        formula = `= Rf (4.502%) + Beta (0.59) * Mature ERP (4.23%) + Indonesia CRP (2.465%) = 9.46% (or CAPM 8.45% w/ 4.502% Rf & 6.695% Total ERP)`
+        formula = `= 4.502% + 0.59 * (4.23% + 2.465%) = 8.45205%`
         sources = []
       }
     } else if (slideNum === 9) {
@@ -359,13 +393,13 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= IF(EPS <= 0, "n.m.", EPS * Peer Median P/E) -> FY2025 EPS = -(1,501.7 bn) / 1,062.0B sh = -(Rp 1.41)`
         sources = []
       } else if (rowTitle.includes('bvps')) {
-        formula = `= BVPS (Rp 27.03) * Peer Median P/B (2.30x) = Rp 62.17/share`
+        formula = `= GoTo parent BVPS Rp29.94794682 * Grab P/B 3.039128556 = Rp91.01566036/share`
         sources = []
       } else if (rowTitle.includes('ebitda per share')) {
-        formula = `= (EBITDA/sh Rp 0.32 * Peer EV/EBITDA 13.25x) + Net Cash/sh (+Rp 13.20) = Rp 17.43/share`
+        formula = `= Excluded: reported and adjusted EBITDA bases have not been harmonized`
         sources = []
       } else if (rowTitle.includes('market multiples summary')) {
-        formula = `= AVERAGE(P/B Rp 62.17, EV/EBITDA Rp 17.43) = Rp 39.80/share`
+        formula = `= Grab-only P/B benchmark Rp91.01566036/share; no average`
         sources = [`${colChar}2`, `${colChar}3`]
       }
     }
@@ -661,10 +695,10 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= Net Income (-1,501.7) - CFO (+307.0) = -(Rp 1,808.7 bn)`
         sources = [`${colChar}2`, `${colChar}3`]
       } else if (rowTitle.includes('average total assets')) {
-        formula = `= (FY2024 Assets 46,146.4 + FY2025 Assets 45,758.1) / 2 = Rp 45,952.3 bn`
+        formula = `= FY2025 closing total assets Rp45,757.642 bn (Milestone 3 denominator)`
         sources = []
       } else if (rowTitle.includes('calculated sloan accrual')) {
-        formula = `= Total Accruals (-1,808.7) / Average Total Assets (45,952.3) = -3.94% (High Quality)`
+        formula = `= Total accruals -1,808.710 / Closing assets 45,757.642 = -3.9528% (Milestone 3 definition)`
         sources = [`${colChar}4`, `${colChar}5`]
       }
     } else if (slideNum === 16) {
@@ -694,10 +728,10 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= NPM (-8.20%) * ATO (0.400x) * EM (1.593x) = Consolidated ROE (-5.23%)`
         sources = []
       } else if (rowTitle.includes('week 6')) {
-        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + 0.999*X5 = -2.81 (Altman Distress)`
+        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + X5 = -4.721750 (Altman Distress)`
         sources = []
       } else if (rowTitle.includes('week 7')) {
-        formula = `= (Net Income - CFO) / Assets = (-1,501.7 - 307.0) / 45,952.3 = -3.94% (Decile 2)`
+        formula = `= (Net Income - CFO) / Closing assets = (-1,501.685 - 307.025) / 45,757.642 = -3.9528%`
         sources = []
       }
     }
@@ -725,7 +759,7 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= CFO (+307.0) / Debt Service (3,024.0) = 0.10x (Covers only 10%)`
         sources = []
       } else if (rowTitle.includes('altman z-score')) {
-        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + 0.999*X5 = -2.81 (Distress Zone)`
+        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + X5 = -4.721750 (Distress Zone)`
         sources = []
       }
     } else if (slideNum === 4) {
@@ -780,35 +814,35 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
       }
     } else if (slideNum === 15) {
       if (rowTitle.includes('total altman z-score')) {
-        formula = `= SUM(F2:F6)  [+0.4121 - 6.5519 - 0.0274 + 2.9591 + 0.4000 = -2.8081]`
+        formula = `= 0.482849 - 6.588355 - 0.027279 + 1.010619 + 0.400417 = -4.721750`
         sources = ['F2', 'F3', 'F4', 'F5', 'F6']
       } else if (rowTitle.includes('x1')) {
-        formula = `= Working Capital (15,712.9) / Assets (45,758.1) * 1.20 = +0.4121`
+        formula = `= Working Capital 18,411.702 / Assets 45,757.642 * 1.20 = +0.482849`
         sources = []
       } else if (rowTitle.includes('x2')) {
-        formula = `= Retained Deficit (-214,142.5) / Assets (45,758.1) * 1.40 = -6.5519`
+        formula = `= Accumulated losses -215,334.000 / Assets 45,757.642 * 1.40 = -6.588355`
         sources = []
       } else if (rowTitle.includes('x3')) {
-        formula = `= EBIT (-378.1) / Assets (45,758.1) * 3.30 = -0.0274`
+        formula = `= EBIT -378.254 / Assets 45,757.642 * 3.30 = -0.027279`
         sources = []
       } else if (rowTitle.includes('x4')) {
-        formula = `= Market Cap (84,070.0) / Liabilities (17,046.4) * 0.60 = +2.9591`
+        formula = `= Book equity 28,711.657 / Liabilities 17,045.985 * 0.60 = +1.010619`
         sources = []
       } else if (rowTitle.includes('x5')) {
-        formula = `= Revenue (18,322.2) / Assets (45,758.1) * 0.999 = +0.4000`
+        formula = `= Revenue 18,322.117 / Assets 45,757.642 = +0.400417`
         sources = []
       }
     } else if (slideNum === 17) {
       if (rowTitle.includes('total altman z-score')) {
-        formula = `= Working Capital (+0.41) - Deficit (-6.55) - EBIT (-0.03) + Mcap (+2.96) + Turns (+0.40) = -2.81`
+        formula = `= 0.482849 - 6.588355 - 0.027279 + 1.010619 + 0.400417 = -4.721750`
         sources = []
       }
     } else if (slideNum === 18) {
       if (rowTitle.includes('altman z (1968)')) {
-        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + 0.999*X5 = -2.81`
+        formula = `= 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + X5 = -4.721750`
         sources = []
       } else if (rowTitle.includes('altman z\'\'')) {
-        formula = `= 6.56*X1 + 3.26*X2 + 6.72*X3 + 1.05*X4(book) = -11.29`
+        formula = `= Week 6 uses the five-factor worksheet model, Z = -4.721750`
         sources = []
       }
     }
@@ -919,7 +953,7 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
         formula = `= PP&E Purchases (Rp 302.1 bn) + Capitalized Software (Rp 880.3 bn) = Rp 1,182.4 bn`
         sources = []
       } else if (rowTitle.includes('retained deficit')) {
-        formula = `= Beginning Deficit (212,640.8) + Current Net Loss (1,501.7) = -(Rp 214,142.5 bn)`
+        formula = `= FY2025 accumulated losses: -Rp215,334.000 bn; see statement of changes in equity for full reconciliation`
         sources = ['C8', 'D4']
       } else if (rowTitle.includes('operating loss')) {
         formula = `= Gross Profit Rp 10,576.0 bn - Operating Expenses Rp 10,954.1 bn = -(Rp 378.1 bn)`
@@ -1131,10 +1165,10 @@ const getCellFormulaInfo = (slideNum, rIdx, cIdx, rVals) => {
       sources = [`${colChar}9`]
     } else if (rowTitle.includes('retained deficit') || rowTitle.includes('accumulated')) {
       if (colChar === 'D') {
-        formula = `= C12 + D8  (Prior Deficit (212,640.8) + 2025 Loss (1,501.7))`
+        formula = `= FY2025 accumulated losses -Rp215,334.000 bn; includes equity movements beyond consolidated net loss`
         sources = ['C12', 'D8']
       } else {
-        formula = `= Cumulative Capital Burned Since Inception (-Rp 214.1 Trillion)`
+        formula = `= FY2025 accumulated losses -Rp215.334 trillion; accounting losses are not cumulative cash burn`
         sources = []
       }
     } else if (rowTitle.includes('free cash flow')) {
@@ -1586,6 +1620,100 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
       keywords: item.join(' ')
     }
   }
+  if (kind === 'five_force') {
+    const [force, rating, basis] = Array.isArray(item) ? item : ['', '', '']
+    return {
+      title: force,
+      value: rating,
+      explanation: `${basis} — Assessed in Milestone 1 (Industry & Competitive Analysis) using GoTo FY2025 disclosures (Rp 3.09T promo/marketing, Rp 2.15T product expense, Rp 2,731 bn net consumer loans) to evaluate whether GoTo has pricing power or durable economic moat.`,
+      detail_explanation: `${basis}\n\nWhy it's here: Porter's Five Forces establishes why GoTo cannot simply raise take-rates to become profitable. Source: Milestone 1 (Industry Analysis) & LK GOTO FY2025 Note 7 / Note 30.`,
+      formula: 'Industry Moat Check: Competitive Rivalry (High) + Low Switching Costs → Sustained Promo Spend (Rp 3.09T)',
+      calc_steps: [
+        `Force: ${force} → Rating: ${rating}`,
+        `Basis: ${basis}`,
+        'Slide takeaway: Weak pricing power caps margin expansion in the forecast model.'
+      ],
+      data_origin: slide.source_footer || 'Milestone 1 (Industry & Competitive Analysis) & LK GOTO FY2025',
+      highlight_terms: [force, rating].filter(Boolean),
+      evidence_img: null,
+      evidence_caption: '',
+      keywords: `${force} ${rating} ${basis}`
+    }
+  }
+  if (kind === 'editorial') {
+    return {
+      title: item.name,
+      value: item.value || '',
+      explanation: item.detail_explanation || item.text || slide.title,
+      detail_explanation: item.detail_explanation || item.text || slide.title,
+      formula: item.formula || '',
+      calc_steps: item.calc_steps || [],
+      data_origin: item.data_origin || slide.source_footer || '',
+      highlight_terms: item.highlight_terms || [item.name, item.value].filter(Boolean),
+      evidence_img: item.evidence_img !== undefined ? item.evidence_img : null,
+      evidence_caption: item.evidence_caption || '',
+      keywords: `${item.name} ${item.value} ${item.text}`
+    }
+  }
+  if (kind === 'claim') {
+    const heading = item.heading || slide.section_tag || slide.title
+    const text = item.text || ''
+    const matchingKpi = (slide.kpis || []).find(k =>
+      (k.label && text.toLowerCase().includes(k.label.toLowerCase().split(' ')[0])) ||
+      (k.val && text.includes(k.val.replace('Rp ', '')))
+    ) || (slide.kpis || [])[0]
+    return {
+      title: heading,
+      value: slide.section_tag || `${uiText.value.slideWord} ${slide.slide_num}`,
+      explanation: item.detail_explanation || text,
+      detail_explanation: item.detail_explanation || `${text}\n\nWhy it's on Slide ${slide.slide_num}: ${slide.subtitle || slide.title}`,
+      formula: item.formula || (matchingKpi?.formula || ''),
+      calc_steps: item.calc_steps || (matchingKpi?.calc_steps || []),
+      data_origin: item.data_origin || matchingKpi?.data_origin || slide.source_footer || '',
+      highlight_terms: item.highlight_terms || heading.split(/\s+/).filter(w => w.length > 3).slice(0, 4),
+      evidence_img: item.evidence_img !== undefined ? item.evidence_img : (matchingKpi?.evidence_img || null),
+      evidence_caption: item.evidence_caption || matchingKpi?.evidence_caption || '',
+      keywords: `${heading} ${text}`
+    }
+  }
+  if (kind === 'peer_exclusion') {
+    return {
+      title: item.company,
+      value: lang.value === 'id' ? 'Dikeluarkan' : 'Excluded',
+      explanation: item.reason || '',
+      detail_explanation: `${item.reason}\n\nWhy it's excluded: Including non-comparable peers (diversified gaming/retail or distorted EBITDA/investment gains) would bias GoTo's relative valuation. Only Grab shares GoTo's core mobility + delivery + fintech operating mix.`,
+      formula: 'Peer Selection Rule: Retain pure-play Mobility/Delivery/FinTech peers (GRAB only); Exclude SE, BUKA, BELI',
+      calc_steps: [
+        `Company: ${item.company} → Status: Excluded from comparable multiple`,
+        `Reason: ${item.reason}`
+      ],
+      data_origin: 'Assignment 14 Market Multiples & Final Report Section 6.3',
+      highlight_terms: [item.company],
+      evidence_img: null,
+      evidence_caption: '',
+      keywords: `${item.company} ${item.reason}`
+    }
+  }
+  if (kind === 'verdict') {
+    return {
+      title: item.title || slide.title,
+      value: lang.value === 'id' ? 'JUAL / HINDARI · Rp 25,00' : 'SELL / AVOID · Rp 25.00',
+      explanation: item.text || slide.subtitle || slide.title,
+      detail_explanation: item.text || slide.subtitle || slide.title,
+      formula: 'DCF = −Rp 121.1 | RI = −Rp 75.1 | Grab P/B Benchmark = Rp 91.0',
+      calc_steps: [
+        'WACC = 7.76% (Ke = 8.45%, Kd after-tax = 5.39%)',
+        'DCF intrinsic value = −Rp 121.1 / share (Terminal g = 3.0%)',
+        'Residual Income value = −Rp 75.1 / share (Terminal g = 3.0%)',
+        'Grab P/B benchmark = 3.0391x × Rp 29.9479 = Rp 91.0 / share (conditional)'
+      ],
+      data_origin: 'Assignment 14 Valuation Workbook & Final Report',
+      highlight_terms: ['SELL', '25.00', '121.1', '75.1', '91.0'],
+      evidence_img: null,
+      evidence_caption: '',
+      keywords: `${item.title || ''} ${item.text || ''} SELL AVOID valuation`
+    }
+  }
   if (kind === 'card') {
     const bulletSummary = (item.bullets || []).map(b => b.bold + ' ' + b.text).join(' ')
     return {
@@ -1619,6 +1747,21 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
   }
 }
 
+const formatGreenNumbers = (raw) => {
+  if (!raw) return ''
+  const escaped = String(raw)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+  const numPattern = /((?:[−\-+]?\s*(?:Rp|US\$)\s*\d[\d.,]*(?:\s*(?:bn|M|T|m|%|x))?)|(?:[−\-+]?\d[\d.,]*(?:%|x|\s*(?:bn|T)\b))|(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?)|(?:\d+\.\d+))/g
+  return escaped.replace(numPattern, (match) => {
+    const cls = /^[−\-]/.test(match.trim()) ? 'gojek-num-neg' : 'gojek-num'
+    return `<span class="${cls}">${match}</span>`
+  })
+}
+
 const onPresItemClick = (event, payload) => {
   const x = Math.min(Math.max(event.clientX, 180), window.innerWidth - 180)
   const y = Math.max(event.clientY - 14, 110)
@@ -1636,8 +1779,10 @@ const onPresItemDblClick = (payload) => {
     ? payload.highlight_terms.join(' ') + ' ' + (payload.keywords || '')
     : (payload.keywords || `${payload.title} ${payload.value || ''}`)
   const traces = findItemTraces(currentPresSlide.value, searchTerms)
-  const fallbackEvImg = payload.evidence_img || traces.matchedAssignments.find(a => a.evidence_img)?.evidence_img || null
-  const fallbackEvCap = payload.evidence_caption || traces.matchedAssignments.find(a => a.evidence_img)?.evidence_caption || ''
+  const fallbackEvImg = payload.evidence_img !== undefined
+    ? payload.evidence_img
+    : (traces.matchedAssignments.find(a => a.evidence_img)?.evidence_img || null)
+  const fallbackEvCap = payload.evidence_caption || (fallbackEvImg ? (traces.matchedAssignments.find(a => a.evidence_img === fallbackEvImg)?.evidence_caption || '') : '')
   detailDrawerItem.value = {
     ...payload,
     evidence_img: fallbackEvImg,
@@ -2259,109 +2404,14 @@ const isColNumeric = (tbl, cIdx) => {
               &lsaquo;
             </button>
 
-            <section class="pres-canvas">
-            <div class="pres-slide-header">
-              <div class="pres-header-top-row">
-                <span class="pres-section-tag">{{ currentPresSlide.section_tag }}</span>
-                <span class="pres-slide-index">{{ currentPresSlide.is_appendix ? uiText.appendixWord : uiText.mainDeckWord }} | {{ uiText.slideWord.toUpperCase() }} {{ currentPresSlide.slide_num }} / {{ presentationSlides.length }}</span>
-              </div>
-              <h1 class="pres-action-title">{{ currentPresSlide.title }}</h1>
-              <p class="pres-slide-subtitle">{{ currentPresSlide.subtitle }}</p>
-            </div>
-            <div class="pres-emerald-bar"></div>
-
-            <div class="pres-slide-body">
-              <!-- KPI Row -->
-              <div v-if="currentPresSlide.kpis && currentPresSlide.kpis.length" class="pres-kpi-grid">
-                <div
-                  v-for="(k, kIdx) in currentPresSlide.kpis"
-                  :key="kIdx"
-                  :class="['pres-kpi-card pres-interactive-item', 'tone-' + k.tone]"
-                  @click.stop="onPresItemClick($event, buildPresItemPayload('kpi', k))"
-                  @dblclick.stop="onPresItemDblClick(buildPresItemPayload('kpi', k))"
-                  title="Click to explain | Double-click for full source drawer"
-                >
-                  <div class="pres-kpi-val">{{ k.val }}</div>
-                  <div class="pres-kpi-lbl">{{ k.label }}</div>
-                  <div class="pres-kpi-sub">{{ k.sub }}</div>
-                </div>
-              </div>
-
-              <!-- Main Content Split (Chart / Table / Cards) -->
-              <div class="pres-content-grid">
-                <!-- Chart Panel if Present -->
-                <div
-                  v-if="currentPresSlide.chart_url"
-                  class="pres-chart-card pres-interactive-item"
-                  @click.stop="onPresItemClick($event, buildPresItemPayload('chart', currentPresSlide))"
-                  @dblclick.stop="onPresItemDblClick(buildPresItemPayload('chart', currentPresSlide))"
-                  title="Click to explain | Double-click for full source drawer"
-                >
-                  <div class="pres-chart-toolbar">
-                    <span class="pres-chart-badge">HIGH-RES ANALYTICAL CHART (DOUBLE-CLICK IMAGE TO ZOOM)</span>
-                  </div>
-                  <img
-                    :src="currentPresSlide.chart_url"
-                    :alt="currentPresSlide.title"
-                    class="pres-chart-img"
-                    @dblclick.stop="openLightbox(currentPresSlide.chart_url, currentPresSlide.title, currentPresSlide.source_footer)"
-                  />
-                </div>
-
-                <!-- Structured Financial Table if Present -->
-                <div v-if="currentPresSlide.table" class="pres-table-card">
-                  <div class="pres-table-title">{{ currentPresSlide.table.title }}</div>
-                  <div class="wb-table-wrap">
-                    <table class="data-table pres-data-table">
-                      <thead>
-                        <tr>
-                          <th v-for="(th, hIdx) in currentPresSlide.table.headers" :key="hIdx">{{ th }}</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr
-                          v-for="(rVals, rIdx) in currentPresSlide.table.rows"
-                          :key="rIdx"
-                          class="pres-interactive-row"
-                          @click.stop="onPresItemClick($event, buildPresItemPayload('row', rVals, rIdx))"
-                          @dblclick.stop="onPresItemDblClick(buildPresItemPayload('row', rVals, rIdx))"
-                          title="Click to explain | Double-click for full source drawer"
-                        >
-                          <td v-for="(val, cIdx) in rVals" :key="cIdx" :class="{ 'bold-cell': cIdx === 0, 'num-cell': cIdx > 0 }">
-                            {{ val }}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <!-- Analytical Cards -->
-                <div v-if="currentPresSlide.cards && currentPresSlide.cards.length" class="pres-cards-col">
-                  <div
-                    v-for="(card, cIdx) in currentPresSlide.cards"
-                    :key="cIdx"
-                    :class="['pres-info-card pres-interactive-item', 'card-tone-' + card.tone]"
-                    @click.stop="onPresItemClick($event, buildPresItemPayload('card', card))"
-                    @dblclick.stop="onPresItemDblClick(buildPresItemPayload('card', card))"
-                    title="Click to explain | Double-click for full source drawer"
-                  >
-                    <h3 class="pres-card-title">{{ card.title }}</h3>
-                    <ul class="pres-card-bullets">
-                      <li v-for="(b, bIdx) in card.bullets" :key="bIdx">
-                        <strong>{{ b.bold }}</strong> {{ b.text }}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="pres-slide-footer">
-              <span>Group 4 (Fagly Ramschie) | IDX: GOTO</span>
-              <span>{{ uiText.sourceLabel }} {{ currentPresSlide.source_footer }}</span>
-            </div>
-          </section>
+            <FinancialSlide
+              :slide="currentPresSlide"
+              :lang="lang"
+              :total="presentationSlides.length"
+              @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+              @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+              @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
+            />
 
             <button
               class="pres-side-arrow-btn pres-side-arrow-right"
@@ -2372,6 +2422,62 @@ const isColNumeric = (tbl, cIdx) => {
               &rsaquo;
             </button>
           </div>
+
+          <details :key="'study-notes-' + currentPresSlide.slide_num" class="slide-study-notes">
+            <summary>{{ lang === 'id' ? 'Analisis lengkap & data pendukung' : 'Full analysis & supporting data' }}</summary>
+            <div class="slide-study-notes-body">
+              <p class="slide-study-original-title">{{ currentPresSlide.title }}</p>
+              <div v-if="currentPresSlide.external_sources?.length" class="slide-course-basis">
+                <h3>{{ lang === 'id' ? 'Sumber pembanding yang diperiksa' : 'Checked comparable sources' }}</h3>
+                <p v-for="(source, i) in currentPresSlide.external_sources" :key="i">
+                  <a v-if="source.url" :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}</a>
+                  <strong v-else>{{ source.title }}</strong> — {{ source.location }}
+                </p>
+              </div>
+              <div v-if="currentPresSlide.assignment_evidence?.length" class="slide-study-table-wrap">
+                <h3>{{ lang === 'id' ? 'Sumber angka dari tugas Anda' : 'Figures traced to your assignments' }}</h3>
+                <table>
+                  <thead><tr><th>{{ lang === 'id' ? 'Ukuran' : 'Measure' }}</th><th>{{ lang === 'id' ? 'Nilai / dasar' : 'Value / basis' }}</th><th>{{ lang === 'id' ? 'Berkas tugas' : 'Assignment file' }}</th><th>{{ lang === 'id' ? 'Lokasi' : 'Location' }}</th></tr></thead>
+                  <tbody><tr v-for="(source, i) in currentPresSlide.assignment_evidence" :key="i"><td>{{ source.metric }}</td><td>{{ source.value }}</td><td>{{ source.file }}</td><td>{{ source.location }}</td></tr></tbody>
+                </table>
+              </div>
+              <div v-if="currentPresSlide.course_basis?.length" class="slide-course-basis">
+                <h3>{{ lang === 'id' ? 'Dasar materi kuliah' : 'Course foundation' }}</h3>
+                <button v-for="(basis, i) in currentPresSlide.course_basis" :key="i" @click="jumpToLectureSlide(basis.week_id, basis.slide_num)">
+                  {{ basis.week }}, {{ lang === 'id' ? 'slide' : 'slide' }} {{ basis.slide_num }}: {{ basis.topic }}
+                </button>
+              </div>
+              <div v-for="(point, i) in currentPresSlide.analysis_points" :key="'analysis-' + i" class="slide-study-section">
+                <h3>{{ point.heading }}</h3><p>{{ point.text }}</p>
+              </div>
+              <div v-if="currentPresSlide.methodology_note" class="slide-study-section slide-methodology-note">
+                <h3>{{ lang === 'id' ? 'Metode & batasan' : 'Method and limitations' }}</h3>
+                <p>{{ currentPresSlide.methodology_note }}</p>
+              </div>
+              <div v-if="currentPresSlide.z_score_schedule" class="slide-study-table-wrap">
+                <h3>{{ lang === 'id' ? 'Perhitungan Z-score Minggu 6' : 'Week 6 Z-score calculation' }}</h3>
+                <p>{{ currentPresSlide.z_score_schedule.formula }}</p>
+                <table>
+                  <thead><tr><th v-for="(cell, c) in currentPresSlide.z_score_schedule.headers" :key="c">{{ cell }}</th></tr></thead>
+                  <tbody><tr v-for="(row, r) in currentPresSlide.z_score_schedule.rows" :key="r"><td v-for="(cell, c) in row" :key="c">{{ cell }}</td></tr></tbody>
+                </table>
+                <p><strong>Z = {{ currentPresSlide.z_score_schedule.result.toFixed(6) }}</strong></p>
+              </div>
+              <div v-for="(card, index) in currentPresSlide.cards" :key="index" class="slide-study-section">
+                <h3>{{ card.title }}</h3>
+                <p v-for="(bullet, b) in card.bullets" :key="b"><strong>{{ bullet.bold }}</strong> {{ bullet.text }}</p>
+                <button @click="onPresItemDblClick(buildPresItemPayload('card', card))">{{ lang === 'id' ? 'Lihat sumber' : 'View source' }}</button>
+              </div>
+              <div v-if="currentPresSlide.table" class="slide-study-table-wrap">
+                <h3>{{ currentPresSlide.table.title }}</h3>
+                <table>
+                  <thead><tr><th v-for="(cell, c) in currentPresSlide.table.headers" :key="c">{{ cell }}</th></tr></thead>
+                  <tbody><tr v-for="(row, r) in currentPresSlide.table.rows" :key="r" @click="onPresItemClick($event, buildPresItemPayload('row', row, r))"><td v-for="(cell, c) in row" :key="c">{{ cell }}</td></tr></tbody>
+                </table>
+              </div>
+              <button v-if="currentPresSlide.chart_url" @click="openLightbox(currentPresSlide.chart_url, currentPresSlide.title, currentPresSlide.source_footer)">{{ lang === 'id' ? 'Buka grafik pendukung' : 'Open supporting chart' }}</button>
+            </div>
+          </details>
 
           <!-- ================= BOTTOM REVEAL CONTROLS (SPEAKER SCRIPT & AUDIT DRAWER) ================= -->
           <div class="pres-bottom-reveal-bar">
@@ -3496,96 +3602,14 @@ const isColNumeric = (tbl, cIdx) => {
           &lsaquo;
         </button>
 
-        <section class="pres-canvas present-canvas">
-          <div class="pres-slide-header">
-            <div class="pres-header-top-row">
-              <span class="pres-section-tag">{{ currentPresSlide.section_tag }}</span>
-              <span class="pres-slide-index">{{ currentPresSlide.is_appendix ? uiText.appendixWord : uiText.mainDeckWord }} | {{ uiText.slideWord.toUpperCase() }} {{ currentPresSlide.slide_num }} / {{ presentationSlides.length }}</span>
-            </div>
-            <h1 class="pres-action-title">{{ currentPresSlide.title }}</h1>
-            <p class="pres-slide-subtitle">{{ currentPresSlide.subtitle }}</p>
-          </div>
-          <div class="pres-emerald-bar"></div>
-
-          <div class="pres-slide-body present-slide-body">
-            <div v-if="currentPresSlide.kpis && currentPresSlide.kpis.length" class="pres-kpi-grid">
-              <div
-                v-for="(k, kIdx) in currentPresSlide.kpis"
-                :key="kIdx"
-                :class="['pres-kpi-card pres-interactive-item', 'tone-' + k.tone]"
-                @click.stop="onPresItemClick($event, buildPresItemPayload('kpi', k))"
-                @dblclick.stop="onPresItemDblClick(buildPresItemPayload('kpi', k))"
-              >
-                <div class="pres-kpi-val">{{ k.val }}</div>
-                <div class="pres-kpi-lbl">{{ k.label }}</div>
-                <div class="pres-kpi-sub">{{ k.sub }}</div>
-              </div>
-            </div>
-
-            <div class="pres-content-grid">
-              <div
-                v-if="currentPresSlide.chart_url"
-                class="pres-chart-card pres-interactive-item"
-                @click.stop="onPresItemClick($event, buildPresItemPayload('chart', currentPresSlide))"
-                @dblclick.stop="onPresItemDblClick(buildPresItemPayload('chart', currentPresSlide))"
-              >
-                <img
-                  :src="currentPresSlide.chart_url"
-                  :alt="currentPresSlide.title"
-                  class="pres-chart-img present-chart-img"
-                />
-              </div>
-
-              <div v-if="currentPresSlide.table" class="pres-table-card">
-                <div class="pres-table-title">{{ currentPresSlide.table.title }}</div>
-                <div class="wb-table-wrap">
-                  <table class="data-table pres-data-table">
-                    <thead>
-                      <tr>
-                        <th v-for="(th, hIdx) in currentPresSlide.table.headers" :key="hIdx">{{ th }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr
-                        v-for="(rVals, rIdx) in currentPresSlide.table.rows"
-                        :key="rIdx"
-                        class="pres-interactive-row"
-                        @click.stop="onPresItemClick($event, buildPresItemPayload('row', rVals, rIdx))"
-                        @dblclick.stop="onPresItemDblClick(buildPresItemPayload('row', rVals, rIdx))"
-                      >
-                        <td v-for="(val, cIdx) in rVals" :key="cIdx" :class="{ 'bold-cell': cIdx === 0, 'num-cell': cIdx > 0 }">
-                          {{ val }}
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div v-if="currentPresSlide.cards && currentPresSlide.cards.length" class="pres-cards-col">
-                <div
-                  v-for="(card, cIdx) in currentPresSlide.cards"
-                  :key="cIdx"
-                  :class="['pres-info-card pres-interactive-item', 'card-tone-' + card.tone]"
-                  @click.stop="onPresItemClick($event, buildPresItemPayload('card', card))"
-                  @dblclick.stop="onPresItemDblClick(buildPresItemPayload('card', card))"
-                >
-                  <h3 class="pres-card-title">{{ card.title }}</h3>
-                  <ul class="pres-card-bullets">
-                    <li v-for="(b, bIdx) in card.bullets" :key="bIdx">
-                      <strong>{{ b.bold }}</strong> {{ b.text }}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="pres-slide-footer">
-            <span>Group 4 (Fagly Ramschie) | IDX: GOTO</span>
-            <span>{{ uiText.sourceLabel }} {{ currentPresSlide.source_footer }}</span>
-          </div>
-        </section>
+        <FinancialSlide
+              :slide="currentPresSlide"
+              :lang="lang"
+              :total="presentationSlides.length"
+              @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+              @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+              @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
+            />
 
         <button
           class="present-arrow-btn present-arrow-right"
@@ -3623,21 +3647,21 @@ const isColNumeric = (tbl, cIdx) => {
 
     <!-- ================= RIGHT-SIDE SLIDE-OVER SOURCE DRAWER ================= -->
     <div v-if="detailDrawerItem" class="drawer-backdrop" @click.self="detailDrawerItem = null">
-      <aside class="right-detail-drawer">
+      <aside class="right-detail-drawer source-drawer" role="dialog" aria-modal="true" aria-labelledby="source-drawer-title">
         <div class="drawer-top-hdr">
           <div>
             <span class="drawer-badge">{{ uiText.drawerSubtitlePrefix }} {{ detailDrawerItem.slide.slide_num }}</span>
-            <h3>{{ detailDrawerItem.title }}</h3>
+            <h3 id="source-drawer-title">{{ detailDrawerItem.title }}</h3>
             <div v-if="detailDrawerItem.value" class="drawer-val-pill">{{ detailDrawerItem.value }}</div>
           </div>
-          <button class="drawer-close-btn" @click="detailDrawerItem = null" :title="uiText.closeWord + ' (Esc)'">&times;</button>
+          <button class="drawer-close-btn" @click="detailDrawerItem = null" :aria-label="uiText.closeWord" :title="uiText.closeWord + ' (Esc)'">&times;</button>
         </div>
 
         <div class="drawer-scroll-body">
           <!-- 1. Detailed Meaning & Explanation -->
           <div class="drawer-summary-box">
             <strong>{{ uiText.drawerWhatMeans }}</strong>
-            <p>{{ detailDrawerItem.detail_explanation || detailDrawerItem.explanation }}</p>
+            <p v-html="formatGreenNumbers(detailDrawerItem.detail_explanation || detailDrawerItem.explanation)"></p>
           </div>
 
           <!-- 2. How Was This Calculated? (Formula + Step-by-Step Math + Origin) -->
@@ -3648,7 +3672,7 @@ const isColNumeric = (tbl, cIdx) => {
               <code>{{ detailDrawerItem.formula }}</code>
             </div>
             <ul v-if="detailDrawerItem.calc_steps && detailDrawerItem.calc_steps.length" class="drawer-calc-steps">
-              <li v-for="(step, sIdx) in detailDrawerItem.calc_steps" :key="'cs-'+sIdx">{{ step }}</li>
+              <li v-for="(step, sIdx) in detailDrawerItem.calc_steps" :key="'cs-'+sIdx" v-html="formatGreenNumbers(step)"></li>
             </ul>
             <div v-if="detailDrawerItem.data_origin" class="drawer-origin-line">
               <strong>{{ uiText.drawerOriginLabel }}</strong> {{ detailDrawerItem.data_origin }}
@@ -3658,7 +3682,7 @@ const isColNumeric = (tbl, cIdx) => {
           <!-- 3. Featured Highlighted Audited LK GOTO Page -->
           <div v-if="detailDrawerItem.evidence_img" class="drawer-featured-ev">
             <div class="drawer-fev-hdr">
-              <span>🔍 {{ uiText.drawerLkProofTitle }}</span>
+              <span>{{ uiText.drawerLkProofTitle }}</span>
             </div>
             <p v-if="detailDrawerItem.evidence_caption" class="drawer-fev-cap">{{ detailDrawerItem.evidence_caption }}</p>
             <img
@@ -3672,12 +3696,12 @@ const isColNumeric = (tbl, cIdx) => {
 
           <!-- 4. Matched Assignments & Audited Filings (with Highlighted Workbook Supporting Rows) -->
           <div class="drawer-section">
-            <h4 class="drawer-sec-title asg-sec">📊 {{ uiText.drawerAsgTitle }} ({{ detailDrawerItem.matchedAssignments.length }})</h4>
+            <h4 class="drawer-sec-title asg-sec">{{ uiText.drawerAsgTitle }} <span>{{ detailDrawerItem.matchedAssignments.length }}</span></h4>
             <div v-for="(at, idx) in detailDrawerItem.matchedAssignments" :key="'da-'+idx" class="drawer-trace-card">
               <div class="trace-item-top">
                 <span class="trace-pill asg-pill">{{ at.assignment_code }}</span>
                 <button class="trace-jump-btn asg-jump" @click="detailDrawerItem = null; isPresentMode = false; jumpToAssignmentSheet(at.assignment_id, at.sheet_name)">
-                  {{ uiText.openWord }} {{ at.sheet_name || at.assignment_code }} &rarr;
+                  {{ uiText.openWord }} &rarr;
                 </button>
               </div>
               <div v-if="at.trace_role" class="trace-role-badge asg-role">{{ at.trace_role }}</div>
@@ -3724,12 +3748,12 @@ const isColNumeric = (tbl, cIdx) => {
 
           <!-- 5. Matched Lecture Slides (with Highlighted Knowledge Base Table Rows) -->
           <div class="drawer-section">
-            <h4 class="drawer-sec-title lecture-sec">🖥️ {{ uiText.drawerLectureTitle }} ({{ detailDrawerItem.matchedLectures.length }})</h4>
+            <h4 class="drawer-sec-title lecture-sec">{{ uiText.drawerLectureTitle }} <span>{{ detailDrawerItem.matchedLectures.length }}</span></h4>
             <div v-for="(lt, idx) in detailDrawerItem.matchedLectures" :key="'dl-'+idx" class="drawer-trace-card">
               <div class="trace-item-top">
                 <span class="trace-pill lecture-pill">{{ lt.week_label }} | {{ uiText.slideWord }} {{ lt.slide_num }}</span>
                 <button class="trace-jump-btn lecture-jump" @click="detailDrawerItem = null; isPresentMode = false; jumpToLectureSlide(lt.week_id, lt.slide_num)">
-                  {{ uiText.openWord }} {{ uiText.slideWord }} &rarr;
+                  {{ uiText.openWord }} &rarr;
                 </button>
               </div>
               <div v-if="lt.trace_role" class="trace-role-badge lecture-role">{{ lt.trace_role }}</div>
@@ -6487,7 +6511,115 @@ const isColNumeric = (tbl, cIdx) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-bottom: 8px;
+}
+
+.pres-header-meta-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pres-header-logo-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 2px 9px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.pres-header-logo {
+  height: 15px;
+  width: auto;
+  display: block;
+}
+
+.pres-opening-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #ecfdf5 0%, #ffffff 50%, #f8fafc 100%);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.pres-hero-company {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pres-hero-logo-box {
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 7px 12px;
+  box-shadow: 0 2px 6px rgba(0, 170, 19, 0.08);
+  flex-shrink: 0;
+}
+
+.pres-hero-logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.pres-hero-ticker {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.pres-hero-tagline {
+  font-size: 11.5px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.pres-hero-team {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.pres-hero-team-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  color: #047857;
+  text-transform: uppercase;
+}
+
+.pres-hero-member-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.pres-member-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.pres-member-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #00aa13;
 }
 
 .pres-section-tag {
@@ -6578,6 +6710,19 @@ const isColNumeric = (tbl, cIdx) => {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (min-width: 960px) {
+  .pres-content-grid.pres-grid-split {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .pres-content-grid.pres-grid-split .pres-cards-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pres-chart-card {
@@ -7512,6 +7657,26 @@ const isColNumeric = (tbl, cIdx) => {
   font-size: 12px;
   line-height: 1.5;
   color: #1e293b;
+}
+
+:deep(.gojek-num) {
+  color: #008c2c;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.dark-mode :deep(.gojek-num) {
+  color: #4ade80;
+}
+
+:deep(.gojek-num-neg) {
+  color: #dc2626;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.dark-mode :deep(.gojek-num-neg) {
+  color: #f87171;
 }
 
 .drawer-origin-line {

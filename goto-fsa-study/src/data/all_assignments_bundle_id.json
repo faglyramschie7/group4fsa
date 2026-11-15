@@ -441,7 +441,7 @@
     "folder": "Minggu 4-6",
     "week": "Minggu 4-6",
     "title": "Paket Rasio Keuangan, Common-Size & Analisis DuPont ROE 3-Langkah",
-    "summary": "Tren common-size multitahun, likuiditas (2,73x), solvabilitas (DER 0,27x), dekomposisi ROE DuPont 3-langkah (-5,2%), pembanding Bukalapak, dan Altman Z''-Score Pasar Berkembang (-10,90).",
+    "summary": "Rasio dan DuPont mengikuti Milestone 2. Z lima faktor Minggu 6 = -4,72. Pembanding valuasi terbaru hanya Grab.",
     "docx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.docx",
     "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
     "sections": [
@@ -449,8 +449,8 @@
         "heading": "Ringkasan Paket Rasio Keuangan & DuPont",
         "source_citation": "Buku Kerja Milestone 2 Kelompok 4 (Data Historis, Rasio, DuPont, Pembanding Sejawat)",
         "paragraphs": [
-          "Milestone 2 mengevaluasi kinerja keuangan PT GoTo Gojek Tokopedia Tbk sepanjang FY2023-FY2025 melalui laporan Common-Size, Likuiditas, Efisiensi, Solvabilitas, Profitabilitas, ROE DuPont 3-Langkah, Pembanding Sejawat (Bukalapak), serta Altman Z''-Score Pasar Berkembang.",
-          "Temuan utama: GoTo berhasil menyusutkan marjin rugi usaha dari -69,5% ke -2,1% dan menjaga bantalan kas likuid (Current Ratio 2,73x; Kas 47,5% Aset), namun tetap mencatat ROE negatif (-5,2%), ROA negatif (-3,3%), dan Z''-Score zona distress (-10,90) akibat defisit saldo laba akumulasi sebesar -Rp 214,1 triliun."
+          "Materi Milestone 2 mengikuti rasio dan DuPont tugas. Sintesis terbaru menggunakan Z Minggu 6 dan hanya Grab sesuai revisi.",
+          "Sesuai lembar kerja Minggu 6: Z = 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 menggunakan proksi ekuitas buku / total liabilitas. Input FY2025 (Rp juta): modal kerja 18.411.702; aset 45.757.642; akumulasi rugi -215.334.000; EBIT -378.254; ekuitas buku 28.711.657; liabilitas 17.045.985; pendapatan 18.322.117. Rasio X1-X5 = 0,402374; -4,705968; -0,008266; 1,684365; 0,400417. Kontribusi berbobot = 0,482849; -6,588355; -0,027279; 1,010619; 0,400417. Jumlah Z = -4,721750, dibulatkan -4,72. Distress di bawah 1,81; abu-abu 1,81-2,99; aman di atas 2,99. Akumulasi rugi mendominasi skor. Ini indikator penyaringan, bukan bukti gagal bayar segera. Sumber: tugas Minggu 6 dan Milestone 2, Ratio Analysis C36."
         ],
         "tables": [
           [
@@ -490,11 +490,11 @@
               "Perbaikan didorong penyusutan rugi, masih negatif"
             ],
             [
-              "Altman Z''-Score (Pasar Berkembang)",
-              "-10,17",
-              "-11,41",
-              "-10,90",
-              "Zona Distress (< 1,10) akibat akumulasi defisit"
+              "Week 6 Z",
+              "Not recalculated",
+              "Not recalculated",
+              "-4.72",
+              "Distress < 1.81; FY2025 only"
             ]
           ]
         ]
@@ -677,7 +677,7 @@
               "66,0%",
               "70,4%",
               "62,7%",
-              "Tertekan akumulasi defisit -Rp 214,1 triliun"
+              "Tertekan akumulasi defisit -Rp 215,3 triliun"
             ]
           ]
         ],
@@ -834,7 +834,7 @@
           ]
         ],
         "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-        "evidence_caption": "Liabilitas & Ekuitas LK GOTO 2025 (hlm. 16): Utang berlipat dua menjadi Rp 7,74T dan akumulasi defisit -Rp 214,1T."
+        "evidence_caption": "Liabilitas & Ekuitas LK GOTO 2025 (hlm. 16): Utang berlipat dua menjadi Rp 7,74T dan akumulasi defisit -Rp 215,3T."
       },
       {
         "heading": "5. Dekomposisi ROE DuPont Tiga Langkah",
@@ -879,48 +879,118 @@
         ]
       },
       {
-        "heading": "6. Pembanding Sejawat (GoTo vs. Bukalapak) & Kesimpulan Strategis",
+        "heading": "6. Perbandingan Grab (revisi terbaru)",
         "source_citation": "Buku Kerja M2 Kelompok 4, Sheet Peer Benchmark; Laporan Keuangan FY2025 GoTo & Bukalapak",
         "paragraphs": [
-          "Perbandingan FY2025 terhadap emiten digital sejenis di BEI, PT Bukalapak.com Tbk (BUKA), menyoroti dua profil yang kontras. GoTo mencatatkan perputaran aset 60% lebih tinggi (0,40x dibanding BUKA 0,25x), menandakan monetisasi ekosistem yang lebih aktif per rupiah aset.",
-          "Sebaliknya, Bukalapak tidak memiliki utang berbunga (DER 0,00x), rasio lancar 37,07x, serta marjin bersih positif +48,4% (ROE +12,4%) dari hasil bunga dan investasi, sedangkan GoTo masih merugi. Kesimpulan: tantangan utama GoTo bukan likuiditas jangka pendek (2,73x), melainkan pencapaian laba bersih berkelanjutan."
+          "Grab menjadi satu-satunya pembanding valuasi. Harga 31 Desember 2025 US$4,99 dibagi BVPS induk (US$6.728 juta / 4.097.646.678 saham biasa kelas A dan B) menghasilkan P/B 3,0391x. Ekuitas induk GoTo Rp31.805,025 miliar / 1.062,010200395 miliar saham = BVPS Rp29,9479. P/B Grab x BVPS GoTo menghasilkan Rp91,0157 per saham (dibulatkan Rp91,0). Ini pembanding relatif satu perusahaan, bukan median atau target intrinsik. P/E tidak digunakan karena GoTo merugi. EV/EBITDA tidak digunakan karena basis EBITDA dilaporkan dan disesuaikan belum diseragamkan.",
+          "Grab paling dekat dari sisi mobilitas, pengantaran, dan jasa keuangan, meskipun wilayah, profitabilitas dan risikonya berbeda. Shopee tidak tercatat terpisah; Sea juga mencakup Garena dan Monee. BUKA memiliki bauran investasi, gaming dan Mitra serta laba investasi yang mengganggu perbandingan operasi. BELI berbasis persediaan dan omnichannel, dengan EBITDA dilaporkan FY2025 negatif. Mereka tetap pesaing industri yang relevan, tetapi tidak menjadi pembanding valuasi."
         ],
         "tables": [
           [
             [
-              "Metrik Pembanding FY2025",
-              "GoTo (GOTO)",
-              "Bukalapak (BUKA)"
+              "Input / result",
+              "Value",
+              "Basis"
             ],
             [
-              "Marjin Laba Bersih (Net Profit Margin)",
-              "-8,2%",
-              "48,4%"
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
             ],
             [
-              "Imbal Hasil Ekuitas (ROE)",
-              "-5,2%",
-              "12,4%"
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
             ],
             [
-              "Imbal Hasil Aset (ROA)",
-              "-3,3%",
-              "12,1%"
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
             ],
             [
-              "Rasio Lancar (Current Ratio)",
-              "2,73x",
-              "37,07x"
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
             ],
             [
-              "Utang terhadap Ekuitas (Debt-to-Equity)",
-              "0,27x",
-              "0,00x"
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
             ],
             [
-              "Perputaran Aset (Asset Turnover)",
-              "0,40x",
-              "0,25x"
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "Week 6 Z-score reconciliation",
+        "source_citation": "Completed Week 6 project; Milestone 2 Ratio Analysis C36",
+        "paragraphs": [
+          "Sesuai lembar kerja Minggu 6: Z = 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 menggunakan proksi ekuitas buku / total liabilitas. Input FY2025 (Rp juta): modal kerja 18.411.702; aset 45.757.642; akumulasi rugi -215.334.000; EBIT -378.254; ekuitas buku 28.711.657; liabilitas 17.045.985; pendapatan 18.322.117. Rasio X1-X5 = 0,402374; -4,705968; -0,008266; 1,684365; 0,400417. Kontribusi berbobot = 0,482849; -6,588355; -0,027279; 1,010619; 0,400417. Jumlah Z = -4,721750, dibulatkan -4,72. Distress di bawah 1,81; abu-abu 1,81-2,99; aman di atas 2,99. Akumulasi rugi mendominasi skor. Ini indikator penyaringan, bukan bukti gagal bayar segera. Sumber: tugas Minggu 6 dan Milestone 2, Ratio Analysis C36."
+        ],
+        "tables": [
+          [
+            [
+              "Factor",
+              "Numerator / denominator (Rp million)",
+              "Ratio",
+              "Weight",
+              "Contribution"
+            ],
+            [
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
+            ],
+            [
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
+            ],
+            [
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
+            ],
+            [
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ]
         ]
@@ -1493,39 +1563,53 @@
           "ALTMAN Z''-SCORE (MODEL PASAR BERKEMBANG)"
         ],
         [
-          "X1 (Modal Kerja / Total Aset)",
-          "0.384",
-          "0.377",
-          "0.402",
-          "6,56 x X1 (+2,64 poin di 2025)"
+          "Factor",
+          "Numerator / denominator (Rp million)",
+          "Ratio",
+          "Weight",
+          "Contribution"
         ],
         [
-          "X2 (Saldo Laba Akumulasi / Total Aset)",
-          "-3.830",
-          "-4.918",
-          "-4.679",
-          "3,26 x X2 (-15,25 poin di 2025)"
+          "X1",
+          "18,411,702 / 45,757,642",
+          "0.402374",
+          "1.2",
+          "0.482849"
         ],
         [
-          "X3 (EBIT / Total Aset)",
-          "-0.190",
-          "-0.052",
-          "-0.008",
-          "6,72 x X3 (-0,06 poin di 2025)"
+          "X2",
+          "-215,334,000 / 45,757,642",
+          "-4.705968",
+          "1.4",
+          "-6.588355"
         ],
         [
-          "X4 (Nilai Buku Ekuitas / Total Liabilitas)",
-          "1.944",
-          "2.375",
-          "1.684",
-          "1,05 x X4 (+1,77 poin di 2025)"
+          "X3",
+          "-378,254 / 45,757,642",
+          "-0.008266",
+          "3.3",
+          "-0.027279"
         ],
         [
-          "Total Altman Z''-Score (Zona Distress < 1,10)",
-          "-10.17",
-          "-11.41",
-          "-10.90",
-          "6,56(X1) + 3,26(X2) + 6,72(X3) + 1,05(X4) -> Zona Distress"
+          "X4",
+          "28,711,657 / 17,045,985",
+          "1.684365",
+          "0.6",
+          "1.010619"
+        ],
+        [
+          "X5",
+          "18,322,117 / 45,757,642",
+          "0.400417",
+          "1.0",
+          "0.400417"
+        ],
+        [
+          "Z",
+          "Weighted sum",
+          "",
+          "",
+          "-4.721750"
         ]
       ],
       "DuPont Analysis": [
@@ -1628,52 +1712,55 @@
       ],
       "Peer Benchmark": [
         [
-          "Pembanding Sejawat (FY2025) - Ekosistem Digital Indonesia"
+          "Grab-only comparison (latest revision)"
         ],
         [
-          "Metrik tahun terbaru (2025) PT GoTo Gojek Tokopedia Tbk vs. PT Bukalapak.com Tbk"
+          "Original Milestone 2 BUKA sheet remains in the submitted workbook. This study view follows the latest authorized peer selection."
         ],
         [
-          "Metrik Keuangan",
-          "GoTo (GOTO)",
-          "Bukalapak (BUKA)",
-          "Catatan Perbandingan"
+          "Input / result",
+          "Value",
+          "Basis"
         ],
         [
-          "Marjin Laba Bersih (Net Profit Margin)",
-          "-8.2%",
-          "48.4%",
-          "Laba Bukalapak ditopang pendapatan bunga dan keuntungan investasi"
+          "Grab price",
+          "US$4.99",
+          "31 Dec 2025"
         ],
         [
-          "Imbal Hasil Ekuitas (ROE)",
-          "-5.2%",
-          "12.4%",
-          "GoTo masih merugi; BUKA mencatat ROE positif"
+          "Grab parent equity",
+          "US$6,728 million",
+          "FY2025 audited"
         ],
         [
-          "Imbal Hasil Aset (ROA)",
-          "-3.3%",
-          "12.1%",
-          "GoTo memperkecil rugi sementara BUKA menghasilkan imbal hasil aset"
+          "Grab ordinary shares",
+          "4,097,646,678",
+          "Class A + B"
         ],
         [
-          "Rasio Lancar (Current Ratio)",
-          "2.73x",
-          "37.07x",
-          "Keduanya memiliki bantalan kas; BUKA sangat likuid pasca-pivot"
+          "Grab BVPS / P/B",
+          "US$1.641918 / 3.039129x",
+          "Parent basis"
         ],
         [
-          "Rasio Utang terhadap Ekuitas (DER)",
-          "0.27x",
-          "0.00x",
-          "Utang bank GoTo berlipat dua pada 2025; BUKA bebas utang"
+          "GoTo parent equity",
+          "Rp31,805.025 billion",
+          "FY2025 audited"
         ],
         [
-          "Perputaran Aset (Asset Turnover)",
-          "0.40x",
-          "0.25x",
-          "GoTo menghasilkan pendapatan 60% lebih tinggi per rupiah aset"
+          "GoTo ordinary shares",
+          "1,062,010,200,395",
+          "Year-end shares"
+        ],
+        [
+          "GoTo parent BVPS",
+          "Rp29.947947",
+          "Parent basis"
+        ],
+        [
+          "Grab P/B benchmark",
+          "Rp91.015660/share",
+          "No net-cash add-on"
         ]
       ],
       "Sector Benchmark Reference": [
@@ -4070,7 +4157,7 @@
     "folder": "Minggu 14",
     "week": "Minggu 14",
     "title": "Paket Valuasi Lengkap: WACC (7,76%), DCF, Residual Income & Market Multiples",
-    "summary": "Perhitungan Ke CAPM 8,45%, WACC 7,76%, Valuasi DCF (-Rp 121,1/lbr), Residual Income (-Rp 75,1/lbr), serta Kelipatan Pasar (Rp 39,8/lbr) ditriangulasi terhadap harga saham BEI Rp 25,00 pasca pencabutan batas Rp 50.",
+    "summary": "WACC 7,76%; Ke 8,45%; DCF -Rp121,1; RI -Rp75,1; tolok ukur P/B Grab Rp91,0/saham.",
     "docx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_Assignment14_Valuation_Summary.docx",
     "xlsx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
     "sections": [
@@ -4347,41 +4434,94 @@
           ]
         ],
         "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Bagian Ekuitas Auditan FY2025 yang memverifikasi Ekuitas Rp 28,71T dan Akumulasi Defisit -Rp 214,1T."
+        "evidence_caption": "Bagian Ekuitas Auditan FY2025 yang memverifikasi Ekuitas Rp 28,71T dan Akumulasi Defisit -Rp 215,3T."
       },
       {
-        "heading": "4. Triangulasi Kelipatan Pasar & Membaca Celah Valuasi vs. Harga Rp 25,00",
-        "source_citation": "Buku Kerja Valuasi Kelompok 4 (Sheet Market Multiples & Valuation Summary); Aturan BEI 28 Sept 2026",
+        "heading": "4. P/B Grab dan rekonsiliasi valuasi",
+        "source_citation": "Revised Assignment 14; Grab audited FY2025 20-F cover and F-5; GoTo FY2025 equity p16; GRAB close 31 Dec 2025",
         "paragraphs": [
-          "Kelipatan Pasar memberikan estimasi gabungan Rp 39,8 per saham (rata-rata Median P/B 2,30x x BVPS Rp 27,03 = Rp 62,2 dan EV/EBITDA disesuaikan kas bersih 13,25x = Rp 17,4 dari BUKA, GRAB, SE, BELI; P/E dikecualikan karena EPS -Rp 1,41). Angka ini lebih tinggi karena kelipatan peers tidak menghukum proyeksi pembakaran kas Base Case.",
-          "Mengapa harga GoTo turun ke Rp 25,00 setelah pencabutan batas gocap BEI: Saham GOTO sebelumnya tertahan artifisial di batas minimum pasar reguler Rp 50. Setelah BEI resmi menurunkan batas harga minimum menjadi Rp 1 pada 28 September 2026, tekanan jual terpendam memicu ARB dan memotong harga 50% menjadi Rp 25,00 (0,9x nilai buku), tepat di atas lantai likuidasi kas bersih Rp 13,20/lembar berkat prinsip tanggung jawab terbatas ekuitas."
+          "Grab menjadi satu-satunya pembanding valuasi. Harga 31 Desember 2025 US$4,99 dibagi BVPS induk (US$6.728 juta / 4.097.646.678 saham biasa kelas A dan B) menghasilkan P/B 3,0391x. Ekuitas induk GoTo Rp31.805,025 miliar / 1.062,010200395 miliar saham = BVPS Rp29,9479. P/B Grab x BVPS GoTo menghasilkan Rp91,0157 per saham (dibulatkan Rp91,0). Ini pembanding relatif satu perusahaan, bukan median atau target intrinsik. P/E tidak digunakan karena GoTo merugi. EV/EBITDA tidak digunakan karena basis EBITDA dilaporkan dan disesuaikan belum diseragamkan.",
+          "Grab paling dekat dari sisi mobilitas, pengantaran, dan jasa keuangan, meskipun wilayah, profitabilitas dan risikonya berbeda. Shopee tidak tercatat terpisah; Sea juga mencakup Garena dan Monee. BUKA memiliki bauran investasi, gaming dan Mitra serta laba investasi yang mengganggu perbandingan operasi. BELI berbasis persediaan dan omnichannel, dengan EBITDA dilaporkan FY2025 negatif. Mereka tetap pesaing industri yang relevan, tetapi tidak menjadi pembanding valuasi.",
+          "DCF -Rp121,1/saham dan residual income -Rp75,1/saham mempertahankan asumsi Tugas 14 dan Milestone 4. Hasil negatif menunjukkan struktur biaya proyeksi tidak mendukung nilai ekuitas, bukan harga saham negatif yang dapat ditransaksikan. Tolok ukur P/B Grab Rp91,0 tidak mengatasi pembakaran kas GoTo. Rp25 merupakan harga acuan tugas. Kas bersih sekitar Rp13,20/saham merupakan ukuran neraca, bukan batas bawah likuidasi yang dijamin. Perbandingan FY2025 bersifat retrospektif karena laporan auditan terbit setelah akhir tahun."
         ],
         "tables": [
           [
             [
-              "Metode Valuasi",
-              "Nilai per Saham (Rp)",
-              "Penjelasan & Rekonsiliasi"
+              "Input / result",
+              "Value",
+              "Basis"
             ],
             [
-              "Arus Kas Terdiskonto (DCF - FCFF)",
-              "Rp (121,1)",
-              "Negatif karena pembakaran FCFF Base Case (-Rp 7,0T s.d. -Rp 7,7T/thn) menghancurkan nilai perusahaan."
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
             ],
             [
-              "Residual Income (Laba Ekonomis)",
-              "Rp (75,1)",
-              "Negatif karena rugi bersih berulang ditambah beban ekuitas 8,45% terus menggerus nilai buku ekuitas."
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
             ],
             [
-              "Kelipatan Pasar (Rata-Rata P/B & EV/EBITDA)",
-              "Rp 39,8",
-              "Median P/B pembanding (2,30x -> Rp 62,2) & EV/EBITDA disesuaikan kas bersih (13,25x -> Rp 17,4) dari BUKA, GRAB, SE, BELI (P/E dikeluarkan karena EPS -Rp 1,41)."
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
             ],
             [
-              "Harga Pasar Saat Ini (IDX / Investing.com)",
-              "Rp 25,0",
-              "Diperdagangkan 0,9x nilai buku (turun 93% dari harga IPO Rp 338) setelah batas harga minimum BEI Rp 50 dicabut menjadi Rp 1."
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
+            ],
+            [
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
+            ],
+            [
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
+            ]
+          ],
+          [
+            [
+              "Method",
+              "Rp/share",
+              "Interpretation"
+            ],
+            [
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
+            ],
+            [
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
+            ],
+            [
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
+            ],
+            [
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ]
         ]
@@ -4421,11 +4561,11 @@
         ],
         [
           "",
-          "4. Sheet 'Market Multiples' menerapkan median kelipatan P/B (2,30x) dan EV/EBITDA (13,25x) dari 4 emiten pembanding digital regional."
+          "4. Grab-only FY2025 P/B, parent equity and year-end ordinary shares on both sides. P/E and EV/EBITDA excluded."
         ],
         [
           "",
-          "5. Sheet 'Valuation Summary' merangkum perbandingan football-field antara seluruh metode valuasi dan harga pasar Rp 25,00."
+          "5. Compare DCF, residual income and Grab P/B separately. No average target."
         ],
         [
           "",
@@ -4648,7 +4788,7 @@
         ],
         [
           "Nilai Perusahaan (Enterprise Value)",
-          "(142,588.1)",
+          "(142,597.7)",
           "",
           "",
           ""
@@ -4662,7 +4802,7 @@
         ],
         [
           "Nilai Ekuitas (DCF)",
-          "(128,575.5)",
+          "(128,585.2)",
           "",
           "",
           ""
@@ -4882,169 +5022,393 @@
       ],
       "Market Multiples": [
         [
-          "Valuasi Kelipatan Pasar (Valuasi Relatif Peers)"
-        ],
-        [
-          "Harga penutupan Desember 2025 pada perusahaan digital BEI dan ASEAN"
-        ],
-        [
-          "Perusahaan Pembanding",
-          "Price (Rp)",
-          "EPS (Rp)",
-          "BVPS (Rp)",
-          "P/E",
-          "P/B",
-          "EV/EBITDA"
-        ],
-        [
-          "PT Bukalapak.com Tbk (BUKA)",
-          "120",
-          "11.6",
-          "245",
-          "10.3x",
-          "0.49x",
-          "6.50x"
-        ],
-        [
-          "Grab Holdings Ltd (GRAB)",
-          "54,400",
-          "1,700",
-          "25,900",
-          "32.0x",
-          "2.10x",
-          "14.50x"
-        ],
-        [
-          "Sea Limited (SE - Shopee)",
-          "1,600,000",
-          "42,100",
-          "381,000",
-          "38.0x",
-          "4.20x",
-          "16.00x"
-        ],
-        [
-          "PT Global Digital Niaga Tbk (BELI)",
-          "450",
-          "0",
-          "180",
-          "-",
-          "2.50x",
-          "12.00x"
-        ],
-        [
-          "Rata-Rata Pembanding",
-          "-",
-          "-",
-          "-",
-          "26.8x",
-          "2.32x",
-          "12.25x"
-        ],
-        [
-          "Median Pembanding (Diterapkan ke GoTo)",
-          "-",
-          "-",
-          "-",
-          "32.0x",
-          "2.30x",
-          "13.25x"
-        ],
-        [
-          "PENERAPAN KELIPATAN MEDIAN PEMBANDING KE GOTO"
-        ],
-        [
-          "Metrik Keuangan",
-          "Nilai GoTo",
-          "Median Peers",
-          "Nilai Wajar Implied / Lbr",
-          "Catatan Analitis",
+          "Grab-only P/B comparison",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "EPS (Rp)",
-          "-1.41",
-          "32.00x",
-          "N/M (-)",
-          "Dikecualikan karena EPS FY2025 GoTo negatif (-Rp 1,41).",
+          "FY2025 retrospective comparison. Parent equity and ordinary shares on both sides.",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "BVPS (Rp)",
-          "27.03",
-          "2.30x",
-          "Rp 62.2",
-          "Nilai Buku per Saham x Median P/B Pembanding (2,30x).",
+          "Share price: 31 Dec 2025. Audited accounts published after year-end.",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "EBITDA per Share (Rp) + Net Cash/sh",
-          "0.32",
-          "13.25x",
-          "Rp 17.4",
-          "(0,32 x 13,25) + Kas bersih Rp 13,20/lbr = Rp 17,43/lbr.",
+          "Grab input / calculation",
+          "Value",
+          "Unit",
+          "Basis",
+          "Source",
           "",
           ""
         ],
         [
-          "Rata-Rata Nilai Implied (P/B & EV/EBITDA)",
-          "-",
-          "-",
-          "Rp 39.8",
-          "Rata-rata gabungan valuasi relatif = Rp 39,80/lembar.",
+          "Grab close",
+          4.99,
+          "USD/share",
+          "31 Dec 2025",
+          "GRAB historical close (Yahoo / Quiver)",
+          "",
+          ""
+        ],
+        [
+          "Parent equity",
+          6728,
+          "USD million",
+          "FY2025 audited",
+          "COMPETITORS/GRAB.pdf, PDF p149 (F-5)",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares",
+          4097.646678,
+          "million shares",
+          "Class A + B",
+          "GRAB.pdf, PDF p2: 3,969,290,878 + 128,355,800",
+          "",
+          ""
+        ],
+        [
+          "Grab BVPS",
+          1.6419180394742663,
+          "USD/share",
+          "Parent basis",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab P/B",
+          3.039128555769917,
+          "x",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo parent equity",
+          31805.025,
+          "Rp billion",
+          "FY2025 audited",
+          "GoTo FY2025 audited statements, PDF p16",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "APPLY GRAB P/B TO GOTO",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo metric",
+          "Value",
+          "Grab P/B (x)",
+          "Rp/share",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares (bn)",
+          1062.010200395,
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Parent BVPS (Rp)",
+          29.947946816490614,
+          3.039128555769917,
+          91.0156603566754,
+          "",
+          "",
+          ""
+        ],
+        [
+          "P/E and EV/EBITDA",
+          "Excluded",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab P/B benchmark (Rp/share)",
+          "",
+          "",
+          91.0156603566754,
+          "Single-company benchmark. No median, averaging or net cash add-on.",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basis and exclusions",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P/E: GoTo loss-making. EV/EBITDA: adjusted and reported bases not harmonized.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Parent BVPS normalizes this relative comparison only. DCF / RI model equity bases remain unchanged.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Market source: https://ca.finance.yahoo.com/quote/GRAB/history/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Audited shares/equity: https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ]
       ],
       "Valuation Summary": [
         [
-          "Ringkasan Valuasi: Rekonsiliasi Football-Field"
+          "Valuation Summary",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Rekonsiliasi Metode DCF, Residual Income, dan Kelipatan Pasar untuk PT GoTo Gojek Tokopedia Tbk"
+          "Reconciling DCF, residual income, and market multiple estimates for PT GoTo Gojek Tokopedia Tbk",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Metode Valuasi",
-          "Nilai per Saham (Rp)",
-          "Sumber & Penjelasan"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Arus Kas Terdiskonto (DCF)",
-          "Rp (121.1)",
-          "Sheet Valuasi DCF (EV Base Case -142,6T + Kas Bersih 14,0T)"
+          "Method",
+          "Value per Share (Rp)",
+          "Source",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Residual Income (Laba Ekonomis)",
-          "Rp (75.1)",
-          "Sheet Residual Income (Ekuitas Awal 28,7T - PV RI 108,5T)"
+          "Discounted Cash Flow (DCF)",
+          -121.07716748190164,
+          "DCF Valuation sheet",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Kelipatan Pasar (Rata-Rata P/B & EV/EBITDA)",
-          "Rp 39.8",
-          "Sheet Kelipatan Pasar (Rata-rata P/B Rp 62,2 & EV/EBITDA Rp 17,4)"
+          "Residual Income (Economic Profit)",
+          -75.11247015182498,
+          "Residual Income Valuation sheet",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Rentang (Terendah ke Tertinggi)",
-          "Rp (121.1) to Rp 39.8",
-          "Selisih lebar antara pembakaran kas intrinsik vs. kelipatan peers"
+          "Grab-only P/B benchmark",
+          91.0156603566754,
+          "Parent-equity normalized, single comparator",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Rata-Rata Sederhana Tiga Metode",
-          "Rp (52.1)",
-          "Rata-rata sederhana tidak tertimbang (-121,1; -75,1; +39,8)"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Lantai Likuidasi Kas Bersih per Saham",
-          "Rp 13.2",
-          "Kas Bersih Rp 14.012,5 M / 1.062,01 miliar saham beredar"
+          "Interpretation",
+          "",
+          "Different assumptions. No combined target.",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Harga Pasar Saat Ini (sebagai referensi)",
-          "Rp 25.0",
-          "Pasca aturan BEI Rp 1 per 28 Sept 2026 (0,9x Nilai Buku)"
+          "Simple average not used",
+          "",
+          "Do not blend intrinsic outputs and peer benchmark.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Assignment reference price",
+          25,
+          "Rp25 from the submitted assignment; not a live quote.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       ]
     }
@@ -5055,7 +5419,7 @@
     "folder": "Minggu 15",
     "week": "Minggu 15",
     "title": "Laporan Tertulis Akhir Terpadu Analisis Laporan Keuangan (Langkah 1-6)",
-    "summary": "Laporan akhir semester terintegrasi yang menyatukan Strategi (M1), Kualitas Akuntansi (M3), Rasio & Altman Z''-Score (-10,90) (M2), Proyeksi Pro Forma (M4), Valuasi (T14), dan Rekomendasi Investor Ekuitas Publik.",
+    "summary": "Laporan akhir terpadu: strategi, akuntansi, rasio, Z Minggu 6 -4,72, proyeksi Milestone 4, dan tolok ukur Grab saja.",
     "docx_file": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
     "sections": [
       {
@@ -5063,39 +5427,40 @@
         "source_citation": "Sintesis Terpadu Milestone 1-4 & Valuasi Tugas 14 Kelompok 4",
         "paragraphs": [
           "Disusun oleh Kelompok 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) untuk PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), laporan akhir terpadu ini menghubungkan Langkah 1-6 menjadi keputusan investasi nyata bagi Investor Ekuitas Publik pada harga Rp 25,00/lembar.",
-          "Temuan Utama Lintas Tahap: (1) Strategi (M1): Rivalitas tinggi vs Grab/Shopee/Maxim mengunci belanja pemasaran Rp 3,09T & R&D Rp 2,15T; (2) Kualitas Akuntansi (M3): Rugi bersih tetap negatif (-Rp 1.502 M), 22,57% aset ada di Tokopedia/Bank Jago, dan CFO hanya menutup 26,0% CapEx (FCF -Rp 875,3 M); (3) Rasio (M2): ROE -5,2% dan Altman Z''-Score -10,90; (4) Proyeksi (M4): Base Case menguras kas ke Rp 968 M di 2028F; (5) Valuasi (T14): Kedua model intrinsik (DCF -Rp 121,1; RI -Rp 75,1) berada di bawah harga pasar Rp 25,00 maupun kelipatan peers Rp 39,8."
+          "Sesuai lembar kerja Minggu 6: Z = 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 menggunakan proksi ekuitas buku / total liabilitas. Input FY2025 (Rp juta): modal kerja 18.411.702; aset 45.757.642; akumulasi rugi -215.334.000; EBIT -378.254; ekuitas buku 28.711.657; liabilitas 17.045.985; pendapatan 18.322.117. Rasio X1-X5 = 0,402374; -4,705968; -0,008266; 1,684365; 0,400417. Kontribusi berbobot = 0,482849; -6,588355; -0,027279; 1,010619; 0,400417. Jumlah Z = -4,721750, dibulatkan -4,72. Distress di bawah 1,81; abu-abu 1,81-2,99; aman di atas 2,99. Akumulasi rugi mendominasi skor. Ini indikator penyaringan, bukan bukti gagal bayar segera. Sumber: tugas Minggu 6 dan Milestone 2, Ratio Analysis C36.",
+          "Grab menjadi satu-satunya pembanding valuasi. Harga 31 Desember 2025 US$4,99 dibagi BVPS induk (US$6.728 juta / 4.097.646.678 saham biasa kelas A dan B) menghasilkan P/B 3,0391x. Ekuitas induk GoTo Rp31.805,025 miliar / 1.062,010200395 miliar saham = BVPS Rp29,9479. P/B Grab x BVPS GoTo menghasilkan Rp91,0157 per saham (dibulatkan Rp91,0). Ini pembanding relatif satu perusahaan, bukan median atau target intrinsik. P/E tidak digunakan karena GoTo merugi. EV/EBITDA tidak digunakan karena basis EBITDA dilaporkan dan disesuaikan belum diseragamkan."
         ],
         "tables": [
           [
             [
-              "Tahap Analisis (Langkah 1-6)",
-              "Metrik Utama / Hasil Model",
-              "Implikasi Keputusan bagi Investor"
+              "Method",
+              "Rp/share",
+              "Interpretation"
             ],
             [
-              "Langkah 1: Strategi Five Forces (M1)",
-              "Rivalitas Pasar: TINGGI | Posisi Hibrida",
-              "Membatasi kekuatan harga & kenaikan komisi"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "Langkah 2: Kualitas Akuntansi (M3)",
-              "FCF 2025: -(875,3) M | Asosiasi: 22,57% Aset",
-              "Waspadai risiko penurunan nilai & konversi kas"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Langkah 3: Rasio & Z''-Score (M2)",
-              "Current Ratio 2,73x | ROE -5,2% | Z'' -10,90",
-              "Likuid jangka pendek, namun defisit menekan modal"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Langkah 4: Proyeksi Base Case (M4)",
-              "Kas Akhir 2028F: Rp 968 M | EBIT -(4,97T)",
-              "Wajib membekukan OpEx tetap untuk tembus titik impas"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
             ],
             [
-              "Langkah 5-6: Valuasi & Putusan (T14)",
-              "DCF -121,1 | RI -75,1 | Peers 39,8 | Harga 25,0",
-              "Memerlukan laba bersih positif di atas 8,45% Ke"
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ]
         ]
@@ -5146,8 +5511,8 @@
         "heading": "(c) Evaluasi Kualitas Akuntansi & Audit Arus Kas Bebas (Milestone 3)",
         "source_citation": "Laporan Milestone 3; LK GOTO 2025 hlm. 15, 17, 21-22, Catatan 14-15 & 25",
         "paragraphs": [
-          "Penerapan kerangka forensik Minggu 7 atas LK auditan Maret 2026 mengungkap dua titik pengawasan utama: (1) Risiko Nilai Aset - 22,57% aset tertanam pada asosiasi Tokopedia (Rp 7.432 M termasuk goodwill Rp 2.004 M) dan Bank Jago (Rp 2.895 M) serta investasi Level 3 Rp 1.669 M; (2) Kualitas Pendapatan - diskon/promo dikurangkan langsung dari pendapatan bruto (PSAK 72) dan pendapatan pihak berelasi naik menjadi 7,13% (Rp 1.306 M).",
-          "Temuan Kas Krusial: Arus Kas Operasi FY2025 (+Rp 307,0 M) baru menutup 25,97% Belanja Modal Kas (Rp 1.182,4 M), menghasilkan defisit Arus Kas Bebas -Rp 875,3 miliar. Saldo kas akhir hanya naik karena pencairan deposito berjangka Rp 1.386,5 M serta penarikan utang baru Rp 3.718,0 M."
+          "Penerapan kerangka forensik Minggu 7 atas LK auditan Maret 2026 mengungkap dua titik pengawasan utama: (1) Risiko Nilai Aset - 22,57% aset tertanam pada asosiasi Tokopedia (Rp 7.432 M termasuk goodwill Rp 2.004 M) dan Bank Jago (Rp 2.895 M) serta investasi Level 3 Rp 1.669 M; (2) Kualitas Pendapatan - diskon/promo dikurangkan langsung dari pendapatan bruto (PSAK 72) dan pendapatan pihak berelasi naik menjadi 7,13% (Rp 1.306 M). Skenario penurunan nilai 20% bersifat hipotetis sebelum pajak. Goodwill yang sudah termasuk tidak dihitung dua kali.",
+          "CFO FY2025 Rp307,0 miliar menutup 25,97% belanja modal kas Rp1.182,4 miliar, sehingga FCF -Rp875,3 miliar. Pencairan deposito Rp1.386,5 miliar dan pinjaman pihak ketiga baru Rp3.718,0 miliar turut mendukung likuiditas. Rekonsiliasi perubahan kas juga mencakup arus investasi, pendanaan lain, dan efek kurs."
         ],
         "tables": [
           [
@@ -5217,11 +5582,11 @@
         "evidence_caption": "Catatan 14 (hlm. 100): Kepemilikan Entitas Asosiasi Auditan (Tokopedia + Bank Jago = 22,57% Aset)."
       },
       {
-        "heading": "(d) Analisis Common-Size, Rasio Keuangan, DuPont ROE & Altman Z''-Score (Milestone 2)",
+        "heading": "(d) Common-size, rasio, DuPont dan Z lima faktor Minggu 6",
         "source_citation": "Buku Kerja Rasio & DuPont Milestone 2; Neraca Auditan hlm. 15-16",
         "paragraphs": [
           "Profil common-size menunjukkan perbaikan efisiensi nyata (marjin kotor pulih ke 57,7%; marjin rugi usaha menyempit ke -2,1%), namun ROE tetap negatif sepanjang tiga tahun (-253,4% -> -18,0% -> -5,2%), total utang berlipat dua ke Rp 7.743 M (DER 0,27x), dan ketahanan bertumpu pada kas Rp 21.755 M (Current Ratio 2,73x).",
-          "Evaluasi Distress Altman Z''-Score: Penerapan model Pasar Berkembang (Z'' = 6,56 X1 + 3,26 X2 + 6,72 X3 + 1,05 X4) pada data auditan 2025 (X1 Modal Kerja/Aset = +0,402 -> +2,64; X2 Defisit/Aset = -4,679 -> -15,25; X3 EBIT/Aset = -0,008 -> -0,06; X4 Ekuitas/Liabilitas = +1,684 -> +1,77) menghasilkan Z''-Score sebesar -10,90 (Zona Distress < 1,10) akibat beban defisit historis -Rp 214,1 triliun."
+          "Sesuai lembar kerja Minggu 6: Z = 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 menggunakan proksi ekuitas buku / total liabilitas. Input FY2025 (Rp juta): modal kerja 18.411.702; aset 45.757.642; akumulasi rugi -215.334.000; EBIT -378.254; ekuitas buku 28.711.657; liabilitas 17.045.985; pendapatan 18.322.117. Rasio X1-X5 = 0,402374; -4,705968; -0,008266; 1,684365; 0,400417. Kontribusi berbobot = 0,482849; -6,588355; -0,027279; 1,010619; 0,400417. Jumlah Z = -4,721750, dibulatkan -4,72. Distress di bawah 1,81; abu-abu 1,81-2,99; aman di atas 2,99. Akumulasi rugi mendominasi skor. Ini indikator penyaringan, bukan bukti gagal bayar segera. Sumber: tugas Minggu 6 dan Milestone 2, Ratio Analysis C36."
         ],
         "tables": [
           [
@@ -5373,6 +5738,57 @@
               "-18,0%",
               "-5,2%",
               "ROE negatif di ketiga tahun (vs BUKA +12,4%)."
+            ]
+          ],
+          [
+            [
+              "Factor",
+              "Numerator / denominator (Rp million)",
+              "Ratio",
+              "Weight",
+              "Contribution"
+            ],
+            [
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
+            ],
+            [
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
+            ],
+            [
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
+            ],
+            [
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ]
         ]
@@ -5612,40 +6028,41 @@
         "heading": "(f) Rekonsiliasi Multi-Metode Valuasi terhadap Harga Pasar Rp 25,00 (Tugas 14)",
         "source_citation": "Buku Kerja Valuasi Tugas 14 & Peraturan Batas Harga Minimum BEI (28 Sept 2026)",
         "paragraphs": [
-          "Dengan WACC 7,76% dan Biaya Ekuitas 8,45% (Beta 0,59), kedua model intrinsik Base Case menghasilkan nilai ekuitas negatif (DCF -Rp 121,1/lbr; Residual Income -Rp 75,1/lbr), sedangkan kelipatan pasar (median P/B 2,30x & EV/EBITDA kas bersih 13,25x dari BUKA, GRAB, SE, BELI) menghasilkan Rp 39,8/lbr karena kelipatan peers mengabaikan proyeksi pembakaran kas historis.",
-          "Penjelasan Katalis Harga Rp 25,00: Setelah lama tertahan di batas bawah gocap Rp 50, saham GOTO turun 50% menyentuh ARB hingga Rp 25,00 (0,9x nilai buku; -93% dari harga IPO Rp 338) segera setelah BEI menurunkan batas harga minimum pasar reguler menjadi Rp 1 pada 28 September 2026. Prinsip tanggung jawab terbatas menjaga harga di atas lantai likuidasi kas bersih Rp 13,20/lembar."
+          "Grab menjadi satu-satunya pembanding valuasi. Harga 31 Desember 2025 US$4,99 dibagi BVPS induk (US$6.728 juta / 4.097.646.678 saham biasa kelas A dan B) menghasilkan P/B 3,0391x. Ekuitas induk GoTo Rp31.805,025 miliar / 1.062,010200395 miliar saham = BVPS Rp29,9479. P/B Grab x BVPS GoTo menghasilkan Rp91,0157 per saham (dibulatkan Rp91,0). Ini pembanding relatif satu perusahaan, bukan median atau target intrinsik. P/E tidak digunakan karena GoTo merugi. EV/EBITDA tidak digunakan karena basis EBITDA dilaporkan dan disesuaikan belum diseragamkan.",
+          "Grab paling dekat dari sisi mobilitas, pengantaran, dan jasa keuangan, meskipun wilayah, profitabilitas dan risikonya berbeda. Shopee tidak tercatat terpisah; Sea juga mencakup Garena dan Monee. BUKA memiliki bauran investasi, gaming dan Mitra serta laba investasi yang mengganggu perbandingan operasi. BELI berbasis persediaan dan omnichannel, dengan EBITDA dilaporkan FY2025 negatif. Mereka tetap pesaing industri yang relevan, tetapi tidak menjadi pembanding valuasi.",
+          "DCF -Rp121,1/saham dan residual income -Rp75,1/saham mempertahankan asumsi Tugas 14 dan Milestone 4. Hasil negatif menunjukkan struktur biaya proyeksi tidak mendukung nilai ekuitas, bukan harga saham negatif yang dapat ditransaksikan. Tolok ukur P/B Grab Rp91,0 tidak mengatasi pembakaran kas GoTo. Rp25 merupakan harga acuan tugas. Kas bersih sekitar Rp13,20/saham merupakan ukuran neraca, bukan batas bawah likuidasi yang dijamin. Perbandingan FY2025 bersifat retrospektif karena laporan auditan terbit setelah akhir tahun."
         ],
         "tables": [
           [
             [
-              "Metode Valuasi",
-              "Nilai Perusahaan / Ekuitas (Rp M)",
-              "Nilai per Saham (Rp)",
-              "Alasan Hasil Valuasi"
+              "Method",
+              "Rp/share",
+              "Interpretation"
             ],
             [
-              "1. Discounted Cash Flow (DCF - FCFF)",
-              "EV: (142.588,1) / Eq: (128.575,5)",
-              "Rp (121,1)",
-              "Base Case membakar Rp 7,0T-7,7T FCFF per tahun; meski ditambah kas bersih Rp 14,01T, nilai ekuitas intrinsik tetap negatif."
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "2. Residual Income (Laba Ekonomis)",
-              "BVE: 28.711,7 / Eq: (79.770,2)",
-              "Rp (75,1)",
-              "Rugi bersih (-Rp 3,7T s.d. -Rp 4,5T) ditambah beban modal ekuitas 8,45% menghasilkan -Rp 6,2T laba ekonomis negatif/tahun."
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "3. Kelipatan Pasar (P/B & EV/EBITDA)",
-              "Implied P/B: 62,2 / EV-EBITDA: 17,4",
-              "Rp 39,8",
-              "Median P/B peers (2,30x -> Rp 62,2) & EV/EBITDA disesuaikan kas bersih (13,25x -> Rp 17,4) dari BUKA, GRAB, SE, BELI (P/E dikeluarkan)."
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Harga Pasar Saat Ini (Investing.com)",
-              "Kapitalisasi Pasar: Rp 26.550,3 M",
-              "Rp 25,0",
-              "Diperdagangkan pada 0,9x nilai buku setelah aturan batas minimum BEI Rp 50 diturunkan menjadi Rp 1 pada Sept 2026."
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ]
         ]

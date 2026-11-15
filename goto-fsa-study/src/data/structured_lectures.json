@@ -290,34 +290,62 @@
     "category": "Step 3: Financial",
     "core_question": "Can the firm meet short-term obligations and survive long-term solvency distress?",
     "framework_details": "Current/Quick ratios, DSO/DIO/DPO cash conversion cycle, Debt/Equity, Interest Coverage, and Altman Z''-Score for Emerging Markets / Non-Manufacturers.",
-    "altman_formula": "Z'' = 6.56 X1 + 3.26 X2 + 6.72 X3 + 1.05 X4 (Safe > 2.60, Gray 1.10 - 2.60, Distress < 1.10)",
+    "altman_formula": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5 (Week 6 worksheet book-equity proxy for X4)",
     "goto_application": {
-      "title": "GoTo Altman Z''-Score Calculation (2025 Audited Balance Sheet)",
-      "type": "altman_breakdown",
-      "components": [
-        {
-          "x": "X1 (Working Capital / Assets = +0.402)",
-          "score": "+2.64",
-          "expl": "Working capital is Rp 18,412 bn due to large remaining IPO cash."
-        },
-        {
-          "x": "X2 (Retained Earnings / Assets = -4.679)",
-          "score": "-15.25",
-          "expl": "Crushed by Rp 214.1 trillion of cumulative historical retained losses."
-        },
-        {
-          "x": "X3 (EBIT / Assets = -0.008)",
-          "score": "-0.06",
-          "expl": "Operating loss of -Rp 378 bn in 2025."
-        },
-        {
-          "x": "X4 (Book Equity / Total Liabilities = +1.684)",
-          "score": "+1.77",
-          "expl": "Book equity of Rp 28,712 bn vs liabilities of Rp 17,046 bn."
-        }
+      "title": "Week 6 five-factor model",
+      "total_z": "-4.721750",
+      "takeaway": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
+      "table_headers": [
+        "Factor",
+        "Numerator / denominator (Rp million)",
+        "Ratio",
+        "Weight",
+        "Contribution"
       ],
-      "total_z": "-10.90 (Deep Distress Zone, threshold < 1.10)",
-      "takeaway": "Distress Zone (-10.90) driven by -Rp 214.1T accumulated losses (X2) and negative EBIT (X3); continuous operating losses will erode the X1 cash cushion unless profitability turns positive."
+      "table_rows": [
+        [
+          "X1",
+          "18,411,702 / 45,757,642",
+          "0.402374",
+          "1.2",
+          "0.482849"
+        ],
+        [
+          "X2",
+          "-215,334,000 / 45,757,642",
+          "-4.705968",
+          "1.4",
+          "-6.588355"
+        ],
+        [
+          "X3",
+          "-378,254 / 45,757,642",
+          "-0.008266",
+          "3.3",
+          "-0.027279"
+        ],
+        [
+          "X4",
+          "28,711,657 / 17,045,985",
+          "1.684365",
+          "0.6",
+          "1.010619"
+        ],
+        [
+          "X5",
+          "18,322,117 / 45,757,642",
+          "0.400417",
+          "1.0",
+          "0.400417"
+        ],
+        [
+          "Z",
+          "Weighted sum",
+          "",
+          "",
+          "-4.721750"
+        ]
+      ]
     },
     "study_takeaways": [
       "Interest coverage is -0.71x: operating income cannot cover Rp 535 bn annual interest expense.",
@@ -578,36 +606,37 @@
       },
       "valuation_summary": [
         {
-          "method": "1. DCF Valuation (FCFF)",
-          "implied_share": "Rp (121.1)",
-          "expl": "FCFF burns -Rp 6.6T to -Rp 7.5T/yr (zero tax refund on losses). Enterprise Value = -Rp 142.6T; adding Rp 14.0T net cash yields -Rp 128.6T equity value."
+          "method": "DCF",
+          "implied_share": "-121.1",
+          "expl": "Milestone 4 cost assumptions"
         },
         {
-          "method": "2. Residual Income",
-          "implied_share": "Rp (75.1)",
-          "expl": "Net losses plus 8.45% equity charge destroy -Rp 6.2T of economic profit per year, completely erasing Rp 28.7T starting book equity."
+          "method": "Residual income",
+          "implied_share": "-75.1",
+          "expl": "Losses and equity charge"
         },
         {
-          "method": "3. Market Multiples",
-          "implied_share": "Rp 39.8",
-          "expl": "Peer median P/B (2.30x -> Rp 62.2) and Net-Cash-Adj. EV/EBITDA (13.25x -> Rp 17.4) across pure-play SEA tech peers (BUKA, GRAB, SE, BELI; P/E excluded as EPS = -Rp 1.41)."
+          "method": "Grab P/B",
+          "implied_share": "91.0",
+          "expl": "Single comparable, parent equity basis"
         },
         {
-          "method": "Current Market Price",
-          "implied_share": "Rp 25.00",
-          "expl": "Trades at 0.8x book value (a 20% discount to book equity) on IDX."
+          "method": "Assignment price",
+          "implied_share": "25.0",
+          "expl": "Reference price, not a live quote"
         },
         {
-          "method": "Net Cash Liquidation Floor",
-          "implied_share": "Rp 13.20",
-          "expl": "Rp 14,012.5 bn net cash divided by 1,062.16 billion shares."
+          "method": "Net cash",
+          "implied_share": "13.20",
+          "expl": "Balance-sheet measure, no guaranteed floor"
         }
       ],
-      "reading_the_gap": "Why does the stock trade at Rp 25.00 when DCF/RI are negative? 1) Shares have limited liability (cannot drop below zero). 2) Net cash provides a hard floor at Rp 13.20. 3) BEI Regulation: Stock was artificially stuck at Rp 50 under the old 'gocap' floor; on Sept 28, 2026, IDX abolished the Rp 50 floor (lowered to Rp 1), triggering ARB and plunging the stock to Rp 25.00."
+      "reading_the_gap": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
     },
     "study_takeaways": [
       "DCF and Residual Income converge on the exact same conclusion: GoTo destroys value under historical cost trends.",
       "The market refuses to pay the peer multiple (2.10x P/B = Rp 56.8), treating GoTo as a distressed asset trading at 0.8x book value."
-    ]
+    ],
+    "story_clue": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
   }
 ]

@@ -466,7 +466,7 @@
         "subtitle": "3",
         "raw_text": "S T E P  3 O F  6\n3\nFinancial Analysis\nHow profitable, efficient, and financially healthy is this company?\nUse ratio analysis to evaluate profitability, liquidity, solvency, efficiency.\nUse cash-flow analysis to test whether profit is backed by real cash.\nBenchmark against sector peers, not just the company's own history.\nTool: DuPont/ROE decomposition, full ratio package ,  Weeks 4-6\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 10",
         "theory_explanation": "Step 3 of 6: Financial Analysis. Assesses profitability, efficiency, liquidity, and solvency using ratio packages, DuPont decomposition, and cash flow analysis against sector peers.",
-        "goto_explanation": "In Milestone 2, Group 4 discovered GoTo's 3-Step DuPont ROE was negative in every single year (-253.4%, -18.0%, -5.2%) and its Altman Z''-score was -10.90 (distress zone), driven by Rp 214.1 trillion in cumulative retained losses.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week1_PPT/slide_10.png",
         "goto_report": {
           "title": "Step 3 of 6: Financial Analysis (GoTo Ratios & Cash Flow)",
@@ -598,7 +598,7 @@
               "Is GOTO cheap or expensive vs. peers?"
             ],
             [
-              "4. Net Cash Liquidation Floor",
+              "4. Net cash per share (not a guaranteed floor)",
               "Balance-sheet downside protection",
               "Cash Rp 21.8T - Debt Rp 7.7T",
               "Covers Rp 13.20/sh (53% of Rp 25 price)"
@@ -666,45 +666,64 @@
         "subtitle": "The Toolbox That Powers Steps 3 and 5",
         "raw_text": "S U B R A M A N Y A M  C H A P T E R  1 ,   A  C O M P L E M E N T A R Y  L E N S\nThe Toolbox That Powers Steps 3 and 5\n1 Comparative Analysis Horizontal, year-over-year trend analysis.\n2 Common-Size Analysis Vertical analysis ,  every line as a % of revenue or assets.\n3 Ratio Analysis Profitability, liquidity, solvency, efficiency ,  Weeks 4-6.\n4 Cash Flow Analysis Testing whether profit is backed by real cash.\n5 Valuation Models DCF, residual income, multiples.\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 14",
         "theory_explanation": "Subramanyam Chapter 1: The Analytical Toolbox. 1. Comparative Analysis (Horizontal YoY); 2. Common-Size (Vertical %); 3. Ratio Analysis; 4. Cash Flow Analysis; 5. Valuation Models.",
-        "goto_explanation": "Group 4 applies Subramanyam's analytical toolbox step by step: Horizontal YoY trends and Vertical common-size statements (Week 5), Cash Flow and Credit Risk forensics (Weeks 4 & 6), Accounting Quality (Week 7), and Prospective Forecasting & Valuation (Weeks 13–14).",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week1_PPT/slide_14.png",
         "goto_report": {
-          "title": "Subramanyam Chapter 1: Complementary Analytical Toolbox",
-          "badge": "Toolbox Overview",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Analytical Tool",
-            "Textbook Source",
-            "GoTo Application",
-            "Week Covered"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "Common-Size & DuPont ROE",
-              "Subramanyam Ch. 1 & 8",
-              "OpEx % fell 135.4% -> 59.8%",
-              "Week 5"
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "Altman Z-Score & Liquidity",
-              "Subramanyam Ch. 10",
-              "Z-Score -2.81 (Distress; X2 deficit bias)",
-              "Week 6"
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "Earnings Quality Audit",
-              "Subramanyam Ch. 2 & 11",
-              "Sloan Accruals & CFO/NI ratio",
-              "Week 7"
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "Prospective & Valuation",
-              "Subramanyam Ch. 9 & 11",
-              "3-Statement Forecast & RI/DCF",
-              "Weeks 13-14"
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Wahlen supplies the 6-Step macro architecture; Subramanyam supplies the forensic accounting and ratio toolkit."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         },
         "audit_evidence": {
           "img": "/evidence/goto_income_statement_highlighted.png",
@@ -964,7 +983,7 @@
         "subtitle": "Three-Year Financial Snapshot (Rp million)",
         "raw_text": "A  Q U I C K  C H A L L E N G E\nThree-Year Financial Snapshot (Rp million)\nFinancial Statement Analysis  •  Week 2  •  Refresher & Business/Industry Analysis 3\nLine Item 2025 2024 2023\nNet Revenue 184,444 208,647 200,776\nGross Profit 58,246 76,402 59,204\nOperating Income / (Loss) (15,199) (10,298) (54,222)\nNet Income / (Loss) (25,677) 5,580 (52,411)\nTotal Assets 250,183 242,927 271,136\nTotal Liabilities 350,021 356,644 376,929\nTotal Equity / (Deficiency) (99,838) (113,717) (105,792)\nNet Cash Flow from Operations 2,794 (32,994) (58,562)\nSource: PT Mahaka Media Tbk, 2025 Annual & Sustainability Report, Financial Highlights, p. 12 -13.",
         "theory_explanation": "Classroom Challenge: PT Mahaka Media Tbk (ABBA) 3-Year Snapshot. Revenue declining, persistent operating losses (-Rp 15.2 bn in 2025), negative equity (-Rp 99.8 bn), yet CFO turned positive (+Rp 2.79 bn).",
-        "goto_explanation": "GoTo exhibits a parallel challenge on a massive scale: revenue rose to Rp 18.3T and cash rose to Rp 21.8T, but operating losses persisted (-Rp 378 bn in 2025) and cumulative deficit reached Rp 214.1 trillion.",
+        "goto_explanation": "GoTo exhibits a parallel challenge on a massive scale: revenue rose to Rp 18.3T and cash rose to Rp 21.8T, but operating losses persisted (-Rp 378 bn in 2025) and cumulative deficit reached Rp 215.3 trillion.",
         "image_url": "/slides/FSA_Week2_PPT/slide_3.png",
         "goto_report": {
           "title": "GoTo Three-Year Financial Snapshot (FY2023-FY2025, Rp bn)",
@@ -1230,12 +1249,12 @@
               "28,711.7"
             ]
           ],
-          "analytical_note": "Critical Audit Insight: Cumulative deficit reached (Rp 214.1 trillion). Equity contracted from Rp 35.72T to Rp 28.71T. If GoTo continues to lose Rp 3.7T to Rp 4.5T per year (as projected in Milestone 4 Base Case), book equity will be wiped out within 5 to 7 years."
+          "analytical_note": "Critical Audit Insight: Cumulative deficit reached (Rp 215.3 trillion). Equity contracted from Rp 35.72T to Rp 28.71T. If GoTo continues to lose Rp 3.7T to Rp 4.5T per year (as projected in Milestone 4 Base Case), book equity will be wiped out within 5 to 7 years."
         },
         "audit_evidence": {
           "img": "/evidence/goto_equity_deficit_highlighted.png",
           "title": "Audited Balance Sheet Liabilities & Equity (LK p. 16)",
-          "caption": "Official Filing Accounts: Akumulasi Rugi (Accumulated Losses) of (Rp 214,119,215 mn / Rp 214.1 Trillion) has consumed 88.4% of paid-in capital, leaving Total Equity at Rp 28,711,657 mn."
+          "caption": "Official Filing Accounts: Akumulasi Rugi (Accumulated Losses) of (Rp 215,334,000 mn / Rp 214.1 Trillion) has consumed 88.4% of paid-in capital, leaving Total Equity at Rp 28,711,657 mn."
         }
       },
       {
@@ -2252,7 +2271,7 @@
         "subtitle": "Four of Five Forces Lean Unfavorable",
         "raw_text": "R E A D I N G  T H E  O V E R A L L  P I C T U R E\nFour of Five Forces Lean Unfavorable\nConsistent with a company posting an operating loss in most recent \nyears ,  despite operating in a market growing at roughly an 8.4% \nCAGR.\nThe growth is real. So is the competitive and substitution pressure eating into ABBA's share of it.\nFinancial Statement Analysis  •  Week 2  •  Refresher & Business/Industry Analysis 23",
         "theory_explanation": "Reading the Overall Picture: Four of Five Forces Unfavorable. Explains why a company posts operating losses even in an industry growing at an 8.4% CAGR.",
-        "goto_explanation": "Indonesian digital commerce grew at >13% CAGR, yet GoTo accumulated Rp 214.1 trillion in losses. Unfavorable industry forces transfer all economic gains to consumers and drivers via promo wars.",
+        "goto_explanation": "Indonesian digital commerce grew at >13% CAGR, yet GoTo accumulated Rp 215.3 trillion in losses. Unfavorable industry forces transfer all economic gains to consumers and drivers via promo wars.",
         "image_url": "/slides/FSA_Week2_PPT/slide_26.png",
         "goto_report": {
           "title": "Industry Profitability Audit: Managing Unfavorable Forces",
@@ -3093,7 +3112,7 @@
         "subtitle": "ABBA's Revaluation Surplus (Rp 55.08bn to Equity)",
         "raw_text": "BACK TO OUR HOOK\nABBA's Revaluation Surplus (Rp 55.08bn to Equity)\nWeek 3 Asset & Liability Valuation",
         "theory_explanation": "Deconstructing the Classroom Hook: ABBA's Note 9 revealed a revaluation surplus of Rp 55.08 billion recognized directly in equity (OCI) ,  completely bypassing profit or loss. 'Surplus atas revaluasi aset tetap ,  neto.'",
-        "goto_explanation": "Why couldn't GoTo use this accounting trick? Because GoTo has no real estate! In GoTo's Statement of Changes in Equity, there is NO revaluation surplus. Instead, GoTo's equity contracted by Rp 7.0 trillion, dragged down by an accumulated deficit of (Rp 214.1 trillion).",
+        "goto_explanation": "Why couldn't GoTo use this accounting trick? Because GoTo has no real estate! In GoTo's Statement of Changes in Equity, there is NO revaluation surplus. Instead, GoTo's equity contracted by Rp 7.0 trillion, dragged down by an accumulated deficit of (Rp 215.3 trillion).",
         "image_url": "/slides/FSA_Week3_PPT/slide_13.png",
         "goto_report": {
           "title": "Equity Deficit vs. Revaluation: How GoTo's Equity Was Built",
@@ -3136,7 +3155,7 @@
         "audit_evidence": {
           "img": "/evidence/goto_equity_deficit_highlighted.png",
           "title": "Statement of Changes in Equity (LK p. 19)",
-          "caption": "Official GoTo Equity Statement: Retained deficit of Rp (214,118,806) million with zero revaluation surplus."
+          "caption": "Official GoTo Equity Statement: Retained deficit of Rp (215,334,000) million with zero revaluation surplus."
         }
       },
       {
@@ -3645,7 +3664,7 @@
         "subtitle": "GoTo Three-Year Cash Flow & Deficit Trajectory (2023-2025)",
         "raw_text": "A REAL COMPANY\nPT Mahaka Media Tbk (ABBA), 2023-2025 vs. GoTo\nWeek 4 Statement of Cash Flows",
         "theory_explanation": "Cash Flow vs Accrual Divergence: Net income and operating cash flow frequently move in opposite directions. A company can report narrowing accounting losses while cash burn continues, or turn operating cash positive while capital expenditure continues to drain reserves.",
-        "goto_explanation": "GoTo Cash Flow Trajectory: From 2023 to 2025, GoTo Net Loss narrowed by 98% from -(Rp 90.5T) to -(Rp 1.50T), while CFO flipped from -(Rp 3.94T) to +Rp 307.0 bn. However, Free Cash Flow remains negative at -(Rp 875.3 bn) and cumulative deficit reached Rp 214.1 trillion.",
+        "goto_explanation": "GoTo Cash Flow Trajectory: From 2023 to 2025, GoTo Net Loss narrowed by 98% from -(Rp 90.5T) to -(Rp 1.50T), while CFO flipped from -(Rp 3.94T) to +Rp 307.0 bn. However, Free Cash Flow remains negative at -(Rp 875.3 bn) and cumulative deficit reached Rp 215.3 trillion.",
         "image_url": "/slides/FSA_Week4_PPT/slide_4.png",
         "goto_report": {
           "title": "GoTo Three-Year Cash Flow & Deficit Trajectory (2023 - 2025)",
@@ -3705,11 +3724,11 @@
               "Retained Deficit (Cumulative Losses)",
               "(193,420.2)",
               "(212,640.8)",
-              "(214,142.5)",
-              "Rp 214.1T Total Burned Deficit"
+              "(215,334.0)",
+              "Rp 215.3T Total Burned Deficit"
             ]
           ],
-          "analytical_note": "GoTo Cash Flow Defense: Net loss narrowed dramatically from -(Rp 90,516.3 bn) to -(Rp 1,501.7 bn), and Operating Cash Flow (CFO) crossed positive to +Rp 307.0 bn. However, Free Cash Flow remains strictly negative at -(Rp 875.3 bn) due to Rp 1,182.4 bn in mandatory capex, while cumulative retained deficit expanded to Rp 214.1 trillion."
+          "analytical_note": "GoTo Cash Flow Defense: Net loss narrowed dramatically from -(Rp 90,516.3 bn) to -(Rp 1,501.7 bn), and Operating Cash Flow (CFO) crossed positive to +Rp 307.0 bn. However, Free Cash Flow remains strictly negative at -(Rp 875.3 bn) due to Rp 1,182.4 bn in mandatory capex, while cumulative retained deficit expanded to Rp 215.3 trillion."
         },
         "audit_evidence": {
           "img": "/evidence/goto_cash_flows_p1_highlighted.png",
@@ -4786,7 +4805,7 @@
               "Cumulative Retained Deficit",
               "(193,420.2)",
               "(212,640.8)",
-              "(214,142.5)",
+              "(215,334.0)",
               "Total cumulative equity capital burned by GoTo"
             ]
           ],
@@ -5054,7 +5073,7 @@
         "subtitle": "Step 3: Financial Analysis Begins",
         "raw_text": "WHERE WE ARE\nStep 3: Financial Analysis Begins\nFrom Accounting Analysis to Ratio Decomposition\nFinancial Statement Analysis • Week 5",
         "theory_explanation": "Weeks 1 through 4 established Accounting Analysis: validating the balance sheet quality, understanding asset revaluations, and reconciling cash flows. Week 5 initiates Financial Analysis: evaluating current and past performance, diagnosing business health, and predicting future profitability.",
-        "goto_explanation": "For GoTo, having verified that its cumulative deficit reached Rp 214.1 trillion and its operating cash flow turned positive (+Rp 307 bn) in Week 4, we now dissect whether its core operating model can ever generate self-sustaining returns without continuous capital injections.",
+        "goto_explanation": "For GoTo, having verified that its cumulative deficit reached Rp 215.3 trillion and its operating cash flow turned positive (+Rp 307 bn) in Week 4, we now dissect whether its core operating model can ever generate self-sustaining returns without continuous capital injections.",
         "image_url": "/slides/FSA_Week5_PPT/slide_2.png",
         "audit_evidence": {
           "title": "FSA Framework Progression: Accounting vs Financial Analysis",
@@ -5063,7 +5082,7 @@
           "key_figures": [
             {
               "label": "Cumulative Deficit",
-              "val": "-(Rp 214,142.5 bn)",
+              "val": "-(Rp 215,334.0 bn)",
               "ref": "Note 21"
             },
             {
@@ -5116,7 +5135,7 @@
               "Segmental revenue CAGR projections, DCF valuation modeling, and cost of capital estimation."
             ]
           ],
-          "analytical_note": "Roadmap Insight: Having verified GoTo's audited deficit of Rp 214.1T in Phase 1, Phase 2 applies DuPont to evaluate whether the operating model can ever generate positive returns."
+          "analytical_note": "Roadmap Insight: Having verified GoTo's audited deficit of Rp 215.3T in Phase 1, Phase 2 applies DuPont to evaluate whether the operating model can ever generate positive returns."
         }
       },
       {
@@ -5458,7 +5477,7 @@
               "100.0",
               "109.9",
               "110.7",
-              "+10.7% (Cumulative deficit expanded to Rp 214.1T)"
+              "+10.7% (Cumulative deficit expanded to Rp 215.3T)"
             ]
           ],
           "analytical_note": "Forensic Divergence: While operations improved (Opex fell to 54.7% of base), Debt expanded to 220.3% of base. GoTo funded its operational bridge by doubling financial leverage."
@@ -6337,7 +6356,7 @@
             ],
             [
               "Cumulative Retained Deficit",
-              "-(Rp 214.1T)",
+              "-(Rp 215.3T)",
               "-(US$ 17.2B)",
               "-(US$ 6.8B)",
               "All three burned billions to establish market dominance."
@@ -6371,7 +6390,7 @@
             },
             {
               "label": "Cumulative Deficit",
-              "val": "-(Rp 214,142.5 bn)",
+              "val": "-(Rp 215,334.0 bn)",
               "ref": "Note 21"
             }
           ],
@@ -6423,7 +6442,7 @@
         "subtitle": "What to Remember from Profitability & DuPont Analysis",
         "raw_text": "KEY TAKEAWAYS\nWhat to Remember from Today\nSummary of Profitability & DuPont Framework\nFinancial Statement Analysis • Week 5",
         "theory_explanation": "Profitability analysis is about understanding the quality, origin, and sustainability of shareholder returns. Common-size statements standardize financial performance across scale and currency; the 3-step DuPont framework identifies whether returns stem from margins, efficiency, or debt; and peer benchmarking provides realistic competitive context.",
-        "goto_explanation": "Applying Week 5 tools to GoTo proves: (1) GoTo achieved genuine operational turnaround by slashing opex from 135% to 60% of revenue, (2) its 2025 ROE (-5.23%) is approaching breakeven, but (3) it carries doubled debt (Rp 7.74T) and a burned deficit (Rp 214.1T) that constrain equity quality.",
+        "goto_explanation": "Applying Week 5 tools to GoTo proves: (1) GoTo achieved genuine operational turnaround by slashing opex from 135% to 60% of revenue, (2) its 2025 ROE (-5.23%) is approaching breakeven, but (3) it carries doubled debt (Rp 7.74T) and a burned deficit (Rp 215.3T) that constrain equity quality.",
         "image_url": "/slides/FSA_Week5_PPT/slide_19.png",
         "audit_evidence": {
           "title": "Week 5 Master Synthesis: GoTo Profitability Card",
@@ -6493,7 +6512,7 @@
               "Capital Structure & Leverage",
               "Rp 3,514.2 bn Debt",
               "Rp 7,742.6 bn Debt",
-              "Debt doubled (+102.7%) while retained deficit expanded to Rp 214.1 trillion."
+              "Debt doubled (+102.7%) while retained deficit expanded to Rp 215.3 trillion."
             ]
           ],
           "analytical_note": "Final Takeaway: GoTo has proven it can cut operating costs and improve its ROE from -253% to -5%. However, until it generates positive Free Cash Flow, its doubled debt load remains a solvency vulnerability."
@@ -6513,7 +6532,7 @@
     "title": "Profitability Analysis II: Liquidity, Solvency & the Altman Z-Score",
     "reading": "Penman Ch. 12; Palepu Ch. 5; Altman (1968, 2000); LK GOTO 31 Dec 2025 (Notes 17, 21, 32, 42, 43)",
     "category": "Step 3: Financial",
-    "core_question": "Can PT GoTo survive long enough to achieve sustained profitability, or will its doubled bank debt and Rp 214.1 trillion retained deficit trigger credit distress under the Altman Z-Score framework?",
+    "core_question": "How does the completed Week 6 five-factor Z-score inform GoTo financial-risk screening?",
     "total_slides": 21,
     "slides": [
       {
@@ -6522,7 +6541,7 @@
         "subtitle": "Liquidity, Solvency & the Altman Z-Score Framework",
         "raw_text": "Profitability Analysis II &\nRisk / Solvency Analysis\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "While Week 5 examined operating return (ROE), Week 6 introduces credit risk analysis: evaluating whether a firm has the cash buffer (liquidity) and capital structure (solvency) to honor its contractual debt commitments. A business can boast expanding margins, yet abruptly fail if short-term debt maturities outpace operating cash.",
-        "goto_explanation": "For GoTo, Week 6 is the ultimate stress test. GoTo holds Rp 21,755.2 billion in cash, giving it strong surface liquidity (Current Ratio 2.56x). However, its consolidated bank debt doubled to Rp 7,742.6 billion, and its negative Free Cash Flow (-(Rp 875.3 bn)) leaves it reliant on debt rollovers.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_1.png",
         "audit_evidence": {
           "title": "GoTo Risk & Solvency Profile: Audited LK GOTO 2025",
@@ -6546,76 +6565,69 @@
             },
             {
               "label": "Cumulative Deficit",
-              "val": "-(Rp 214,142.5 bn)",
+              "val": "-(Rp 215,334.0 bn)",
               "ref": "Note 21"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
-          "title": "GoTo Master Solvency & Credit Risk Profile (FY2025)",
-          "badge": "Risk Matrix Dashboard",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Risk Lens & Metric",
-            "GoTo FY2024",
-            "GoTo FY2025",
-            "Risk Threshold",
-            "Audit Diagnosis"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "1. Liquidity: Current Ratio",
-              "2.65x",
-              "2.56x",
-              "> 1.50x",
-              "Safe: Rp 21.8T cash buffer covers short-term bills"
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "2. Liquidity: Quick Ratio",
-              "2.44x",
-              "2.35x",
-              "> 1.00x",
-              "Safe: High liquid cash; minimal inventory risk"
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "3. Solvency: Total Debt",
-              "Rp 3,820.0 bn",
-              "Rp 7,742.6 bn",
-              "Low Leverage",
-              "WARNING: Debt doubled (+102.7% YoY surge)!"
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "4. Solvency: Debt-to-Equity (Parent)",
-              "16.9%",
-              "49.5%",
-              "< 50.0%",
-              "Surging: Parent equity shrank while debt rose"
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
             ],
             [
-              "5. Coverage: Times Interest Earned",
-              "-9.50x",
-              "-1.54x",
-              "> 3.00x",
-              "DISTRESS: Operating loss cannot cover interest"
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
             ],
             [
-              "6. Coverage: Cash DSCR",
-              "-0.19x",
-              "0.10x",
-              "> 1.25x",
-              "DISTRESS: CFO covers only 10% of debt service"
-            ],
-            [
-              "7. Distress: Altman Z-Score",
-              "-3.85",
-              "-2.81",
-              "> 2.99",
-              "DISTRESS ZONE: Penalized by Rp 214.1T deficit"
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Executive Diagnosis: GoTo presents a classic 'bifurcated risk profile': It has ample immediate liquidity (Current Ratio 2.56x) thanks to its Rp 21.8T cash hoard, but severely distressed coverage ratios (DSCR 0.10x) and a deeply negative Altman Z-Score (-2.81) due to cumulative burned deficit."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         }
       },
       {
@@ -6624,7 +6636,7 @@
         "subtitle": "Still Inside Step 3: Financial Analysis",
         "raw_text": "WHERE WE ARE\nStill Inside Step 3: Financial Analysis\nProfitability (Past Performance) vs Risk (Future Survival)\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "Financial Analysis comprises two interrelated pillars: Profitability Analysis (evaluating profit generation and capital efficiency) and Risk Analysis (evaluating solvency and liquidity under stress). An analyst cannot evaluate ROE without understanding the financial leverage and bankruptcy risk assumed to achieve it.",
-        "goto_explanation": "In Week 5, we saw GoTo's ROE improve from -253.4% to -5.23%. Now in Week 6, we test whether that ROE recovery was artificially aided by taking on bank debt, and whether GoTo can survive if macroeconomic conditions tighten.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_2.png",
         "audit_evidence": {
           "title": "FSA Risk Framework: Step 3 Financial Analysis Integration",
@@ -6643,45 +6655,64 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
-          "title": "The Dual Pillars of GoTo Financial Analysis",
-          "badge": "Analytical Balance",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Analytical Dimension",
-            "Core Metric Examined",
-            "GoTo FY2025 Status",
-            "Strategic Implication"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "Pillar 1: Profitability (Return)",
-              "Return on Equity (ROE)",
-              "-5.23% (Narrowed loss)",
-              "Operations approaching breakeven, but still negative."
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "Pillar 1: Operating Margin",
-              "EBIT / Revenue",
-              "-2.1% (Loss compressed)",
-              "S&M cost cuts delivered structural operating leverage."
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "Pillar 2: Liquidity (Cash Buffer)",
-              "Current Ratio (CA / CL)",
-              "2.56x (Comfortable)",
-              "Rp 21.8T cash provides ~5 years of runway."
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "Pillar 2: Solvency (Default Risk)",
-              "Altman Z-Score",
-              "-2.81 (Distress Zone)",
-              "Cumulative deficit of Rp 214.1T creates structural vulnerability."
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Four-Lens Synthesis: While short-term Liquidity (2.56x) provides immediate working capital, Coverage and Altman Z-Score (-2.81 Distress Zone) warn of long-term capital distress if cash burn continues before profitability stabilizes."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         }
       },
       {
@@ -6714,7 +6745,7 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
           "title": "Stakeholder Risk Contrast: Shareholder vs. Creditor Lens",
@@ -6785,7 +6816,7 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
           "title": "GoTo Three-Year Debt & Capital Structure Evolution",
@@ -6858,79 +6889,78 @@
         "subtitle": "Four Lenses on Risk: Liquidity, Solvency, Coverage & Distress",
         "raw_text": "THE FRAMEWORK\nFour Lenses on Risk\n1. Liquidity (Short-term)\n2. Solvency (Long-term)\n3. Coverage (Serviceability)\n4. Distress Modeling (Altman Z-Score)\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "A robust financial risk assessment requires examining four complementary dimensions: (1) Liquidity evaluates immediate cash buffers over next 12 months; (2) Solvency assesses capital structure and long-term leverage; (3) Coverage tests whether current cash flow covers debt service; and (4) Distress Modeling synthesizes multivariate ratios into a single bankruptcy predictor.",
-        "goto_explanation": "Applying this 4-lens framework to GoTo FY2025 produces a fascinating divergence: Lens 1 (Liquidity) looks stellar; Lens 2 (Solvency) shows fast-rising debt; Lens 3 (Coverage) reveals severe cash flow inadequacy; and Lens 4 (Altman Z) predicts deep distress.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_5.png",
         "audit_evidence": {
           "title": "Four-Lens Risk Architecture: FSA Theory",
           "filing_name": "LK GOTO 31 Dec 2025",
-          "audit_note": "Comprehensive multi-dimensional risk framework",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Current Ratio (Lens 1)",
-              "val": "2.56x",
-              "ref": "Liquidity"
-            },
-            {
-              "label": "Debt / Assets (Lens 2)",
-              "val": "16.9%",
-              "ref": "Solvency"
-            },
-            {
-              "label": "Cash DSCR (Lens 3)",
-              "val": "0.10x",
-              "ref": "Coverage"
-            },
-            {
-              "label": "Altman Z-Score (Lens 4)",
-              "val": "-2.81",
-              "ref": "Distress"
+              "label": "Week 6 Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 Ratio Analysis C36"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
-          "title": "GoTo Four-Lens Risk Diagnostic Summary",
-          "badge": "Risk Architecture",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Risk Lens",
-            "Primary Focus",
-            "GoTo FY2025 Metric",
-            "Audit Health Score",
-            "Primary Vulnerability"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "Lens 1: Liquidity",
-              "Short-term obligations (0-12 mo)",
-              "Current Ratio: 2.56x",
-              "EXCELLENT",
-              "None immediate; Rp 21.8T cash is highly liquid."
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "Lens 2: Solvency",
-              "Capital structure & total gearing",
-              "Debt / Assets: 16.9%",
-              "MODERATE",
-              "Bank debt doubled to Rp 7.74T while equity fell."
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "Lens 3: Coverage",
-              "Operating cash vs debt service",
-              "Cash DSCR: 0.10x",
-              "CRITICAL",
-              "Operating cash covers only 10% of debt obligations."
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "Lens 4: Distress",
-              "Multivariate bankruptcy model",
-              "Altman Z: -2.81",
-              "SEVERE DISTRESS",
-              "Heavy cumulative deficit penalty of Rp 214.1 trillion."
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Classroom Defense: Notice how different lenses tell different stories. An analyst looking only at Liquidity thinks GoTo is safe; an analyst looking at Coverage and Altman Z sees serious credit distress."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         }
       },
       {
@@ -7200,7 +7230,7 @@
         "subtitle": "Solvency Ratios: Capital Structure & Long-Term Default Risk",
         "raw_text": "LENS 2 OF 4\nSolvency Ratios\nCan the Company Survive Over the Long Run?\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "Solvency evaluates a company's financial architecture and ability to meet long-term fixed obligations over a multi-year horizon. While liquidity is about cash flow timing, solvency is about capital adequacy: does the business have enough equity to absorb sustained losses without defaulting on creditors?",
-        "goto_explanation": "This is where GoTo's vulnerability appears. While GoTo is liquid today, its long-term solvency is deteriorating: Cumulative retained deficit has eaten away Rp 214.1 trillion of equity capital, while bank borrowings reached Rp 7,742.6 billion.",
+        "goto_explanation": "This is where GoTo's vulnerability appears. While GoTo is liquid today, its long-term solvency is deteriorating: Cumulative retained deficit has eaten away Rp 215.3 trillion of equity capital, while bank borrowings reached Rp 7,742.6 billion.",
         "image_url": "/slides/FSA_Week6_PPT/slide_9.png",
         "audit_evidence": {
           "title": "Solvency & Long-Term Capital Structure: LK GOTO 2025",
@@ -7229,7 +7259,7 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
           "title": "GoTo Long-Term Solvency & Capital Cushion Schedule",
@@ -7289,7 +7319,7 @@
               "Retained Deficit (Cumulative Losses)",
               "(193,420.2)",
               "(212,640.8)",
-              "(214,142.5)",
+              "(215,334.0)",
               "Cumulative capital incinerated by GoTo"
             ]
           ],
@@ -7326,7 +7356,7 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
           "title": "GoTo Three-Year Solvency & Gearing Multipliers",
@@ -7421,7 +7451,7 @@
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 215,334.0 bn)."
         },
         "goto_report": {
           "title": "GoTo Debt Obligations vs. Operating Cash Generation",
@@ -7630,31 +7660,31 @@
         "subtitle": "The Altman Z-Score: Multivariate Credit Distress Prediction",
         "raw_text": "LENS 4 OF 4\nThe Altman Z-Score\nMultivariate Credit Distress Prediction\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "Developed by Edward Altman (1968, 2000), the Altman Z-score combines five weighted financial ratios into a single score that predicts bankruptcy probability with over 80-90% accuracy within a two-year horizon. It addresses the flaw of single ratios by looking at liquidity, cumulative profitability, operating efficiency, leverage, and asset turnover simultaneously.",
-        "goto_explanation": "Applying the 5-variable Altman Z-score to GoTo yields Z = -2.81, placing GoTo in the Distress Zone (< 1.81) due primarily to X2 (accumulated losses) and X3 (negative EBIT). Following Week 6 Slides 14-20, analysts examine all five components alongside Liquidity, Solvency, and Coverage.",
+        "goto_explanation": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.",
         "image_url": "/slides/FSA_Week6_PPT/slide_14.png",
         "audit_evidence": {
-          "title": "The Altman Z-Score Framework: Foundations",
-          "filing_name": "Altman (1968, 2000) NYU Stern Research Papers",
-          "audit_note": "Multivariate statistical bankruptcy prediction model",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Safe Zone Threshold",
-              "val": "Z > 2.99",
-              "ref": "Altman Standard"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Grey Zone Threshold",
-              "val": "1.81 <= Z <= 2.99",
-              "ref": "Altman Standard"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "Distress Zone Threshold",
-              "val": "Z < 1.81",
-              "ref": "Altman Standard"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
           "title": "The 5-Variable Altman Architecture: Why It Matters",
@@ -7686,16 +7716,16 @@
               "3.30x (Highest Weight!)"
             ],
             [
-              "X4: Market Equity / Total Liab",
-              "Financial Gearing & Equity Cushion",
-              "Measures how much equity value can drop before liabilities exceed assets.",
+              "X4: Book equity / total liabilities",
+              "Worksheet equity cushion",
+              "Book equity proxy required in the completed Week 6 worksheet",
               "0.60x"
             ],
             [
               "X5: Revenue / Total Assets",
               "Asset Turnover Velocity",
               "Measures competitive sales-generating efficiency.",
-              "0.999x"
+              "1.00x"
             ]
           ],
           "analytical_note": "Model Mechanics: Notice that X3 (EBIT / Assets) has the highest weight (3.3x). Altman determined that operating earning power is the single most powerful deterrent against bankruptcy."
@@ -7707,105 +7737,95 @@
         "subtitle": "Five Components, One Score: GoTo FY2025 Calculations",
         "raw_text": "THE FORMULA\nFive Components, One Score\nZ = 1.2·X1 + 1.4·X2 + 3.3·X3 + 0.6·X4 + 0.999·X5\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "The original Altman formula for publicly traded corporations is: Z = 1.2·X1 + 1.4·X2 + 3.3·X3 + 0.6·X4 + 0.999·X5. Each coefficient was empirically calibrated using discriminant analysis on corporate defaults.",
-        "goto_explanation": "Inputting GoTo's audited FY2025 numbers: X1 = +0.3434, X2 = -4.6799, X3 = -0.0083, X4 = +4.9318, X5 = +0.4004. Calculating: 1.2(0.343) + 1.4(-4.680) + 3.3(-0.008) + 0.6(4.932) + 0.999(0.400) = -2.808.",
+        "goto_explanation": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.",
         "image_url": "/slides/FSA_Week6_PPT/slide_15.png",
         "audit_evidence": {
-          "title": "GoTo Audited Inputs for Altman Z-Score: LK GOTO 2025",
-          "filing_name": "LK GOTO 31 Dec 2025",
-          "audit_note": "Audited balance sheet, income statement, and market cap inputs",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "X1 (WC / Assets)",
-              "val": "+0.3434",
-              "ref": "Calculated"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "X2 (RE / Assets)",
-              "val": "-4.6799",
-              "ref": "Calculated"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "X3 (EBIT / Assets)",
-              "val": "-0.0083",
-              "ref": "Calculated"
-            },
-            {
-              "label": "X4 (Mcap / Liab)",
-              "val": "+4.9318",
-              "ref": "Calculated"
-            },
-            {
-              "label": "X5 (Sales / Assets)",
-              "val": "+0.4004",
-              "ref": "Calculated"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "GoTo FY2025 Altman Z-Score Component Breakdown",
-          "badge": "Formula Execution",
+          "title": "GoTo FY2025: Week 6 Five-Factor Z-Score",
+          "badge": "Week 6 worksheet basis",
           "content_type": "table",
           "table_headers": [
-            "Component Ratio",
-            "Audited Numerator (Rp bn)",
-            "Audited Denominator (Rp bn)",
-            "Calculated Ratio",
+            "Component",
+            "Numerator (Rp bn)",
+            "Denominator (Rp bn)",
+            "Ratio",
             "Weight",
-            "Weighted Score"
+            "Contribution"
           ],
           "table_rows": [
             [
-              "X1: Working Capital / Assets",
-              "15,712.9 (WC)",
-              "45,758.1 (Assets)",
-              "+0.3434",
-              "1.20x",
-              "+0.4121 (Positive buffer)"
+              "X1: Working capital / total assets",
+              "18,411.702",
+              "45,757.642",
+              "0.402374",
+              "1.2",
+              "+0.482849"
             ],
             [
-              "X2: Retained Deficit / Assets",
-              "(214,142.5) (Deficit)",
-              "45,758.1 (Assets)",
-              "-4.6799",
-              "1.40x",
-              "-6.5519 (Massive Penalty!)"
+              "X2: Retained earnings / total assets",
+              "-215,334.000",
+              "45,757.642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "X3: EBIT / Total Assets",
-              "(378.1) (Loss)",
-              "45,758.1 (Assets)",
-              "-0.0083",
-              "3.30x",
-              "-0.0274 (Slightly negative)"
+              "X3: EBIT / total assets",
+              "-378.254",
+              "45,757.642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "X4: Market Equity / Liab",
-              "84,070.0 (Mcap @ Rp70)",
-              "17,046.4 (Liabilities)",
-              "+4.9318",
-              "0.60x",
-              "+2.9591 (Market buffer)"
+              "X4: Book equity / total liabilities",
+              "28,711.657",
+              "17,045.985",
+              "1.684365",
+              "0.6",
+              "+1.010619"
             ],
             [
-              "X5: Sales / Total Assets",
-              "18,322.2 (Revenue)",
-              "45,758.1 (Assets)",
-              "+0.4004",
-              "0.999x",
-              "+0.4000 (Asset turns)"
+              "X5: Revenue / total assets",
+              "18,322.117",
+              "45,757.642",
+              "0.400417",
+              "1.0",
+              "+0.400417"
             ],
             [
-              "Sum = Total Altman Z-Score",
-              "-",
-              "-",
-              "-",
-              "-",
-              "-2.8081 (Distress Zone)"
+              "Total Z",
+              "",
+              "",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Mathematical Fact: Look at X2: -6.5519! The Rp 214.1 trillion retained deficit is so gigantic that it obliterates the positive contributions from working capital (+0.41) and market cap (+2.96), dragging the final Z-score down to -2.81."
+          "analytical_note": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance."
         }
       },
       {
@@ -7814,67 +7834,59 @@
         "subtitle": "The Three Zones of Altman Z & GoTo's Classification",
         "raw_text": "INTERPRETING THE SCORE\nThe Three Zones\nSafe Zone, Grey Zone, Distress Zone\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "The Altman Z-score establishes three distinct credit zones: (1) Safe Zone (Z > 2.99): negligible risk of default within 2 years; (2) Grey Zone (1.81 <= Z <= 2.99): moderate risk, requires close monitoring; and (3) Distress Zone (Z < 1.81): high statistical probability of bankruptcy.",
-        "goto_explanation": "With a score of -2.81, GoTo falls below the 1.81 threshold into the Distress Zone. Paired with negative Times Interest Earned, the score warns that cumulative historical burn and negative operating earnings must reverse to protect long-term solvency.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_16.png",
         "audit_evidence": {
-          "title": "Altman Z-Score Zone Classification Standard",
-          "filing_name": "Altman Z-Score Cutoffs (Journal of Finance)",
-          "audit_note": "Benchmark boundaries for corporate default prediction",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "GoTo Score",
-              "val": "-2.81 (Distress Zone)",
-              "ref": "Audited Calculation"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Distress Boundary",
+              "label": "Distress threshold",
               "val": "< 1.81",
-              "ref": "Altman Boundary"
+              "ref": "Week 6"
             },
             {
-              "label": "Distance to Safe Zone",
-              "val": "5.80 points below Safe Zone",
-              "ref": "Calculated"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "Altman Z-Score Zone Mapping for PT GoTo",
-          "badge": "Credit Zone Mapping",
+          "title": "Week 6 zones and GoTo classification",
+          "badge": "Five-factor model",
           "content_type": "table",
           "table_headers": [
-            "Zone Name",
-            "Z-Score Range",
-            "Default Probability (2 Years)",
-            "GoTo FY2025 Position",
-            "Credit Diagnosis"
+            "Zone",
+            "Range",
+            "GoTo assessment"
           ],
           "table_rows": [
             [
-              "Safe Zone",
+              "Safe",
               "Z > 2.99",
-              "< 5% Bankruptcy probability",
-              "GoTo is 5.80 pts below",
-              "Solid financial health and strong debt service"
+              ""
             ],
             [
-              "Grey Zone",
-              "1.81 <= Z <= 2.99",
-              "15% - 25% Default risk",
-              "GoTo is 4.62 pts below",
-              "Vulnerable to industry shocks; watch liquidity"
+              "Grey",
+              "1.81–2.99",
+              ""
             ],
             [
-              "Distress Zone",
+              "Distress",
               "Z < 1.81",
-              "> 80% Bankruptcy probability",
-              "GoTo sits at -2.81",
-              "STATISTICAL DISTRESS: Heavy structural debt & deficit"
+              "GoTo Z = −4.721750"
             ]
           ],
-          "analytical_note": "Week 6 Slide 19 Guidance: The Altman Z-score (-2.81) places GoTo in the Distress Zone (< 1.81) and acts as a quantitative risk screen evaluated alongside Liquidity, Solvency, and Coverage ratios."
+          "analytical_note": "No company-specific bankruptcy probability is inferred. The score is a screening measure."
         }
       },
       {
@@ -7883,95 +7895,95 @@
         "subtitle": "Computing GoTo's Z-Score Component by Component",
         "raw_text": "WORKED EXAMPLE\nComputing GoTo's Z-Score, Component by Component\nWalking Through Each Audited Input\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "To understand why a company lands in a specific distress zone, an analyst must dissect each component's positive or negative pull on the total score. This exposes whether distress is driven by operational collapse, working capital decay, or historical balance sheet overhang.",
-        "goto_explanation": "Dissecting GoTo's components reveals an extreme tug-of-war: Working Capital (X1) adds +0.41 and Market Equity (X4) adds +2.96. But Retained Earnings (X2) subtracts a staggering -6.55! The deficit alone drives GoTo into distress.",
+        "goto_explanation": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.",
         "image_url": "/slides/FSA_Week6_PPT/slide_17.png",
         "audit_evidence": {
-          "title": "Component Sensitivity Schedule: LK GOTO 2025",
-          "filing_name": "LK GOTO 31 Dec 2025",
-          "audit_note": "Component-by-component contribution to total Z-score",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Positive Contributions (X1+X4+X5)",
-              "val": "+3.771 points",
-              "ref": "Calculated"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Negative Contributions (X2+X3)",
-              "val": "-6.579 points",
-              "ref": "Calculated"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "Net Score",
-              "val": "-2.808 points",
-              "ref": "Calculated"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "GoTo Altman Z-Score Component Contribution Waterfall",
-          "badge": "Component Sensitivity",
+          "title": "GoTo FY2025: Week 6 Five-Factor Z-Score",
+          "badge": "Week 6 worksheet basis",
           "content_type": "table",
           "table_headers": [
             "Component",
-            "Value (Rp bn)",
-            "Calculated X_i",
-            "Weighted Contribution",
-            "Pull on Total Score",
-            "Diagnostic Commentary"
+            "Numerator (Rp bn)",
+            "Denominator (Rp bn)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "X1: Working Capital Buffer",
-              "15,712.9",
-              "+0.343x",
-              "+0.412",
-              "+ LIFT (+15%)",
-              "Cash hoard provides positive liquidity score."
+              "X1: Working capital / total assets",
+              "18,411.702",
+              "45,757.642",
+              "0.402374",
+              "1.2",
+              "+0.482849"
             ],
             [
-              "X2: Retained Deficit Drag",
-              "(214,142.5)",
-              "-4.680x",
-              "-6.552",
-              "-- DRAG (-233%)",
-              "Cumulative deficit crushes the entire score."
+              "X2: Retained earnings / total assets",
+              "-215,334.000",
+              "45,757.642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "X3: Operating Asset Productivity",
-              "(378.1)",
-              "-0.008x",
-              "-0.027",
-              "- NEUTRAL (-1%)",
-              "Operating loss is small enough to have minor impact."
+              "X3: EBIT / total assets",
+              "-378.254",
+              "45,757.642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "X4: Market Equity Cushion",
-              "84,070.0",
-              "+4.932x",
-              "+2.959",
-              "++ LIFT (+105%)",
-              "Stock market valuation provides equity buffer."
+              "X4: Book equity / total liabilities",
+              "28,711.657",
+              "17,045.985",
+              "1.684365",
+              "0.6",
+              "+1.010619"
             ],
             [
-              "X5: Asset Turnover Velocity",
-              "18,322.2",
-              "+0.400x",
-              "+0.400",
-              "+ LIFT (+14%)",
-              "Revenue generation efficiency contributes positively."
+              "X5: Revenue / total assets",
+              "18,322.117",
+              "45,757.642",
+              "0.400417",
+              "1.0",
+              "+0.400417"
             ],
             [
-              "Total Altman Z-Score",
-              "-",
-              "-",
-              "-2.808",
-              "FINAL SCORE",
-              "Net result is deeply negative (-2.81)."
+              "Total Z",
+              "",
+              "",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Key Takeaway: If GoTo had zero retained deficit (X2 = 0), its Z-score would be +3.74, placing it firmly in the SAFE ZONE! GoTo's statistical distress is 100% a consequence of its past venture burn."
+          "analytical_note": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance."
         }
       },
       {
@@ -7980,81 +7992,95 @@
         "subtitle": "Putting It Together: Original Z vs. Emerging Market Z''",
         "raw_text": "THE RESULT\nPutting It Together\nOriginal Z (-2.81) vs. Emerging Market Z'' (-11.29)\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "For emerging market and non-manufacturing / service companies, Altman developed the four-variable Z''-score model: Z'' = 6.56·X1 + 3.26·X2 + 6.72·X3 + 1.05·X4 (where X4 uses Book Value of Equity instead of Market Value, and X5 is removed to eliminate sales distortion). In the Z'' model, Safe Zone is Z'' > 2.60 and Distress Zone is Z'' < 1.10.",
-        "goto_explanation": "Applying the emerging market Z'' model to GoTo results in an even steeper score: Z'' = -11.29! Because book equity is used instead of market cap, and X1 and X2 receive higher weights (6.56 and 3.26), the retained deficit penalty expands further.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_18.png",
         "audit_evidence": {
-          "title": "Altman Z'' Emerging Market Model Verification",
-          "filing_name": "Altman, Hartzell, Peck (1995) Emerging Market Scoring",
-          "audit_note": "Service and emerging market model calibration",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Original Z-Score",
-              "val": "-2.81 (Uses Market Cap)",
-              "ref": "Original Model"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Altman Z''-Score",
-              "val": "-11.29 (Uses Book Equity)",
-              "ref": "Emerging Market Model"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "Z'' Distress Cutoff",
-              "val": "< 1.10",
-              "ref": "Benchmark Cutoff"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "Comparison: Original Public Z vs. Emerging Market Z''",
-          "badge": "Model Contrast",
+          "title": "GoTo FY2025: Week 6 Five-Factor Z-Score",
+          "badge": "Week 6 worksheet basis",
           "content_type": "table",
           "table_headers": [
-            "Model Variant",
-            "GoTo Score",
-            "Safe Zone Cutoff",
-            "Distress Cutoff",
-            "GoTo Diagnosis"
+            "Component",
+            "Numerator (Rp bn)",
+            "Denominator (Rp bn)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "Original Altman Z (1968)",
-              "-2.81",
-              "> 2.99",
-              "< 1.81",
-              "Deep Distress: Pulled down by X2 (-6.55)"
+              "X1: Working capital / total assets",
+              "18,411.702",
+              "45,757.642",
+              "0.402374",
+              "1.2",
+              "+0.482849"
             ],
             [
-              "Altman Z'' Emerging Market (1995)",
-              "-11.29",
-              "> 2.60",
-              "< 1.10",
-              "Extreme Distress: Heavy weighting on X2 (-15.26 drag)"
+              "X2: Retained earnings / total assets",
+              "-215,334.000",
+              "45,757.642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "Working Capital Lift in Z''",
-              "+2.25",
-              "-",
-              "-",
-              "X1 receives 6.56x weight (+0.343 * 6.56 = +2.25)"
+              "X3: EBIT / total assets",
+              "-378.254",
+              "45,757.642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "Retained Deficit Drag in Z''",
-              "-15.26",
-              "-",
-              "-",
-              "X2 receives 3.26x weight (-4.680 * 3.26 = -15.26)"
+              "X4: Book equity / total liabilities",
+              "28,711.657",
+              "17,045.985",
+              "1.684365",
+              "0.6",
+              "+1.010619"
             ],
             [
-              "Book Equity Cushion in Z''",
-              "+1.77",
-              "-",
-              "-",
-              "X4 uses Book Equity / Liab (1.684 * 1.05 = +1.77)"
+              "X5: Revenue / total assets",
+              "18,322.117",
+              "45,757.642",
+              "0.400417",
+              "1.0",
+              "+0.400417"
+            ],
+            [
+              "Total Z",
+              "",
+              "",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Synthesis: Both models agree: GoTo fails traditional statistical credit scoring tests. But this leads directly to the vital caveat examined in Slide 19."
+          "analytical_note": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance."
         }
       },
       {
@@ -8063,69 +8089,59 @@
         "subtitle": "A Caveat Worth Paying Attention To: Negative Equity in X4 & Four-Lens Screening",
         "raw_text": "HANDLE WITH CARE\nA Caveat Worth Paying Attention To\nNegative Equity in X4 & Screening with the Four Lenses\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "Week 6 Slide 19 highlights two essential analytical caveats when applying the Altman Z-score: (1) In X4 (Market Value of Equity / Total Liabilities, or Book Value of Equity in private/emerging-market variants), negative book equity flips the sign of X4 and requires careful inspection of capital structure; and (2) The Z-score is a quantitative screening tool that must be synthesized with the other three risk lenses (Liquidity, Solvency, and Coverage) rather than read in isolation.",
-        "goto_explanation": "Per Professor's Week 6 Slide 19 ('Handle With Care'), X4 calls for market value of equity (or book value where unavailable, which breaks down if equity turns negative), and the Z-score serves as a quantitative screening tool evaluated alongside the other three credit risk lenses (Liquidity, Solvency, and Coverage) on Slide 20.",
+        "goto_explanation": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.",
         "image_url": "/slides/FSA_Week6_PPT/slide_19.png",
         "audit_evidence": {
-          "title": "Week 6 Slide 19 Caveats & Audited Balance Sheet Inputs",
-          "filing_name": "FSA Week 6 Lecture Notes & LK GOTO 31 Dec 2025",
-          "audit_note": "Evaluating X4 equity inputs and synthesizing the Four Lenses on Risk",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "GoTo Cash Reserve",
-              "val": "Rp 21,755.2 bn ($1.35B)",
-              "ref": "LK p. 15"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Net Cash Position",
-              "val": "+Rp 14,012.6 bn ($870M)",
-              "ref": "Calculated"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "Annual Cash Burn (FCF)",
-              "val": "-(Rp 875.3 bn)",
-              "ref": "Module 4"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "Week 6 Caveats & Four-Lens Synthesis: Interpreting GoTo's Z-Score",
-          "badge": "Four-Lens Synthesis",
+          "title": "Week 6: X4 basis and screening caveat",
+          "badge": "Method consistency",
           "content_type": "table",
           "table_headers": [
-            "Week 6 Analytical Lens / Caveat",
-            "Slide 19-20 Principle",
-            "GoTo FY2025 Evidence",
-            "Analyst Synthesis"
+            "Issue",
+            "Treatment"
           ],
           "table_rows": [
             [
-              "1. X4 Market vs. Book Equity",
-              "Slide 19 flags substituting book equity when equity turns negative.",
-              "GoTo book equity is Rp 28.7T; market cap is Rp 26.6T (positive both ways).",
-              "X4 remains well-defined (+1.56 to +1.68) with zero negative-equity sign flip."
+              "Lecture X4",
+              "Market equity / liabilities is introduced in the lecture."
             ],
             [
-              "2. X2 Accumulated Deficit & X3 EBIT",
-              "Measures cumulative earnings history (1.40x) and operating ROA (3.30x).",
-              "Accumulated deficit -(Rp 214.1T) makes X2 = -4.68 (-6.55 drag); EBIT = -Rp 378B.",
-              "Primary drivers pulling GoTo into the Distress Zone (Z = -2.81 / Z'' = -10.90)."
+              "Group 4 worksheet X4",
+              "Book equity / liabilities, expressly specified in Part 3."
             ],
             [
-              "3. Screening Tool vs. Four Lenses",
-              "Slide 19-20: use Z-score together with Liquidity, Solvency, and Coverage.",
-              "Liquidity (2.73x CR) & D/E (0.27x) are manageable vs. TIE (-0.71x) & Z (-2.81).",
-              "Risk comes from accumulated losses and weak EBIT rather than debt leverage alone."
+              "GoTo result",
+              "Z = −4.721750 using the worksheet basis."
             ],
             [
-              "4. Solvency Outlook Under Burn",
-              "Slide 20: resolve tension across disagreeing lenses.",
-              "FY2025 FCF is -Rp 875.3 bn; Base Case 2028F cash shrinks to Rp 968 bn.",
-              "Ongoing losses will exhaust the cash cushion unless operating profit turns positive."
+              "Interpretation",
+              "Distress zone, assessed alongside liquidity, solvency, and coverage."
             ]
           ],
-          "analytical_note": "Week 6 Slide 19-20 Takeaway: GoTo's -2.81 Z-Score places it in the Distress Zone; while Current Ratio (2.73x) and D/E (0.27x) look manageable near-term, negative Coverage (-0.71x TIE) and accumulated losses (-Rp 214.1T) confirm genuine operating distress unless profitability turns positive."
+          "analytical_note": "Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance."
         }
       },
       {
@@ -8137,23 +8153,28 @@
         "goto_explanation": "GoTo's bank loan agreements (detailed in Note 17) require maintaining minimum cash balances in escrow and limits on additional indebtedness. GoTo complies with all bank covenants because its cash hoard (Rp 21.8T) comfortably exceeds all debt covenants.",
         "image_url": "/slides/FSA_Week6_PPT/slide_20.png",
         "audit_evidence": {
-          "title": "Bank Covenant Compliance Schedule: LK GOTO Note 17",
-          "filing_name": "LK GOTO 31 Dec 2025 Note 17 (Borrowings)",
-          "audit_note": "Audited debt facility compliance verification",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Consolidated Borrowings",
-              "val": "Rp 7,742.6 bn",
-              "ref": "Note 17"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Covenant Compliance Status",
-              "val": "In Full Compliance (No Breaches)",
-              "ref": "LK Note 17"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
+            },
+            {
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
           "title": "GoTo Bank Covenant & Credit Risk Matrix",
@@ -8212,89 +8233,152 @@
         "subtitle": "What to Remember from Liquidity, Solvency & Credit Risk Analysis",
         "raw_text": "KEY TAKEAWAYS\nWhat to Remember from Today\nSummary of Credit, Solvency & Z-Score Analysis\nFinancial Statement Analysis • Week 6",
         "theory_explanation": "Risk analysis completes the financial diagnostic. Liquidity protects the firm in the short term; solvency protects it over the long term; coverage tests operational debt serviceability; and multivariate distress models provide statistical red flags. Always synthesize quantitative ratios with qualitative cash runway and debt covenants.",
-        "goto_explanation": "GoTo's Week 6 Four-Lens analysis concludes: (1) Liquidity is strong (Current Ratio 2.56x-2.73x, Cash Rp 21.8T); (2) Debt doubled (+102.7%) to Rp 7.74T; (3) Operating coverage is weak (Cash DSCR 0.10x, TIE -0.71x); and (4) Altman Z-Score (-2.81 / Z'' -10.90) places GoTo in the Distress Zone due to accumulated losses and negative EBIT.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week6_PPT/slide_21.png",
         "audit_evidence": {
-          "title": "Week 6 Master Executive Scorecard: GoTo Solvency",
-          "filing_name": "LK GOTO 31 Dec 2025 (Annual Audited Report)",
-          "audit_note": "Final synthesis of liquidity, solvency, and distress findings",
+          "title": "Completed Week 6 model reconciliation",
+          "filing_name": "Week 6 completed project; Milestone 2 workbook, Ratio Analysis C36",
+          "audit_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
           "key_figures": [
             {
-              "label": "Current Ratio",
-              "val": "2.56x",
-              "ref": "Audited"
+              "label": "Z",
+              "val": "-4.721750",
+              "ref": "Milestone 2 C36"
             },
             {
-              "label": "Total Debt",
-              "val": "Rp 7,742.6 bn",
-              "ref": "Audited"
+              "label": "Distress threshold",
+              "val": "< 1.81",
+              "ref": "Week 6"
             },
             {
-              "label": "Net Cash Position",
-              "val": "+Rp 14,012.6 bn",
-              "ref": "Audited"
-            },
-            {
-              "label": "Altman Z-Score",
-              "val": "-2.81",
-              "ref": "Calculated"
+              "label": "FY2025 accumulated losses",
+              "val": "-Rp215,334,000 million",
+              "ref": "Week 6 source inputs"
             }
           ],
           "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Balance Sheet (LK p. 16): Short-Term Borrowings of Rp 2,778.2 bn, Long-Term Debt of Rp 4,964.4 bn (Total Debt Rp 7,742.6 bn), and Retained Deficit of -(Rp 214,142.5 bn)."
+          "caption": "FY2025 model uses the completed worksheet book-equity proxy. Accumulated losses are not the 2024 balance."
         },
         "goto_report": {
-          "title": "Executive Summary: GoTo Credit Risk & Solvency Scorecard",
-          "badge": "Week 6 Synthesis",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Analytical Dimension",
-            "GoTo FY2025 Result",
-            "Traditional Industrial Interpretation",
-            "Modern Tech Platform Reality"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "1. Short-Term Liquidity",
-              "Current Ratio = 2.56x",
-              "Strong liquidity buffer.",
-              "Impregnable short-term cash wall (Rp 21.8T)."
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "2. Long-Term Solvency",
-              "Debt = Rp 7.74T (+102.7%)",
-              "Rising debt load relative to equity.",
-              "Bank debt doubled, but net cash is +Rp 14.0T."
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "3. Operating Coverage",
-              "Cash DSCR = 0.10x",
-              "Severe operational default risk.",
-              "Debt is serviced by cash reserves, not operating cash."
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "4. Statistical Distress",
-              "Altman Z-Score = -2.81",
-              "Distress Zone (< 1.81)",
-              "Distress driven by -Rp 214.1T accumulated deficit and negative EBIT."
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
             ],
             [
-              "5. Net Capital Health",
-              "Cash Runway > 15 Years",
-              "Distressed capitalization.",
-              "GoTo has years of runway to achieve FCF breakeven."
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Week 6 Synthesis: GoTo shows sharp tension across the Four Lenses: Rp 21.8T cash cushions near-term liquidity, but negative Coverage and a Distress-Zone Altman Z-Score (-2.81) warn that ongoing losses erode long-term solvency."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         }
       }
     ],
-    "goto_application": "GoTo FY2025 Liquidity Ratios (Current 2.56x, Quick 2.35x), Solvency Ratios (Debt doubled to Rp 7.74T), Coverage Ratios (TIE -1.54x, DSCR 0.10x), and full 5-variable Altman Z-Score calculation (-2.81).",
+    "goto_application": {
+      "title": "Week 6 five-factor Z-score",
+      "type": "table",
+      "table_headers": [
+        "Factor",
+        "Numerator / denominator (Rp million)",
+        "Ratio",
+        "Weight",
+        "Contribution"
+      ],
+      "table_rows": [
+        [
+          "X1",
+          "18,411,702 / 45,757,642",
+          "0.402374",
+          "1.2",
+          "0.482849"
+        ],
+        [
+          "X2",
+          "-215,334,000 / 45,757,642",
+          "-4.705968",
+          "1.4",
+          "-6.588355"
+        ],
+        [
+          "X3",
+          "-378,254 / 45,757,642",
+          "-0.008266",
+          "3.3",
+          "-0.027279"
+        ],
+        [
+          "X4",
+          "28,711,657 / 17,045,985",
+          "1.684365",
+          "0.6",
+          "1.010619"
+        ],
+        [
+          "X5",
+          "18,322,117 / 45,757,642",
+          "0.400417",
+          "1.0",
+          "0.400417"
+        ],
+        [
+          "Z",
+          "Weighted sum",
+          "",
+          "",
+          "-4.721750"
+        ]
+      ],
+      "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
+    },
     "study_takeaways": [
       "Interest coverage is -0.71x: operating income cannot cover Rp 535 bn annual interest expense.",
       "Total debt doubled to Rp 7,743 bn in 2025, raising default risk if cash burn does not stop."
     ],
-    "story_clue": "Step 3C (Liquidity, Debt & Altman Z-Score): Liquidity is strong (2.56x Current Ratio, Rp 14.01T Net Cash), but total debt doubled (+102.7% to Rp 7.74T) and Rp 214.1T of accumulated losses push Altman Z-Score to -2.81 (Distress Zone)."
+    "story_clue": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
   },
   {
     "id": "week7",
@@ -8337,7 +8421,7 @@
             },
             {
               "label": "Sloan Accrual Ratio",
-              "val": "-3.94%",
+              "val": "-3.95%",
               "ref": "Calculated"
             }
           ]
@@ -8385,7 +8469,7 @@
             [
               "5. Sloan Accrual Quality Ratio",
               "(Net Income - CFO) / Assets",
-              "-3.94% (CFO closely tracks Net Loss)",
+              "-3.95% (CFO closely tracks Net Loss)",
               "HIGH QUALITY",
               "Corroborated: Negative income confirmed by cash"
             ]
@@ -9102,7 +9186,7 @@
         "subtitle": "Accruals-Based Quality Measures: The Sloan Accrual Formula",
         "raw_text": "A QUANTIFIABLE SIGNAL\nAccruals-Based Quality Measures\nNet Income vs. Operating Cash Flow\nFinancial Statement Analysis • Week 7",
         "theory_explanation": "Richard Sloan (1996) demonstrated that earnings quality can be quantitatively measured using the Accrual Ratio: Accruals = Net Income - Operating Cash Flow (CFO). A high positive accrual ratio indicates that net income is driven by non-cash accounting entries (such as rising receivables or capitalized costs), signaling that earnings are low-quality and likely to reverse.",
-        "goto_explanation": "For GoTo FY2025: Net Income = -(Rp 1,501.7 bn), CFO = +Rp 307.0 bn. Accruals = -(1,501.7) - 307.0 = -(Rp 1,808.7 bn). Dividing by Average Total Assets (Rp 45,952.3 bn) yields a Sloan Accrual Ratio of -3.94%.",
+        "goto_explanation": "For GoTo FY2025: Net Income = -(Rp 1,501.7 bn), CFO = +Rp 307.0 bn. Accruals = -(1,501.7) - 307.0 = -(Rp 1,808.7 bn). Dividing by Closing Total Assets (Rp 45,757.642 bn) yields a Sloan Accrual Ratio of -3.95%.",
         "image_url": "/slides/FSA_Week7_PPT/slide_12.png",
         "audit_evidence": {
           "title": "Sloan Accrual Formula Inputs: LK GOTO 2025",
@@ -9127,8 +9211,8 @@
               "ref": "Calculated"
             },
             {
-              "label": "Average Total Assets",
-              "val": "Rp 45,952.3 bn",
+              "label": "Closing Total Assets",
+              "val": "Rp 45,757.642 bn",
               "ref": "LK p. 15"
             }
           ]
@@ -9163,19 +9247,19 @@
               "Negative accruals (Good!)"
             ],
             [
-              "Average Total Assets (Denominator)",
-              "45,952.3",
+              "Closing Total Assets (Denominator)",
+              "45,757.642",
               "(FY2024 Assets 46,146.4 + FY2025 Assets 45,758.1) / 2",
               "Total enterprise scale"
             ],
             [
               "Calculated Sloan Accrual Ratio",
-              "-3.94%",
-              "Accruals ÷ Average Total Assets",
+              "-3.95%",
+              "Accruals ÷ Closing Total Assets",
               "HIGH EARNINGS QUALITY"
             ]
           ],
-          "analytical_note": "Classroom Defense: A negative Sloan Accrual Ratio (-3.94%) is a green flag! It means GoTo's operating cash generation (+Rp 307 bn) actually exceeded its accounting operating income, confirming high earnings quality."
+          "analytical_note": "Classroom Defense: A negative Sloan Accrual Ratio (-3.95%) is a green flag! It means GoTo's operating cash generation (+Rp 307 bn) actually exceeded its accounting operating income, confirming high earnings quality."
         }
       },
       {
@@ -9184,7 +9268,7 @@
         "subtitle": "High Accruals, Lower Quality: Empirical Evidence from Sloan & Dechow",
         "raw_text": "THE RESEARCH BEHIND IT\nHigh Accruals, Lower Quality\nThe Sloan Accrual Anomaly\nFinancial Statement Analysis • Week 7",
         "theory_explanation": "Extensive academic literature (Sloan 1996; Dechow & Dichev 2002) establishes that cash flows are far more persistent than accruals. Companies in the highest decile of accruals experience subsequent earnings declines and stock underperformance, while companies with low or negative accruals experience earnings persistence and upward revisions.",
-        "goto_explanation": "GoTo's transition from massive negative accruals in 2023 (distorted by goodwill write-downs) to a clean -3.94% accrual ratio in 2025 demonstrates that GoTo's earnings quality has normalized. Its reported numbers now accurately reflect real underlying cash dynamics.",
+        "goto_explanation": "GoTo's transition from massive negative accruals in 2023 (distorted by goodwill write-downs) to a clean -3.95% accrual ratio in 2025 demonstrates that GoTo's earnings quality has normalized. Its reported numbers now accurately reflect real underlying cash dynamics.",
         "image_url": "/slides/FSA_Week7_PPT/slide_13.png",
         "audit_evidence": {
           "title": "Sloan Decile Distribution: Academic Benchmarks",
@@ -9205,7 +9289,7 @@
             },
             {
               "label": "GoTo FY2025 Positioning",
-              "val": "-3.94% (High Quality Decile)",
+              "val": "-3.95% (Requires accounting review Decile)",
               "ref": "Calculated"
             }
           ]
@@ -9243,10 +9327,10 @@
               "Decile 1 to 2 (Negative Accruals)",
               "< -2.0%",
               "Conservative accounting; cash flow exceeds earnings",
-              "GoTo sits at -3.94% (Decile 2!)"
+              "GoTo sits at -3.95% (Milestone 3 definition!)"
             ]
           ],
-          "analytical_note": "Empirical Finding: GoTo sits in Decile 2 of the Sloan distribution. This proves that GoTo is NOT inflating its earnings using artificial working capital accruals."
+          "analytical_note": "Empirical Finding: GoTo sits in Milestone 3 definition of the Sloan distribution. This proves that GoTo is NOT inflating its earnings using artificial working capital accruals."
         }
       },
       {
@@ -9550,7 +9634,7 @@
         "subtitle": "What to Remember from Accounting Quality & Forensic Analysis",
         "raw_text": "KEY TAKEAWAYS\nWhat to Remember from Today\nSummary of Accounting Quality & Earnings Management\nFinancial Statement Analysis • Week 7",
         "theory_explanation": "Accounting quality is the foundation of all subsequent valuation. Analysts must never accept reported net income or EBITDA at face value. By auditing the four red flags, computing the Sloan accrual ratio, and testing expense capitalization, analysts can separate genuine economic turnarounds from aggressive financial reporting.",
-        "goto_explanation": "GoTo's Week 7 takeaways: (1) Revenue is 100% cash-backed under PSAK 72; (2) The 2024 Rp 70.3T Tokopedia gain was properly identified and normalized; (3) Sloan accrual ratio (-3.94%) confirms earnings persistence; and (4) Capitalized software (+Rp 880 bn) is the primary accounting tailwind to monitor.",
+        "goto_explanation": "GoTo's Week 7 takeaways: (1) Revenue is 100% cash-backed under PSAK 72; (2) The 2024 Rp 70.3T Tokopedia gain was properly identified and normalized; (3) Sloan accrual ratio (-3.95%) confirms earnings persistence; and (4) Capitalized software (+Rp 880 bn) is the primary accounting tailwind to monitor.",
         "image_url": "/slides/FSA_Week7_PPT/slide_18.png",
         "audit_evidence": {
           "title": "Week 7 Master Forensic Scorecard: GoTo Summary",
@@ -9571,7 +9655,7 @@
             },
             {
               "label": "Sloan Accrual Metric",
-              "val": "-3.94% (Decile 2)",
+              "val": "-3.95% (Milestone 3 definition)",
               "ref": "Calculated"
             }
           ]
@@ -9607,7 +9691,7 @@
             ],
             [
               "Earnings Persistence",
-              "Sloan Accrual Ratio = -3.94%",
+              "Sloan Accrual Ratio = -3.95%",
               "Operating cash flow corroborates reported narrowing loss.",
               "High earnings persistence"
             ],
@@ -9669,7 +9753,7 @@
               "Step 2: Accounting Analysis",
               "Weeks 2, 3, 4, 7",
               "Milestones 2 & 3 (Accounting Audit)",
-              "Net deficit Rp 214.1T; CFO turned positive (+Rp 307 bn); Sloan accruals clean (-3.94%)."
+              "Net deficit Rp 215.3T; CFO turned positive (+Rp 307 bn); Sloan accruals clean (-3.95%)."
             ],
             [
               "Step 3: Financial Analysis",
@@ -9705,7 +9789,7 @@
         "subtitle": "Week-by-Week Toolkit: The Complete Financial Analyst Reference",
         "raw_text": "MIDTERM REVIEW\nWeek-by-Week Toolkit\nSummary of All Formulas, Ratios & Rules (Weeks 1-7)\nFinancial Statement Analysis • Week 7",
         "theory_explanation": "This master reference table synthesizes every major analytical tool, formula, and decision rule taught from Week 1 to Week 7. It serves as your comprehensive formula sheet and defense manual for midterm exams and group presentations.",
-        "goto_explanation": "Every single formula in this toolkit has been tested, audited, and verified against GoTo's audited FY2025 financial statements, providing empirical proof for every classroom concept.",
+        "goto_explanation": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36.",
         "image_url": "/slides/FSA_Week7_PPT/slide_20.png",
         "audit_evidence": {
           "title": "Master FSA Formula Reference Sheet: Weeks 1-7",
@@ -9727,60 +9811,61 @@
           ]
         },
         "goto_report": {
-          "title": "Master Week-by-Week Toolkit: Weeks 1 to 7 Formula Reference",
-          "badge": "Master Exam Formula Sheet",
+          "title": "Week 6 five-factor Z-score",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Module Week",
-            "Core Analytical Topic",
-            "Essential Formula / Framework",
-            "GoTo FY2025 Audited Result"
+            "Factor",
+            "Numerator / denominator (Rp million)",
+            "Ratio",
+            "Weight",
+            "Contribution"
           ],
           "table_rows": [
             [
-              "Week 1: Strategy",
-              "Industry & Strategy Analysis",
-              "Porter's 5 Forces + VRIO Ecosystem Moat",
-              "Leading market share in on-demand transport & food."
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
             ],
             [
-              "Week 2: SFP & Income",
-              "Balance Sheet & Income Statement",
-              "Assets = Liabilities + Equity (Balance Identity)",
-              "Assets: Rp 45.8T = Liab: Rp 17.0T + Equity: Rp 28.7T."
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
             ],
             [
-              "Week 3: Valuation",
-              "Asset & Liability Measurement",
-              "Fair Value Hierarchy (Level 1, 2, 3) + Revaluation",
-              "PP&E is only 1.4% of assets; zero property revaluation surplus."
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
             ],
             [
-              "Week 4: Cash Flows",
-              "Statement of Cash Flows & FCF",
-              "Free Cash Flow = CFO - Capital Expenditures",
-              "CFO: +Rp 307.0 bn; Capex: Rp 1,182.4 bn; FCF: -(Rp 875.3 bn)."
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
             ],
             [
-              "Week 5: Profitability",
-              "Common-Size & 3-Step DuPont",
-              "ROE = Net Profit Margin × Asset Turnover × Equity Multiplier",
-              "-8.20% × 0.400x × 1.593x = -5.23% Consolidated ROE."
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
             ],
             [
-              "Week 6: Solvency",
-              "Credit Risk & Altman Z-Score",
-              "Z = 1.2·X1 + 1.4·X2 + 3.3·X3 + 0.6·X4 + 0.999·X5",
-              "Current: 2.56x; Debt: Rp 7.74T; DSCR: 0.10x; Altman Z: -2.81."
-            ],
-            [
-              "Week 7: Quality",
-              "Accounting Quality & Red Flags",
-              "Sloan Accrual Ratio = (Net Income - CFO) / Total Assets",
-              "Sloan Ratio: -3.94% (Decile 2); Software Capex: Rp 880.3 bn."
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ],
-          "analytical_note": "Ultimate Pre-Midterm Defense: You have complete command over the first half of the Financial Statement Analysis curriculum. All 7 modules are 100% unified, audited, and mathematically verified."
+          "analytical_note": "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         }
       }
     ],
@@ -16208,86 +16293,69 @@
         "subtitle": "Converting GoTo Pro Forma Cash Flows and Earnings into Intrinsic Share Value",
         "raw_text": "Cost of Capital & Valuation Applications\nWACC • DCF • Residual Income • Market Multiples • Reconciling Estimates\nWeek 14 ,  Readings: Wahlen Ch. 11-14 • Subramanyam Ch. 11",
         "theory_explanation": "Valuation (Step 5 of the FSA Framework) translates projected financial statements into an objective price per share. Analysts estimate the Weighted Average Cost of Capital (WACC) using Emerging-Market CAPM and after-tax debt costs, then triangulate intrinsic value across three independent methodologies: Discounted Cash Flow (FCFF), Residual Income (Economic Profit), and Relative Market Multiples.",
-        "goto_explanation": "In Assignment 14 (corrected and reconciled), GoTo's WACC is 7.76% (Cost of Equity = 8.45%, After-Tax Cost of Debt = 5.39%). Under the Milestone 4 Base Case (with zero fake tax refunds on negative EBIT), DCF yields -(Rp 121.1)/share and Residual Income yields -(Rp 75.1)/share, while pure-play tech Market Multiples (BUKA, GRAB, SE, BELI) imply Rp 39.8/share vs GoTo's IDX market price of Rp 25.00.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_1.png",
         "audit_evidence": {
-          "title": "GoTo Valuation Master Inputs: LK GOTO 2025 p. 15-17",
-          "img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "caption": "Audited Valuation Anchors: Book Equity Rp 28,711.7 bn, Total Debt Rp 7,742.6 bn, Cash Rp 21,755.2 bn, Net Cash +Rp 14,012.5 bn.",
-          "filing_name": "LK GOTO 31 Dec 2025",
-          "audit_note": "Assignment 14 Corrected Valuation Workbook",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "Cost of Equity (Ke)",
-              "val": "8.45%",
-              "ref": "EM CAPM"
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "WACC",
-              "val": "7.76%",
-              "ref": "A14 WACC"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Base DCF / Share",
-              "val": "-(Rp 121.1)",
-              "ref": "A14 DCF (Fixed)"
-            },
-            {
-              "label": "Multiples / Share",
-              "val": "Rp 39.8",
-              "ref": "A14 Multiples"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "GoTo Master Valuation Reconciliation Scorecard (Assignment 14 Corrected)",
-          "badge": "MODULE 14 DASHBOARD",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Valuation Methodology",
-            "Discount / Multiple Basis",
-            "Enterprise / Equity Value (Rp bn)",
-            "Implied Value per Share (Rp)",
-            "Comparison vs. Rp 25.00 Price"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "1. Discounted Cash Flow (DCF - FCFF)",
-              "WACC = 7.76%, g = 3.0% (Tax = 0 on loss)",
-              "EV: (142,597.7) / Eq: (128,585.2)",
-              "-(121.1)",
-              "Negative: Base 78.5% opex burns Rp 7.0T-7.7T/yr"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "2. Residual Income (Economic Profit)",
-              "Ke = 8.45%, BVE = 28,711.7 bn, g = 3.0%",
-              "Eq: (79,770.2)",
-              "-(75.1)",
-              "Negative: Base losses + 8.45% equity charge erode BVE"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "3. Market Multiples (P/B & EV/EBITDA)",
-              "Peer Median P/B 2.30x; EV/EBITDA 13.25x",
-              "P/B: 62.2 / Adj EV-EBITDA: 17.4",
-              "+39.8",
-              "+59% above market (P/E excluded as EPS = -Rp 1.41)"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "4. Net Cash Liquidation Floor",
-              "Cash (21,755.2) - Debt (7,742.6) / Shares",
-              "Net Cash: +14,012.5",
-              "+13.20",
-              "Hard balance-sheet floor below Rp 25.00 price"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
             ],
             [
-              "Current IDX Market Price",
-              "Investing.com (post-Rp 50 floor removal)",
-              "Market Cap: 26,550.3",
-              "25.00",
-              "Trades at 0.9x Book Value (Rp 27.03/sh)"
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Assignment 14 fixes two critical errors: (1) DCF no longer assumes fake cash tax refunds when EBIT is negative, and (2) Market Multiples remove non-tech legacy media peer and bogus +0.71 EPS, relying instead on P/B and Net-Cash-Adjusted EV/EBITDA."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -16296,7 +16364,7 @@
         "subtitle": "Closing the Six-Step FSA Loop with Intrinsic Equity Valuation",
         "raw_text": "W H E R E  W E  A R E\nSteps 4 to 5: Forecasting to Valuation\nStrategy • Accounting • Financial • Forecasting • Valuation • Decision\nToday, two steps in one session: the discount rate bridge and three valuation models.",
         "theory_explanation": "Step 5 (Valuation) consumes the pro forma outputs of Step 4 (Forecasting): Free Cash Flow to Firm (FCFF), Net Income, and Book Value of Equity. Discounting those flows at the appropriate risk-adjusted opportunity cost (WACC for FCFF, Cost of Equity for Residual Income) yields an intrinsic valuation benchmark to compare against the market price in Step 6 (Investment Decision).",
-        "goto_explanation": "For GoTo, Step 5 connects Milestone 4's Base Case pro forma cash flows directly into the DCF and Residual Income templates, while pulling peer multiples from IDX and regional Southeast Asian digital platforms (BUKA, GRAB, SE, BELI) to frame our Step 6 recommendation at Rp 25.00 per share.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_2.png",
         "audit_evidence": {
           "title": "GoTo Step 4 to Step 5 Linkage: LK GOTO 2025",
@@ -16328,42 +16396,42 @@
           ]
         },
         "goto_report": {
-          "title": "Step 4 to Step 5 Data Pipeline in GoTo's Valuation Package",
-          "badge": "VALUATION PIPELINE",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Milestone 4 Output",
-            "Valuation Sheet Consumer",
-            "Required Discount Rate",
-            "GoTo Audited Link"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "EBIT, D&A, Capex, Δ NWC",
-              "DCF Valuation (FCFF)",
-              "WACC (7.76%)",
-              "Values total operating Enterprise Value"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "Net Income & Book Equity",
-              "Residual Income Valuation",
-              "Cost of Equity (8.45%)",
-              "Values Equity directly via economic profit"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Debt & Cash (Year 0)",
-              "Cost of Capital & EV-to-Equity",
-              "Market Value Weights",
-              "Bridges EV to Equity via Net Cash (+14.0T)"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "FY2025 BVPS & EBITDA/sh",
-              "Market Multiples",
-              "Peer Medians (2.30x / 13.25x)",
-              "Cross-checks intrinsic models vs market pricing"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "All three valuation methods share one consistent share count (1,062,010.2 million shares excluding treasury stock) and one terminal growth rate (3.0%)."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -16372,7 +16440,7 @@
         "subtitle": "Matching Cash Flow Risk to the Correct Opportunity Cost of Capital",
         "raw_text": "F R O M  F O R E C A S T  T O  V A L U E\nCost of Capital Is the Bridge\nThe discount rate converts future forecasted cash flows or earnings into a present value today.\nMatch the cash flow to its capital providers: FCFF -> WACC; Net Income -> Cost of Equity.",
         "theory_explanation": "Fundamental valuation enforces a strict matching rule: (1) Cash flows available to ALL capital providers (debt + equity), i.e., Free Cash Flow to Firm (FCFF), must be discounted at the blended Weighted Average Cost of Capital (WACC). (2) Cash flows or residual earnings belonging strictly to shareholders (Net Income, FCFE, Residual Income) must be discounted at the Cost of Equity (Ke).",
-        "goto_explanation": "In GoTo's Valuation Workbook, FCFF is discounted at WACC = 7.76% to compute Enterprise Value, and Net Cash (+Rp 14,012.5 bn) is added to arrive at Equity Value. Separately, Residual Income is discounted at Cost of Equity = 8.45% and added directly to Beginning Book Equity (Rp 28,711.7 bn) to arrive at Equity Value.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_3.png",
         "audit_evidence": {
           "title": "GoTo Capital Providers Claim Structure: LK GOTO 2025 p. 16",
@@ -16404,47 +16472,42 @@
           ]
         },
         "goto_report": {
-          "title": "Discount Rate Matching Rule Applied to GoTo Valuation",
-          "badge": "DISCOUNT BRIDGE",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Valuation Model",
-            "Cash Flow / Profit Metric",
-            "Capital Providers Covered",
-            "Required Discount Rate",
-            "GoTo Rate"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "Discounted Cash Flow (FCFF)",
-              "EBIAT + D&A - Capex - Δ NWC",
-              "Debt Holders + Equity Holders",
-              "WACC (Blended Rate)",
-              "7.76%"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "Residual Income (RI)",
-              "Net Income - (Beg. BVE x Ke)",
-              "Common Equity Holders Only",
-              "Cost of Equity (Ke)",
-              "8.45%"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Market Multiples (P/B)",
-              "Book Value per Share (Rp 27.03)",
-              "Common Equity Holders Only",
-              "Implicit Market Discount Rate",
-              "2.30x Peer P/B"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Market Multiples (EV/EBITDA)",
-              "EBITDA per Share (Rp 0.32)",
-              "Enterprise (Debt + Equity)",
-              "Implicit Enterprise Multiple",
-              "13.25x (+ Net Cash)"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Never discount FCFF at Cost of Equity or Residual Income at WACC: mismatching the numerator and denominator violates corporate finance conservation of value."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -16993,7 +17056,7 @@
         "subtitle": "Computing Free Cash Flow to Firm, Enterprise Value & Net-Cash Equity Bridge",
         "raw_text": "V A L U A T I O N  M E T H O D  1  O F  3\nDiscounted Cash Flow (DCF)\nFCFF = EBIAT (NOPAT) + D&A - Capex - Increase in NWC.\nEnterprise Value = PV(FCFF Years 1-3) + PV(Terminal Value).\nEquity Value = Enterprise Value - Net Debt.",
         "theory_explanation": "The DCF model values an enterprise as the present value of all future Free Cash Flows to the Firm (FCFF) discounted at WACC. Crucially, when EBIT is negative, **Tax on EBIT must be zero** (governments do not pay cash tax refunds on losses). Finally, subtracting Net Debt (Total Debt - Cash) converts Enterprise Value into Equity Value.",
-        "goto_explanation": "Assignment 14's **corrected** DCF model fixes the negative-EBIT tax bug (setting Tax = 0 when EBIT < 0). Under Milestone 4 Base Case, GoTo's FCFF is -(Rp 7,738.7 bn) in 2026F, -(Rp 7,006.3 bn) in 2027F, and -(Rp 7,152.6 bn) in 2028F. Discounted at 7.76% WACC, Enterprise Value is -(Rp 142,597.7 bn). Adding GoTo's +Rp 14,012.5 bn Net Cash yields Equity Value of -(Rp 128,585.2 bn), or **-(Rp 121.1)/share**.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_11.png",
         "audit_evidence": {
           "title": "GoTo DCF Net Debt / Net Cash Bridge: LK GOTO 2025 p. 15-16",
@@ -17116,7 +17179,7 @@
         "subtitle": "Why Fundamental g = Reinvestment x ROIC Fails for Loss-Making Firms",
         "raw_text": "T H E  H A R D E S T  P A R T\nTerminal Value: Gordon Growth Model\nTV = FCFF (final year) x (1 + g) / (WACC - g)\ng should never exceed long-run nominal GDP growth or WACC.",
         "theory_explanation": "Because Terminal Value typically drives 70% to 90% of a DCF valuation, the terminal growth rate (g) must obey two iron laws: (1) g < WACC (otherwise the denominator turns zero or negative), and (2) g <= long-run nominal GDP growth (capped at ~Rf 4.50%). Fundamental growth g = Reinvestment Rate x ROIC becomes 'not meaningful' (n.m.) when NOPAT is negative.",
-        "goto_explanation": "In GoTo's Terminal Growth sheet, 2028F NOPAT is negative (-(Rp 4,967.4 bn)), so ROIC and Reinvestment Rate are 'n.m.'. The workbook automatically falls back to Analyst Judgement g = 3.00% (safely below WACC 7.76%, Ke 8.45%, and the 4.50% nominal growth cap). At g = 3.0%, PV of Terminal Value represents 86.7% of Enterprise Value.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_12.png",
         "audit_evidence": {
           "title": "GoTo Terminal Growth Reasonableness Checks: Assignment 14",
@@ -17198,7 +17261,7 @@
         "subtitle": "From Negative Operating Cash Burn to Equity Value per Share",
         "raw_text": "W O R K E D  E X A M P L E\nDCF, Step by Step\nPV(FCFF 1-3) + PV(TV) = Enterprise Value -> Subtract Net Debt -> Divide by Shares.\nWatch how Net Cash (+Rp 14.0T) cushions Enterprise Value.",
         "theory_explanation": "Walking through the DCF bridge step-by-step highlights two distinct components of equity value: (1) Value of ongoing operations (Enterprise Value), and (2) Value of non-operating cash minus financial debt (-Net Debt). For cash-rich tech companies, net cash provides an explicit valuation buffer.",
-        "goto_explanation": "In GoTo's corrected Base Case DCF: 3-year PV of FCFF = -(Rp 18,930.8 bn), PV of Terminal Value = -(Rp 123,667.0 bn), yielding Enterprise Value = -(Rp 142,597.7 bn). Subtracting Net Debt of -(Rp 14,012.5 bn) adds +Rp 14.0T back, yielding Equity Value = -(Rp 128,585.2 bn). Divided by 1,062,010.2 mn shares = -(Rp 121.08)/share.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_13.png",
         "audit_evidence": {
           "title": "GoTo Enterprise to Equity Bridge: LK GOTO 2025 p. 15-16",
@@ -17230,54 +17293,42 @@
           ]
         },
         "goto_report": {
-          "title": "GoTo DCF Step-by-Step Valuation Bridge (Base Case vs. Turnaround)",
-          "badge": "DCF BRIDGE",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "DCF Valuation Step",
-            "Base Case (3-Yr Avg Opex 78.5%)",
-            "Turnaround Check (2025 Run-Rate)",
-            "Valuation Insight"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "Sum of PV of FCFF (2026F-2028F)",
-              "-(Rp 18,930.8 bn)",
-              "+Rp 1,650+ bn (Positive FCF)",
-              "Opex scaling drives sign reversal"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "PV of Terminal Value (@ 7.76%)",
-              "-(Rp 123,667.0 bn)",
-              "+Rp 28,500+ bn",
-              "Gordon Growth magnifies Yr 3 sign"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Enterprise Value (EV)",
-              "-(Rp 142,597.7 bn)",
-              "+Rp 30,150+ bn",
-              "Operating business value"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Less: Net Debt (Debt - Cash)",
-              "-(Rp 14,012.5 bn) [Net Cash]",
-              "-(Rp 14,012.5 bn) [Net Cash]",
-              "Adds +Rp 14.0T (+13.20/sh) to Equity"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
             ],
             [
-              "Implied Equity Value",
-              "-(Rp 128,585.2 bn)",
-              "+Rp 44,162+ bn",
-              "Base is negative; Run-Rate is positive"
-            ],
-            [
-              "DCF Value per Share (Rp)",
-              "-(Rp 121.08)",
-              "+Rp 41.58",
-              "Market price Rp 25 sits in between!"
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Comparing Base Case (-Rp 121.1) against Run-Rate (+Rp 41.6) explains GoTo's Rp 25.00 share price completely: the market prices ~30-35% probability of full turnaround success."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -17477,7 +17528,7 @@
         "subtitle": "Why Mathematical Equivalence Holds When Accounting Is Clean",
         "raw_text": "A  G E N U I N E L Y  G O O D  S I G N\nDCF and Residual Income Converge\nBoth models value the exact same underlying firm ,  one via cash flows, one via book equity plus economic profit.\nWhy do they differ slightly in finite 3-year projections?",
         "theory_explanation": "In theory, DCF and Residual Income are mathematically identical when Clean Surplus Accounting holds and terminal values are consistent. In finite 3-year models, minor differences arise because DCF discounts FCFF at WACC (including Capex timing) while Residual Income discounts Net Income minus Equity Charge at Ke (anchored on Book Equity).",
-        "goto_explanation": "In GoTo's Base Case, both DCF (-(Rp 121.1)/share) and Residual Income (-(Rp 75.1)/share) deliver the exact same fundamental verdict: deeply negative intrinsic equity value because Base Case 78.5% opex generates perpetual losses. Residual Income is less negative (-75.1 vs -121.1) because it anchors on Rp 28.7T existing Book Equity and doesn't penalize Capex cash outlays immediately.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_16.png",
         "audit_evidence": {
           "title": "GoTo Intrinsic Model Convergence: Assignment 14 Summary",
@@ -17553,107 +17604,84 @@
         "subtitle": "Pricing GoTo Against Pure-Play SEA Tech Peers (BUKA, GRAB, SE, BELI)",
         "raw_text": "V A L U A T I O N  M E T H O D  3  O F  3\nMarket Multiples\nRelative valuation, not intrinsic ,  pricing your company as the market prices comparable peers.\nAlways match peers by industry, exclude non-comparable firms, and respect negative-earnings rules.",
         "theory_explanation": "Market Multiples estimate value relative to comparable listed companies using P/E, Price-to-Book (P/B), and EV/EBITDA. Three strict rules apply: (1) Peers must share industry economics (never mix traditional media into tech superapps), (2) P/E is not meaningful ('n.m.') when EPS <= 0, and (3) EV/EBITDA yields Enterprise Value, requiring Net Cash addition / Net Debt subtraction to reach Equity Value.",
-        "goto_explanation": "In Assignment 14 (fixed!), we removed the non-comparable legacy media peer and selected 4 pure-play Southeast Asian digital ecosystem peers: PT Bukalapak.com Tbk (BUKA), Grab Holdings (GRAB), Sea Limited (SE - Shopee), and PT Global Digital Niaga Tbk (BELI - Blibli). Peer Median P/B is 2.30x and Peer Median EV/EBITDA is 13.25x.",
+        "goto_explanation": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized. Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
         "image_url": "/slides/FSA_Week14_PPT/slide_17.png",
         "audit_evidence": {
-          "title": "GoTo Peer Group Clean-Up: Assignment 14 Market Multiples",
-          "img": "/evidence/goto_income_statement_highlighted.png",
-          "caption": "Market Multiples Sheet: 4 pure-play SEA digital tech peers (BUKA, GRAB, SE, BELI); ABBA removed.",
-          "filing_name": "Assignment 14 Workbook",
-          "audit_note": "Peer Group Selection & Multiples Audit",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "Pure-Play Tech Peers",
-              "val": "BUKA, GRAB, SE, BELI",
-              "ref": "4 Peers"
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Peer Median P/B",
-              "val": "2.30x",
-              "ref": "Row 11"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Peer Median EV/EBITDA",
-              "val": "13.25x",
-              "ref": "Row 11"
-            },
-            {
-              "label": "Peer Median P/E",
-              "val": "32.00x (n.m. for GoTo)",
-              "ref": "EPS < 0"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "Cleaned Southeast Asian Digital Peer Multiples Table (Dec 2025)",
-          "badge": "PEER MULTIPLES",
+          "title": "Grab-only P/B benchmark",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Comparable Peer Company",
-            "Price (Rp)",
-            "EPS (Rp)",
-            "BVPS (Rp)",
-            "P/E (x)",
-            "P/B (x)",
-            "EV/EBITDA (x)"
+            "Input / result",
+            "Value",
+            "Basis"
           ],
           "table_rows": [
             [
-              "PT Bukalapak.com Tbk (BUKA)",
-              "120",
-              "11.6",
-              "245",
-              "10.34x",
-              "0.49x",
-              "6.50x"
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
             ],
             [
-              "Grab Holdings Ltd (GRAB)",
-              "54,400",
-              "1,700",
-              "25,900",
-              "32.00x",
-              "2.10x",
-              "14.50x"
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
             ],
             [
-              "Sea Limited (SE - Shopee)",
-              "1,600,000",
-              "42,100",
-              "381,000",
-              "38.00x",
-              "4.20x",
-              "16.00x"
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
             ],
             [
-              "PT Global Digital Niaga Tbk (BELI)",
-              "450",
-              "0.0",
-              "180",
-              "n.m. (-)",
-              "2.50x",
-              "12.00x"
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
             ],
             [
-              "Peer Average (4 Tech Peers)",
-              "N/A",
-              "N/A",
-              "N/A",
-              "26.78x",
-              "2.32x",
-              "12.25x"
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
             ],
             [
-              "Peer Median (4 Tech Peers)",
-              "N/A",
-              "N/A",
-              "N/A",
-              "32.00x",
-              "2.30x",
-              "13.25x"
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
             ]
           ],
-          "analytical_note": "Removing the legacy micro-cap media firm purified the peer group to 100% Southeast Asian digital superapps and e-commerce marketplaces, lifting Peer Median P/B from 2.10x to 2.30x."
+          "analytical_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized. Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         }
       },
       {
@@ -17662,79 +17690,84 @@
         "subtitle": "Fixing Negative EPS (-Rp 1.41) & Bridging EV/EBITDA with Net Cash (+Rp 13.20/sh)",
         "raw_text": "W O R K E D  E X A M P L E\nApplying Peer Multiples\nCompany Metric x Peer Median Multiple = Implied Value.\nWatch out for negative EPS and Enterprise-to-Equity Net Cash bridges!",
         "theory_explanation": "When applying peer multiples to a target company: (1) If Target EPS <= 0, P/E valuation is invalid ('-') and must be excluded, (2) Book Value per Share x Peer Median P/B gives Equity Value per share directly, and (3) EBITDA per Share x Peer Median EV/EBITDA gives Enterprise Value per share, so you MUST add Net Cash per share (or subtract Net Debt per share) to obtain Equity Value per share.",
-        "goto_explanation": "In Assignment 14's fixed Market Multiples: (1) GoTo FY2025 EPS is -(Rp 1.41)/share (-(Rp 1,501.7 bn) / 1,062.0B shares), so P/E = '-', (2) GoTo BVPS = Rp 27.03 x 2.30x = **Rp 62.17/share**, (3) GoTo EBITDA/sh = Rp 0.32 ((-378.1 EBIT + 718.5 D&A) / 1,062.0B) x 13.25x = Rp 4.24 EV/sh, plus Net Cash Rp 13.20/sh = **Rp 17.43/share**. Averaging P/B and EV/EBITDA yields **Rp 39.80/share**.",
+        "goto_explanation": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized. Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
         "image_url": "/slides/FSA_Week14_PPT/slide_18.png",
         "audit_evidence": {
-          "title": "GoTo FY2025 Multiples Inputs: LK GOTO 2025 p. 16-17",
-          "img": "/evidence/goto_income_statement_highlighted.png",
-          "caption": "Audited FY2025 Inputs: Parent Net Loss -(1,501.7 bn) -> EPS -Rp 1.41; EBIT (-378.1) + D&A (718.5) = +340.4 bn EBITDA -> Rp 0.32/sh.",
-          "filing_name": "LK GOTO 31 Dec 2025",
-          "audit_note": "Assignment 14 Corrected Multiples Application",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "GoTo FY2025 EPS",
-              "val": "-(Rp 1.41)",
-              "ref": "P/E = n.m."
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "GoTo BVPS x 2.30x P/B",
-              "val": "Rp 62.17",
-              "ref": "Cell D16"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "GoTo EBITDA/sh (Rp 0.32)",
-              "val": "Rp 17.43 (w/ Net Cash)",
-              "ref": "Cell D17"
-            },
-            {
-              "label": "Multiples Average",
-              "val": "Rp 39.80",
-              "ref": "Cell D19"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "GoTo Corrected Market Multiples Valuation Walk (Assignment 14)",
-          "badge": "MULTIPLES WALK",
+          "title": "Grab-only P/B benchmark",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "GoTo Valuation Metric",
-            "GoTo FY2025 Value",
-            "Peer Median Multiple",
-            "Net Cash Adjustment",
-            "Implied Equity Value / Sh (Rp)"
+            "Input / result",
+            "Value",
+            "Basis"
           ],
           "table_rows": [
             [
-              "EPS (Net Loss -(1,501.7 bn))",
-              "-(Rp 1.41)",
-              "32.00x (Excluded)",
-              "N/A",
-              "n.m. (-) [Invalid for losses]"
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
             ],
             [
-              "BVPS (Equity 28,711.7 bn)",
-              "Rp 27.03",
-              "2.30x P/B",
-              "Already Equity Basis",
-              "Rp 62.17"
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
             ],
             [
-              "EBITDA per Share (+340.4 bn)",
-              "Rp 0.32",
-              "13.25x EV/EBITDA -> 4.24 EV/sh",
-              "+Rp 13.20 Net Cash/sh",
-              "Rp 17.43"
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
             ],
             [
-              "Market Multiples Summary (Avg)",
-              "Valid Multiples Only",
-              "Average(P/B, Adj. EV/EBITDA)",
-              "P/E properly excluded",
-              "Rp 39.80 per share"
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
+            ],
+            [
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
+            ],
+            [
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
             ]
           ],
-          "analytical_note": "Notice how accurate Net-Cash-Adjusted EV/EBITDA is: GoTo's core operations at 13.25x EBITDA are worth just Rp 4.24/sh, while its Net Cash adds Rp 13.20/sh, giving Rp 17.43/sh ,  very close to GoTo's actual Rp 25.00 market price!"
+          "analytical_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized. Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         }
       },
       {
@@ -17743,92 +17776,69 @@
         "subtitle": "Football Field Comparison Against GoTo's Rp 25.00 IDX Share Price",
         "raw_text": "R E C O N C I L I N G  T H E  E S T I M A T E S\nThree Methods, Three Answers\nDiscounted Cash Flow: -(Rp 121.1) • Residual Income: -(Rp 75.1) • Market Multiples: Rp 39.8\nCurrent Market Price: Rp 25.00 (with Net Cash Floor at Rp 13.20).",
         "theory_explanation": "Valuation never produces a single magic number; it produces a structured triangulation ('football field') across intrinsic cash flows (DCF), economic profit (Residual Income), and market pricing (Multiples). Analysts never blindly average a negative intrinsic value with a positive multiple; instead, they explain the structural drivers behind each number.",
-        "goto_explanation": "Triangulating GoTo's four benchmarks: Base Case DCF (-(Rp 121.1)) and Residual Income (-(Rp 75.1)) show negative value if historical burn persists. Market Multiples (Rp 39.8) reflect profitable peers' P/B (Rp 62.2) blended with Net-Cash EV/EBITDA (Rp 17.4). GoTo's actual Rp 25.00 price sits rationally above its Rp 13.20 net cash floor and below Rp 27.03 book value.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_19.png",
         "audit_evidence": {
-          "title": "GoTo Valuation Triangulation: Assignment 14 Summary",
-          "img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "caption": "Valuation Summary Sheet: Reconciling DCF (-121.1), RI (-75.1), Multiples (+39.8), Net Cash (+13.2), and Market Price (25.0).",
-          "filing_name": "Assignment 14 Workbook",
-          "audit_note": "Three-Method Valuation Triangulation",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "DCF (Base Case)",
-              "val": "-(Rp 121.1)",
-              "ref": "Downside Burn"
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Residual Income (Base)",
-              "val": "-(Rp 75.1)",
-              "ref": "Economic Drag"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Market Multiples (P/B+EV)",
-              "val": "Rp 39.8",
-              "ref": "Peer Relative"
-            },
-            {
-              "label": "Current Market Price",
-              "val": "Rp 25.00",
-              "ref": "0.9x Book Value"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "GoTo Valuation Football Field Reconciliation (Rp per Share)",
-          "badge": "RECONCILIATION",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Valuation Benchmark",
-            "Implied Price (Rp)",
-            "Key Underlying Assumption",
-            "Status vs. Rp 25.00 IDX Price"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "1. Base Case DCF (FCFF)",
-              "-(121.1)",
-              "3-yr avg Opex (78.5%) & Capex (16.3%) in perpetuity",
-              "Floor breach: Limited liability caps equity at Rp 0"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "2. Base Case Residual Income",
-              "-(75.1)",
-              "Net losses erode Rp 28.7T book equity over time",
-              "Confirms value destruction under historical opex"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "3. Net Cash Liquidation Floor",
-              "+13.20",
-              "Rp 14,012.5 bn Net Cash / 1,062.0B shares",
-              "Hard asset floor (-47% below current price)"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "4. Net-Cash EV/EBITDA (13.25x)",
-              "+17.43",
-              "FY2025 EBITDA (Rp 0.32/sh) x 13.25x + Net Cash",
-              "Closest fundamental multiple to Rp 25.00!"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
             ],
             [
-              "5. Current IDX Market Price",
-              "25.00",
-              "Post-Sept 2026 Rp 50 floor abolition price discovery",
-              "Market Benchmark (0.92x Book Value)"
-            ],
-            [
-              "6. Multiples Avg (P/B & EV/EBITDA)",
-              "+39.80",
-              "Blends Peer P/B (62.17) and EV/EBITDA (17.43)",
-              "+59% upside only if GoTo achieves peer ROE"
-            ],
-            [
-              "7. Turnaround Run-Rate DCF",
-              "+41.58",
-              "2025 Run-Rate (55.7% opex, 6.5% capex)",
-              "Upside target if cost discipline holds permanently"
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Notice how tightly the market price (Rp 25.00) is bracketed by Net-Cash EV/EBITDA (Rp 17.43) on the conservative side and Run-Rate DCF / Multiples (Rp 39.80-41.58) on the turnaround side!"
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -17837,64 +17847,69 @@
         "subtitle": "Explaining IDX Price Floor Abolition, Limited Liability & Base vs. Market Expectations",
         "raw_text": "T H E  R E A L  A N A L Y T I C A L  W O R K\nReading the Gap\nWhy do DCF/RI and Multiples diverge so sharply, and why does GoTo trade at Rp 25.00?\nExplaining the economics ,  not just averaging the numbers.",
         "theory_explanation": "The core value of valuation analysis lies in explaining WHY estimates diverge. Intrinsic models (DCF/RI) penalize ongoing losses and negative ROIC, whereas relative multiples (P/B) assume the target will eventually earn peer-level returns on equity. Moreover, equity has limited liability (stock cannot trade below Rp 0) and trades with option value on a potential turnaround.",
-        "goto_explanation": "Why GoTo trades at Rp 25.00: Historically, IDX's Rp 50 'gocap' price floor artificially pinned GoTo at Rp 50. After IDX abolished the Rp 50 floor on September 28, 2026 (lowering the minimum price to Rp 1), true price discovery cut GoTo in half to Rp 25.00 (0.9x book value). It sits above its Rp 13.20 net cash floor because limited liability caps downside at zero while pricing partial turnaround optionality.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_20.png",
         "audit_evidence": {
-          "title": "GoTo Valuation Gap Narrative: Assignment 14 Summary",
-          "img": "/evidence/goto_equity_deficit_highlighted.png",
-          "caption": "Valuation Summary Sheet Reading the Gap: Rp 25.00 price vs Rp 27.03 BVPS and Rp 13.20 Net Cash floor.",
-          "filing_name": "Assignment 14 & 15",
-          "audit_note": "IDX Price Discovery & Limited Liability Analysis",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "Pre-Sept 2026 Price Floor",
-              "val": "Rp 50.00 (Gocap)",
-              "ref": "IDX Rule"
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Post-Abolition Market Price",
-              "val": "Rp 25.00 (-50%)",
-              "ref": "Investing.com"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Price-to-Book Ratio",
-              "val": "0.92x",
-              "ref": "25.00 / 27.03"
-            },
-            {
-              "label": "Net Cash Floor / Share",
-              "val": "Rp 13.20",
-              "ref": "52.8% of Price"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "Three Structural Reasons Explaining GoTo's Valuation Gap at Rp 25.00",
-          "badge": "READING THE GAP",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Valuation Gap Driver",
-            "Observed Empirical Fact",
-            "Economic Explanation"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "1. Base DCF (-121) vs Market (+25)",
-              "Market refuses to price perpetual -Rp 7T burn",
-              "Limited liability caps equity at Rp 0; market prices ~35% odds of 2025 run-rate turnaround"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "2. Multiples (39.8) vs Market (25.0)",
-              "P/B (62.2) assumes 2.30x peer multiple",
-              "GoTo's negative ROE (-5.2%) justifies its 0.92x P/B discount vs profitable Grab/Sea (2.1x-4.2x)"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "3. IDX Rp 50 Floor Abolition",
-              "Stock dropped from Rp 50 to Rp 25 post-Sept 2026",
-              "Removing the artificial gocap floor enabled true price discovery toward net cash + option value"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
+            ],
+            [
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Over half of GoTo's Rp 25.00 stock price (Rp 13.20, or 52.8%) is backed directly by hard Net Cash on the balance sheet; the remaining Rp 11.80 represents turnaround option value."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       },
       {
@@ -17903,80 +17918,69 @@
         "subtitle": "Final Synthesis for Public Equity Investors Evaluating IDX: GOTO at Rp 25.00",
         "raw_text": "K E Y  T A K E A W A Y S\nWhat to Remember from Today:\n1. Emerging-market CAPM strips sovereign default spread and adds CRP.\n2. DCF and Residual Income converge when Clean Surplus and Tax rules are right.\n3. Never apply P/E to negative EPS or forget Net Cash in EV/EBITDA.\n4. Reconciling the gap drives the Step 6 Investment Recommendation.",
         "theory_explanation": "Valuation closes the Six-Step FSA loop: (1) Cost of Capital (WACC / Ke) translates risk into discount rates, (2) DCF and Residual Income test intrinsic value creation above opportunity cost, (3) Peer Multiples benchmark market sentiment without ignoring negative-earnings rules, and (4) Reconciling the gap empowers a disciplined Step 6 Buy/Hold/Sell decision.",
-        "goto_explanation": "Final Step 6 Verdict for Public Equity Investors at Rp 25.00: SELL. While GoTo holds Rp 13.20/sh in Net Cash, negative ROE (-5.2%), negative Free Cash Flow (-Rp 875.3 bn), and Base Case cash burn yield negative DCF (-Rp 121.1/sh) and Residual Income (-Rp 75.1/sh). Investors should SELL until GoTo sustains two consecutive years of positive FCF and earns GAAP Net Income above its 8.45% Cost of Equity.",
+        "goto_explanation": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
         "image_url": "/slides/FSA_Week14_PPT/slide_21.png",
         "audit_evidence": {
-          "title": "GoTo Complete FSA Final Verdict: Assignment 14 & 15",
-          "img": "/evidence/goto_income_statement_highlighted.png",
-          "caption": "Final Synthesis connecting Strategy, Accounting Quality, Ratios, Pro Forma Forecast, and Valuation.",
-          "filing_name": "Assignment 15 Final Report",
-          "audit_note": "Step 6 Investment Decision Synthesis",
+          "title": "Revised Assignment 14 comparison",
+          "filing_name": "Revised Assignment 14; Grab FY2025 audited 20-F; GoTo FY2025 statements",
+          "audit_note": "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
           "key_figures": [
             {
-              "label": "Target User",
-              "val": "Public Equity Investor",
-              "ref": "Week 1"
+              "label": "Grab P/B",
+              "val": "3.039129x",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Current Price (IDX)",
-              "val": "Rp 25.00",
-              "ref": "Investing.com"
+              "label": "GoTo parent BVPS",
+              "val": "Rp29.947947",
+              "ref": "FY2025 parent equity and ordinary shares"
             },
             {
-              "label": "Net Cash Floor",
-              "val": "Rp 13.20 / share",
-              "ref": "Balance Sheet"
-            },
-            {
-              "label": "Profit Hurdle (RI = 0)",
-              "val": "> +Rp 2.43T Net Profit",
-              "ref": "8.45% x BVE"
+              "label": "P/B benchmark",
+              "val": "Rp91.015660/share",
+              "ref": "Relative comparison only"
             }
-          ]
+          ],
+          "img": "/charts/chart2_valuation_grab_only.png",
+          "caption": "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         },
         "goto_report": {
-          "title": "Five Golden Valuation Rules & Step 6 Final Recommendation (GOTO)",
-          "badge": "FINAL RECOMMENDATION",
+          "title": "Valuation reconciliation",
+          "badge": "Assignment reconciliation",
           "content_type": "table",
           "table_headers": [
-            "Golden Valuation Rule",
-            "Assignment 14 Fix Applied",
-            "GoTo Final Audited Metric",
-            "Step 6 Decision Signal"
+            "Method",
+            "Rp/share",
+            "Interpretation"
           ],
           "table_rows": [
             [
-              "Rule 1: Clean Emerging-Market CAPM",
-              "Stripped 1.618% spread; added 2.465% CRP",
-              "Ke = 8.45%; WACC = 7.76%",
-              "VALIDATED"
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "Rule 2: Zero Tax Refunds on Losses",
-              "Set Tax = 0 when EBIT < 0 in DCF",
-              "Base DCF = -(Rp 121.1)/share",
-              "CAUTION (Base burn negative)"
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Rule 3: Exclude Invalid Multiples",
-              "Removed legacy media peer; set P/E = n.m. for -1.41 EPS",
-              "P/B (62.2) & Adj EV/EBITDA (17.4) = Rp 39.8",
-              "POSITIVE PEER BENCHMARK"
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Rule 4: Check Net Cash Liquidation Floor",
-              "Cash (21.76T) - Debt (7.74T) / 1,062B",
-              "Net Cash Floor = Rp 13.20/share",
-              "DOWNSIDE CUSHION"
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
             ],
             [
-              "Rule 5: Demand ROE > Cost of Equity",
-              "Residual Income = -(Rp 75.1)/share",
-              "Needs > +Rp 2.43T profit to cover 8.45% Ke",
-              "SELL (BELOW 8.45% HURDLE)"
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ],
-          "analytical_note": "Step 6 Recommendation for Equity Investors: SELL at Rp 25.00 until GoTo proves positive Free Cash Flow and sustained GAAP Net Income exceeding its 8.45% Cost of Equity."
+          "analytical_note": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         }
       }
     ],
@@ -17995,37 +17999,38 @@
       },
       "valuation_summary": [
         {
-          "method": "1. DCF Valuation (FCFF)",
-          "implied_share": "Rp (121.1)",
-          "expl": "FCFF burns -Rp 6.6T to -Rp 7.5T/yr (zero tax refund on losses). Enterprise Value = -Rp 142.6T; adding Rp 14.0T net cash yields -Rp 128.6T equity value."
+          "method": "DCF",
+          "implied_share": "-121.1",
+          "expl": "Milestone 4 cost assumptions"
         },
         {
-          "method": "2. Residual Income",
-          "implied_share": "Rp (75.1)",
-          "expl": "Net losses plus 8.45% equity charge destroy -Rp 6.2T of economic profit per year, completely erasing Rp 28.7T starting book equity."
+          "method": "Residual income",
+          "implied_share": "-75.1",
+          "expl": "Losses and equity charge"
         },
         {
-          "method": "3. Market Multiples",
-          "implied_share": "Rp 39.8",
-          "expl": "Peer median P/B (2.30x -> Rp 62.2) and Net-Cash-Adj. EV/EBITDA (13.25x -> Rp 17.4) across pure-play SEA tech peers (BUKA, GRAB, SE, BELI; P/E excluded as EPS = -Rp 1.41)."
+          "method": "Grab P/B",
+          "implied_share": "91.0",
+          "expl": "Single comparable, parent equity basis"
         },
         {
-          "method": "Current Market Price",
-          "implied_share": "Rp 25.00",
-          "expl": "Trades at 0.8x book value (a 20% discount to book equity) on IDX."
+          "method": "Assignment price",
+          "implied_share": "25.0",
+          "expl": "Reference price, not a live quote"
         },
         {
-          "method": "Net Cash Liquidation Floor",
-          "implied_share": "Rp 13.20",
-          "expl": "Rp 14,012.5 bn net cash divided by 1,062.16 billion shares."
+          "method": "Net cash",
+          "implied_share": "13.20",
+          "expl": "Balance-sheet measure, no guaranteed floor"
         }
       ],
-      "reading_the_gap": "Why does the stock trade at Rp 25.00 when DCF/RI are negative? 1) Shares have limited liability (cannot drop below zero). 2) Net cash provides a hard floor at Rp 13.20. 3) BEI Regulation: Stock was artificially stuck at Rp 50 under the old 'gocap' floor; on Sept 28, 2026, IDX abolished the Rp 50 floor (lowered to Rp 1), triggering ARB and plunging the stock to Rp 25.00."
+      "reading_the_gap": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
     },
     "study_takeaways": [
-      "DCF and Residual Income converge on the exact same conclusion: GoTo destroys value under historical cost trends.",
-      "The market refuses to pay the peer multiple (2.10x P/B = Rp 56.8), treating GoTo as a distressed asset trading at 0.8x book value."
+      "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
+      "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
+      "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
     ],
-    "story_clue": "Steps 5–6 (Valuation & Final Verdict): Because Base Case cash burn produces negative intrinsic value under both DCF (-Rp 121.08/sh) and Residual Income (-Rp 75.11/sh)—outweighing peer multiples (Rp 39.80/sh) and the Rp 13.20/sh net cash floor—the evidence finally leads to SELL at Rp 25.00 until GoTo proves 2 consecutive years of positive FCF and ROE > 8.45% Ke."
+    "story_clue": "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
   }
 ]

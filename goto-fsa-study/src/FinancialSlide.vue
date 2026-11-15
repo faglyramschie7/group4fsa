@@ -1,0 +1,774 @@
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 14 } })
+const emit = defineEmits(['explain', 'evidence', 'zoom'])
+const titles = {
+  en: [
+    'GoTo equity analysis',
+    'Two operating businesses after the Tokopedia exit',
+    'Competition limits pricing power',
+    'Margins improved. Returns remain below the hurdle.',
+    'Operating cash flow still falls short of capex',
+    'The base case consumes the cash buffer',
+    'A 7.76% cost of capital',
+    'Both intrinsic models produce negative values',
+    'Grab is our sole operating comparable',
+    'Cash burn explains the valuation gap',
+    'SELL / AVOID at Rp 25.00',
+    'Historical results and base-case projections',
+    'Sensitivity and operating breakeven',
+    'Presentation coverage and speaker allocation',
+  ],
+  id: [
+    'Analisis ekuitas GoTo',
+    'Dua bisnis utama setelah pelepasan Tokopedia',
+    'Persaingan membatasi kekuatan harga',
+    'Margin membaik. Imbal hasil masih di bawah target.',
+    'Arus kas operasi belum menutup belanja modal',
+    'Skenario dasar menguras cadangan kas',
+    'Biaya modal sebesar 7,76%',
+    'Kedua model intrinsik menghasilkan nilai negatif',
+    'Grab menjadi satu-satunya pembanding operasional',
+    'Pembakaran kas menjelaskan perbedaan valuasi',
+    'JUAL / HINDARI pada Rp 25,00',
+    'Hasil historis dan proyeksi skenario dasar',
+    'Sensitivitas dan titik impas operasional',
+    'Cakupan presentasi dan pembagian pembicara',
+  ],
+}
+const takeaways = {
+  en: [
+    'Low switching costs constrain pricing. Cash flow has yet to fund investment.',
+    'Gojek generates most revenue. Financial technology supplies the fastest growth.',
+    'Price-sensitive users sustain promotion costs while lending adds credit risk.',
+    'ROE of −5.2% remains below the 8.45% cost of equity.',
+    'Positive operating cash flow leaves a Rp 875 bn shortfall after capex.',
+    '2028F ending cash falls to Rp 968 bn under historical cost assumptions.',
+    'Equity carries 77.4% of the capital weight. Debt carries 22.6%.',
+    'Both models use the same operating forecast and 3.0% terminal growth.',
+    'The Grab P/B benchmark assumes comparable earning power and remains conditional.',
+    'Intrinsic models reflect future losses. Market multiples reflect asset value.',
+    'An upgrade requires sustained profit, capex coverage, and disciplined operating costs.',
+  ],
+  id: [
+    'Biaya perpindahan yang rendah membatasi harga. Arus kas belum mendanai investasi.',
+    'Gojek menyumbang pendapatan terbesar. Teknologi finansial tumbuh paling cepat.',
+    'Pengguna sensitif terhadap harga. Pinjaman menambah eksposur risiko kredit.',
+    'ROE −5,2% masih di bawah biaya ekuitas sebesar 8,45%.',
+    'Arus kas operasi positif masih menyisakan kekurangan Rp 875 miliar setelah capex.',
+    'Saldo kas akhir 2028F turun menjadi Rp 968 miliar dengan asumsi biaya historis.',
+    'Bobot ekuitas sebesar 77,4% dan utang sebesar 22,6%.',
+    'Kedua model memakai proyeksi operasi yang sama dan pertumbuhan terminal 3,0%.',
+    'Pembanding P/B Grab mengasumsikan daya laba sebanding dan tetap bersyarat.',
+    'Model intrinsik mencerminkan kerugian mendatang. Kelipatan pasar menilai aset.',
+    'Peningkatan rekomendasi membutuhkan laba berkelanjutan, cakupan capex, dan disiplin biaya.',
+  ],
+}
+const title = computed(() => titles[props.lang]?.[props.slide.slide_num - 1] || props.slide.title)
+const takeaway = computed(() => props.slide.slide_num === 1 ? props.slide.analysis_points?.[1]?.text || takeaways[props.lang]?.[0] : takeaways[props.lang]?.[props.slide.slide_num - 1] || '')
+const table = computed(() => props.slide.table)
+// Detailed source columns remain in the study notes, outside the projected slide.
+const visibleHeaders = computed(() => table.value?.headers || [])
+const datedWaccSources = [
+  'SUN: 30 Dec 2025. Default spread: Damodaran, 1 Jan 2026.',
+  'Beta: Investing.com, Dec 2025. ERP: Damodaran, 1 Jan 2026.',
+  'Damodaran country-risk data, 1 Jan 2026.',
+  'CAPM using the dated inputs above.',
+  'FY2025 interest / year-end debt. Statutory tax assumption: 22%.',
+  'Rp 25 case reference × shares. Debt: FY2025. Weights: 77.4% / 22.6%.',
+]
+const visibleRows = computed(() => (table.value?.rows || []).map((row, i) => props.slide.slide_num === 7 ? [row[0], row[1], datedWaccSources[i]] : row))
+const label = computed(() => props.slide.section_name || (props.lang === 'id' ? 'ANALISIS LAPORAN KEUANGAN' : 'FINANCIAL STATEMENT ANALYSIS'))
+const editorialRows = computed(() => {
+  const id = props.lang === 'id'
+  if (props.slide.slide_num === 2) return [
+    {
+      name: 'Gojek',
+      value: 'Rp 12,361 bn',
+      img: '/visuals/row_gojek.png',
+      text: id ? 'Mobilitas, pengantaran makanan, dan logistik' : 'Mobility, food delivery, and logistics',
+      detail_explanation: id
+        ? 'Angka ini berasal dari Catatan 29 (Segmen Operasi) di Laporan Tahunan 2025 hal. 468 / LK Auditan FY2025 hal. 133 — bukan dari baris atas Laporan Laba Rugi Konsolidasian (yang hanya menampilkan total Rp 18.322 M). Gojek (On-Demand Services) adalah mesin pendapatan terbesar GoTo (67,5% dari total pendapatan bersih konsolidasian) dan sudah mencetak laba segmen +Rp 888,6 M sebelum biaya korporasi.'
+        : 'This figure comes from Note 29 (Segment Operations) in the 2025 Annual Report p. 468 / Audited LK GOTO FY2025 p. 133 — NOT from the top line of the Consolidated Income Statement (which only shows total consolidated revenue). Gojek (On-Demand Services) is GoTo’s largest revenue engine (67.5% of consolidated net revenue) and generated +Rp 888.6 bn in segment operating profit before corporate overhead.',
+      formula: id ? 'Pendapatan Bersih ODS = Rp 15.030,99 M (Bruto) − Rp 2.669,74 M (Insentif) = Rp 12.361,26 M' : 'ODS Net Revenue = Rp 15,030.99 bn (Gross) − Rp 2,669.74 bn (Incentives) = Rp 12,361.26 bn',
+      calc_steps: [
+        id ? 'Pendapatan bruto pihak ketiga ODS: Rp 15.030.994 juta' : 'Gross third-party ODS revenue: Rp 15,030,994 million',
+        id ? 'Dikurangi insentif kepada pelanggan: (Rp 2.669.735 juta)' : 'Less customer incentives & promos: (Rp 2,669,735 million)',
+        id ? 'Pendapatan bersih pihak ketiga Gojek: Rp 12.361.259 juta (dibulatkan Rp 12.361 M)' : 'Net third-party Gojek revenue: Rp 12,361,259 million (rounded Rp 12,361 bn)',
+        id ? 'Ditambah antar-segmen Rp 234.884 juta → Laba operasi segmen: +Rp 888.619 juta' : 'Plus inter-segment Rp 234,884m → Segment operating profit: +Rp 888,619m',
+        id ? 'Rekonsiliasi konsolidasi: 12.361,26 + 5.190,62 + 819,72 − 49,48 (eliminasi promo) = Rp 18.322,12 M' : 'Consolidated tie-out: 12,361.26 + 5,190.62 + 819.72 − 49.48 (promo elimination) = Rp 18,322.12 bn',
+      ],
+      data_origin: '2025 Annual Report p. 468 & LK GOTO FY2025 p. 133 (Note 29: Segment Operations)',
+      highlight_terms: ['12,361', '12,361,259', 'On-Demand', 'Gojek'],
+      evidence_img: '/evidence/annual_report_p468_segment_note29.png',
+      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations) — On-Demand Services Net Third-Party Revenue = Rp 12,361,259m',
+    },
+    {
+      name: 'GoTo Financial',
+      value: 'Rp 5,191 bn',
+      img: '/visuals/row_gofinancial.png',
+      text: id ? 'Pembayaran digital dan pinjaman konsumen' : 'Digital payments and consumer lending',
+      detail_explanation: id
+        ? 'Angka ini juga berasal dari Catatan 29 (Segmen Operasi) di Laporan Tahunan 2025 hal. 468 / LK Auditan FY2025 hal. 133 (Rp 5.190.617 juta, dibulatkan menjadi Rp 5.191 M). Segmen FinTech (GoPay & pinjaman konsumen) adalah mesin pertumbuhan tercepat GoTo, tetapi masih membukukan rugi operasi segmen sebesar −Rp 396,6 M karena ekspansi kredit dan pencadangan kerugian pinjaman.'
+        : 'This figure also comes from Note 29 (Segment Operations) in the 2025 Annual Report p. 468 / Audited LK GOTO FY2025 p. 133 (Rp 5,190,617 million, rounded to Rp 5,191 bn). Financial Technology (GoPay payments & consumer lending) is GoTo’s fastest-growing segment, though it still posted a segment operating loss of −Rp 396.6 bn due to credit provisions and scaling.',
+      formula: id ? 'Pendapatan Bersih FinTech = Rp 5.460,84 M (Bruto) − Rp 270,23 M (Insentif) = Rp 5.190,62 M' : 'FinTech Net Revenue = Rp 5,460.84 bn (Gross) − Rp 270.23 bn (Incentives) = Rp 5,190.62 bn',
+      calc_steps: [
+        id ? 'Pendapatan bruto pihak ketiga FinTech: Rp 5.460.844 juta' : 'Gross third-party FinTech revenue: Rp 5,460,844 million',
+        id ? 'Dikurangi insentif kepada pelanggan: (Rp 270.227 juta)' : 'Less customer incentives: (Rp 270,227 million)',
+        id ? 'Pendapatan bersih pihak ketiga FinTech: Rp 5.190.617 juta (dibulatkan Rp 5.191 M)' : 'Net third-party FinTech revenue: Rp 5,190,617 million (rounded Rp 5,191 bn)',
+        id ? 'Rugi operasi segmen FinTech: −Rp 396.607 juta (pinjaman konsumen bersih Rp 2.731 M)' : 'FinTech segment operating loss: −Rp 396,607m (net consumer loans Rp 2,731 bn)',
+      ],
+      data_origin: '2025 Annual Report p. 468 & LK GOTO FY2025 p. 133 (Note 29: Segment Operations)',
+      highlight_terms: ['5,191', '5,190,617', 'Financial technology', 'GoPay'],
+      evidence_img: '/evidence/annual_report_p468_segment_note29.png',
+      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations) — Financial Technology Net Third-Party Revenue = Rp 5,190,617m',
+    },
+    {
+      name: 'Tokopedia',
+      value: '24.99%',
+      img: '/visuals/row_tokopedia.png',
+      text: id ? 'Kepemilikan tersisa. Rp 820 miliar pendapatan jasa.' : 'Retained stake. Rp 820 bn in service fee revenue.',
+      detail_explanation: id
+        ? 'Setelah GoTo mengalihkan 75,01% kendali Tokopedia kepada TikTok pada Januari 2024, GoTo tidak lagi mengonsolidasi pendapatan GMV Tokopedia. Sebaliknya, porsi tersisa 24,99% dicatat sebagai entitas asosiasi (Catatan 14 LK GOTO 2025), dan GoTo menerima imbalan jasa e-commerce sebesar Rp 819,72 M (~Rp 820 M) per tahun berdasarkan persentase GMV Inti Tokopedia (Catatan 29 & 25).'
+        : 'After GoTo transferred 75.01% control of Tokopedia to TikTok in January 2024, GoTo stopped consolidating Tokopedia’s operating revenue. Instead, the remaining 24.99% is accounted for as an equity-method associate (Note 14), and GoTo collects an e-commerce service fee of Rp 819.72 bn (~Rp 820 bn) based on Tokopedia’s Core GMV (Note 29 & Note 25).',
+      formula: id ? 'Kepemilikan Tersisa = 100% − 75,01% = 24,99% | Imbalan Jasa = Rp 819,72 M' : 'Retained Stake = 100% − 75.01% = 24.99% | Service Fee = Rp 819.72 bn',
+      calc_steps: [
+        id ? 'Porsi saham tersisa di PT Tokopedia (Catatan 14): 24,99%' : 'Retained ownership in PT Tokopedia (Note 14): 24.99%',
+        id ? 'Pendapatan jasa e-commerce FY2025 (Catatan 29): Rp 819.724 juta (~Rp 820 M)' : 'FY2025 e-commerce service fee revenue (Note 29): Rp 819,724m (~Rp 820 bn)',
+        id ? 'Total aset entitas asosiasi (Tokopedia + Bank Jago): 22,57% dari total aset GoTo' : 'Total investments in associates (Tokopedia + Bank Jago): 22.57% of GoTo total assets',
+      ],
+      data_origin: 'LK GOTO FY2025 Note 14 (Associates) & Annual Report p. 468 (Note 29)',
+      highlight_terms: ['24.99%', '819,724', 'Tokopedia'],
+      evidence_img: '/evidence/goto_note14_associates_tokopedia_jago.png',
+      evidence_caption: 'LK GOTO FY2025 Note 14 — Investments in Associates (PT Tokopedia 24.99% & Bank Jago)',
+    },
+  ]
+  if (props.slide.slide_num === 5) return [
+    {
+      name: id ? 'Arus kas operasi' : 'Operating cash flow',
+      value: '+Rp 307 bn',
+      img: '/visuals/row_cfo.png',
+      text: id ? 'Kas yang dihasilkan dari operasi pada 2025' : 'Cash generated from operations in 2025',
+      detail_explanation: id
+        ? 'Diambil langsung dari Laporan Arus Kas Konsolidasian FY2025 (Arus Kas Bersih dari Aktivitas Operasi = +Rp 307.183 juta). Meski positif secara headline (membaik dari defisit 2023–2024), angka ini belum cukup membiayai belanja modal maupun mencerminkan kemampuan menghasilkan kas bebas yang berkelanjutan.'
+        : 'Taken directly from the FY2025 Consolidated Statement of Cash Flows (Net Cash Provided by Operating Activities = +Rp 307,183 million). While headline positive after prior-year burns, it is far too small to cover capital expenditure and is partly aided by working-capital timing.',
+      formula: id ? 'CFO FY2025 = +Rp 307.183 juta (+Rp 307 M) | Akrual M3 = (Laba Bersih − CFO) / Aset Akhir = −3,95%' : 'FY2025 CFO = +Rp 307,183m (+Rp 307 bn) | M3 Accrual = (Net Income − CFO) / Closing Assets = −3.95%',
+      calc_steps: [
+        id ? 'Arus kas bersih dari aktivitas operasi (LK Arus Kas): +Rp 307.183 juta' : 'Net cash from operating activities (Cash Flow Statement): +Rp 307,183m',
+        id ? 'Bandingkan dengan Rugi Bersih FY2025: −Rp 1.441,7 M → selisih non-kas/modal kerja = akrual −3,95%' : 'Compare vs FY2025 Net Loss −Rp 1,441.7 bn → non-cash/WC bridge = −3.95% accrual ratio',
+      ],
+      data_origin: 'LK GOTO FY2025 Consolidated Statement of Cash Flows & Milestone 3!Calculations D12',
+      highlight_terms: ['307', '307,183', 'Operating'],
+      evidence_img: '/evidence/goto_cash_flows_p1_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 1) — Operating Cash Flow = +Rp 307,183m',
+    },
+    {
+      name: id ? 'Belanja modal' : 'Capital expenditure',
+      value: 'Rp 1,182 bn',
+      img: '/visuals/row_capex.png',
+      text: id ? 'Cakupan arus kas operasi hanya 26%' : 'Only 26% covered by operating cash flow',
+      detail_explanation: id
+        ? 'Mengukur kas yang keluar untuk membeli aset tetap, perangkat lunak, dan infrastruktur platform pada FY2025 (Rp 1.182.518 juta). Karena CFO hanya +Rp 307 M, operasi inti baru mampu membiayai 25,97% dari kebutuhan capex tahunan.'
+        : 'Measures cash spent on property, equipment, software, and platform infrastructure in FY2025 (Rp 1,182,518 million). Because CFO was only +Rp 307 bn, core operations funded just 25.97% of annual capital expenditure.',
+      formula: id ? 'Cakupan Capex = CFO / Capex = Rp 307,18 M / Rp 1.182,52 M = 25,97%' : 'Capex Coverage = CFO / Capex = Rp 307.18 bn / Rp 1,182.52 bn = 25.97%',
+      calc_steps: [
+        id ? 'Arus kas operasi (CFO): Rp 307.183 juta' : 'Operating cash flow (CFO): Rp 307,183m',
+        id ? 'Belanja modal (Capex): Rp 1.182.518 juta' : 'Capital expenditure (Capex): Rp 1,182,518m',
+        id ? 'Rasio cakupan = 307.183 / 1.182.518 = 25,97% (~26%)' : 'Coverage ratio = 307,183 / 1,182,518 = 25.97% (~26%)',
+      ],
+      data_origin: 'LK GOTO FY2025 Cash Flows (Investing) & Milestone 3!Calculations D36',
+      highlight_terms: ['1,182', '25.97%', '26%'],
+      evidence_img: '/evidence/goto_cash_flows_p2_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 2) — Investing Capex & Cash Bridge',
+    },
+    {
+      name: id ? 'Arus kas bebas' : 'Free cash flow',
+      value: '−Rp 875 bn',
+      img: '/visuals/row_fcf.png',
+      text: id ? 'Kekurangan setelah belanja modal' : 'Funding shortfall after capital expenditure',
+      detail_explanation: id
+        ? 'Arus kas bebas (FCF) menunjukkan sisa kas untuk pemegang saham dan kreditur setelah investasi pemeliharaan/pertumbuhan aset. Nilai −Rp 875 M (−Rp 875.335 juta) membuktikan GoTo masih mengalami defisit kas operasional bersih setiap tahunnya.'
+        : 'Free cash flow (FCF) measures cash left over for debt and equity holders after funding capital investments. At −Rp 875 bn (−Rp 875,335 million), GoTo still faces an annual operating-plus-investment cash shortfall.',
+      formula: id ? 'FCF = CFO − Capex = Rp 307,18 M − Rp 1.182,52 M = −Rp 875,34 M' : 'FCF = CFO − Capex = Rp 307.18 bn − Rp 1,182.52 bn = −Rp 875.34 bn',
+      calc_steps: [
+        id ? 'CFO (+Rp 307.183 juta) − Capex (Rp 1.182.518 juta) = −Rp 875.335 juta (~−Rp 875 M)' : 'CFO (+Rp 307,183m) − Capex (Rp 1,182,518m) = −Rp 875,335m (~−Rp 875 bn)',
+      ],
+      data_origin: 'Milestone 3!Calculations D37 (−875,335)',
+      highlight_terms: ['875', 'Free cash flow'],
+      evidence_img: '/evidence/goto_cash_flows_p2_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows — CFO vs. Investing Capex Shortfall',
+    },
+  ]
+  if (props.slide.slide_num === 11) return [
+    {
+      name: id ? '01  Arus kas mandiri' : '01  Self-funding cash flow',
+      value: '> Rp 1.2T',
+      img: '/visuals/row_hurdle_cfo.png',
+      text: id ? 'Arus kas operasi tahunan menutup capex tanpa utang baru' : 'Annual operating cash flow covers capex without new borrowing',
+      detail_explanation: id
+        ? 'Syarat pertama untuk mengubah rekomendasi dari SELL/AVOID: arus kas operasi tahunan harus naik dari +Rp 307 M menjadi di atas ~Rp 1,2T agar belanja modal tahunan (Rp 1,18T) tertutup secara organik tanpa menguras cadangan kas atau menambah utang.'
+        : 'First hurdle to upgrade from SELL/AVOID: annual operating cash flow must rise from +Rp 307 bn to > Rp 1.2T so annual capex (Rp 1.18T) is funded organically without draining cash or raising debt.',
+      formula: id ? 'Syarat 1: CFO Tahunan ≥ Capex (~Rp 1,2T) → FCF ≥ 0' : 'Hurdle 1: Annual CFO ≥ Capex (~Rp 1.2T) → FCF ≥ 0',
+      calc_steps: [
+        id ? 'Baseline FY2025: CFO Rp 307 M vs Capex Rp 1.182 M (defisit FCF −Rp 875 M)' : 'FY2025 baseline: CFO Rp 307 bn vs Capex Rp 1,182 bn (FCF shortfall −Rp 875 bn)',
+      ],
+      data_origin: 'Final Report Section 7 & Milestone 3!Calculations D36:D37',
+      highlight_terms: ['1.2T', 'capex', 'CFO'],
+      evidence_img: '/evidence/goto_cash_flows_p1_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Cash Flows — Baseline CFO (+Rp 307 bn) vs. > Rp 1.2T Self-Funding Hurdle',
+    },
+    {
+      name: id ? '02  Disiplin biaya' : '02  Operating cost discipline',
+      value: '< 56%',
+      img: '/visuals/row_hurdle_opex.png',
+      text: id ? 'Beban operasi sebagai persentase pendapatan' : 'Operating expenses as a percentage of revenue',
+      detail_explanation: id
+        ? 'Syarat kedua: rasio beban operasi (OpEx / Pendapatan) harus turun di bawah 56% secara berkelanjutan. Dalam skenario dasar Tugas 14 yang memakai rata-rata historis 78,5%, GoTo terus membakar kas Rp 6,6T–7,5T/tahun dan nilai intrinsik menjadi negatif.'
+        : 'Second hurdle: operating expenses as a share of revenue must stay below 56%. Under Assignment 14’s historical mean-reverting assumption (78.5% OpEx/Revenue), GoTo burns Rp 6.6T–7.5T/yr and intrinsic equity value turns negative.',
+      formula: id ? 'Syarat 2: OpEx / Pendapatan < 56% (vs asumsi historis 78,5%)' : 'Hurdle 2: OpEx / Revenue < 56% (vs. 78.5% historical assumption)',
+      calc_steps: [
+        id ? 'Analisis titik impas fixed-OpEx (Tugas 14): impas terjadi pada pendapatan Rp 18.604 M' : 'Assignment 14 fixed-OpEx breakeven: operating breakeven requires Rp 18,604 bn revenue',
+      ],
+      data_origin: 'Milestone 4 & Assignment 14 Sensitivity/Breakeven',
+      highlight_terms: ['56%', '78.5%', 'OpEx'],
+      evidence_img: '/evidence/goto_gross_profit_opex_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Income Statement — Gross Profit vs. Operating Expenses Structure',
+    },
+    {
+      name: id ? '03  Laba berkelanjutan' : '03  Sustained profitability',
+      value: '> Rp 2.43T',
+      img: '/visuals/row_hurdle_profit.png',
+      text: id ? 'Laba bersih GAAP selama dua tahun berturut-turut' : 'Annual GAAP net income for two consecutive years',
+      detail_explanation: id
+        ? 'Syarat ketiga: laba bersih GAAP harus melampaui beban biaya ekuitas tahunan (Rp 28.711,66 M × Ke 8,45% = Rp 2,43T/tahun) selama dua tahun berturut-turut. Tanpa melewati Rp 2,43T, Residual Income tetap negatif dan perusahaan belum menciptakan nilai ekonomi bagi pemegang saham.'
+        : 'Third hurdle: annual GAAP net income must exceed the equity capital charge (Rp 28,711.66 bn × 8.45% Ke = Rp 2.43T/yr) for two consecutive years. Below Rp 2.43T, Residual Income remains negative and destroys shareholder value.',
+      formula: id ? 'Beban Ekuitas = BVE Awal (Rp 28.711,66 M) × Ke (8,45%) = Rp 2,43T / tahun' : 'Equity Charge = Beginning BVE (Rp 28,711.66 bn) × Ke (8.45%) = Rp 2.43T / yr',
+      calc_steps: [
+        id ? 'Residual Income = Laba Bersih GAAP − (BVE Awal × 8,45%)' : 'Residual Income = GAAP Net Income − (Beginning BVE × 8.45%)',
+        id ? 'RI > 0 hanya tercapai jika Laba Bersih > Rp 2,43T/tahun' : 'RI > 0 only when GAAP Net Income > Rp 2.43T/yr',
+      ],
+      data_origin: 'Residual Income Valuation!B5:D10 (Assignment 14 Workbook)',
+      highlight_terms: ['2.43T', '8.45%', 'Residual Income'],
+      evidence_img: '/evidence/goto_balance_sheet_liabilities_equity_highlighted.png',
+      evidence_caption: 'LK GOTO FY2025 Equity Base & Assignment 14 Residual Income Equity Charge Hurdle',
+    },
+  ]
+  return null
+})
+const bannerMap = {
+  6: '/visuals/banner_slide6_forecast.png',
+  7: '/visuals/banner_slide7_wacc.png',
+  8: '/visuals/banner_slide8_intrinsic.png',
+}
+const slideBannerUrl = computed(() => bannerMap[props.slide.slide_num] || '')
+
+const pointIcons = {
+  '2-2': {
+    risk: false,
+    svg: '<path d="M22 26V11a15 15 0 1 0 15 15H22z" fill="#86efac" stroke="#008c2c" stroke-width="2.2" stroke-linejoin="round"/><path d="M26 9a15 15 0 0 1 13 13H26V9z" fill="#008c2c" stroke="#008c2c" stroke-width="2" stroke-linejoin="round"/><circle cx="35" cy="13" r="3" fill="#efc96c"/>',
+  },
+  '3-0': {
+    risk: true,
+    svg: '<path d="M12 34L33 13M33 13h-7M33 13v7" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 34L15 13M15 13h7M15 13v7" stroke="#ef4444" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="4.5" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>',
+  },
+  '3-1': {
+    risk: false,
+    svg: '<circle cx="17" cy="16" r="5" fill="#86efac" stroke="#008c2c" stroke-width="2.2"/><circle cx="31" cy="16" r="5" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M9 33c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#86efac" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round"/><path d="M23 33c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round"/><path d="M19 38h10M26 35l3 3-3 3" stroke="#008c2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  '3-2': {
+    risk: true,
+    svg: '<rect x="8" y="15" width="26" height="18" rx="3" fill="#fecaca" stroke="#dc2626" stroke-width="2.2"/><path d="M8 21h26" stroke="#dc2626" stroke-width="2.5"/><path d="M33 21l8 14H25l8-14z" fill="#fca5a5" stroke="#b91c1c" stroke-width="2" stroke-linejoin="round"/><path d="M33 26v4M33 32.5v.5" stroke="#7f1d1d" stroke-width="2" stroke-linecap="round"/>',
+  },
+  '4-0': {
+    risk: true,
+    svg: '<path d="M10 15l10 10 7-5 11 11" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 31h7v-7" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="34" width="30" height="4" rx="2" fill="#fecaca"/>',
+  },
+  '4-1': {
+    risk: false,
+    svg: '<path d="M24 10v26M15 36h18" stroke="#008c2c" stroke-width="2.4" stroke-linecap="round"/><path d="M11 17h26" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round"/><path d="M11 17l-4 10h8l-4-10zM37 17l-4 10h8l-4-10z" fill="#bbf7d0" stroke="#008c2c" stroke-width="2" stroke-linejoin="round"/>',
+  },
+  '4-2': {
+    risk: true,
+    svg: '<path d="M24 9l15 27H9L24 9z" fill="#fecaca" stroke="#dc2626" stroke-width="2.3" stroke-linejoin="round"/><path d="M24 19v8M24 31v1" stroke="#991b1b" stroke-width="2.6" stroke-linecap="round"/>',
+  },
+  '5-0': {
+    risk: true,
+    svg: '<rect x="12" y="10" width="24" height="28" rx="4" fill="#fff" stroke="#dc2626" stroke-width="2.2"/><rect x="15" y="29" width="18" height="6" rx="1.5" fill="#fca5a5"/><path d="M15 22h18" stroke="#fecaca" stroke-width="2" stroke-dasharray="3 2"/>',
+  },
+  '5-1': {
+    risk: false,
+    svg: '<rect x="9" y="11" width="30" height="26" rx="3" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M15 20h18M15 27h10M29 25l3 3 5-6" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  '5-2': {
+    risk: false,
+    svg: '<rect x="10" y="9" width="20" height="28" rx="3" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M15 16h10M15 22h8" stroke="#008c2c" stroke-width="2" stroke-linecap="round"/><circle cx="31" cy="29" r="6" fill="#edf6ef" stroke="#008c2c" stroke-width="2.2"/><path d="M35.5 33.5L40 38" stroke="#008c2c" stroke-width="2.5" stroke-linecap="round"/>',
+  },
+  '6-0': {
+    risk: false,
+    svg: '<rect x="10" y="25" width="6" height="12" rx="1.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/><rect x="21" y="19" width="6" height="18" rx="1.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/><rect x="32" y="12" width="6" height="25" rx="1.5" fill="#008c2c"/>',
+  },
+  '6-1': {
+    risk: true,
+    svg: '<path d="M10 33c7-2 12-10 17-16l11-4" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round"/><circle cx="38" cy="13" r="3.5" fill="#fecaca" stroke="#dc2626" stroke-width="2"/><path d="M10 37h28" stroke="#fca5a5" stroke-width="2" stroke-linecap="round"/>',
+  },
+  '6-2': {
+    risk: false,
+    svg: '<circle cx="12" cy="24" r="3.5" fill="#008c2c"/><path d="M15.5 24H24M24 24l8-10h6M24 24h14M24 24l8 10h6" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="14" r="2.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/><circle cx="38" cy="24" r="2.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/><circle cx="38" cy="34" r="2.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/>',
+  },
+  '7-0': {
+    risk: false,
+    svg: '<circle cx="24" cy="24" r="14" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><ellipse cx="24" cy="24" rx="6.5" ry="14" stroke="#008c2c" stroke-width="1.8"/><path d="M10 24h28" stroke="#008c2c" stroke-width="1.8"/>',
+  },
+  '7-1': {
+    risk: false,
+    svg: '<rect x="8" y="17" width="32" height="14" rx="3" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><rect x="8" y="17" width="23" height="14" rx="3" fill="#008c2c"/><path d="M14 24h11" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>',
+  },
+  '7-2': {
+    risk: false,
+    svg: '<rect x="10" y="12" width="28" height="26" rx="3" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M10 20h28M18 9v6M30 9v6" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round"/><circle cx="24" cy="29" r="3.5" fill="#008c2c"/>',
+  },
+  '8-0': {
+    risk: true,
+    svg: '<path d="M12 20h24M12 28h16" stroke="#dc2626" stroke-width="2.4" stroke-linecap="round"/><rect x="8" y="11" width="32" height="26" rx="4" fill="#fecaca" fill-opacity="0.45" stroke="#dc2626" stroke-width="2.2"/><path d="M31 28h6" stroke="#991b1b" stroke-width="2.6" stroke-linecap="round"/>',
+  },
+  '8-1': {
+    risk: true,
+    svg: '<circle cx="24" cy="24" r="14" fill="#fecaca" stroke="#dc2626" stroke-width="2.2"/><path d="M17 24h14" stroke="#991b1b" stroke-width="3" stroke-linecap="round"/>',
+  },
+  '8-2': {
+    risk: false,
+    svg: '<path d="M17 29c-3.5 0-6-2.5-6-5.5S13.5 18 17 18c4 0 6 5.5 7 5.5s3-5.5 7-5.5c3.5 0 6 2.5 6 5.5S34.5 29 31 29c-4 0-6-5.5-7-5.5S21 29 17 29z" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.3"/>',
+  },
+  '9-0': {
+    risk: false,
+    svg: '<rect x="10" y="15" width="12" height="22" rx="2" fill="#86efac" stroke="#008c2c" stroke-width="2"/><rect x="26" y="11" width="12" height="26" rx="2" fill="#bbf7d0" stroke="#008c2c" stroke-width="2"/><path d="M19 24h10" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round"/>',
+  },
+  '9-1': {
+    risk: false,
+    svg: '<path d="M11 33L33 11l4 4L15 37H11v-4z" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2" stroke-linejoin="round"/><circle cx="31" cy="17" r="2" fill="#008c2c"/>',
+  },
+  '9-2': {
+    risk: true,
+    svg: '<path d="M10 12h28l-10 13v11l-8-3v-8L10 12z" fill="#fecaca" stroke="#dc2626" stroke-width="2.2" stroke-linejoin="round"/>',
+  },
+  '10-0': {
+    risk: false,
+    svg: '<path d="M11 16h18M11 24h26M11 32h12" stroke="#008c2c" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="16" r="3" fill="#efc96c"/><circle cx="26" cy="32" r="3" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/>',
+  },
+  '10-1': {
+    risk: true,
+    svg: '<circle cx="24" cy="24" r="13" fill="#fecaca" stroke="#dc2626" stroke-width="2.2"/><path d="M16 16l16 16" stroke="#991b1b" stroke-width="2.6" stroke-linecap="round"/>',
+  },
+  '10-2': {
+    risk: false,
+    svg: '<rect x="10" y="10" width="28" height="28" rx="4" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M16 19l3 3 6-6M16 29l3 3 6-6M28 19h5M28 29h5" stroke="#008c2c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  '11-0': {
+    risk: true,
+    svg: '<path d="M24 8l13 5v11c0 8.5-5.6 15.6-13 18-7.4-2.4-13-9.5-13-18V13l13-5z" fill="#fecaca" stroke="#dc2626" stroke-width="2.2" stroke-linejoin="round"/><path d="M19 19l10 10M29 19L19 29" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round"/>',
+  },
+  '11-1': {
+    risk: false,
+    svg: '<circle cx="24" cy="24" r="14" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M24 31V17M18 23l6-6 6 6" stroke="#008c2c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  '11-2': {
+    risk: true,
+    svg: '<path d="M17 12v24M17 12l-5 5M17 12l5 5" stroke="#008c2c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 36V12M31 36l-5-5M31 36l5-5" stroke="#dc2626" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+}
+const getPointIcon = (slideNum, index) => pointIcons[`${slideNum}-${index}`] || null
+const competitionChart = computed(() => props.slide.competition_chart)
+const spendingChart = computed(() => props.slide.competitive_spending_chart)
+const spendingScale = computed(() => Math.max(...(spendingChart.value?.series || []).map(row => row.value), 1) * 1.1)
+const provisionScale = computed(() => Math.max(...(competitionChart.value?.series || []).map(row => row.value), 1) * 1.1)
+const provisionGrowth = computed(() => {
+  const rows = competitionChart.value?.series || []
+  return rows.length === 2 && rows[0].value > 0 ? Math.round((rows[1].value / rows[0].value - 1) * 100) : null
+})
+</script>
+
+<template>
+  <div class="financial-slide" :aria-label="`${slide.slide_num}. ${title}`">
+    <article class="slide-sheet" :class="{ 'slide-cover': slide.slide_num === 1, 'slide-appendix': slide.is_appendix, 'slide-has-table': table }">
+      <template v-if="slide.slide_num === 1">
+        <div class="slide-cover-top">
+          <img class="slide-brand" src="/goto_logo.png" alt="GoTo" />
+          <span>{{ label }}</span>
+        </div>
+        <div class="slide-cover-title">
+          <p>PT GoTo Gojek Tokopedia Tbk</p>
+          <h1>GoTo<span>{{ lang === 'id' ? 'Analisis ekuitas' : 'Equity analysis' }}</span></h1>
+          <div class="slide-cover-business is-clickable-claim" role="button" tabindex="0" @click="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: 'Business Scope', text: lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' })" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: 'Business Scope', text: lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' })">{{ lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' }}</div>
+          <p class="slide-cover-question">{{ lang === 'id' ? 'Bisakah perbaikan kinerja GoTo menghasilkan pertumbuhan yang dibiayai sendiri?' : 'Can GoTo turn improving performance into self-funded growth?' }}</p>
+        </div>
+        <aside class="slide-cover-summary">
+        <div class="slide-cover-user">
+          <span>{{ lang === 'id' ? 'UNTUK SIAPA' : 'OUR USER' }}</span>
+          <p>{{ lang === 'id' ? 'Investor saham publik jangka panjang' : 'Long-term public equity investor' }}</p>
+        </div>
+        <div
+          class="slide-cover-verdict is-clickable-claim"
+          role="button"
+          tabindex="0"
+          @click="emit('explain', $event, 'verdict', { title: lang === 'id' ? 'JUAL / HINDARI — Rp 25,00 / saham' : 'SELL / AVOID — Rp 25.00 / share', text: takeaway })"
+          @keydown.enter="emit('explain', $event, 'verdict', { title: lang === 'id' ? 'JUAL / HINDARI — Rp 25,00 / saham' : 'SELL / AVOID — Rp 25.00 / share', text: takeaway })"
+        >
+          <span>{{ lang === 'id' ? 'JAWABAN KAMI' : 'OUR ANSWER' }}</span>
+          <strong>{{ lang === 'id' ? 'JUAL / HINDARI' : 'SELL / AVOID' }}</strong>
+          <p>{{ lang === 'id' ? 'pada harga acuan Rp 25,00 per saham' : 'at the reference price of Rp 25.00 per share' }}</p>
+        </div>
+        <div class="slide-cover-reason">
+          <span>{{ lang === 'id' ? 'ALASAN UTAMA' : 'THE MAIN REASON' }}</span>
+          <p>{{ lang === 'id' ? 'Dalam skenario dasar kami, pembakaran kas menurunkan saldo kas dari Rp 21,76 triliun pada 2025 menjadi Rp 968 miliar pada 2028F.' : 'Under our base case, continued cash burn reduces cash from Rp 21.76 trillion in 2025 to Rp 968 billion in 2028F.' }}</p>
+          <small>{{ lang === 'id' ? 'Sumber: proyeksi Milestone 4' : 'Source: Milestone 4 forecast' }}</small>
+        </div>
+        </aside>
+        <div class="slide-cover-team">
+          <strong>GROUP 4</strong>
+          <span>Fagly Ramschie · Anggreini Ruitan · Galatia Rompas</span>
+          <span>Magister Manajemen, Universitas Klabat</span>
+        </div>
+      </template>
+
+      <template v-else>
+        <header class="slide-heading">
+          <div class="slide-heading-copy">
+            <p>{{ label }} <span v-if="slide.is_appendix"> / {{ lang === 'id' ? 'LAMPIRAN' : 'APPENDIX' }}</span></p>
+            <h1>{{ title }}</h1>
+          </div>
+          <img class="slide-brand" src="/goto_logo.png" alt="GoTo" />
+        </header>
+
+        <main class="slide-evidence-layout" :class="{ 'slide-table-only': slide.is_appendix }">
+          <div class="slide-evidence" :class="{ 'slide-evidence-stacked': slideBannerUrl, 'slide-evidence-peer': slide.peer_exclusions, 'slide-evidence-competition': competitionChart }">
+            <button
+              v-if="slideBannerUrl"
+              class="slide-evidence-banner"
+              @click="emit('zoom', slideBannerUrl, title)"
+              :aria-label="lang === 'id' ? 'Perbesar visual' : 'Enlarge visual'"
+            >
+              <img :src="slideBannerUrl" :alt="title" />
+            </button>
+            <template v-if="slide.five_forces">
+            <table class="slide-forces-table">
+              <thead><tr><th>{{ lang === 'id' ? 'Kekuatan' : 'Force' }}</th><th>{{ lang === 'id' ? 'Penilaian' : 'Rating' }}</th><th>{{ lang === 'id' ? 'Dasar penilaian' : 'Basis for assessment' }}</th></tr></thead>
+              <tbody>
+                <tr
+                  v-for="(row, index) in slide.five_forces"
+                  :key="index"
+                  class="is-clickable-row"
+                  tabindex="0"
+                  @click="emit('explain', $event, 'five_force', row)"
+                  @keydown.enter="emit('explain', $event, 'five_force', row)"
+                >
+                  <td
+                    v-for="(cell, c) in row"
+                    :key="c"
+                    :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
+                  >{{ cell }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div v-if="competitionChart" class="slide-competition-charts">
+            <figure
+              v-if="spendingChart"
+              class="slide-provision-chart slide-spending-chart"
+              role="button"
+              tabindex="0"
+              :aria-label="lang === 'id' ? 'Belanja 2025: pemasaran Rp 3,09 triliun dan pengembangan produk Rp 2,15 triliun.' : '2025 spending: marketing Rp 3.09 trillion and product development Rp 2.15 trillion.'"
+              @click="emit('explain', $event, 'claim', slide.analysis_points?.[0])"
+              @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[0])"
+              @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points?.[0])"
+            >
+              <figcaption><div><strong>{{ lang === 'id' ? 'Belanja untuk bersaing' : 'Spending to compete' }}</strong><span>{{ lang === 'id' ? '2025 · Rp triliun' : '2025 · Rp trillion' }}</span></div></figcaption>
+              <dl>
+                <div v-for="(row, i) in spendingChart.series" :key="row.key" class="slide-spending-row">
+                  <dt>{{ lang === 'id' ? row.label_id : row.label }}</dt>
+                  <dd class="slide-provision-value">{{ row.value.toLocaleString(lang === 'id' ? 'id-ID' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</dd>
+                  <dd class="slide-provision-track"><span :class="{ 'slide-spending-product': i === 1, 'slide-provision-current': i === 0 }" :style="{ width: `${row.value / spendingScale * 100}%` }"></span></dd>
+                </div>
+              </dl>
+            </figure>
+            <figure
+              v-if="competitionChart"
+              class="slide-provision-chart"
+              role="button"
+              tabindex="0"
+              :aria-label="`${lang === 'id' ? 'Provisi kerugian kredit' : 'Credit-loss provisions'}: ${competitionChart.series.map(row => `${row.period}: Rp ${row.value} ${lang === 'id' ? 'miliar' : 'billion'}`).join('; ')}`"
+              @click="emit('explain', $event, 'claim', slide.analysis_points?.[2])"
+              @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[2])"
+              @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points?.[2])"
+            >
+              <figcaption>
+                <div><strong>{{ lang === 'id' ? 'Provisi kerugian kredit' : 'Credit-loss provisions' }}</strong><span>{{ lang === 'id' ? 'Rp miliar' : 'Rp billion' }}</span></div>
+                <span class="slide-provision-growth">+{{ provisionGrowth }}% {{ lang === 'id' ? 'tahunan' : 'YoY' }}</span>
+              </figcaption>
+              <dl>
+                <div v-for="(row, i) in competitionChart.series" :key="row.period" class="slide-provision-row">
+                  <dt>{{ row.period }}</dt>
+                  <dd class="slide-provision-track"><span :class="{ 'slide-provision-current': i === competitionChart.series.length - 1 }" :style="{ width: `${row.value / provisionScale * 100}%` }"></span></dd>
+                  <dd class="slide-provision-value">{{ row.value }}</dd>
+                </div>
+              </dl>
+              <p v-if="competitionChart.consumer_loans_bn" class="slide-provision-note">{{ lang === 'id' ? 'Pinjaman konsumen 2025:' : '2025 consumer loans:' }} Rp {{ (competitionChart.consumer_loans_bn / 1000).toLocaleString(lang === 'id' ? 'id-ID' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}T</p>
+            </figure>
+            </div>
+            </template>
+            <div v-else-if="editorialRows" class="slide-editorial-rows">
+              <div
+                v-for="(row, index) in editorialRows"
+                :key="index"
+                class="slide-editorial-row is-clickable-row"
+                role="button"
+                tabindex="0"
+                @click="emit('explain', $event, 'editorial', row)"
+                @keydown.enter="emit('explain', $event, 'editorial', row)"
+              >
+                <div class="slide-editorial-left">
+                  <img
+                    v-if="row.img"
+                    :src="row.img"
+                    :alt="row.name"
+                    class="slide-editorial-thumb"
+                    @click.stop="emit('zoom', row.img, row.name)"
+                  />
+                  <div><h2>{{ row.name }}</h2><p>{{ row.text }}</p></div>
+                </div>
+                <strong>{{ row.value }}</strong>
+              </div>
+            </div>
+            <template v-else-if="table">
+              <table
+                class="slide-financial-table"
+                :class="{
+                  'slide-table-dense': slide.slide_num === 12,
+                  'slide-table-wacc': slide.slide_num === 7,
+                  'slide-table-multiples': slide.slide_num === 9,
+                }"
+              >
+                <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
+                <tbody>
+                  <tr v-for="(row, r) in visibleRows" :key="r" @click="emit('explain', $event, 'row', table.rows[r])" @dblclick="emit('evidence', 'row', table.rows[r])" tabindex="0" @keydown.enter="emit('explain', $event, 'row', table.rows[r])">
+                    <td
+                    v-for="(cell, c) in row"
+                    :key="c"
+                    :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
+                  >{{ cell }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </template>
+            <button v-else-if="slide.chart_url" class="slide-chart" @click="emit('zoom', slide.chart_url, title)" :aria-label="lang === 'id' ? 'Perbesar grafik' : 'Enlarge chart'">
+              <img :src="slide.chart_url" :alt="slide.title" />
+            </button>
+            <section v-if="slide.peer_exclusions" class="slide-peer-exclusions">
+              <h2>{{ lang === 'id' ? 'Mengapa pembanding lain dikeluarkan?' : 'Why the other companies are excluded' }}</h2>
+              <div
+                v-for="peer in slide.peer_exclusions"
+                :key="peer.company"
+                class="slide-peer-exclusion is-clickable-row"
+                role="button"
+                tabindex="0"
+                @click="emit('explain', $event, 'peer_exclusion', peer)"
+                @keydown.enter="emit('explain', $event, 'peer_exclusion', peer)"
+              >
+                <strong>{{ peer.company }}</strong><p>{{ peer.reason }}</p>
+              </div>
+            </section>
+          </div>
+
+          <aside v-if="!slide.is_appendix" class="slide-key-figures">
+            <template v-if="slide.analysis_points?.length">
+              <div
+                v-for="(point, i) in slide.analysis_points"
+                :key="i"
+                class="slide-analysis-point is-clickable-claim"
+                :class="{ 'has-point-icon': slide.slide_num === 2 || Boolean(getPointIcon(slide.slide_num, i)) }"
+                role="button"
+                tabindex="0"
+                @click="emit('explain', $event, 'claim', point)"
+                @keydown.enter="emit('explain', $event, 'claim', point)"
+              >
+                <div v-if="slide.slide_num === 2 && i < 2" class="slide-point-icon" aria-hidden="true">
+                  <img v-if="i === 0" src="/visuals/point_revenue.png" alt="" />
+                  <img v-else src="/visuals/point_competition.png" alt="" />
+                </div>
+                <div
+                  v-else-if="getPointIcon(slide.slide_num, i)"
+                  class="slide-point-icon"
+                  :class="{ 'is-risk-icon': getPointIcon(slide.slide_num, i).risk }"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 48 48" fill="none" class="slide-point-svg" v-html="getPointIcon(slide.slide_num, i).svg"></svg>
+                </div>
+                <div class="slide-point-copy">
+                  <h2>{{ point.heading }}</h2>
+                  <p>{{ point.text }}</p>
+                </div>
+              </div>
+            </template>
+            <template v-else>
+              <button v-for="(k, i) in slide.kpis" :key="i" class="slide-key-figure" @click="emit('explain', $event, 'kpi', k)" @dblclick="emit('evidence', 'kpi', k)">
+                <span>{{ k.label }}</span><strong>{{ k.val }}</strong><small>{{ k.sub }}</small>
+              </button>
+              <p
+                class="slide-takeaway is-clickable-claim"
+                role="button"
+                tabindex="0"
+                @click="emit('explain', $event, 'verdict', { title: title, text: takeaway })"
+                @keydown.enter="emit('explain', $event, 'verdict', { title: title, text: takeaway })"
+              >{{ takeaway }}</p>
+            </template>
+          </aside>
+        </main>
+      </template>
+
+      <footer class="slide-footline">
+        <span>{{ slide.slide_num === 1 ? 'IDX: GOTO' : 'GROUP 4   /   IDX: GOTO' }}</span>
+        <span class="slide-source">{{ slide.source_footer }}</span>
+        <span class="slide-folio">{{ String(slide.slide_num).padStart(2, '0') }} / {{ total }}</span>
+      </footer>
+    </article>
+  </div>
+</template>
+
+<style scoped>
+.financial-slide { width: 100%; min-width: 0; container-type: inline-size; flex: 1; }
+.slide-sheet { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #008c2c; color: white; font-family: 'Plus Jakarta Sans', sans-serif; box-shadow: 0 16px 48px #0002; }
+.slide-sheet *, .slide-sheet *::before, .slide-sheet *::after { box-sizing: border-box; }
+.slide-brand { display: block; width: 8cqw; height: 4.6cqw; object-fit: contain; background: white; padding: .75cqw 1cqw; border-radius: 0; flex-shrink: 0; }
+.slide-heading { position: absolute; top: 4.8%; left: 4%; right: 4%; display: flex; justify-content: space-between; gap: 3cqw; align-items: flex-start; }
+.slide-heading-copy { max-width: 76cqw; }
+.slide-heading p { margin: 0 0 .9cqw; font-size: .85cqw; letter-spacing: .16cqw; color: #c5f1cb; font-weight: 600; }
+.slide-heading h1 { margin: 0; color: white; font-size: 2.75cqw; line-height: 1.2; letter-spacing: -.09cqw; font-weight: 750; }
+.slide-evidence-layout { position: absolute; top: 25%; left: 4%; right: 4%; bottom: 10%; display: grid; grid-template-columns: 1.65fr 1fr; gap: 3cqw; align-items: stretch; }
+.slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
+.slide-evidence.slide-evidence-peer { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 1cqw; padding: 1.2cqw; }
+.slide-evidence-peer .slide-financial-table { font-size: .86cqw; line-height: 1.3; }
+.slide-evidence-peer .slide-financial-table th { font-size: .8cqw; padding: .6cqw; }
+.slide-evidence-peer .slide-financial-table td { padding: .55cqw .6cqw; }
+.slide-peer-exclusions { border-top: 2px solid #008c2c; padding-top: .7cqw; }
+.slide-peer-exclusions h2 { color: #008c2c; font-size: 1.05cqw; margin: 0 0 .5cqw; }
+.slide-peer-exclusion { display: grid; grid-template-columns: 8cqw 1fr; gap: .8cqw; border-top: 1px solid #e3ece6; padding: .55cqw 0; font-size: .91cqw; line-height: 1.4; }
+.slide-peer-exclusion strong { color: #173d25; }
+.slide-peer-exclusion p { margin: 0; color: #526a59; }
+.slide-evidence-stacked { flex-direction: column; justify-content: flex-start; align-items: stretch; padding: .65cqw .95cqw; gap: .28cqw; }
+.slide-evidence-banner { display: block; width: 100%; height: 9.4cqw; padding: 0 0 .3cqw; border: 0; border-bottom: 1px solid #dce8df; background: #fff; cursor: zoom-in; flex-shrink: 0; }
+.slide-evidence-banner img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.slide-evidence.slide-evidence-competition { flex-direction: column; align-items: stretch; justify-content: space-between; padding: 1.4cqw; gap: 1.7cqw; }
+.slide-evidence-competition .slide-forces-table { flex-shrink: 0; }
+.slide-competition-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8cqw; padding: 1.3cqw .3cqw .3cqw; border-top: 1px solid #dce8df; }
+.slide-provision-chart { min-width: 0; margin: 0; padding: 0; cursor: pointer; }
+.slide-competition-charts > figure + figure { border-left: 1px solid #dce8df; padding-left: 1.5cqw; }
+.slide-provision-chart figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 1cqw; margin-bottom: 1.2cqw; }
+.slide-provision-chart figcaption strong { display: block; font-size: .95cqw; line-height: 1.35; font-weight: 650; color: #173d25; }
+.slide-provision-chart figcaption div > span { display: block; margin-top: .25cqw; color: #63786a; font-size: .79cqw; }
+.slide-provision-growth { white-space: nowrap; color: #008c2c; font-size: .83cqw; font-weight: 750; }
+.slide-provision-chart dl { margin: 0; display: grid; gap: 1cqw; }
+.slide-provision-row { display: grid; grid-template-columns: 2.8cqw 1fr 2.5cqw; align-items: center; gap: .6cqw; }
+.slide-provision-row dt { color: #526a59; font-size: .96cqw; }
+.slide-provision-row dd { margin: 0; }
+.slide-provision-track { height: 1.25cqw; background: #edf6ef; }
+.slide-provision-track > span { display: block; height: 100%; background: #9ecbaa; }
+.slide-provision-track > span.slide-provision-current { background: #008c2c; }
+.slide-provision-track > span.slide-spending-product { background: #173d25; }
+.slide-provision-value { text-align: right; color: #173d25; font-size: 1.15cqw; font-weight: 700; font-variant-numeric: tabular-nums; }
+.slide-spending-row { display: grid; grid-template-columns: 1fr auto; column-gap: .7cqw; row-gap: .35cqw; align-items: baseline; }
+.slide-spending-row dt { font-size: .88cqw; line-height: 1.4; color: #526a59; }
+.slide-spending-row .slide-provision-track { grid-column: 1 / -1; height: .85cqw; }
+.slide-provision-note { font-size: .76cqw; line-height: 1.4; margin: 1cqw 0 0; color: #63786a; }
+.slide-provision-chart:hover { background: #f7faf7; }
+.slide-provision-chart:focus-visible { outline: 2px solid #008c2c; outline-offset: 4px; }
+.slide-editorial-rows { width: 100%; height: 100%; display: grid; grid-template-rows: repeat(3, 1fr); padding: 0 1.2cqw; }
+.slide-editorial-row { display: flex; align-items: center; justify-content: space-between; gap: 1.4cqw; border-bottom: 1px solid #dce8df; }
+.slide-editorial-left { display: flex; align-items: center; gap: 1.3cqw; min-width: 0; }
+.slide-editorial-thumb { width: 8.2cqw; height: 6.4cqw; object-fit: cover; border-radius: .5cqw; border: 1px solid #dce8df; flex-shrink: 0; cursor: zoom-in; background: #edf6ef; }
+.slide-editorial-row:last-child { border: 0; }
+.slide-editorial-row h2 { font-size: 1.45cqw; color: #173d25; line-height: 1.3; margin: 0 0 .5cqw; }
+.slide-editorial-row p { font-size: 1.05cqw; line-height: 1.45; color: #63786a; margin: 0; max-width: 24cqw; }
+.slide-editorial-row strong { flex-shrink: 0; font-size: 1.75cqw; font-weight: 750; color: #008c2c; letter-spacing: -.07cqw; }
+.slide-chart { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: white; cursor: zoom-in; }
+.slide-chart img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.slide-key-figures { min-height: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.slide-analysis-point + .slide-analysis-point { border-top: 1px solid #ffffff40; padding-top: 1.15cqw; }
+.slide-analysis-point.has-point-icon { display: flex; align-items: flex-start; gap: 1cqw; }
+.slide-point-icon { width: 4.2cqw; height: 4.2cqw; flex-shrink: 0; border-radius: .55cqw; background: #edf6ef; border: 1px solid #ffffff85; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14); }
+.slide-point-icon.is-risk-icon { background: #fef2f2; border-color: #fecaca; }
+.slide-forces-table td.rating-bad { color: #dc2626; }
+.slide-forces-table td.rating-mid { color: #b45309; }
+.slide-point-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide-point-icon .slide-point-svg { width: 80%; height: 80%; display: block; }
+.slide-point-copy { min-width: 0; flex: 1; }
+.slide-analysis-point h2 { color: #fff; font-size: 1.18cqw; line-height: 1.35; margin: 0 0 .6cqw; font-weight: 750; }
+.slide-analysis-point p { color: #e7f5ea; font-size: 1.02cqw; line-height: 1.55; margin: 0; }
+.slide-forces-table { width: 100%; border-collapse: collapse; font-size: .96cqw; line-height: 1.36; }
+.slide-forces-table th { text-align: left; color: #008c2c; padding: .55cqw .75cqw; border-bottom: 2px solid #008c2c; font-size: .88cqw; }
+.slide-forces-table td { padding: .68cqw .75cqw; border-bottom: 1px solid #dce8df; }
+.slide-forces-table td:nth-child(2) { color: #008c2c; font-weight: 750; white-space: nowrap; }
+.slide-forces-table td:first-child { font-weight: 650; }
+.slide-forces-table tr:last-child td { border-bottom: 0; }
+.slide-key-figure { display: block; background: transparent; color: #fff; text-align: left; border: 0; padding: 0 0 1.1cqw; margin: 0; border-bottom: 1px solid #ffffff40; cursor: pointer; font: inherit; }
+.slide-key-figure span { display: block; color: #c5f1cb; font-size: .9cqw; font-weight: 500; line-height: 1.4; }
+.slide-key-figure strong { display: block; font-size: 2.45cqw; font-weight: 750; letter-spacing: -.08cqw; line-height: 1.2; margin: .35cqw 0; }
+.slide-key-figure small { display: block; font-size: .78cqw; line-height: 1.45; color: #def7e1; }
+.slide-takeaway { margin: 1cqw 0 0; font-size: 1.05cqw; line-height: 1.55; color: #fff; font-weight: 500; }
+.slide-footline { position: absolute; left: 4%; right: 4%; bottom: 3.2%; display: flex; align-items: start; gap: 2cqw; border-top: 1px solid #ffffff40; padding-top: .9cqw; font-size: .65cqw; line-height: 1.4; color: #d9f0df; }
+.slide-footline > span:first-child { white-space: nowrap; font-weight: 700; }
+.slide-source { flex: 1; }
+.slide-folio { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.slide-table-only { grid-template-columns: 1fr; }
+.slide-financial-table { width: 100%; border-collapse: collapse; font-size: 1cqw; line-height: 1.45; table-layout: fixed; }
+.slide-financial-table th { color: #007b2b; text-align: right; background: #edf6ef; padding: 1cqw .7cqw; font-size: .85cqw; font-weight: 750; }
+.slide-financial-table td { padding: 1.1cqw .7cqw; text-align: right; border-bottom: 1px solid #dce8df; color: #253d2d; overflow-wrap: anywhere; }
+.slide-evidence-stacked .slide-financial-table { font-size: .78cqw; line-height: 1.24; }
+.slide-evidence-stacked .slide-financial-table th { padding: .38cqw .48cqw; font-size: .74cqw; }
+.slide-evidence-stacked .slide-financial-table td { padding: .36cqw .48cqw; }
+.slide-financial-table th:first-child, .slide-financial-table td:first-child { width: 34%; text-align: left; font-weight: 650; }
+.slide-table-wacc th:first-child, .slide-table-wacc td:first-child { width: 33%; }
+.slide-table-wacc th:nth-child(2), .slide-table-wacc td:nth-child(2) { width: 16%; }
+.slide-table-wacc th:nth-child(3), .slide-table-wacc td:nth-child(3) { width: 51%; text-align: left; }
+.slide-table-multiples { font-size: .86cqw; }
+.slide-table-multiples th:first-child, .slide-table-multiples td:first-child { width: 28%; }
+.slide-financial-table tbody tr:last-child td { border: 0; }
+.slide-financial-table tbody tr:hover td { background: #edf6ef; cursor: pointer; }
+.slide-table-dense { font-size: .92cqw; }
+.slide-table-dense td { padding: .55cqw .7cqw; }
+.slide-table-dense th { padding: .65cqw .7cqw; }
+.slide-table-dense td:first-child, .slide-table-dense th:first-child { width: 30%; }
+.slide-appendix .slide-evidence { padding: 1.2cqw; }
+.slide-appendix .slide-financial-table:not(.slide-table-dense) { font-size: 1.05cqw; }
+.slide-cover { background: linear-gradient(135deg, #007222 0%, #005419 100%); }
+.slide-cover-top { position: absolute; left: 5%; right: 5%; top: 7%; display: flex; justify-content: space-between; align-items: center; }
+.slide-cover-top .slide-brand { width: 11cqw; height: 6cqw; padding: 1cqw 1.4cqw; }
+.slide-cover-top > span { font-size: .9cqw; letter-spacing: .18cqw; font-weight: 700; }
+.slide-cover-title { position: absolute; left: 5%; top: 22%; width: 55%; }
+.slide-cover-title > p { font-size: 1.15cqw; margin: 0 0 .9cqw; color: #edffeb; }
+.slide-cover-title h1 { font-size: 7.2cqw; font-weight: 800; letter-spacing: -.36cqw; line-height: 1; margin: 0; color: white; }
+.slide-cover-title h1 span { display: block; margin-top: .9cqw; font-size: 3.3cqw; letter-spacing: -.12cqw; font-weight: 650; }
+.slide-cover-business { font-size: 1.02cqw; margin-top: 1.2cqw; font-weight: 650; }
+.slide-cover-question { font-size: 1.35cqw; line-height: 1.5; margin: 1.8cqw 0 0; max-width: 43cqw; color: #e7f5ea; }
+.slide-cover-summary { position: absolute; left: 63%; right: 5%; top: 22%; bottom: 11.5%; padding-left: 2.1cqw; border-left: 1px solid rgba(255, 255, 255, .28); display: flex; flex-direction: column; justify-content: flex-start; gap: 1.65cqw; }
+.slide-cover-user > span, .slide-cover-verdict > span, .slide-cover-reason > span { display: block; font-size: .76cqw; letter-spacing: .14cqw; font-weight: 700; color: #c5e8ce; }
+.slide-cover-user > p { font-size: 1.18cqw; line-height: 1.5; margin: .6cqw 0 0; max-width: 27cqw; }
+.slide-cover-verdict { padding: 1.4cqw 0 0; border: 0; border-top: 1px solid rgba(255, 255, 255, .28); border-radius: 0; background: transparent; }
+.slide-cover-verdict > strong { display: block; font-size: 2.55cqw; line-height: 1.18; margin-top: .85cqw; letter-spacing: -.08cqw; color: #ffffff; }
+.slide-cover-verdict p { font-size: 1.05cqw; line-height: 1.5; margin: .6cqw 0 0; color: #e7f5ea; max-width: 27cqw; }
+.slide-cover-reason { border-top: 1px solid rgba(255, 255, 255, .28); padding-top: 1.4cqw; }
+.slide-cover-reason p { font-size: 1.05cqw; line-height: 1.6; margin: .6cqw 0 .65cqw; }
+.slide-cover-reason small { font-size: .73cqw; line-height: 1.4; color: #c5e8ce; }
+.slide-cover-team { position: absolute; left: 5%; bottom: 11.5%; display: flex; flex-direction: column; gap: .35cqw; font-size: .88cqw; line-height: 1.45; }
+.slide-cover-team strong { font-size: .75cqw; letter-spacing: .15cqw; margin-bottom: .25cqw; }
+button:focus-visible, tr:focus-visible, [role="button"]:focus-visible { outline: 2px solid #efc96c; outline-offset: 3px; }
+.is-clickable-row { cursor: pointer; transition: background-color .16s ease; }
+.slide-forces-table tbody tr.is-clickable-row:hover td { background: #edf6ef; }
+.slide-editorial-row.is-clickable-row:hover { background: #edf6ef; border-radius: .45cqw; padding-left: .6cqw; padding-right: .6cqw; margin-left: -.6cqw; margin-right: -.6cqw; }
+.slide-peer-exclusion.is-clickable-row:hover { background: #edf6ef; border-radius: .35cqw; padding-left: .5cqw; padding-right: .5cqw; margin-left: -.5cqw; margin-right: -.5cqw; }
+.is-clickable-claim { cursor: pointer; transition: background-color .16s ease, border-color .16s ease; border-radius: .45cqw; }
+.slide-analysis-point.is-clickable-claim:hover,
+.slide-takeaway.is-clickable-claim:hover,
+.slide-cover-business.is-clickable-claim:hover,
+.slide-cover-thesis.is-clickable-claim:hover { background: rgba(255, 255, 255, 0.12); padding-left: .6cqw; padding-right: .6cqw; margin-left: -.6cqw; margin-right: -.6cqw; }
+.slide-cover-verdict.is-clickable-claim:hover { background: transparent; }
+.slide-cover-verdict:focus-visible { outline-color: #ffffff; }
+</style>

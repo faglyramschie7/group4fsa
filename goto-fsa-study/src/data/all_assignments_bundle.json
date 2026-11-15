@@ -441,7 +441,7 @@
     "folder": "Weeks 4-6",
     "week": "Weeks 4-6",
     "title": "Financial Ratio Package, Common-Size & 3-Step DuPont ROE Analysis",
-    "summary": "Multi-year common-size trends, liquidity (2.73x), solvency (0.27x DER), 3-step DuPont ROE decomposition (-5.2%), Bukalapak peer benchmark, and Emerging Market Altman Z''-Score (-10.90).",
+    "summary": "Milestone 2 ratios and DuPont, with the completed Week 6 five-factor Z = -4.72. The latest valuation comparable is Grab only.",
     "docx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.docx",
     "xlsx_file": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
     "sections": [
@@ -449,8 +449,8 @@
         "heading": "Executive Ratio & DuPont Package Overview",
         "source_citation": "Group 4 Milestone 2 Workbook (Historical Data, Ratios, DuPont, Peer Benchmark)",
         "paragraphs": [
-          "Milestone 2 evaluates PT GoTo Gojek Tokopedia Tbk's financial health across FY2023-FY2025 using its Common-Size statements, Liquidity, Efficiency, Solvency, Profitability, 3-Step DuPont ROE, Peer Benchmark vs. Bukalapak, and Emerging-Market Altman Z''-Score.",
-          "Core finding: GoTo materially narrowed its operating loss (from -69.5% to -2.1% of revenue) and maintains a strong cash liquidity cushion (Current Ratio 2.73x, Cash = 47.5% of Assets), yet still generates negative ROE (-5.2%), negative ROA (-3.3%), and a Distress-Zone Z''-Score (-10.90) driven by -Rp 214.1 trillion of accumulated deficit."
+          "Milestone 2 study material uses the submitted ratio and DuPont package. The latest synthesis uses Week 6 Z and Grab only, as explicitly revised.",
+          "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
         ],
         "tables": [
           [
@@ -490,11 +490,11 @@
               "Loss narrowing drives improvement, still negative"
             ],
             [
-              "Altman Z''-Score (Emerging Mkt)",
-              "-10.17",
-              "-11.41",
-              "-10.90",
-              "Distress Zone (< 1.10) due to -Rp 214.1T deficit"
+              "Week 6 Z",
+              "Not recalculated",
+              "Not recalculated",
+              "-4.72",
+              "Distress < 1.81; FY2025 only"
             ]
           ]
         ]
@@ -677,7 +677,7 @@
               "66.0%",
               "70.4%",
               "62.7%",
-              "Eroded by net losses; cumulative deficit -Rp 214.1T"
+              "Eroded by net losses; cumulative deficit -Rp 215.3T"
             ]
           ]
         ],
@@ -834,7 +834,7 @@
           ]
         ],
         "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-        "evidence_caption": "LK GOTO 2025 Liabilities & Equity (p. 16): Debt doubled to Rp 7.74T while accumulated deficit reached -Rp 214.1T."
+        "evidence_caption": "LK GOTO 2025 Liabilities & Equity (p. 16): Debt doubled to Rp 7.74T while accumulated deficit reached -Rp 215.3T."
       },
       {
         "heading": "5. Three-Step DuPont ROE Decomposition",
@@ -879,48 +879,118 @@
         ]
       },
       {
-        "heading": "6. Peer Comparison (GoTo vs. Bukalapak) & Strategic Conclusion",
+        "heading": "6. Grab-only comparison (latest authorized revision)",
         "source_citation": "Group 4 M2 Workbook, Peer Benchmark Tab; Bukalapak & GoTo FY2025 Financial Statements",
         "paragraphs": [
-          "Comparing FY2025 ratios against Indonesian digital peer PT Bukalapak.com Tbk (BUKA) highlights two sharply contrasting financial profiles. GoTo generates 60% higher asset productivity (0.40x Asset Turnover vs. Bukalapak's 0.25x), confirming stronger ecosystem monetization per rupiah of assets.",
-          "However, Bukalapak holds zero debt (0.00x Debt-to-Equity), an ultra-high 37.07x current ratio, and positive +48.4% net margin (+12.4% ROE) buoyed by treasury investment income, whereas GoTo remains loss-making. Conclusion: GoTo's primary vulnerability is not short-term liquidity (2.73x), but proving durable profitability without jeopardizing its competitive ecosystem."
+          "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
+          "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set."
         ],
         "tables": [
           [
             [
-              "Metric",
-              "GoTo",
-              "Bukalapak"
+              "Input / result",
+              "Value",
+              "Basis"
             ],
             [
-              "Net profit margin",
-              "-8.2%",
-              "48.4%"
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
             ],
             [
-              "Return on equity",
-              "-5.2%",
-              "12.4%"
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
             ],
             [
-              "Return on assets",
-              "-3.3%",
-              "12.1%"
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
             ],
             [
-              "Current ratio",
-              "2.73x",
-              "37.07x"
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
             ],
             [
-              "Debt to equity",
-              "0.27x",
-              "0.00x"
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
             ],
             [
-              "Asset turnover",
-              "0.40x",
-              "0.25x"
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
+            ]
+          ]
+        ]
+      },
+      {
+        "heading": "Week 6 Z-score reconciliation",
+        "source_citation": "Completed Week 6 project; Milestone 2 Ratio Analysis C36",
+        "paragraphs": [
+          "The completed Week 6 worksheet uses Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5, with book equity / total liabilities as its X4 proxy. FY2025 amounts in Rp million: working capital 18,411,702; assets 45,757,642; accumulated losses -215,334,000; EBIT -378,254; book equity 28,711,657; liabilities 17,045,985; revenue 18,322,117. Ratios X1-X5 = 0.402374, -4.705968, -0.008266, 1.684365, 0.400417. Weighted contributions = 0.482849, -6.588355, -0.027279, 1.010619, 0.400417. Z = -4.721750, rounded -4.72, below the course distress threshold of 1.81 (grey 1.81-2.99; safe above 2.99). Accumulated losses dominate the result. This screening signal does not establish imminent default. Source: Week 6 completed project and Milestone 2 Ratio Analysis C36."
+        ],
+        "tables": [
+          [
+            [
+              "Factor",
+              "Numerator / denominator (Rp million)",
+              "Ratio",
+              "Weight",
+              "Contribution"
+            ],
+            [
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
+            ],
+            [
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
+            ],
+            [
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
+            ],
+            [
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ]
         ]
@@ -1493,39 +1563,53 @@
           "ALTMAN Z''-SCORE (EMERGING MARKET MODEL)"
         ],
         [
-          "X1 (Working Capital / Total Assets)",
-          "0.384",
-          "0.377",
-          "0.402",
-          "6.56 x X1 (+2.64 pts in 2025)"
+          "Factor",
+          "Numerator / denominator (Rp million)",
+          "Ratio",
+          "Weight",
+          "Contribution"
         ],
         [
-          "X2 (Retained Earnings / Total Assets)",
-          "-3.830",
-          "-4.918",
-          "-4.679",
-          "3.26 x X2 (-15.25 pts in 2025)"
+          "X1",
+          "18,411,702 / 45,757,642",
+          "0.402374",
+          "1.2",
+          "0.482849"
         ],
         [
-          "X3 (EBIT / Total Assets)",
-          "-0.190",
-          "-0.052",
-          "-0.008",
-          "6.72 x X3 (-0.06 pts in 2025)"
+          "X2",
+          "-215,334,000 / 45,757,642",
+          "-4.705968",
+          "1.4",
+          "-6.588355"
         ],
         [
-          "X4 (Book Equity / Total Liabilities)",
-          "1.944",
-          "2.375",
-          "1.684",
-          "1.05 x X4 (+1.77 pts in 2025)"
+          "X3",
+          "-378,254 / 45,757,642",
+          "-0.008266",
+          "3.3",
+          "-0.027279"
         ],
         [
-          "Altman Z''-Score Total (Distress < 1.10)",
-          "-10.17",
-          "-11.41",
-          "-10.90",
-          "6.56(X1) + 3.26(X2) + 6.72(X3) + 1.05(X4) -> Distress Zone"
+          "X4",
+          "28,711,657 / 17,045,985",
+          "1.684365",
+          "0.6",
+          "1.010619"
+        ],
+        [
+          "X5",
+          "18,322,117 / 45,757,642",
+          "0.400417",
+          "1.0",
+          "0.400417"
+        ],
+        [
+          "Z",
+          "Weighted sum",
+          "",
+          "",
+          "-4.721750"
         ]
       ],
       "DuPont Analysis": [
@@ -1628,52 +1712,55 @@
       ],
       "Peer Benchmark": [
         [
-          "Peer Benchmark (FY2025) - Indonesian Digital Ecosystem"
+          "Grab-only comparison (latest revision)"
         ],
         [
-          "Latest-year (2025) metrics for PT GoTo Gojek Tokopedia Tbk vs. PT Bukalapak.com Tbk"
+          "Original Milestone 2 BUKA sheet remains in the submitted workbook. This study view follows the latest authorized peer selection."
         ],
         [
-          "Metric",
-          "GoTo (GOTO)",
-          "Bukalapak (BUKA)",
-          "Comparative Note"
+          "Input / result",
+          "Value",
+          "Basis"
         ],
         [
-          "Net Profit Margin",
-          "-8.2%",
-          "48.4%",
-          "Bukalapak profit aided by interest/investment gains"
+          "Grab price",
+          "US$4.99",
+          "31 Dec 2025"
         ],
         [
-          "Return on Equity (ROE)",
-          "-5.2%",
-          "12.4%",
-          "GoTo remained loss-making; BUKA posted positive ROE"
+          "Grab parent equity",
+          "US$6,728 million",
+          "FY2025 audited"
         ],
         [
-          "Return on Assets (ROA)",
-          "-3.3%",
-          "12.1%",
-          "GoTo narrows losses while BUKA generates asset yield"
+          "Grab ordinary shares",
+          "4,097,646,678",
+          "Class A + B"
         ],
         [
-          "Current Ratio",
-          "2.73x",
-          "37.07x",
-          "Both hold cash cushions; BUKA ultra-liquid post-pivot"
+          "Grab BVPS / P/B",
+          "US$1.641918 / 3.039129x",
+          "Parent basis"
         ],
         [
-          "Debt-to-Equity",
-          "0.27x",
-          "0.00x",
-          "GoTo doubled bank debt in 2025; BUKA is debt-free"
+          "GoTo parent equity",
+          "Rp31,805.025 billion",
+          "FY2025 audited"
         ],
         [
-          "Asset Turnover",
-          "0.40x",
-          "0.25x",
-          "GoTo extracts 60% higher revenue per rupiah of assets"
+          "GoTo ordinary shares",
+          "1,062,010,200,395",
+          "Year-end shares"
+        ],
+        [
+          "GoTo parent BVPS",
+          "Rp29.947947",
+          "Parent basis"
+        ],
+        [
+          "Grab P/B benchmark",
+          "Rp91.015660/share",
+          "No net-cash add-on"
         ]
       ],
       "Sector Benchmark Reference": [
@@ -4070,7 +4157,7 @@
     "folder": "Week 14",
     "week": "Week 14",
     "title": "Valuation Package: WACC (7.76%), DCF, Residual Income & Market Multiples",
-    "summary": "Emerging-market CAPM Ke 8.45%, WACC 7.76%, DCF (-Rp 121.1/sh), Residual Income (-Rp 75.1/sh), and Market Multiples (Rp 39.8/sh) triangulated against the post-Rp 1 floor IDX market price of Rp 25.00.",
+    "summary": "WACC 7.76%; Ke 8.45%; DCF -Rp121.1; RI -Rp75.1; Grab-only P/B benchmark Rp91.0/share.",
     "docx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_Assignment14_Valuation_Summary.docx",
     "xlsx_file": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
     "sections": [
@@ -4158,7 +4245,7 @@
         "source_citation": "Group 4 Valuation Workbook (DCF Valuation & Terminal Growth Tabs)",
         "paragraphs": [
           "Using the exact Milestone 4 Base Case forecast (78.5% opex, 16.3% CapEx, and zero cash tax refunds while EBIT is negative per standard DCF rules), GoTo burns -(7,738.7) bn to -(7,152.6) bn of Free Cash Flow to Firm per year.",
-          "Discounting those FCFF outflows plus a 3.0% perpetual Terminal Value at 7.76% WACC yields a negative Enterprise Value of -(142,588.1) bn. Even after adding GoTo's +14,012.5 bn Net Cash buffer (Rp 21,755.2 bn Cash minus Rp 7,742.6 bn Debt), Intrinsic DCF Equity Value remains negative at -(128,575.5) bn, or -Rp 121.1 per share."
+          "Discounting those FCFF outflows plus a 3.0% perpetual Terminal Value at 7.76% WACC yields a negative Enterprise Value of -(142,597.7) bn. Even after adding GoTo's +14,012.5 bn Net Cash buffer (Rp 21,755.2 bn Cash minus Rp 7,742.6 bn Debt), Intrinsic DCF Equity Value remains negative at -(128,585.2) bn, or -Rp 121.1 per share."
         ],
         "tables": [
           [
@@ -4234,7 +4321,7 @@
             ],
             [
               "Enterprise Value (Sum PV FCFF + PV TV)",
-              "(142,588.1)",
+              "(142,597.7)",
               "",
               "",
               ""
@@ -4248,7 +4335,7 @@
             ],
             [
               "Equity Value (DCF)",
-              "(128,575.5)",
+              "(128,585.2)",
               "",
               "",
               ""
@@ -4347,41 +4434,94 @@
           ]
         ],
         "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Audited FY2025 Equity Section verifying Rp 28.71T Ending Book Equity and -Rp 214.1T Accumulated Losses."
+        "evidence_caption": "Audited FY2025 Equity Section verifying Rp 28.71T Ending Book Equity and -Rp 215.3T Accumulated Losses."
       },
       {
-        "heading": "4. Market Multiples Triangulation & Reading the Valuation Gap vs. Rp 25.00",
-        "source_citation": "Group 4 Valuation Workbook (Market Multiples & Valuation Summary Tabs); IDX Rule Sept 28, 2026",
+        "heading": "4. Grab-only P/B and valuation reconciliation",
+        "source_citation": "Revised Assignment 14; Grab audited FY2025 20-F cover and F-5; GoTo FY2025 equity p16; GRAB close 31 Dec 2025",
         "paragraphs": [
-          "Market Multiples assign a positive blended value of Rp 39.8 per share (mean of Peer Median P/B 2.30x x Rp 27.03 BVPS = Rp 62.2 and Net-Cash-Adjusted EV/EBITDA 13.25x = Rp 17.4 across BUKA, GRAB, SE, BELI; P/E is excluded because GoTo FY2025 EPS is -Rp 1.41). Relative valuation reads higher because peer multiples do not penalize GoTo's ongoing Base Case cash burn.",
-          "Why GoTo sits at Rp 25.00 after the IDX Rp 50 floor removal: Previously frozen at Indonesia's Rp 50 minimum regular-market limit ('gocap rule'), GoTo plunged 50% via Auto Rejection Bawah (ARB) once IDX abolished the Rp 50 floor down to Rp 1 on September 28, 2026. Because equity holders enjoy limited liability, shares trade at Rp 25.00 (0.9x book value), cushioned above the Rp 13.20/share Net Cash Liquidation Floor."
+          "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized.",
+          "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
+          "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         ],
         "tables": [
           [
             [
+              "Input / result",
+              "Value",
+              "Basis"
+            ],
+            [
+              "Grab price",
+              "US$4.99",
+              "31 Dec 2025"
+            ],
+            [
+              "Grab parent equity",
+              "US$6,728 million",
+              "FY2025 audited"
+            ],
+            [
+              "Grab ordinary shares",
+              "4,097,646,678",
+              "Class A + B"
+            ],
+            [
+              "Grab BVPS / P/B",
+              "US$1.641918 / 3.039129x",
+              "Parent basis"
+            ],
+            [
+              "GoTo parent equity",
+              "Rp31,805.025 billion",
+              "FY2025 audited"
+            ],
+            [
+              "GoTo ordinary shares",
+              "1,062,010,200,395",
+              "Year-end shares"
+            ],
+            [
+              "GoTo parent BVPS",
+              "Rp29.947947",
+              "Parent basis"
+            ],
+            [
+              "Grab P/B benchmark",
+              "Rp91.015660/share",
+              "No net-cash add-on"
+            ]
+          ],
+          [
+            [
               "Method",
-              "Value per Share (Rp)",
-              "Explanation"
+              "Rp/share",
+              "Interpretation"
             ],
             [
-              "Discounted Cash Flow (DCF)",
-              "Rp (121.1)",
-              "Negative because Base Case cash burn (-Rp 7.0T to -Rp 7.7T/yr) destroys firm value."
+              "DCF",
+              "-121.1",
+              "Milestone 4 cost assumptions"
             ],
             [
-              "Residual Income (Economic Profit)",
-              "Rp (75.1)",
-              "Negative because accounting losses plus the 8.45% equity charge erode book equity."
+              "Residual income",
+              "-75.1",
+              "Losses and equity charge"
             ],
             [
-              "Market Multiples (P/E & P/B avg.)",
-              "Rp 39.8",
-              "Peer median P/B (2.30x) and Net-Cash-Adj. EV/EBITDA (13.25x) across BUKA, GRAB, SE, BELI (P/E excluded as EPS = -Rp 1.41)."
+              "Grab P/B",
+              "91.0",
+              "Single comparable, parent equity basis"
             ],
             [
-              "Current Market Price (Investing.com)",
-              "Rp 25.0",
-              "Trades at 0.9x book value (down 93% from Rp 338 IPO price)."
+              "Assignment price",
+              "25.0",
+              "Reference price, not a live quote"
+            ],
+            [
+              "Net cash",
+              "13.20",
+              "Balance-sheet measure, no guaranteed floor"
             ]
           ]
         ]
@@ -4421,11 +4561,11 @@
         ],
         [
           "",
-          "4. 'Market Multiples' asks you to enter 3 to 5 comparable companies' trading multiples (P/E, EV/EBITDA, P/B): from IDX data or a financial data provider: and applies the peer average/median to your company's own metrics."
+          "4. Grab-only FY2025 P/B, parent equity and year-end ordinary shares on both sides. P/E and EV/EBITDA excluded."
         ],
         [
           "",
-          "5. 'Valuation Summary' pulls the per-share (or enterprise value) estimate from each method automatically into one football-field comparison so you can see how much they agree or disagree: and defend the gap in your final report."
+          "5. Compare DCF, residual income and Grab P/B separately. No average target."
         ],
         [
           "",
@@ -4648,7 +4788,7 @@
         ],
         [
           "Enterprise Value (EV)",
-          "(142,588.1)",
+          "(142,597.7)",
           "",
           "",
           ""
@@ -4662,7 +4802,7 @@
         ],
         [
           "Equity Value (DCF)",
-          "(128,575.5)",
+          "(128,585.2)",
           "",
           "",
           ""
@@ -4882,169 +5022,393 @@
       ],
       "Market Multiples": [
         [
-          "Market Multiples Valuation (Peer Relative Valuation)"
-        ],
-        [
-          "Closing prices December 2025 across IDX and ASEAN digital peers"
-        ],
-        [
-          "Company",
-          "Price (Rp)",
-          "EPS (Rp)",
-          "BVPS (Rp)",
-          "P/E",
-          "P/B",
-          "EV/EBITDA"
-        ],
-        [
-          "PT Bukalapak.com Tbk (BUKA)",
-          "120",
-          "11.6",
-          "245",
-          "10.3x",
-          "0.49x",
-          "6.50x"
-        ],
-        [
-          "Grab Holdings Ltd (GRAB)",
-          "54,400",
-          "1,700",
-          "25,900",
-          "32.0x",
-          "2.10x",
-          "14.50x"
-        ],
-        [
-          "Sea Limited (SE - Shopee)",
-          "1,600,000",
-          "42,100",
-          "381,000",
-          "38.0x",
-          "4.20x",
-          "16.00x"
-        ],
-        [
-          "PT Global Digital Niaga Tbk (BELI)",
-          "450",
-          "0",
-          "180",
-          "-",
-          "2.50x",
-          "12.00x"
-        ],
-        [
-          "Peer Average",
-          "-",
-          "-",
-          "-",
-          "26.8x",
-          "2.32x",
-          "12.25x"
-        ],
-        [
-          "Peer Median (Applied to GoTo)",
-          "-",
-          "-",
-          "-",
-          "32.0x",
-          "2.30x",
-          "13.25x"
-        ],
-        [
-          "APPLY PEER MEDIAN MULTIPLES TO GOTO"
-        ],
-        [
-          "Metric",
-          "GoTo Value",
-          "Peer Median",
-          "Implied Value / Share",
-          "Analytical Note",
+          "Grab-only P/B comparison",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "EPS (Rp)",
-          "-1.41",
-          "32.00x",
-          "N/M (-)",
-          "Excluded because GoTo FY2025 EPS is negative (-Rp 1.41).",
+          "FY2025 retrospective comparison. Parent equity and ordinary shares on both sides.",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "BVPS (Rp)",
-          "27.03",
-          "2.30x",
-          "Rp 62.2",
-          "Book Value per Share x Peer Median P/B (2.30x).",
+          "Share price: 31 Dec 2025. Audited accounts published after year-end.",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ],
         [
-          "EBITDA per Share (Rp) + Net Cash/sh",
-          "0.32",
-          "13.25x",
-          "Rp 17.4",
-          "(0.32 x 13.25) + Rp 13.20 net cash/sh = Rp 17.43/sh.",
+          "Grab input / calculation",
+          "Value",
+          "Unit",
+          "Basis",
+          "Source",
           "",
           ""
         ],
         [
-          "Average Implied Value (P/B & EV/EBITDA)",
-          "-",
-          "-",
-          "Rp 39.8",
-          "Blended relative valuation average = Rp 39.80/sh.",
+          "Grab close",
+          4.99,
+          "USD/share",
+          "31 Dec 2025",
+          "GRAB historical close (Yahoo / Quiver)",
+          "",
+          ""
+        ],
+        [
+          "Parent equity",
+          6728,
+          "USD million",
+          "FY2025 audited",
+          "COMPETITORS/GRAB.pdf, PDF p149 (F-5)",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares",
+          4097.646678,
+          "million shares",
+          "Class A + B",
+          "GRAB.pdf, PDF p2: 3,969,290,878 + 128,355,800",
+          "",
+          ""
+        ],
+        [
+          "Grab BVPS",
+          1.6419180394742663,
+          "USD/share",
+          "Parent basis",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab P/B",
+          3.039128555769917,
+          "x",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo parent equity",
+          31805.025,
+          "Rp billion",
+          "FY2025 audited",
+          "GoTo FY2025 audited statements, PDF p16",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "APPLY GRAB P/B TO GOTO",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GoTo metric",
+          "Value",
+          "Grab P/B (x)",
+          "Rp/share",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Ordinary shares (bn)",
+          1062.010200395,
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Parent BVPS (Rp)",
+          29.947946816490614,
+          3.039128555769917,
+          91.0156603566754,
+          "",
+          "",
+          ""
+        ],
+        [
+          "P/E and EV/EBITDA",
+          "Excluded",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab P/B benchmark (Rp/share)",
+          "",
+          "",
+          91.0156603566754,
+          "Single-company benchmark. No median, averaging or net cash add-on.",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basis and exclusions",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P/E: GoTo loss-making. EV/EBITDA: adjusted and reported bases not harmonized.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Parent BVPS normalizes this relative comparison only. DCF / RI model equity bases remain unchanged.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Market source: https://ca.finance.yahoo.com/quote/GRAB/history/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Audited shares/equity: https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+          "",
+          "",
+          "",
+          "",
           "",
           ""
         ]
       ],
       "Valuation Summary": [
         [
-          "Valuation Summary: Football-Field Reconciliation"
+          "Valuation Summary",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Reconciling DCF, Residual Income, and Market Multiples for PT GoTo Gojek Tokopedia Tbk"
+          "Reconciling DCF, residual income, and market multiple estimates for PT GoTo Gojek Tokopedia Tbk",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Method",
           "Value per Share (Rp)",
-          "Source"
+          "Source",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Discounted Cash Flow (DCF)",
-          "Rp (121.1)",
-          "DCF Valuation sheet (Base Case EV -142.6T + Net Cash 14.0T)"
+          -121.07716748190164,
+          "DCF Valuation sheet",
+          "",
+          "",
+          "",
+          ""
         ],
         [
           "Residual Income (Economic Profit)",
-          "Rp (75.1)",
-          "Residual Income Valuation sheet (BVE 28.7T - PV RI 108.5T)"
+          -75.11247015182498,
+          "Residual Income Valuation sheet",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Market Multiples (P/B & EV/EBITDA avg.)",
-          "Rp 39.8",
-          "Market Multiples sheet (Mean of P/B Rp 62.2 & EV/EBITDA Rp 17.4)"
+          "Grab-only P/B benchmark",
+          91.0156603566754,
+          "Parent-equity normalized, single comparator",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Range (Low to High)",
-          "Rp (121.1) to Rp 39.8",
-          "Wide spread between intrinsic cash burn & peer multiples"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Simple Average of Three Methods",
-          "Rp (52.1)",
-          "Unweighted average (-121.1, -75.1, +39.8)"
+          "Interpretation",
+          "",
+          "Different assumptions. No combined target.",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Net Cash Liquidation Floor",
-          "Rp 13.2",
-          "Rp 14,012.5 bn Net Cash / 1,062.01 bn shares"
+          "Simple average not used",
+          "",
+          "Do not blend intrinsic outputs and peer benchmark.",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Current Market Price (for reference)",
-          "Rp 25.0",
-          "Post Sept 28, 2026 IDX Rp 1 floor rule (0.9x Book Value)"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Assignment reference price",
+          25,
+          "Rp25 from the submitted assignment; not a live quote.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       ]
     }
@@ -5055,57 +5419,31 @@
     "folder": "Week 15",
     "week": "Week 15",
     "title": "Comprehensive Final Financial Statement Analysis Report (Steps 1-6)",
-    "summary": "Integrated term capstone report unifying Milestone 1 Strategy, Milestone 3 Accounting Quality, Milestone 2 Ratios & Z''-Score (-10.90), Milestone 4 Forecast, Assignment 14 Valuation, and our Public Equity Investor decision.",
+    "summary": "Integrated final report: milestone strategy, accounting, ratios, Week 6 Z -4.72, Milestone 4 forecast, and revised Grab-only benchmark.",
     "docx_file": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
     "sections": [
       {
         "heading": "(a) Executive Summary & Integrated Capstone Synthesis",
         "source_citation": "Integrated Synthesis of Group 4 Milestones 1-4 & Assignment 14 Valuation",
         "paragraphs": [
-          "Prepared by Group 4 (Fagly Ramschie, Anggreini Ruitan, Galatia Rompas) for PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), this capstone report connects Steps 1-6 into an actionable recommendation for a Public Equity Investor evaluating GoTo at Rp 25.00 per share.",
-          "Key Findings Across Milestones: (1) Strategy (M1): High rivalry across Grab/Shopee/Maxim forces Rp 3.09T marketing & Rp 2.15T R&D spend; (2) Accounting Quality (M3): Statutory losses (-Rp 1,502 bn) persist, 22.57% of assets sit in Tokopedia/Bank Jago associates, and CFO covers only 26.0% of CapEx (-Rp 875.3 bn FCF); (3) Ratios (M2): ROE remains -5.2% and Altman Z''-Score is -10.90; (4) Forecast (M4): Base Case historical scaling burns cash down to Rp 968 bn by 2028F; (5) Valuation (T14): Both intrinsic models (DCF -Rp 121.1, RI -Rp 75.1) trail the Rp 25.00 share price and Rp 39.8 peer multiples."
+          "This report presents an integrated financial statement analysis and valuation of PT GoTo Gojek Tokopedia Tbk (GOTO) for 2023 to 2025, connecting our findings from Milestones 1 through 4 into an actionable decision for an equity investor. GoTo is Indonesia's largest digital ecosystem across On Demand Services (Gojek), Financial Technology (GoPay), and e-commerce service fees (from Tokopedia). However, our analysis shows that scale and user reach have not yet translated into sustainable economic profit.",
+          "1. Industry and Strategic Position (Milestone 1): GoTo operates in a high rivalry industry where customers have low switching costs and easily compare prices across Grab, Maxim, inDrive, ShopeeFood, OVO, and DANA. GoTo uses a mix of cost leadership and differentiation, which forces it to spend heavily on promotions (Rp 3.09 trillion in 2025 sales and marketing) and product development (Rp 2.15 trillion) just to defend its market share.",
+          "2. Accounting Quality and Red Flags (Milestone 3): GoTo remains unprofitable under Indonesian financial accounting standards (PSAK), reporting consolidated net losses of Rp 90,519 billion in 2023, Rp 5,465 billion in 2024, and Rp 1,502 billion in 2025. Total equity fell from Rp 35,720 billion in 2023 to Rp 28,712 billion in 2025 because of Rp 215.3 trillion in accumulated losses. Furthermore, 22.57% of GoTo's assets sit in Tokopedia (Rp 7,432 billion) and Bank Jago (Rp 2,895 billion) investments, alongside Rp 1,669 billion of Level 3 investments that carry impairment risk. Operating cash flow was only Rp 307 billion in 2025, covering just 26.0% of its Rp 1,182 billion capital expenditure.",
+          "3. Financial Ratios and DuPont Analysis (Milestone 2): While operating loss narrowed from -69.5% of revenue in 2023 to -2.1% in 2025, Return on Equity (ROE) remained negative in all three years (-253.4% in 2023, -18.0% in 2024, and -5.2% in 2025). Debt doubled in 2025 from Rp 3,820 billion to Rp 7,743 billion (raising Debt to Equity from 0.13x to 0.27x). GoTo's survival is currently supported by its Rp 21,755 billion cash balance (current ratio of 2.73x), which acts as a buffer while operations attempt to break even.",
+          "4. Three Year Forecast and Breakeven (Milestone 4): In our Base Case forecast anchored on GoTo's 2023 to 2025 historical averages (11.4% revenue growth, 41.1% COGS, 78.5% cash operating expenses, and 16.3% capex), GoTo stays below breakeven in all three forecast years (2026F to 2028F), posting annual EBIT losses of Rp 4,003 billion to Rp 4,967 billion and burning its cash balance down from Rp 21,755 billion in 2025 to just Rp 968 billion by 2028F. GoTo only breaks even if management freezes fixed operating expenses in rupiah terms instead of letting costs grow with revenue.",
+          "5. Valuation and Recommendation (Assignment 14): WACC 7.76%, Ke 8.45%, DCF -Rp121.1/share and residual income -Rp75.1/share retain the submitted assumptions. The revised Grab-only P/B benchmark is Rp91.0/share. At the assignment reference price of Rp25, our SELL / AVOID recommendation follows the milestone cash-burn forecast and negative economic profit, rather than an average of incompatible valuation methods."
         ],
-        "tables": [
-          [
-            [
-              "Capstone Stage (Steps 1-6)",
-              "Core Metric / Model Output",
-              "Decision Implication for Equity Investor"
-            ],
-            [
-              "Step 1: Strategy & Five Forces (M1)",
-              "Competitive Rivalry: HIGH | Hybrid Position",
-              "Suppresses pricing power & take rates"
-            ],
-            [
-              "Step 2: Accounting Quality (M3)",
-              "2025 FCF: -(875.3) bn | Associates: 22.57% TA",
-              "Asset impairment & cash conversion watchpoints"
-            ],
-            [
-              "Step 3: Ratios & Z''-Score (M2)",
-              "Current Ratio 2.73x | ROE -5.2% | Z'' -10.90",
-              "Solvent near-term, but cumulative deficit hurts capital"
-            ],
-            [
-              "Step 4: 3-Yr Base Forecast (M4)",
-              "2028F Ending Cash: Rp 968 bn | EBIT -(4.97T)",
-              "Must freeze fixed OpEx to cross Rp 18.6T breakeven"
-            ],
-            [
-              "Step 5-6: Valuation & Decision (A14)",
-              "DCF -121.1 | RI -75.1 | Multiples 39.8 | Price 25.0",
-              "Fundamental value destruction unless opex discipline sticks"
-            ]
-          ]
-        ]
+        "tables": []
       },
       {
         "heading": "(b) Business & Industry Strategy Synthesis (Milestone 1)",
         "source_citation": "Milestone 1 Write-Up; GoTo 2025 Annual Report & Note 35",
         "paragraphs": [
-          "GoTo connects 66 million Annual Transacting Users, over 6.4 million merchants, and over 3 million driver-partners. Following Tokopedia's deconsolidation in Jan 2024 (retaining 24.99% equity), GoTo relies on On-Demand Services (Rp 12,361 bn in 2025) and Financial Technology (+74.1% to Rp 5,191 bn), plus Rp 820 bn in Tokopedia service fees.",
-          "Combining Milestone 1 strategy with balance-sheet evidence: High rivalry and low buyer switching costs limit take-rate expansion, while aggressive GoPay lending expanded net financing receivables to Rp 2,731 bn with credit loss provisions more than doubling from Rp 174 bn to Rp 408 bn."
+          "1. Company and Industry Overview",
+          "PT GoTo Gojek Tokopedia Tbk connects 66 million Annual Transacting Users, more than 6.4 million merchants, and over 3 million driver partners in Indonesia. After deconsolidating Tokopedia in early 2024 (retaining a 24.99% associate stake), GoTo now relies on two active operating engines: On Demand Services (Gojek mobility, GoFood delivery, and logistics, which generated Rp 12,361 billion in 2025 revenue) and Financial Technology (GoPay payments and consumer loans, which grew 74.1% to Rp 5,191 billion in 2025), alongside Rp 820 billion in e-commerce service fees from Tokopedia.",
+          "2. Porter's Five Forces Summary",
+          "3. Strategic Position and Key Business Risks",
+          "GoTo attempts a hybrid strategy combining cost leadership for mass market users (GoFood Saver, affordable rides) and differentiation through ecosystem integration (GoTransit, GoPay lending). However, connecting Milestone 1 to our later financial and valuation findings shows why this strategy is financially painful: high competitive rivalry and price sensitive buyers prevent GoTo from raising take rates without losing volume, while expanding into consumer lending (Rp 2,731 billion net loan receivables in 2025, with credit loss provisions more than doubling from Rp 174 billion to Rp 408 billion) exposes GoTo to rising credit default risk."
         ],
         "tables": [
           [
@@ -5146,8 +5484,12 @@
         "heading": "(c) Accounting Quality Assessment & Free Cash Flow Audit (Milestone 3)",
         "source_citation": "Milestone 3 Write-Up; LK GOTO 2025 pp. 15, 17, 21-22, Notes 14-15 & 25",
         "paragraphs": [
-          "Applying our Week 7 forensic framework to GoTo's audited March 2026 statements reveals two persistent red flags: (1) Asset Valuation Risk - 22.57% of total assets reside in Tokopedia (Rp 7,432 bn incl. Rp 2,004 bn goodwill) and Bank Jago (Rp 2,895 bn), plus Rp 1,669 bn of Level 3 investments (a 20% write-down scenario erodes Rp 1,820 bn or 3.98% of assets); (2) Revenue & Related-Party Quality - PSAK 72 customer incentives are netted against revenue, while related-party revenue rose to 7.13% (Rp 1,306 bn).",
-          "Crucial Cash Finding: Headline FY2025 Operating Cash Flow (+Rp 307.0 bn) covered just 25.97% of Cash CapEx (Rp 1,182.4 bn), yielding a -Rp 875.3 bn Free Cash Flow deficit. Cash only increased because GoTo liquidated Rp 1,386.5 bn of time deposits and drew Rp 3,718.0 bn in new third-party loans."
+          "1. Red Flags in Investing Activities and Revenue Recognition",
+          "Using the Week 7 accounting quality framework and GoTo's audited 2025 financial statements (issued March 2026), we identified two critical red flags that directly impact valuation:",
+          "Red Flag 1 - Carrying Value of Associates, Goodwill, and Level 3 Investments: Following the deconsolidation of Tokopedia, GoTo carries Rp 7,432,326 million in Tokopedia (including Rp 2,003,559 million of goodwill) and Rp 2,894,921 million in Bank Jago, totaling 22.57% of GoTo's total assets. GoTo also holds Rp 1,668,574 million in Level 3 private investments (Note 14 and 15). Because GoTo recorded repeated impairment and fair value losses in 2023 to 2025, we tested a 20% write down on Tokopedia and Level 3 investments (Rp 9,100,900 million combined), which would wipe out Rp 1,820,180 million (3.98% of total assets). This is a hypothetical before-tax sensitivity, not a recognized impairment. Embedded goodwill is included in the associate carrying amount and is not written down a second time.",
+          "Red Flag 2 - Revenue Judgments and Related Parties: Customer incentives reduce revenue when no distinct good or service is received, or its fair value cannot be measured reliably. Payments for distinct services are treated according to their substance, with excess incentives expensed as marketing. Related-party revenue was Rp1,306,110 million (7.13% of FY2025 revenue, Note 25), mainly Tokopedia service fees.",
+          "2. Accruals Ratio and Investing Cash Flow Check (2024 to 2025)",
+          "FY2025 CFO of Rp307.0 billion covered 25.97% of Rp1,182.4 billion cash capex, leaving FCF of -Rp875.3 billion. Time-deposit settlements of Rp1,386.5 billion and new third-party borrowing of Rp3,718.0 billion contributed to liquidity. The change in cash also includes other investing and financing flows and exchange effects. These two inflows alone do not reconcile it."
         ],
         "tables": [
           [
@@ -5217,11 +5559,18 @@
         "evidence_caption": "Note 14 (p. 100): Audited Associate Stakes (Tokopedia + Bank Jago = 22.57% of Assets)."
       },
       {
-        "heading": "(d) Common-Size, Ratio Package, DuPont ROE & Altman Z''-Score (Milestone 2)",
+        "heading": "(d) Common-size, ratios, DuPont and Week 6 five-factor Z",
         "source_citation": "Group 4 Milestone 2 Ratio & DuPont Workbook; Audited Balance Sheet pp. 15-16",
         "paragraphs": [
-          "Common-size margins improved visibly as COGS fell to 42.3% (57.7% gross margin) and operating margin narrowed to -2.1%. Yet ROE remained negative across all three years (-253.4% -> -18.0% -> -5.2%), debt doubled to Rp 7,743 bn (DER 0.27x), and liquidity relies heavily on the Rp 21,755 bn cash pile (Current Ratio 2.73x).",
-          "Altman Z''-Score Distress Assessment: Applying the Emerging Market Non-Manufacturing formula (Z'' = 6.56 X1 + 3.26 X2 + 6.72 X3 + 1.05 X4) to FY2025 inputs (WC/Assets X1 = +0.402 -> +2.64 pts; Accumulated Deficit/Assets X2 = -4.679 -> -15.25 pts; EBIT/Assets X3 = -0.008 -> -0.06 pts; Book Equity/Liabilities X4 = +1.684 -> +1.77 pts) produces Z'' = -10.90 (Distress Zone < 1.10), illustrating the weight of -Rp 214.1 trillion historical accumulated losses."
+          "1. Common-Size Income Statement and Balance Sheet Summary (2023 to 2025)",
+          "2. Liquidity, Efficiency, Solvency, Profitability, and 3-Step DuPont ROE",
+          "3. Altman Z-Score Analysis (Distress Assessment)",
+          "Applying the completed Week 6 five-factor worksheet: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses the worksheet book-equity proxy. Assets are Rp45,757,642 million and FY2025 accumulated losses are -Rp215,334,000 million.",
+          "X1 = Working capital / Assets = 18,411,702 / 45,757,642 = 0.402374. Weighted contribution = +0.482849.",
+          "X2 = Accumulated losses / Assets = -215,334,000 / 45,757,642 = -4.705968. Weighted contribution = -6.588355.",
+          "X3 = EBIT / Assets = -378,254 / 45,757,642 = -0.008266. Weighted contribution = -0.027279.",
+          "X4 = Book equity / Liabilities = 28,711,657 / 17,045,985 = 1.684365 (contribution +1.010619). X5 = Revenue / Assets = 18,322,117 / 45,757,642 = 0.400417 (contribution +0.400417).",
+          "Z = -4.721750 (rounded -4.72), below 1.81: course distress zone. Grey zone is 1.81-2.99 and safe is above 2.99. Accumulated losses dominate the score. This is a screening signal, not proof of imminent bankruptcy. Source: completed Week 6 project and Milestone 2 workbook, Ratio Analysis C36."
         ],
         "tables": [
           [
@@ -5330,7 +5679,7 @@
               "0.10x",
               "0.13x",
               "0.27x",
-              "Total debt doubled in 2025 to Rp 7,743 bn (vs Bukalapak 0.00x)."
+              "Total debt doubled in 2025 to Rp 7,743 bn."
             ],
             [
               "Debt to Total Assets",
@@ -5351,14 +5700,14 @@
               "-612.2%",
               "-34.4%",
               "-8.2%",
-              "Main drag on ROE (vs Bukalapak +48.4% from investment income)."
+              "Main drag on ROE."
             ],
             [
               "DuPont Step 2: Asset Turnover",
               "0.27x",
               "0.37x",
               "0.40x",
-              "Improved from 0.27x to 0.40x (vs Bukalapak 0.25x)."
+              "Improved from 0.27x to 0.40x."
             ],
             [
               "DuPont Step 3: Equity Multiplier",
@@ -5372,7 +5721,58 @@
               "-253.4%",
               "-18.0%",
               "-5.2%",
-              "Negative ROE in every single year (vs Bukalapak +12.4%)."
+              "Negative ROE in every single year."
+            ]
+          ],
+          [
+            [
+              "Factor",
+              "Numerator / denominator (Rp million)",
+              "Ratio",
+              "Weight",
+              "Contribution"
+            ],
+            [
+              "X1",
+              "18,411,702 / 45,757,642",
+              "0.402374",
+              "1.2",
+              "0.482849"
+            ],
+            [
+              "X2",
+              "-215,334,000 / 45,757,642",
+              "-4.705968",
+              "1.4",
+              "-6.588355"
+            ],
+            [
+              "X3",
+              "-378,254 / 45,757,642",
+              "-0.008266",
+              "3.3",
+              "-0.027279"
+            ],
+            [
+              "X4",
+              "28,711,657 / 17,045,985",
+              "1.684365",
+              "0.6",
+              "1.010619"
+            ],
+            [
+              "X5",
+              "18,322,117 / 45,757,642",
+              "0.400417",
+              "1.0",
+              "0.400417"
+            ],
+            [
+              "Z",
+              "Weighted sum",
+              "",
+              "",
+              "-4.721750"
             ]
           ]
         ]
@@ -5381,8 +5781,11 @@
         "heading": "(e) Three-Year Pro Forma Forecast & Breakeven Check (Milestone 4)",
         "source_citation": "Group 4 Milestone 4 Three-Statement Workbook (2026F-2028F Base Case)",
         "paragraphs": [
-          "Under Milestone 4's Base Case anchored on 3-year averages (11.4% revenue growth, 41.1% COGS, 78.5% cash opex, 16.3% CapEx), Balance Check and Cash Check both tie cleanly to 0 across 2026F-2028F.",
-          "Crucial Liquidity Stress: Because scaled 78.5% opex exceeds 58.9% gross margin, breakeven revenue climbs to Rp 27,207 bn - Rp 33,755 bn, leaving GoTo Below Breakeven and burning Rp 6.6T-Rp 7.5T of cash per year down to Rp 968 bn by 2028F! GoTo crosses into operating profitability (+Rp 1,062 bn EBIT, 2026F breakeven Rp 18,604 bn) only if fixed operating expenses are strictly frozen at Rp 10,954 bn and CapEx stays disciplined at ~6.5%."
+          "1. Base, Optimistic, and Conservative Assumptions (Linked from Milestone 2 Averages)",
+          "In Milestone 4, our Base Case links directly to GoTo's 3-year historical averages (2023 to 2025). Because 2023 had pre-restructuring cash operating expenses of 117.0% of revenue (vs 62.8% in 2024 and 55.7% in 2025), the 3-year average cash operating expense is 78.5% of revenue and 3-year average Capex is 16.3% of revenue:",
+          "2. Three Linked Pro Forma Statements - Base Case (Rp billion)",
+          "3. Breakeven Check: Why the Base Case Drains GoTo's Cash to Nearly Zero",
+          "Under the Milestone 4 Base Case, operating expenses scale at 78.5% of revenue while gross margin is 58.9%, so forecast EBIT remains negative. Year-specific operating breakeven revenues are approximately Rp27,207-33,755 billion, above forecast sales of Rp20,408-25,321 billion. Cash falls to Rp968 billion by 2028F. The separate fixed-cost illustration holds operating expenses at Rp10,954 billion, yielding breakeven revenue of Rp18,604 billion and positive EBIT. Capex discipline improves free cash flow but does not itself change EBIT or operating breakeven. These are conditional illustrations, not the only possible route to profitability."
         ],
         "tables": [
           [
@@ -5612,8 +6015,10 @@
         "heading": "(f) Multi-Method Valuation Reconciliation vs. Rp 25.00 Share Price (Assignment 14)",
         "source_citation": "Assignment 14 Valuation Workbook & IDX Minimum Price Regulation (Sept 28, 2026)",
         "paragraphs": [
-          "At WACC = 7.76% and Cost of Equity = 8.45% (Beta = 0.59), intrinsic Base Case models assign negative equity values (DCF = -Rp 121.1/share; Residual Income = -Rp 75.1/share), whereas peer multiples (2.30x P/B & 13.25x Net-Cash EV/EBITDA across BUKA, GRAB, SE, BELI) indicate Rp 39.8/share because relative multiples ignore GoTo's Base Case cash burn.",
-          "Regulatory Catalyst Behind Rp 25.00 Price: Previously trapped at IDX's Rp 50 minimum regular price limit ('gocap rule'), GoTo dropped 50% via ARB to Rp 25.00 (0.9x book value; down 93% from its Rp 338 IPO) once IDX lowered the regular minimum price floor to Rp 1 on September 28, 2026. Limited liability protects shares above the Rp 13.20/share Net Cash Liquidation Floor (Rp 14,013 bn net cash / 1,062 bn shares)."
+          "1. Cost of Capital (WACC = 7.76%, Ke = 8.45%)",
+          "Keeping all country risk parameters persistent from the Week 14 template (Risk-Free Rate = 4.502%, Mature ERP = 4.23%, Indonesia Country Risk Premium = 2.465%, Tax Rate = 22.0%) and using GoTo's Investing.com Levered Beta of 0.59, Cost of Equity (Ke) is 8.45%. Using GoTo's 2025 effective debt interest rate of 6.91% (after-tax Kd = 5.39%), Market Value of Equity of Rp 26,550.3 billion (Rp 25.00 share price x 1,062,010.2 million shares), and Book Value of Debt of Rp 7,742.6 billion (77.4% equity weight, 22.6% debt weight), GoTo's WACC is 7.76%.",
+          "2. Reconciling DCF, Residual Income, and Market Multiples Against the Rp 25 Share Price",
+          "Grab is the sole valuation comparable, using FY2025 parent equity and year-end ordinary shares. US$4.99 / (US$6,728 million / 4,097,646,678 shares) = 3.0391x P/B. GoTo parent equity Rp31,805.025 billion / 1,062.010200395 billion shares = Rp29.9479 BVPS. Applying Grab P/B gives Rp91.0157 per GoTo share (rounded Rp91.0). This is a single-company relative benchmark, not a median or an intrinsic target. P/E is excluded because GoTo is loss-making. EV/EBITDA is excluded because adjusted and reported earnings bases have not been harmonized. Grab has the closest mobility, delivery and financial-services mix, although geography, profitability and risk differ. Shopee has no separate listing, and listed Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains distorting operating comparisons. BELI is inventory-led and omnichannel, with negative FY2025 reported EBITDA. These businesses remain industry competitors where relevant, but are excluded from the valuation peer set. DCF of -Rp121.1/share and residual income of -Rp75.1/share retain Assignment 14 and Milestone 4 assumptions. Negative model outputs signal failure of the projected cost structure to support equity value. They are not executable negative share prices. The Rp91.0 Grab benchmark reflects a different business valuation and does not resolve GoTo cash burn. Rp25 is the assignment reference price. Net cash of about Rp13.20/share is an arithmetic balance-sheet measure, not a guaranteed liquidation floor. The FY2025 peer comparison is retrospective because audited accounts were released after year-end."
         ],
         "tables": [
           [
@@ -5625,9 +6030,9 @@
             ],
             [
               "1. Discounted Cash Flow (DCF - FCFF)",
-              "EV: (121,167.5) / Eq: (107,154.9)",
+              "EV: (142,597.7) / Eq: (128,585.2)",
               "Rp (121.1)",
-              "Base Case burns Rp 7.0T to Rp 7.7T of FCFF per year; even after adding Rp 14.01T net cash, ongoing cash burn yields negative equity value."
+              "Base Case burns Rp 7.0T to Rp 7.7T of FCFF per year (with zero tax refunds on losses), yielding negative terminal FCFF."
             ],
             [
               "2. Residual Income (Economic Profit)",
@@ -5636,16 +6041,16 @@
               "Net losses (-Rp 3.7T to -Rp 4.5T) plus the 8.45% equity charge create -Rp 6.2T of negative economic profit per year, wiping out book equity."
             ],
             [
-              "3. Market Multiples (P/B & EV/EBITDA)",
-              "Implied P/B: 62.2 / EV-EBITDA: 17.4",
-              "Rp 39.8",
-              "Peer median P/B (2.30x -> Rp 62.2) & Net-Cash-Adj. EV/EBITDA (13.25x -> Rp 17.4) across BUKA, GRAB, SE, BELI (P/E excluded as EPS = -Rp 1.41)."
+              "3. Grab-only P/B benchmark",
+              "Parent basis: BVPS Rp29.9479",
+              "Rp91.0",
+              "Grab FY2025 P/B 3.0391x. One comparator, no median or blend. P/E and EV/EBITDA excluded."
             ],
             [
-              "Current Market Price (Investing.com)",
-              "Market Cap: Rp 26,550.3 bn",
-              "Rp 25.0",
-              "Trades at 0.9x book value (below book value of Rp 27.03 to Rp 30.97/share), down 93% from Rp 338 IPO price."
+              "Assignment reference price",
+              "Market cap: Rp26,550.3 bn",
+              "Rp25.0",
+              "About 0.83x normalized parent BVPS. Net cash is not a guaranteed liquidation floor."
             ]
           ]
         ]
@@ -5654,37 +6059,18 @@
         "heading": "(g) Target Stakeholder Decision & Supporting Appendices",
         "source_citation": "Assignment 15 Capstone Report Section 6; Milestone 2, Milestone 4 & Valuation Workbooks",
         "paragraphs": [
-          "Target Stakeholder: Public Equity Investor evaluating PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) at Rp 25.00 per share.",
-          "One-Sentence Recommendation: SELL GOTO at Rp 25.00 because negative ROE (-5.2%), negative Free Cash Flow (-Rp 875.3 bn), and Base Case cash burn yield negative intrinsic value under both DCF (-Rp 121.1/share) and Residual Income (-Rp 75.1/share). Under our Milestone 4 Base Case, scaling historical 78.5% opex and 16.3% CapEx drives ongoing EBIT losses and drains cash from Rp 21.76T to Rp 968 bn by 2028F. Even though GoTo holds Rp 13.20/share in Net Cash, investors should SELL until management sustains fixed-cost discipline (OpEx <= Rp 10.95T), generates two consecutive years of positive FCF after CapEx, and earns GAAP Net Income above its Rp 2.43T annual equity capital charge (8.45% Ke)."
+          "Target User: Long-Term Public Equity Investor evaluating PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) at the current market price of Rp 25.00 per share.",
+          "Recommendation: SELL / AVOID.",
+          "Our recommendation follows directly from our strategic, accounting quality, ratio, forecast, and valuation findings:",
+          "1. High Rivalry Prevents Easy Margin Expansion (Milestone 1): Because GoTo faces intense competition from Grab, ShopeeFood, Maxim, and DANA with low customer switching costs, it cannot easily raise commission rates or eliminate promotions without losing users.",
+          "2. Unprofitable Core Operations and Negative Free Cash Flow (Milestones 2 & 3): GoTo lost money in every historical year (ROE of -253.4%, -18.0%, and -5.2%), doubled its debt to Rp 7.74 trillion in 2025, and generated only Rp 307 billion of operating cash flow against Rp 1,182 billion of Capex (negative Free Cash Flow of -Rp 875 billion). Meanwhile, 22.6% of its assets are tied up in Tokopedia and Bank Jago investments that carry write down risk, and consumer lending credit losses more than doubled in 2025.",
+          "3. Negative Intrinsic Value Under Base Case (Milestone 4 & Assignment 14): DCF -Rp121.1/share and residual income -Rp75.1/share reflect continued losses under the historical cost assumptions. The Grab P/B benchmark of Rp91.0/share is a relative reference and does not overturn those forecast concerns. Reconsider SELL / AVOID when GoTo demonstrates sustained positive free cash flow after capex and returns above its cost of equity. The initial equity charge is approximately Rp2.43 trillion (8.45% of the retained model book-equity base), and changes with equity.",
+          "(h) Appendices: Supporting Workbooks and Full Ratio Summary",
+          "Supporting Workbook 1 (Milestone 2): Group4_Milestone2_GOTO.xlsx (Common-Size, Liquidity, Efficiency, Solvency, Profitability, and 3-Step / 5-Step DuPont ROE).",
+          "Supporting Workbook 2 (Milestone 4): Group4_Milestone4_GOTO.xlsx (Sources, Historical Summary, Scenario Assumptions, Linked Pro Forma Statements, and Breakeven Check).",
+          "Supporting Workbook 3 (Assignment 14): Group4_FSA_Valuation_Workbook_GOTO.xlsx (CAPM Cost of Equity, WACC, DCF Free Cash Flow to Firm, Terminal Growth, Residual Income, Market Multiples, and Valuation Summary)."
         ],
-        "tables": [
-          [
-            [
-              "Decision Condition / Trigger",
-              "Key Quantitative Threshold",
-              "Recommended Equity Stance",
-              "Supporting Workbook"
-            ],
-            [
-              "Current Verdict: Historical Base Case",
-              "78.5% OpEx + 16.3% CapEx drains cash to Rp 968 bn; DCF -Rp 121.1",
-              "SELL (Negative intrinsic value & negative FCF)",
-              "Group4_Milestone4_GOTO.xlsx"
-            ],
-            [
-              "Re-Entry Hurdle 1: Fixed-Cost Freeze",
-              "Keep OpEx <= Rp 10.95T (<= 55.7% run-rate) & cross Rp 18.6T breakeven",
-              "Required to turn GAAP EBIT & FCF positive",
-              "Group4_Milestone4_GOTO.xlsx + W12 Analysis"
-            ],
-            [
-              "Re-Entry Hurdle 2: Economic Profit (RI)",
-              "2 yrs positive FCF + GAAP Net Income > Rp 2.43T/yr (8.45% Ke)",
-              "Required before reconsidering SELL rating",
-              "Group4_FSA_Valuation_Workbook_GOTO.xlsx"
-            ]
-          ]
-        ]
+        "tables": []
       }
     ]
   }

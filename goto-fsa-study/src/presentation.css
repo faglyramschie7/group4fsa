@@ -1,0 +1,104 @@
+/* The deck uses a fixed 16:9 canvas. Study controls stay outside the slide. */
+.pres-stage-wrap { align-items: center; }
+.present-stage { min-height: 0; }
+.present-stage > .financial-slide {
+  flex: 0 1 auto;
+  width: min(1180px, calc((100dvh - 130px) * 16 / 9));
+  max-width: calc(100vw - 144px);
+}
+.slide-study-notes {
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+.slide-study-notes summary { padding: 18px 0; cursor: pointer; font-size: 13px; font-weight: 650; color: var(--text-muted); }
+.slide-study-notes-body { padding: 0 0 24px; display: grid; gap: 20px; }
+.slide-course-basis { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+.slide-course-basis h3 { font-size: 14px; margin-bottom: 6px; }
+.slide-study-original-title { font-weight: 650; font-size: 16px; line-height: 1.6; }
+.slide-study-section h3, .slide-study-table-wrap h3 { font-size: 14px; margin-bottom: 10px; }
+.slide-study-section p { font-size: 13px; line-height: 1.8; margin-bottom: 8px; max-width: 85ch; }
+.slide-study-notes button { width: fit-content; background: transparent; border: 0; padding: 4px 0; color: var(--goto-green); font: inherit; font-size: 12px; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.slide-study-table-wrap { overflow-x: auto; }
+.slide-study-table-wrap table { width: 100%; border-collapse: collapse; font-size: 12px; line-height: 1.6; }
+.slide-study-table-wrap th, .slide-study-table-wrap td { border-bottom: 1px solid var(--border-color); padding: 10px; text-align: left; }
+.slide-study-table-wrap tr:hover td { background: var(--bg-hover); }
+
+/* Source reading panel: one green-and-white palette in either site theme. */
+.drawer-backdrop .source-drawer {
+  --bg-card: #fff;
+  --bg-subtle: #f3f8f4;
+  --border-color: #dce7df;
+  --text-main: #24382b;
+  --text-heading: #153b22;
+  --text-muted: #5f7265;
+  width: min(620px, 100vw);
+  max-width: 100vw;
+  height: 100dvh;
+  color-scheme: light;
+  background: #f6f9f6;
+  color: #24382b;
+  border-left: 1px solid #dce7df;
+  box-shadow: -16px 0 48px #001d1833;
+}
+.drawer-backdrop .source-drawer .drawer-top-hdr {
+  background: #006b23;
+  padding: 24px;
+  border-bottom: 1px solid #ffffff26;
+  flex-shrink: 0;
+}
+.drawer-backdrop .source-drawer .drawer-badge { color: #c9ebd2; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 8px; }
+.drawer-backdrop .source-drawer .drawer-top-hdr h3 { color: #fff; font-size: 22px; font-weight: 650; line-height: 1.35; margin: 0; }
+.drawer-backdrop .source-drawer .drawer-val-pill { display: block; background: transparent; color: #def0e3; padding: 0; border: 0; margin-top: 8px; border-radius: 0; font-size: 12px; line-height: 1.5; font-weight: 400; }
+.drawer-backdrop .source-drawer .drawer-close-btn { width: 36px; height: 36px; background: transparent; border: 1px solid #ffffff60; color: #fff; border-radius: 6px; font-size: 24px; }
+.drawer-backdrop .source-drawer .drawer-close-btn:hover { background: #ffffff18; border-color: #fff; }
+.drawer-backdrop .source-drawer .drawer-scroll-body { min-height: 0; padding: 24px; gap: 24px; background: #f6f9f6; scrollbar-color: #b9cdbf #f6f9f6; }
+.drawer-backdrop .source-drawer .drawer-summary-box,
+.drawer-backdrop .source-drawer .drawer-calc-box,
+.drawer-backdrop .source-drawer .drawer-featured-ev,
+.drawer-backdrop .source-drawer .drawer-trace-card { background: #fff; border: 1px solid #dce7df; border-radius: 8px; box-shadow: none; padding: 18px; color: #24382b; }
+.drawer-backdrop .source-drawer .drawer-summary-box { border-left: 3px solid #008c2c; font-size: 14px; line-height: 1.7; }
+.drawer-backdrop .source-drawer .drawer-summary-box > strong { color: #006b23; display: block; margin-bottom: 6px; }
+.drawer-backdrop .source-drawer .drawer-summary-box p { margin: 0; }
+.drawer-backdrop .source-drawer .drawer-section { gap: 12px; }
+.drawer-backdrop .source-drawer .drawer-sec-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: transparent; padding: 0 0 10px; border: 0; border-bottom: 1px solid #dce7df; border-radius: 0; color: #006b23; font-size: 13px; font-weight: 700; line-height: 1.5; margin: 0; }
+.drawer-backdrop .source-drawer .drawer-sec-title > span { display: grid; place-items: center; flex-shrink: 0; width: 24px; height: 24px; background: #e7f3e9; color: #006b23; border-radius: 50%; font-size: 11px; }
+.drawer-backdrop .source-drawer .trace-item-top { align-items: flex-start; flex-wrap: nowrap; gap: 12px; }
+.drawer-backdrop .source-drawer .trace-pill { padding: 0; border: 0; border-radius: 0; background: transparent; color: #153b22; font-size: 14px; line-height: 1.55; font-weight: 650; }
+.drawer-backdrop .source-drawer .trace-jump-btn { background: #007f2a; color: #fff; border: 1px solid #007f2a; border-radius: 5px; padding: 6px 12px; white-space: nowrap; font-size: 12px; flex-shrink: 0; }
+.drawer-backdrop .source-drawer .trace-jump-btn:hover { background: #005c1e; border-color: #005c1e; }
+.drawer-backdrop .source-drawer .trace-role-badge { align-self: flex-start; background: transparent; color: #5f7265; border: 0; border-radius: 0; padding: 0; margin: 0; font-size: 11px; font-weight: 500; }
+.drawer-backdrop .source-drawer .trace-cell-ref { background: #f3f8f4; color: #264931; border: 1px solid #e2ebe5; border-radius: 4px; padding: 9px 11px; font-size: 12px; overflow-wrap: anywhere; }
+.drawer-backdrop .source-drawer .trace-mapping-note { color: #435d4c; font-size: 13px; line-height: 1.7; margin: 0; overflow-wrap: anywhere; }
+.drawer-backdrop .source-drawer .drawer-thumb { display: block; width: 100%; max-height: 320px; padding: 0; border: 1px solid #e2ebe5; border-radius: 5px; background: #fff; }
+.drawer-backdrop .source-drawer .drawer-featured-thumb { max-height: 360px; }
+.drawer-backdrop .source-drawer .drawer-calc-hdr,
+.drawer-backdrop .source-drawer .drawer-fev-hdr { color: #006b23; font-size: 13px; font-weight: 700; }
+.drawer-backdrop .source-drawer .drawer-fev-cap,
+.drawer-backdrop .source-drawer .drawer-origin-line { color: #5f7265; line-height: 1.6; }
+.drawer-backdrop .source-drawer .drawer-formula-pill { background: #edf6ef; border: 1px solid #dce7df; color: #153b22; box-shadow: none; }
+.drawer-backdrop .source-drawer .drawer-calc-steps li { color: #24382b; line-height: 1.7; }
+.drawer-backdrop .source-drawer .drawer-zoom-hint { text-align: left; color: #5f7265; line-height: 1.5; font-weight: 400; margin-top: 8px; }
+.drawer-backdrop .source-drawer .drawer-support-tbl-hdr { color: #006b23 !important; background: #edf6ef; font-weight: 600; line-height: 1.5; }
+.drawer-backdrop .source-drawer .trace-mini-table-wrap { background: #fff; border-color: #dce7df; }
+.drawer-backdrop .source-drawer .trace-mini-table :is(th,td) { color: #24382b; background: #fff; border-color: #e2ebe5; }
+.drawer-backdrop .source-drawer .trace-mini-table th { background: #edf6ef; color: #153b22; }
+.drawer-backdrop .source-drawer .highlighted-support-row,
+.drawer-backdrop .source-drawer .highlighted-support-row td { background: #edf6ef !important; color: #153b22 !important; outline-color: #a7cdb1; }
+.drawer-backdrop .source-drawer .highlighted-support-cell { background: #d4ecd9 !important; color: #005c1e !important; }
+.drawer-backdrop .source-drawer .support-hit-badge { background: #d4ecd9; color: #005c1e; border-color: #a7cdb1; }
+.drawer-backdrop .source-drawer :is(button,[tabindex]):focus-visible { outline: 2px solid #008c2c; outline-offset: 3px; }
+.drawer-backdrop .source-drawer .drawer-close-btn:focus-visible { outline-color: white; }
+@media (max-width: 480px) {
+  .drawer-backdrop .source-drawer .drawer-top-hdr { padding: 20px 16px; }
+  .drawer-backdrop .source-drawer .drawer-scroll-body { padding: 16px; gap: 20px; }
+  .drawer-backdrop .source-drawer .drawer-trace-card { padding: 14px; }
+  .drawer-backdrop .source-drawer .drawer-top-hdr h3 { font-size: 20px; }
+}
+@media (max-width: 600px) {
+  .pres-stage-wrap { gap: 4px; }
+  .pres-stage-wrap > .pres-side-arrow-btn { width: 24px; height: 32px; font-size: 20px; }
+  .present-stage > .financial-slide { max-width: calc(100vw - 72px); }
+  .present-stage { gap: 4px; padding: 8px; }
+  .present-stage > .present-arrow-btn { width: 24px; height: 32px; font-size: 20px; }
+}
