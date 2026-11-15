@@ -69,7 +69,7 @@
       "type": "cards_and_badges",
       "persona": "Long-Term Public Equity Investor (IDX: GOTO)",
       "context": "Evaluating GoTo at Rp 25.00 following the Tokopedia deconsolidation and BEI price floor reform.",
-      "decision": "SELL. GoTo destroys shareholder value under historical cost structures and drains cash under Base Case projections.",
+      "decision": "OPEN INQUIRY (Step 1): At Rp 25.00/share, does GoTo's FY2025 operational turnaround (+23.9% 2-yr revenue growth, 96.3% smaller operating loss, first positive CFO) outweigh its continuing GAAP net loss and CapEx needs? Judgment is suspended until Steps 1–5 are completed.",
       "metrics": [
         {
           "label": "Target User",
@@ -82,9 +82,9 @@
           "note": "Down 93% from Rp 338 IPO"
         },
         {
-          "label": "Group 4 Decision",
-          "val": "SELL",
-          "note": "Cash burn and negative economic value"
+          "label": "Initial Stance",
+          "val": "OPEN INQUIRY",
+          "note": "Suspend verdict until Steps 1–5 are tested"
         },
         {
           "label": "Net Cash Floor",

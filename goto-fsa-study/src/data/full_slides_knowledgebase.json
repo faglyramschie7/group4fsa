@@ -166,7 +166,7 @@
         "subtitle": "Your Questions Already Have a Shape",
         "raw_text": "F R O M  Y O U R  Q U E S T IO N S  T O  A  F R A M E W O R K\nYour Questions Already Have a Shape\nIs the \nbusiness \nitself \nsound?\nStrategy\nCan I trust \nhow it's \nreported?\nAccounting\nHow healthy \nare the \nnumbers?\nFinancial\nWhere is \nthis headed \nnext?\nForecasting\nWhat is it \nactually \nworth?\nValuation\nWhat \nshould I do \nabout it?\nDecision\nThis is exactly the six-step framework Wahlen builds the whole textbook around.\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 4",
         "theory_explanation": "Questions Have a Shape: The 6 Questions that Form the 6 Steps. Business sound? (Strategy) -> Trust reporting? (Accounting) -> Health? (Financial) -> Headed where? (Forecasting) -> Worth? (Valuation) -> Action? (Decision).",
-        "goto_explanation": "This aligns exactly with Group 4's research journey across Milestones 1 to 4: Strategy (Five Forces) -> Accounting (Tokopedia deconsolidation & PSAK 15) -> Financial (DuPont & Altman Z'' = -10.90) -> Forecasting (Base Case Pro Forma) -> Valuation (DCF = -Rp 121.08) -> Decision (SELL).",
+        "goto_explanation": "This structures Group 4's investigation across Milestones 1 to 4 without pre-judging the outcome: Step 1 Strategy (Five Forces in ride-hailing & fintech) -> Step 2 Accounting (Tokopedia deconsolidation & PSAK footnotes) -> Step 3 Financial Ratios (DuPont ROE, Cash Flow vs. CapEx, & Altman Z-Score) -> Step 4 Forecasting (3-Year Pro Forma) -> Step 5 Valuation (DCF, Residual Income, & Peer Multiples) -> Step 6 Final Investment Decision.",
         "image_url": "/slides/FSA_Week1_PPT/slide_4.png",
         "goto_report": {
           "title": "Structuring Analyst Questions into the FSA Framework",
@@ -219,7 +219,7 @@
         "subtitle": "One Set of Statements, Six Different Readers",
         "raw_text": "W H Y  T H I S  C O U R S E  I S  N O T  J U S T  F O R  B A N K E R S\nOne Set of Statements, Six Different Readers\nEquity Investor\nBuy, hold, or sell?\nBanker / Creditor\nWill they repay?\nRegulator\nSolvent and compliant?\nNon-Profit Board\nFinancially sustainable?\nChurch / Foundation \nTreasurer\nFaithful stewardship?\nGovernment Auditor\nPublic money as reported?\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 5",
         "theory_explanation": "One Set of Statements, Six Different Readers. FSA depends entirely on the stakeholder persona: Equity Investor (Buy/Sell), Banker (Repayment), Regulator (Solvency), Non-Profit Board (Sustainability), Treasurer (Stewardship), Auditor (Compliance).",
-        "goto_explanation": "Group 4 analyzed GoTo strictly from the Public Equity Investor perspective. A commercial banker might lend short-term because GoTo still has Rp 21.8T in cash. But an equity investor sees that persistent cash burn erodes book equity (-Rp 7.0T/year drop), making the common stock an unattractive fundamental investment.",
+        "goto_explanation": "Group 4 defines its target reader as a Public Long-Only Equity Investor. While a short-term lender mainly checks whether GoTo's Rp 21.8T cash covers its Rp 7.7T debt, an equity investor must investigate across Steps 2–5 whether GoTo's narrowing losses can turn into positive Free Cash Flow and returns above the cost of equity.",
         "image_url": "/slides/FSA_Week1_PPT/slide_5.png",
         "goto_report": {
           "title": "Six Readers of GoTo's Financial Statements",
@@ -519,7 +519,7 @@
         "subtitle": "4",
         "raw_text": "S T E P  4 O F  6\n4\nForecasting\nWhat is this company likely to look like financially in two to five years?\nTranslate Steps 1-3 into explicit, defensible assumptions.\nBuild linked pro forma income statement, balance sheet, cash flow.\nStress-test with base, optimistic, and conservative scenarios.\nTool: Sales-driven forecasting ,  Week 12\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 11",
         "theory_explanation": "Step 4 of 6: Forecasting. Translates historical steps into explicit, defensible sales-driven assumptions to construct linked 3-statement pro forma models with base, optimistic, and conservative cases.",
-        "goto_explanation": "In Milestone 4, Group 4 projected GoTo over 2026F-2028F: Base Case revenue grows 11.4%, but 78.5% cash opex leaves EBIT negative (-Rp 4.0T to -Rp 5.0T), draining balance sheet cash from Rp 21.76T down to Rp 968 bn by 2028F.",
+        "goto_explanation": "In Step 4 (Week 13 / Milestone 4), Group 4 will model GoTo's 2026F–2028F statements to test a critical question: what happens to GoTo's Rp 21.76T cash balance under its 3-year historical cost structure (78.5% cash opex) versus its leaner FY2025 operational run-rate?",
         "image_url": "/slides/FSA_Week1_PPT/slide_11.png",
         "goto_report": {
           "title": "Step 4 of 6: Forecasting Financial Statements (GoTo Milestone 4)",
@@ -566,42 +566,42 @@
         "subtitle": "5",
         "raw_text": "S T E P  5 O F  6\n5\nValuation\nWhat is this company actually worth ,  and how does that compare to its price?\nConvert the forecast into an estimate of intrinsic value.\nTriangulate: discounted cash flow, residual income, market multiples.\nUnderstand why methods disagree ,  the gap is often more informative than any single number .\nTool: DCF, residual income, multiples ,  Weeks 13-14\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 12",
         "theory_explanation": "Step 5 of 6: Valuation. Triangulates intrinsic value across Discounted Cash Flow (DCF), Residual Income (RI), and Market Multiples, reading the gap between methods.",
-        "goto_explanation": "In Assignment 14 (corrected and reconciled), Base Case cash burn produces DCF of -Rp 121.08/share and Residual Income of -Rp 75.11/share. Peer multiples suggest Rp 39.80, while the stock trades at Rp 25.00 on IDX (0.9x P/B, cushioned short-term by its Rp 13.20/share net cash floor).",
+        "goto_explanation": "In Step 5 (Week 14 / Assignment 14), we will translate our pro forma forecasts into intrinsic value per share using three independent models—Discounted Cash Flow (FCFF), Residual Income (Economic Profit), and Southeast Asian Peer Multiples—and test them against GoTo's Rp 25.00 market price and Rp 13.20/share net cash floor.",
         "image_url": "/slides/FSA_Week1_PPT/slide_12.png",
         "goto_report": {
           "title": "Step 5 of 6: Valuation Applications (GoTo Assignment 14)",
           "badge": "Step 5 Preview",
           "content_type": "table",
           "table_headers": [
-            "Valuation Model",
-            "Corrected Output (Rp/sh)",
-            "Key Anchor / Assumption",
-            "Status vs Market (Rp 25)"
+            "Valuation Lens",
+            "What It Tests on GoTo",
+            "Key Anchor / Input",
+            "Benchmark Question vs. Rp 25.00"
           ],
           "table_rows": [
             [
-              "Discounted Cash Flow (DCF)",
-              "-(Rp 121.08)",
-              "WACC 7.76%, Zero tax on neg EBIT",
-              "Sensitive to OpEx assumption"
+              "1. Discounted Cash Flow (DCF)",
+              "PV of future Free Cash Flow to Firm",
+              "WACC & 2026F-2028F FCFF",
+              "Can core CFO cover CapEx & grow?"
             ],
             [
-              "Residual Income (RI)",
-              "-(Rp 75.11)",
-              "Ke 8.45%, BVE Rp 28.7T",
-              "Penalizes negative ROE vs Ke"
+              "2. Residual Income (RI)",
+              "Economic profit above Cost of Equity",
+              "Opening Book Equity Rp 28.7T & Ke",
+              "Will ROE exceed Cost of Equity?"
             ],
             [
-              "Market Multiples (Peers)",
-              "Rp 39.80",
-              "P/B 2.30x & Adj EV/EBITDA 13.25x",
-              "+59% above Rp 25 market price"
+              "3. Peer Market Multiples",
+              "Relative pricing vs. SEA tech peers",
+              "BUKA, GRAB, SE, BELI (P/B, EV/EBITDA)",
+              "Is GOTO cheap or expensive vs. peers?"
             ],
             [
-              "Net Cash Floor",
-              "Rp 13.20",
-              "Cash 21.8T - Debt 7.7T",
-              "Hard downside floor"
+              "4. Net Cash Liquidation Floor",
+              "Balance-sheet downside protection",
+              "Cash Rp 21.8T - Debt Rp 7.7T",
+              "Covers Rp 13.20/sh (53% of Rp 25 price)"
             ]
           ],
           "analytical_note": "Step 5 triangulates multiple valuation lenses rather than relying blindly on a single model."
@@ -619,7 +619,7 @@
         "subtitle": "6",
         "raw_text": "S T E P  6 O F  6\n6\nDecision\nGiven everything above, what should I ,  or the stakeholder I'm analyzing for ,  \nactually do?\nTranslate valuation and analysis into a concrete recommendation.\nTie the recommendation explicitly to a specific user and decision context.\nCommunicate the recommendation ,  and its uncertainty ,  clearly.\nTool: Your group's final presentation and report ,  Weeks 15-16\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 13",
         "theory_explanation": "Step 6 of 6: Decision. Translates valuation into a concrete recommendation tailored to the target user and context.",
-        "goto_explanation": "In Assignment 15 and our Final Presentation, Group 4 recommends SELL at Rp 25.00 to public equity investors because GoTo posts negative ROE (-5.2%), negative Free Cash Flow (-Rp 875.3 bn), and negative intrinsic value under Base Case DCF and Residual Income.",
+        "goto_explanation": "Only in Step 6 (Weeks 14–15), after weighing the operational turnaround (Steps 1–3) against pro forma cash flows and intrinsic valuation (Steps 4–5), do we issue a final Buy, Hold, or Sell verdict for a public equity investor at Rp 25.00—complete with clear re-entry triggers.",
         "image_url": "/slides/FSA_Week1_PPT/slide_13.png",
         "goto_report": {
           "title": "Step 6 of 6: Decision & Communication (GoTo Investment Thesis)",
@@ -666,7 +666,7 @@
         "subtitle": "The Toolbox That Powers Steps 3 and 5",
         "raw_text": "S U B R A M A N Y A M  C H A P T E R  1 ,   A  C O M P L E M E N T A R Y  L E N S\nThe Toolbox That Powers Steps 3 and 5\n1 Comparative Analysis Horizontal, year-over-year trend analysis.\n2 Common-Size Analysis Vertical analysis ,  every line as a % of revenue or assets.\n3 Ratio Analysis Profitability, liquidity, solvency, efficiency ,  Weeks 4-6.\n4 Cash Flow Analysis Testing whether profit is backed by real cash.\n5 Valuation Models DCF, residual income, multiples.\nFinancial Statement Analysis  •  Week 1  •  The FSA Mindset 14",
         "theory_explanation": "Subramanyam Chapter 1: The Analytical Toolbox. 1. Comparative Analysis (Horizontal YoY); 2. Common-Size (Vertical %); 3. Ratio Analysis; 4. Cash Flow Analysis; 5. Valuation Models.",
-        "goto_explanation": "Group 4 applied Subramanyam's full toolbox: Horizontal YoY showed debt doubling (+102.7%); Vertical common-size showed cash is 47.5% of assets; Cash flow forensics revealed negative FCF (-Rp 875 bn); Valuation confirmed negative intrinsic equity.",
+        "goto_explanation": "Group 4 applies Subramanyam's analytical toolbox step by step: Horizontal YoY trends and Vertical common-size statements (Week 5), Cash Flow and Credit Risk forensics (Weeks 4 & 6), Accounting Quality (Week 7), and Prospective Forecasting & Valuation (Weeks 13–14).",
         "image_url": "/slides/FSA_Week1_PPT/slide_14.png",
         "goto_report": {
           "title": "Subramanyam Chapter 1: Complementary Analytical Toolbox",
@@ -819,7 +819,7 @@
       "type": "cards_and_badges",
       "persona": "Long-Term Public Equity Investor (IDX: GOTO)",
       "context": "Evaluating GoTo at Rp 25.00 following the Tokopedia deconsolidation and BEI price floor reform.",
-      "decision": "SELL. GoTo destroys shareholder value under historical cost structures and burns through its cash cushion.",
+      "decision": "OPEN INQUIRY (Step 1): At Rp 25.00/share, does GoTo's FY2025 operational turnaround (+23.9% 2-yr revenue growth, 96.3% smaller operating loss, first positive CFO) outweigh its continuing GAAP net loss and CapEx needs? Judgment is suspended until Steps 1–5 are completed.",
       "metrics": [
         {
           "label": "Target User",
@@ -832,9 +832,9 @@
           "note": "Down 93% from Rp 338 IPO"
         },
         {
-          "label": "Group 4 Decision",
-          "val": "SELL",
-          "note": "Cash burn and negative economic value"
+          "label": "Initial Stance",
+          "val": "OPEN INQUIRY",
+          "note": "Suspend verdict until Steps 1–5 are tested"
         },
         {
           "label": "Net Cash Floor",
@@ -852,7 +852,8 @@
       "FSA is not a mechanical calculation: the user determines which metric matters.",
       "Steps 1 to 3 look backward into the firm; Steps 4 to 6 look forward to act.",
       "Never skip steps: valuation without accounting analysis is fiction."
-    ]
+    ],
+    "story_clue": "Step 0–1 (The Open Question): Surface losses narrowed 96.3% (-Rp 378.1 bn EBIT) and CFO flipped positive (+Rp 1,354.5 bn), yet GAAP Net Income is still negative (-Rp 1,501.7 bn). Question: Is this turnaround strong enough to justify buying at Rp 25.00?"
   },
   {
     "id": "week2",
@@ -2423,7 +2424,8 @@
     "study_takeaways": [
       "Four of five forces lean unfavorable for GoTo, capping long-run return on invested capital.",
       "Deconsolidating Tokopedia into ByteDance in 2024 stopped catastrophic e-commerce losses, shifting GoTo to an asset-light e-commerce service fee model."
-    ]
+    ],
+    "story_clue": "Step 1 (Industry & Strategy): Porter's Five Forces reveals cutthroat ride-hailing/e-commerce rivalry and low switching costs—GoTo cannot easily hike take-rates without risking market share."
   },
   {
     "id": "week3",
@@ -3470,7 +3472,8 @@
     "study_takeaways": [
       "Recognition decides IF an asset appears on the balance sheet; Measurement decides AT WHAT NUMBER.",
       "Historical cost provides verifiable conservatism; Fair value provides market relevance but introduces volatile mark-to-market swings."
-    ]
+    ],
+    "story_clue": "Step 2A (Balance Sheet & PSAK Rules): Cash makes up 47.6% of assets (Rp 21.76T), while Goodwill (Rp 10.8T) and the Tokopedia associate stake (Rp 10.4T) make up another 46%—requiring strict impairment scrutiny."
   },
   {
     "id": "week4",
@@ -4931,7 +4934,8 @@
     "study_takeaways": [
       "CFO covered only 26.0% of Capex in 2025: core operations do not self-fund capital investment.",
       "Operating cash flow was positive only due to working capital swings and deferred expenses, not underlying operating profitability."
-    ]
+    ],
+    "story_clue": "Step 3A (Cash Flow vs. CapEx Trap): Statutory CFO turned positive (+Rp 307.0 bn / +Rp 1,354.5 bn core), but mandatory tech/software CapEx (-Rp 1,182.4 bn) keeps Free Cash Flow negative (-Rp 875.3 bn)."
   },
   {
     "id": "week5",
@@ -6500,7 +6504,8 @@
     "study_takeaways": [
       "ROE was negative across all 3 historical years due entirely to negative net profit margins.",
       "Higher equity multiplier in 2025 indicates worsening financial leverage, not healthy capital expansion."
-    ]
+    ],
+    "story_clue": "Step 3B (Common-Size & DuPont ROE): Operating expenses dropped from 135.4% to 59.8% of revenue, lifting Net Margin from -612% to -8.2%, yet 3-Step DuPont ROE remains negative (-5.2%)."
   },
   {
     "id": "week6",
@@ -8288,7 +8293,8 @@
     "study_takeaways": [
       "Interest coverage is -0.71x: operating income cannot cover Rp 535 bn annual interest expense.",
       "Total debt doubled to Rp 7,743 bn in 2025, raising default risk if cash burn does not stop."
-    ]
+    ],
+    "story_clue": "Step 3C (Liquidity, Debt & Altman Z-Score): Liquidity is strong (2.56x Current Ratio, Rp 14.01T Net Cash), but total debt doubled (+102.7% to Rp 7.74T) and Rp 214.1T of accumulated losses push Altman Z-Score to -2.81 (Distress Zone)."
   },
   {
     "id": "week7",
@@ -9782,7 +9788,8 @@
     "study_takeaways": [
       "Accrual quality is medium-low: reported Adjusted EBITDA excludes heavy stock-based compensation and depreciation costs.",
       "Auditors placed Emphasis of Matter on ongoing restructuring and associate carrying values."
-    ]
+    ],
+    "story_clue": "Step 2B (Forensic Accounting Quality): Deconsolidating Tokopedia removed Rp 78.8T of goodwill impairment noise, leaving cleaner recurring revenue (PSAK 115), though rising fintech credit loss provisions (Rp 1.4T+) require monitoring."
   },
   {
     "id": "week9",
@@ -11148,7 +11155,8 @@
     "study_takeaways": [
       "GoTo began taking on substantial commercial bank loans in 2025 to fund working capital and fintech loan book expansion.",
       "Debt doubling in a loss-making company drastically limits borrowing capacity and increases debt service burden."
-    ]
+    ],
+    "story_clue": "Step 2C (Financing & Capital Structure): GoTo replaced equity dilution with Rp 3.72T of new bank loans and executes treasury buybacks—manageable today thanks to net cash, but costly if cash burn returns."
   },
   {
     "id": "week10",
@@ -12961,7 +12969,8 @@
     "study_takeaways": [
       "Equity method keeps Tokopedia's ongoing operational volatility off GoTo's consolidated revenue and gross profit lines.",
       "Carrying value of associates is vulnerable to future impairments if ByteDance/TikTok e-commerce growth slows."
-    ]
+    ],
+    "story_clue": "Step 2D (Investing & Asset-Light Pivot): Shedding Tokopedia shifted GoTo to an asset-light model (0.40x asset turnover), concentrating remaining investment risk in capitalized software (Rp 880.3 bn) and associate carrying value."
   },
   {
     "id": "week12",
@@ -14577,7 +14586,8 @@
     "study_takeaways": [
       "High fixed technology overhead creates extreme negative operating leverage when revenue growth decelerates.",
       "Breakeven revenue required under Base Case costs is Rp 27.2 trillion (far above forecast revenue of Rp 20.4 trillion)."
-    ]
+    ],
+    "story_clue": "Step 3D (Operating Leverage & Segments): ODS and Fintech are profitable at the segment level, and high Degree of Operating Leverage (5.44x DOL) means incremental revenue can scale EBIT rapidly—if fixed overhead stays capped."
   },
   {
     "id": "week13",
@@ -16180,7 +16190,8 @@
     "study_takeaways": [
       "Cash Plug Sanity Check: Cash drains from Rp 21.8 trillion down to just Rp 968 billion by 2028F.",
       "Shows why historical average costs are unsustainable without aggressive restructuring and cost freezes."
-    ]
+    ],
+    "story_clue": "Step 4 (Pro Forma Forecasting): Under the 3-year historical Base Case (78.5% OpEx, 16.3% CapEx), losses widen again (-Rp 4.0T to -Rp 4.97T EBIT) and cash drains from Rp 21.76T to Rp 968B by 2028F; only the FY2025 Run-Rate sensitivity reaches breakeven."
   },
   {
     "id": "week14",
@@ -18014,6 +18025,7 @@
     "study_takeaways": [
       "DCF and Residual Income converge on the exact same conclusion: GoTo destroys value under historical cost trends.",
       "The market refuses to pay the peer multiple (2.10x P/B = Rp 56.8), treating GoTo as a distressed asset trading at 0.8x book value."
-    ]
+    ],
+    "story_clue": "Steps 5–6 (Valuation & Final Verdict): Because Base Case cash burn produces negative intrinsic value under both DCF (-Rp 121.08/sh) and Residual Income (-Rp 75.11/sh)—outweighing peer multiples (Rp 39.80/sh) and the Rp 13.20/sh net cash floor—the evidence finally leads to SELL at Rp 25.00 until GoTo proves 2 consecutive years of positive FCF and ROE > 8.45% Ke."
   }
 ]

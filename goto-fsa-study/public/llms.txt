@@ -1272,7 +1272,7 @@ Appendix C maps our 20-minute time budget across all rubric categories totaling 
 ### Week 1: The FSA Mindset & Six-Step Framework
 *Reading: Wahlen Ch. 1 • Subramanyam Ch. 1*
 - **Core Question:** Who is reading the financial statements, and what specific decision question are they trying to answer?
-- **GoTo Application:** Group 4 Stakeholder Persona for GoTo — Evaluating GoTo at Rp 25.00 following the Tokopedia deconsolidation and BEI price floor reform. — SELL. GoTo destroys shareholder value under historical cost structures and drains cash under Base Case projections.
+- **GoTo Application:** Group 4 Stakeholder Persona for GoTo — Evaluating GoTo at Rp 25.00 following the Tokopedia deconsolidation and BEI price floor reform. — OPEN INQUIRY (Step 1): At Rp 25.00/share, does GoTo's FY2025 operational turnaround (+23.9% 2-yr revenue growth, 96.3% smaller operating loss, first positive CFO) outweigh its continuing GAAP net loss and CapEx needs? Judgment is suspended until Steps 1–5 are completed.
 - **Key Takeaways:**
   - FSA is not a mechanical calculation: the user determines which metric matters.
   - Steps 1 to 3 look backward into the firm; Steps 4 to 6 look forward to act.

@@ -3991,31 +3991,31 @@
       ]
     },
     "week1_13": {
-      "title": "Langkah 6 dari 6: Keputusan & Komunikasi (Tesis Investasi GoTo)",
+      "title": "Langkah 6 dari 6: Kerangka Keputusan & Komunikasi (Pratinjau Tesis GoTo)",
       "table_headers": [
         "Komponen Keputusan",
-        "Sintesis GoTo",
-        "Bukti Pendukung",
-        "Sinyal Analisis"
+        "Pertanyaan Pengujian pada GoTo",
+        "Bukti yang Diperiksa (Langkah 1–5)",
+        "Peran dalam Keputusan Akhir"
       ],
       "table_rows": [
         [
-          "Posisi Likuiditas Kas",
-          "Lantai Kas Bersih Rp 13,20/lbr",
-          "Kas Bersih Rp 14,01T = 53% dari harga Rp 25,00",
-          "Menahan ilikuiditas jangka pendek"
+          "Perlindungan Sisi Bawah",
+          "Seberapa kuat penyangga kas bersih?",
+          "Kas Bersih Rp 14,01T (Rp 13,20/lbr = 53% harga Rp 25)",
+          "Menilai risiko kebangkrutan jangka pendek"
         ],
         [
-          "Nilai Intrinsik Base Case",
-          "DCF -(Rp 121,08) & RI -(Rp 75,11)",
-          "OpEx historis 78,5% & CapEx 16,3% menguras kas ke Rp 968 M",
-          "SELL (Destruksi nilai ekonomis)"
+          "Katalis Pertumbuhan",
+          "Bisakah efisiensi FY2025 bertahan?",
+          "DOL 5,44x + Margin Kotor 68,0% + CFO positif",
+          "Menguji apakah laba akuntansi bisa tercapai"
         ],
         [
-          "Syarat Peninjauan Ulang",
-          "Disiplin Biaya Tetap FY2025",
-          "OpEx <= Rp 10,95T & Laba Bersih > Rp 2,43T/thn",
-          "Pantau EBIT & FCF kuartalan"
+          "Risiko & Nilai Intrinsik",
+          "Apakah arus kas masa depan menutup WACC 7,76%?",
+          "Proyeksi Pro Forma, DCF, RI, & Multiples",
+          "Menentukan Buy, Hold, atau Sell di Rp 25,00"
         ]
       ]
     },

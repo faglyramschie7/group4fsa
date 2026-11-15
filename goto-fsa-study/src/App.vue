@@ -8,6 +8,33 @@ import presentationDeckIdData from './data/presentation_deck_id.json'
 import supportingTablesIdData from './data/supporting_tables_id.json'
 
 const lang = ref('en') // 'en' | 'id'
+const getInitialTheme = () => {
+  try {
+    const saved = localStorage.getItem('goto-fsa-theme')
+    if (saved === 'dark' || saved === 'light') return saved === 'dark'
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  } catch {
+    return false
+  }
+}
+const isDark = ref(getInitialTheme())
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value
+}
+watch(
+  isDark,
+  (val) => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', val ? 'dark' : 'light')
+    }
+    try {
+      localStorage.setItem('goto-fsa-theme', val ? 'dark' : 'light')
+    } catch {
+      // ignore storage errors
+    }
+  },
+  { immediate: true }
+)
 const modules = ref(fullModulesData)
 const assignments = computed(() => lang.value === 'id' ? assignmentsIdData : assignmentsData)
 const presentationSlides = computed(() => lang.value === 'id' ? presentationDeckIdData : presentationDeckData)
@@ -1639,7 +1666,9 @@ const handlePresentKeydown = (e) => {
       return
     }
   }
-  if (!isPresentMode.value) return
+  const tag = e.target?.tagName
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+  if (!isPresentMode.value && activeTab.value !== 'presentation') return
   if (e.key === 'ArrowLeft') {
     e.preventDefault()
     clickPopup.value = null
@@ -2158,8 +2187,18 @@ const isColNumeric = (tbl, cIdx) => {
           </div>
         </div>
 
-        <!-- Right: Status / Context Indicator -->
+        <!-- Right: Status / Context Indicator & Theme Toggle -->
         <div class="header-right">
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            @click="toggleDarkMode"
+            :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+            :aria-label="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+          >
+            <span>{{ isDark ? '☀️' : '🌙' }}</span>
+            <span>{{ isDark ? (lang === 'id' ? 'Terang' : 'Light') : (lang === 'id' ? 'Gelap' : 'Dark') }}</span>
+          </button>
           <div class="ticker-badge" title="Audited Financial Statements FY2025">
             <span class="ticker-dot"></span>
             <span class="ticker-name">IDX: GOTO</span>
@@ -2209,8 +2248,18 @@ const isColNumeric = (tbl, cIdx) => {
             </div>
           </div>
 
-          <!-- 16:9 Web PowerPoint Canvas -->
-          <section class="pres-canvas">
+          <!-- 16:9 Web PowerPoint Canvas with Side Arrows -->
+          <div class="pres-stage-wrap">
+            <button
+              class="pres-side-arrow-btn pres-side-arrow-left"
+              :disabled="selectedPresSlideNum <= 1"
+              @click.stop="prevPresSlide"
+              title="Previous Slide (Left Arrow)"
+            >
+              &lsaquo;
+            </button>
+
+            <section class="pres-canvas">
             <div class="pres-slide-header">
               <div class="pres-header-top-row">
                 <span class="pres-section-tag">{{ currentPresSlide.section_tag }}</span>
@@ -2313,6 +2362,16 @@ const isColNumeric = (tbl, cIdx) => {
               <span>{{ uiText.sourceLabel }} {{ currentPresSlide.source_footer }}</span>
             </div>
           </section>
+
+            <button
+              class="pres-side-arrow-btn pres-side-arrow-right"
+              :disabled="selectedPresSlideNum >= presentationSlides.length"
+              @click.stop="nextPresSlide"
+              title="Next Slide (Right Arrow)"
+            >
+              &rsaquo;
+            </button>
+          </div>
 
           <!-- ================= BOTTOM REVEAL CONTROLS (SPEAKER SCRIPT & AUDIT DRAWER) ================= -->
           <div class="pres-bottom-reveal-bar">
@@ -3388,6 +3447,9 @@ const isColNumeric = (tbl, cIdx) => {
                 <div class="node-cat">{{ lec.category }}</div>
                 <h3>{{ lec.title }}</h3>
                 <p>{{ lec.core_question }}</p>
+                <div v-if="lec.story_clue" class="node-story-clue">
+                  <strong>What We Uncover:</strong> {{ lec.story_clue }}
+                </div>
               </div>
             </div>
           </div>
@@ -3428,7 +3490,7 @@ const isColNumeric = (tbl, cIdx) => {
         <button
           class="present-arrow-btn present-arrow-left"
           :disabled="selectedPresSlideNum <= 1"
-          @click="prevPresSlide"
+          @click.stop="prevPresSlide"
           title="Previous Slide (Left Arrow)"
         >
           &lsaquo;
@@ -3528,7 +3590,7 @@ const isColNumeric = (tbl, cIdx) => {
         <button
           class="present-arrow-btn present-arrow-right"
           :disabled="selectedPresSlideNum >= presentationSlides.length"
-          @click="nextPresSlide"
+          @click.stop="nextPresSlide"
           title="Next Slide (Right Arrow)"
         >
           &rsaquo;
@@ -6200,6 +6262,21 @@ const isColNumeric = (tbl, cIdx) => {
   color: var(--text-muted);
 }
 
+.node-story-clue {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--goto-green);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+.node-story-clue strong {
+  color: var(--goto-green-dark);
+}
+
 /* ================= WEB PRESENTATION & TRACEABILITY STYLES ================= */
 .sidebar-switch-btn.active.pres-switch {
   background: linear-gradient(135deg, #00aa13, #047857);
@@ -6350,7 +6427,47 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 /* 16:9 Slide Canvas */
+.pres-stage-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pres-side-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transition: all 0.15s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.pres-side-arrow-btn:hover:not(:disabled) {
+  background: #00aa13;
+  border-color: #00aa13;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.pres-side-arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .pres-canvas {
+  flex: 1;
+  min-width: 0;
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
@@ -7002,6 +7119,8 @@ const isColNumeric = (tbl, cIdx) => {
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.15s ease;
+  position: relative;
+  z-index: 20;
 }
 
 .present-arrow-btn:hover:not(:disabled) {
@@ -7090,7 +7209,7 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .pres-interactive-row:hover td {
-  background: #ecfdf5 !important;
+  background: var(--bg-hover);
 }
 
 /* Click Popover Above Mouse */
@@ -7514,5 +7633,32 @@ const isColNumeric = (tbl, cIdx) => {
   color: #06281e;
   font-weight: 700;
   box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+}
+
+/* Header Theme Toggle Button */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--goto-green);
+  color: var(--goto-green);
+  background: var(--goto-green-light);
 }
 </style>

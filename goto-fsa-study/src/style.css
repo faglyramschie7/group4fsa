@@ -9,11 +9,15 @@
   
   --bg-main: #f8faf9;
   --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-hover: #f1f5f9;
   --bg-sidebar: #0f1912;
   --border-color: #e5e9e6;
   --border-light: #f0f3f1;
+  --border-strong: #cbd5e1;
   
   --text-main: #18221b;
+  --text-heading: #0f172a;
   --text-muted: #5e6d63;
   --text-light: #8e9e94;
   
@@ -27,6 +31,40 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
   --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --goto-green: #10b981;
+  --goto-green-dark: #059669;
+  --goto-green-light: rgba(16, 185, 129, 0.16);
+  --goto-green-glow: rgba(16, 185, 129, 0.25);
+
+  --bg-main: #0b1120;
+  --bg-card: #111827;
+  --bg-subtle: #1e293b;
+  --bg-hover: #263244;
+  --bg-sidebar: #090f1a;
+  --border-color: #334155;
+  --border-light: #1e293b;
+  --border-strong: #475569;
+
+  --text-main: #e2e8f0;
+  --text-heading: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  --danger: #f87171;
+  --danger-bg: rgba(220, 38, 38, 0.16);
+  --warning: #fbbf24;
+  --warning-bg: rgba(217, 119, 6, 0.16);
+  --info: #60a5fa;
+  --info-bg: rgba(37, 99, 235, 0.18);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 28px rgba(0,0,0,0.55);
+  color-scheme: dark;
 }
 
 * {
@@ -55,4 +93,369 @@ table {
 
 pre, code {
   font-family: var(--font-mono);
+}
+
+/* ================= GLOBAL DARK MODE OVERRIDES ================= */
+html[data-theme="dark"] .top-nav,
+html[data-theme="dark"] .pres-controls-bar,
+html[data-theme="dark"] .asg-sec-toc-bar,
+html[data-theme="dark"] .right-detail-drawer,
+html[data-theme="dark"] .lightbox-modal {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .breadcrumb-container,
+html[data-theme="dark"] .segmented-control,
+html[data-theme="dark"] .mode-context-pill,
+html[data-theme="dark"] .ticker-badge,
+html[data-theme="dark"] .pres-counter-pill,
+html[data-theme="dark"] .pres-time-badge,
+html[data-theme="dark"] .pres-pts-badge,
+html[data-theme="dark"] .pres-notes-toggle,
+html[data-theme="dark"] .pres-reveal-btn,
+html[data-theme="dark"] .asg-toc-btn,
+html[data-theme="dark"] .sec-cite-pill,
+html[data-theme="dark"] .evidence-kf-pill,
+html[data-theme="dark"] .chart-pill-badge,
+html[data-theme="dark"] .worksheet-cell-ref,
+html[data-theme="dark"] .worksheet-formula-bar code,
+html[data-theme="dark"] .badge-med,
+html[data-theme="dark"] .slide-card-week,
+html[data-theme="dark"] .report-org-tag {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .segmented-btn {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] .segmented-btn.active {
+  background: var(--bg-card);
+  color: var(--text-heading);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-theme="dark"] .pres-nav-btn,
+html[data-theme="dark"] .pres-dot-btn,
+html[data-theme="dark"] .pres-side-arrow-btn,
+html[data-theme="dark"] .lb-btn,
+html[data-theme="dark"] .evidence-zoom-btn,
+html[data-theme="dark"] .evidence-modal-btn {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-heading);
+}
+
+html[data-theme="dark"] .pres-nav-btn:hover:not(:disabled),
+html[data-theme="dark"] .pres-dot-btn:hover,
+html[data-theme="dark"] .pres-side-arrow-btn:hover:not(:disabled),
+html[data-theme="dark"] .lb-btn:hover {
+  background: var(--goto-green);
+  border-color: var(--goto-green);
+  color: #06281e;
+}
+
+html[data-theme="dark"] .pres-dot-btn.active {
+  background: var(--goto-green);
+  border-color: var(--goto-green);
+  color: #06281e;
+}
+
+html[data-theme="dark"] .pres-dot-btn.apx:not(.active) {
+  background: #1e293b;
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+/* Main Slide Canvas & Cards */
+html[data-theme="dark"] .pres-canvas {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+html[data-theme="dark"] .pres-slide-body,
+html[data-theme="dark"] .pres-slide-footer {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] .pres-kpi-card,
+html[data-theme="dark"] .pres-chart-card,
+html[data-theme="dark"] .pres-table-card,
+html[data-theme="dark"] .pres-info-card,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .slide-entry-card,
+html[data-theme="dark"] .asg-slide-card,
+html[data-theme="dark"] .asg-fin-table-card,
+html[data-theme="dark"] .asg-evidence-card,
+html[data-theme="dark"] .audit-evidence-container,
+html[data-theme="dark"] .lecture-chart-card,
+html[data-theme="dark"] .takeaway-card,
+html[data-theme="dark"] .roadmap-node,
+html[data-theme="dark"] .traceability-banner,
+html[data-theme="dark"] .trace-item-card,
+html[data-theme="dark"] .trace-evidence-box,
+html[data-theme="dark"] .drawer-trace-card,
+html[data-theme="dark"] .drawer-calc-box,
+html[data-theme="dark"] .drawer-featured-ev,
+html[data-theme="dark"] .drawer-summary-box,
+html[data-theme="dark"] .coc-item,
+html[data-theme="dark"] .goto-report-container {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+/* Lecture Dual Explanation Columns */
+html[data-theme="dark"] .exp-col.theory-col {
+  background: #111c30;
+  border-color: #1e3a8a;
+  border-left: 4px solid #3b82f6;
+}
+
+html[data-theme="dark"] .exp-col.theory-col h3 {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .exp-col.goto-col {
+  background: #0f1f18;
+  border-color: #065f46;
+  border-left: 4px solid var(--goto-green);
+}
+
+html[data-theme="dark"] .exp-col.goto-col h3 {
+  color: #34d399;
+}
+
+html[data-theme="dark"] .exp-body {
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .pres-info-card.card-tone-amber,
+html[data-theme="dark"] .kpi-amber {
+  background: var(--warning-bg);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+html[data-theme="dark"] .pres-info-card.card-tone-red {
+  background: var(--danger-bg);
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+html[data-theme="dark"] .pres-info-card.card-tone-blue {
+  background: var(--info-bg);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+html[data-theme="dark"] .pres-info-card.card-tone-green {
+  background: var(--goto-green-light);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+/* Headings & Primary Text */
+html[data-theme="dark"] .pres-kpi-val,
+html[data-theme="dark"] .pres-kpi-lbl,
+html[data-theme="dark"] .pres-table-title,
+html[data-theme="dark"] .pres-card-title,
+html[data-theme="dark"] .sec-card-heading,
+html[data-theme="dark"] .chart-main-title,
+html[data-theme="dark"] .report-title,
+html[data-theme="dark"] .formula-val-display,
+html[data-theme="dark"] .trace-banner-title h2,
+html[data-theme="dark"] .trace-mini-title,
+html[data-theme="dark"] .lightbox-title,
+html[data-theme="dark"] .asg-evidence-caption,
+html[data-theme="dark"] .evidence-kf-pill .kf-val,
+html[data-theme="dark"] .kpi-formula strong,
+html[data-theme="dark"] .notice-paragraph strong {
+  color: var(--text-heading);
+}
+
+html[data-theme="dark"] .pres-card-bullets li,
+html[data-theme="dark"] .sec-paragraph-text,
+html[data-theme="dark"] .notice-body,
+html[data-theme="dark"] .drawer-calc-steps li,
+html[data-theme="dark"] .trace-mapping-note,
+html[data-theme="dark"] .trace-slide-meta,
+html[data-theme="dark"] .trace-ev-label,
+html[data-theme="dark"] .legend-item,
+html[data-theme="dark"] .formula-val-tag {
+  color: var(--text-main);
+}
+
+/* Tables & Excel-Style Snapshot Widgets */
+html[data-theme="dark"] .wb-table-wrap,
+html[data-theme="dark"] .val-table-wrap,
+html[data-theme="dark"] .trace-mini-table-wrap,
+html[data-theme="dark"] .chart-card-topbar,
+html[data-theme="dark"] .asg-fin-table-topbar,
+html[data-theme="dark"] .lightbox-header,
+html[data-theme="dark"] .lightbox-footer,
+html[data-theme="dark"] .evidence-key-figures-bar,
+html[data-theme="dark"] .drawer-support-tbl-hdr,
+html[data-theme="dark"] .worksheet-formula-bar {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .worksheet-formula-bar.worksheet-active {
+  background: rgba(37, 99, 235, 0.16);
+  border-color: #3b82f6;
+}
+
+html[data-theme="dark"] .worksheet-formula-bar.worksheet-active code {
+  background: #0f172a;
+  color: #93c5fd;
+  border-color: #3b82f6;
+}
+
+html[data-theme="dark"] .data-table th,
+html[data-theme="dark"] .pres-data-table th,
+html[data-theme="dark"] .asg-fin-table thead th,
+html[data-theme="dark"] .wb-col-header-row td,
+html[data-theme="dark"] .wb-title-banner-row td,
+html[data-theme="dark"] .worksheet-letters th,
+html[data-theme="dark"] .worksheet-headings th {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .row-num-th {
+  background: #1e293b !important;
+  color: #94a3b8 !important;
+  border-right: 1px solid #334155 !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+html[data-theme="dark"] .data-table tbody tr:nth-child(even),
+html[data-theme="dark"] .data-table tbody tr:hover,
+html[data-theme="dark"] .asg-fin-table tbody tr:nth-child(even),
+html[data-theme="dark"] .asg-fin-table tbody tr:hover {
+  background: transparent;
+}
+
+html[data-theme="dark"] .data-table td,
+html[data-theme="dark"] .pres-data-table td,
+html[data-theme="dark"] .wb-data-table td,
+html[data-theme="dark"] .asg-fin-table tbody td,
+html[data-theme="dark"] .worksheet-grid td {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .data-table td.bold-cell {
+  color: var(--text-heading);
+}
+
+html[data-theme="dark"] .pres-interactive-row:hover td,
+html[data-theme="dark"] .fin-ratio-row:hover td,
+html[data-theme="dark"] .worksheet-grid tr:hover td,
+html[data-theme="dark"] .asg-fin-table tbody tr:hover td {
+  background: #132c29 !important;
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .pres-interactive-row:hover td.bold-cell,
+html[data-theme="dark"] .fin-ratio-row:hover td.bold-cell,
+html[data-theme="dark"] .worksheet-grid tr:hover td.bold-cell {
+  color: #6ee7b7 !important;
+}
+
+html[data-theme="dark"] .data-table td.worksheet-used,
+html[data-theme="dark"] .worksheet-grid tr:hover td.worksheet-used {
+  background: #162d47 !important;
+  color: #e0f2fe !important;
+  box-shadow: inset 0 0 0 1.5px #38bdf8 !important;
+}
+
+html[data-theme="dark"] .highlighted-support-row td,
+html[data-theme="dark"] .worksheet-grid td.is-cell-lit,
+html[data-theme="dark"] .worksheet-grid tr:hover td.is-cell-lit,
+html[data-theme="dark"] .data-table td.is-cell-lit,
+html[data-theme="dark"] .data-table td.worksheet-selected,
+html[data-theme="dark"] .worksheet-grid tr:hover td.worksheet-selected {
+  background: #1b325f !important;
+  color: #f8fafc !important;
+  box-shadow: inset 0 0 0 2px #60a5fa !important;
+}
+
+html[data-theme="dark"] .highlighted-support-row td:first-child {
+  background: #362916 !important;
+  color: #fde68a !important;
+}
+
+html[data-theme="dark"] .worksheet-grid tr.is-row-lit td,
+html[data-theme="dark"] .data-table tr.is-row-lit td,
+html[data-theme="dark"] .data-table tr.is-row-lit td.bold-cell {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .gap-expl-box {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  border-left: 4px solid #3b82f6;
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .gap-expl-box h3,
+html[data-theme="dark"] .gap-expl-box p {
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .ref-chip {
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* Keep white-background chart & evidence PNGs crisp in dark mode */
+html[data-theme="dark"] .pres-chart-img,
+html[data-theme="dark"] .evidence-image-wrapper,
+html[data-theme="dark"] .asg-evidence-thumb,
+html[data-theme="dark"] .trace-slide-thumb,
+html[data-theme="dark"] .trace-ev-thumb,
+html[data-theme="dark"] .drawer-thumb,
+html[data-theme="dark"] .trend-svg {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+/* Popover & Speaker Box */
+html[data-theme="dark"] .click-popover-above {
+  background: #1e293b;
+  border-color: #475569;
+  color: #f1f5f9;
+  box-shadow: var(--shadow-lg);
+}
+
+html[data-theme="dark"] .roadmap-node.current {
+  background: #0f1f18;
+  border-color: var(--goto-green);
+}
+
+html[data-theme="dark"] .node-story-clue {
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  border-left-color: var(--goto-green);
+}
+
+html[data-theme="dark"] .node-story-clue strong {
+  color: #34d399;
+}
+
+html[data-theme="dark"] .pres-speaker-box {
+  background: #172554;
+  border-color: #3b82f6;
+  color: #e2e8f0;
 }
