@@ -89,8 +89,8 @@ const editorialRows = computed(() => {
       img: '/visuals/row_gojek.png',
       text: id ? 'Mobilitas, pengantaran makanan, dan logistik' : 'Mobility, food delivery, and logistics',
       detail_explanation: id
-        ? 'Angka ini berasal dari Catatan 29 (Segmen Operasi) di Laporan Tahunan 2025 hal. 468 / LK Auditan FY2025 hal. 133 — bukan dari baris atas Laporan Laba Rugi Konsolidasian (yang hanya menampilkan total Rp 18.322 M). Gojek (On-Demand Services) adalah mesin pendapatan terbesar GoTo (67,5% dari total pendapatan bersih konsolidasian) dan sudah mencetak laba segmen +Rp 888,6 M sebelum biaya korporasi.'
-        : 'This figure comes from Note 29 (Segment Operations) in the 2025 Annual Report p. 468 / Audited LK GOTO FY2025 p. 133 — NOT from the top line of the Consolidated Income Statement (which only shows total consolidated revenue). Gojek (On-Demand Services) is GoTo’s largest revenue engine (67.5% of consolidated net revenue) and generated +Rp 888.6 bn in segment operating profit before corporate overhead.',
+        ? 'Berasal dari Catatan 29 (Segmen Operasi) pada Laporan Tahunan 2025 hal. 468 / LK Auditan FY2025 hal. 133. Gojek (On-Demand Services) adalah mesin pendapatan terbesar GoTo (67,5% dari total pendapatan bersih konsolidasian) dan mencetak laba segmen +Rp 888,6 M sebelum biaya korporasi.'
+        : 'From Note 29 (Segment Operations) in the 2025 Annual Report p. 468 / Audited LK GOTO FY2025 p. 133. Gojek (On-Demand Services) is GoTo’s largest revenue engine (67.5% of consolidated net revenue) and generated +Rp 888.6 bn in segment operating profit before corporate overhead.',
       formula: id ? 'Pendapatan Bersih ODS = Rp 15.030,99 M (Bruto) − Rp 2.669,74 M (Insentif) = Rp 12.361,26 M' : 'ODS Net Revenue = Rp 15,030.99 bn (Gross) − Rp 2,669.74 bn (Incentives) = Rp 12,361.26 bn',
       calc_steps: [
         id ? 'Pendapatan bruto pihak ketiga ODS: Rp 15.030.994 juta' : 'Gross third-party ODS revenue: Rp 15,030,994 million',
@@ -151,8 +151,8 @@ const editorialRows = computed(() => {
       img: '/visuals/row_cfo.png',
       text: id ? 'Kas yang dihasilkan dari operasi pada 2025' : 'Cash generated from operations in 2025',
       detail_explanation: id
-        ? 'Diambil langsung dari Laporan Arus Kas Konsolidasian FY2025 (Arus Kas Bersih dari Aktivitas Operasi = +Rp 307.183 juta). Meski positif secara headline (membaik dari defisit 2023–2024), angka ini belum cukup membiayai belanja modal maupun mencerminkan kemampuan menghasilkan kas bebas yang berkelanjutan.'
-        : 'Taken directly from the FY2025 Consolidated Statement of Cash Flows (Net Cash Provided by Operating Activities = +Rp 307,183 million). While headline positive after prior-year burns, it is far too small to cover capital expenditure and is partly aided by working-capital timing.',
+        ? 'Arus kas bersih dari aktivitas operasi pada Laporan Arus Kas Konsolidasian FY2025 sebesar +Rp 307.183 juta. Meski positif secara headline setelah defisit tahun-tahun sebelumnya, jumlah ini belum cukup menutup belanja modal dan sebagian terbantu oleh pergerakan modal kerja.'
+        : 'FY2025 Consolidated Net Cash Provided by Operating Activities was +Rp 307,183 million. While headline positive after prior-year burns, it remains insufficient to cover capital expenditure and was partly supported by working-capital timing.',
       formula: id ? 'CFO FY2025 = +Rp 307.183 juta (+Rp 307 M) | Akrual M3 = (Laba Bersih − CFO) / Aset Akhir = −3,95%' : 'FY2025 CFO = +Rp 307,183m (+Rp 307 bn) | M3 Accrual = (Net Income − CFO) / Closing Assets = −3.95%',
       calc_steps: [
         id ? 'Arus kas bersih dari aktivitas operasi (LK Arus Kas): +Rp 307.183 juta' : 'Net cash from operating activities (Cash Flow Statement): +Rp 307,183m',
@@ -416,12 +416,12 @@ const provisionGrowth = computed(() => {
         >
           <span>{{ lang === 'id' ? 'JAWABAN KAMI' : 'OUR ANSWER' }}</span>
           <strong>{{ lang === 'id' ? 'JUAL / HINDARI' : 'SELL / AVOID' }}</strong>
-          <p>{{ lang === 'id' ? 'pada harga acuan Rp 25,00 per saham' : 'at the reference price of Rp 25.00 per share' }}</p>
+          <p>{{ lang === 'id' ? 'pada harga Rp 25,00 per saham' : 'at Rp 25.00 per share' }}</p>
         </div>
         <div class="slide-cover-reason">
           <span>{{ lang === 'id' ? 'ALASAN UTAMA' : 'THE MAIN REASON' }}</span>
           <p>{{ lang === 'id' ? 'Dalam skenario dasar kami, pembakaran kas menurunkan saldo kas dari Rp 21,76 triliun pada 2025 menjadi Rp 968 miliar pada 2028F.' : 'Under our base case, continued cash burn reduces cash from Rp 21.76 trillion in 2025 to Rp 968 billion in 2028F.' }}</p>
-          <small>{{ lang === 'id' ? 'Sumber: proyeksi Milestone 4' : 'Source: Milestone 4 forecast' }}</small>
+          <small>{{ lang === 'id' ? 'Sumber: proyeksi skenario dasar' : 'Source: Base-case pro forma forecast' }}</small>
         </div>
         </aside>
         <div class="slide-cover-team">

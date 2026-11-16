@@ -5,7 +5,7 @@
     "speaker": "Fagly Ramschie",
     "section_tag": "Opening & Investment Thesis",
     "title": "PT GoTo Gojek Tokopedia Tbk (IDX: GOTO): Why a Long-Term Equity Investor Should SELL at Rp 25.00",
-    "subtitle": "Company Introduction, Week 1 Target Decision Maker, and Core Investment Verdict in One Argument",
+    "subtitle": "Company Introduction, Target Investor Profile, and Core Investment Verdict",
     "time_budget": "1.5 mins",
     "rubric_points": "Required Opening",
     "company_logo": "/goto_logo.png",
@@ -151,7 +151,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Speaker 1: Fagly Ramschie — 1.5 mins] Good afternoon everyone. Today Group 4 is evaluating PT GoTo Gojek Tokopedia Tbk, ticker GOTO — Indonesia's largest integrated digital ecosystem connecting 66 million users, over 6.4 million merchants, and more than 3 million driver partners across Gojek, GoPay, and a 24.99% stake in Tokopedia. Our target decision-maker, identified in Week 1, is a long-term public equity investor looking at GOTO trading at Rp 25.00 per share — down 93% from its Rp 338 IPO price and sitting just below book value at 0.9x P/B — asking one critical question: Is this a turnaround bargain, or a capital trap? Our answer in one sentence is clear: We recommend SELL / AVOID at Rp 25.00 because fierce competition blocks pricing power, operating cash flow still fails to fund capital spending, and continuing losses drive deeply negative intrinsic value under both DCF (-Rp 121.1) and Residual Income (-Rp 75.1). Let us walk you through the evidence step by step — starting with how GoTo makes money and why its industry structure makes profitability so hard.\n\nCourse-based explanation:\nCompany and user: Gojek mobility and GoTo Financial, plus 24.99% of Tokopedia. The decision belongs to a long-term public equity investor.\n\nOne-sentence answer: SELL / AVOID at the assignment reference price of Rp 25.00 because competitive pressure and the historical-cost scenario leave cash generation below investment needs.",
+    "speaker_notes": "[Speaker 1: Fagly Ramschie — 1.5 mins] Good afternoon everyone. Today Group 4 is evaluating PT GoTo Gojek Tokopedia Tbk, ticker GOTO — Indonesia's largest integrated digital ecosystem connecting 66 million users, over 6.4 million merchants, and more than 3 million driver partners across Gojek, GoPay, and a 24.99% stake in Tokopedia. Our target decision-maker, identified in Week 1, is a long-term public equity investor looking at GOTO trading at Rp 25.00 per share — down 93% from its Rp 338 IPO price and sitting just below book value at 0.9x P/B — asking one critical question: Is this a turnaround bargain, or a capital trap? Our answer in one sentence is clear: We recommend SELL / AVOID at Rp 25.00 because fierce competition blocks pricing power, operating cash flow still fails to fund capital spending, and continuing losses drive deeply negative intrinsic value under both DCF (-Rp 121.1) and Residual Income (-Rp 75.1). Let us walk you through the evidence step by step — starting with how GoTo makes money and why its industry structure makes profitability so hard.\n\nCourse-based explanation:\nCompany and user: Gojek mobility and GoTo Financial, plus 24.99% of Tokopedia. The decision belongs to a long-term public equity investor.\n\nOne-sentence answer: SELL / AVOID at Rp 25.00 per share because competitive pressure and the historical-cost scenario leave cash generation below investment needs.",
     "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
     "lecture_traces": [
       {
@@ -196,7 +196,7 @@
       },
       {
         "heading": "One-sentence answer",
-        "text": "SELL / AVOID at the assignment reference price of Rp 25.00 because competitive pressure and the historical-cost scenario leave cash generation below investment needs."
+        "text": "SELL / AVOID at Rp 25.00 per share because competitive pressure and the historical-cost scenario leave cash generation below investment needs."
       }
     ],
     "course_basis": [
@@ -280,8 +280,8 @@
           "5,191",
           "74.1%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Revenue Mix Across Core Segments",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations) — Gojek Rp 12,361 bn & FinTech Rp 5,191 bn",
         "val": "Rp 12.36T / 5.19T",
         "label": "ODS vs. FinTech Revenue",
         "sub": "67.5% Mobility/Food | 28.3% FinTech (+74%)",
@@ -317,8 +317,8 @@
           "12,361",
           "Gojek"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "ODS Revenue Base",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations)",
         "title": "Engine 1: On-Demand Services (Gojek — Rp 12.36T)",
         "tone": "blue",
         "bullets": [
@@ -342,8 +342,8 @@
           "74.1%",
           "2,895"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Note 14 Bank Jago Associate",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations)",
         "title": "Engine 2: Financial Technology (GoTo Financial — Rp 5.19T)",
         "tone": "emerald",
         "bullets": [
@@ -545,8 +545,8 @@
           "Maxim",
           "Shopee"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Competitive Margin Pressure in Operating Costs",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "High Rivalry",
         "label": "Porter's Industry Structure",
         "sub": "Grab, Maxim, inDrive & Shopee Pressure",
@@ -600,8 +600,8 @@
           "3M",
           "Grab"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Cost Pressure",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Competitive Position (Porter's 5 Forces Summary)",
         "tone": "amber",
         "bullets": [
@@ -995,7 +995,7 @@
         ],
         "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
         "evidence_caption": "Accumulated Deficit Impact",
-        "title": "Z = −4.72: Week 6 calculation",
+        "title": "Z = −4.72 (Distress Zone) calculation",
         "tone": "rose",
         "bullets": [
           {
@@ -1009,7 +1009,7 @@
         ]
       }
     ],
-    "speaker_notes": "Our Z-score follows Week 6: Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.\n\nDuPont: −5.2% ROE: −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier. Losses remain the main drag despite improving efficiency.\n\nLiquidity differs from coverage: Current ratio 2.73x and cash Rp 21.76T support liquidity. Debt/equity rises to 0.27x, while −0.71x interest coverage shows EBIT cannot fund interest.\n\nZ = −4.72: Week 6: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result.",
+    "speaker_notes": "Our Z-score follows Week 6: Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.\n\nDuPont: −5.2% ROE: −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier. Losses remain the main drag despite improving efficiency.\n\nLiquidity differs from coverage: Current ratio 2.73x and cash Rp 21.76T support liquidity. Debt/equity rises to 0.27x, while −0.71x interest coverage shows EBIT cannot fund interest.\n\nZ = −4.72 (Distress Zone): 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result.",
     "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
     "lecture_traces": [
       {
@@ -1095,7 +1095,7 @@
         "text": "Current ratio 2.73x and cash Rp 21.76T support liquidity. Debt/equity rises to 0.27x, while −0.71x interest coverage shows EBIT cannot fund interest."
       },
       {
-        "heading": "Z = −4.72: Week 6",
+        "heading": "Z = −4.72 (Distress Zone)",
         "text": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result."
       }
     ],
@@ -1273,8 +1273,8 @@
           "1,808.7",
           "45,758"
         ],
-        "evidence_img": "/evidence/goto_note34_goodwill_impairment.png",
-        "evidence_caption": "Non-Cash Depreciation & Impairment Items",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "-3.95%",
         "label": "Accrual ratio (Milestone 3)",
         "sub": "Numerator: NI − CFO; denominator: closing assets",
@@ -1376,7 +1376,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Anggreini Ruitan; 2.0 mins]\n\nCash quality: only 26% coverage: CFO of Rp 307 bn less Rp 1,182 bn capex leaves −Rp 875 bn FCF. Deposit liquidation and new loans support cash without proving operating self-sufficiency.\n\nAccruals: −3.95% (Milestone 3): Milestone 3 uses (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk.\n\nFootnotes explain the exposure: Note 14: associates are 22.57% of assets. Notes 15/34: Level 3 estimates. Note 25: related-party revenue 7.13%. Note 2s: incentives affect reported net revenue.\n\nFollow Milestone 3: (−1,501,685 − 307,025) / 45,757,642 = −3.952804%. Inputs are Rp million and the denominator is closing assets. This submitted milestone definition controls the deck; the average-assets version from earlier exercises does not replace it. The 20% haircut remains a separate before-tax valuation sensitivity, not a recognized impairment or earnings add-back.",
+    "speaker_notes": "[Anggreini Ruitan; 2.0 mins]\n\nCash quality: only 26% coverage: CFO of Rp 307 bn less Rp 1,182 bn capex leaves −Rp 875 bn FCF. Deposit liquidation and new loans support cash without proving operating self-sufficiency.\n\nAccrual Ratio: −3.95% of Assets: Calculated as (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk.\n\nFootnotes explain the exposure: Note 14: associates are 22.57% of assets. Notes 15/34: Level 3 estimates. Note 25: related-party revenue 7.13%. Note 2s: incentives affect reported net revenue.\n\nFollow Milestone 3: (−1,501,685 − 307,025) / 45,757,642 = −3.952804%. Inputs are Rp million and the denominator is closing assets. This submitted milestone definition controls the deck; the average-assets version from earlier exercises does not replace it. The 20% haircut remains a separate before-tax valuation sensitivity, not a recognized impairment or earnings add-back.",
     "source_footer": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
     "lecture_traces": [
       {
@@ -1465,8 +1465,8 @@
         "text": "CFO of Rp 307 bn less Rp 1,182 bn capex leaves −Rp 875 bn FCF. Deposit liquidation and new loans support cash without proving operating self-sufficiency."
       },
       {
-        "heading": "Accruals: −3.95% (Milestone 3)",
-        "text": "Milestone 3 uses (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk."
+        "heading": "Accrual Ratio: −3.95% of Assets",
+        "text": "Calculated as (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk."
       },
       {
         "heading": "Footnotes explain the exposure",
@@ -1586,8 +1586,8 @@
           "58.9%",
           "15.3%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Historical Growth & Margin Drivers",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "11.4% / 58.9%",
         "label": "Base Growth & Gross Margin",
         "sub": "Opt: 15.3%/61.9% | Cons: 7.5%/53.4%",
@@ -1606,8 +1606,8 @@
           "14,282",
           "7,642"
         ],
-        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-        "evidence_caption": "Cash Depletion Path in Base Case",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp 968 bn",
         "label": "2028F Base Ending Cash",
         "sub": "Drains Down from Rp 21,755 bn (25A)",
@@ -1625,8 +1625,8 @@
           "10,954",
           "1,062"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Leverage Breakeven Check",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp 18,604 bn",
         "label": "Fixed-OpEx Breakeven",
         "sub": "vs Rp 27.2T-33.8T When OpEx Scales",
@@ -1690,8 +1690,8 @@
             "22,732",
             "25,321"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Revenue Forecast"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "EBIT feeds Assignment 14 DCF Valuation!B6:D6.",
@@ -1703,8 +1703,8 @@
             "4,459.4",
             "4,967.4"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Base Case EBIT Burn"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Net Income feeds Assignment 14 Residual Income!B7:D7.",
@@ -1716,8 +1716,8 @@
             "4,092.7",
             "4,488.9"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Base Case Net Loss"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Cash falls Rp 20.8T over 3 years as Base burn continues.",
@@ -1729,8 +1729,8 @@
             "7,642",
             "968"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Ending Cash Balance"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.",
@@ -1742,8 +1742,8 @@
             "2,430",
             "3,954"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Fixed-OpEx Upside Scenario"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -1798,7 +1798,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Anggreini Ruitan; 2.5 mins]\n\nGrowth and working capital: 11.4% growth averages 7.5% and 15.3%. DSO/DIO/DPO of 24.2/4.8/67.8 days drive working capital. Cash must reconcile across the forecast balance sheet and cash flow.\n\nMilestone 4 cost assumptions: Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit.\n\nThree cases, explicit alternatives: Growth/OpEx/capex: optimistic 15.3%/55.7%/6.5%, base 11.4%/78.5%/16.3%, conservative 7.5%/85%/20%. A fixed-cost freeze at Rp 10,954 bn produces a different earnings path.\n\nBase figures follow Milestone 4, including its 24.2-day DSO assumption. The base and fixed-cost alternative are distinct scenarios. The 10.2% forecast borrowing rate is M4’s historical-average assumption, while the 6.91% WACC debt cost is Assignment 14’s FY2025 input. Preserve these submitted bases rather than substituting one for the other.",
+    "speaker_notes": "[Anggreini Ruitan; 2.5 mins]\n\nGrowth and working capital: 11.4% growth averages 7.5% and 15.3%. DSO/DIO/DPO of 24.2/4.8/67.8 days drive working capital. Cash must reconcile across the forecast balance sheet and cash flow.\n\nBase-case cost assumptions: Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit.\n\nThree cases, explicit alternatives: Growth/OpEx/capex: optimistic 15.3%/55.7%/6.5%, base 11.4%/78.5%/16.3%, conservative 7.5%/85%/20%. A fixed-cost freeze at Rp 10,954 bn produces a different earnings path.\n\nBase figures follow Milestone 4, including its 24.2-day DSO assumption. The base and fixed-cost alternative are distinct scenarios. The 10.2% forecast borrowing rate is M4’s historical-average assumption, while the 6.91% WACC debt cost is Assignment 14’s FY2025 input. Preserve these submitted bases rather than substituting one for the other.",
     "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
     "lecture_traces": [
       {
@@ -1887,7 +1887,7 @@
         "text": "11.4% growth averages 7.5% and 15.3%. DSO/DIO/DPO of 24.2/4.8/67.8 days drive working capital. Cash must reconcile across the forecast balance sheet and cash flow."
       },
       {
-        "heading": "Milestone 4 cost assumptions",
+        "heading": "Base-case cost assumptions",
         "text": "Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit."
       },
       {
@@ -2096,8 +2096,8 @@
             "4.502%",
             "6.120%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Sovereign Yield Adjustment"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
@@ -2108,8 +2108,8 @@
             "0.59",
             "4.23%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta & ERP"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Adds Indonesia equity volatility premium above Baa2 sovereign spread.",
@@ -2119,8 +2119,8 @@
           "highlight_terms": [
             "2.465%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Country Risk Premium"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Ke = 8.45% measures the minimum annual return shareholders demand.",
@@ -2130,8 +2130,8 @@
           "highlight_terms": [
             "8.45%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Cost of Equity Result"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Uses GoTo's actual 2025 effective borrowing cost adjusted for the 22% statutory tax rate.",
@@ -2284,8 +2284,8 @@
           "7.76%",
           "8.45%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Consistent Long-Run Growth Input",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "3.00%",
         "label": "Justified Terminal Growth (g)",
         "sub": "Below 7.76% WACC & ID Nominal GDP",
@@ -2303,8 +2303,8 @@
           "142,598",
           "14,013"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Cash Flow & Capex Subtraction",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp (121.1) / sh",
         "label": "Base DCF Value / Share",
         "sub": "EV -142.6T + Net Cash +14.0T",
@@ -2322,8 +2322,8 @@
           "28,712",
           "2,427"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Beginning Book Equity Anchor",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp (75.1) / sh",
         "label": "Residual Income Value / Share",
         "sub": "BVE +28.7T Eroded by -108.5T PV(RI)",
@@ -2374,8 +2374,8 @@
             "7,738.7",
             "6,164"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Forecast Consistency Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "PV of explicit forecast; Rp (18,930.7) bn; Rp (15,860.4) bn",
@@ -2386,8 +2386,8 @@
             "18,930.7",
             "15,860.4"
           ],
-          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-          "evidence_caption": "Explicit Horizon Present Value"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "PV of terminal value, g = 3%; Rp (123,667.0) bn; Rp (92,621.5) bn",
@@ -2398,8 +2398,8 @@
             "123,667.0",
             "92,621.5"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Terminal Value PV"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Capital Bridge (Add Net Cash / Start Book Equity); EV (142,597.7) + Net Cash 14,012.5; Book Equity 28,711.7 + PV(RI) (108,481.9)",
@@ -2410,8 +2410,8 @@
             "14,012.5",
             "28,711.7"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Balance Sheet Value Anchors"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Implied Total Equity Value & Value per Share; Rp (128,585.2) bn  |  Rp (121.1) / share; Rp (79,770.2) bn  |  Rp (75.1) / share",
@@ -2422,8 +2422,8 @@
             "121.1",
             "75.1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Per-Share Equity Result"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -2437,8 +2437,8 @@
           "3.0%",
           "22%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Terminal Growth & Tax Guardrail",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Why Terminal Growth g = 3.0% (< 7.76%) & Tax Rule",
         "tone": "blue",
         "bullets": [
@@ -2461,8 +2461,8 @@
           "121.1",
           "75.1"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Intrinsic Convergence",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Why DCF & Residual Income Agree Below Zero",
         "tone": "rose",
         "bullets": [
@@ -3172,8 +3172,8 @@
           "13.20",
           "968"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Net Loss & Cash Burn Basis",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "SELL / AVOID",
         "label": "Decision at Rp 25.00",
         "sub": "Downside Toward Rp 13.20 Net Cash",
@@ -3190,8 +3190,8 @@
           "2.43T",
           "8.45%"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Book Equity Charge Threshold",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "> +Rp 2.43T / yr",
         "label": "GAAP Net Profit Hurdle",
         "sub": "Required to Beat 8.45% Cost of Equity",
@@ -3209,8 +3209,8 @@
           "56%",
           "18,604"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Cash Flow Self-Funding Target",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "> +Rp 1.2T / yr",
         "label": "Operating Cash Hurdle",
         "sub": "Required CFO to Cover Capex (+FCF)",
@@ -3228,8 +3228,8 @@
           "10.90",
           "121.1"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Strategy-to-Valuation Proof",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "1. Why SELL / AVOID at Rp 25.00 (Full Argument)",
         "tone": "rose",
         "bullets": [
@@ -3253,8 +3253,8 @@
           "56%",
           "2.43T"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Leverage Trigger",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "2. Three Concrete Conditions to Reconsider (Upgrade)",
         "tone": "emerald",
         "bullets": [
@@ -3278,8 +3278,8 @@
           "1.82T",
           "13.20"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Associate & Credit Risks",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "3. Key Risks to Our Recommendation",
         "tone": "amber",
         "bullets": [
@@ -3294,7 +3294,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Speaker 1: Fagly Ramschie — 2.0 mins] Bringing our entire argument full circle for our Week 1 public equity investor: our recommendation is clear — SELL or AVOID GOTO at Rp 25.00. Why? Every link in our chain points in the same direction. Strategically, near-zero switching costs force heavy promotions. Operationally, +Rp 307 billion in CFO still fails to fund Capex, leaving -Rp 875 billion Free Cash Flow, an Altman Z-Score of -4.72, and -5.2% ROE. And financially, Base Case historical cost scaling drains cash down to Rp 968 billion by 2028F, giving deeply negative DCF (-Rp 121.1) and Residual Income (-Rp 75.1) values. What would change our mind? Only three concrete proof points: operating cash flow consistently exceeding Rp 1.2 trillion to self-fund Capex, fixed OpEx frozen below 56% of revenue as in our breakeven scenario, and two consecutive years of GAAP net income above Rp 2.43 trillion to beat our 8.45% Cost of Equity hurdle. Until then, downside risks — from credit losses to Rp 1.82 trillion associate write-down exposure — outweigh speculative M&A upside. Thank you, and we welcome your questions.\n\nCourse-based explanation:\nDecision for the Week 1 user: SELL / AVOID at the assignment reference price of Rp 25.00 under the submitted historical-cost base case. The decision is conditional on whether operating improvements persist.\n\nWhat would change the conclusion: CFO sustainably covers annual capex. Operating costs remain disciplined. GAAP profit exceeds the Rp 2.43T equity-charge hurdle for two years. Rebuild the forecast when these conditions change.\n\nRisks in both directions: Upside: cost discipline, profitable FinTech scaling, or consolidation. Downside: credit losses, investment impairments, and cash depletion. A 20% Tokopedia/Level 3 stress is an assumption, not an observed loss.",
+    "speaker_notes": "[Speaker 1: Fagly Ramschie — 2.0 mins] Bringing our entire argument full circle for our Week 1 public equity investor: our recommendation is clear — SELL or AVOID GOTO at Rp 25.00. Why? Every link in our chain points in the same direction. Strategically, near-zero switching costs force heavy promotions. Operationally, +Rp 307 billion in CFO still fails to fund Capex, leaving -Rp 875 billion Free Cash Flow, an Altman Z-Score of -4.72, and -5.2% ROE. And financially, Base Case historical cost scaling drains cash down to Rp 968 billion by 2028F, giving deeply negative DCF (-Rp 121.1) and Residual Income (-Rp 75.1) values. What would change our mind? Only three concrete proof points: operating cash flow consistently exceeding Rp 1.2 trillion to self-fund Capex, fixed OpEx frozen below 56% of revenue as in our breakeven scenario, and two consecutive years of GAAP net income above Rp 2.43 trillion to beat our 8.45% Cost of Equity hurdle. Until then, downside risks — from credit losses to Rp 1.82 trillion associate write-down exposure — outweigh speculative M&A upside. Thank you, and we welcome your questions.\n\nCourse-based explanation:\nRecommendation for equity investors: SELL / AVOID at Rp 25.00 per share under the historical-cost base case. The decision is conditional on whether operating improvements persist.\n\nWhat would change the conclusion: CFO sustainably covers annual capex. Operating costs remain disciplined. GAAP profit exceeds the Rp 2.43T equity-charge hurdle for two years. Rebuild the forecast when these conditions change.\n\nRisks in both directions: Upside: cost discipline, profitable FinTech scaling, or consolidation. Downside: credit losses, investment impairments, and cash depletion. A 20% Tokopedia/Level 3 stress is an assumption, not an observed loss.",
     "source_footer": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
     "lecture_traces": [
       {
@@ -3334,8 +3334,8 @@
     "section_name": "Recommendation",
     "analysis_points": [
       {
-        "heading": "Decision for the Week 1 user",
-        "text": "SELL / AVOID at the assignment reference price of Rp 25.00 under the submitted historical-cost base case. The decision is conditional on whether operating improvements persist."
+        "heading": "Recommendation for equity investors",
+        "text": "SELL / AVOID at Rp 25.00 per share under the historical-cost base case. The decision is conditional on whether operating improvements persist."
       },
       {
         "heading": "What would change the conclusion",
@@ -3778,8 +3778,8 @@
             "27.2T",
             "4,003"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Scaled OpEx"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Freezing opex at Rp 10,954 bn drops breakeven to Rp 18,604 bn.",
@@ -3791,8 +3791,8 @@
             "1,062",
             "11.31x"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Fixed-OpEx Breakeven"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Assignment 14 baseline WACC (7.76%) & terminal g (3.0%).",
@@ -3803,8 +3803,8 @@
             "121.1",
             "75.1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Base Valuation"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Lowering g to 2.0% leaves both DCF (-99.9) & RI (-60.9) deeply negative.",
@@ -3815,8 +3815,8 @@
             "99.9",
             "60.9"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Lower g Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Market beta (1.00) yields WACC 9.89%, still deeply negative.",
@@ -3827,8 +3827,8 @@
             "79.9",
             "47.5"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta 1.00 Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "High tech beta (1.25) yields WACC 11.18%, still negative.",
@@ -3839,8 +3839,8 @@
             "65.3",
             "38.3"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta 1.25 Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -3854,8 +3854,8 @@
           "0.59",
           "1.25"
         ],
-        "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-        "evidence_caption": "Discount Rate Sensitivity",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Key Q&A Insight: Why Higher Discount Rates Make Negative DCF Less Negative",
         "tone": "blue",
         "bullets": [
@@ -4021,8 +4021,8 @@
           "highlight_terms": [
             "Slide 1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Opening"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Splits Business Model/Pivot (S2) and Rivalry/Credit Risks (S3) cleanly.",
@@ -4032,8 +4032,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Strategy Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Covers Chart 1, DuPont (-5.2%), Z (-4.72), CFO/Capex (26%), and 22.6% associates.",
@@ -4043,8 +4043,8 @@
           "highlight_terms": [
             "20 pts"
           ],
-          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-          "evidence_caption": "Financial & Accounting Quality"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Presents single Milestone 4 forecast driving DCF/RI and Fixed-OpEx breakeven.",
@@ -4054,8 +4054,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Forecast Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Covers WACC (7.76%), DCF (-121.1), RI (-75.1), Multiples (91.0), and Chart 2.",
@@ -4065,8 +4065,8 @@
           "highlight_terms": [
             "20 pts"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Valuation Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Total delivery = 20.5 mins (tightly paced around 20-min target) + 10-min Q&A = 100 pts.",
@@ -4076,8 +4076,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Delivery + Q&A"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -4091,8 +4091,8 @@
           "100%",
           "14"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Guidelines Verification",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Assignment 16 coverage",
         "tone": "emerald",
         "bullets": [

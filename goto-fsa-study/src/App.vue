@@ -1625,15 +1625,14 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
     return {
       title: force,
       value: rating,
-      explanation: `${basis} — Assessed in Milestone 1 (Industry & Competitive Analysis) using GoTo FY2025 disclosures (Rp 3.09T promo/marketing, Rp 2.15T product expense, Rp 2,731 bn net consumer loans) to evaluate whether GoTo has pricing power or durable economic moat.`,
-      detail_explanation: `${basis}\n\nWhy it's here: Porter's Five Forces establishes why GoTo cannot simply raise take-rates to become profitable. Source: Milestone 1 (Industry Analysis) & LK GOTO FY2025 Note 7 / Note 30.`,
-      formula: 'Industry Moat Check: Competitive Rivalry (High) + Low Switching Costs → Sustained Promo Spend (Rp 3.09T)',
+      explanation: `${basis}. Intense rivalry and low switching costs require Rp 3.09T in promo/marketing spend and Rp 2.15T in product development, capping take-rate expansion.`,
+      detail_explanation: `${basis}. Under Porter's Five Forces, intense competitive rivalry and low user switching costs prevent GoTo from raising take-rates without losing volume, while consumer lending (Rp 2,731 bn net loans) adds credit-loss sensitivity.`,
+      formula: 'Competitive Rivalry (High) + Low Switching Costs → Sustained Promo Spend (Rp 3.09T)',
       calc_steps: [
         `Force: ${force} → Rating: ${rating}`,
-        `Basis: ${basis}`,
-        'Slide takeaway: Weak pricing power caps margin expansion in the forecast model.'
+        `Basis: ${basis}`
       ],
-      data_origin: slide.source_footer || 'Milestone 1 (Industry & Competitive Analysis) & LK GOTO FY2025',
+      data_origin: slide.source_footer || 'LK GOTO FY2025 Note 7 & Note 30',
       highlight_terms: [force, rating].filter(Boolean),
       evidence_img: null,
       evidence_caption: '',
@@ -1666,7 +1665,7 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
       title: heading,
       value: slide.section_tag || `${uiText.value.slideWord} ${slide.slide_num}`,
       explanation: item.detail_explanation || text,
-      detail_explanation: item.detail_explanation || `${text}\n\nWhy it's on Slide ${slide.slide_num}: ${slide.subtitle || slide.title}`,
+      detail_explanation: item.detail_explanation || text,
       formula: item.formula || (matchingKpi?.formula || ''),
       calc_steps: item.calc_steps || (matchingKpi?.calc_steps || []),
       data_origin: item.data_origin || matchingKpi?.data_origin || slide.source_footer || '',
@@ -1681,7 +1680,7 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
       title: item.company,
       value: lang.value === 'id' ? 'Dikeluarkan' : 'Excluded',
       explanation: item.reason || '',
-      detail_explanation: `${item.reason}\n\nWhy it's excluded: Including non-comparable peers (diversified gaming/retail or distorted EBITDA/investment gains) would bias GoTo's relative valuation. Only Grab shares GoTo's core mobility + delivery + fintech operating mix.`,
+      detail_explanation: `${item.reason} Including diversified gaming/retail or distorted EBITDA multiples would bias GoTo's relative valuation; Grab is the closest operational match across mobility, delivery, and fintech.`,
       formula: 'Peer Selection Rule: Retain pure-play Mobility/Delivery/FinTech peers (GRAB only); Exclude SE, BUKA, BELI',
       calc_steps: [
         `Company: ${item.company} → Status: Excluded from comparable multiple`,

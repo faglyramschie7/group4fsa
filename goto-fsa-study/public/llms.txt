@@ -11,7 +11,7 @@
 ---
 
 ## Slide 1: PT GoTo Gojek Tokopedia Tbk (IDX: GOTO): Why a Long-Term Equity Investor Should SELL at Rp 25.00
-**Company Introduction, Week 1 Target Decision Maker, and Core Investment Verdict in One Argument**
+**Company Introduction, Target Investor Profile, and Core Investment Verdict**
 *Section: Opening & Investment Thesis | Time Budget: 1.5 mins | Rubric: Required Opening*
 
 ### Key Metrics & KPIs
@@ -57,7 +57,7 @@
 Course-based explanation:
 Company and user: Gojek mobility and GoTo Financial, plus 24.99% of Tokopedia. The decision belongs to a long-term public equity investor.
 
-One-sentence answer: SELL / AVOID at the assignment reference price of Rp 25.00 because competitive pressure and the historical-cost scenario leave cash generation below investment needs.
+One-sentence answer: SELL / AVOID at Rp 25.00 per share because competitive pressure and the historical-cost scenario leave cash generation below investment needs.
 
 *Sources: Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025*
 
@@ -209,7 +209,7 @@ Lending changes the risk: Net consumer loans reach Rp 2,731 bn. Provisions rise 
 - **Solvency vs. Cash Cushion:** Current Ratio (2.73x) is backed by Rp 21.76T cash, yet debt doubled to Rp 7.74T (D/E 0.27x) with -0.71x interest coverage.
 - *Context:* Shows that operational improvement has not eliminated negative return on equity or negative interest coverage.
 
-#### Z = −4.72: Week 6 calculation
+#### Z = −4.72 (Distress Zone) calculation
 - **Calculation:** Z = −4.72 using the Week 6 five-factor formula and the worksheet’s book-equity X4. Accumulated losses subtract 6.588 points. Distress threshold: 1.81.
 - **Interpretation:** Accumulated losses weaken the score despite positive working capital. Read it alongside liquidity, solvency, and interest coverage.
 - *Context:* Z = −4.72 using the Week 6 five-factor formula and the worksheet’s book-equity X4. Accumulated losses subtract 6.588 points. Distress threshold: 1.81.
@@ -221,7 +221,7 @@ DuPont: −5.2% ROE: −8.2% net margin × 0.40x asset turnover × 1.59x equity 
 
 Liquidity differs from coverage: Current ratio 2.73x and cash Rp 21.76T support liquidity. Debt/equity rises to 0.27x, while −0.71x interest coverage shows EBIT cannot fund interest.
 
-Z = −4.72: Week 6: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result.
+Z = −4.72 (Distress Zone): 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result.
 
 *Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
 
@@ -272,7 +272,7 @@ Z = −4.72: Week 6: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as 
 
 Cash quality: only 26% coverage: CFO of Rp 307 bn less Rp 1,182 bn capex leaves −Rp 875 bn FCF. Deposit liquidation and new loans support cash without proving operating self-sufficiency.
 
-Accruals: −3.95% (Milestone 3): Milestone 3 uses (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk.
+Accrual Ratio: −3.95% of Assets: Calculated as (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk.
 
 Footnotes explain the exposure: Note 14: associates are 22.57% of assets. Notes 15/34: Level 3 estimates. Note 25: related-party revenue 7.13%. Note 2s: incentives affect reported net revenue.
 
@@ -354,7 +354,7 @@ Follow Milestone 3: (−1,501,685 − 307,025) / 45,757,642 = −3.952804%. Inpu
 
 Growth and working capital: 11.4% growth averages 7.5% and 15.3%. DSO/DIO/DPO of 24.2/4.8/67.8 days drive working capital. Cash must reconcile across the forecast balance sheet and cash flow.
 
-Milestone 4 cost assumptions: Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit.
+Base-case cost assumptions: Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit.
 
 Three cases, explicit alternatives: Growth/OpEx/capex: optimistic 15.3%/55.7%/6.5%, base 11.4%/78.5%/16.3%, conservative 7.5%/85%/20%. A fixed-cost freeze at Rp 10,954 bn produces a different earnings path.
 
@@ -694,7 +694,7 @@ Conditions that must be demonstrated: Cost discipline, self-funded capex, and su
 [Speaker 1: Fagly Ramschie — 2.0 mins] Bringing our entire argument full circle for our Week 1 public equity investor: our recommendation is clear — SELL or AVOID GOTO at Rp 25.00. Why? Every link in our chain points in the same direction. Strategically, near-zero switching costs force heavy promotions. Operationally, +Rp 307 billion in CFO still fails to fund Capex, leaving -Rp 875 billion Free Cash Flow, an Altman Z-Score of -4.72, and -5.2% ROE. And financially, Base Case historical cost scaling drains cash down to Rp 968 billion by 2028F, giving deeply negative DCF (-Rp 121.1) and Residual Income (-Rp 75.1) values. What would change our mind? Only three concrete proof points: operating cash flow consistently exceeding Rp 1.2 trillion to self-fund Capex, fixed OpEx frozen below 56% of revenue as in our breakeven scenario, and two consecutive years of GAAP net income above Rp 2.43 trillion to beat our 8.45% Cost of Equity hurdle. Until then, downside risks — from credit losses to Rp 1.82 trillion associate write-down exposure — outweigh speculative M&A upside. Thank you, and we welcome your questions.
 
 Course-based explanation:
-Decision for the Week 1 user: SELL / AVOID at the assignment reference price of Rp 25.00 under the submitted historical-cost base case. The decision is conditional on whether operating improvements persist.
+Recommendation for equity investors: SELL / AVOID at Rp 25.00 per share under the historical-cost base case. The decision is conditional on whether operating improvements persist.
 
 What would change the conclusion: CFO sustainably covers annual capex. Operating costs remain disciplined. GAAP profit exceeds the Rp 2.43T equity-charge hurdle for two years. Rebuild the forecast when these conditions change.
 

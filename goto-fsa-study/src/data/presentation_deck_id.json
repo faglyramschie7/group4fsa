@@ -151,7 +151,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Pembicara 1: Fagly Ramschie — 1,5 menit] Selamat sore Bapak/Ibu. Kelompok 4 menganalisis PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), ekosistem digital terbesar Indonesia dengan 66 juta pengguna, 6,4 juta merchant, dan 3 juta pengemudi. Pengguna target Minggu ke-1 kami adalah investor ekuitas publik jangka panjang yang melihat saham GOTO di Rp 25,00 (-93% dari harga IPO Rp 338; 0,9x nilai buku) dan bertanya apakah ini layak dikoleksi. Jawaban satu kalimat kami jelas: kami merekomendasikan SELL / AVOID di Rp 25,00 karena persaingan ketat menekan monetisasi, arus kas operasi (+Rp 307 miliar) hanya menutup 26% Capex (-Rp 875 miliar FCF), dan kerugian berkelanjutan menghasilkan nilai intrinsik negatif di bawah DCF (-Rp 121,1) maupun Residual Income (-Rp 75,1).\n\nPenjelasan berdasarkan materi kuliah:\nPerusahaan dan pengguna: Mobilitas Gojek dan GoTo Financial, serta 24,99% Tokopedia. Pengguna analisis adalah investor ekuitas publik jangka panjang.\n\nJawaban satu kalimat: JUAL / HINDARI pada harga acuan tugas Rp 25,00 karena tekanan persaingan dan skenario biaya historis membuat arus kas belum menutup kebutuhan investasi.",
+    "speaker_notes": "[Pembicara 1: Fagly Ramschie — 1,5 menit] Selamat sore Bapak/Ibu. Kelompok 4 menganalisis PT GoTo Gojek Tokopedia Tbk (IDX: GOTO), ekosistem digital terbesar Indonesia dengan 66 juta pengguna, 6,4 juta merchant, dan 3 juta pengemudi. Pengguna target Minggu ke-1 kami adalah investor ekuitas publik jangka panjang yang melihat saham GOTO di Rp 25,00 (-93% dari harga IPO Rp 338; 0,9x nilai buku) dan bertanya apakah ini layak dikoleksi. Jawaban satu kalimat kami jelas: kami merekomendasikan SELL / AVOID di Rp 25,00 karena persaingan ketat menekan monetisasi, arus kas operasi (+Rp 307 miliar) hanya menutup 26% Capex (-Rp 875 miliar FCF), dan kerugian berkelanjutan menghasilkan nilai intrinsik negatif di bawah DCF (-Rp 121,1) maupun Residual Income (-Rp 75,1).\n\nPenjelasan berdasarkan materi kuliah:\nPerusahaan dan pengguna: Mobilitas Gojek dan GoTo Financial, serta 24,99% Tokopedia. Pengguna analisis adalah investor ekuitas publik jangka panjang.\n\nJawaban satu kalimat: JUAL / HINDARI pada harga Rp 25,00 per saham karena tekanan persaingan dan skenario biaya historis membuat arus kas belum menutup kebutuhan investasi.",
     "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
     "lecture_traces": [
       {
@@ -196,7 +196,7 @@
       },
       {
         "heading": "Jawaban satu kalimat",
-        "text": "JUAL / HINDARI pada harga acuan tugas Rp 25,00 karena tekanan persaingan dan skenario biaya historis membuat arus kas belum menutup kebutuhan investasi."
+        "text": "JUAL / HINDARI pada harga Rp 25,00 per saham karena tekanan persaingan dan skenario biaya historis membuat arus kas belum menutup kebutuhan investasi."
       }
     ],
     "course_basis": [
@@ -280,8 +280,8 @@
           "5,191",
           "74.1%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Revenue Mix Across Core Segments",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations) — Gojek Rp 12,361 bn & FinTech Rp 5,191 bn",
         "val": "Rp 12.36T / 5.19T",
         "label": "Pendapatan ODS vs. FinTech",
         "sub": "67,5% Mobilitas/Pesan-Antar | 28,3% FinTech (+74%)",
@@ -317,8 +317,8 @@
           "12,361",
           "Gojek"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "ODS Revenue Base",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations)",
         "title": "Mesin 1: On-Demand Services (Gojek — Rp 12,36T)",
         "tone": "blue",
         "bullets": [
@@ -342,8 +342,8 @@
           "74.1%",
           "2,895"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Note 14 Bank Jago Associate",
+        "evidence_img": "/evidence/annual_report_p468_segment_note29.png",
+        "evidence_caption": "2025 Annual Report p. 468 (Note 29: Segment Operations)",
         "title": "Mesin 2: Financial Technology (GoTo Financial — Rp 5,19T)",
         "tone": "emerald",
         "bullets": [
@@ -545,8 +545,8 @@
           "Maxim",
           "Shopee"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Competitive Margin Pressure in Operating Costs",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "High Rivalry",
         "label": "Struktur Industri Porter",
         "sub": "Tekanan Grab, Maxim, inDrive & Shopee",
@@ -600,8 +600,8 @@
           "3M",
           "Grab"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Cost Pressure",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Posisi Kompetitif (Ringkasan Porter's Five Forces)",
         "tone": "amber",
         "bullets": [
@@ -1009,7 +1009,7 @@
         ]
       }
     ],
-    "speaker_notes": "Rumus yang digunakan mengikuti Minggu 6: Rumus lima faktor Minggu 6: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. Lembar kerja Kelompok 4 Minggu 6 secara eksplisit memakai ekuitas BUKU untuk X4 (kuliah memperkenalkan ekuitas pasar dan menjelaskan proksi ekuitas buku). Input FY2025 dalam Rp miliar: modal kerja 18.411,702, akumulasi rugi −215.334,000, EBIT −378,254, ekuitas buku 28.711,657, liabilitas 17.045,985, aset 45.757,642, pendapatan 18.322,117. Kontribusi: +0,482849 −6,588355 −0,027279 +1,010619 +0,400417 = −4,721750. Aman > 2,99, abu-abu 1,81–2,99, distress < 1,81. Hasil sesuai lembar kerja: −4,72. Z″ sebelumnya memakai model berbeda dan saldo akumulasi rugi dari tahun yang salah.\n\nDuPont: ROE −5,2%: Margin bersih −8,2% × perputaran aset 0,40x × pengganda ekuitas 1,59x. Kerugian tetap menjadi hambatan utama meskipun efisiensi membaik.\n\nLikuiditas berbeda dari cakupan: Rasio lancar 2,73x dan kas Rp 21,76T mendukung likuiditas. Utang/ekuitas naik ke 0,27x, tetapi cakupan bunga −0,71x menunjukkan EBIT belum menutup bunga.\n\nZ = −4,72: Minggu 6: 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 memakai ekuitas buku sesuai lembar kerja. Distress < 1,81. Akumulasi rugi adalah penyebab utama.",
+    "speaker_notes": "Rumus yang digunakan mengikuti Minggu 6: Rumus lima faktor Minggu 6: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. Lembar kerja Kelompok 4 Minggu 6 secara eksplisit memakai ekuitas BUKU untuk X4 (kuliah memperkenalkan ekuitas pasar dan menjelaskan proksi ekuitas buku). Input FY2025 dalam Rp miliar: modal kerja 18.411,702, akumulasi rugi −215.334,000, EBIT −378,254, ekuitas buku 28.711,657, liabilitas 17.045,985, aset 45.757,642, pendapatan 18.322,117. Kontribusi: +0,482849 −6,588355 −0,027279 +1,010619 +0,400417 = −4,721750. Aman > 2,99, abu-abu 1,81–2,99, distress < 1,81. Hasil sesuai lembar kerja: −4,72. Z″ sebelumnya memakai model berbeda dan saldo akumulasi rugi dari tahun yang salah.\n\nDuPont: ROE −5,2%: Margin bersih −8,2% × perputaran aset 0,40x × pengganda ekuitas 1,59x. Kerugian tetap menjadi hambatan utama meskipun efisiensi membaik.\n\nLikuiditas berbeda dari cakupan: Rasio lancar 2,73x dan kas Rp 21,76T mendukung likuiditas. Utang/ekuitas naik ke 0,27x, tetapi cakupan bunga −0,71x menunjukkan EBIT belum menutup bunga.\n\nZ = −4,72 (Zona Kesulitan Keuangan): 1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 memakai ekuitas buku sesuai lembar kerja. Distress < 1,81. Akumulasi rugi adalah penyebab utama.",
     "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
     "lecture_traces": [
       {
@@ -1095,7 +1095,7 @@
         "text": "Rasio lancar 2,73x dan kas Rp 21,76T mendukung likuiditas. Utang/ekuitas naik ke 0,27x, tetapi cakupan bunga −0,71x menunjukkan EBIT belum menutup bunga."
       },
       {
-        "heading": "Z = −4,72: Minggu 6",
+        "heading": "Z = −4,72 (Zona Kesulitan Keuangan)",
         "text": "1,2X1 + 1,4X2 + 3,3X3 + 0,6X4 + X5. X4 memakai ekuitas buku sesuai lembar kerja. Distress < 1,81. Akumulasi rugi adalah penyebab utama."
       }
     ],
@@ -1273,8 +1273,8 @@
           "1,808.7",
           "45,758"
         ],
-        "evidence_img": "/evidence/goto_note34_goodwill_impairment.png",
-        "evidence_caption": "Non-Cash Depreciation & Impairment Items",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "-3.95%",
         "label": "Rasio akrual (Milestone 3)",
         "sub": "Pembilang: NI − CFO; penyebut: aset akhir",
@@ -1376,7 +1376,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Anggreini Ruitan; 2,0 menit]\n\nKualitas kas: cakupan hanya 26%: CFO Rp 307 miliar dikurangi capex Rp 1.182 miliar menghasilkan FCF −Rp 875 miliar. Pencairan deposito dan utang baru tidak membuktikan kemandirian operasi.\n\nAkrual: −3,95% (Milestone 3): Milestone 3 memakai (laba bersih − CFO) / aset akhir. Rasio membaik dari −11,21%. Beban nonkas serta modal kerja menjelaskan kesenjangan, tetapi rasio negatif bukan bukti risiko rendah.\n\nCatatan menjelaskan eksposur: Catatan 14: asosiasi sebesar 22,57% aset. Catatan 15/34: estimasi Level 3. Catatan 25: pendapatan pihak berelasi 7,13%. Catatan 2s: insentif memengaruhi pendapatan neto.\n\nSesuai Milestone 3: (−1.501.685 − 307.025) / 45.757.642 = −3,952804%. Semua input Rp juta, penyebut aset akhir. Definisi ini mengendalikan deck; penyebut aset rata-rata dari latihan sebelumnya tidak menggantikannya. Haircut 20% merupakan sensitivitas valuasi sebelum pajak yang terpisah, bukan impairment tercatat atau add-back laba.",
+    "speaker_notes": "[Anggreini Ruitan; 2,0 menit]\n\nKualitas kas: cakupan hanya 26%: CFO Rp 307 miliar dikurangi capex Rp 1.182 miliar menghasilkan FCF −Rp 875 miliar. Pencairan deposito dan utang baru tidak membuktikan kemandirian operasi.\n\nRasio Akrual: −3,95% dari Aset: Dihitung sebagai (laba bersih − CFO) / aset akhir. Rasio membaik dari −11,21%. Beban nonkas serta modal kerja menjelaskan kesenjangan, tetapi rasio negatif bukan bukti risiko rendah.\n\nCatatan menjelaskan eksposur: Catatan 14: asosiasi sebesar 22,57% aset. Catatan 15/34: estimasi Level 3. Catatan 25: pendapatan pihak berelasi 7,13%. Catatan 2s: insentif memengaruhi pendapatan neto.\n\nSesuai Milestone 3: (−1.501.685 − 307.025) / 45.757.642 = −3,952804%. Semua input Rp juta, penyebut aset akhir. Definisi ini mengendalikan deck; penyebut aset rata-rata dari latihan sebelumnya tidak menggantikannya. Haircut 20% merupakan sensitivitas valuasi sebelum pajak yang terpisah, bukan impairment tercatat atau add-back laba.",
     "source_footer": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
     "lecture_traces": [
       {
@@ -1465,8 +1465,8 @@
         "text": "CFO Rp 307 miliar dikurangi capex Rp 1.182 miliar menghasilkan FCF −Rp 875 miliar. Pencairan deposito dan utang baru tidak membuktikan kemandirian operasi."
       },
       {
-        "heading": "Akrual: −3,95% (Milestone 3)",
-        "text": "Milestone 3 memakai (laba bersih − CFO) / aset akhir. Rasio membaik dari −11,21%. Beban nonkas serta modal kerja menjelaskan kesenjangan, tetapi rasio negatif bukan bukti risiko rendah."
+        "heading": "Rasio Akrual: −3,95% dari Aset",
+        "text": "Dihitung sebagai (laba bersih − CFO) / aset akhir. Rasio membaik dari −11,21%. Beban nonkas serta modal kerja menjelaskan kesenjangan, tetapi rasio negatif bukan bukti risiko rendah."
       },
       {
         "heading": "Catatan menjelaskan eksposur",
@@ -1586,8 +1586,8 @@
           "58.9%",
           "15.3%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Historical Growth & Margin Drivers",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "11.4% / 58.9%",
         "label": "Pertumbuhan & Margin Dasar",
         "sub": "Opt: 15,3%/61,9% | Kons: 7,5%/53,4%",
@@ -1606,8 +1606,8 @@
           "14,282",
           "7,642"
         ],
-        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-        "evidence_caption": "Cash Depletion Path in Base Case",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp 968 bn",
         "label": "Saldo Kas Akhir 2028F (Dasar)",
         "sub": "Menyusut dari Rp 21.755 M (25A)",
@@ -1625,8 +1625,8 @@
           "10,954",
           "1,062"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Leverage Breakeven Check",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp 18,604 bn",
         "label": "Titik Impas Pembekuan OpEx",
         "sub": "vs Rp 27,2T-33,8T Saat OpEx Terskala",
@@ -1690,8 +1690,8 @@
             "22,732",
             "25,321"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Revenue Forecast"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "EBIT feeds Assignment 14 DCF Valuation!B6:D6.",
@@ -1703,8 +1703,8 @@
             "4,459.4",
             "4,967.4"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Base Case EBIT Burn"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Net Income feeds Assignment 14 Residual Income!B7:D7.",
@@ -1716,8 +1716,8 @@
             "4,092.7",
             "4,488.9"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Base Case Net Loss"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Cash falls Rp 20.8T over 3 years as Base burn continues.",
@@ -1729,8 +1729,8 @@
             "7,642",
             "968"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Ending Cash Balance"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.",
@@ -1742,8 +1742,8 @@
             "2,430",
             "3,954"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Fixed-OpEx Upside Scenario"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -1798,7 +1798,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Anggreini Ruitan; 2,5 menit]\n\nPertumbuhan dan modal kerja: Pertumbuhan 11,4% merata-ratakan 7,5% dan 15,3%. DSO/DIO/DPO 24,2/4,8/67,8 hari menentukan modal kerja. Kas harus konsisten pada neraca dan arus kas proyeksi.\n\nAsumsi biaya Milestone 4: Rata-rata historis menentukan HPP 41,1%, cash OpEx 78,5%, dan capex 16,3%. Milestone 4 membandingkan skenario ini dengan pembekuan biaya tetap untuk menunjukkan pengaruh struktur biaya terhadap laba.\n\nTiga skenario dan alternatif: Pertumbuhan/OpEx/capex: optimistis 15,3%/55,7%/6,5%, dasar 11,4%/78,5%/16,3%, konservatif 7,5%/85%/20%. Pembekuan biaya Rp 10.954 miliar menghasilkan jalur laba berbeda.\n\nAngka dasar mengikuti Milestone 4. Pertumbuhan dan modal kerja memakai asumsi milestone, termasuk DSO 24,2 hari. Model dasar dan alternatif biaya tetap adalah skenario berbeda. Tarif bunga proyeksi 10,2% berasal dari rata-rata historis M4, sedangkan biaya utang WACC 6,91% merupakan input FY2025 pada Tugas 14. Perbedaan basis dipertahankan sesuai tugas.",
+    "speaker_notes": "[Anggreini Ruitan; 2,5 menit]\n\nPertumbuhan dan modal kerja: Pertumbuhan 11,4% merata-ratakan 7,5% dan 15,3%. DSO/DIO/DPO 24,2/4,8/67,8 hari menentukan modal kerja. Kas harus konsisten pada neraca dan arus kas proyeksi.\n\nAsumsi biaya skenario dasar: Rata-rata historis menentukan HPP 41,1%, cash OpEx 78,5%, dan capex 16,3%. Milestone 4 membandingkan skenario ini dengan pembekuan biaya tetap untuk menunjukkan pengaruh struktur biaya terhadap laba.\n\nTiga skenario dan alternatif: Pertumbuhan/OpEx/capex: optimistis 15,3%/55,7%/6,5%, dasar 11,4%/78,5%/16,3%, konservatif 7,5%/85%/20%. Pembekuan biaya Rp 10.954 miliar menghasilkan jalur laba berbeda.\n\nAngka dasar mengikuti Milestone 4. Pertumbuhan dan modal kerja memakai asumsi milestone, termasuk DSO 24,2 hari. Model dasar dan alternatif biaya tetap adalah skenario berbeda. Tarif bunga proyeksi 10,2% berasal dari rata-rata historis M4, sedangkan biaya utang WACC 6,91% merupakan input FY2025 pada Tugas 14. Perbedaan basis dipertahankan sesuai tugas.",
     "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
     "lecture_traces": [
       {
@@ -1887,7 +1887,7 @@
         "text": "Pertumbuhan 11,4% merata-ratakan 7,5% dan 15,3%. DSO/DIO/DPO 24,2/4,8/67,8 hari menentukan modal kerja. Kas harus konsisten pada neraca dan arus kas proyeksi."
       },
       {
-        "heading": "Asumsi biaya Milestone 4",
+        "heading": "Asumsi biaya skenario dasar",
         "text": "Rata-rata historis menentukan HPP 41,1%, cash OpEx 78,5%, dan capex 16,3%. Milestone 4 membandingkan skenario ini dengan pembekuan biaya tetap untuk menunjukkan pengaruh struktur biaya terhadap laba."
       },
       {
@@ -2096,8 +2096,8 @@
             "4.502%",
             "6.120%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Sovereign Yield Adjustment"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
@@ -2108,8 +2108,8 @@
             "0.59",
             "4.23%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta & ERP"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Adds Indonesia equity volatility premium above Baa2 sovereign spread.",
@@ -2119,8 +2119,8 @@
           "highlight_terms": [
             "2.465%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Country Risk Premium"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Ke = 8.45% measures the minimum annual return shareholders demand.",
@@ -2130,8 +2130,8 @@
           "highlight_terms": [
             "8.45%"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Cost of Equity Result"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Uses GoTo's actual 2025 effective borrowing cost adjusted for the 22% statutory tax rate.",
@@ -2284,8 +2284,8 @@
           "7.76%",
           "8.45%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Consistent Long-Run Growth Input",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "3.00%",
         "label": "Pertumbuhan Terminal (g)",
         "sub": "Di Bawah WACC 7,76% & PDB Nominal ID",
@@ -2303,8 +2303,8 @@
           "142,598",
           "14,013"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Cash Flow & Capex Subtraction",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp (121.1) / sh",
         "label": "Nilai DCF / Saham (Dasar)",
         "sub": "EV -142,6T + Kas Bersih +14,0T",
@@ -2322,8 +2322,8 @@
           "28,712",
           "2,427"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Beginning Book Equity Anchor",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "Rp (75.1) / sh",
         "label": "Nilai Residual Income / Saham",
         "sub": "BVE +28,7T Tergerus -108,5T PV(RI)",
@@ -2374,8 +2374,8 @@
             "7,738.7",
             "6,164"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Forecast Consistency Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "PV periode eksplisit; Rp (18,930.7) bn; Rp (15,860.4) bn",
@@ -2386,8 +2386,8 @@
             "18,930.7",
             "15,860.4"
           ],
-          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-          "evidence_caption": "Explicit Horizon Present Value"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "PV nilai terminal, g = 3%; Rp (123,667.0) bn; Rp (92,621.5) bn",
@@ -2398,8 +2398,8 @@
             "123,667.0",
             "92,621.5"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Terminal Value PV"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Capital Bridge (Add Net Cash / Start Book Equity); EV (142,597.7) + Net Cash 14,012.5; Book Equity 28,711.7 + PV(RI) (108,481.9)",
@@ -2410,8 +2410,8 @@
             "14,012.5",
             "28,711.7"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Balance Sheet Value Anchors"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Implied Total Equity Value & Value per Share; Rp (128,585.2) bn  |  Rp (121.1) / share; Rp (79,770.2) bn  |  Rp (75.1) / share",
@@ -2422,8 +2422,8 @@
             "121.1",
             "75.1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Per-Share Equity Result"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -2437,8 +2437,8 @@
           "3.0%",
           "22%"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Terminal Growth & Tax Guardrail",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Justifikasi Pertumbuhan Terminal g = 3,0% & Aturan Pajak",
         "tone": "blue",
         "bullets": [
@@ -2461,8 +2461,8 @@
           "121.1",
           "75.1"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Intrinsic Convergence",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Mengapa DCF (-121,1) dan RI (-75,1) Konvergen Negatif",
         "tone": "rose",
         "bullets": [
@@ -3172,8 +3172,8 @@
           "13.20",
           "968"
         ],
-        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-        "evidence_caption": "Net Loss & Cash Burn Basis",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "SELL / AVOID",
         "label": "Keputusan di Rp 25,00",
         "sub": "Risiko Turun ke Lantai Kas Bersih Rp 13,20",
@@ -3190,8 +3190,8 @@
           "2.43T",
           "8.45%"
         ],
-        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
-        "evidence_caption": "Book Equity Charge Threshold",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "> +Rp 2.43T / yr",
         "label": "Ambang Laba Bersih GAAP",
         "sub": "Wajib Melampaui Biaya Ekuitas 8,45%",
@@ -3209,8 +3209,8 @@
           "56%",
           "18,604"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Cash Flow Self-Funding Target",
+        "evidence_img": null,
+        "evidence_caption": "",
         "val": "> +Rp 1.2T / yr",
         "label": "Ambang Arus Kas Operasi",
         "sub": "Syarat CFO Menutup Penuh Capex (+FCF)",
@@ -3228,8 +3228,8 @@
           "10.90",
           "121.1"
         ],
-        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-        "evidence_caption": "Strategy-to-Valuation Proof",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "1. Mengapa SELL / AVOID di Rp 25,00 (Argumen Utuh)",
         "tone": "rose",
         "bullets": [
@@ -3253,8 +3253,8 @@
           "56%",
           "2.43T"
         ],
-        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-        "evidence_caption": "Operating Leverage Trigger",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "2. Tiga Syarat Konkret untuk Mengubah Rekomendasi",
         "tone": "emerald",
         "bullets": [
@@ -3278,8 +3278,8 @@
           "1.82T",
           "13.20"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Associate & Credit Risks",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "3. Risiko Utama Dua Arah",
         "tone": "amber",
         "bullets": [
@@ -3294,7 +3294,7 @@
         ]
       }
     ],
-    "speaker_notes": "[Pembicara 1: Fagly Ramschie — 2,0 menit] Menutup argumen kami bagi investor ekuitas publik Minggu ke-1: rekomendasi kami adalah SELL atau AVOID GOTO di Rp 25,00. Seluruh rantai pembuktian — mulai dari persaingan ketat, CFO yang belum menutup Capex, skor distres Z -4,72, hingga DCF (-Rp 121,1) dan RI (-Rp 75,1) — sepakat bahwa harga saat ini belum didukung penciptaan nilai ekonomi. Pandangan ini hanya berubah jika CFO melewati Rp 1,2T/tahun, OpEx terkunci di bawah 56% pendapatan, dan laba bersih melampaui Rp 2,43T/tahun selama dua tahun berturut-turut. Terima kasih, kami siap menerima pertanyaan.\n\nPenjelasan berdasarkan materi kuliah:\nKeputusan untuk pengguna Minggu 1: JUAL / HINDARI pada harga acuan tugas Rp 25,00 dalam skenario dasar biaya historis. Keputusan bergantung pada keberlanjutan perbaikan operasi.\n\nApa yang mengubah kesimpulan: CFO menutup capex tahunan secara berkelanjutan. Biaya operasi terkendali. Laba GAAP melampaui beban ekuitas Rp 2,43T selama dua tahun. Perbarui proyeksi saat kondisi berubah.\n\nRisiko dua arah: Potensi naik: disiplin biaya, FinTech menguntungkan, atau konsolidasi. Potensi turun: kerugian kredit, penurunan nilai investasi, dan penyusutan kas. Stres 20% Tokopedia/Level 3 adalah asumsi, bukan kerugian aktual.",
+    "speaker_notes": "[Pembicara 1: Fagly Ramschie — 2,0 menit] Menutup argumen kami bagi investor ekuitas publik Minggu ke-1: rekomendasi kami adalah SELL atau AVOID GOTO di Rp 25,00. Seluruh rantai pembuktian — mulai dari persaingan ketat, CFO yang belum menutup Capex, skor distres Z -4,72, hingga DCF (-Rp 121,1) dan RI (-Rp 75,1) — sepakat bahwa harga saat ini belum didukung penciptaan nilai ekonomi. Pandangan ini hanya berubah jika CFO melewati Rp 1,2T/tahun, OpEx terkunci di bawah 56% pendapatan, dan laba bersih melampaui Rp 2,43T/tahun selama dua tahun berturut-turut. Terima kasih, kami siap menerima pertanyaan.\n\nPenjelasan berdasarkan materi kuliah:\nRekomendasi bagi investor ekuitas: JUAL / HINDARI pada harga Rp 25,00 per saham dalam skenario dasar biaya historis. Keputusan bergantung pada keberlanjutan perbaikan operasi.\n\nApa yang mengubah kesimpulan: CFO menutup capex tahunan secara berkelanjutan. Biaya operasi terkendali. Laba GAAP melampaui beban ekuitas Rp 2,43T selama dua tahun. Perbarui proyeksi saat kondisi berubah.\n\nRisiko dua arah: Potensi naik: disiplin biaya, FinTech menguntungkan, atau konsolidasi. Potensi turun: kerugian kredit, penurunan nilai investasi, dan penyusutan kas. Stres 20% Tokopedia/Level 3 adalah asumsi, bukan kerugian aktual.",
     "source_footer": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
     "lecture_traces": [
       {
@@ -3334,8 +3334,8 @@
     "section_name": "Rekomendasi",
     "analysis_points": [
       {
-        "heading": "Keputusan untuk pengguna Minggu 1",
-        "text": "JUAL / HINDARI pada harga acuan tugas Rp 25,00 dalam skenario dasar biaya historis. Keputusan bergantung pada keberlanjutan perbaikan operasi."
+        "heading": "Rekomendasi bagi investor ekuitas",
+        "text": "JUAL / HINDARI pada harga Rp 25,00 per saham dalam skenario dasar biaya historis. Keputusan bergantung pada keberlanjutan perbaikan operasi."
       },
       {
         "heading": "Apa yang mengubah kesimpulan",
@@ -3778,8 +3778,8 @@
             "27.2T",
             "4,003"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Scaled OpEx"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Freezing opex at Rp 10,954 bn drops breakeven to Rp 18,604 bn.",
@@ -3791,8 +3791,8 @@
             "1,062",
             "11.31x"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Fixed-OpEx Breakeven"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Assignment 14 baseline WACC (7.76%) & terminal g (3.0%).",
@@ -3803,8 +3803,8 @@
             "121.1",
             "75.1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Base Valuation"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Lowering g to 2.0% leaves both DCF (-99.9) & RI (-60.9) deeply negative.",
@@ -3815,8 +3815,8 @@
             "99.9",
             "60.9"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Lower g Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Market beta (1.00) yields WACC 9.89%, still deeply negative.",
@@ -3827,8 +3827,8 @@
             "79.9",
             "47.5"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta 1.00 Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "High tech beta (1.25) yields WACC 11.18%, still negative.",
@@ -3839,8 +3839,8 @@
             "65.3",
             "38.3"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Beta 1.25 Check"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -3854,8 +3854,8 @@
           "0.59",
           "1.25"
         ],
-        "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-        "evidence_caption": "Discount Rate Sensitivity",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Key Q&A Insight: Why Higher Discount Rates Make Negative DCF Less Negative",
         "tone": "blue",
         "bullets": [
@@ -4021,8 +4021,8 @@
           "highlight_terms": [
             "Slide 1"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
-          "evidence_caption": "Opening"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Splits Business Model/Pivot (S2) and Rivalry/Credit Risks (S3) cleanly.",
@@ -4032,8 +4032,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
-          "evidence_caption": "Strategy Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Covers Chart 1, DuPont (-5.2%), Z (-4.72), CFO/Capex (26%), and 22.6% associates.",
@@ -4043,8 +4043,8 @@
           "highlight_terms": [
             "20 pts"
           ],
-          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
-          "evidence_caption": "Financial & Accounting Quality"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Presents single Milestone 4 forecast driving DCF/RI and Fixed-OpEx breakeven.",
@@ -4054,8 +4054,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Forecast Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Covers WACC (7.76%), DCF (-121.1), RI (-75.1), Multiples (91.0), and Chart 2.",
@@ -4065,8 +4065,8 @@
           "highlight_terms": [
             "20 pts"
           ],
-          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
-          "evidence_caption": "Valuation Section"
+          "evidence_img": null,
+          "evidence_caption": ""
         },
         {
           "detail_explanation": "Total delivery = 20.5 mins (tightly paced around 20-min target) + 10-min Q&A = 100 pts.",
@@ -4076,8 +4076,8 @@
           "highlight_terms": [
             "15 pts"
           ],
-          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
-          "evidence_caption": "Delivery + Q&A"
+          "evidence_img": null,
+          "evidence_caption": ""
         }
       ]
     },
@@ -4091,8 +4091,8 @@
           "100%",
           "14"
         ],
-        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
-        "evidence_caption": "Guidelines Verification",
+        "evidence_img": null,
+        "evidence_caption": "",
         "title": "Cakupan Tugas 16",
         "tone": "emerald",
         "bullets": [
