@@ -1416,7 +1416,7 @@
       ],
       "Ratio Analysis": [
         [
-          "Financial Ratio Analysis & Emerging Market Altman Z''-Score"
+          "Financial Ratios and Week 6 Five-Factor Z-Score"
         ],
         [
           "Calculated directly from Audited Historical Data (FY2023-FY2025)"
@@ -1426,7 +1426,8 @@
           "2023",
           "2024",
           "2025",
-          "Formula Used"
+          "Formula Used",
+          "2025 Calculation"
         ],
         [
           "LIQUIDITY"
@@ -1436,21 +1437,24 @@
           "2.62x",
           "2.62x",
           "2.73x",
-          "Current Assets / Current Liabilities"
+          "Current Assets / Current Liabilities",
+          "29,059,226 / 10,647,524 ≈ 2.73x"
         ],
         [
           "Quick Ratio",
           "2.61x",
           "2.62x",
           "2.73x",
-          "(Current Assets - Inventory) / Current Liabilities"
+          "(Current Assets - Inventory) / Current Liabilities",
+          "(29,059,226 − 14,093) / 10,647,524 ≈ 2.73x"
         ],
         [
           "Working Capital (Rp million)",
           "20,794,747",
           "16,292,802",
           "18,411,702",
-          "Current Assets - Current Liabilities"
+          "Current Assets - Current Liabilities",
+          "29,059,226 − 10,647,524 = 18,411,702"
         ],
         [
           "EFFICIENCY / ACTIVITY"
@@ -1460,35 +1464,40 @@
           "0.27x",
           "0.37x",
           "0.40x",
-          "Revenue / Total Assets"
+          "Revenue / Total Assets",
+          "18,322,117 / 45,757,642 ≈ 0.40x"
         ],
         [
           "Days Sales Outstanding (DSO)",
           "14.8 days",
           "46.9 days",
           "10.9 days",
-          "Accounts Receivable / Revenue x 365"
+          "Accounts Receivable / Revenue x 365",
+          "547,293 / 18,322,117 × 365 ≈ 10.9 days"
         ],
         [
           "Days Inventory Outstanding (DIO)",
           "12.4 days",
           "1.3 days",
           "0.7 days",
-          "Inventory / COGS x 365"
+          "Inventory / COGS x 365",
+          "14,093 / 7,746,034 × 365 ≈ 0.7 days"
         ],
         [
           "Days Payable Outstanding (DPO)",
           "83.3 days",
           "61.1 days",
           "59.1 days",
-          "Accounts Payable / COGS x 365"
+          "Accounts Payable / COGS x 365",
+          "1,254,389 / 7,746,034 × 365 ≈ 59.1 days"
         ],
         [
           "Cash Conversion Cycle (CCC)",
           "-56.1 days",
           "-12.9 days",
           "-47.5 days",
-          "DSO + DIO - DPO"
+          "DSO + DIO - DPO",
+          "10.902776 + 0.664075 − 59.107923 ≈ −47.5 days"
         ],
         [
           "SOLVENCY"
@@ -1498,28 +1507,32 @@
           "0.10x",
           "0.13x",
           "0.27x",
-          "(Short-Term + Long-Term Debt) / Equity"
+          "(Short-Term + Long-Term Debt) / Equity",
+          "(1,523,758 + 6,218,885) / 28,711,657 ≈ 0.27x"
         ],
         [
           "Debt-to-Total-Assets",
           "6.4%",
           "8.8%",
           "16.9%",
-          "(Short-Term + Long-Term Debt) / Total Assets"
+          "(Short-Term + Long-Term Debt) / Total Assets",
+          "7,742,643 / 45,757,642 ≈ 16.9%"
         ],
         [
           "Interest Coverage (EBIT / Interest)",
           "-27.8x",
           "-4.5x",
           "-0.71x",
-          "EBIT / Interest Expense"
+          "EBIT / Interest Expense",
+          "−378,254 / 535,152 ≈ −0.71x"
         ],
         [
           "Equity Multiplier (Leverage)",
           "1.51x",
           "1.42x",
           "1.59x",
-          "Total Assets / Total Equity"
+          "Total Assets / Total Equity",
+          "45,757,642 / 28,711,657 ≈ 1.59x"
         ],
         [
           "PROFITABILITY"
@@ -1529,38 +1542,43 @@
           "65.6%",
           "53.4%",
           "57.7%",
-          "Gross Profit / Revenue"
+          "Gross Profit / Revenue",
+          "10,576,083 / 18,322,117 × 100% ≈ 57.7%"
         ],
         [
           "Operating Margin (EBIT %)",
           "-69.5%",
           "-14.1%",
           "-2.1%",
-          "EBIT / Revenue"
+          "EBIT / Revenue",
+          "−378,254 / 18,322,117 × 100% ≈ -2.1%"
         ],
         [
           "Net Profit Margin",
           "-612.2%",
           "-34.4%",
           "-8.2%",
-          "Net Income / Revenue"
+          "Net Income / Revenue",
+          "−1,501,685 / 18,322,117 × 100% ≈ -8.2%"
         ],
         [
           "Return on Assets (ROA)",
           "-167.3%",
           "-12.6%",
           "-3.3%",
-          "Net Income / Total Assets"
+          "Net Income / Total Assets",
+          "−1,501,685 / 45,757,642 × 100% ≈ -3.3%"
         ],
         [
           "Return on Equity (ROE)",
           "-253.4%",
           "-18.0%",
           "-5.2%",
-          "Net Income / Total Equity"
+          "Net Income / Total Equity",
+          "−1,501,685 / 28,711,657 × 100% ≈ -5.2%"
         ],
         [
-          "ALTMAN Z''-SCORE (EMERGING MARKET MODEL)"
+          "WEEK 6 FIVE-FACTOR Z-SCORE"
         ],
         [
           "Factor",
@@ -1624,7 +1642,8 @@
           "2023",
           "2024",
           "2025",
-          "Formula"
+          "Formula",
+          "2025 Calculation"
         ],
         [
           "3-STEP DuPont: ROE = Net Margin x Asset Turnover x Equity Multiplier"
@@ -1634,28 +1653,32 @@
           "-612.2%",
           "-34.4%",
           "-8.2%",
-          "Net Income / Revenue"
+          "Net Income / Revenue",
+          "−1,501,685 / 18,322,117 × 100% ≈ -8.2%"
         ],
         [
           "Asset Turnover",
           "0.27x",
           "0.37x",
           "0.40x",
-          "Revenue / Total Assets"
+          "Revenue / Total Assets",
+          "18,322,117 / 45,757,642 ≈ 0.40x"
         ],
         [
           "Equity Multiplier",
           "1.51x",
           "1.42x",
           "1.59x",
-          "Total Assets / Equity"
+          "Total Assets / Equity",
+          "45,757,642 / 28,711,657 ≈ 1.59x"
         ],
         [
           "ROE (3-Step Product)",
           "-253.4%",
           "-18.0%",
           "-5.2%",
-          "Net Margin x Asset Turnover x Equity Multiplier"
+          "Net Margin x Asset Turnover x Equity Multiplier",
+          "(−1,501,685/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%"
         ],
         [
           "5-STEP DuPont: ROE = Tax Burden x Interest Burden x Operating Margin x Asset Turnover x Leverage"
@@ -1665,42 +1688,48 @@
           "99.9%",
           "103.6%",
           "138.2%",
-          "Net Income / EBT"
+          "Net Income / EBT",
+          "(-1,501,685) / (-1,086,604) ≈ 138.2%"
         ],
         [
           "Interest Burden (EBT / EBIT)",
           "8.82x",
           "2.35x",
           "2.87x",
-          "EBT / EBIT"
+          "EBT / EBIT",
+          "(-1,086,604) / (-378,254) ≈ 2.87x"
         ],
         [
           "Operating Margin (EBIT / Revenue)",
           "-69.5%",
           "-14.1%",
           "-2.1%",
-          "EBIT / Revenue"
+          "EBIT / Revenue",
+          "−378,254 / 18,322,117 × 100% ≈ -2.1%"
         ],
         [
           "Asset Turnover (Revenue / Assets)",
           "0.27x",
           "0.37x",
           "0.40x",
-          "Revenue / Total Assets"
+          "Revenue / Total Assets",
+          "18,322,117 / 45,757,642 ≈ 0.40x"
         ],
         [
           "Leverage (Assets / Equity)",
           "1.51x",
           "1.42x",
           "1.59x",
-          "Total Assets / Equity"
+          "Total Assets / Equity",
+          "45,757,642 / 28,711,657 ≈ 1.59x"
         ],
         [
           "ROE (5-Step Product)",
           "-253.4%",
           "-18.0%",
           "-5.2%",
-          "Product of all 5 factors"
+          "Product of all 5 factors",
+          "(-1,501,685/-1,086,604) × (-1,086,604/-378,254) × (-378,254/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%"
         ],
         [
           "Check: 3-Step ROE minus 5-Step ROE",

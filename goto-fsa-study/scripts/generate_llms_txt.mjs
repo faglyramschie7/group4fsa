@@ -28,8 +28,8 @@ lines.push('');
 lines.push('- **Live App:** https://group4fsa.crosswing.app/');
 lines.push('- **AI-Readable Deck:** https://group4fsa.crosswing.app/llms.txt');
 lines.push('- **Company:** PT GoTo Gojek Tokopedia Tbk (IDX: GOTO)');
-lines.push('- **Valuation Date:** December 30, 2025 | **Market Price:** Rp 25.00 / share');
-lines.push('- **Final Recommendation:** **SELL GOTO at Rp 25.00**');
+lines.push('- **Assignment reference price:** Rp25.00 per share; not a live quote. Input dates are shown with their sources.');
+lines.push('- **User:** Short-term public equity investor. The recommendation is presented after the evidence, on the final slide.');
 lines.push('');
 lines.push('---');
 lines.push('');
@@ -134,6 +134,19 @@ for (const slide of deck) {
     }
   }
 
+  if (slide.study_explanation) {
+    lines.push('### Sidebar: the full explanation in simple language');
+    lines.push(slide.study_explanation);
+    lines.push('');
+  }
+  for (const schedule of slide.supporting_schedules || []) {
+    lines.push(`### Sidebar calculation: ${schedule.title}`);
+    const cell = value => String(value ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
+    lines.push(`| ${schedule.headers.map(cell).join(' | ')} |`);
+    lines.push(`| ${schedule.headers.map(() => '---').join(' | ')} |`);
+    for (const row of schedule.rows) lines.push(`| ${row.map(cell).join(' | ')} |`);
+    lines.push('');
+  }
   if (slide.speaker_notes) {
     lines.push('### Speaker Notes');
     lines.push(slide.speaker_notes);

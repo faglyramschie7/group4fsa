@@ -8,7 +8,23 @@ import presentationDeckData from './data/presentation_deck.json'
 import presentationDeckIdData from './data/presentation_deck_id.json'
 import supportingTablesIdData from './data/supporting_tables_id.json'
 
-const lang = ref('en') // 'en' | 'id'
+const readStorage = (key, fallback) => {
+  try {
+    const val = localStorage.getItem(key)
+    return val !== null && val !== '' ? val : fallback
+  } catch {
+    return fallback
+  }
+}
+const writeStorage = (key, val) => {
+  try {
+    localStorage.setItem(key, String(val))
+  } catch {
+    // ignore storage errors
+  }
+}
+
+const lang = ref(readStorage('goto-fsa-lang', 'en')) // 'en' | 'id'
 const getInitialTheme = () => {
   try {
     const saved = localStorage.getItem('goto-fsa-theme')
@@ -90,7 +106,7 @@ const uiText = computed(() => lang.value === 'id' ? {
   closeWord: 'Tutup',
   drawerSubtitlePrefix: 'INSPEKTOR SUMBER SLIDE',
   drawerWhatMeans: 'Arti & Penjelasan Lengkap:',
-  drawerHowCalculated: 'Bagaimana Angka Ini Dihitung? (Rumus & Langkah)',
+  drawerHowCalculated: 'Formula',
   drawerFormulaLabel: 'Rumus:',
   drawerOriginLabel: 'Asal Data:',
   drawerLkProofTitle: 'Bukti Halaman Laporan Keuangan Auditan (Di-Highlight)',
@@ -166,7 +182,7 @@ const uiText = computed(() => lang.value === 'id' ? {
   closeWord: 'Close',
   drawerSubtitlePrefix: 'SLIDE',
   drawerWhatMeans: 'Detailed Meaning & Explanation:',
-  drawerHowCalculated: 'How Was This Calculated? (Formula & Steps)',
+  drawerHowCalculated: 'Formula',
   drawerFormulaLabel: 'Formula:',
   drawerOriginLabel: 'Data Origin:',
   drawerLkProofTitle: 'Highlighted Audited Financial Statement Page (LK GOTO 2025)',
@@ -194,25 +210,33 @@ const uiText = computed(() => lang.value === 'id' ? {
   asgZoomHint: 'Click image to zoom full-resolution filing proof →'
 })
 
-watch(lang, () => {
+watch(lang, (val) => {
+  writeStorage('goto-fsa-lang', val)
   clickPopup.value = null
   detailDrawerItem.value = null
 })
 
-const selectedWeekId = ref('week14')
-const selectedPresSlideNum = ref(1)
+const savedPresSlide = parseInt(readStorage('goto-fsa-pres-slide', '1'), 10)
+const selectedWeekId = ref(readStorage('goto-fsa-selected-week', 'week14'))
+const selectedPresSlideNum = ref(Math.min(presentationSlides.value.length, Number.isFinite(savedPresSlide) && savedPresSlide > 0 ? savedPresSlide : 1))
 const showSpeakerNotes = ref(false)
 const showAuditDrawer = ref(false)
 const isPresentMode = ref(false)
 const clickPopup = ref(null)
 const detailDrawerItem = ref(null)
-const activeTab = ref('presentation') // 'presentation', 'slides', 'assignments', 'goto', 'flashcards', 'roadmap'
+const activeTab = ref(readStorage('goto-fsa-active-tab', 'presentation')) // 'presentation', 'slides', 'assignments', 'goto', 'flashcards', 'roadmap'
 const searchQuery = ref('')
-const sidebarMode = ref('presentation') // 'presentation', 'slides', 'assignments'
+const sidebarMode = ref(readStorage('goto-fsa-sidebar-mode', 'presentation')) // 'presentation', 'slides', 'assignments'
 
 // For assignments tab
-const selectedAssignmentId = ref('m1')
+const selectedAssignmentId = ref(readStorage('goto-fsa-selected-assignment', 'm1'))
 const selectedWorkbookSheet = ref('')
+
+watch(selectedWeekId, (val) => writeStorage('goto-fsa-selected-week', val))
+watch(selectedPresSlideNum, (val) => writeStorage('goto-fsa-pres-slide', val))
+watch(activeTab, (val) => writeStorage('goto-fsa-active-tab', val))
+watch(sidebarMode, (val) => writeStorage('goto-fsa-sidebar-mode', val))
+watch(selectedAssignmentId, (val) => writeStorage('goto-fsa-selected-assignment', val))
 
 // Image zoom & lightbox modal states
 const isActualSize = ref(false)
@@ -1622,15 +1646,57 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
   }
   if (kind === 'five_force') {
     const [force, rating, basis] = Array.isArray(item) ? item : ['', '', '']
+    const fKey = (force || '').toLowerCase()
+    const isId = lang.value === 'id'
+
+    let detail = ''
+    let formulaText = ''
+    if (fKey.includes('entrant') || fKey.includes('pendatang')) {
+      detail = isId
+        ? `Membangun jaringan aplikasi besar di seluruh Indonesia butuh modal besar, infrastruktur teknologi, dan izin resmi (barriers to entry yang tinggi). Karena economies of scale ini, startup baru sulit merebut pangsa pasar GoTo, meski perusahaan teknologi besar bermodal kuat tetap bisa masuk.`
+        : `Building a big app network across Indonesia takes huge capital, tech infrastructure, and regulatory licenses (high barriers to entry). Because of these economies of scale, new startups cannot easily steal GoTo's market share, though big tech giants with deep pockets could still enter.`
+      formulaText = isId
+        ? 'Modal Besar + Skala Teknologi + Perizinan = Barriers to Entry Tinggi (Ancaman Rendah–Sedang)'
+        : 'High Capital + Tech Scale + Licensing = High Barriers to Entry (Low–Moderate Threat)'
+    } else if (fKey.includes('supplier') || fKey.includes('pemasok')) {
+      detail = isId
+        ? `Pengemudi, merchant, dan vendor teknologi GoTo tersebar dalam jumlah banyak—tidak ada satu pemasok pun yang bisa mengendalikan bisnis GoTo. Pengemudi dan merchant kecil bergantung pada platform GoTo untuk pendapatan harian, sehingga bargaining power pemasok rendah untuk menuntut komisi lebih tinggi.`
+        : `GoTo's drivers, merchants, and tech vendors are fragmented—no single supplier controls GoTo's business. Individual drivers and small merchants depend on GoTo's platform for daily income, so suppliers have low bargaining power to demand higher fees.`
+      formulaText = isId
+        ? 'Pengemudi & Merchant Tersebar + Ketergantungan Platform = Bargaining Power Pemasok Rendah'
+        : 'Fragmented Drivers & Merchants + Platform Dependency = Low Supplier Bargaining Power'
+    } else if (fKey.includes('buyer') || fKey.includes('pembeli')) {
+      detail = isId
+        ? `Setiap pengguna individu berukuran kecil, sehingga satu pelanggan tidak bisa menentukan harga. Namun, pengguna memiliki switching costs hampir nol dan sangat sensitif terhadap harga—jika GoTo mengurangi promo atau menaikkan take-rate, pelanggan cepat pindah ke pesaing, sehingga pricing power GoTo terbatas.`
+        : `Each individual user is small, so no single customer can set prices. However, users have almost zero switching costs and are very price-sensitive—if GoTo cuts promos or raises its take-rate, customers quickly move to competitors, limiting GoTo's pricing power.`
+      formulaText = isId
+        ? 'Pengguna Tersebar (Daya Tekan Rendah) + Switching Costs Hampir Nol = Bargaining Power Pembeli Sedang'
+        : 'Fragmented Users (Low Power) + Near-Zero Switching Costs = Medium Buyer Bargaining Power'
+    } else if (fKey.includes('substitut') || fKey.includes('substitusi')) {
+      detail = isId
+        ? `Pelanggan tidak wajib memakai aplikasi GoTo—mereka bisa naik transportasi umum atau kendaraan pribadi daripada GoRide, makan di tempat daripada GoFood, atau memakai transfer bank/QRIS daripada GoPay. Alternatif di luar platform ini membatasi seberapa tinggi GoTo bisa menaikkan harga sebelum pengguna beralih.`
+        : `Customers do not have to use GoTo's app—they can take public transit or drive themselves instead of GoRide, eat at restaurants instead of GoFood, or use regular bank transfers/QRIS instead of GoPay. These outside alternatives cap how much GoTo can raise prices before users switch away.`
+      formulaText = isId
+        ? 'Transportasi Umum + Makan di Tempat + Transfer Bank/QRIS = Alternatif Luar Membatasi Pricing Power (Sedang)'
+        : 'Public Transit + Dine-In + Bank Transfers/QRIS = Outside Alternatives Capping Pricing Power (Medium)'
+    } else {
+      detail = isId
+        ? `GoTo menghadapi persaingan langsung yang sangat ketat dari Grab, Maxim, inDrive, ShopeeFood, dan dompet digital dengan layanan yang hampir sama. Untuk mempertahankan pangsa pasar dan volume pengguna, GoTo harus mengeluarkan beban sales & marketing Rp 3,09T dan product development Rp 2,15T pada FY2025, yang terus menekan operating margin.`
+        : `GoTo faces fierce head-to-head competition from Grab, Maxim, inDrive, ShopeeFood, and e-wallets offering almost identical services. To defend market share and user volume, GoTo had to spend Rp 3.09T on sales & marketing and Rp 2.15T on product development in FY2025, which keeps operating margins under pressure.`
+      formulaText = isId
+        ? 'Rivalitas Tinggi + Switching Costs Rendah → Beban Sales & Marketing Rp 3,09T + Product Dev Rp 2,15T'
+        : 'High Competitive Rivalry + Low Switching Costs → Rp 3.09T Sales & Marketing + Rp 2.15T Product Dev Expense'
+    }
+
     return {
       title: force,
       value: rating,
-      explanation: `${basis}. Intense rivalry and low switching costs require Rp 3.09T in promo/marketing spend and Rp 2.15T in product development, capping take-rate expansion.`,
-      detail_explanation: `${basis}. Under Porter's Five Forces, intense competitive rivalry and low user switching costs prevent GoTo from raising take-rates without losing volume, while consumer lending (Rp 2,731 bn net loans) adds credit-loss sensitivity.`,
-      formula: 'Competitive Rivalry (High) + Low Switching Costs → Sustained Promo Spend (Rp 3.09T)',
+      explanation: `${basis}. ${detail}`,
+      detail_explanation: `${basis}. ${detail}`,
+      formula: formulaText,
       calc_steps: [
-        `Force: ${force} → Rating: ${rating}`,
-        `Basis: ${basis}`
+        isId ? `Kekuatan: ${force} → Peringkat: ${rating}` : `Force: ${force} → Rating: ${rating}`,
+        isId ? `Dasar: ${basis}` : `Basis: ${basis}`
       ],
       data_origin: slide.source_footer || 'LK GOTO FY2025 Note 7 & Note 30',
       highlight_terms: [force, rating].filter(Boolean),
@@ -1828,13 +1894,86 @@ watch(selectedPresSlideNum, () => {
   clickPopup.value = null
 })
 
+const TABLE_SCROLL_SELECTOR = [
+  '.drawer-formula-table-wrap',
+  '.drawer-schedule-scroll',
+  '.drawer-support-table-wrap',
+  '.trace-mini-table-wrap',
+  '.val-table-wrap',
+  '.wb-table-wrap',
+  '.asg-fin-table-scroll',
+].join(', ')
+
+let activeTableDrag = null
+
+const updateTableDragCursor = (e) => {
+  const wrap = e.target?.closest?.(TABLE_SCROLL_SELECTOR)
+  if (!wrap) return
+  wrap.classList.toggle('can-drag-x', wrap.scrollWidth > wrap.clientWidth + 1)
+}
+
+const handleTableDragStart = (e) => {
+  if (e.pointerType === 'touch' || e.button !== 0) return
+  if (e.target?.closest?.('button, a, input, select, textarea')) return
+  const wrap = e.target?.closest?.(TABLE_SCROLL_SELECTOR)
+  if (!wrap || wrap.scrollWidth <= wrap.clientWidth + 1) return
+
+  activeTableDrag = {
+    el: wrap,
+    startX: e.clientX,
+    startScrollLeft: wrap.scrollLeft,
+    hasDragged: false,
+  }
+}
+
+const handleTableDragMove = (e) => {
+  if (!activeTableDrag) return
+  const dx = e.clientX - activeTableDrag.startX
+  if (!activeTableDrag.hasDragged) {
+    if (Math.abs(dx) < 4) return
+    activeTableDrag.hasDragged = true
+    activeTableDrag.el.classList.add('is-dragging-x')
+    document.body.classList.add('is-table-dragging-x')
+    window.getSelection()?.removeAllRanges()
+  }
+  e.preventDefault()
+  activeTableDrag.el.scrollLeft = activeTableDrag.startScrollLeft - dx
+}
+
+const handleTableDragEnd = () => {
+  if (!activeTableDrag) return
+  const { el, hasDragged } = activeTableDrag
+  activeTableDrag = null
+  el.classList.remove('is-dragging-x')
+  document.body.classList.remove('is-table-dragging-x')
+
+  if (hasDragged) {
+    const suppressClick = (clickEvent) => {
+      clickEvent.stopPropagation()
+      clickEvent.preventDefault()
+    }
+    window.addEventListener('click', suppressClick, { capture: true, once: true })
+    setTimeout(() => window.removeEventListener('click', suppressClick, { capture: true }), 0)
+  }
+}
+
 onMounted(() => {
   window.addEventListener('keydown', handlePresentKeydown)
   window.addEventListener('click', closeClickPopup)
+  document.addEventListener('pointerover', updateTableDragCursor)
+  document.addEventListener('pointerdown', handleTableDragStart)
+  window.addEventListener('pointermove', handleTableDragMove)
+  window.addEventListener('pointerup', handleTableDragEnd)
+  window.addEventListener('pointercancel', handleTableDragEnd)
 })
 onUnmounted(() => {
   window.removeEventListener('keydown', handlePresentKeydown)
   window.removeEventListener('click', closeClickPopup)
+  document.removeEventListener('pointerover', updateTableDragCursor)
+  document.removeEventListener('pointerdown', handleTableDragStart)
+  window.removeEventListener('pointermove', handleTableDragMove)
+  window.removeEventListener('pointerup', handleTableDragEnd)
+  window.removeEventListener('pointercancel', handleTableDragEnd)
 })
 
 const jumpToLectureSlide = (weekId, slideNum) => {
@@ -2386,6 +2525,9 @@ const isColNumeric = (tbl, cIdx) => {
             <div class="pres-meta-pills">
               <span class="pres-time-badge">⏱ {{ currentPresSlide.time_budget }}</span>
               <span class="pres-pts-badge">🏆 {{ currentPresSlide.rubric_points }}</span>
+              <button v-if="currentPresSlide.study_explanation" class="pres-reveal-btn" @click="onPresItemDblClick(buildPresItemPayload('claim', { heading: currentPresSlide.title, text: currentPresSlide.study_explanation, detail_explanation: currentPresSlide.study_explanation }))">
+                {{ lang === 'id' ? 'Jelaskan slide ini' : 'Explain this slide' }}
+              </button>
               <button class="pres-present-btn" @click="isPresentMode = true" :title="uiText.presentTitle">
                 ▶ {{ uiText.presentBtn }}
               </button>
@@ -3565,59 +3707,15 @@ const isColNumeric = (tbl, cIdx) => {
 
     <!-- ================= BROWSER-VIEWPORT PRESENTATION MODE ================= -->
     <div v-if="isPresentMode" class="present-overlay" @click.self="isPresentMode = false">
-      <!-- Slim Top Control Bar -->
-      <div class="present-topbar">
-        <div class="present-top-left">
-          <span class="present-mode-badge">PRESENTATION FOCUS</span>
-          <span class="present-slide-counter">Slide {{ currentPresSlide.slide_num }} / {{ presentationSlides.length }}</span>
-          <span class="present-section-lbl">{{ currentPresSlide.section_tag }}</span>
-        </div>
-
-        <div class="present-top-dots">
-          <button
-            v-for="ps in presentationSlides"
-            :key="ps.slide_num"
-            :class="['present-dot', { active: ps.slide_num === selectedPresSlideNum, apx: ps.is_appendix }]"
-            @click="selectedPresSlideNum = ps.slide_num"
-            :title="ps.title"
-          >
-            {{ ps.is_appendix ? 'A' + (ps.slide_num - 11) : ps.slide_num }}
-          </button>
-        </div>
-
-        <button class="present-exit-btn" @click="isPresentMode = false" :title="uiText.exitEsc">
-          ✕ {{ uiText.exitEsc }}
-        </button>
-      </div>
-
-      <!-- Center Stage with Left / Right Arrows -->
-      <div class="present-stage">
-        <button
-          class="present-arrow-btn present-arrow-left"
-          :disabled="selectedPresSlideNum <= 1"
-          @click.stop="prevPresSlide"
-          title="Previous Slide (Left Arrow)"
-        >
-          &lsaquo;
-        </button>
-
+      <div class="present-stage" @click.self="isPresentMode = false">
         <FinancialSlide
-              :slide="currentPresSlide"
-              :lang="lang"
-              :total="presentationSlides.length"
-              @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
-              @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
-              @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
-            />
-
-        <button
-          class="present-arrow-btn present-arrow-right"
-          :disabled="selectedPresSlideNum >= presentationSlides.length"
-          @click.stop="nextPresSlide"
-          title="Next Slide (Right Arrow)"
-        >
-          &rsaquo;
-        </button>
+          :slide="currentPresSlide"
+          :lang="lang"
+          :total="presentationSlides.length"
+          @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+          @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
+          @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
+        />
       </div>
     </div>
 
@@ -3645,7 +3743,8 @@ const isColNumeric = (tbl, cIdx) => {
     </div>
 
     <!-- ================= RIGHT-SIDE SLIDE-OVER SOURCE DRAWER ================= -->
-    <div v-if="detailDrawerItem" class="drawer-backdrop" @click.self="detailDrawerItem = null">
+    <Transition name="drawer-slide">
+      <div v-if="detailDrawerItem" class="drawer-backdrop" @click.self="detailDrawerItem = null">
       <aside class="right-detail-drawer source-drawer" role="dialog" aria-modal="true" aria-labelledby="source-drawer-title">
         <div class="drawer-top-hdr">
           <div>
@@ -3679,6 +3778,31 @@ const isColNumeric = (tbl, cIdx) => {
           </div>
 
           <!-- 3. Featured Highlighted Audited LK GOTO Page -->
+          <section v-if="detailDrawerItem.slide.calculation_notes?.length" class="drawer-section">
+            <h4 class="drawer-sec-title">{{ lang === 'id' ? 'Tabel Perhitungan' : 'Calculation Table' }} <span>{{ detailDrawerItem.slide.calculation_notes.length }}</span></h4>
+            <div class="trace-mini-table-wrap drawer-support-table-wrap drawer-formula-table-wrap" tabindex="0" :aria-label="lang === 'id' ? 'Tabel rumus dan perhitungan' : 'Formulas and calculations table'">
+              <div class="trace-mini-title drawer-support-tbl-hdr">{{ lang === 'id' ? 'Perhitungan Berdasarkan Workbook Excel' : 'Excel Workbook Calculations' }}</div>
+              <table class="data-table trace-mini-table drawer-formula-table">
+                <thead>
+                  <tr>
+                    <th scope="col">{{ lang === 'id' ? 'Ukuran' : 'Metric' }}</th>
+                    <th scope="col">{{ lang === 'id' ? 'Hasil' : 'Result' }}</th>
+                    <th scope="col">{{ lang === 'id' ? 'Rumus yang Digunakan' : 'Formula Used' }}</th>
+                    <th scope="col">{{ lang === 'id' ? 'Perhitungan' : 'Calculation' }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(calculation,index) in detailDrawerItem.slide.calculation_notes" :key="'calculation-'+index">
+                    <th scope="row">{{ calculation.label }}<small class="drawer-formula-source">{{ calculation.source }}</small></th>
+                    <td class="drawer-formula-result">{{ calculation.result }}</td>
+                    <td>{{ calculation.formula }}</td>
+                    <td>{{ calculation.substitution }}<small v-if="calculation.note" class="drawer-formula-note">{{ calculation.note }}</small></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           <div v-if="detailDrawerItem.evidence_img" class="drawer-featured-ev">
             <div class="drawer-fev-hdr">
               <span>{{ uiText.drawerLkProofTitle }}</span>
@@ -3692,6 +3816,20 @@ const isColNumeric = (tbl, cIdx) => {
             />
             <div class="drawer-zoom-hint">{{ uiText.drawerClickZoomHint }}</div>
           </div>
+
+          <section v-if="detailDrawerItem.slide.supporting_schedules?.length" class="drawer-section">
+            <h4 class="drawer-sec-title">{{ lang === 'id' ? 'Angka dan perhitungan lengkap' : 'Numbers and calculations, step by step' }} <span>{{ detailDrawerItem.slide.supporting_schedules.length }}</span></h4>
+            <div v-for="(schedule,index) in detailDrawerItem.slide.supporting_schedules" :key="'schedule-'+index" class="drawer-trace-card">
+              <h4 class="drawer-schedule-title">{{ schedule.title }}</h4>
+              <div class="drawer-schedule-scroll" tabindex="0" :aria-label="schedule.title">
+                <table class="drawer-schedule-table">
+                  <thead><tr><th v-for="(cell,c) in schedule.headers" :key="c">{{ cell }}</th></tr></thead>
+                  <tbody><tr v-for="(row,r) in schedule.rows" :key="r"><td v-for="(cell,c) in row" :key="c">{{ cell }}</td></tr></tbody>
+                </table>
+              </div>
+              <p v-if="schedule.note" class="trace-mapping-note">{{ schedule.note }}</p>
+            </div>
+          </section>
 
           <!-- 4. Matched Assignments & Audited Filings (with Highlighted Workbook Supporting Rows) -->
           <div class="drawer-section">
@@ -3804,7 +3942,8 @@ const isColNumeric = (tbl, cIdx) => {
           </div>
         </div>
       </aside>
-    </div>
+      </div>
+    </Transition>
 
     <!-- ================= LIGHTBOX / FULLSCREEN MODAL ================= -->
     <div v-if="lightboxImage" class="lightbox-overlay" @click.self="closeLightbox">
@@ -4056,6 +4195,8 @@ const isColNumeric = (tbl, cIdx) => {
 
 /* Sleek Top Navigation Bar */
 .top-nav {
+  position: sticky;
+  top: 0;
   height: 58px;
   background: #ffffff;
   border-bottom: 1px solid var(--border-color);
@@ -4436,6 +4577,9 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .asg-sec-toc-bar {
+  position: sticky;
+  top: -16px;
+  z-index: 20;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -5946,6 +6090,9 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .data-table th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   background: #edf2f4;
   color: #354b5d;
   font-weight: 700;
@@ -6351,6 +6498,9 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .pres-controls-bar {
+  position: sticky;
+  top: -16px;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -7195,9 +7345,22 @@ const isColNumeric = (tbl, cIdx) => {
   z-index: 900;
   background: #0b1120;
   display: flex;
-  flex-direction: column;
-  padding: 14px 22px 18px;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.present-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.present-stage .financial-slide {
+  width: min(100vw, calc(100vh * 16 / 9));
+  flex: none;
 }
 
 .present-topbar {
@@ -7275,15 +7438,6 @@ const isColNumeric = (tbl, cIdx) => {
 .present-exit-btn:hover {
   background: #dc2626;
   border-color: #dc2626;
-}
-
-.present-stage {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
 }
 
 .present-arrow-btn {
@@ -7497,6 +7651,26 @@ const isColNumeric = (tbl, cIdx) => {
   box-shadow: -12px 0 36px rgba(15, 23, 42, 0.25);
   display: flex;
   flex-direction: column;
+}
+
+.drawer-slide-enter-active,
+.drawer-slide-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.drawer-slide-enter-active .right-detail-drawer,
+.drawer-slide-leave-active .right-detail-drawer {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-slide-enter-from,
+.drawer-slide-leave-to {
+  opacity: 0;
+}
+
+.drawer-slide-enter-from .right-detail-drawer,
+.drawer-slide-leave-to .right-detail-drawer {
+  transform: translateX(100%);
 }
 
 .drawer-top-hdr {
@@ -7862,5 +8036,26 @@ const isColNumeric = (tbl, cIdx) => {
   border-color: var(--goto-green);
   color: var(--goto-green);
   background: var(--goto-green-light);
+}
+
+.can-drag-x {
+  cursor: grab;
+}
+
+.is-dragging-x,
+.is-dragging-x * {
+  cursor: grabbing !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.is-dragging-x {
+  scroll-behavior: auto;
+}
+
+body.is-table-dragging-x {
+  cursor: grabbing;
+  user-select: none;
+  -webkit-user-select: none;
 }
 </style>

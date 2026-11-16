@@ -212,6 +212,71 @@ html[data-theme="dark"] .goto-report-container {
   color: var(--text-main);
 }
 
+/* Tasks / Assignments Tab Dark Mode Fixes */
+html[data-theme="dark"] .ticker-name,
+html[data-theme="dark"] .asg-fin-table-badge {
+  color: var(--text-heading);
+}
+
+html[data-theme="dark"] .asg-slide-card .slide-card-code {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .asg-slide-card .slide-card-title {
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .asg-slide-card.active {
+  background: #172554;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+}
+
+html[data-theme="dark"] .asg-slide-card.active .slide-card-code {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .asg-slide-card.active .slide-card-title {
+  color: var(--text-heading);
+}
+
+html[data-theme="dark"] .asg-toc-num {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .asg-toc-wb-btn {
+  background: #1e293b;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .asg-toc-wb-btn:hover {
+  background: #047857;
+  border-color: #059669;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .sec-paragraph-text {
+  background: var(--bg-subtle);
+  border-left-color: #3b82f6;
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .wb-section-divider-row td {
+  background: #172554;
+  color: #93c5fd !important;
+  border-top-color: #1e40af;
+  border-bottom-color: #1e40af;
+}
+
+html[data-theme="dark"] .wb-total-row td {
+  background: #0f291e;
+  color: #6ee7b7 !important;
+  border-top-color: #059669;
+  border-bottom-color: #059669;
+}
+
 /* Lecture Dual Explanation Columns */
 html[data-theme="dark"] .exp-col.theory-col {
   background: #111c30;

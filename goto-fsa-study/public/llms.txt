@@ -5,711 +5,109 @@
 - **Live App:** https://group4fsa.crosswing.app/
 - **AI-Readable Deck:** https://group4fsa.crosswing.app/llms.txt
 - **Company:** PT GoTo Gojek Tokopedia Tbk (IDX: GOTO)
-- **Valuation Date:** December 30, 2025 | **Market Price:** Rp 25.00 / share
-- **Final Recommendation:** **SELL GOTO at Rp 25.00**
+- **Assignment reference price:** Rp25.00 per share; not a live quote. Input dates are shown with their sources.
+- **User:** Short-term public equity investor. The recommendation is presented after the evidence, on the final slide.
 
 ---
 
-## Slide 1: PT GoTo Gojek Tokopedia Tbk (IDX: GOTO): Why a Long-Term Equity Investor Should SELL at Rp 25.00
-**Company Introduction, Target Investor Profile, and Core Investment Verdict**
-*Section: Opening & Investment Thesis | Time Budget: 1.5 mins | Rubric: Required Opening*
+## Slide 1: GoTo Equity Analysis
+*Section: Opening | Time Budget: 0.75 mins | Rubric: Required*
 
-### Key Metrics & KPIs
-- **Assigned Company:** `IDX: GOTO` (66M Users | 6.4M Merchants | 3M Drivers)
-  - Explanation: PT GoTo Gojek Tokopedia Tbk is Indonesia's largest integrated digital ecosystem operating On-Demand Services (Gojek) and Financial Technology (GoTo Financial), alongside a 24.99% associate stake in Tokopedia.
-  - Formula: `Mkt Cap = Rp 25.00 x 1,062.01 bn shares = Rp 26,550.3 bn`
-  - Calculation Steps:
-    - Operating Engines: Gojek (Rp 12,361 bn) + GoTo Financial (Rp 5,191 bn) + Tokopedia fees (Rp 820 bn).
-  - Source: Final Report Section (a)-(b) & LK GOTO FY2025
-- **Current IDX Market Price:** `Rp 25.00 / sh` (0.9x Book Value (-93% vs Rp 338 IPO))
-  - Explanation: GoTo shares traded at Rp 25.00 on our 30 Dec 2025 valuation benchmark (and after IDX lowered the minimum price floor to Rp 1), representing an 8% discount to Rp 27.03 book value per share.
-  - Formula: `P/B = Rp 25.00 / Rp 27.03 BVPS = 0.92x (0.9x)`
-  - Calculation Steps:
-    - Book Equity Rp 28,711.7 bn / 1,062.01 bn shares = Rp 27.03/sh.
-  - Source: Assignment 14 'Valuation Summary' Row 12 & Final Report Section (f)
-- **One-Sentence Verdict:** `SELL / AVOID` (DCF -Rp 121.1 | RI -Rp 75.1 vs Rp 25.00)
-  - Explanation: For a long-term public equity investor, GoTo destroys economic value: operating cash flow covers only 26% of capex (-Rp 875 bn FCF), ROE (-5.2%) misses our 8.45% equity hurdle, and intrinsic values are negative.
-  - Formula: `DCF -Rp 121.1/sh & RI -Rp 75.1/sh << Rp 25.00 Market Price`
-  - Calculation Steps:
-    - Free Cash Flow (2025): +Rp 307.0 bn CFO - Rp 1,182.4 bn Capex = -Rp 875.3 bn.
-    - 2028F Base Cash shrinks from Rp 21,755 bn to Rp 968 bn.
-  - Source: Assignment 14 Valuation Summary & Final Report Sections (a)-(g)
+### Sidebar: the full explanation in simple language
+GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.
 
-### Key Takeaways & Analysis
-#### 1. What Is Our Company (IDX: GOTO)?
-- **Indonesia's Super-App Pioneer:** Connects 66 million Annual Transacting Users, 6.4 million+ merchants, and 3 million+ driver partners on one daily-use platform.
-- **Post-Tokopedia Focus:** After transferring 75.01% of Tokopedia to TikTok in early 2024, GoTo runs two active businesses — Gojek mobility/food and GoTo Financial — plus a 24.99% Tokopedia stake.
-- *Context:* Establishes who GoTo is operationally before examining financial statements or valuation multiples.
+The presentation uses the perspective of a short-term public equity investor. Rp25 per share is the assignment reference price rather than a current market quote.
 
-#### 2. Who Is Our User (Week 1 Perspective)?
-- **Public Long-Only Equity Investor:** An outside minority shareholder evaluating whether buying or holding IDX: GOTO at Rp 25.00 (0.9x book) is a bargain turnaround or a value trap.
-- **Core Decision Question:** Do headline cost cuts translate into self-funding Free Cash Flow and returns above GoTo's 8.45% Cost of Equity?
-- *Context:* Frames the entire presentation around the equity investor identified in Week 1, per Section 1 & Section 3 of the guidelines.
-
-#### 3. Our Answer in One Sentence
-- **SELL / AVOID at Rp 25.00:** We recommend selling or avoiding GOTO because low switching costs cap take-rates while historical cost scaling drains cash to Rp 968 bn by 2028F.
-- **Valuation Gap Explained:** DCF −Rp121.1 and RI −Rp75.1 follow the submitted base case. The revised Grab-only P/B benchmark is Rp91.0/share; no blended peer value is used.
-- *Context:* States the complete integrated thesis upfront so every strategy, ratio, forecast, and valuation slide proves one connected argument.
+The financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.
 
 ### Speaker Notes
-[Speaker 1: Fagly Ramschie — 1.5 mins] Good afternoon everyone. Today Group 4 is evaluating PT GoTo Gojek Tokopedia Tbk, ticker GOTO — Indonesia's largest integrated digital ecosystem connecting 66 million users, over 6.4 million merchants, and more than 3 million driver partners across Gojek, GoPay, and a 24.99% stake in Tokopedia. Our target decision-maker, identified in Week 1, is a long-term public equity investor looking at GOTO trading at Rp 25.00 per share — down 93% from its Rp 338 IPO price and sitting just below book value at 0.9x P/B — asking one critical question: Is this a turnaround bargain, or a capital trap? Our answer in one sentence is clear: We recommend SELL / AVOID at Rp 25.00 because fierce competition blocks pricing power, operating cash flow still fails to fund capital spending, and continuing losses drive deeply negative intrinsic value under both DCF (-Rp 121.1) and Residual Income (-Rp 75.1). Let us walk you through the evidence step by step — starting with how GoTo makes money and why its industry structure makes profitability so hard.
+Company: GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.
 
-Course-based explanation:
-Company and user: Gojek mobility and GoTo Financial, plus 24.99% of Tokopedia. The decision belongs to a long-term public equity investor.
+Target Investor: The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.
 
-One-sentence answer: SELL / AVOID at Rp 25.00 per share because competitive pressure and the historical-cost scenario leave cash generation below investment needs.
+Presentation Scope: The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.
 
 *Sources: Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025*
 
 ---
 
-## Slide 2: GoTo Exited E-Commerce Control in 2024 to Focus on Two Core Engines: Gojek (Mobility) and GoTo Financial
-**How GoTo Actually Generates Revenue Across Segments Before Examining Financial Ratios**
-*Section: Step 1: Strategy — Business Model (7.5/15 pts) | Time Budget: 1.25 mins | Rubric: 7.5 / 15 pts*
+## Slide 2: Business Model
+*Section: Strategy & industry | Time Budget: 1 mins | Rubric: 15 pts (section)*
 
-### Key Metrics & KPIs
-- **2025 Net Revenue:** `Rp 18,322 bn` (+15.3% YoY Post-Deconsolidation)
-  - Explanation: Consolidated 2025 net revenue reached Rp 18,322.1 bn (+15.3% from Rp 15,894.5 bn in 2024) on clean comparability after deconsolidating Tokopedia.
-  - Formula: `YoY Growth = (18,322.1 / 15,894.5) - 1 = +15.27%`
-  - Calculation Steps:
-    - 2023: Rp 14,785.5 bn | 2024: Rp 15,894.5 bn | 2025: Rp 18,322.1 bn.
-  - Source: LK GOTO FY2025 p. 17 & Final Report Table 1
-- **ODS vs. FinTech Revenue:** `Rp 12.36T / 5.19T` (67.5% Mobility/Food | 28.3% FinTech (+74%))
-  - Explanation: On-Demand Services (Gojek) contributes Rp 12,361 bn in net revenue, while Financial Technology (GoPay & consumer loans) jumped +74.1% YoY to Rp 5,191 bn.
-  - Formula: `Rp 12,361 bn (ODS) + Rp 5,191 bn (FinTech) + Rp 820 bn (Tokopedia Fees)`
-  - Calculation Steps:
-    - On-Demand Services (Rp 12,361 bn): rides, GoFood, GoSend.
-    - Financial Technology (Rp 5,191 bn): GoPay wallet + fast-growing loans.
-  - Source: Final Report Section (b.1) & LK Segment Disclosure
-- **Tokopedia Partnership:** `24.99% Stake` (Rp 7,432 bn Carrying Value + Rp 820 bn Fees)
-  - Explanation: Deconsolidating Tokopedia (75.01% transferred to TikTok in early 2024) removed massive e-commerce losses while preserving Rp 820 bn in high-margin platform service fees.
-  - Formula: `Passive Associate Carrying Value = Rp 7,432.3 bn (incl. Rp 2,003.6 bn goodwill)`
-  - Calculation Steps:
-    - E-commerce service fee revenue from Tokopedia = Rp 820 bn in FY2025.
-  - Source: Final Report Sections (b.1) & (c.1); LK Note 14
+### Sidebar: the full explanation in simple language
+Revenue is the amount recorded from providing services. Costs still have to be deducted before revenue becomes profit. Gojek records Rp12,361.259bn of third-party net revenue from rides, food and delivery. GoTo Financial records Rp5,190.617bn from payments and lending.
 
-### Key Takeaways & Analysis
-#### Engine 1: On-Demand Services (Gojek — Rp 12.36T)
-- **Daily Urban Utility:** Earns commissions on ride-hailing (GoRide, GoCar), food delivery (GoFood), and parcel logistics (GoSend) across Indonesia and Singapore.
-- **Hybrid Strategy:** Combines low-cost tiers for mass affordability (GoFood Saver) with ecosystem bundling (GoTransit) to protect order frequency.
-- *Context:* Core cash-flow engine intended to stabilize take-rates after ending e-commerce subsidy wars.
+Tokopedia is no longer controlled by GoTo. The 24.99% retained stake is an investment asset. The Rp819.724bn service-fee line is a separate source of revenue. It is not Tokopedia’s total sales, and it is not a dividend received simply because GoTo holds shares.
 
-#### Engine 2: Financial Technology (GoTo Financial — Rp 5.19T)
-- **Main Growth Driver (+74.1% YoY):** GoPay digital payments feed high-frequency transaction data into consumer loans (GoPay Pinjam & PayLater).
-- **Bank Jago Integration:** Partner bank ecosystem (21% associate held at Rp 2,895 bn) supplies funding channels and balance-sheet scale for lending.
-- *Context:* FinTech is GoTo's fastest-growing revenue stream, yet introduces credit-risk trade-offs examined on Slide 3.
+The three revenue lines add to Rp18,371.600bn. Adjustments and eliminations of Rp49.483bn reduce the group total to Rp18,322.117bn. The difference is an accounting reconciliation between the segment lines and the consolidated total.
 
-#### Strategic Pivot: 2024 Tokopedia Deconsolidation
-- **Why Management Pivoted:** ByteDance/TikTok acquired 75.01% control of Tokopedia in Jan 2024, shifting heavy e-commerce logistics and promo burn off GoTo's consolidated P&L.
-- **Ongoing Economic Link:** GoTo collects Rp 820 bn in recurring e-commerce service fees while holding its 24.99% associate stake at Rp 7,432 bn.
-- *Context:* Explains why consolidated revenue and operating losses improved structurally between 2023 and 2025.
+Gojek and GoTo Financial revenue describe the two operating businesses. The Tokopedia fee describes the fee arrangement. The retained stake describes GoTo’s investment. Those three measures represent different things and are not interchangeable measures of operating sales.
+
+### Sidebar calculation: Revenue bridge to consolidated GoTo revenue
+| Step | Rp bn | Meaning |
+| --- | --- | --- |
+| Gojek third-party net revenue | 12,361.259 | Rides, food and delivery |
+| GoTo Financial third-party net revenue | 5,190.617 | Payments and lending |
+| Tokopedia service fee | 819.724 | A fee, not ownership of all Tokopedia sales |
+| Three lines before adjustments | 18,371.600 | Sum of the three revenue lines |
+| Adjustments and eliminations | (49.483) | Group-level adjustments and eliminations |
+| Consolidated net revenue | 18,322.117 | Group total; rounding explains small display differences |
 
 ### Speaker Notes
-[Fagly Ramschie; 1.25 mins]
+Revenue: Gojek revenue is Rp12,361bn, compared with Rp5,191bn from GoTo Financial and about Rp820bn in Tokopedia service fees.
 
-Revenue mechanism: Gojek earns ride, delivery, and logistics commissions. GoPay covers payments and lending. Subtract Rp 49.483 bn segment eliminations to reconcile 2025 segment revenue to consolidated revenue.
+Business Activities: Gojek provides rides, food and delivery. GoTo Financial provides payments and lending. Tokopedia is an associate, rather than a business controlled by GoTo.
 
-Competitive position: Mass-market affordability combines with premium speed and convenience. GoTransit and GoPay integration support retention, but do not eliminate price competition.
-
-2024 change of perimeter: Tokopedia became an associate after 75.01% transferred to TikTok. Separate retained investment and fees from consolidated operating revenue when comparing periods.
-
-
+Tokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from Tokopedia in 2025. GoTo retains a 24.99% ownership stake in Tokopedia.
 
 *Sources: Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14*
 
 ---
 
-## Slide 3: Intense Rivalry and Zero Switching Costs Force Rp 3.09T in Promotions, Pushing GoTo Toward Credit Risk
-**Competitive Position (Porter's Five Forces) and Why Scale Has Not Created Pricing Power**
-*Section: Step 1: Industry Rivalry & Risks (7.5/15 pts) | Time Budget: 1.25 mins | Rubric: 7.5 / 15 pts*
+## Slide 3: Industry and Competition
+*Section: Strategy & industry | Time Budget: 1.5 mins | Rubric: 15 pts (section)*
 
-### Key Metrics & KPIs
-- **Porter's Industry Structure:** `High Rivalry` (Grab, Maxim, inDrive & Shopee Pressure)
-  - Explanation: Both competitive rivalry and buyer power are High: commuters, merchants, and wallets multi-home across Grab, Maxim, inDrive, ShopeeFood, OVO, and DANA with almost zero switching cost.
-  - Formula: `3 Unfavorable Forces (Rivalry, Buyer Power, Substitutes = High)`
-  - Calculation Steps:
-    - Entry & Supplier Power stay Low-to-Moderate, yet fierce incumbent rivalry caps margins.
-  - Source: Milestone 1 & Final Report Section (b.2)
-- **2025 Promo & Marketing:** `Rp 3.09T` (Plus Rp 2.15T Product Development Spend)
-  - Explanation: Defending user share forced GoTo to spend Rp 3.09 trillion in 2025 sales and marketing plus Rp 2.15 trillion in R&D/tech support — equal to 28.6% of total revenue before net promos.
-  - Formula: `Rp 3.09T Sales & Marketing + Rp 2.15T Tech Dev = Rp 5.24T`
-  - Calculation Steps:
-    - PSAK 72 also nets consumer voucher promos directly off top-line revenue.
-  - Source: Final Report Sections (a.1) & (b.3)
-- **Net Consumer Loans (2025):** `Rp 2,731 bn` (Credit Loss Provisions Doubled (+134%))
-  - Explanation: Net consumer loan receivables expanded to Rp 2,731 bn, while annual credit loss provisions more than doubled from Rp 174 bn to Rp 408 bn — warning of rising credit default risk.
-  - Formula: `Provisions: Rp 174 bn ('24) -> Rp 408 bn ('25) (+134% YoY)`
-  - Calculation Steps:
-    - Loan growth drives FinTech revenue (+74%), yet credit losses consume yield upside.
-  - Source: Final Report Section (b.3) & LK Notes
+### Sidebar: the full explanation in simple language
+GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.
 
-### Key Takeaways & Analysis
-#### Competitive Position (Porter's 5 Forces Summary)
-- **High Rivalry & Medium Buyer Power:** Grab, Maxim, and inDrive battle Gojek on ride pricing, while ShopeeFood, OVO, and DANA contest deliveries and wallets. Users compare apps in seconds.
-- **Limited Moat vs. Substitutes:** Cash payments, private motorbikes, and merchant direct ordering remain Medium-rated substitutes; only GoTo's 3M driver network slows new entrants.
-- *Context:* Explains structurally why GoTo cannot raise prices without losing orders.
+FY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.
 
-#### Strategic Risk #1: Permanent Promo Trap
-- **Margin Ceiling:** Price-sensitive Indonesian consumers abandon whichever app cuts vouchers first, locking GoTo into Rp 3.09T sales/marketing and Rp 2.15T product spend.
-- **Direct P&L Consequence:** Whenever promotions intensify, PSAK 72 nets them against gross sales, compressing both net revenue and operating leverage.
-- *Context:* Direct bridge from Milestone 1 industry rivalry to Milestone 4 conservative/base expense assumptions.
+Lending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.
 
-#### Strategic Risk #2: Credit-Cycle Vulnerability
-- **Fast Unsecured Loan Growth:** To offset mobility maturity, GoTo scaled net consumer loans to Rp 2,731 bn in 2025 across mass-market ecosystem borrowers.
-- **Losses Doubled (+134%):** Credit loss provisions surged from Rp 174 bn to Rp 408 bn in one year, exposing GoTo's cash buffer if household incomes weaken.
-- *Context:* Highlights why FinTech's +74.1% top-line growth carries hidden downside credit risk.
+The provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.
 
 ### Speaker Notes
-[Speaker 1: Fagly Ramschie — 1.25 mins] The answer lies in Porter's Five Forces. Even at 66 million users, GoTo operates in an industry with High competitive rivalry and High buyer power. Customers and drivers switch seamlessly between Gojek, Grab, Maxim, inDrive, ShopeeFood, OVO, and DANA — switching costs are effectively zero. Because buyers leave whenever subsidies shrink, GoTo cannot simply raise take-rates to widen margins. Instead, defending share required Rp 3.09 trillion in sales and marketing plus Rp 2.15 trillion in product development in 2025 alone. To chase higher yield, management pushed aggressively into consumer lending, reaching Rp 2.73 trillion in net loan receivables — yet credit loss provisions more than doubled from Rp 174 billion to Rp 408 billion. Now I hand over to Anggreini to show how these strategic pressures show up directly inside GoTo's audited financial ratios and cash flows.
+Operating Expenses: Sales and marketing expense is Rp3.09T. Product-development expense is Rp2.15T.
 
-Course-based explanation:
-Binding force: rivalry: Similar competing services constrain take-rates. Rp 3.09T marketing and Rp 2.15T product expense show the cost of defending volume and service quality.
+Competition: GoTo offers affordable prices and connected services, but similar services are available from rivals. This limits how easily GoTo can raise prices without losing orders.
 
-Buyer power needs nuance: The report rates buyers Medium: individual customers are fragmented, yet low switching costs and price sensitivity create collective pressure. Low switching cost is an inference.
-
-Lending changes the risk: Net consumer loans reach Rp 2,731 bn. Provisions rise from Rp 174 bn to Rp 408 bn (+134%), increasing sensitivity to borrower credit quality.
+Credit-Loss Provisions: Provisions rise from Rp174bn to Rp408bn alongside a Rp2,731bn net consumer-loan balance. More lending can increase revenue and estimated credit losses at the same time.
 
 *Sources: Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27*
 
 ---
 
-## Slide 4: Cost Cuts Narrowed Operating Loss by 96% to -Rp 378 bn, Yet ROE (-5.2%) and Altman Z (-4.72) Remain in Distress
-**Audited 3-Year Margin Inflection (Chart 1), 3-Step DuPont ROE, Doubled Debt, and Distress Check**
-*Section: Step 3: Ratios, DuPont & Z-Score (10/20 pts) | Time Budget: 2.5 mins | Rubric: 10 / 20 pts*
+## Slide 4: Profitability and DuPont
+*Section: Financial analysis | Time Budget: 1.75 mins | Rubric: 20 pts (section)*
 
-### Key Metrics & KPIs
-- **Gross & EBIT Margin (2025):** `57.7% / -2.1%` (EBIT Loss Shrank -69.5% -> -2.1%)
-  - Explanation: Gross margin was 57.7% in 2025 (3-yr avg 58.9%), while operating loss narrowed 96.3% from -Rp 10,279 bn (2023) to -Rp 378 bn (2025) after shedding Tokopedia.
-  - Formula: `2025 EBIT Margin = -378.1 / 18,322.1 = -2.06% (-2.1%)`
-  - Calculation Steps:
-    - Gross Margin: 65.6% ('23) -> 53.4% ('24) -> 57.7% ('25).
-    - EBIT: -10,279 bn ('23) -> -2,241 bn ('24) -> -378 bn ('25).
-  - Source: LK GOTO FY2025 p. 17 & Final Report Tables 2-3
-- **3-Step DuPont ROE (2025):** `-5.2% ROE` (-8.2% NPM x 0.40x AT x 1.59x EM)
-  - Explanation: Every historical year posted negative ROE (-253.4% in '23, -18.0% in '24, -5.2% in '25) while debt doubled from Rp 3.82T to Rp 7.74T (D/E 0.27x) and interest coverage stayed negative (-0.71x).
-  - Formula: `ROE = -8.20% (NPM) x 0.400x (Asset Turnover) x 1.594x (Eq Mult) = -5.2%`
-  - Calculation Steps:
-    - NPM: -1,501.7 / 18,322.1 = -8.20%.
-    - D/E: 7,742.6 / 28,711.7 = 0.27x; Int Cov: -378.1 / 535.2 = -0.71x.
-  - Source: Milestone 2 'DuPont Analysis' & Final Report Table 3
-- **Altman Z (Week 6):** `−4.72` (Distress zone (< 1.81))
-  - Explanation: Z = −4.72 using the Week 6 five-factor formula and the worksheet’s book-equity X4. Accumulated losses subtract 6.588 points. Distress threshold: 1.81.
-  - Formula: `Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5 = −4.721750`
-  - Calculation Steps:
-    - X1 = 0.402374; weight 1.2; contribution +0.482849
-    - X2 = -4.705968; weight 1.4; contribution -6.588355
-    - X3 = -0.008266; weight 3.3; contribution -0.027279
-    - X4 = 1.684365; weight 0.6; contribution +1.010619
-    - X5 = 0.400417; weight 1.0; contribution +0.400417
-  - Source: Milestone 2 'Ratio Analysis' & Final Report Section (d.3)
+### Milestone 2 historical performance
 
-### Key Takeaways & Analysis
-#### 3-Step DuPont & Doubled Leverage (2025)
-- **DuPont ROE (-5.2%):** Net Margin (-8.2%) x Asset Turnover (0.40x) x Equity Multiplier (1.59x). Improved from -253.4% ('23), yet still well below 8.45% Cost of Equity.
-- **Solvency vs. Cash Cushion:** Current Ratio (2.73x) is backed by Rp 21.76T cash, yet debt doubled to Rp 7.74T (D/E 0.27x) with -0.71x interest coverage.
-- *Context:* Shows that operational improvement has not eliminated negative return on equity or negative interest coverage.
+| Year | Operating loss (Rp bn) | Net margin | ROE |
+| --- | --- | --- | --- |
+| 2023 | (10,279) | −612.2% | −253.4% |
+| 2024 | (2,241) | −34.4% | −18.0% |
+| 2025 | (378) | −8.2% | −5.2% |
 
-#### Z = −4.72 (Distress Zone) calculation
-- **Calculation:** Z = −4.72 using the Week 6 five-factor formula and the worksheet’s book-equity X4. Accumulated losses subtract 6.588 points. Distress threshold: 1.81.
-- **Interpretation:** Accumulated losses weaken the score despite positive working capital. Read it alongside liquidity, solvency, and interest coverage.
-- *Context:* Z = −4.72 using the Week 6 five-factor formula and the worksheet’s book-equity X4. Accumulated losses subtract 6.588 points. Distress threshold: 1.81.
+### Sidebar: the full explanation in simple language
+Operating profit is revenue after service costs and operating expenses. GoTo’s operating loss falls from Rp10,279bn in 2023 to Rp378bn in 2025. The smaller loss is an improvement, while the negative sign means operating costs still exceed operating income.
 
-### Speaker Notes
-Our Z-score follows Week 6: Week 6 five-factor formula: Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5. The completed Group 4 Week 6 worksheet explicitly uses BOOK equity for X4 (the lecture introduces market equity and discusses the book-equity proxy). FY2025 inputs in Rp bn: working capital 18,411.702, accumulated losses −215,334.000, EBIT −378.254, book equity 28,711.657, liabilities 17,045.985, assets 45,757.642, revenue 18,322.117. Contributions: +0.482849 −6.588355 −0.027279 +1.010619 +0.400417 = −4.721750. Safe > 2.99, grey 1.81–2.99, distress < 1.81. This reconciles to the submitted worksheet result −4.72. The prior Z″ result used a different model and the wrong-year accumulated-loss balance.
+The final net result also includes interest, tax, investment results and other items. The 2025 net loss is about Rp1,502bn, larger than the operating loss. The two figures therefore describe different stages of the income statement. Earlier net losses also include major accounting charges discussed in the milestones. An accounting loss is not identical to cash spent on everyday operations.
 
-DuPont: −5.2% ROE: −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier. Losses remain the main drag despite improving efficiency.
+DuPont separates ROE into three parts. Net margin measures profit or loss per rupiah of sales. Asset turnover measures sales relative to assets. The equity multiplier measures assets relative to equity. Approximately −8.2% × 0.40 × 1.59 = −5.2%. The negative net margin makes the product negative.
 
-Liquidity differs from coverage: Current ratio 2.73x and cash Rp 21.76T support liquidity. Debt/equity rises to 0.27x, while −0.71x interest coverage shows EBIT cannot fund interest.
+Using the milestone equity base, −5.2% ROE represents approximately Rp5.20 of accounting loss per Rp100 of equity. It is not a 5.2% prediction for the share price. The Tokopedia exit also changed the group’s business mix, which affects the interpretation of the three-year comparison.
 
-Z = −4.72 (Distress Zone): 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. X4 uses book equity as specified in the worksheet. Distress < 1.81. Accumulated losses drive the result.
-
-*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
-
----
-
-## Slide 5: Headline +Rp 307 bn Operating Cash Flow Covers Only 26% of Capex (-Rp 875 bn FCF), With 22.6% of Assets in Associates
-**Sloan Accruals Audit, Cash Flow Reality Check (pp. 21-22), and Key Footnote Red Flags (Notes 14, 15, 25, 34)**
-*Section: Step 2: Accounting Quality & Footnotes (10/20 pts) | Time Budget: 2.0 mins | Rubric: 10 / 20 pts*
-
-### Key Metrics & KPIs
-- **2025 CFO vs. Free Cash Flow:** `+307 / -875 bn` (CFO Covers Just 26.0% of Capex)
-  - Explanation: Audited Operating Cash Flow (+Rp 307.0 bn) covers only 25.97% of Rp 1,182.4 bn Capex (Rp 302.1 bn PPE + Rp 880.3 bn intangibles), leaving -Rp 875.3 bn FCF.
-  - Formula: `FCF = 307.0 - 1,182.4 = -Rp 875.3 bn`
-  - Calculation Steps:
-    - Cash rose only from liquidating Rp 1,386.5 bn deposits and borrowing Rp 3,718.0 bn new debt.
-  - Source: LK GOTO FY2025 pp. 21-22 & Final Report Table 1
-- **Accrual ratio (Milestone 3):** `-3.95%` (Numerator: NI − CFO; denominator: closing assets)
-  - Explanation: Sloan Accruals = (Net Loss -Rp 1,501.7 bn - CFO +Rp 307.0 bn) / Total Assets Rp 45,757.6 bn = -3.95% (improved from -11.21% in 2024 due to smaller non-cash write-downs).
-  - Formula: `(-1,501,685 - 307,025) / 45,757,642 = -3.95%`
-  - Calculation Steps:
-    - Negative accruals mean cash flow outperformed GAAP net loss, yet non-cash losses remain material.
-  - Source: Final Report Table 1 & Milestone 3
-- **Associates / Total Assets:** `22.57%` (Tokopedia (Rp 7.43T) + Jago (Rp 2.89T))
-  - Explanation: Nearly a quarter of total assets sit in non-consolidated associates (Rp 10.33T) plus Rp 1.67T in Level 3 private investments; a 20% stress write-down hits -Rp 1.82T (3.98% of assets).
-  - Formula: `Associates % = (7,432.3 + 2,894.9) / 45,757.6 = 22.57%`
-  - Calculation Steps:
-    - 20% Stress on Tokopedia (7,432.3) + Level 3 (1,668.6) = -Rp 1,820.2 bn (-3.98% assets).
-  - Source: LK Notes 14-15 & Final Report Section (c.1)
-
-### Key Takeaways & Analysis
-#### Red Flag #1: Cash Flow Does Not Cover Capex
-- **25.97% Capex Coverage:** Headline CFO (+Rp 307 bn) looks positive only before subtracting Rp 1,182 bn capital expenditure (mostly Rp 880 bn software/intangible additions), leaving -Rp 875 bn FCF.
-- **Financed Cash Balance:** Positive CFO still does not fund total capex. Net investing cash flow of Rp 519.117 bn becomes −Rp 867.403 bn after excluding net time-deposit settlements, as shown in Milestone 3.
-- *Context:* Prevents an investor from mistaking +Rp 307 bn CFO for organic cash self-sufficiency.
-
-#### Red Flag #2: Associate & Level 3 Write-Down Risk
-- **22.57% in Associates (Note 14):** Tokopedia (Rp 7.43T, including Rp 2.00T goodwill) and Bank Jago (Rp 2.89T) plus Rp 1.67T illiquid Level 3 stakes face subjective valuation judgment.
-- **20% Impairment Stress:** A 20% sensitivity on Tokopedia and Level 3 investments reduces indicative value by Rp 1,820.180 bn before tax (3.98% of assets). This is not an actual impairment. Do not haircut embedded goodwill again.
-- *Context:* Full supporting 7-row forensic table in Appendix A3.
-
-#### Red Flag #3: Revenue Netting & Related Parties
-- **PSAK 72 Promo Netting (Note 2s):** Incentives reduce revenue when no distinct good or service is received or fair value cannot be reliably measured. Excess incentives enter selling and marketing expense.
-- **7.13% Related-Party Sales (Note 25):** Related-party revenue (chiefly Tokopedia service fees) jumped from Rp 826 bn ('24) to Rp 1,306 bn ('25), creating single-partner fee dependence.
-- *Context:* Highlights earnings-quality judgments embedded inside reported net revenue.
-
-### Speaker Notes
-[Anggreini Ruitan; 2.0 mins]
-
-Cash quality: only 26% coverage: CFO of Rp 307 bn less Rp 1,182 bn capex leaves −Rp 875 bn FCF. Deposit liquidation and new loans support cash without proving operating self-sufficiency.
-
-Accrual Ratio: −3.95% of Assets: Calculated as (net income − CFO) / closing assets. The ratio improves from −11.21%. Noncash expenses and working capital explain the gap, but a negative ratio does not establish low risk.
-
-Footnotes explain the exposure: Note 14: associates are 22.57% of assets. Notes 15/34: Level 3 estimates. Note 25: related-party revenue 7.13%. Note 2s: incentives affect reported net revenue.
-
-Follow Milestone 3: (−1,501,685 − 307,025) / 45,757,642 = −3.952804%. Inputs are Rp million and the denominator is closing assets. This submitted milestone definition controls the deck; the average-assets version from earlier exercises does not replace it. The 20% haircut remains a separate before-tax valuation sensitivity, not a recognized impairment or earnings add-back.
-
-*Sources: Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities*
-
----
-
-## Slide 6: Under Historical Mean-Reverting OpEx (78.5%), GoTo Burns Rp 6.6T–7.5T Cash/Yr; Only a Fixed-Cost Freeze Breaks Even
-**Unified Milestone 4 Forecast (2026F-2028F) Driving All Valuation Models, Plus Assumption Drivers & Scenarios**
-*Section: Step 4: Pro Forma Forecast & Scenarios (15 pts) | Time Budget: 2.5 mins | Rubric: 15 pts*
-
-### Key Metrics & KPIs
-- **Base Growth & Gross Margin:** `11.4% / 58.9%` (Opt: 15.3%/61.9% | Cons: 7.5%/53.4%)
-  - Explanation: Base revenue grows 11.4%/yr (average of 2024's 7.5% and 2025's 15.3%) with 41.1% 3-yr avg COGS (58.9% Gross Margin).
-  - Formula: `Base g = (7.5% + 15.3%)/2 = 11.4%; Base COGS = 41.1% -> GM = 58.9%`
-  - Calculation Steps:
-    - Optimistic uses 15.3% growth & 55.7% opex; Conservative uses 7.5% growth & 85.0% opex.
-  - Source: Milestone 4 'Assumptions' & Final Report Table 4
-- **2028F Base Ending Cash:** `Rp 968 bn` (Drains Down from Rp 21,755 bn (25A))
-  - Explanation: Scaling 3-year average cash operating expenses (78.5%) plus 16.3% Capex burns Rp 20.8T over 3 years, shrinking cash to Rp 968 bn by 2028F (Balance & CF checks = 0).
-  - Formula: `21,755 - 7,473 ('26F) - 6,640 ('27F) - 6,674 ('28F) = Rp 968 bn`
-  - Calculation Steps:
-    - Clean 3-statement integration: BS Plug & Indirect CF tie with zero discrepancy.
-  - Source: Milestone 4 'Pro Forma Balance Sheet' & Final Report Table 5
-- **Fixed-OpEx Breakeven:** `Rp 18,604 bn` (vs Rp 27.2T-33.8T When OpEx Scales)
-  - Explanation: If management strictly freezes fixed opex at 2025's Rp 10,954 bn, breakeven revenue falls to Rp 18,604 bn and 2026F EBIT jumps to +Rp 1,062 bn (DOL 11.31x).
-  - Formula: `Fixed Breakeven = Rp 10,954 bn / 58.88% Gross Margin = Rp 18,604 bn`
-  - Calculation Steps:
-    - Base scaled opex stays below breakeven all 3 years.
-  - Source: Milestone 4 Docx Table 4 & Final Report Section (e.3)
-
-### Unified Milestone 4 Pro Forma Forecast Summary (Rp billion; Full 11-Row Schedule in Appendix A1)
-
-| Key Line Item (Rp bn) | 2025A | 2026F Base | 2027F Base | 2028F Base |
-| --- | --- | --- | --- | --- |
-| Net Revenue (+11.4% Base \| 15.3% Opt \| 7.5% Cons) | 18,322 | 20,408 | 22,732 | 25,321 |
-| EBIT / Operating Loss (Base: 78.5% Cash OpEx) | (378) | (4,003.4) | (4,459.4) | (4,967.4) |
-| Net Income / (Loss) (10.2% Debt Int, 22% Tax) | (1,502) | (3,737.0) | (4,092.7) | (4,488.9) |
-| Ending Cash Balance (Balance & CF Check = 0) | 21,755 | 14,282 | 7,642 | 968 |
-| Alternative: Fixed-OpEx Freeze EBIT (OpEx = 10,954) | (378) | +1,062 | +2,430 | +3,954 |
-
-#### Row-by-Row Formulas & Calculations
-- **Net Revenue (+11.4% Base | 15.3% Opt | 7.5% Cons)**
-  - Explanation: Base revenue grows at 11.4% (2-yr avg of 7.5% & 15.3%).
-  - Formula: `Rev_t = Rev_{t-1} x 1.1139`
-  - Source: Milestone 4 IS Row 6
-- **EBIT / Operating Loss (Base: 78.5% Cash OpEx)**
-  - Explanation: EBIT feeds Assignment 14 DCF Valuation!B6:D6.
-  - Formula: `EBIT = GP (58.9%) - Cash OpEx (78.5%)`
-  - Source: Milestone 4 IS Row 10
-- **Net Income / (Loss) (10.2% Debt Int, 22% Tax)**
-  - Explanation: Net Income feeds Assignment 14 Residual Income!B7:D7.
-  - Formula: `Zero tax shield modeled on pre-tax losses`
-  - Source: Milestone 4 IS Row 14
-- **Ending Cash Balance (Balance & CF Check = 0)**
-  - Explanation: Cash falls Rp 20.8T over 3 years as Base burn continues.
-  - Formula: `2028F Cash = Rp 968 bn`
-  - Source: Milestone 4 BS Row 7
-- **Alternative: Fixed-OpEx Freeze EBIT (OpEx = 10,954)**
-  - Explanation: Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.
-  - Formula: `Breakeven = Rp 18,604 bn`
-  - Source: Milestone 4 & Final Report Table 5
-
-### Key Takeaways & Analysis
-#### Reason for Each Key Base Assumption
-- **Revenue (+11.4%):** Average of 2024 post-Tokopedia transition (7.5%) and 2025 acceleration (15.3%).
-- **Costs & Capex:** 3-yr historical averages avoid cherry-picking: COGS 41.1%, Cash OpEx 78.5%, Capex 16.3%, Working Capital (24.2 DSO, 4.8 DIO, 67.8 DPO).
-- *Context:* Satisfies rubric requirement to justify each assumption rather than guessing rates.
-
-#### Pro Forma Scenario Comparison (Base vs. Fixed-OpEx)
-- **Optimistic vs. Conservative:** Optimistic (15.3% rev, 55.7% opex, 6.5% capex) nears profitability; Conservative (7.5% rev, 85% opex, 20% capex) accelerates cash depletion.
-- **Crucial Operational Condition:** Management must hold OpEx fixed near Rp 10,954 bn to cross the Rp 18,604 bn breakeven and unlock 11.31x operating leverage.
-- *Context:* Frames the exact operational condition separating Base Case cash burn from Optimistic turnaround.
-
-### Speaker Notes
-[Anggreini Ruitan; 2.5 mins]
-
-Growth and working capital: 11.4% growth averages 7.5% and 15.3%. DSO/DIO/DPO of 24.2/4.8/67.8 days drive working capital. Cash must reconcile across the forecast balance sheet and cash flow.
-
-Base-case cost assumptions: Historical averages set COGS at 41.1%, cash OpEx at 78.5%, and capex at 16.3%. Milestone 4 explicitly compares this base case with fixed-cost freezing to show how cost structure changes profit.
-
-Three cases, explicit alternatives: Growth/OpEx/capex: optimistic 15.3%/55.7%/6.5%, base 11.4%/78.5%/16.3%, conservative 7.5%/85%/20%. A fixed-cost freeze at Rp 10,954 bn produces a different earnings path.
-
-Base figures follow Milestone 4, including its 24.2-day DSO assumption. The base and fixed-cost alternative are distinct scenarios. The 10.2% forecast borrowing rate is M4’s historical-average assumption, while the 6.91% WACC debt cost is Assignment 14’s FY2025 input. Preserve these submitted bases rather than substituting one for the other.
-
-*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)*
-
----
-
-## Slide 7: Emerging-Market CAPM Cost of Equity (8.45%) and After-Tax Debt (5.39%) Yield a 7.76% WACC (Dated 30 Dec 2025)
-**Every Cost-of-Capital Parameter Documented With Exact External Source and Observation Date**
-*Section: Step 5: Valuation — WACC (4/20 pts) | Time Budget: 1.5 mins | Rubric: 4 / 20 pts*
-
-### Key Metrics & KPIs
-- **Cost of Equity (Ke):** `8.45%` (4.502% Rf + 0.59 x (4.23% + 2.465%))
-  - Explanation: Indonesia 10Y yield (6.120%) net of Moody's Baa2 sovereign default spread (1.618%) gives Rf = 4.502%, plus Beta 0.59 x (4.23% mature ERP + 2.465% Indonesia CRP) = 8.45%.
-  - Formula: `Ke = 4.502% + 0.59 x (4.23% + 2.465%) = 8.45%`
-  - Calculation Steps:
-    - Valued at 30 Dec 2025 using Investing.com & Damodaran (1 Jan 2026) tables.
-  - Source: Assignment 14 'Cost of Capital' Rows 6-10
-- **After-Tax Cost of Debt:** `5.39%` (6.91% Effective Rate x (1 - 22% Tax))
-  - Explanation: GoTo's effective interest rate is 6.91% (Rp 535.2 bn FY2025 interest expense / Rp 7,742.6 bn total debt), times (1 - 22% Indonesian corporate tax rate) = 5.39%.
-  - Formula: `Kd_after = 6.91% x (1 - 0.22) = 5.39%`
-  - Calculation Steps:
-    - Interest expense from FY2025 Income Statement; Debt includes lease liabilities.
-  - Source: Assignment 14 'Cost of Capital' Rows 13-15
-- **Consolidated WACC:** `7.76%` (77.4% Equity (Rp 26.55T) | 22.6% Debt)
-  - Explanation: Market cap Rp 26,550.3 bn (77.4%) + Debt Rp 7,742.6 bn (22.6%) = Rp 34,292.9 bn total capital, giving WACC = 77.4% x 8.45% + 22.6% x 5.39% = 7.76%.
-  - Formula: `WACC = 0.7742 x 8.45% + 0.2258 x 5.39% = 7.76%`
-  - Calculation Steps:
-    - All DCF discount factors use 7.76%; all Residual Income charges use Ke = 8.45%.
-  - Source: Assignment 14 'Cost of Capital' Rows 18-22
-
-### Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)
-
-| Parameter / Result | Value | Exact External Source & Observation Date |
-| --- | --- | --- |
-| Risk-Free Rate Proxy (Rf) | 4.502% | Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026) |
-| Levered Beta & Mature ERP | 0.59  \|  4.23% | GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) |
-| Indonesia Country Risk Premium (CRP) | 2.465% | Damodaran ctryprem.xlsx (1 Jan 2026): Indonesia Baa2 rating-based CRP (1.618% spread x 1.5234 equity scalar) |
-| Cost of Equity (Ke = Rf + Beta x (ERP+CRP)) | 8.45% | 4.502% + 0.59 x (4.23% + 2.465%) = 8.452%; hurdle used for Residual Income valuation |
-| Pre-Tax Debt (6.91%) & After-Tax Debt | 5.39% | FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate) |
-| Capital Weights & Consolidated WACC | 7.76% | 77.4% Market Equity (Rp 26,550.3 bn @ Rp 25/sh) x 8.45% + 22.6% Debt (Rp 7,742.6 bn) x 5.39% = 7.76% |
-
-#### Row-by-Row Formulas & Calculations
-- **Risk-Free Rate Proxy (Rf)**
-  - Explanation: Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.
-  - Formula: `Rf = 6.120% - 1.618% = 4.502%`
-  - Source: Cost of Capital!B6
-- **Levered Beta & Mature ERP**
-  - Explanation: Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.
-  - Formula: `Ke check tested across 0.59-1.25`
-  - Source: Cost of Capital!B7:B8
-- **Indonesia Country Risk Premium (CRP)**
-  - Explanation: Adds Indonesia equity volatility premium above Baa2 sovereign spread.
-  - Formula: `CRP = 1.618% x 1.5234 = 2.465%`
-  - Source: Cost of Capital!B9
-- **Cost of Equity (Ke = Rf + Beta x (ERP+CRP))**
-  - Explanation: Ke = 8.45% measures the minimum annual return shareholders demand.
-  - Formula: `Ke = 8.45%`
-  - Source: Cost of Capital!B10
-- **Pre-Tax Debt (6.91%) & After-Tax Debt**
-  - Explanation: Uses GoTo's actual 2025 effective borrowing cost adjusted for the 22% statutory tax rate.
-  - Formula: `6.91% x 0.78 = 5.39%`
-  - Source: Cost of Capital!B13:B15
-- **Capital Weights & Consolidated WACC**
-  - Explanation: Consolidated WACC links automatically to DCF Valuation!B16.
-  - Formula: `WACC = 7.76%`
-  - Source: Cost of Capital!B22
-
-### Speaker Notes
-[Galatia Rompas; 1.5 mins]
-
-Emerging-market CAPM: Ke = 4.502% + 0.59 × (4.23% + 2.465%) = 8.45%. Rf subtracts the sovereign default spread from the 10-year SUN yield.
-
-Debt cost and weights: 6.91% × (1 − 22%) = 5.39% after-tax debt cost. Market equity/debt weights of 77.4%/22.6% produce WACC of 7.76%.
-
-Source dates and limitations: SUN and beta: Dec 2025. Default spread, ERP and country premium: Damodaran, 1 Jan 2026. Debt: FY2025 filing. The 10.2% forecast debt rate differs from this 6.91% WACC input.
-
-
-
-*Sources: Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)*
-
----
-
-## Slide 8: Using the Same Forecast and g = 3.0% (< 7.76% WACC), DCF (-Rp 121.1) and Residual Income (-Rp 75.1) Both Turn Negative
-**Consistent Forecast Pipeline, Zero Phantom Tax Refunds, Justified Terminal Growth, and Dual Intrinsic Results**
-*Section: Step 5: Intrinsic Valuation — DCF & RI (9/20 pts) | Time Budget: 2.5 mins | Rubric: 9 / 20 pts*
-
-### Key Metrics & KPIs
-- **Justified Terminal Growth (g):** `3.00%` (Below 7.76% WACC & ID Nominal GDP)
-  - Explanation: Both DCF and Residual Income use one consistent g = 3.00% perpetual growth rate — safely below WACC (7.76%) and Cost of Equity (8.45%), and conservative against Indonesia's ~5% real GDP + 3.5% inflation.
-  - Formula: `g = 3.00% < WACC (7.76%) < Ke (8.45%)`
-  - Calculation Steps:
-    - Selected in Assignment 14 'Terminal Growth' tab and linked identically to both DCF and RI.
-  - Source: Assignment 14 'Terminal Growth' Row 25
-- **Base DCF Value / Share:** `Rp (121.1) / sh` (EV -142.6T + Net Cash +14.0T)
-  - Explanation: Annual FCFF burns of -Rp 7.74T ('26F), -Rp 7.01T ('27F), and -Rp 7.15T ('28F) yield PV(FCFF + TV) of -Rp 142,597.7 bn; adding +Rp 14,012.5 bn net cash leaves Eq Value -Rp 128,585.2 bn (-Rp 121.1/sh).
-  - Formula: `(-142,597.7 + 14,012.5) / 1,062.01 bn shares = -Rp 121.08/sh`
-  - Calculation Steps:
-    - Zero tax shields modeled on negative EBIT via =IF(EBIT>0, -EBIT*22%, 0).
-  - Source: Assignment 14 'DCF Valuation' Rows 6-28
-- **Residual Income Value / Share:** `Rp (75.1) / sh` (BVE +28.7T Eroded by -108.5T PV(RI))
-  - Explanation: Beginning Book Equity (Rp 28,711.7 bn) incurs an 8.45% annual equity charge (Rp 2,426.7 bn in Year 1), turning annual losses into -Rp 6.2T/yr residual income (Equity Value -Rp 79,770.2 bn = -Rp 75.1/sh).
-  - Formula: `(28,711.7 - 15,860.4 - 92,621.5) / 1,062.01 bn shares = -Rp 75.11/sh`
-  - Calculation Steps:
-    - Net Income - Equity Charge = -6,163.7 ('26F) to -6,253.9 ('28F).
-  - Source: Assignment 14 'Residual Income Valuation' Rows 6-25
-
-### DCF vs. Residual Income Side-by-Side Valuation Bridge — Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
-
-| Valuation Component (Rp bn / Rp per Share) | DCF Model (WACC = 7.76%) | Residual Income (Ke = 8.45%) |
-| --- | --- | --- |
-| 2026F–2028F annual inputs | FCFF: (7,738.7) / (7,006.3) / (7,152.6) | RI: (6,163.7) / (6,203.6) / (6,253.9) |
-| PV of explicit forecast | Rp (18,930.7) bn | Rp (15,860.4) bn |
-| PV of terminal value, g = 3% | Rp (123,667.0) bn | Rp (92,621.5) bn |
-| Capital Bridge (Add Net Cash / Start Book Equity) | EV (142,597.7) + Net Cash 14,012.5 | Book Equity 28,711.7 + PV(RI) (108,481.9) |
-| Implied Total Equity Value & Value per Share | Rp (128,585.2) bn  \|  Rp (121.1) / share | Rp (79,770.2) bn  \|  Rp (75.1) / share |
-
-#### Row-by-Row Formulas & Calculations
-- **2026F–2028F annual inputs**
-  - Explanation: 2026F–2028F annual inputs; FCFF: (7,738.7) / (7,006.3) / (7,152.6); RI: (6,163.7) / (6,203.6) / (6,253.9)
-  - Formula: `EBIT -4.0T to -5.0T; Capex 16.3%; Net Loss -3.7T to -4.5T`
-  - Source: Assignment 14 'DCF Valuation' & 'Residual Income'
-- **PV of explicit forecast**
-  - Explanation: PV of explicit forecast; Rp (18,930.7) bn; Rp (15,860.4) bn
-  - Source: DCF!B22 & RI!B20
-- **PV of terminal value, g = 3%**
-  - Explanation: PV of terminal value, g = 3%; Rp (123,667.0) bn; Rp (92,621.5) bn
-  - Formula: `WACC - g = 4.76% (DCF); Ke - g = 5.45% (RI)`
-  - Source: DCF!B23 & RI!B21
-- **Capital Bridge (Add Net Cash / Start Book Equity)**
-  - Explanation: Capital Bridge (Add Net Cash / Start Book Equity); EV (142,597.7) + Net Cash 14,012.5; Book Equity 28,711.7 + PV(RI) (108,481.9)
-  - Formula: `Net Cash = 21,755 - 7,743 = 14,012.5 bn`
-  - Source: DCF!B25 & RI!B22
-- **Implied Total Equity Value & Value per Share**
-  - Explanation: Implied Total Equity Value & Value per Share; Rp (128,585.2) bn  |  Rp (121.1) / share; Rp (79,770.2) bn  |  Rp (75.1) / share
-  - Source: DCF!B28 & RI!B25
-
-### Key Takeaways & Analysis
-#### Why Terminal Growth g = 3.0% (< 7.76%) & Tax Rule
-- **Economic Ceiling:** 3.0% perpetual growth stays safely below 7.76% WACC and Indonesia's ~5% real GDP + 3.5% BI inflation target so perpetuity converges cleanly.
-- **Zero Phantom Tax Refunds:** Tax formula applies 22% only when EBIT > 0, preventing artificial cash inflows during losing years.
-- *Context:* Satisfies Section 4 Valuation Must-Haves on terminal growth and single unified forecast.
-
-#### Why DCF & Residual Income Agree Below Zero
-- **Framework consistency:** g = 3.0% is an analyst assumption below WACC. Perpetuating negative cash flow is a stress outcome, not a feasible negative quoted share price. Reconcile taxes and reinvestment across models.
-- *Context:* Explains mathematically why the two intrinsic methods differ in magnitude yet reach the exact same SELL verdict.
-
-### Speaker Notes
-[Galatia Rompas; 2.5 mins]
-
-DCF values all capital providers: Discount forecast FCFF and terminal value at 7.76% WACC, then bridge enterprise value to common equity. Submitted base result: −Rp 121.1 per share.
-
-Residual income charges for equity: RI = net income − Ke × beginning equity. Add discounted RI to opening book equity. Submitted base result: −Rp 75.1 per share.
-
-Terminal and tax assumptions: Assignment 14 sets g = 3.0% below WACC. DCF applies zero EBIT tax on losses; RI uses Milestone 4 forecast net income. Negative values are outputs of the submitted historical-cost model.
-
-Assignment 14’s DCF does not include refunds on negative EBIT, while RI takes net income from Milestone 4. These submitted inputs are preserved and explained. FCFF and RI present values were independently recalculated from workbook formulas without changing the workbook or its assumptions.
-
-*Sources: Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%*
-
----
-
-## Slide 9: Grab is our sole operating comparable
-**A FY2025 P/B benchmark using a consistent parent-equity basis.**
-*Section: Step 5: Relative Valuation — Multiples (3/20 pts) | Time Budget: 1.5 mins | Rubric: 3 / 20 pts*
-
-### Key Metrics & KPIs
-- **Grab P/B:** `3.04x` (31 Dec 2025 price / FY2025 parent BVPS)
-  - Formula: `4.99 / (6728m / 4097646678 shares) = 3.03912856x`
-- **GoTo normalized parent BVPS:** `Rp 29.95` (Parent equity excludes non-controlling interests)
-  - Formula: `31805.025 / 1062.010200395 = 29.94794682`
-- **Grab P/B benchmark / share:** `Rp 91.0` (Indicative single-comparable result, not a target price)
-  - Formula: `3.03912856 × 29.94794682 = 91.01566036`
-
-### Grab benchmark calculation
-
-| Measure | Value | Basis |
-| --- | --- | --- |
-| GRAB price | US$4.99 | 31 Dec 2025 close |
-| GRAB parent equity / shares | US$6,728m / 4,097.647m | FY2025 audited; Class A + B |
-| GRAB BVPS / P/B | US$1.6419 / 3.0391x | Same USD basis; no FX conversion |
-| GoTo parent BVPS | Rp 29.9479 | Rp31,805.025bn / 1,062.0102bn shares |
-| GoTo P/B benchmark | Rp 91.0 / share | 3.0391x × Rp 29.9479 |
-| P/E / EV–EBITDA | Excluded / withheld | Loss-making GoTo / EBITDA basis differs |
-
-#### Row-by-Row Formulas & Calculations
-- **GRAB price**
-  - Explanation: Closing share price of Grab Holdings Limited (NASDAQ: GRAB) on 31 December 2025, matching the FY2025 reporting date.
-  - Formula: `GRAB Share Price = US$4.99 (31 Dec 2025 close)`
-  - Steps:
-    - Market close on 31 Dec 2025 = US$4.99 / share
-  - Source: Market Multiples!B5 (Assignment 14 Workbook)
-- **GRAB parent equity / shares**
-  - Explanation: Grab FY2025 audited equity attributable to owners of the parent (US$6,728m) divided across Class A (3,969,290,878) and Class B (128,355,800) ordinary shares.
-  - Formula: `Total Shares = 3,969,290,878 + 128,355,800 = 4,097,646,678`
-  - Steps:
-    - Parent equity (FY2025 audited) = US$6,728.0m
-    - Class A ordinary shares = 3,969.291m
-    - Class B ordinary shares = 128.356m
-    - Total ordinary shares = 4,097.647m
-  - Source: Market Multiples!B6:B7 (Grab FY2025 20-F / Audited)
-- **GRAB BVPS / P/B**
-  - Explanation: Grab book value per share and price-to-book multiple computed on the same USD basis with no FX conversion.
-  - Formula: `GRAB P/B = US$4.99 / (US$6,728m / 4,097.647m) = 3.0391x`
-  - Steps:
-    - GRAB BVPS = US$6,728m / 4,097.646678m = US$1.641918 / share
-    - GRAB P/B = US$4.99 / US$1.641918 = 3.03913x
-  - Source: Market Multiples!B8:B9 (Assignment 14 Workbook)
-- **GoTo parent BVPS**
-  - Explanation: GoTo normalized parent equity per share using audited FY2025 equity attributable to owners of the parent and diluted/outstanding share count.
-  - Formula: `GoTo BVPS = Rp 31,805.025 bn / 1,062.0102 bn shares = Rp 29.9479 / share`
-  - Steps:
-    - GoTo parent equity (FY2025) = Rp 31,805.025 bn
-    - Outstanding shares = 1,062,010.200 million (1,062.0102 bn)
-    - Normalized BVPS = Rp 29.9479 / share
-  - Source: Market Multiples!C16:C18 (GoTo FY2025 Audited FS)
-- **GoTo P/B benchmark**
-  - Explanation: Conditional P/B benchmark applying Grab P/B (3.0391x) to GoTo normalized parent BVPS (Rp 29.9479). Not a peer median or price target.
-  - Formula: `Benchmark = 3.03913x × Rp 29.9479 = Rp 91.02 / share (Rp 91.0)`
-  - Steps:
-    - Grab P/B = 3.03913x
-    - GoTo normalized parent BVPS = Rp 29.9479
-    - Implied P/B benchmark = Rp 91.015 / share (rounded Rp 91.0)
-  - Source: Market Multiples!D19 (Assignment 14 Workbook)
-- **P/E / EV–EBITDA**
-  - Explanation: P/E is excluded because GoTo is GAAP loss-making; EV/EBITDA is withheld because Grab adjusted EBITDA is not comparable to GoTo GAAP EBITDA.
-  - Formula: `P/E = N/M (negative earnings); EV/EBITDA = Withheld (non-comparable denominator)`
-  - Steps:
-    - GoTo FY2025 GAAP net loss makes P/E economically meaningless
-    - Grab reports Adjusted EBITDA while GoTo reports GAAP operating loss / EBITDA
-  - Source: Market Multiples & Final Report Section 6.3
-
-### Key Takeaways & Analysis
-#### Why the other comparables are excluded
-- **Shopee / Sea:** Shopee is not separately listed. Sea also includes Garena and Monee, giving a different business mix.
-- **BUKA:** Material investment gains distort operating-earnings comparisons; gaming, Mitra, and investment exposure differ from GoTo.
-- **BELI:** Inventory-led omnichannel retail and physical stores differ. Negative FY2025 EBITDA makes the positive 12x input unsuitable.
-
-### Speaker Notes
-[Galatia Rompas; 1.5 mins]
-
-Why Grab?: Mobility, food delivery, and financial services most closely match GoTo after Tokopedia’s deconsolidation. Geographic mix and profitability still differ.
-
-Consistent P/B: 3.04x: Use parent equity and year-end outstanding shares for both companies. Normalized GoTo BVPS of Rp29.95 implies Rp91.0, without converting USD prices into rupiah.
-
-Single-comparable limitation: This is neither a peer median nor a price target. GoTo P/E is not meaningful with losses. EV/EBITDA is withheld because Grab’s adjusted EBITDA does not match GoTo’s denominator.
-
-Shopee / Sea: Shopee is not separately listed. Sea also includes Garena and Monee, giving a different business mix.
-BUKA: Material investment gains distort operating-earnings comparisons; gaming, Mitra, and investment exposure differ from GoTo.
-BELI: Inventory-led omnichannel retail and physical stores differ. Negative FY2025 EBITDA makes the positive 12x input unsuitable.
-
-The user’s latest revision supersedes Assignment 14’s peer set. Submitted DCF, RI, and milestone forecasts remain unchanged. Only the P/B comparison normalizes GoTo BVPS to Rp29.94795 using parent equity of Rp31,805.025bn, rather than consolidated equity of Rp28,711.657bn underlying the original Rp27.03. Grab uses parent equity of US$6,728m and 4,097,646,678 outstanding ordinary shares (A+B), not EPS weighted-average shares or preliminary-release counts. Price: US$4.99 on 31 Dec 2025. This is a retrospective FY2025 comparison using later-published accounts, not a valuation based solely on information available on that date. Class A price proxies both classes’ economic value. No P/B–EV/EBITDA average is used.
-
-*Sources: Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.*
-
----
-
-## Slide 10: Cash burn explains the gap against Grab’s P/B benchmark
-**Explaining the Spread Without Averaging It Away, Plus IDX Rp 1 Floor Reform & Model Limitations (Chart 2)**
-*Section: Step 5: Valuation Reconciliation & Range (4/20 pts) | Time Budget: 1.5 mins | Rubric: 4 / 20 pts*
-
-### Key Metrics & KPIs
-- **DCF / share:** `Rp (121.1)` (Submitted Assignment 14)
-- **Residual income / share:** `Rp (75.1)` (Submitted Assignment 14)
-- **Grab P/B benchmark / share:** `Rp 91.0` (Single comparable, normalized parent equity)
-
-### Key Takeaways & Analysis
-#### Different assumptions receive different values
-- DCF −Rp121.1 and RI −Rp75.1 retain the submitted historical-cost scenario. Grab’s Rp91.0 P/B benchmark applies market pricing to GoTo’s parent equity.
-
-#### Do not average the methods
-- Grab has different profitability and geographic exposure. Applying its P/B to GoTo assumes comparable earning power; that assumption is not established.
-
-#### Conditions that must be demonstrated
-- Cost discipline, self-funded capex, and sustained earnings are needed before assigning the comparator’s premium. This benchmark does not replace the milestone-based recommendation.
-
-### Speaker Notes
-[Galatia Rompas; 1.5 mins]
-
-Different assumptions receive different values: DCF −Rp121.1 and RI −Rp75.1 retain the submitted historical-cost scenario. Grab’s Rp91.0 P/B benchmark applies market pricing to GoTo’s parent equity.
-
-Do not average the methods: Grab has different profitability and geographic exposure. Applying its P/B to GoTo assumes comparable earning power; that assumption is not established.
-
-Conditions that must be demonstrated: Cost discipline, self-funded capex, and sustained earnings are needed before assigning the comparator’s premium. This benchmark does not replace the milestone-based recommendation.
-
-
-
-
-
-*Sources: Assignment 14 DCF/RI unchanged. Grab-only P/B benchmark: audited FY2025 parent equity; 31 Dec 2025 price.*
-
----
-
-## Slide 11: Final Recommendation for Long-Term Public Equity Investors: SELL / AVOID GOTO at Rp 25.00
-**Closing the Single Argument for Our Week 1 Investor: Why Sell, Upgrade Conditions, and Key Risks**
-*Section: Step 6: Recommendation & Risks (15 pts) | Time Budget: 2.0 mins | Rubric: 15 pts*
-
-### Key Metrics & KPIs
-- **Decision at Rp 25.00:** `SELL / AVOID` (Downside Toward Rp 13.20 Net Cash)
-  - Explanation: A 0.9x P/B price is not a value bargain when Base Case cash burn drains cash to Rp 968 bn by 2028F and DCF (-Rp 121.1) and RI (-Rp 75.1) remain deeply negative.
-  - Formula: `Market Rp 25.00 vs Net Cash Rp 13.20 (-47% Downside Buffer)`
-  - Calculation Steps:
-    - Matches Week 1 investor objective: preserve capital until ROIC > Ke (8.45%).
-  - Source: Final Report Section (g) Closing Recommendation
-- **GAAP Net Profit Hurdle:** `> +Rp 2.43T / yr` (Required to Beat 8.45% Cost of Equity)
-  - Explanation: Residual Income turns positive only when annual GAAP Net Income exceeds 8.45% x Rp 28.71T Beginning Book Equity = Rp 2,426.7 bn/yr (vs -Rp 1,502 bn loss today).
-  - Formula: `8.45% x Rp 28,711.7 bn = +Rp 2,426.7 bn/yr Required NI`
-  - Calculation Steps:
-    - GoTo currently sits Rp 3.93T/yr below the equity hurdle.
-  - Source: Assignment 14 'Residual Income Valuation' & Final Report (g)
-- **Operating Cash Hurdle:** `> +Rp 1.2T / yr` (Required CFO to Cover Capex (+FCF))
-  - Explanation: Upgrading to HOLD/BUY requires CFO > Rp 1.2T/yr to self-fund capex, Fixed OpEx held < 56% of revenue (Rp 18.6T breakeven), and 2 consecutive years of GAAP profit > Rp 2.43T.
-  - Formula: `CFO > Rp 1,182 bn Capex + Fixed OpEx < 56% + 2 Consec. Yrs > Rp 2.43T NI`
-  - Calculation Steps:
-    - Requires structural cost discipline rather than promo-fueled GMV.
-  - Source: Final Report Section (g) Upgrade Criteria
-
-### Key Takeaways & Analysis
-#### 1. Why SELL / AVOID at Rp 25.00 (Full Argument)
-- **Strategy Blocks Pricing Power:** Zero switching costs against Grab & Shopee cap take-rates and require Rp 3.09T annual promos.
-- **Cash Deficit & Negative Valuation:** CFO (+307 bn) funds only 26% of Capex (-875 bn FCF), Z sits in distress (-4.72), and Base DCF (-121.1) and RI (-75.1) confirm ongoing value destruction.
-- *Context:* Ties Steps 1-5 directly into a clear, actionable decision for the Week 1 public equity investor.
-
-#### 2. Three Concrete Conditions to Reconsider (Upgrade)
-- **Self-Funding Cash Flow:** Operating cash flow rises cleanly above Rp 1.2T/yr, covering Capex organically without borrowing or selling deposits.
-- **Sustained OpEx Freeze & Hurdle Beat:** Management locks OpEx below 56% of sales (unlocking 11.31x DOL) and delivers GAAP Net Income > Rp 2.43T (> 8.45% Ke) for 2 consecutive years.
-- *Context:* Defines observable financial triggers that would falsify our Base Case burn thesis.
-
-#### 3. Key Risks to Our Recommendation
-- **Upside Risk (Why Stock Could Rally):** M&A/consolidation premium (e.g., Grab tie-up), surprise OpEx discipline pushing 2026F EBIT to +Rp 1.06T, or profitable FinTech scaling.
-- **Downside Risk (Why Rp 25 Could Fall Further):** Rp 1.82T write-down on Tokopedia/Level 3 assets (20% stress), consumer loan defaults rising above Rp 408 bn, or slide toward Rp 13.20 net cash.
-- *Context:* Balanced risk disclosure covering both thesis-breaking upside catalysts and balance-sheet downside triggers.
-
-### Speaker Notes
-[Speaker 1: Fagly Ramschie — 2.0 mins] Bringing our entire argument full circle for our Week 1 public equity investor: our recommendation is clear — SELL or AVOID GOTO at Rp 25.00. Why? Every link in our chain points in the same direction. Strategically, near-zero switching costs force heavy promotions. Operationally, +Rp 307 billion in CFO still fails to fund Capex, leaving -Rp 875 billion Free Cash Flow, an Altman Z-Score of -4.72, and -5.2% ROE. And financially, Base Case historical cost scaling drains cash down to Rp 968 billion by 2028F, giving deeply negative DCF (-Rp 121.1) and Residual Income (-Rp 75.1) values. What would change our mind? Only three concrete proof points: operating cash flow consistently exceeding Rp 1.2 trillion to self-fund Capex, fixed OpEx frozen below 56% of revenue as in our breakeven scenario, and two consecutive years of GAAP net income above Rp 2.43 trillion to beat our 8.45% Cost of Equity hurdle. Until then, downside risks — from credit losses to Rp 1.82 trillion associate write-down exposure — outweigh speculative M&A upside. Thank you, and we welcome your questions.
-
-Course-based explanation:
-Recommendation for equity investors: SELL / AVOID at Rp 25.00 per share under the historical-cost base case. The decision is conditional on whether operating improvements persist.
-
-What would change the conclusion: CFO sustainably covers annual capex. Operating costs remain disciplined. GAAP profit exceeds the Rp 2.43T equity-charge hurdle for two years. Rebuild the forecast when these conditions change.
-
-Risks in both directions: Upside: cost discipline, profitable FinTech scaling, or consolidation. Downside: credit losses, investment impairments, and cash depletion. A 20% Tokopedia/Level 3 stress is an assumption, not an observed loss.
-
-*Sources: Group 4 Final Report Section (g) & Integrated Valuation Findings*
-
----
-
-## Appendix Slide 12: Supporting Schedule A1: Audited FY2023-FY2025 vs. Milestone 4 Base Case Pro Forma (2026F-2028F)
-**Complete 11-Row Audit Trail Connecting Primary Statements to Forecast Drivers (Rp billion)**
-*Section: Appendix A1: Historical & Pro Forma Table | Time Budget: Q&A Backup | Rubric: Appendix*
-
-### Consolidated Historical & Pro Forma Financial Summary (Rp billion)
-
+### Sidebar calculation: Consolidated Historical & Pro Forma Financial Summary (Rp billion)
 | Line Item (Rp billion) | 2023A | 2024A | 2025A | 2026F Base | 2027F Base | 2028F Base |
 | --- | --- | --- | --- | --- | --- | --- |
 | Net Revenue | 14,785 | 15,894 | 18,322 | 20,408 | 22,732 | 25,321 |
@@ -724,54 +122,256 @@ Risks in both directions: Upside: cost discipline, profitable FinTech scaling, o
 | Total Interest-Bearing Debt | 3,460 | 3,820 | 7,743 | 7,743 | 7,743 | 7,743 |
 | Total Shareholders' Equity | 35,720 | 30,404 | 28,712 | 24,975 | 20,882 | 16,393 |
 
-#### Row-by-Row Formulas & Calculations
-- **Net Revenue**
-  - Explanation: Net Revenue; 14,785; 15,895; 18,322; 20,408; 22,732; 25,321
-  - Source: LK p. 17 & M4 IS
-- **Gross Profit**
-  - Explanation: Gross Profit; 9,692; 8,481; 10,576; 12,016; 13,384; 14,908
-  - Source: LK p. 17 & M4 IS
-- **Gross Margin (%)**
-  - Explanation: Gross Margin (%); 65.6%; 53.4%; 57.7%; 58.9%; 58.9%; 58.9%
-  - Source: M4 Assumptions
-- **EBIT / (Operating Loss)**
-  - Explanation: EBIT / (Operating Loss); (10,279); (2,241); (378); (4,003.4); (4,459.4); (4,967.4)
-  - Source: M4 IS -> DCF
-- **Net Income / (Loss)**
-  - Explanation: Net Income / (Loss); (90,519); (5,465); (1,502); (3,737.0); (4,092.7); (4,488.9)
-  - Source: M4 IS -> RI
-- **Cash Flow from Operations (CFO)**
-  - Explanation: Cash Flow from Operations (CFO); (4,325); (622); +307; (4,143); (2,930); (2,542)
-  - Source: LK p. 21 & M4 CF
-- **Cash Capex (Fixed + Intangibles)**
-  - Explanation: Cash Capex (Fixed + Intangibles); (220); (6,519); (1,182); (3,329.8); (3,709.1); (4,131.6)
-  - Source: LK p. 21 & DCF
-- **Historical FCF / Assignment 14 forecast FCFF**
-  - Explanation: Historical FCF / Assignment 14 forecast FCFF; (4,546); (7,141); (875); (7,738.7); (7,006.3); (7,152.6)
-  - Source: DCF!B12:D12
-- **Ending Cash & Equivalents**
-  - Explanation: Ending Cash & Equivalents; 25,144; 19,178; 21,755; 14,282; 7,642; 968
-  - Source: M4 BS Row 7
-- **Total Interest-Bearing Debt**
-  - Explanation: Total Interest-Bearing Debt; 3,460; 3,820; 7,743; 7,743; 7,743; 7,743
-  - Source: Notes 19-20
-- **Total Shareholders' Equity**
-  - Explanation: Total Shareholders' Equity; 35,720; 30,404; 28,712; 24,975; 20,882; 16,393
-  - Source: M4 BS Row 22
+### Sidebar calculation: 2025 DuPont
+| Part | Value | Meaning | Formula / 2025 calculation |
+| --- | --- | --- | --- |
+| Net margin | −8.2% | Loss on each rupiah of sales | Net income / Revenue × 100% −1,501,685 / 18,322,117 × 100% ≈ -8.2% |
+| Asset turnover | 0.40x | Sales generated per rupiah of assets | Revenue / Total assets 18,322,117 / 45,757,642 ≈ 0.40x |
+| Equity multiplier | 1.59x | Assets relative to equity | Total assets / Equity 45,757,642 / 28,711,657 ≈ 1.59x |
+| ROE | −5.2% | About Rp5.20 accounting loss per Rp100 of equity | Net margin × Asset turnover × Equity multiplier (−1,501,685/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23% |
 
 ### Speaker Notes
-[Appendix Q&A Backup — Full Numbers] Appendix A1 presents the complete 6-year bridge from audited 2023A-2025A financial statements to our 2026F-2028F Base Case Pro Forma statements (Balance Sheet and Cash Flow checks = 0).
+Operating Loss: Operating loss falls from Rp10,279bn in 2023 to Rp378bn in 2025. The 2025 result is still a loss, with net margin of −8.2%.
 
-*Sources: LK GOTO FY2025 pp. 11-22; Group 4 Milestone 4 & Final Report Tables 1-5*
+DuPont ROE: DuPont gives approximately −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier = −5.2% ROE.
+
+Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other items.
+
+*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
 
 ---
 
-## Appendix Slide 13: Supporting Schedule A2: Beta / Terminal Growth Sensitivity & Fixed-OpEx Breakeven Check (Rp 18,604 bn)
-**Ready Reference Demonstrating That SELL Holds Across Beta (0.59-1.25) and g (2.0%-3.0%)**
-*Section: Appendix A2: Sensitivity & Breakeven Check | Time Budget: Q&A Backup | Rubric: Appendix*
+## Slide 5: Liquidity and Z-Score
+*Section: Financial analysis | Time Budget: 1.5 mins | Rubric: 20 pts (section)*
 
-### Beta / WACC / Terminal Growth Sensitivity & Breakeven Check
+### Sidebar: the full explanation in simple language
+GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.
 
+Interest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.
+
+The completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.
+
+The course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.
+
+### Sidebar calculation: Completed Week 6 five-factor calculation
+| Component | Numerator (Rp bn) | Denominator (Rp bn) | Ratio | Weight | Contribution |
+| --- | --- | --- | --- | --- | --- |
+| X1: Working capital / total assets | 18,411.702 | 45,757.642 | 0.402374 | 1.2 | +0.482849 |
+| X2: Retained earnings / total assets | -215,334.000 | 45,757.642 | -4.705968 | 1.4 | -6.588355 |
+| X3: EBIT / total assets | -378.254 | 45,757.642 | -0.008266 | 3.3 | -0.027279 |
+| X4: Book equity / total liabilities | 28,711.657 | 17,045.985 | 1.684365 | 0.6 | +1.010619 |
+| X5: Revenue / total assets | 18,322.117 | 45,757.642 | 0.400417 | 1.0 | +0.400417 |
+
+### Speaker Notes
+Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.
+
+Interest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.
+
+Altman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.
+
+*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
+
+---
+
+## Slide 6: Cash Flow and Accounting Quality
+*Section: Accounting quality | Time Budget: 2 mins | Rubric: 20 pts (section)*
+
+### Sidebar: the full explanation in simple language
+Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.
+
+FY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.
+
+Milestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.
+
+Tokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.
+
+Deposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.
+
+### Sidebar calculation: Milestone 3 accounting and footnote findings
+| Finding | Assignment figure | What to watch |
+| --- | --- | --- |
+| Accrual ratio | −3.95% | (Net income − CFO) / closing assets; not an automatic quality score |
+| Tokopedia / Bank Jago | Rp7,432bn / Rp2,895bn | Together 22.57% of assets |
+| Level 3 investments | Rp1,669bn | Value depends on unquoted-input estimates |
+| Related-party revenue | Rp1,306bn / 7.13% | Understand the arrangement and collection |
+| Incentives | Revenue deduction or expense | Treatment depends on the distinct service received |
+| 20% haircut sensitivity | Rp1,820bn before tax | Hypothetical, not a recorded impairment; no double-count of goodwill |
+
+### Speaker Notes
+Free Cash Flow: GoTo generates Rp307bn CFO and spends Rp1,182bn on cash capex. Operations cover 25.97% of that investment.
+
+Accrual Ratio: The milestone accrual ratio is −3.95%: (net income − CFO) / closing assets. Noncash expenses and payment timing create a gap between profit and cash.
+
+Asset Valuation: Associates represent 22.57% of assets. Level 3 investments also rely on estimates. A write-down would reduce recorded assets and equity, without itself creating a new cash payment.
+
+*Sources: Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities*
+
+---
+
+## Slide 7: Forecast Assumptions
+*Section: Forecast: assumptions | Time Budget: 1.75 mins | Rubric: 15 pts (section)*
+
+### Milestone 4 scenario drivers
+
+| Assumption | Optimistic | Base | Conservative |
+| --- | --- | --- | --- |
+| Revenue growth | 15.3% | 11.4% | 7.5% |
+| COGS / revenue | 38.1% | 41.1% | 46.6% |
+| Operating costs / revenue | 55.7% | 78.5% | 85.0% |
+| Capex / revenue | 6.5% | 16.3% | 20.0% |
+
+### Sidebar: the full explanation in simple language
+Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.
+
+The cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.
+
+Capex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.
+
+Working-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.
+
+### Sidebar calculation: All key assumptions and the reason for each
+| Driver | Base (Avg) | Base Rationale | Optimistic | Optimistic Rationale | Conservative | Conservative Rationale |
+| --- | --- | --- | --- | --- | --- | --- |
+| Revenue Growth Rate | 11.4% | Average of 2024 (7.5%) and 2025 (15.3%) growth. | 15.3% | Matches strong 2025 growth from GoPay loans and Gojek. | 7.5% | Matches slower 2024 growth rate. |
+| COGS (% of Revenue) | 41.1% | Three year average cost of revenue (2023 to 2025). | 38.1% | Matches first half 2026 level as financial services grow. | 46.6% | Matches highest historical COGS % in 2024. |
+| Operating Expenses (% of Rev) | 78.5% | Three year average cash operating expenses (2023 to 2025). | 55.7% | Matches 2025 cash opex after cutting promo spending. | 85.0% | Assumes heavy promo competition returns. |
+| Days Sales Outstanding (DSO) | 24.2 days | Three year average customer collection period. | 10.9 days | Matches faster 2025 collection period. | 30.0 days | Assumes slower partner collections. |
+| Days Inventory (DIO) | 4.8 days | Three year average inventory holding period. | 0.7 days | Matches 2025 minimal digital inventory. | 8.0 days | Assumes higher inventory closer to 2023. |
+| Days Payable (DPO) | 67.8 days | Three year average vendor payment period. | 75.0 days | Longer vendor terms keep cash in GoTo longer. | 59.1 days | Faster payment to vendors (2025 level) uses cash faster. |
+| Capex (% of Revenue) | 16.3% | Three year average capital spending (2023 to 2025). | 6.5% | Matches lower 2025 capital spending using cloud servers. | 20.0% | Assumes heavier server and tech investment. |
+| D&A (% of Beg. Net PP&E) | 30.6% | Average of 2024 (17.3%) and 2025 (43.9%). | 25.0% | Longer equipment useful life. | 43.9% | Matches higher 2025 depreciation rate. |
+| Effective Tax Rate | 22.0% | Indonesia standard corporate tax rate. | 22.0% | Standard corporate tax rate. | 22.0% | Standard corporate tax rate. |
+| Interest Rate on Debt | 10.2% | Three year average interest expense / total debt. | 6.9% | Matches lower 2025 interest rate. | 12.9% | Matches higher 2024 borrowing cost. |
+| Dividend Payout Ratio | 0.0% | 0% dividends paid in 2023 to 2025. | 0.0% | Reinvest all profits into growth. | 0.0% | Keep cash in the bank. |
+
+### Sidebar calculation: Fixed and variable cost judgments
+| Category | Classification & Judgment (from Week 12 Analysis) |
+| --- | --- |
+| Variable Costs | Cost of Goods Sold (COGS) is variable (41.1% of revenue in Base). It covers payment processing fees, merchant and driver transaction costs, and cloud hosting that rise and fall directly with orders. |
+| Semi Variable Costs | Sales & Marketing and Product Development are semi variable. Customer promos move with competition and order volume, while engineering salaries are set by management budget. |
+| Fixed Costs | General & Administrative (office salaries, rent, legal), Operational Support, Depreciation, and Debt Interest are mostly fixed. In 2025, total operating expenses grew only 2.2% (Rp 10,722 bn to Rp 10,954 bn) while revenue grew 15.3%. When fixed operating expenses are held constant at Rp 10,954 bn instead of scaled with revenue, GoTo reaches positive EBIT of Rp 1,066 bn in 2026F. |
+| Segment Concentration | GoTo's revenue growth is concentrated in two segments rather than spread evenly across all segments. In 2025, Financial Technology (GoPay payments and consumer loans) grew 74.1% and contributed 91.0% of total revenue growth, while On Demand Services (Gojek rides and delivery) grew 13.8% and contributed 61.8% of total growth. |
+
+### Speaker Notes
+Base Assumptions: Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.
+
+Historical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.
+
+Scenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.
+
+*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)*
+
+---
+
+## Slide 8: Three-Year Forecast
+*Section: Forecast: outcomes | Time Budget: 2 mins | Rubric: 15 pts (section)*
+
+### Unified Milestone 4 Pro Forma Forecast Summary (Rp billion; Full 11-Row Schedule in Appendix A1)
+
+| Key Line Item (Rp bn) | 2025A | 2026F Base | 2027F Base | 2028F Base |
+| --- | --- | --- | --- | --- |
+| Revenue | 18,322 | 20,408 | 22,732 | 25,321 |
+| Base operating loss | (378) | (4,003.4) | (4,459.4) | (4,967.4) |
+| Base net loss | (1,502) | (3,737.0) | (4,092.7) | (4,488.9) |
+| Base ending cash | 21,755 | 14,282 | 7,642 | 968 |
+| Fixed-cost illustration: EBIT | (378) | +1,062 | +2,430 | +3,954 |
+
+#### Row-by-Row Formulas & Calculations
+- **Revenue**
+  - Explanation: Base revenue grows at 11.4% (2-yr avg of 7.5% & 15.3%).
+  - Formula: `Rev_t = Rev_{t-1} x 1.1139`
+  - Source: Milestone 4 IS Row 6
+- **Base operating loss**
+  - Explanation: EBIT feeds Assignment 14 DCF Valuation!B6:D6.
+  - Formula: `EBIT = GP (58.9%) - Cash OpEx (78.5%)`
+  - Source: Milestone 4 IS Row 10
+- **Base net loss**
+  - Explanation: Net Income feeds Assignment 14 Residual Income!B7:D7.
+  - Formula: `Zero tax shield modeled on pre-tax losses`
+  - Source: Milestone 4 IS Row 14
+- **Base ending cash**
+  - Explanation: Cash falls Rp 20.8T over 3 years as Base burn continues.
+  - Formula: `2028F Cash = Rp 968 bn`
+  - Source: Milestone 4 BS Row 7
+- **Fixed-cost illustration: EBIT**
+  - Explanation: Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.
+  - Formula: `Breakeven = Rp 18,604 bn`
+  - Source: Milestone 4 & Final Report Table 5
+
+### Sidebar: the full explanation in simple language
+The base forecast projects revenue rising from Rp18,322bn in 2025 to Rp25,321bn in 2028F. It also projects continuing operating losses and ending cash falling from Rp21,755bn to Rp968bn. These are outcomes under the submitted assumptions.
+
+For every Rp100 of sales, the model deducts Rp41.10 of COGS, leaving Rp58.90 of gross profit. Operating costs are Rp78.50. The difference is a Rp19.60 operating shortfall before the remaining items. When the same cost percentages apply to a larger sales amount, the operating loss becomes larger in rupiah. This is the direct reason sales growth does not create a base-case operating profit.
+
+The separate fixed-cost illustration holds operating expenses at Rp10,954bn. With higher sales and the same expense amount, EBIT becomes approximately Rp1,062bn in 2026F, Rp2,430bn in 2027F and Rp3,954bn in 2028F. Breakeven revenue is about Rp18,604bn. This illustration is not the fully linked optimistic scenario.
+
+The forecast cash-flow statement and balance sheet use the same ending cash. Capex reduces cash after operating cash flow; it does not directly change the operating-breakeven calculation. The difference between the base case and fixed-cost illustration comes from their cost assumptions.
+
+### Sidebar calculation: Base projected income statement
+| Line Item (Rp billion) | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| Revenue (growing at 11.4% Base average) | 20,408 | 22,732 | 25,321 |
+| Cost of Goods Sold (41.1% of Revenue) | 8,392 | 9,348 | 10,412 |
+| Gross Profit (58.9% Gross Margin) | 12,016 | 13,384 | 14,908 |
+| Operating Expenses (scaled at three year average 78.5%) | 16,020 | 17,844 | 19,876 |
+| EBIT | (4,003) | (4,459) | (4,967) |
+| Interest Expense (10.2% on Total Debt) | 788 | 788 | 788 |
+| Earnings Before Tax (EBT) | (4,791) | (5,247) | (5,755) |
+| Tax Expense / (Benefit) (22.0%) | (1,054) | (1,154) | (1,266) |
+| Net Income | (3,737) | (4,093) | (4,489) |
+
+### Sidebar calculation: Base projected balance sheet
+| Line Item (Rp billion) | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| Cash & Equivalents (plug) | 14,282 | 7,642 | 968 |
+| Accounts Receivable (24.2 days) | 1,352 | 1,506 | 1,677 |
+| Inventory (4.8 days) | 110 | 123 | 137 |
+| Total Current Assets | 15,744 | 9,271 | 2,783 |
+| Net PP&E | 3,762 | 6,321 | 8,518 |
+| Other Assets (held constant at 2025 level) | 22,819 | 22,819 | 22,819 |
+| TOTAL ASSETS | 42,326 | 38,411 | 34,120 |
+| Accounts Payable (67.8 days) | 1,559 | 1,737 | 1,935 |
+| Short Term Debt (held constant) | 1,524 | 1,524 | 1,524 |
+| Total Current Liabilities | 3,083 | 3,261 | 3,458 |
+| Long Term Debt (held constant) | 6,219 | 6,219 | 6,219 |
+| Other Liabilities (held constant at 2025 level) | 8,049 | 8,049 | 8,049 |
+| Total Liabilities | 17,351 | 17,529 | 17,726 |
+| Total Shareholders' Equity | 24,975 | 20,882 | 16,393 |
+| TOTAL LIABILITIES & EQUITY | 42,326 | 38,411 | 34,120 |
+| Balance Check (Total Assets minus Total L&E, must = 0) | 0 | 0 | 0 |
+
+### Sidebar calculation: Base projected cash-flow statement
+| Line Item (Rp billion) | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| Net Income | (3,737) | (4,093) | (4,489) |
+| Add: Depreciation & Amortization | 190 | 1,151 | 1,934 |
+| (Increase) / Decrease in Accounts Receivable | (805) | (154) | (171) |
+| (Increase) / Decrease in Inventory | (96) | (13) | (14) |
+| Increase / (Decrease) in Accounts Payable | 305 | 178 | 198 |
+| Cash Flow from Operations (CFO) | (4,143) | (2,930) | (2,542) |
+| Capital Expenditures (Capex) | (3,330) | (3,710) | (4,132) |
+| Cash Flow from Investing (CFI) | (3,330) | (3,710) | (4,132) |
+| Dividends Paid & Net Debt Change (Cash Flow from Financing) | 0 | 0 | 0 |
+| Net Change in Cash | (7,473) | (6,640) | (6,674) |
+| Beginning Cash | 21,755 | 14,282 | 7,642 |
+| Ending Cash (computed) | 14,282 | 7,642 | 968 |
+| Check vs. Balance Sheet Plug Cash (must = 0) | 0 | 0 | 0 |
+
+### Sidebar calculation: Breakeven and operating leverage
+| Breakeven Check Item (Rp billion) | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| Gross Margin (%) | 58.9% | 58.9% | 58.9% |
+| Breakeven Revenue (Scaled Opex / Gross Margin) | 27,207 | 30,305 | 33,755 |
+| Breakeven Status (when Opex is scaled at 78.5%) | Below Breakeven | Below Breakeven | Below Breakeven |
+| DOL when Opex is scaled at 78.5% | Not reported (EBIT is negative) | Not reported (EBIT is negative) | Not reported (EBIT is negative) |
+| Fixed Operating Expenses (Holding 2025 Opex constant at Rp 10,954 bn) | 10,954 | 10,954 | 10,954 |
+| EBIT when Fixed Opex is not scaled with Revenue | 1,062 | 2,430 | 3,954 |
+| Breakeven Revenue (Fixed Opex Rp 10,954 bn / 58.9% Gross Margin) | 18,604 | 18,604 | 18,604 |
+| Breakeven Status (Fixed Cost Model) | Above Breakeven | Above Breakeven | Above Breakeven |
+| Margin of Safety (Fixed Cost Model) | +8.8% | +18.2% | +26.5% |
+| Degree of Operating Leverage (DOL = Gross Profit / EBIT, when EBIT > 0) | 11.31x | 5.51x | 3.77x |
+
+### Sidebar calculation: Beta / WACC / Terminal Growth Sensitivity & Breakeven Check
 | Sensitivity / Breakeven Test | Assumptions / Inputs | 2026F / DCF Result | 2027F-2028F / RI Result |
 | --- | --- | --- | --- |
 | Base Scaled OpEx (78.5% of Rev) | Breakeven Rev Rp 27.2T-33.8T | EBIT: (4,003) bn \| DOL: n/a | Below Breakeven (2026F-2028F) |
@@ -781,84 +381,211 @@ Risks in both directions: Upside: cost discipline, profitable FinTech scaling, o
 | IDX Avg Beta (Beta 1.00, g = 3.0%) | Ke = 11.20% \| WACC = 9.89% | DCF: Rp (79.9) / share | Residual Income: Rp (47.5) / share |
 | High-Beta Tech (Beta 1.25, g = 3.0%) | Ke = 12.87% \| WACC = 11.18% | DCF: Rp (65.3) / share | Residual Income: Rp (38.3) / share |
 
-#### Row-by-Row Formulas & Calculations
-- **Base Scaled OpEx (78.5% of Rev)**
-  - Explanation: Milestone 4 Base Case scales opex at 78.5%, staying unprofitable.
-  - Source: Milestone 4 Table 4
-- **Fixed OpEx Freeze (Rp 10,954 bn)**
-  - Explanation: Freezing opex at Rp 10,954 bn drops breakeven to Rp 18,604 bn.
-  - Source: Final Report Table 5
-- **Base Valuation (Beta 0.59, g = 3.0%)**
-  - Explanation: Assignment 14 baseline WACC (7.76%) & terminal g (3.0%).
-  - Source: Valuation Summary
-- **Lower Terminal g (Beta 0.59, g = 2.0%)**
-  - Explanation: Lowering g to 2.0% leaves both DCF (-99.9) & RI (-60.9) deeply negative.
-  - Source: Sensitivity Check
-- **IDX Avg Beta (Beta 1.00, g = 3.0%)**
-  - Explanation: Market beta (1.00) yields WACC 9.89%, still deeply negative.
-  - Source: Beta 1.00 Check
-- **High-Beta Tech (Beta 1.25, g = 3.0%)**
-  - Explanation: High tech beta (1.25) yields WACC 11.18%, still negative.
-  - Source: Beta 1.25 Check
-
-### Key Takeaways & Analysis
-#### Key Q&A Insight: Why Higher Discount Rates Make Negative DCF Less Negative
-- **Sign Reversal Effect:** Because Base FCFF and Residual Income are negative, raising Beta from 0.59 to 1.25 discounts future cash burns more heavily, moving DCF from -Rp 121.1 to -Rp 65.3.
-- **Unchanged Thesis:** Across every Beta (0.59-1.25) and g (2.0%-3.0%), intrinsic value remains negative unless management freezes operating expenses.
-- *Context:* Prepares Galatia/Anggreini for Beta sensitivity Q&A.
-
 ### Speaker Notes
-[Appendix Q&A Backup — Sensitivity & Breakeven] Appendix A2 shows that across every tested Beta (0.59 to 1.25) and terminal growth rate (2.0% to 3.0%), Base Case DCF and Residual Income stay strictly negative.
+Base Case: The model projects revenue of Rp25,321bn in 2028F, but operating losses continue and ending cash falls from Rp21,755bn to Rp968bn.
 
-*Sources: Assignment 14 Workbook Formulas & Milestone 4 Breakeven Table*
+Operating Cost Ratio: The base gives Rp58.90 gross profit but Rp78.50 operating costs per Rp100 of sales. The Rp19.60 shortfall grows when both sales and these costs increase together.
+
+Fixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954bn. It produces positive 2026F EBIT of about Rp1,062bn, rather than the base-case loss of Rp4,003bn.
+
+*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)*
 
 ---
 
-## Appendix Slide 14: Supporting Schedule A3: Forensic Footnote Audit & 20-Minute Presentation Rubric Allocation
-**Exact Slide-by-Slide Pacing Across All 3 Members (20 Mins Total) + Complete Milestone 3 Diagnostic Backup**
-*Section: Appendix A3: Footnote Table & Rubric Plan | Time Budget: 20 mins + Q&A | Rubric: 100 pts Total*
+## Slide 9: Cost of Capital
+*Section: Valuation: cost of capital | Time Budget: 1.25 mins | Rubric: 20 pts (section)*
 
-### Assignment 16 Compliance, Speaker Rotation & Forensic Summary
+### Assignment 14 cost of capital
 
-| Presentation Section / Guideline | Slides | Speaker | Time Budget | Points |
-| --- | --- | --- | --- | --- |
-| Opening (Company, Week 1 User, 1-Sentence Thesis) | Slide 1 | Fagly Ramschie | 1.5 mins | Required |
-| Strategy & Industry (Business Model + 5 Forces/Risks) | Slides 2-3 | Fagly Ramschie | 2.5 mins | 15 pts |
-| Financial Ratios, DuPont, Z + Accounting Quality | Slides 4-5 | Anggreini Ruitan | 4.5 mins | 20 pts |
-| 3-Year Forecast, Scenarios & Assumption Rationale | Slide 6 | Anggreini Ruitan | 2.5 mins | 15 pts |
-| Valuation (WACC, DCF, RI, Multiples, Gap & Range) | Slides 7-10 | Galatia Rompas | 7.0 mins | 20 pts |
-| Recommendation, 3 Upgrade Conditions & Risks | Slide 11 | Fagly Ramschie | 2.0 mins | 15 pts (85+15) |
+| Step | Result | Plain meaning |
+| --- | --- | --- |
+| Shareholder return: Ke | 8.45% | Required return on equity |
+| Debt cost after tax | 5.39% | 6.91% × (1 − 22%) |
+| Equity / debt weights | 77.4% / 22.6% | Weight each funding source |
+| Combined rate: WACC | 7.76% | Used for cash flows to the business |
 
-#### Row-by-Row Formulas & Calculations
-- **Opening (Company, Week 1 User, 1-Sentence Thesis)**
-  - Explanation: Introduces IDX: GOTO, investor user, and SELL thesis before ratios.
-  - Source: Guidelines Sec. 3
-- **Strategy & Industry (Business Model + 5 Forces/Risks)**
-  - Explanation: Splits Business Model/Pivot (S2) and Rivalry/Credit Risks (S3) cleanly.
-  - Source: Guidelines Sec. 3
-- **Financial Ratios, DuPont, Z + Accounting Quality**
-  - Explanation: Covers Chart 1, DuPont (-5.2%), Z (-4.72), CFO/Capex (26%), and 22.6% associates.
-  - Source: Guidelines Sec. 3 & 5
-- **3-Year Forecast, Scenarios & Assumption Rationale**
-  - Explanation: Presents single Milestone 4 forecast driving DCF/RI and Fixed-OpEx breakeven.
-  - Source: Guidelines Sec. 3-4
-- **Valuation (WACC, DCF, RI, Multiples, Gap & Range)**
-  - Explanation: Covers WACC (7.76%), DCF (-121.1), RI (-75.1), Multiples (91.0), and Chart 2.
-  - Source: Guidelines Sec. 4-5
-- **Recommendation, 3 Upgrade Conditions & Risks**
-  - Explanation: Total delivery = 20.5 mins (tightly paced around 20-min target) + 10-min Q&A = 100 pts.
-  - Source: Guidelines Sec. 2-3
+### Sidebar: the full explanation in simple language
+Cost of equity is the return required by the assignment equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.
 
-### Key Takeaways & Analysis
-#### Assignment 16 coverage
-- **Story Before Numbers:** Slides 1-3 establish GoTo's business model, TikTok/Tokopedia pivot, and competitive dynamics BEFORE introducing ratios, forecasts, and valuation.
-- **Every Valuation Must-Have Verified:** WACC, forecasts, terminal assumptions, valuation range, and recommendation follow the submitted assignments. Milestone definitions are retained, with source files and locations listed for each slide. Z-score follows the user-requested Week 6 correction.
-- *Context:* Confirms 100% rubric compliance while eliminating slide clutter.
+The 4.502% risk-free proxy is the assignment government-bond yield after its sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.
+
+Pre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.
+
+Equity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.
+
+### Sidebar calculation: Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)
+| Parameter / Result | Value | Exact External Source & Observation Date |
+| --- | --- | --- |
+| Risk-Free Rate Proxy (Rf) | 4.502% | Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026) |
+| Levered Beta & Mature ERP | 0.59  \|  4.23% | GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) |
+| Indonesia Country Risk Premium (CRP) | 2.465% | Damodaran ctryprem.xlsx (1 Jan 2026): Indonesia Baa2 rating-based CRP (1.618% spread x 1.5234 equity scalar) |
+| Cost of Equity (Ke = Rf + Beta x (ERP+CRP)) | 8.45% | 4.502% + 0.59 x (4.23% + 2.465%) = 8.452%; hurdle used for Residual Income valuation |
+| Pre-Tax Debt (6.91%) & After-Tax Debt | 5.39% | FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate) |
+| Capital Weights & Consolidated WACC | 7.76% | 77.4% Market Equity (Rp 26,550.3 bn @ Rp 25/sh) x 8.45% + 22.6% Debt (Rp 7,742.6 bn) x 5.39% = 7.76% |
 
 ### Speaker Notes
-[Delivery Cue] Speaking order matches rubric weight cleanly: Fagly (Opening + Strategy Slides 1-3 = 4.0m) -> Anggreini (Financials + Quality + Forecast Slides 4-6 = 7.0m) -> Galatia (Valuation Slides 7-10 = 7.5m) -> Fagly (Recommendation Slide 11 = 2.0m). Keep 1.5-2.0m discipline per slide to finish comfortably ahead of Q&A.
+Cost of Equity and Debt: The assignment calculates cost of equity at 8.45% and after-tax debt cost at 5.39%.
 
-*Sources: FSA_Final_Presentation_Guidelines.pdf & Group4_FinalReport_GOTO.docx*
+Capital Weights and WACC: Market equity carries 77.4% of the weight and debt 22.6%. Their weighted cost is the discount rate for DCF business cash flows.
+
+Discount Rates: RI values profit attributable to the equity model, so it uses 8.45%. DCF values cash before the debt bridge, so it uses the combined 7.76% rate.
+
+*Sources: Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)*
+
+---
+
+## Slide 10: DCF and Residual Income
+*Section: Valuation: cash flow and profit | Time Budget: 2.25 mins | Rubric: 20 pts (section)*
+
+### Same base forecast, different valuation routes
+
+| Model step | DCF | Residual income |
+| --- | --- | --- |
+| Value being tested | Future business cash | Profit after the equity charge |
+| Discount rate | WACC: 7.76% | Ke: 8.45% |
+| Long-run growth assumption | 3.0% | 3.0% |
+| Model output / share | −Rp121.1 | −Rp75.1 |
+
+### Sidebar: the full explanation in simple language
+DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.
+
+Assignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.
+
+Both results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.
+
+Terminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.
+
+DCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.
+
+### Sidebar calculation: DCF vs. Residual Income Side-by-Side Valuation Bridge — Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
+| Valuation Component (Rp bn / Rp per Share) | DCF Model (WACC = 7.76%) | Residual Income (Ke = 8.45%) |
+| --- | --- | --- |
+| 2026F–2028F annual inputs | FCFF: (7,738.7) / (7,006.3) / (7,152.6) | RI: (6,163.7) / (6,203.6) / (6,253.9) |
+| PV of explicit forecast | Rp (18,930.7) bn | Rp (15,860.4) bn |
+| PV of terminal value, g = 3% | Rp (123,667.0) bn | Rp (92,621.5) bn |
+| Capital Bridge (Add Net Cash / Start Book Equity) | EV (142,597.7) + Net Cash 14,012.5 | Book Equity 28,711.7 + PV(RI) (108,481.9) |
+| Implied Total Equity Value & Value per Share | Rp (128,585.2) bn  \|  Rp (121.1) / share | Rp (79,770.2) bn  \|  Rp (75.1) / share |
+
+### Sidebar calculation: Beta / WACC / Terminal Growth Sensitivity & Breakeven Check
+| Sensitivity / Breakeven Test | Assumptions / Inputs | 2026F / DCF Result | 2027F-2028F / RI Result |
+| --- | --- | --- | --- |
+| Base Scaled OpEx (78.5% of Rev) | Breakeven Rev Rp 27.2T-33.8T | EBIT: (4,003) bn \| DOL: n/a | Below Breakeven (2026F-2028F) |
+| Fixed OpEx Freeze (Rp 10,954 bn) | Breakeven Rev Rp 18,604 bn | 2026F EBIT: +1,062 bn (DOL 11.31x) | 2027F +2,430 (5.51x) \| 2028F +3,954 (3.77x) |
+| Base Valuation (Beta 0.59, g = 3.0%) | Ke = 8.45% \| WACC = 7.76% | DCF: Rp (121.1) / share | Residual Income: Rp (75.1) / share |
+| Lower Terminal g (Beta 0.59, g = 2.0%) | Ke = 8.45% \| WACC = 7.76% | DCF: Rp (99.9) / share | Residual Income: Rp (60.9) / share |
+| IDX Avg Beta (Beta 1.00, g = 3.0%) | Ke = 11.20% \| WACC = 9.89% | DCF: Rp (79.9) / share | Residual Income: Rp (47.5) / share |
+| High-Beta Tech (Beta 1.25, g = 3.0%) | Ke = 12.87% \| WACC = 11.18% | DCF: Rp (65.3) / share | Residual Income: Rp (38.3) / share |
+
+### Sidebar calculation: Why the assignment uses 3% terminal growth
+| Check | Assignment treatment | Meaning |
+| --- | --- | --- |
+| Fundamental growth: reinvestment × ROIC | Not meaningful with negative NOPAT | 3% is a manual assumption because operating returns are negative |
+| Chosen terminal growth | Manual analyst judgment: 3.0% | Same g for DCF and RI |
+| Rate limits | 3.0% < 4.502% risk-free proxy < 7.76% WACC | Below the model limits; not a guarantee |
+| Negative terminal cash flow | Continues the base-case weakness | Interpret the output as a scenario warning |
+
+### Sidebar calculation: How forecast profit becomes FCFF (Rp bn)
+| Line item | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| EBIT | (4,003.4) | (4,459.4) | (4,967.4) |
+| Less: Tax on EBIT | 0.0 | 0.0 | 0.0 |
+| EBIAT (NOPAT) | (4,003.4) | (4,459.4) | (4,967.4) |
+| Add: Depreciation & Amortization | 190.4 | 1,151.1 | 1,934.0 |
+| Less: Capital Expenditures | (3,329.8) | (3,709.1) | (4,131.6) |
+| Less: Increase in Net Working Capital | (595.9) | 11.1 | 12.4 |
+| Free Cash Flow to Firm (FCFF) | (7,738.7) | (7,006.3) | (7,152.6) |
+
+### Sidebar calculation: How forecast profit becomes residual income (Rp bn)
+| Line item | 2026F | 2027F | 2028F |
+| --- | --- | --- | --- |
+| Beginning Book Value of Equity | 28,711.7 | 24,974.7 | 20,882.0 |
+| Forecast Net Income | (3,737.0) | (4,092.7) | (4,488.9) |
+| Dividends Paid (reduces equity) | 0.0 | 0.0 | 0.0 |
+| Cost of Equity (linked) | 8.45% | 8.45% | 8.45% |
+| Equity Charge (Beg. BVE x Cost of Equity) | 2,426.7 | 2,110.9 | 1,765.0 |
+| Residual Income | (6,163.7) | (6,203.6) | (6,253.9) |
+
+### Speaker Notes
+Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.
+
+Forecast and Terminal Value: Both models use Milestone 4. The terminal calculation extends the weak final-year result beyond 2028, with the assignment’s 3% growth assumption.
+
+Valuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.
+
+*Sources: Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%*
+
+---
+
+## Slide 11: Grab Comparison and Valuation
+*Section: Valuation: comparison and limits | Time Budget: 2.25 mins | Rubric: 20 pts (section)*
+
+### Grab-only P/B comparison
+
+| Input / result | Value |
+| --- | --- |
+| Grab P/B | 3.0391x |
+| GoTo parent BVPS | Rp29.9479 |
+| Conditional P/B benchmark | Rp91.0 / share |
+
+### Sidebar: the full explanation in simple language
+P/B is share price divided by book value per share. A multiple of three means the price is about three times recorded equity per share. Recorded equity is an accounting balance rather than a guaranteed liquidation payment.
+
+Grab is the closest operating comparison because it has rides, delivery and financial services. Shopee is not separately listed, while Sea also includes Garena and Monee. BUKA has a different investment, gaming and Mitra mix, with investment gains affecting earnings comparisons. BELI is inventory-led omnichannel retail with negative reported FY2025 EBITDA.
+
+Grab’s US$4.99 price divided by parent BVPS of US$1.641918 gives P/B of 3.039129x. GoTo parent equity divided by year-end shares gives Rp29.947947 BVPS. Their product is Rp91.015660 per share. P/B has no currency unit, so a USD-to-rupiah share-price conversion is unnecessary. Both calculations use parent equity and year-end ordinary shares.
+
+The Rp91 result assumes GoTo receives Grab’s book-value multiple. It does not establish equal profitability, geography or earning power. DCF and RI reflect forecast losses, while this P/B benchmark uses historical FY2025 equity and no earnings forecast. An average would combine those different bases without explaining the difference.
+
+GoTo’s loss makes P/E uninformative in this comparison. EV/EBITDA is withheld because reported and adjusted EBITDA bases have not been harmonized. The negative DCF and RI outputs and positive P/B result are a span of model outputs, not a range of executable market prices. None establishes a short-term catalyst or trade timing.
+
+### Sidebar calculation: Grab benchmark calculation
+| Measure | Value | Basis |
+| --- | --- | --- |
+| GRAB price | US$4.99 | 31 Dec 2025 close |
+| GRAB parent equity / shares | US$6,728m / 4,097.647m | FY2025 audited; Class A + B |
+| GRAB BVPS / P/B | US$1.6419 / 3.0391x | Same USD basis; no FX conversion |
+| GoTo parent BVPS | Rp 29.9479 | Rp31,805.025bn / 1,062.0102bn shares |
+| GoTo P/B benchmark | Rp 91.0 / share | 3.0391x × Rp 29.9479 |
+| P/E / EV–EBITDA | Excluded / withheld | Loss-making GoTo / EBITDA basis differs |
+
+### Sidebar calculation: Why the other comparators are excluded
+| Company | Reason |
+| --- | --- |
+| Shopee / Sea | Shopee is not separately listed. Sea also includes Garena and Monee, giving a different business mix. |
+| BUKA | Material investment gains distort operating-earnings comparisons; gaming, Mitra, and investment exposure differ from GoTo. |
+| BELI | Inventory-led omnichannel retail and physical stores differ. Negative FY2025 EBITDA makes the positive 12x input unsuitable. |
+
+### Speaker Notes
+Comparable Selection: Its rides, delivery and financial-services mix is closest to GoTo. Sea includes Shopee and other businesses; BUKA and BELI also have different business mixes.
+
+Grab P/B: 3.0391x Grab P/B × Rp29.9479 GoTo parent BVPS = about Rp91.0. This applies Grab’s market multiple to GoTo’s recorded parent equity.
+
+Valuation Differences: DCF and RI include forecast losses. P/B applies another company’s multiple to historical book equity. An average would mix these assumptions rather than resolve their differences.
+
+*Sources: Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.*
+
+---
+
+## Slide 12: Recommendation
+*Section: Recommendation | Time Budget: 2 mins | Rubric: 15 pts (section)*
+
+### Sidebar: the full explanation in simple language
+The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.
+
+For a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.
+
+Cash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.
+
+Better operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.
+
+### Speaker Notes
+Recommendation: The submitted recommendation is SELL / AVOID at the Rp25 assignment reference price. It is based on negative FCF and the weak base forecast.
+
+Conditions: Cash covering capex, controlled operating costs and better lending results would weaken the negative fundamental case. A near-term catalyst and trading signal remain unestablished in this FSA.
+
+Risks: Better operations could make the base too cautious. Credit losses, impairments and cash use could worsen it. The valuation results do not establish the timing of the next price move.
+
+*Sources: Group 4 Final Report Section (g) & Integrated Valuation Findings*
 
 ---
 

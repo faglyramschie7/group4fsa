@@ -52,7 +52,10 @@
 .drawer-backdrop .source-drawer .drawer-val-pill { display: block; background: transparent; color: #def0e3; padding: 0; border: 0; margin-top: 8px; border-radius: 0; font-size: 12px; line-height: 1.5; font-weight: 400; }
 .drawer-backdrop .source-drawer .drawer-close-btn { width: 36px; height: 36px; background: transparent; border: 1px solid #ffffff60; color: #fff; border-radius: 6px; font-size: 24px; }
 .drawer-backdrop .source-drawer .drawer-close-btn:hover { background: #ffffff18; border-color: #fff; }
-.drawer-backdrop .source-drawer .drawer-scroll-body { min-height: 0; padding: 24px; gap: 24px; background: #f6f9f6; scrollbar-color: #b9cdbf #f6f9f6; }
+.drawer-backdrop .source-drawer .drawer-scroll-body { display: block; min-height: 0; padding: 24px; overflow-y: auto; overflow-x: hidden; background: #f6f9f6; scrollbar-color: #b9cdbf #f6f9f6; overscroll-behavior: contain; }
+.drawer-backdrop .source-drawer .drawer-scroll-body > * + * { margin-top: 24px; }
+.drawer-backdrop .source-drawer .drawer-section > *,
+.drawer-backdrop .source-drawer .drawer-trace-card > * { flex-shrink: 0; }
 .drawer-backdrop .source-drawer .drawer-summary-box,
 .drawer-backdrop .source-drawer .drawer-calc-box,
 .drawer-backdrop .source-drawer .drawer-featured-ev,
@@ -60,6 +63,25 @@
 .drawer-backdrop .source-drawer .drawer-summary-box { border-left: 3px solid #008c2c; font-size: 14px; line-height: 1.7; }
 .drawer-backdrop .source-drawer .drawer-summary-box > strong { color: #006b23; display: block; margin-bottom: 6px; }
 .drawer-backdrop .source-drawer .drawer-summary-box p { margin: 0; }
+.drawer-backdrop .source-drawer .drawer-summary-box p { white-space: pre-line; }
+.drawer-backdrop .source-drawer .drawer-schedule-title { margin: 0; color: #153b22; font-size: 14px; line-height: 1.5; }
+.drawer-backdrop .source-drawer .drawer-schedule-scroll { overflow-x: auto; max-width: 100%; }
+.drawer-backdrop .source-drawer .drawer-schedule-table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; }
+.drawer-backdrop .source-drawer .drawer-schedule-table :is(th,td) { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #dce7df; }
+.drawer-backdrop .source-drawer .drawer-schedule-table th { background: #edf6ef; color: #153b22; font-weight: 650; }
+.drawer-backdrop .source-drawer .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #dce7df; border-radius: 6px; background: #fff; }
+.drawer-backdrop .source-drawer .drawer-formula-table { width: 100%; min-width: 920px; table-layout: fixed; border-collapse: collapse; color: #24382b; font-size: 12px; line-height: 1.65; }
+.drawer-backdrop .source-drawer .drawer-formula-table :is(th,td) { padding: 12px; border: 1px solid #dce7df; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th { background: #edf6ef; color: #153b22; font-weight: 700; }
+.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(1) { width: 22%; }
+.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(2) { width: 15%; }
+.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(3) { width: 28%; }
+.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(4) { width: 35%; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody th { background: #fff; color: #153b22; font-weight: 650; }
+.drawer-backdrop .source-drawer .drawer-formula-result { color: #007f2a; font-weight: 650; }
+.drawer-backdrop .source-drawer :is(.drawer-formula-source,.drawer-formula-note) { display: block; margin-top: 8px; color: #5f7265; font-size: 11px; font-weight: 400; line-height: 1.6; }
+.drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table:has(tr > :nth-child(6)) { min-width: 860px; }
+.drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table td:nth-child(6) { min-width: 260px; color: #153b22; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; }
 .drawer-backdrop .source-drawer .drawer-section { gap: 12px; }
 .drawer-backdrop .source-drawer .drawer-sec-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: transparent; padding: 0 0 10px; border: 0; border-bottom: 1px solid #dce7df; border-radius: 0; color: #006b23; font-size: 13px; font-weight: 700; line-height: 1.5; margin: 0; }
 .drawer-backdrop .source-drawer .drawer-sec-title > span { display: grid; place-items: center; flex-shrink: 0; width: 24px; height: 24px; background: #e7f3e9; color: #006b23; border-radius: 50%; font-size: 11px; }
@@ -91,7 +113,8 @@
 .drawer-backdrop .source-drawer .drawer-close-btn:focus-visible { outline-color: white; }
 @media (max-width: 480px) {
   .drawer-backdrop .source-drawer .drawer-top-hdr { padding: 20px 16px; }
-  .drawer-backdrop .source-drawer .drawer-scroll-body { padding: 16px; gap: 20px; }
+  .drawer-backdrop .source-drawer .drawer-scroll-body { padding: 16px; }
+  .drawer-backdrop .source-drawer .drawer-scroll-body > * + * { margin-top: 20px; }
   .drawer-backdrop .source-drawer .drawer-trace-card { padding: 14px; }
   .drawer-backdrop .source-drawer .drawer-top-hdr h3 { font-size: 20px; }
 }

@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 
-const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 14 } })
+const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 12 } })
 const emit = defineEmits(['explain', 'evidence', 'zoom'])
 const titles = {
   en: [
@@ -18,7 +18,6 @@ const titles = {
     'SELL / AVOID at Rp 25.00',
     'Historical results and base-case projections',
     'Sensitivity and operating breakeven',
-    'Presentation coverage and speaker allocation',
   ],
   id: [
     'Analisis ekuitas GoTo',
@@ -34,7 +33,6 @@ const titles = {
     'JUAL / HINDARI pada Rp 25,00',
     'Hasil historis dan proyeksi skenario dasar',
     'Sensitivitas dan titik impas operasional',
-    'Cakupan presentasi dan pembagian pembicara',
   ],
 }
 const takeaways = {
@@ -65,8 +63,9 @@ const takeaways = {
     'Peningkatan rekomendasi membutuhkan laba berkelanjutan, cakupan capex, dan disiplin biaya.',
   ],
 }
-const title = computed(() => titles[props.lang]?.[props.slide.slide_num - 1] || props.slide.title)
-const takeaway = computed(() => props.slide.slide_num === 1 ? props.slide.analysis_points?.[1]?.text || takeaways[props.lang]?.[0] : takeaways[props.lang]?.[props.slide.slide_num - 1] || '')
+const layoutSlide = computed(() => props.slide.layout_slide || props.slide.slide_num)
+const title = computed(() => props.slide.display_title || titles[props.lang]?.[layoutSlide.value - 1] || props.slide.title)
+const takeaway = computed(() => props.slide.display_takeaway || props.slide.analysis_points?.[1]?.text || takeaways[props.lang]?.[layoutSlide.value - 1] || '')
 const table = computed(() => props.slide.table)
 // Detailed source columns remain in the study notes, outside the projected slide.
 const visibleHeaders = computed(() => table.value?.headers || [])
@@ -78,9 +77,11 @@ const datedWaccSources = [
   'FY2025 interest / year-end debt. Statutory tax assumption: 22%.',
   'Rp 25 case reference × shares. Debt: FY2025. Weights: 77.4% / 22.6%.',
 ]
-const visibleRows = computed(() => (table.value?.rows || []).map((row, i) => props.slide.slide_num === 7 ? [row[0], row[1], datedWaccSources[i]] : row))
+const visibleRows = computed(() => props.slide.story_rebuilt ? table.value?.rows || [] : (table.value?.rows || []).map((row, i) => layoutSlide.value === 7 ? [row[0], row[1], datedWaccSources[i]] : row))
 const label = computed(() => props.slide.section_name || (props.lang === 'id' ? 'ANALISIS LAPORAN KEUANGAN' : 'FINANCIAL STATEMENT ANALYSIS'))
 const editorialRows = computed(() => {
+  if (props.slide.visual_rows) return props.slide.visual_rows
+  if (props.slide.story_rebuilt) return null
   const id = props.lang === 'id'
   if (props.slide.slide_num === 2) return [
     {
@@ -261,7 +262,9 @@ const bannerMap = {
   7: '/visuals/banner_slide7_wacc.png',
   8: '/visuals/banner_slide8_intrinsic.png',
 }
-const slideBannerUrl = computed(() => bannerMap[props.slide.slide_num] || '')
+const slideBannerUrl = computed(() => props.slide.hide_banner ? '' : bannerMap[layoutSlide.value] || '')
+const lossScale = computed(() => Math.max(...(props.slide.loss_chart?.series || []).map(row => Math.abs(row.value)), 1))
+const rangeX = value => 118 + (value + 140) / 260 * 370
 
 const pointIcons = {
   '2-2': {
@@ -400,28 +403,28 @@ const provisionGrowth = computed(() => {
           <p>PT GoTo Gojek Tokopedia Tbk</p>
           <h1>GoTo<span>{{ lang === 'id' ? 'Analisis ekuitas' : 'Equity analysis' }}</span></h1>
           <div class="slide-cover-business is-clickable-claim" role="button" tabindex="0" @click="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: 'Business Scope', text: lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' })" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: 'Business Scope', text: lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' })">{{ lang === 'id' ? 'Gojek · GoTo Financial · 24,99% Tokopedia' : 'Gojek · GoTo Financial · 24.99% Tokopedia' }}</div>
-          <p class="slide-cover-question">{{ lang === 'id' ? 'Bisakah perbaikan kinerja GoTo menghasilkan pertumbuhan yang dibiayai sendiri?' : 'Can GoTo turn improving performance into self-funded growth?' }}</p>
+          <p class="slide-cover-question">{{ lang === 'id' ? 'Dari model bisnis hingga arus kas, valuasi, dan keputusan.' : 'From the business model to cash flow, value, and a decision.' }}</p>
         </div>
         <aside class="slide-cover-summary">
         <div class="slide-cover-user">
           <span>{{ lang === 'id' ? 'UNTUK SIAPA' : 'OUR USER' }}</span>
-          <p>{{ lang === 'id' ? 'Investor saham publik jangka panjang' : 'Long-term public equity investor' }}</p>
+          <p>{{ lang === 'id' ? 'Investor saham publik jangka pendek' : 'Short-term public equity investor' }}</p>
         </div>
         <div
           class="slide-cover-verdict is-clickable-claim"
           role="button"
           tabindex="0"
-          @click="emit('explain', $event, 'verdict', { title: lang === 'id' ? 'JUAL / HINDARI — Rp 25,00 / saham' : 'SELL / AVOID — Rp 25.00 / share', text: takeaway })"
-          @keydown.enter="emit('explain', $event, 'verdict', { title: lang === 'id' ? 'JUAL / HINDARI — Rp 25,00 / saham' : 'SELL / AVOID — Rp 25.00 / share', text: takeaway })"
+          @click="emit('explain', $event, 'claim', slide.analysis_points?.[1])"
+          @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[1])"
         >
-          <span>{{ lang === 'id' ? 'JAWABAN KAMI' : 'OUR ANSWER' }}</span>
-          <strong>{{ lang === 'id' ? 'JUAL / HINDARI' : 'SELL / AVOID' }}</strong>
-          <p>{{ lang === 'id' ? 'pada harga Rp 25,00 per saham' : 'at Rp 25.00 per share' }}</p>
+          <span>{{ lang === 'id' ? 'HARGA ACUAN TUGAS' : 'ASSIGNMENT REFERENCE PRICE' }}</span>
+          <strong class="slide-cover-investor-question">{{ lang === 'id' ? 'Rp 25 per saham' : 'Rp 25 per share' }}</strong>
+          <p>{{ lang === 'id' ? 'Harga acuan tugas per saham' : 'Assignment reference price per share' }}</p>
         </div>
         <div class="slide-cover-reason">
-          <span>{{ lang === 'id' ? 'ALASAN UTAMA' : 'THE MAIN REASON' }}</span>
-          <p>{{ lang === 'id' ? 'Dalam skenario dasar kami, pembakaran kas menurunkan saldo kas dari Rp 21,76 triliun pada 2025 menjadi Rp 968 miliar pada 2028F.' : 'Under our base case, continued cash burn reduces cash from Rp 21.76 trillion in 2025 to Rp 968 billion in 2028F.' }}</p>
-          <small>{{ lang === 'id' ? 'Sumber: proyeksi skenario dasar' : 'Source: Base-case pro forma forecast' }}</small>
+          <span>{{ lang === 'id' ? 'CAKUPAN ANALISIS' : 'ANALYSIS SCOPE' }}</span>
+          <p>{{ lang === 'id' ? 'Model bisnis, industri, hasil keuangan, kualitas akuntansi, proyeksi dan valuasi.' : 'Business model, industry, financial results, accounting quality, forecasts and valuation.' }}</p>
+          <small>{{ lang === 'id' ? 'Aktual 2023–2025 · Proyeksi 2026–2028' : '2023–2025 actuals · 2026–2028 forecasts' }}</small>
         </div>
         </aside>
         <div class="slide-cover-team">
@@ -440,8 +443,8 @@ const provisionGrowth = computed(() => {
           <img class="slide-brand" src="/goto_logo.png" alt="GoTo" />
         </header>
 
-        <main class="slide-evidence-layout" :class="{ 'slide-table-only': slide.is_appendix }">
-          <div class="slide-evidence" :class="{ 'slide-evidence-stacked': slideBannerUrl, 'slide-evidence-peer': slide.peer_exclusions, 'slide-evidence-competition': competitionChart }">
+        <main class="slide-evidence-layout" :class="{ 'slide-table-only': slide.is_appendix, 'slide-business-layout': layoutSlide === 2 }">
+          <div class="slide-evidence" :class="{ 'slide-evidence-stacked': slideBannerUrl, 'slide-evidence-peer': slide.peer_exclusions, 'slide-evidence-competition': competitionChart, 'slide-evidence-explained': slide.loss_chart || slide.valuation_range }">
             <button
               v-if="slideBannerUrl"
               class="slide-evidence-banner"
@@ -512,6 +515,7 @@ const provisionGrowth = computed(() => {
                 </div>
               </dl>
               <p v-if="competitionChart.consumer_loans_bn" class="slide-provision-note">{{ lang === 'id' ? 'Pinjaman konsumen 2025:' : '2025 consumer loans:' }} Rp {{ (competitionChart.consumer_loans_bn / 1000).toLocaleString(lang === 'id' ? 'id-ID' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}T</p>
+              <p v-if="competitionChart.formula" class="slide-chart-formula">{{ competitionChart.formula }}</p>
             </figure>
             </div>
             </template>
@@ -542,9 +546,9 @@ const provisionGrowth = computed(() => {
               <table
                 class="slide-financial-table"
                 :class="{
-                  'slide-table-dense': slide.slide_num === 12,
-                  'slide-table-wacc': slide.slide_num === 7,
-                  'slide-table-multiples': slide.slide_num === 9,
+                  'slide-table-dense': slide.is_appendix,
+                  'slide-table-wacc': layoutSlide === 7,
+                  'slide-table-multiples': layoutSlide === 9,
                 }"
               >
                 <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
@@ -562,6 +566,32 @@ const provisionGrowth = computed(() => {
             <button v-else-if="slide.chart_url" class="slide-chart" @click="emit('zoom', slide.chart_url, title)" :aria-label="lang === 'id' ? 'Perbesar grafik' : 'Enlarge chart'">
               <img :src="slide.chart_url" :alt="slide.title" />
             </button>
+            <figure v-if="slide.loss_chart" class="slide-story-chart" role="button" tabindex="0" :aria-label="slide.loss_chart.title" @click="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points[0])">
+              <figcaption>{{ slide.loss_chart.title }}</figcaption>
+              <div v-for="row in slide.loss_chart.series" :key="row.label" class="slide-loss-row">
+                <span>{{ row.label }}</span>
+                <div class="slide-provision-track"><span class="slide-provision-current" :style="{ width: `${Math.abs(row.value) / lossScale * 100}%` }"></span></div>
+                <strong>−{{ Math.abs(row.value).toLocaleString(lang === 'id' ? 'id-ID' : 'en-US') }}</strong>
+              </div>
+              <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
+            </figure>
+            <figure v-if="slide.valuation_range" class="slide-story-chart slide-range-chart">
+              <figcaption>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</figcaption>
+              <svg viewBox="0 0 560 175" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
+                <line :x1="rangeX(0)" :x2="rangeX(0)" y1="22" y2="145" stroke="#a4bfae" />
+                <line :x1="rangeX(25)" :x2="rangeX(25)" y1="22" y2="145" stroke="#173d25" stroke-dasharray="4 4" />
+                <text :x="rangeX(25)" y="14" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
+                <g v-for="(row,i) in slide.valuation_range" :key="row.label">
+                  <text x="0" :y="46+i*40" fill="#173d25" font-size="15">{{ row.label }}</text>
+                  <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="30+i*40" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="23" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
+                  <text x="552" :y="46+i*40" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
+                </g>
+                <text :x="rangeX(-140)" y="165" fill="#63786a" font-size="12">−140</text>
+                <text :x="rangeX(0)" y="165" text-anchor="middle" fill="#63786a" font-size="12">0</text>
+                <text :x="rangeX(120)" y="165" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
+              </svg>
+              <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
+            </figure>
             <section v-if="slide.peer_exclusions" class="slide-peer-exclusions">
               <h2>{{ lang === 'id' ? 'Mengapa pembanding lain dikeluarkan?' : 'Why the other companies are excluded' }}</h2>
               <div
@@ -578,29 +608,29 @@ const provisionGrowth = computed(() => {
             </section>
           </div>
 
-          <aside v-if="!slide.is_appendix" class="slide-key-figures">
+          <aside v-if="!slide.is_appendix" class="slide-key-figures" :class="{ 'slide-analysis-panel': slide.analysis_points?.length }">
             <template v-if="slide.analysis_points?.length">
               <div
                 v-for="(point, i) in slide.analysis_points"
                 :key="i"
                 class="slide-analysis-point is-clickable-claim"
-                :class="{ 'has-point-icon': slide.slide_num === 2 || Boolean(getPointIcon(slide.slide_num, i)) }"
+                :class="{ 'has-point-icon': layoutSlide === 2 || Boolean(getPointIcon(layoutSlide, i)) }"
                 role="button"
                 tabindex="0"
                 @click="emit('explain', $event, 'claim', point)"
                 @keydown.enter="emit('explain', $event, 'claim', point)"
               >
-                <div v-if="slide.slide_num === 2 && i < 2" class="slide-point-icon" aria-hidden="true">
+                <div v-if="layoutSlide === 2 && i < 2" class="slide-point-icon" aria-hidden="true">
                   <img v-if="i === 0" src="/visuals/point_revenue.png" alt="" />
                   <img v-else src="/visuals/point_competition.png" alt="" />
                 </div>
                 <div
-                  v-else-if="getPointIcon(slide.slide_num, i)"
+                  v-else-if="getPointIcon(layoutSlide, i)"
                   class="slide-point-icon"
-                  :class="{ 'is-risk-icon': getPointIcon(slide.slide_num, i).risk }"
+                  :class="{ 'is-risk-icon': getPointIcon(layoutSlide, i).risk }"
                   aria-hidden="true"
                 >
-                  <svg viewBox="0 0 48 48" fill="none" class="slide-point-svg" v-html="getPointIcon(slide.slide_num, i).svg"></svg>
+                  <svg viewBox="0 0 48 48" fill="none" class="slide-point-svg" v-html="getPointIcon(layoutSlide, i).svg"></svg>
                 </div>
                 <div class="slide-point-copy">
                   <h2>{{ point.heading }}</h2>
@@ -635,7 +665,7 @@ const provisionGrowth = computed(() => {
 
 <style scoped>
 .financial-slide { width: 100%; min-width: 0; container-type: inline-size; flex: 1; }
-.slide-sheet { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #008c2c; color: white; font-family: 'Plus Jakarta Sans', sans-serif; box-shadow: 0 16px 48px #0002; }
+.slide-sheet { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: linear-gradient(135deg, #007222 0%, #005419 100%); color: white; font-family: 'Plus Jakarta Sans', sans-serif; box-shadow: 0 16px 48px #0002; }
 .slide-sheet *, .slide-sheet *::before, .slide-sheet *::after { box-sizing: border-box; }
 .slide-brand { display: block; width: 8cqw; height: 4.6cqw; object-fit: contain; background: white; padding: .75cqw 1cqw; border-radius: 0; flex-shrink: 0; }
 .slide-heading { position: absolute; top: 4.8%; left: 4%; right: 4%; display: flex; justify-content: space-between; gap: 3cqw; align-items: flex-start; }
@@ -644,6 +674,14 @@ const provisionGrowth = computed(() => {
 .slide-heading h1 { margin: 0; color: white; font-size: 2.75cqw; line-height: 1.2; letter-spacing: -.09cqw; font-weight: 750; }
 .slide-evidence-layout { position: absolute; top: 25%; left: 4%; right: 4%; bottom: 10%; display: grid; grid-template-columns: 1.65fr 1fr; gap: 3cqw; align-items: stretch; }
 .slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
+.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: 1.4cqw; gap: 1.4cqw; }
+.slide-story-chart { margin: 0; padding-top: 1.3cqw; border-top: 1px solid #dce8df; }
+.slide-story-chart figcaption { font-size: .94cqw; color: #173d25; font-weight: 650; margin-bottom: 1cqw; line-height: 1.4; }
+.slide-chart-formula { color: #526a59; font-size: .76cqw; line-height: 1.5; margin: .7cqw 0 0; overflow-wrap: anywhere; }
+.slide-loss-row { display: grid; grid-template-columns: 3.2cqw 1fr 5cqw; align-items: center; gap: .8cqw; margin-top: .8cqw; font-size: .95cqw; }
+.slide-loss-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+.slide-loss-row .slide-provision-track { height: 1cqw; }
+.slide-range-chart svg { display: block; width: 100%; height: auto; }
 .slide-evidence.slide-evidence-peer { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 1cqw; padding: 1.2cqw; }
 .slide-evidence-peer .slide-financial-table { font-size: .86cqw; line-height: 1.3; }
 .slide-evidence-peer .slide-financial-table th { font-size: .8cqw; padding: .6cqw; }
@@ -702,6 +740,19 @@ const provisionGrowth = computed(() => {
 .slide-point-copy { min-width: 0; flex: 1; }
 .slide-analysis-point h2 { color: #fff; font-size: 1.18cqw; line-height: 1.35; margin: 0 0 .6cqw; font-weight: 750; }
 .slide-analysis-point p { color: #e7f5ea; font-size: 1.02cqw; line-height: 1.55; margin: 0; }
+.slide-business-layout { grid-template-columns: 1.35fr 1fr; gap: 2cqw; }
+.slide-analysis-panel { background: transparent; color: #ffffff; padding: 1.3cqw; gap: .75cqw; }
+.slide-analysis-panel .slide-analysis-point { min-width: 0; border-radius: 0; }
+.slide-analysis-panel .slide-analysis-point + .slide-analysis-point { border-color: #ffffff35; padding-top: .8cqw; }
+.slide-analysis-panel .slide-analysis-point.has-point-icon { display: grid; grid-template-columns: 2.4cqw minmax(0, 1fr); column-gap: .75cqw; row-gap: .5cqw; align-items: center; }
+.slide-analysis-panel .has-point-icon .slide-point-copy { display: contents; }
+.slide-analysis-panel .slide-point-icon { grid-column: 1; grid-row: 1; width: 2.4cqw; height: 2.4cqw; box-shadow: none; border-color: #d5e3d9; border-radius: .3cqw; }
+.slide-analysis-panel .has-point-icon h2 { grid-column: 2; grid-row: 1; margin: 0; }
+.slide-analysis-panel .has-point-icon p { grid-column: 1 / -1; }
+.slide-analysis-panel .slide-analysis-point h2 { color: #ffffff; font-size: 1.2cqw; font-weight: 750; }
+.slide-analysis-panel .slide-analysis-point p { color: #f1f8f3; font-size: 1.1cqw; line-height: 1.5; font-weight: 450; }
+.slide-analysis-panel .slide-analysis-point.is-clickable-claim:hover { background: #ffffff0a; padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0; }
+.slide-analysis-panel .slide-analysis-point:focus-visible { outline-color: #b9efca; }
 .slide-forces-table { width: 100%; border-collapse: collapse; font-size: .96cqw; line-height: 1.36; }
 .slide-forces-table th { text-align: left; color: #008c2c; padding: .55cqw .75cqw; border-bottom: 2px solid #008c2c; font-size: .88cqw; }
 .slide-forces-table td { padding: .68cqw .75cqw; border-bottom: 1px solid #dce8df; }
@@ -753,6 +804,7 @@ const provisionGrowth = computed(() => {
 .slide-cover-user > p { font-size: 1.18cqw; line-height: 1.5; margin: .6cqw 0 0; max-width: 27cqw; }
 .slide-cover-verdict { padding: 1.4cqw 0 0; border: 0; border-top: 1px solid rgba(255, 255, 255, .28); border-radius: 0; background: transparent; }
 .slide-cover-verdict > strong { display: block; font-size: 2.55cqw; line-height: 1.18; margin-top: .85cqw; letter-spacing: -.08cqw; color: #ffffff; }
+.slide-cover-verdict > strong.slide-cover-investor-question { font-size: 2.05cqw; line-height: 1.25; }
 .slide-cover-verdict p { font-size: 1.05cqw; line-height: 1.5; margin: .6cqw 0 0; color: #e7f5ea; max-width: 27cqw; }
 .slide-cover-reason { border-top: 1px solid rgba(255, 255, 255, .28); padding-top: 1.4cqw; }
 .slide-cover-reason p { font-size: 1.05cqw; line-height: 1.6; margin: .6cqw 0 .65cqw; }

@@ -48,15 +48,24 @@ forecast = [[c.text for c in r.cells] for r in Document(M4).tables[3].rows]
 for lang in ['en','id']:
     path = DATA / f"presentation_deck{'_id' if lang == 'id' else ''}.json"
     deck = json.loads(path.read_text())
-    check(len(deck) == 14, f'{lang}: total slide count')
-    check(len([s for s in deck if not s['is_appendix']]) == 11, f'{lang}: main slide count')
-    check(sum(float(s['time_budget'].split()[0].replace(',','.')) for s in deck[:11]) == 20, f'{lang}: time budget')
+    by_topic = {slide['topic_id']:slide for slide in deck}
+    check(len(deck) == 12, f'{lang}: total slide count')
+    check(all('speaker' not in slide for slide in deck), f'{lang}: no speaker allocation')
+    check(all(not s['is_appendix'] for s in deck), f'{lang}: no appendix slides')
+    check(sum(float(s['time_budget'].split()[0].replace(',','.')) for s in deck) == 20, f'{lang}: time budget')
+    for slide in deck:
+        check(len(slide['study_explanation']) > 120, f'{lang}: sidebar explanation for {slide["topic_id"]}')
+        check(len(slide['analysis_points']) == 3, f'{lang}: explanation sequence for {slide["topic_id"]}')
+        if slide['topic_id'] != 'decision':
+            import re
+            text = ' '.join([slide['title'],slide['study_explanation'],slide['speaker_notes']]+[p['text'] for p in slide['analysis_points']])
+            check(not re.search(r'\bSELL\b|\bAVOID\b|JUAL / HINDARI',text,re.I), f'{lang}: recommendation not revealed on slide {slide["slide_num"]}')
     for slide in deck:
         check(bool(slide['assignment_evidence']), f'{lang}: source references for slide {slide["slide_num"]}')
         for source in slide['assignment_evidence']:
             check((ROOT/source['path']).is_file(), f'{lang}: source exists: {source["path"]}')
-    check(math.isclose(deck[3]['z_score_schedule']['result'],m2['Ratio Analysis']['C36'].value), f'{lang}: Z-score source match')
-    peer = deck[8]['peer_revision']
+    check(math.isclose(by_topic['liquidity']['z_score_schedule']['result'],m2['Ratio Analysis']['C36'].value), f'{lang}: Z-score source match')
+    peer = by_topic['relative']['peer_revision']
     check(peer['retained'] == ['GRAB'], f'{lang}: Grab is the sole comparable')
     check(set(peer['excluded']) == {'SE','BUKA','BELI'}, f'{lang}: exclusions recorded')
     check(peer['grab_price_usd'] == 4.99 and peer['price_date'] == '2025-12-31', f'{lang}: dated price')
@@ -67,12 +76,19 @@ for lang in ['en','id']:
     check(math.isclose(peer['goto_normalized_bvps'], expected_bvps), f'{lang}: parent-equity normalization')
     check(math.isclose(peer['benchmark_value_per_share'],expected_pb*expected_bvps), f'{lang}: benchmark recomputation')
     check(peer['pe_used'] is False and peer['ev_ebitda_used'] is False, f'{lang}: invalid denominators excluded')
-    check(len(deck[8]['peer_exclusions']) == 3, f'{lang}: visible exclusion reasons')
+    check(len(by_topic['relative']['peer_exclusions_backup']) == 3, f'{lang}: sidebar exclusion reasons')
     check('blend_value_per_share' not in peer and 'median_pb' not in peer, f'{lang}: no invented peer median')
-    check(deck[5]['table']['rows'][0][2:] == forecast[1][1:], f'{lang}: forecast revenue source match')
-    table = str(deck[7]['table']['rows'])
+    check(by_topic['forecast_results']['table']['rows'][0][2:] == forecast[1][1:], f'{lang}: forecast revenue source match')
+    table = str(by_topic['intrinsic']['supporting_schedules'])
     for number in [f'{-pvcf:,.1f}',f'{-pvtv:,.1f}',f'{-pvri:,.1f}',f'{-pvrit:,.1f}']:
         check(number in table, f'{lang}: valuation breakdown {number}')
+    complete_forecast = by_topic['forecast_results']['supporting_schedules']
+    check(len(complete_forecast) >= 3, f'{lang}: all three projected statements in sidebar')
+    for idx, source_idx in enumerate([3,5,6]):
+        source = [[c.text for c in r.cells] for r in Document(M4).tables[source_idx].rows]
+        check([complete_forecast[idx]['headers']]+complete_forecast[idx]['rows'] == source, f'{lang}: linked projected statement {idx+1} matches submitted milestone')
+    check(bool(by_topic['profitability'].get('loss_chart')), f'{lang}: financial analysis chart')
+    check(len(by_topic['relative']['valuation_range']) == 3, f'{lang}: valuation comparison chart')
     for old in ['15,826.5','123,678.0','92,655.4','5,969.2','19,207','30,360','4,232','9,700','8,493']:
         check(old not in path.read_text(), f'{lang}: stale value {old}')
 # Revised assignment files and study guides must reconcile to the same source inputs.
