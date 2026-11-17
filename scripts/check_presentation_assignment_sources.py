@@ -49,14 +49,16 @@ for lang in ['en','id']:
     path = DATA / f"presentation_deck{'_id' if lang == 'id' else ''}.json"
     deck = json.loads(path.read_text())
     by_topic = {slide['topic_id']:slide for slide in deck}
-    check(len(deck) == 12, f'{lang}: total slide count')
+    main_slides = [s for s in deck if not s['is_appendix']]
+    apx_slides = [s for s in deck if s['is_appendix']]
+    check(len(main_slides) == 12, f'{lang}: 12 main slides')
+    check(len(apx_slides) == 6, f'{lang}: 6 appendix slides')
     check(all('speaker' not in slide for slide in deck), f'{lang}: no speaker allocation')
-    check(all(not s['is_appendix'] for s in deck), f'{lang}: no appendix slides')
-    check(sum(float(s['time_budget'].split()[0].replace(',','.')) for s in deck) == 20, f'{lang}: time budget')
+    check(sum(float(s['time_budget'].split()[0].replace(',','.')) for s in main_slides) == 20, f'{lang}: time budget')
     for slide in deck:
         check(len(slide['study_explanation']) > 120, f'{lang}: sidebar explanation for {slide["topic_id"]}')
         check(len(slide['analysis_points']) == 3, f'{lang}: explanation sequence for {slide["topic_id"]}')
-        if slide['topic_id'] != 'decision':
+        if not slide['is_appendix'] and slide['topic_id'] != 'decision':
             import re
             text = ' '.join([slide['title'],slide['study_explanation'],slide['speaker_notes']]+[p['text'] for p in slide['analysis_points']])
             check(not re.search(r'\bSELL\b|\bAVOID\b|JUAL / HINDARI',text,re.I), f'{lang}: recommendation not revealed on slide {slide["slide_num"]}')

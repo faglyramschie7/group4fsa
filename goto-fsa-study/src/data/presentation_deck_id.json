@@ -126,7 +126,7 @@
         "location": "Company overview"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 1,
     "topic_id": "opening",
     "story_rebuilt": true,
@@ -220,7 +220,7 @@
       {
         "heading": "Pendapatan",
         "text": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": [
           "12,361.259 + 5,190.617 + 819.724 − 49.483 = 18,322.117",
@@ -231,14 +231,14 @@
       {
         "heading": "Kegiatan Usaha",
         "text": "Gojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       },
       {
         "heading": "Imbalan Jasa Tokopedia",
         "text": "GoTo mencatat sekitar Rp820 miliar pendapatan imbalan jasa dari Tokopedia pada 2025. GoTo memiliki 24,99% saham Tokopedia.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       }
@@ -291,14 +291,14 @@
         "location": "Task 2, segment revenue table"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 2,
     "topic_id": "business",
     "story_rebuilt": true,
     "hide_banner": true,
     "display_title": "Model Bisnis",
     "display_takeaway": "",
-    "study_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+    "study_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
     "supporting_schedules": [
       {
         "title": "Revenue bridge to consolidated GoTo revenue",
@@ -347,7 +347,7 @@
         "value": "Rp12,361bn",
         "img": "/visuals/row_gojek.png",
         "text": "Transportasi, makanan dan pengantaran",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "Gojek",
@@ -359,7 +359,7 @@
         "value": "Rp5,191bn",
         "img": "/visuals/row_gofinancial.png",
         "text": "Pembayaran dan pinjaman konsumen",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "GoTo Financial",
@@ -368,14 +368,14 @@
       },
       {
         "name": "Tokopedia",
-        "value": "24.99%",
+        "value": "Rp820bn",
         "img": "/visuals/row_tokopedia.png",
-        "text": "Saham tersisa; imbalan jasa sekitar Rp820 miliar",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat imbalan jasa bagi GoTo, bukan seluruh penjualan Tokopedia. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "text": "Saham tersisa (24,99%); imbalan jasa e-commerce",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "Tokopedia",
-          "24.99%"
+          "Rp820bn"
         ]
       }
     ],
@@ -571,7 +571,7 @@
         "location": "4.3 Financial Technology Expansion Risk"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 3,
     "topic_id": "industry",
     "story_rebuilt": true,
@@ -858,7 +858,7 @@
         "location": "Ratio table, interest coverage"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 4,
     "topic_id": "profitability",
     "story_rebuilt": true,
@@ -1509,7 +1509,7 @@
         "location": "Ratio table, interest coverage"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 4,
     "topic_id": "liquidity",
     "story_rebuilt": true,
@@ -1578,6 +1578,11 @@
         "value": "2.73x",
         "text": "Current assets / current liabilities",
         "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "formula": "Current assets / Current liabilities",
+        "calc_steps": [
+          "29,059,226 / 10,647,524 ≈ 2.73x",
+          "Input saldo akhir FY2025 dalam Rp juta (Milestone 2 Historical Data FY2025 & Ratio Analysis)."
+        ],
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "highlight_terms": [
           "Current ratio",
@@ -1589,6 +1594,11 @@
         "value": "−0.71x",
         "text": "Operating earnings do not cover interest",
         "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "formula": "EBIT / Interest expense",
+        "calc_steps": [
+          "−378,254 / 535,152 ≈ −0.71x",
+          "EBIT (Rugi Usaha −Rp378.254 juta) dan Beban Bunga/Keuangan (Rp535.152 juta) dalam Rp juta dari Milestone 2 Historical Data FY2025 & LK GoTo FY2025."
+        ],
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "highlight_terms": [
           "Interest coverage",
@@ -1600,6 +1610,11 @@
         "value": "−4.72",
         "text": "Screening signal; not proof of immediate default",
         "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5",
+        "calc_steps": [
+          "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(−378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
+          "Lembar kerja Minggu 6 memakai book equity / total liabilities untuk X4. Seluruh input dalam Rp juta."
+        ],
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "highlight_terms": [
           "Week 6 Z-score",
@@ -1760,11 +1775,56 @@
         "result_numeric": -47.541072403953784
       },
       {
+        "label": "Z-Score X1 (Modal Kerja / Total Aset)",
+        "formula": "B4 / Total Assets  (Working Capital / Total Assets)",
+        "substitution": "18,411,702 / 45,757,642 = 0.402374",
+        "result": "0.402374",
+        "note": "Mengukur likuiditas jangka pendek terhadap total aset. Kontribusi ke Z: 1.2 × 0.402374 = +0.482849.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 0.402374361860692
+      },
+      {
+        "label": "Z-Score X2 (Saldo Laba / Total Aset)",
+        "formula": "Retained Earnings (Accumulated Losses) / Total Assets",
+        "substitution": "−215,334,000 / 45,757,642 = −4.705968",
+        "result": "−4.705968",
+        "note": "Mengukur profitabilitas kumulatif. Kontribusi ke Z: 1.4 × (−4.705968) = −6.588355.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": -4.705968021691327
+      },
+      {
+        "label": "Z-Score X3 (EBIT / Total Aset)",
+        "formula": "EBIT / Total Assets",
+        "substitution": "−378,254 / 45,757,642 = −0.008266",
+        "result": "−0.008266",
+        "note": "Mengukur profitabilitas operasi terhadap aset. Kontribusi ke Z: 3.3 × (−0.008266) = −0.027279.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": -0.00826646617848009
+      },
+      {
+        "label": "Z-Score X4 (Ekuitas / Total Liabilitas)",
+        "formula": "Book Equity / Total Liabilities",
+        "substitution": "28,711,657 / 17,045,985 = 1.684365",
+        "result": "1.684365",
+        "note": "Lembar kerja Minggu 6 memakai ekuitas buku / total liabilitas sebagai proksi X4. Kontribusi ke Z: 0.6 × 1.684365 = +1.010619.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 1.68436479323429
+      },
+      {
+        "label": "Z-Score X5 (Pendapatan / Total Aset)",
+        "formula": "Revenue / Total Assets",
+        "substitution": "18,322,117 / 45,757,642 = 0.400417",
+        "result": "0.400417",
+        "note": "Mengukur perputaran aset. Kontribusi ke Z: 1.0 × 0.400417 = +0.400417.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 0.400416546814213
+      },
+      {
         "label": "Week 6 Z-Score",
-        "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5",
-        "substitution": "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
+        "formula": "1.2×B12 + 1.4×B13 + 3.3×B14 + 0.6×B15 + B16",
+        "substitution": "1.2×(0.402374) + 1.4×(−4.705968) + 3.3×(−0.008266) + 0.6×(1.684365) + 0.400417 = −4.721750",
         "result": "−4.721750",
-        "note": "The completed Week 6 worksheet uses book equity / total liabilities for X4. All balance inputs are in Rp million.",
+        "note": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5 memakai sel B12:B16. Rasio tidak dibulatkan digunakan; seluruh input neraca dalam Rp juta.",
         "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
         "result_numeric": -4.7217499117692405
       }
@@ -1986,7 +2046,7 @@
         "location": "Calculations!D59:D63"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 5,
     "topic_id": "accounting",
     "story_rebuilt": true,
@@ -2343,7 +2403,7 @@
         "location": "Breakeven table"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 6,
     "topic_id": "forecast_drivers",
     "story_rebuilt": true,
@@ -2762,7 +2822,7 @@
         "location": "Breakeven table"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 6,
     "topic_id": "forecast_results",
     "story_rebuilt": true,
@@ -3517,7 +3577,7 @@
         "location": "Cost of Capital!B13:B15"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 7,
     "topic_id": "wacc",
     "story_rebuilt": true,
@@ -3864,7 +3924,7 @@
         "location": "Terminal Growth!B23:B25"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "layout_slide": 8,
     "topic_id": "intrinsic",
     "story_rebuilt": true,
@@ -4349,14 +4409,14 @@
       {
         "heading": "Pemilihan Pembanding",
         "text": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.",
-        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan perusahaan lain pada ekuitas historis. Rata-rata akan mencampur asumsi tersebut.",
+        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan aktual FY2025 perusahaan lain pada ekuitas induk aktual FY2025 GoTo sebagai cross-check berbasis sama, tanpa mencampurkan kelipatan historis ke angka proyeksi. Rata-rata akan mencampur asumsi tersebut.",
         "data_origin": "Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.",
         "calc_steps": []
       },
       {
         "heading": "P/B Grab",
         "text": "P/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.",
-        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan perusahaan lain pada ekuitas historis. Rata-rata akan mencampur asumsi tersebut.",
+        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan aktual FY2025 perusahaan lain pada ekuitas induk aktual FY2025 GoTo sebagai cross-check berbasis sama, tanpa mencampurkan kelipatan historis ke angka proyeksi. Rata-rata akan mencampur asumsi tersebut.",
         "data_origin": "Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.",
         "calc_steps": [
           "3.039128556 × Rp29.94794682 = Rp91.015660",
@@ -4367,7 +4427,7 @@
       {
         "heading": "Perbedaan Valuasi",
         "text": "DCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan perusahaan lain pada ekuitas historis. Rata-rata akan mencampur asumsi tersebut.",
-        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan perusahaan lain pada ekuitas historis. Rata-rata akan mencampur asumsi tersebut.",
+        "detail_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan aktual FY2025 perusahaan lain pada ekuitas induk aktual FY2025 GoTo sebagai cross-check berbasis sama, tanpa mencampurkan kelipatan historis ke angka proyeksi. Rata-rata akan mencampur asumsi tersebut.",
         "data_origin": "Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.",
         "calc_steps": []
       }
@@ -4421,7 +4481,7 @@
         "location": "Cover, PDF p.2; balance sheet PDF p.149 (F-5)"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "peer_revision": {
       "retained": [
         "GRAB"
@@ -4486,7 +4546,7 @@
     "hide_banner": true,
     "display_title": "Perbandingan Grab dan Valuasi",
     "display_takeaway": "",
-    "study_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan perusahaan lain pada ekuitas historis. Rata-rata akan mencampur asumsi tersebut.",
+    "study_explanation": "Transportasi, pengantaran dan jasa keuangan Grab paling dekat. Sea, BUKA dan BELI memiliki bauran bisnis berbeda.\n\nP/B Grab 3,0391x × BVPS induk GoTo Rp29,9479 = sekitar Rp91. Ini menerapkan kelipatan pasar Grab pada ekuitas tercatat GoTo.\n\nDCF dan RI memasukkan rugi proyeksi. P/B menerapkan kelipatan aktual FY2025 perusahaan lain pada ekuitas induk aktual FY2025 GoTo sebagai cross-check berbasis sama, tanpa mencampurkan kelipatan historis ke angka proyeksi. Rata-rata akan mencampur asumsi tersebut.",
     "supporting_schedules": [
       {
         "title": "Perhitungan pembanding Grab",
@@ -4842,7 +4902,7 @@
         "location": "Section (g), recommendation"
       }
     ],
-    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules are in the sidebar, not appendix slides.",
+    "source_policy": "Submitted assignments control the deck. Use later assignments when they explicitly revise earlier work. Preserve milestone assumptions and the user-directed Week 6 Z-score correction. Lecture examples explain the method and do not override assignment results. Latest user revision: Grab-only externally checked comparator; parent-equity normalization applies only to relative valuation. Latest presentation revision: short-term investor; no final recommendation until slide 12. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "target_user_revision": {
       "horizon": "short-term",
       "authority": "Latest explicit user preference",
@@ -4898,5 +4958,3377 @@
       "specific implication"
     ],
     "calculation_notes": []
+  },
+  {
+    "slide_num": 13,
+    "is_appendix": true,
+    "layout_slide": 13,
+    "topic_id": "appendix_a1",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Strategy & industry",
+    "section_name": "Appendix — Strategy & industry",
+    "title": "Lampiran A1: Jembatan Pendapatan & Jadwal Risiko Persaingan",
+    "display_title": "Lampiran A1: Jembatan Pendapatan & Jadwal Risiko Persaingan",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "Revenue bridge to consolidated GoTo revenue",
+      "headers": [
+        "Step",
+        "Rp bn",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Gojek third-party net revenue",
+          "12,361.259",
+          "Rides, food and delivery"
+        ],
+        [
+          "GoTo Financial third-party net revenue",
+          "5,190.617",
+          "Payments and lending"
+        ],
+        [
+          "Tokopedia service fee",
+          "819.724",
+          "A fee, not ownership of all Tokopedia sales"
+        ],
+        [
+          "Three lines before adjustments",
+          "18,371.600",
+          "Sum of the three revenue lines"
+        ],
+        [
+          "Adjustments and eliminations",
+          "(49.483)",
+          "Group-level adjustments and eliminations"
+        ],
+        [
+          "Consolidated net revenue",
+          "18,322.117",
+          "Group total; rounding explains small display differences"
+        ]
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "Catatan 35 Eksposur Kredit GoPay & Lima Kekuatan Porter (FY2024–FY2025)",
+        "headers": [
+          "Item / Kekuatan",
+          "2024 / Penilaian",
+          "2025 / Bukti",
+          "Catatan Sumber"
+        ],
+        "rows": [
+          [
+            "Piutang Pembiayaan & Pinjaman Bersih",
+            "Rp 1.582 M",
+            "Rp 2.731 M (+72,6%)",
+            "LK GOTO FY2025 Catatan 35"
+          ],
+          [
+            "Cadangan Kerugian Penurunan Nilai (ECL)",
+            "Rp 173,552 M (~174 M)",
+            "Rp 407,684 M (~408 M, +134,9%)",
+            "Milestone 1 §4.3; LK Catatan 35"
+          ],
+          [
+            "Pemasaran & Pengembangan Produk",
+            "—",
+            "S&M Rp 3,09T | R&D Rp 2,15T",
+            "LK GOTO FY2025 Laba Rugi"
+          ],
+          [
+            "Ancaman Pendatang Baru",
+            "Rendah–Sedang",
+            "Skala jaringan & izin BI/OJK",
+            "Milestone 1 Matriks Five Forces"
+          ],
+          [
+            "Daya Tawar Pemasok / Pembeli / Substitusi",
+            "Pemasok R | Pembeli S | Sub S",
+            "Biaya pindah hampir nol",
+            "Milestone 1 Matriks Five Forces"
+          ],
+          [
+            "Rivalitas Persaingan",
+            "Tinggi",
+            "Grab, Maxim, inDrive, ShopeeFood",
+            "Milestone 1 Matriks Five Forces"
+          ]
+        ],
+        "note": "Sumber: Milestone 1 §4.3, Final Report §b, dan LK GOTO FY2025 Catatan 35."
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Pendapatan",
+        "text": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
+        "calc_steps": [
+          "12,361.259 + 5,190.617 + 819.724 − 49.483 = 18,322.117",
+          "Inputs in Rp billion."
+        ],
+        "formula": "Gojek + GoTo Financial + Tokopedia fees − Adjustments"
+      },
+      {
+        "heading": "Kegiatan Usaha",
+        "text": "Gojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
+        "calc_steps": []
+      },
+      {
+        "heading": "Imbalan Jasa Tokopedia",
+        "text": "GoTo mencatat sekitar Rp820 miliar pendapatan imbalan jasa dari Tokopedia pada 2025. GoTo memiliki 24,99% saham Tokopedia.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
+        "calc_steps": []
+      }
+    ],
+    "study_explanation": "Lampiran ini menyajikan jembatan lengkap pendapatan segmen ke total konsolidasian (Gojek Rp12.361,259 M + GoTo Financial Rp5.190,617 M + imbalan jasa e-commerce kontraktual Tokopedia Rp819,724 M − eliminasi Rp49,483 M = Rp18.322,117 M) bersama matriks Five Forces dan eksposur kredit Catatan 35.",
+    "speaker_notes": "Pendapatan: Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nKegiatan Usaha: Gojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nImbalan Jasa Tokopedia: GoTo mencatat sekitar Rp820 miliar pendapatan imbalan jasa dari Tokopedia pada 2025. GoTo memiliki 24,99% saham Tokopedia.",
+    "source_footer": "LK GOTO FY2025 Note 14, Note 29, Note 35; Milestone 1 §4.3; Final Report §(a)–(b)",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "Consolidated Revenue",
+        "formula": "Gojek + GoTo Financial + Tokopedia fees − Adjustments",
+        "substitution": "12,361.259 + 5,190.617 + 819.724 − 49.483 = 18,322.117",
+        "result": "Rp18,322.117bn",
+        "note": "Inputs in Rp billion.",
+        "source": "FY2025 Note 29 segment reconciliation; Assignment 15",
+        "result_numeric": 18322.117
+      },
+      {
+        "label": "Provision Growth",
+        "formula": "(2025 provision − 2024 provision) / 2024 provision × 100%",
+        "substitution": "(408 − 174) / 174 × 100% = 134.48% ≈ 134%",
+        "result": "134% rounded",
+        "note": "Inputs are the displayed rounded Rp-billion assignment figures. This is provision growth, not a default rate.",
+        "source": "Assignment 15: business and lending risk",
+        "result_numeric": 1.3448275862068966
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "Five Forces and strategy",
+        "value": "Low–moderate / Low / Medium / Medium / High; mixed strategy",
+        "file": "Group4_Milestone1_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 3/Group4_Milestone1_GOTO.docx",
+        "location": "Five Forces & competitive position"
+      },
+      {
+        "metric": "Segment revenue 2025 (Rp bn)",
+        "value": "12,361.259 / 5,190.617 / 819.724; eliminations −49.483",
+        "file": "Group4_FSA_Week12_DOL_Segment_Completed.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 11/Group4_FSA_Week12_DOL_Segment_Completed.docx",
+        "location": "Task 2, segment revenue table"
+      },
+      {
+        "metric": "Five Forces ratings",
+        "value": "New entrants L–M; suppliers L; buyers M; substitutes M; rivalry H",
+        "file": "Group4_Milestone1_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 3/Group4_Milestone1_GOTO.docx",
+        "location": "Five Forces matrix"
+      },
+      {
+        "metric": "Credit provision",
+        "value": "Rp 173.552 bn to Rp 407.684 bn",
+        "file": "Group4_Milestone1_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 3/Group4_Milestone1_GOTO.docx",
+        "location": "4.3 Financial Technology Expansion Risk"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 19,
+        "mapping_note": "Why Strategy Analysis Comes First",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 27,
+        "mapping_note": "Cost Leadership vs. Differentiation",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week10",
+        "week_label": "Week 10",
+        "slide_num": 13,
+        "mapping_note": "Passive Investments (<20%), Significant Influence (20-50%), Control (>50%)",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week10",
+        "week_label": "Week 10",
+        "slide_num": 14,
+        "mapping_note": "Single-Line Accounting: Initial Cost + Share of Profit - Dividends Received",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 16,
+        "mapping_note": "Concentration of Growth, Cross-Subsidization & Structural Reorganizations",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 20,
+        "mapping_note": "Porter's Five Forces",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 21,
+        "mapping_note": "Threat of New Entrants",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 22,
+        "mapping_note": "Bargaining Power of Suppliers",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 23,
+        "mapping_note": "Bargaining Power of Buyers",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 24,
+        "mapping_note": "Threat of Substitutes",
+        "trace_role": "Strategi & industri"
+      },
+      {
+        "week_id": "week2",
+        "week_label": "Week 2",
+        "slide_num": 25,
+        "mapping_note": "Competitive Rivalry",
+        "trace_role": "Strategi & industri"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "m1",
+        "assignment_code": "Milestone 1 (Week 2)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Company & Segments",
+        "mapping_note": "Business model split across Gojek ODS, FinTech, and 24.99% Tokopedia stake.",
+        "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+        "evidence_caption": "Segment Revenue Bridge",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Assignment 15 (Final Report)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Section (b.1)",
+        "mapping_note": "Post-Tokopedia deconsolidation segment revenue figures.",
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Note 14 Associates",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "m1",
+        "assignment_code": "Milestone 1 (Week 2)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Five Forces Matrix",
+        "mapping_note": "High rivalry/buyer power rating & credit risk assessment.",
+        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+        "evidence_caption": "Promo & R&D Expense Line Items",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Assignment 15 (Final Report)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Section (b.2)-(b.3)",
+        "mapping_note": "Porter matrix and Rp 3.09T marketing / Rp 408 bn credit provision.",
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Loan Receivables Footnote",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
+  },
+  {
+    "slide_num": 14,
+    "is_appendix": true,
+    "layout_slide": 14,
+    "topic_id": "appendix_a2",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Financial analysis",
+    "section_name": "Appendix — Financial analysis",
+    "title": "Lampiran A2: Ringkasan Historis & Pro Forma (FY2023–2028F) & DuPont",
+    "display_title": "Lampiran A2: Ringkasan Historis & Pro Forma (FY2023–2028F) & DuPont",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "Consolidated Historical & Pro Forma Financial Summary (Rp billion)",
+      "headers": [
+        "Line Item (Rp billion)",
+        "2023A",
+        "2024A",
+        "2025A",
+        "2026F Base",
+        "2027F Base",
+        "2028F Base"
+      ],
+      "rows": [
+        [
+          "Net Revenue",
+          "14,785",
+          "15,894",
+          "18,322",
+          "20,408",
+          "22,732",
+          "25,321"
+        ],
+        [
+          "Gross Profit",
+          "9,692",
+          "8,481",
+          "10,576",
+          "12,016",
+          "13,384",
+          "14,908"
+        ],
+        [
+          "Gross Margin (%)",
+          "65.6%",
+          "53.4%",
+          "57.7%",
+          "58.9%",
+          "58.9%",
+          "58.9%"
+        ],
+        [
+          "EBIT / (Operating Loss)",
+          "(10,279)",
+          "(2,241)",
+          "(378)",
+          "(4,003.4)",
+          "(4,459.4)",
+          "(4,967.4)"
+        ],
+        [
+          "Net Income / (Loss)",
+          "(90,519)",
+          "(5,465)",
+          "(1,502)",
+          "(3,737.0)",
+          "(4,092.7)",
+          "(4,488.9)"
+        ],
+        [
+          "Cash Flow from Operations (CFO)",
+          "(4,325)",
+          "(622)",
+          "+307",
+          "(4,143)",
+          "(2,930)",
+          "(2,542)"
+        ],
+        [
+          "Cash Capex (Fixed + Intangibles)",
+          "(220)",
+          "(6,519)",
+          "(1,182)",
+          "(3,329.8)",
+          "(3,709.1)",
+          "(4,131.6)"
+        ],
+        [
+          "FCF historis / FCFF proyeksi Tugas 14",
+          "(4,546)",
+          "(7,141)",
+          "(875)",
+          "(7,738.7)",
+          "(7,006.3)",
+          "(7,152.6)"
+        ],
+        [
+          "Ending Cash & Equivalents",
+          "25,144",
+          "19,178",
+          "21,755",
+          "14,282",
+          "7,642",
+          "968"
+        ],
+        [
+          "Total Interest-Bearing Debt",
+          "3,460",
+          "3,820",
+          "7,743",
+          "7,743",
+          "7,743",
+          "7,743"
+        ],
+        [
+          "Total Shareholders' Equity",
+          "35,720",
+          "30,404",
+          "28,712",
+          "24,975",
+          "20,882",
+          "16,393"
+        ]
+      ],
+      "row_details": [
+        {
+          "detail_explanation": "Net Revenue; 14,785; 15,895; 18,322; 20,408; 22,732; 25,321",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "LK p. 17 & M4 IS",
+          "highlight_terms": [
+            "18,322",
+            "25,321"
+          ],
+          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+          "evidence_caption": "Revenue History"
+        },
+        {
+          "detail_explanation": "Gross Profit; 9,692; 8,481; 10,576; 12,016; 13,384; 14,908",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "LK p. 17 & M4 IS",
+          "highlight_terms": [
+            "10,576",
+            "14,908"
+          ],
+          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+          "evidence_caption": "Gross Profit"
+        },
+        {
+          "detail_explanation": "Gross Margin (%); 65.6%; 53.4%; 57.7%; 58.9%; 58.9%; 58.9%",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "M4 Assumptions",
+          "highlight_terms": [
+            "57.7%",
+            "58.9%"
+          ],
+          "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+          "evidence_caption": "Margin Stability"
+        },
+        {
+          "detail_explanation": "EBIT / (Operating Loss); (10,279); (2,241); (378); (4,003.4); (4,459.4); (4,967.4)",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "M4 IS -> DCF",
+          "highlight_terms": [
+            "378",
+            "4,003.4"
+          ],
+          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+          "evidence_caption": "EBIT Schedule"
+        },
+        {
+          "detail_explanation": "Net Income / (Loss); (90,519); (5,465); (1,502); (3,737.0); (4,092.7); (4,488.9)",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "M4 IS -> RI",
+          "highlight_terms": [
+            "1,502",
+            "3,737.0"
+          ],
+          "evidence_img": "/evidence/goto_income_statement_highlighted.png",
+          "evidence_caption": "Net Loss Schedule"
+        },
+        {
+          "detail_explanation": "Cash Flow from Operations (CFO); (4,325); (622); +307; (4,143); (2,930); (2,542)",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "LK p. 21 & M4 CF",
+          "highlight_terms": [
+            "307",
+            "4,143"
+          ],
+          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+          "evidence_caption": "CFO Bridge"
+        },
+        {
+          "detail_explanation": "Cash Capex (Fixed + Intangibles); (220); (6,519); (1,182); (3,329.8); (3,709.1); (4,131.6)",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "LK p. 21 & DCF",
+          "highlight_terms": [
+            "1,182",
+            "3,329.8"
+          ],
+          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+          "evidence_caption": "Capex Schedule"
+        },
+        {
+          "detail_explanation": "FCF historis / FCFF proyeksi Tugas 14; (4,546); (7,141); (875); (7,738.7); (7,006.3); (7,152.6)",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "DCF!B12:D12",
+          "highlight_terms": [
+            "875",
+            "7,738.7"
+          ],
+          "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+          "evidence_caption": "FCF/FCFF Schedule"
+        },
+        {
+          "detail_explanation": "Ending Cash & Equivalents; 25,144; 19,178; 21,755; 14,282; 7,642; 968",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "M4 BS Row 7",
+          "highlight_terms": [
+            "21,755",
+            "968"
+          ],
+          "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+          "evidence_caption": "Ending Cash"
+        },
+        {
+          "detail_explanation": "Total Interest-Bearing Debt; 3,460; 3,820; 7,743; 7,743; 7,743; 7,743",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "Notes 19-20",
+          "highlight_terms": [
+            "7,743"
+          ],
+          "evidence_img": "/evidence/goto_note20_borrowings_summary.png",
+          "evidence_caption": "Debt Schedule"
+        },
+        {
+          "detail_explanation": "Total Shareholders' Equity; 35,720; 30,404; 28,712; 24,975; 20,882; 16,393",
+          "formula": "",
+          "calc_steps": [],
+          "data_origin": "M4 BS Row 22",
+          "highlight_terms": [
+            "28,712",
+            "16,393"
+          ],
+          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
+          "evidence_caption": "Book Equity"
+        }
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "2025 DuPont",
+        "headers": [
+          "Part",
+          "Value",
+          "Meaning",
+          "Formula / 2025 calculation"
+        ],
+        "rows": [
+          [
+            "Net margin",
+            "−8.2%",
+            "Loss on each rupiah of sales",
+            "Net income / Revenue × 100%\n−1,501,685 / 18,322,117 × 100% ≈ -8.2%"
+          ],
+          [
+            "Asset turnover",
+            "0.40x",
+            "Sales generated per rupiah of assets",
+            "Revenue / Total assets\n18,322,117 / 45,757,642 ≈ 0.40x"
+          ],
+          [
+            "Equity multiplier",
+            "1.59x",
+            "Assets relative to equity",
+            "Total assets / Equity\n45,757,642 / 28,711,657 ≈ 1.59x"
+          ],
+          [
+            "ROE",
+            "−5.2%",
+            "Rugi akuntansi sekitar Rp5,20 per Rp100 ekuitas",
+            "Net margin × Asset turnover × Equity multiplier\n(−1,501,685/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%"
+          ]
+        ]
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Rugi Operasi",
+        "text": "Rugi operasi turun dari Rp10.279 miliar menjadi Rp378 miliar pada 2025. Margin bersih 2025 tetap −8,2%.",
+        "detail_explanation": "Rugi operasi turun dari Rp10.279 miliar menjadi Rp378 miliar pada 2025. Margin bersih 2025 tetap −8,2%.\n\nDuPont menghasilkan sekitar −8,2% margin × 0,40x perputaran aset × 1,59x pengganda ekuitas = −5,2% ROE.\n\nRugi bersih 2025 sekitar Rp1.502 miliar setelah bunga, pajak dan pos lain. Rugi operasi yang lebih kecil belum menjadi laba bersih positif.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "18,322,117 − 7,746,034 − 10,954,337 = −378,254",
+          "FY2025 reported income-statement values."
+        ],
+        "formula": "Revenue − COGS − Operating expenses"
+      },
+      {
+        "heading": "ROE DuPont",
+        "text": "DuPont menghasilkan sekitar −8,2% margin × 0,40x perputaran aset × 1,59x pengganda ekuitas = −5,2% ROE.",
+        "detail_explanation": "Rugi operasi turun dari Rp10.279 miliar menjadi Rp378 miliar pada 2025. Margin bersih 2025 tetap −8,2%.\n\nDuPont menghasilkan sekitar −8,2% margin × 0,40x perputaran aset × 1,59x pengganda ekuitas = −5,2% ROE.\n\nRugi bersih 2025 sekitar Rp1.502 miliar setelah bunga, pajak dan pos lain. Rugi operasi yang lebih kecil belum menjadi laba bersih positif.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "(−1,501,685/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%",
+          "Rounded slide factors: −8.2% × 0.40 × 1.59 ≈ −5.2%. The exact product uses unrounded ratios."
+        ],
+        "formula": "Net margin × Asset turnover × Equity multiplier"
+      },
+      {
+        "heading": "Rugi Bersih",
+        "text": "Rugi bersih 2025 sekitar Rp1.502 miliar setelah bunga, pajak dan pos lain. Rugi operasi yang lebih kecil belum menjadi laba bersih positif.",
+        "detail_explanation": "Rugi operasi turun dari Rp10.279 miliar menjadi Rp378 miliar pada 2025. Margin bersih 2025 tetap −8,2%.\n\nDuPont menghasilkan sekitar −8,2% margin × 0,40x perputaran aset × 1,59x pengganda ekuitas = −5,2% ROE.\n\nRugi bersih 2025 sekitar Rp1.502 miliar setelah bunga, pajak dan pos lain. Rugi operasi yang lebih kecil belum menjadi laba bersih positif.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "−1,501,685 / 18,322,117 × 100% ≈ -8.2%",
+          "FY2025 closing-balance inputs in Rp million. Displayed results are rounded."
+        ],
+        "formula": "Net income / Revenue × 100%"
+      }
+    ],
+    "study_explanation": "Lampiran ini menampilkan ringkasan kinerja historis FY2023–FY2025 serta proyeksi basis 2026F–2028F (pendapatan, laba kotor, EBIT, laba bersih, total aset, ekuitas, arus kas operasi, capex, dan FCF) serta dekomposisi DuPont 3-langkah dan 5-langkah FY2025 (margin bersih −8,2%, perputaran aset 0,40x, pengganda ekuitas 1,59x, ROE −5,23%).",
+    "speaker_notes": "Rugi Operasi: Rugi operasi turun dari Rp10.279 miliar menjadi Rp378 miliar pada 2025. Margin bersih 2025 tetap −8,2%.\n\nROE DuPont: DuPont menghasilkan sekitar −8,2% margin × 0,40x perputaran aset × 1,59x pengganda ekuitas = −5,2% ROE.\n\nRugi Bersih: Rugi bersih 2025 sekitar Rp1.502 miliar setelah bunga, pajak dan pos lain. Rugi operasi yang lebih kecil belum menjadi laba bersih positif.",
+    "source_footer": "LK GOTO FY2025; Milestone 2 Ratio/DuPont; Milestone 4 Base Pro Forma",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "Operating Profit / Loss",
+        "formula": "Revenue − COGS − Operating expenses",
+        "substitution": "18,322,117 − 7,746,034 − 10,954,337 = −378,254",
+        "result": "−378,254 Rp million",
+        "note": "FY2025 reported income-statement values.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -378254
+      },
+      {
+        "label": "Gross Margin",
+        "formula": "Gross profit / Revenue × 100%",
+        "substitution": "10,576,083 / 18,322,117 × 100% ≈ 57.7%",
+        "result": "57.7%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 0.577230404106687
+      },
+      {
+        "label": "Operating Margin",
+        "formula": "EBIT / Revenue × 100%",
+        "substitution": "−378,254 / 18,322,117 × 100% ≈ -2.1%",
+        "result": "-2.1%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.02064466677076672
+      },
+      {
+        "label": "Net Profit Margin",
+        "formula": "Net income / Revenue × 100%",
+        "substitution": "−1,501,685 / 18,322,117 × 100% ≈ -8.2%",
+        "result": "-8.2%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.08196023418036245
+      },
+      {
+        "label": "Asset Turnover",
+        "formula": "Revenue / Total assets",
+        "substitution": "18,322,117 / 45,757,642 ≈ 0.40x",
+        "result": "0.40x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 0.40041654681419114
+      },
+      {
+        "label": "Equity Multiplier",
+        "formula": "Total assets / Equity",
+        "substitution": "45,757,642 / 28,711,657 ≈ 1.59x",
+        "result": "1.59x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 1.593695619866175
+      },
+      {
+        "label": "Return on Assets",
+        "formula": "Net income / Total assets × 100%",
+        "substitution": "−1,501,685 / 45,757,642 × 100% ≈ -3.3%",
+        "result": "-3.3%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.032818233946583175
+      },
+      {
+        "label": "Return on Equity",
+        "formula": "Net income / Equity × 100%",
+        "substitution": "−1,501,685 / 28,711,657 × 100% ≈ -5.2%",
+        "result": "-5.2%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.05230227569241302
+      },
+      {
+        "label": "DuPont ROE (3 factors)",
+        "formula": "Net margin × Asset turnover × Equity multiplier",
+        "substitution": "(−1,501,685/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%",
+        "result": "−5.23%",
+        "note": "Rounded slide factors: −8.2% × 0.40 × 1.59 ≈ −5.2%. The exact product uses unrounded ratios.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.052302275692413004
+      },
+      {
+        "label": "DuPont ROE (5 factors)",
+        "formula": "(Net income / EBT) × (EBT / EBIT) × (EBIT / Revenue) × (Revenue / Assets) × (Assets / Equity)",
+        "substitution": "(-1,501,685/-1,086,604) × (-1,086,604/-378,254) × (-378,254/18,322,117) × (18,322,117/45,757,642) × (45,757,642/28,711,657) ≈ −5.23%",
+        "result": "−5.23%",
+        "note": "The EBT / EBIT factor includes the submitted non-operating items, not only interest. Unrounded factors are used.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.052302275692413004
+      },
+      {
+        "label": "Tax Burden",
+        "formula": "Net income / EBT",
+        "substitution": "(-1,501,685) / (-1,086,604) ≈ 138.2%",
+        "result": "138.2%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 1.3819984097242417
+      },
+      {
+        "label": "Interest Burden",
+        "formula": "EBT / EBIT",
+        "substitution": "(-1,086,604) / (-378,254) ≈ 2.87x",
+        "result": "2.87x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 2.8726834349405426
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "DuPont 2025",
+        "value": "−8.196% × 0.4004 × 1.5937 = −5.230%",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "DuPont Analysis!D6:D9"
+      },
+      {
+        "metric": "Z-score",
+        "value": "−4.721749912",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "Ratio Analysis!B31:C36"
+      },
+      {
+        "metric": "Interest-bearing debt/equity",
+        "value": "0.269669x",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "Ratio Analysis!D18"
+      },
+      {
+        "metric": "Interest coverage basis",
+        "value": "EBIT −378.254 / finance cost 535.152 = −0.71x",
+        "file": "Group4_FinalReport_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
+        "location": "Ratio table, interest coverage"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week5",
+        "week_label": "Week 5",
+        "slide_num": 8,
+        "mapping_note": "The 3-Step DuPont Decomposition",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week5",
+        "week_label": "Week 5",
+        "slide_num": 13,
+        "mapping_note": "High-Quality vs. Low-Quality ROE Growth",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 7,
+        "mapping_note": "Current Ratio: Current Assets ÷ Current Liabilities",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 12,
+        "mapping_note": "Times Interest Earned (TIE): EBIT ÷ Interest Expense",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 19,
+        "mapping_note": "A Caveat Worth Paying Attention To: Negative Equity in X4 & Four-Lens Screening",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week9",
+        "week_label": "Week 9",
+        "slide_num": 14,
+        "mapping_note": "Quantifying the Impact of Debt Gearing on DuPont ROE, Solvency & Coverage",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 15,
+        "mapping_note": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+        "trace_role": "Five-factor Z-score"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "m2",
+        "assignment_code": "Milestone 2 (Weeks 4-6)",
+        "sheet_name": "Ratio Analysis",
+        "cell_or_section_ref": "DuPont & Solvency",
+        "mapping_note": "ROE (-5.2%), D/E (0.27x), and Z (-4.72).",
+        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
+        "evidence_caption": "Accumulated Deficit & Book Equity",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Assignment 15 (Final Report)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Section (d) & Tables 2-3",
+        "mapping_note": "Audited common-size statements and ratio checks.",
+        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+        "evidence_caption": "FY2025 Gross Margin & EBIT",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
+  },
+  {
+    "slide_num": 15,
+    "is_appendix": true,
+    "layout_slide": 15,
+    "topic_id": "appendix_a3",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Financial & accounting quality",
+    "section_name": "Appendix — Financial & accounting quality",
+    "title": "Lampiran A3: Likuiditas, Modal Kerja, Z-Score Minggu 6 & Catatan Kaki",
+    "display_title": "Lampiran A3: Likuiditas, Modal Kerja, Z-Score Minggu 6 & Catatan Kaki",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "Completed Week 6 five-factor calculation",
+      "headers": [
+        "Komponen",
+        "Pembilang (Rp miliar)",
+        "Penyebut (Rp miliar)",
+        "Rasio",
+        "Bobot",
+        "Kontribusi"
+      ],
+      "rows": [
+        [
+          "X1: Working capital / total assets",
+          "18,411.702",
+          "45,757.642",
+          "0.402374",
+          "1.2",
+          "+0.482849"
+        ],
+        [
+          "X2: Retained earnings / total assets",
+          "-215,334.000",
+          "45,757.642",
+          "-4.705968",
+          "1.4",
+          "-6.588355"
+        ],
+        [
+          "X3: EBIT / total assets",
+          "-378.254",
+          "45,757.642",
+          "-0.008266",
+          "3.3",
+          "-0.027279"
+        ],
+        [
+          "X4: Book equity / total liabilities",
+          "28,711.657",
+          "17,045.985",
+          "1.684365",
+          "0.6",
+          "+1.010619"
+        ],
+        [
+          "X5: Revenue / total assets",
+          "18,322.117",
+          "45,757.642",
+          "0.400417",
+          "1.0",
+          "+0.400417"
+        ]
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "Milestone 3 accounting and footnote findings",
+        "headers": [
+          "Finding",
+          "Assignment figure",
+          "What to watch"
+        ],
+        "rows": [
+          [
+            "Accrual ratio",
+            "−3.95%",
+            "(Net income − CFO) / closing assets; not an automatic quality score"
+          ],
+          [
+            "Tokopedia / Bank Jago",
+            "Rp7,432bn / Rp2,895bn",
+            "Together 22.57% of assets"
+          ],
+          [
+            "Level 3 investments",
+            "Rp1,669bn",
+            "Value depends on unquoted-input estimates"
+          ],
+          [
+            "Related-party revenue",
+            "Rp1,306bn / 7.13%",
+            "Understand the arrangement and collection"
+          ],
+          [
+            "Incentives",
+            "Revenue deduction or expense",
+            "Treatment depends on the distinct service received"
+          ],
+          [
+            "20% haircut sensitivity",
+            "Rp1,820bn before tax",
+            "Hypothetical, not a recorded impairment; no double-count of goodwill"
+          ]
+        ]
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Kas dan Likuiditas",
+        "text": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.",
+        "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "29,059,226 / 10,647,524 ≈ 2.73x",
+          "FY2025 closing-balance inputs in Rp million. Displayed results are rounded."
+        ],
+        "formula": "Current assets / Current liabilities"
+      },
+      {
+        "heading": "Cakupan Bunga",
+        "text": "Cakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.",
+        "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "−378,254 / 535,152 ≈ −0.71x",
+          "FY2025 closing-balance inputs in Rp million. Displayed results are rounded."
+        ],
+        "formula": "EBIT / Interest expense"
+      },
+      {
+        "heading": "Altman Z-Score",
+        "text": "Skor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "detail_explanation": "Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nSkor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+        "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+        "calc_steps": [
+          "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
+          "The completed Week 6 worksheet uses book equity / total liabilities for X4. All balance inputs are in Rp million."
+        ],
+        "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5"
+      }
+    ],
+    "study_explanation": "Lampiran ini merinci perhitungan lengkap lima faktor Altman Z-Score Minggu 6 (X1 hingga X5 = −4,721750 memakai proksi book equity / total liabilities dari lembar kerja kelompok) bersama temuan kualitas akuntansi dan catatan kaki Milestone 3 (akrual −3,95%, cakupan capex 25,97%, asosiasi 22,57% dari total aset, dan Level 3).",
+    "speaker_notes": "Kas dan Likuiditas: Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan Bunga: Cakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nAltman Z-Score: Skor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
+    "source_footer": "Week 6 Worksheet; Milestone 2; Milestone 3!Calculations; LK GOTO FY2025 Notes 14, 15, 29 & 38",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "Current Ratio",
+        "formula": "Current assets / Current liabilities",
+        "substitution": "29,059,226 / 10,647,524 ≈ 2.73x",
+        "result": "2.73x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 2.7292003286397852
+      },
+      {
+        "label": "Quick Ratio",
+        "formula": "(Current assets − Inventory) / Current liabilities",
+        "substitution": "(29,059,226 − 14,093) / 10,647,524 ≈ 2.73x",
+        "result": "2.73x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 2.7278767345347146
+      },
+      {
+        "label": "Working Capital",
+        "formula": "Current assets − Current liabilities",
+        "substitution": "29,059,226 − 10,647,524 = 18,411,702",
+        "result": "18,411,702 Rp million",
+        "note": "",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 18411702
+      },
+      {
+        "label": "Debt-to-Equity",
+        "formula": "(Short-term debt + Long-term debt) / Equity",
+        "substitution": "(1,523,758 + 6,218,885) / 28,711,657 ≈ 0.27x",
+        "result": "0.27x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 0.26966897103848797
+      },
+      {
+        "label": "Debt-to-Total-Assets",
+        "formula": "Interest-bearing debt / Total assets",
+        "substitution": "7,742,643 / 45,757,642 ≈ 16.9%",
+        "result": "16.9%",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 0.16920983384589616
+      },
+      {
+        "label": "Interest Coverage",
+        "formula": "EBIT / Interest expense",
+        "substitution": "−378,254 / 535,152 ≈ −0.71x",
+        "result": "-0.71x",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -0.7068160074147158
+      },
+      {
+        "label": "Days Sales Outstanding (DSO)",
+        "formula": "Closing trade receivables / Revenue × 365",
+        "substitution": "547,293 / 18,322,117 × 365 ≈ 10.9 days",
+        "result": "10.9 days",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 10.902776409516433
+      },
+      {
+        "label": "Days Inventory Outstanding (DIO)",
+        "formula": "Inventory / COGS × 365",
+        "substitution": "14,093 / 7,746,034 × 365 ≈ 0.7 days",
+        "result": "0.7 days",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 0.6640746735684352
+      },
+      {
+        "label": "Days Payable Outstanding (DPO)",
+        "formula": "Accounts payable / COGS × 365",
+        "substitution": "1,254,389 / 7,746,034 × 365 ≈ 59.1 days",
+        "result": "59.1 days",
+        "note": "FY2025 closing-balance inputs in Rp million. Displayed results are rounded.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": 59.107923487038654
+      },
+      {
+        "label": "Cash Conversion Cycle (CCC)",
+        "formula": "DSO + DIO − DPO",
+        "substitution": "10.902776 + 0.664075 − 59.107923 ≈ −47.5 days",
+        "result": "−47.5 days",
+        "note": "Unrounded working-capital day ratios are used.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -47.541072403953784
+      },
+      {
+        "label": "Z-Score X1 (Modal Kerja / Total Aset)",
+        "formula": "B4 / Total Assets  (Working Capital / Total Assets)",
+        "substitution": "18,411,702 / 45,757,642 = 0.402374",
+        "result": "0.402374",
+        "note": "Mengukur likuiditas jangka pendek terhadap total aset. Kontribusi ke Z: 1.2 × 0.402374 = +0.482849.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 0.402374361860692
+      },
+      {
+        "label": "Z-Score X2 (Saldo Laba / Total Aset)",
+        "formula": "Retained Earnings (Accumulated Losses) / Total Assets",
+        "substitution": "−215,334,000 / 45,757,642 = −4.705968",
+        "result": "−4.705968",
+        "note": "Mengukur profitabilitas kumulatif. Kontribusi ke Z: 1.4 × (−4.705968) = −6.588355.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": -4.705968021691327
+      },
+      {
+        "label": "Z-Score X3 (EBIT / Total Aset)",
+        "formula": "EBIT / Total Assets",
+        "substitution": "−378,254 / 45,757,642 = −0.008266",
+        "result": "−0.008266",
+        "note": "Mengukur profitabilitas operasi terhadap aset. Kontribusi ke Z: 3.3 × (−0.008266) = −0.027279.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": -0.00826646617848009
+      },
+      {
+        "label": "Z-Score X4 (Ekuitas / Total Liabilitas)",
+        "formula": "Book Equity / Total Liabilities",
+        "substitution": "28,711,657 / 17,045,985 = 1.684365",
+        "result": "1.684365",
+        "note": "Lembar kerja Minggu 6 memakai ekuitas buku / total liabilitas sebagai proksi X4. Kontribusi ke Z: 0.6 × 1.684365 = +1.010619.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 1.68436479323429
+      },
+      {
+        "label": "Z-Score X5 (Pendapatan / Total Aset)",
+        "formula": "Revenue / Total Assets",
+        "substitution": "18,322,117 / 45,757,642 = 0.400417",
+        "result": "0.400417",
+        "note": "Mengukur perputaran aset. Kontribusi ke Z: 1.0 × 0.400417 = +0.400417.",
+        "source": "Lembar kerja Minggu 6; Milestone 2, Historical Data FY2025 (Rp juta)",
+        "result_numeric": 0.400416546814213
+      },
+      {
+        "label": "Week 6 Z-Score",
+        "formula": "1.2×B12 + 1.4×B13 + 3.3×B14 + 0.6×B15 + B16",
+        "substitution": "1.2×(0.402374) + 1.4×(−4.705968) + 3.3×(−0.008266) + 0.6×(1.684365) + 0.400417 = −4.721750",
+        "result": "−4.721750",
+        "note": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5 memakai sel B12:B16. Rasio tidak dibulatkan digunakan; seluruh input neraca dalam Rp juta.",
+        "source": "Milestone 2, Historical Data FY2025 (Rp million); Ratio Analysis / DuPont Analysis",
+        "result_numeric": -4.7217499117692405
+      },
+      {
+        "label": "Free Cash Flow",
+        "formula": "CFO − Cash capex",
+        "substitution": "307.025 − 1,182.360 = −875.335",
+        "result": "−Rp875.335bn",
+        "note": "Inputs in Rp billion.",
+        "source": "Milestone 3 Calculations!D37",
+        "result_numeric": -875.3349999999999
+      },
+      {
+        "label": "Capex Coverage",
+        "formula": "CFO / Cash capex × 100%",
+        "substitution": "307.025 / 1,182.360 × 100% = 25.9671%",
+        "result": "25.97%",
+        "note": "Inputs in Rp billion.",
+        "source": "Milestone 3 Calculations!D36",
+        "result_numeric": 0.2596713352955107
+      },
+      {
+        "label": "Accrual Ratio",
+        "formula": "(Net income − CFO) / Closing assets × 100%",
+        "substitution": "(−1,501.685 − 307.025) / 45,757.642 × 100% = −3.9528%",
+        "result": "−3.95%",
+        "note": "Closing assets follow the milestone definition. Inputs in Rp billion.",
+        "source": "Milestone 3 Calculations!D12",
+        "result_numeric": -0.03952804211370857
+      },
+      {
+        "label": "Associates / Assets",
+        "formula": "(Tokopedia + Bank Jago carrying values) / Total assets × 100%",
+        "substitution": "(7,432,326 + 2,894,921) / 45,757,642 × 100% = 22.5694%",
+        "result": "22.57%",
+        "note": "Inputs in Rp million.",
+        "source": "Milestone 3: associate investments",
+        "result_numeric": 0.22569447525289874
+      },
+      {
+        "label": "Related-Party Revenue Share",
+        "formula": "Related-party revenue / Total revenue × 100%",
+        "substitution": "1,306,110 / 18,322,117 × 100% ≈ 7.13%",
+        "result": "7.13%",
+        "note": "Inputs in Rp million.",
+        "source": "Milestone 3; Note 25",
+        "result_numeric": 0.07128597639672316
+      },
+      {
+        "label": "20% Asset Haircut Sensitivity",
+        "formula": "20% × (Tokopedia carrying value + Level 3 investments)",
+        "substitution": "20% × (7,432,326 + 1,668,574) = 1,820,180",
+        "result": "Rp1,820.180bn",
+        "note": "Inputs in Rp million. Hypothetical before-tax sensitivity; embedded goodwill is already included.",
+        "source": "Milestone 3 Calculations!D62",
+        "result_numeric": 1820.18
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "DuPont 2025",
+        "value": "−8.196% × 0.4004 × 1.5937 = −5.230%",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "DuPont Analysis!D6:D9"
+      },
+      {
+        "metric": "Z-score",
+        "value": "−4.721749912",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "Ratio Analysis!B31:C36"
+      },
+      {
+        "metric": "Interest-bearing debt/equity",
+        "value": "0.269669x",
+        "file": "Group4_Milestone2_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 7/Group4_Milestone2_GOTO.xlsx",
+        "location": "Ratio Analysis!D18"
+      },
+      {
+        "metric": "Interest coverage basis",
+        "value": "EBIT −378.254 / finance cost 535.152 = −0.71x",
+        "file": "Group4_FinalReport_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 15/Group4_FinalReport_GOTO.docx",
+        "location": "Ratio table, interest coverage"
+      },
+      {
+        "metric": "Accrual ratio, closing assets",
+        "value": "−3.952804%",
+        "file": "Group4_Milestone3_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 10/outputs/milestone3/Group4_Milestone3_GOTO.xlsx",
+        "location": "Calculations!D10:D12"
+      },
+      {
+        "metric": "CFO / capex",
+        "value": "25.9671%",
+        "file": "Group4_Milestone3_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 10/outputs/milestone3/Group4_Milestone3_GOTO.xlsx",
+        "location": "Calculations!D36"
+      },
+      {
+        "metric": "Free cash flow (Rp million)",
+        "value": "−875,335",
+        "file": "Group4_Milestone3_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 10/outputs/milestone3/Group4_Milestone3_GOTO.xlsx",
+        "location": "Calculations!D37"
+      },
+      {
+        "metric": "Associate concentration",
+        "value": "22.5694%",
+        "file": "Group4_Milestone3_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 10/outputs/milestone3/Group4_Milestone3_GOTO.xlsx",
+        "location": "Calculations!D50:D53"
+      },
+      {
+        "metric": "20% valuation sensitivity (Rp million)",
+        "value": "1,820,180, hypothetical before tax",
+        "file": "Group4_Milestone3_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 10/outputs/milestone3/Group4_Milestone3_GOTO.xlsx",
+        "location": "Calculations!D59:D63"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week5",
+        "week_label": "Week 5",
+        "slide_num": 8,
+        "mapping_note": "The 3-Step DuPont Decomposition",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week5",
+        "week_label": "Week 5",
+        "slide_num": 13,
+        "mapping_note": "High-Quality vs. Low-Quality ROE Growth",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 7,
+        "mapping_note": "Current Ratio: Current Assets ÷ Current Liabilities",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 12,
+        "mapping_note": "Times Interest Earned (TIE): EBIT ÷ Interest Expense",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 19,
+        "mapping_note": "A Caveat Worth Paying Attention To: Negative Equity in X4 & Four-Lens Screening",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week9",
+        "week_label": "Week 9",
+        "slide_num": 14,
+        "mapping_note": "Quantifying the Impact of Debt Gearing on DuPont ROE, Solvency & Coverage",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week6",
+        "week_label": "Week 6",
+        "slide_num": 15,
+        "mapping_note": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+        "trace_role": "Five-factor Z-score"
+      },
+      {
+        "week_id": "week3",
+        "week_label": "Week 3",
+        "slide_num": 18,
+        "mapping_note": "What Analysts Should Actually Do",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week4",
+        "week_label": "Week 4",
+        "slide_num": 14,
+        "mapping_note": "Free Cash Flow: Operating Cash Flow Minus Capital Expenditures",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week7",
+        "week_label": "Week 7",
+        "slide_num": 7,
+        "mapping_note": "Four Red Flags to Watch For in Financial Statements",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week7",
+        "week_label": "Week 7",
+        "slide_num": 12,
+        "mapping_note": "Accruals-Based Quality Measures: The Sloan Accrual Formula",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week9",
+        "week_label": "Week 9",
+        "slide_num": 8,
+        "mapping_note": "Forensic Checklist for Analyzing Footnotes on Long-Term Debt",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week10",
+        "week_label": "Week 10",
+        "slide_num": 7,
+        "mapping_note": "Carrying Value vs. Recoverable Amount: Fair Value Less Disposal vs. Value in Use",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week10",
+        "week_label": "Week 10",
+        "slide_num": 19,
+        "mapping_note": "Why Off-Balance Sheet Associate Leverage Flutters Reported Solvency Ratios",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      },
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 4,
+        "mapping_note": "Contract Identification, Distinct Obligations & Transaction Price Allocation",
+        "trace_role": "Kualitas keuangan & akuntansi"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "m2",
+        "assignment_code": "Milestone 2 (Weeks 4-6)",
+        "sheet_name": "Ratio Analysis",
+        "cell_or_section_ref": "DuPont & Solvency",
+        "mapping_note": "ROE (-5.2%), D/E (0.27x), and Z (-4.72).",
+        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
+        "evidence_caption": "Accumulated Deficit & Book Equity",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Assignment 15 (Final Report)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Section (d) & Tables 2-3",
+        "mapping_note": "Audited common-size statements and ratio checks.",
+        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+        "evidence_caption": "FY2025 Gross Margin & EBIT",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "m3",
+        "assignment_code": "Milestone 3 (Weeks 7-10)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Sections 1-4",
+        "mapping_note": "20% stress on Tokopedia+L3 and -3.95% accruals audit.",
+        "evidence_img": "/evidence/goto_note14_associates_tokopedia_jago.png",
+        "evidence_caption": "Note 14 Associate Exposure",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Assignment 15 (Final Report)",
+        "sheet_name": "",
+        "cell_or_section_ref": "Section (c) & Table 1",
+        "mapping_note": "Full forensic red flag analysis (supporting table in Appendix A3).",
+        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+        "evidence_caption": "Cash Flow Statement",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
+  },
+  {
+    "slide_num": 16,
+    "is_appendix": true,
+    "layout_slide": 16,
+    "topic_id": "appendix_a4",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Forecast assumptions",
+    "section_name": "Appendix — Forecast assumptions",
+    "title": "Lampiran A4: Pendorong Skenario, Alasan Proyeksi & Perilaku Biaya",
+    "display_title": "Lampiran A4: Pendorong Skenario, Alasan Proyeksi & Perilaku Biaya",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "All key assumptions and the reason for each",
+      "headers": [
+        "Driver",
+        "Base (Avg)",
+        "Base Rationale",
+        "Optimistic",
+        "Optimistic Rationale",
+        "Conservative",
+        "Conservative Rationale"
+      ],
+      "rows": [
+        [
+          "Revenue Growth Rate",
+          "11.4%",
+          "Average of 2024 (7.5%) and 2025 (15.3%) growth.",
+          "15.3%",
+          "Matches strong 2025 growth from GoPay loans and Gojek.",
+          "7.5%",
+          "Matches slower 2024 growth rate."
+        ],
+        [
+          "COGS (% of Revenue)",
+          "41.1%",
+          "Three year average cost of revenue (2023 to 2025).",
+          "38.1%",
+          "Matches first half 2026 level as financial services grow.",
+          "46.6%",
+          "Matches highest historical COGS % in 2024."
+        ],
+        [
+          "Operating Expenses (% of Rev)",
+          "78.5%",
+          "Three year average cash operating expenses (2023 to 2025).",
+          "55.7%",
+          "Matches 2025 cash opex after cutting promo spending.",
+          "85.0%",
+          "Assumes heavy promo competition returns."
+        ],
+        [
+          "Days Sales Outstanding (DSO)",
+          "24.2 days",
+          "Three year average customer collection period.",
+          "10.9 days",
+          "Matches faster 2025 collection period.",
+          "30.0 days",
+          "Assumes slower partner collections."
+        ],
+        [
+          "Days Inventory (DIO)",
+          "4.8 days",
+          "Three year average inventory holding period.",
+          "0.7 days",
+          "Matches 2025 minimal digital inventory.",
+          "8.0 days",
+          "Assumes higher inventory closer to 2023."
+        ],
+        [
+          "Days Payable (DPO)",
+          "67.8 days",
+          "Three year average vendor payment period.",
+          "75.0 days",
+          "Longer vendor terms keep cash in GoTo longer.",
+          "59.1 days",
+          "Faster payment to vendors (2025 level) uses cash faster."
+        ],
+        [
+          "Capex (% of Revenue)",
+          "16.3%",
+          "Three year average capital spending (2023 to 2025).",
+          "6.5%",
+          "Matches lower 2025 capital spending using cloud servers.",
+          "20.0%",
+          "Assumes heavier server and tech investment."
+        ],
+        [
+          "D&A (% of Beg. Net PP&E)",
+          "30.6%",
+          "Average of 2024 (17.3%) and 2025 (43.9%).",
+          "25.0%",
+          "Longer equipment useful life.",
+          "43.9%",
+          "Matches higher 2025 depreciation rate."
+        ],
+        [
+          "Effective Tax Rate",
+          "22.0%",
+          "Indonesia standard corporate tax rate.",
+          "22.0%",
+          "Standard corporate tax rate.",
+          "22.0%",
+          "Standard corporate tax rate."
+        ],
+        [
+          "Interest Rate on Debt",
+          "10.2%",
+          "Three year average interest expense / total debt.",
+          "6.9%",
+          "Matches lower 2025 interest rate.",
+          "12.9%",
+          "Matches higher 2024 borrowing cost."
+        ],
+        [
+          "Dividend Payout Ratio",
+          "0.0%",
+          "0% dividends paid in 2023 to 2025.",
+          "0.0%",
+          "Reinvest all profits into growth.",
+          "0.0%",
+          "Keep cash in the bank."
+        ]
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "Fixed and variable cost judgments",
+        "headers": [
+          "Category",
+          "Classification & Judgment (from Week 12 Analysis)"
+        ],
+        "rows": [
+          [
+            "Variable Costs",
+            "Cost of Goods Sold (COGS) is variable (41.1% of revenue in Base). It covers payment processing fees, merchant and driver transaction costs, and cloud hosting that rise and fall directly with orders."
+          ],
+          [
+            "Semi Variable Costs",
+            "Sales & Marketing and Product Development are semi variable. Customer promos move with competition and order volume, while engineering salaries are set by management budget."
+          ],
+          [
+            "Fixed Costs",
+            "General & Administrative (office salaries, rent, legal), Operational Support, Depreciation, and Debt Interest are mostly fixed. In 2025, total operating expenses grew only 2.2% (Rp 10,722 bn to Rp 10,954 bn) while revenue grew 15.3%. When fixed operating expenses are held constant at Rp 10,954 bn instead of scaled with revenue, GoTo reaches positive EBIT of Rp 1,066 bn in 2026F."
+          ],
+          [
+            "Segment Concentration",
+            "GoTo's revenue growth is concentrated in two segments rather than spread evenly across all segments. In 2025, Financial Technology (GoPay payments and consumer loans) grew 74.1% and contributed 91.0% of total revenue growth, while On Demand Services (Gojek rides and delivery) grew 13.8% and contributed 61.8% of total growth."
+          ]
+        ]
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Asumsi Dasar",
+        "text": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.",
+        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
+          "The model uses unrounded source ratios."
+        ],
+        "formula": "Average of exact 2024 and 2025 revenue-growth rates"
+      },
+      {
+        "heading": "Rasio Biaya Historis",
+        "text": "Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.",
+        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
+          "The displayed historical percentages are rounded. Forecast calculations use source precision."
+        ],
+        "formula": "Average historical cash operating-cost ratios"
+      },
+      {
+        "heading": "Asumsi Skenario",
+        "text": "Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
+          "The displayed historical percentages are rounded. Forecast calculations use source precision."
+        ],
+        "formula": "Average historical cash operating-cost ratios"
+      }
+    ],
+    "study_explanation": "Lampiran ini mendokumentasikan seluruh asumsi utama proyeksi Milestone 4 untuk skenario Optimistis, Dasar, dan Konservatif (pertumbuhan pendapatan 11,39%, COGS 42,28%, OpEx 78,49%, D&A, modal kerja DSO/DIO/DPO, capex 16,32%, pajak 22%, dan bunga 6,91%) beserta rasional ekonominya dan pemisahan biaya tetap vs variabel.",
+    "speaker_notes": "Asumsi Dasar: Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nRasio Biaya Historis: Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nAsumsi Skenario: Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+    "source_footer": "Milestone 4 §1–3; Assignment 14 Assumptions & Forecasts",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "Base Revenue Growth",
+        "formula": "Average of exact 2024 and 2025 revenue-growth rates",
+        "substitution": "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
+        "result": "11.4% displayed",
+        "note": "The model uses unrounded source ratios.",
+        "source": "Milestone 4 Sources / Assumptions",
+        "result_numeric": 0.11386991606662444
+      },
+      {
+        "label": "Operating-Cost Assumption",
+        "formula": "Average historical cash operating-cost ratios",
+        "substitution": "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
+        "result": "78.5% displayed",
+        "note": "The displayed historical percentages are rounded. Forecast calculations use source precision.",
+        "source": "Milestone 4 Assumptions",
+        "result_numeric": 0.785
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "Base forecast revenue (Rp bn)",
+        "value": "20,408 / 22,732 / 25,321",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Pro forma income statement"
+      },
+      {
+        "metric": "Base ending cash (Rp bn)",
+        "value": "14,282 / 7,642 / 968",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Pro forma balance sheet & cash flow"
+      },
+      {
+        "metric": "Base assumptions",
+        "value": "11.4% growth; 41.1% COGS; 78.5% cash OpEx; 16.3% capex",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Forecast assumptions table"
+      },
+      {
+        "metric": "Fixed-cost alternative",
+        "value": "Breakeven Rp 18,604 bn; EBIT 1,062 / 2,430 / 3,954",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Breakeven table"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 11,
+        "mapping_note": "Identifying Operating Cost Behavior across GoTo's Rp 18.7 Trillion Cost Base",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 12,
+        "mapping_note": "Quantifying Operating Profit Sensitivity to Top-Line Revenue Fluctuations",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 5,
+        "mapping_note": "How Top-Line Revenue Drives Costs, Working Capital & Capital Needs",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 6,
+        "mapping_note": "Separating Operational Working Capital from Financing & Non-Operating Accounts",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 9,
+        "mapping_note": "Avoiding False Precision Under Competitive & Macroeconomic Uncertainty",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 13,
+        "mapping_note": "Reconciling Net Income, D&A, Working Capital & Capex to the Cash Plug",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 14,
+        "mapping_note": "Identifying Which Single Assumption Most Alters GoTo's Survival & Value",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 17,
+        "mapping_note": "Scaling Fixed Costs with Sales, Circular Debt Interest & Hidden Cash Burn",
+        "trace_role": "Proyeksi"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "m4",
+        "assignment_code": "Milestone 4 (Week 13)",
+        "sheet_name": "Assumptions",
+        "cell_or_section_ref": "Rows 7-30",
+        "mapping_note": "Base (3-yr avg), Optimistic (2025 run-rate), Conservative scenarios.",
+        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+        "evidence_caption": "OpEx & Margin Drivers",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "m4",
+        "assignment_code": "Milestone 4 (Week 13)",
+        "sheet_name": "Pro Forma Balance Sheet",
+        "cell_or_section_ref": "Rows 7-25",
+        "mapping_note": "Ending cash Rp 968 bn in 2028F; zero balance check error.",
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Balance Sheet Plug",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
+  },
+  {
+    "slide_num": 17,
+    "is_appendix": true,
+    "layout_slide": 17,
+    "topic_id": "appendix_a5",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Three-year pro forma",
+    "section_name": "Appendix — Three-year pro forma",
+    "title": "Lampiran A5: Laporan Pro Forma Tiga Tahun & Leverage Operasi",
+    "display_title": "Lampiran A5: Laporan Pro Forma Tiga Tahun & Leverage Operasi",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "Base projected income statement",
+      "headers": [
+        "Line Item (Rp billion)",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "rows": [
+        [
+          "Revenue (growing at 11.4% Base average)",
+          "20,408",
+          "22,732",
+          "25,321"
+        ],
+        [
+          "Cost of Goods Sold (41.1% of Revenue)",
+          "8,392",
+          "9,348",
+          "10,412"
+        ],
+        [
+          "Gross Profit (58.9% Gross Margin)",
+          "12,016",
+          "13,384",
+          "14,908"
+        ],
+        [
+          "Operating Expenses (scaled at three year average 78.5%)",
+          "16,020",
+          "17,844",
+          "19,876"
+        ],
+        [
+          "EBIT",
+          "(4,003)",
+          "(4,459)",
+          "(4,967)"
+        ],
+        [
+          "Interest Expense (10.2% on Total Debt)",
+          "788",
+          "788",
+          "788"
+        ],
+        [
+          "Earnings Before Tax (EBT)",
+          "(4,791)",
+          "(5,247)",
+          "(5,755)"
+        ],
+        [
+          "Tax Expense / (Benefit) (22.0%)",
+          "(1,054)",
+          "(1,154)",
+          "(1,266)"
+        ],
+        [
+          "Net Income",
+          "(3,737)",
+          "(4,093)",
+          "(4,489)"
+        ]
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "Base projected balance sheet",
+        "headers": [
+          "Line Item (Rp billion)",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        "rows": [
+          [
+            "Cash & Equivalents (plug)",
+            "14,282",
+            "7,642",
+            "968"
+          ],
+          [
+            "Accounts Receivable (24.2 days)",
+            "1,352",
+            "1,506",
+            "1,677"
+          ],
+          [
+            "Inventory (4.8 days)",
+            "110",
+            "123",
+            "137"
+          ],
+          [
+            "Total Current Assets",
+            "15,744",
+            "9,271",
+            "2,783"
+          ],
+          [
+            "Net PP&E",
+            "3,762",
+            "6,321",
+            "8,518"
+          ],
+          [
+            "Other Assets (held constant at 2025 level)",
+            "22,819",
+            "22,819",
+            "22,819"
+          ],
+          [
+            "TOTAL ASSETS",
+            "42,326",
+            "38,411",
+            "34,120"
+          ],
+          [
+            "Accounts Payable (67.8 days)",
+            "1,559",
+            "1,737",
+            "1,935"
+          ],
+          [
+            "Short Term Debt (held constant)",
+            "1,524",
+            "1,524",
+            "1,524"
+          ],
+          [
+            "Total Current Liabilities",
+            "3,083",
+            "3,261",
+            "3,458"
+          ],
+          [
+            "Long Term Debt (held constant)",
+            "6,219",
+            "6,219",
+            "6,219"
+          ],
+          [
+            "Other Liabilities (held constant at 2025 level)",
+            "8,049",
+            "8,049",
+            "8,049"
+          ],
+          [
+            "Total Liabilities",
+            "17,351",
+            "17,529",
+            "17,726"
+          ],
+          [
+            "Total Shareholders' Equity",
+            "24,975",
+            "20,882",
+            "16,393"
+          ],
+          [
+            "TOTAL LIABILITIES & EQUITY",
+            "42,326",
+            "38,411",
+            "34,120"
+          ],
+          [
+            "Balance Check (Total Assets minus Total L&E, must = 0)",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Base projected cash-flow statement",
+        "headers": [
+          "Line Item (Rp billion)",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        "rows": [
+          [
+            "Net Income",
+            "(3,737)",
+            "(4,093)",
+            "(4,489)"
+          ],
+          [
+            "Add: Depreciation & Amortization",
+            "190",
+            "1,151",
+            "1,934"
+          ],
+          [
+            "(Increase) / Decrease in Accounts Receivable",
+            "(805)",
+            "(154)",
+            "(171)"
+          ],
+          [
+            "(Increase) / Decrease in Inventory",
+            "(96)",
+            "(13)",
+            "(14)"
+          ],
+          [
+            "Increase / (Decrease) in Accounts Payable",
+            "305",
+            "178",
+            "198"
+          ],
+          [
+            "Cash Flow from Operations (CFO)",
+            "(4,143)",
+            "(2,930)",
+            "(2,542)"
+          ],
+          [
+            "Capital Expenditures (Capex)",
+            "(3,330)",
+            "(3,710)",
+            "(4,132)"
+          ],
+          [
+            "Cash Flow from Investing (CFI)",
+            "(3,330)",
+            "(3,710)",
+            "(4,132)"
+          ],
+          [
+            "Dividends Paid & Net Debt Change (Cash Flow from Financing)",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "Net Change in Cash",
+            "(7,473)",
+            "(6,640)",
+            "(6,674)"
+          ],
+          [
+            "Beginning Cash",
+            "21,755",
+            "14,282",
+            "7,642"
+          ],
+          [
+            "Ending Cash (computed)",
+            "14,282",
+            "7,642",
+            "968"
+          ],
+          [
+            "Check vs. Balance Sheet Plug Cash (must = 0)",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Breakeven and operating leverage",
+        "headers": [
+          "Breakeven Check Item (Rp billion)",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        "rows": [
+          [
+            "Gross Margin (%)",
+            "58.9%",
+            "58.9%",
+            "58.9%"
+          ],
+          [
+            "Breakeven Revenue (Scaled Opex / Gross Margin)",
+            "27,207",
+            "30,305",
+            "33,755"
+          ],
+          [
+            "Breakeven Status (when Opex is scaled at 78.5%)",
+            "Below Breakeven",
+            "Below Breakeven",
+            "Below Breakeven"
+          ],
+          [
+            "DOL when Opex is scaled at 78.5%",
+            "Not reported (EBIT is negative)",
+            "Not reported (EBIT is negative)",
+            "Not reported (EBIT is negative)"
+          ],
+          [
+            "Fixed Operating Expenses (Holding 2025 Opex constant at Rp 10,954 bn)",
+            "10,954",
+            "10,954",
+            "10,954"
+          ],
+          [
+            "EBIT when Fixed Opex is not scaled with Revenue",
+            "1,062",
+            "2,430",
+            "3,954"
+          ],
+          [
+            "Breakeven Revenue (Fixed Opex Rp 10,954 bn / 58.9% Gross Margin)",
+            "18,604",
+            "18,604",
+            "18,604"
+          ],
+          [
+            "Breakeven Status (Fixed Cost Model)",
+            "Above Breakeven",
+            "Above Breakeven",
+            "Above Breakeven"
+          ],
+          [
+            "Margin of Safety (Fixed Cost Model)",
+            "+8.8%",
+            "+18.2%",
+            "+26.5%"
+          ],
+          [
+            "Degree of Operating Leverage (DOL = Gross Profit / EBIT, when EBIT > 0)",
+            "11.31x",
+            "5.51x",
+            "3.77x"
+          ]
+        ]
+      },
+      {
+        "title": "Beta / WACC / Terminal Growth Sensitivity & Breakeven Check",
+        "headers": [
+          "Sensitivity / Breakeven Test",
+          "Assumptions / Inputs",
+          "2026F / DCF Result",
+          "2027F-2028F / RI Result"
+        ],
+        "rows": [
+          [
+            "Base Scaled OpEx (78.5% of Rev)",
+            "Breakeven Rev Rp 27.2T-33.8T",
+            "EBIT: (4,003) bn | DOL: n/a",
+            "Below Breakeven (2026F-2028F)"
+          ],
+          [
+            "Fixed OpEx Freeze (Rp 10,954 bn)",
+            "Breakeven Rev Rp 18,604 bn",
+            "2026F EBIT: +1,062 bn (DOL 11.31x)",
+            "2027F +2,430 (5.51x) | 2028F +3,954 (3.77x)"
+          ],
+          [
+            "Base Valuation (Beta 0.59, g = 3.0%)",
+            "Ke = 8.45% | WACC = 7.76%",
+            "DCF: Rp (121.1) / share",
+            "Residual Income: Rp (75.1) / share"
+          ],
+          [
+            "Lower Terminal g (Beta 0.59, g = 2.0%)",
+            "Ke = 8.45% | WACC = 7.76%",
+            "DCF: Rp (99.9) / share",
+            "Residual Income: Rp (60.9) / share"
+          ],
+          [
+            "IDX Avg Beta (Beta 1.00, g = 3.0%)",
+            "Ke = 11.20% | WACC = 9.89%",
+            "DCF: Rp (79.9) / share",
+            "Residual Income: Rp (47.5) / share"
+          ],
+          [
+            "High-Beta Tech (Beta 1.25, g = 3.0%)",
+            "Ke = 12.87% | WACC = 11.18%",
+            "DCF: Rp (65.3) / share",
+            "Residual Income: Rp (38.3) / share"
+          ]
+        ],
+        "row_details": [
+          {
+            "detail_explanation": "Milestone 4 Base Case scales opex at 78.5%, staying unprofitable.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Milestone 4 Table 4",
+            "highlight_terms": [
+              "27.2T",
+              "4,003"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Freezing opex at Rp 10,954 bn drops breakeven to Rp 18,604 bn.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Final Report Table 5",
+            "highlight_terms": [
+              "18,604",
+              "1,062",
+              "11.31x"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Assignment 14 baseline WACC (7.76%) & terminal g (3.0%).",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Valuation Summary",
+            "highlight_terms": [
+              "121.1",
+              "75.1"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Lowering g to 2.0% leaves both DCF (-99.9) & RI (-60.9) deeply negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Sensitivity Check",
+            "highlight_terms": [
+              "99.9",
+              "60.9"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Market beta (1.00) yields WACC 9.89%, still deeply negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Beta 1.00 Check",
+            "highlight_terms": [
+              "79.9",
+              "47.5"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "High tech beta (1.25) yields WACC 11.18%, still negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Beta 1.25 Check",
+            "highlight_terms": [
+              "65.3",
+              "38.3"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          }
+        ]
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Kasus Dasar",
+        "text": "Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.",
+        "detail_explanation": "Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.\n\nKasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.\n\nIlustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "2028F: 7,642 − 2,542 − 4,132 ≈ 968",
+          "Rounded 2028F cash-flow figures. The complete linked statement is in the sidebar."
+        ],
+        "formula": "Beginning cash + CFO + Investing cash flow + Financing cash flow + FX"
+      },
+      {
+        "heading": "Rasio Biaya Operasi",
+        "text": "Kasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.",
+        "detail_explanation": "Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.\n\nKasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.\n\nIlustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "1 − 41.1% − 78.5% = −19.6%",
+          "Based on displayed rounded assumptions."
+        ],
+        "formula": "1 − COGS ratio − Operating-cost ratio"
+      },
+      {
+        "heading": "Skenario Biaya Tetap",
+        "text": "Ilustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
+        "detail_explanation": "Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.\n\nKasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.\n\nIlustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
+        "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+        "calc_steps": [
+          "10,954 / 58.88% = 18,603.94 ≈ 18,604",
+          "Inputs in Rp billion. This illustration uses rounded fixed costs and a gross margin of 58.88%, rounded from the historical-average source ratio."
+        ],
+        "formula": "Fixed operating costs / Gross-margin ratio"
+      }
+    ],
+    "study_explanation": "Lampiran ini berisi ketiga laporan keuangan pro forma lengkap 2026F–2028F dari Milestone 4 (Laba Rugi, Neraca, dan Arus Kas skenario dasar), serta analisis titik impas (breakeven), derajat leverage operasi (DOL), dan uji sensitivitas pembekuan OpEx tetap Rp10.954 miliar.",
+    "speaker_notes": "Kasus Dasar: Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.\n\nRasio Biaya Operasi: Kasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.\n\nSkenario Biaya Tetap: Ilustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
+    "source_footer": "Milestone 4 Tables 4–7; Final Report Table 5; Assignment 14 Financial Forecast",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "2026F Revenue",
+        "formula": "2025 revenue × (1 + Base growth)",
+        "substitution": "18,322.117 × (1 + 0.113869916) ≈ 20,408.455",
+        "result": "Rp20,408bn displayed",
+        "note": "Inputs in Rp billion. Growth is rounded only for display.",
+        "source": "Milestone 4 pro forma income statement",
+        "result_numeric": 20408.45492495287
+      },
+      {
+        "label": "Base Operating Margin",
+        "formula": "1 − COGS ratio − Operating-cost ratio",
+        "substitution": "1 − 41.1% − 78.5% = −19.6%",
+        "result": "−19.6% using displayed ratios",
+        "note": "Based on displayed rounded assumptions.",
+        "source": "Milestone 4 base cost structure",
+        "result_numeric": -0.196
+      },
+      {
+        "label": "Fixed-Cost Breakeven",
+        "formula": "Fixed operating costs / Gross-margin ratio",
+        "substitution": "10,954 / 58.88% = 18,603.94 ≈ 18,604",
+        "result": "About Rp18,604bn in the source model",
+        "note": "Inputs in Rp billion. This illustration uses rounded fixed costs and a gross margin of 58.88%, rounded from the historical-average source ratio.",
+        "source": "Milestone 4 breakeven illustration",
+        "result_numeric": 18603.940217391304
+      },
+      {
+        "label": "Ending Cash",
+        "formula": "Beginning cash + CFO + Investing cash flow + Financing cash flow + FX",
+        "substitution": "2028F: 7,642 − 2,542 − 4,132 ≈ 968",
+        "result": "Rp968bn displayed",
+        "note": "Rounded 2028F cash-flow figures. The complete linked statement is in the sidebar.",
+        "source": "Milestone 4 base pro forma cash flow",
+        "result_numeric": 968
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "Base forecast revenue (Rp bn)",
+        "value": "20,408 / 22,732 / 25,321",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Pro forma income statement"
+      },
+      {
+        "metric": "Base ending cash (Rp bn)",
+        "value": "14,282 / 7,642 / 968",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Pro forma balance sheet & cash flow"
+      },
+      {
+        "metric": "Base assumptions",
+        "value": "11.4% growth; 41.1% COGS; 78.5% cash OpEx; 16.3% capex",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Forecast assumptions table"
+      },
+      {
+        "metric": "Fixed-cost alternative",
+        "value": "Breakeven Rp 18,604 bn; EBIT 1,062 / 2,430 / 3,954",
+        "file": "Group4_Milestone4_GOTO.docx",
+        "path": "ASSIGNMENTS/ASSIGNMENT 13/Group4_Milestone4_GOTO.docx",
+        "location": "Breakeven table"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 11,
+        "mapping_note": "Identifying Operating Cost Behavior across GoTo's Rp 18.7 Trillion Cost Base",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week12",
+        "week_label": "Week 12",
+        "slide_num": 12,
+        "mapping_note": "Quantifying Operating Profit Sensitivity to Top-Line Revenue Fluctuations",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 5,
+        "mapping_note": "How Top-Line Revenue Drives Costs, Working Capital & Capital Needs",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 6,
+        "mapping_note": "Separating Operational Working Capital from Financing & Non-Operating Accounts",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 9,
+        "mapping_note": "Avoiding False Precision Under Competitive & Macroeconomic Uncertainty",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 13,
+        "mapping_note": "Reconciling Net Income, D&A, Working Capital & Capex to the Cash Plug",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 14,
+        "mapping_note": "Identifying Which Single Assumption Most Alters GoTo's Survival & Value",
+        "trace_role": "Proyeksi"
+      },
+      {
+        "week_id": "week13",
+        "week_label": "Week 13",
+        "slide_num": 17,
+        "mapping_note": "Scaling Fixed Costs with Sales, Circular Debt Interest & Hidden Cash Burn",
+        "trace_role": "Proyeksi"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "m4",
+        "assignment_code": "Milestone 4 (Week 13)",
+        "sheet_name": "Assumptions",
+        "cell_or_section_ref": "Rows 7-30",
+        "mapping_note": "Base (3-yr avg), Optimistic (2025 run-rate), Conservative scenarios.",
+        "evidence_img": "/evidence/goto_gross_profit_opex_highlighted.png",
+        "evidence_caption": "OpEx & Margin Drivers",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "m4",
+        "assignment_code": "Milestone 4 (Week 13)",
+        "sheet_name": "Pro Forma Balance Sheet",
+        "cell_or_section_ref": "Rows 7-25",
+        "mapping_note": "Ending cash Rp 968 bn in 2028F; zero balance check error.",
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Balance Sheet Plug",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
+  },
+  {
+    "slide_num": 18,
+    "is_appendix": true,
+    "layout_slide": 18,
+    "topic_id": "appendix_a6",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "section_tag": "Appendix — Valuation schedules",
+    "section_name": "Appendix — Valuation schedules",
+    "title": "Lampiran A6: Jadwal WACC Tertanggal, DCF, Residual Income & P/B Grab FY2025",
+    "display_title": "Lampiran A6: Jadwal WACC Tertanggal, DCF, Residual Income & P/B Grab FY2025",
+    "display_takeaway": "",
+    "subtitle": "",
+    "time_budget": "0 mins (appendix)",
+    "rubric_points": "Appendix backup",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "table": {
+      "title": "Rincian CAPM Pasar Berkembang & WACC (Semua Input Bersumber & Bertanggal)",
+      "headers": [
+        "Parameter / Hasil",
+        "Nilai",
+        "Sumber Eksternal & Tanggal Observasi Pasti"
+      ],
+      "rows": [
+        [
+          "Risk-Free Rate Proxy (Rf)",
+          "4.502%",
+          "Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026)"
+        ],
+        [
+          "Levered Beta & Mature ERP",
+          "0.59  |  4.23%",
+          "GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026)"
+        ],
+        [
+          "Indonesia Country Risk Premium (CRP)",
+          "2.465%",
+          "Damodaran ctryprem.xlsx (1 Jan 2026): Indonesia Baa2 rating-based CRP (1.618% spread x 1.5234 equity scalar)"
+        ],
+        [
+          "Cost of Equity (Ke = Rf + Beta x (ERP+CRP))",
+          "8.45%",
+          "4.502% + 0.59 x (4.23% + 2.465%) = 8.452%; hurdle used for Residual Income valuation"
+        ],
+        [
+          "Pre-Tax Debt (6.91%) & After-Tax Debt",
+          "5.39%",
+          "FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate)"
+        ],
+        [
+          "Capital Weights & Consolidated WACC",
+          "7.76%",
+          "77.4% Market Equity (Rp 26,550.3 bn @ Rp 25/sh) x 8.45% + 22.6% Debt (Rp 7,742.6 bn) x 5.39% = 7.76%"
+        ]
+      ],
+      "row_details": [
+        {
+          "detail_explanation": "Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.",
+          "formula": "Rf = 6.120% - 1.618% = 4.502%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B6",
+          "highlight_terms": [
+            "4.502%",
+            "6.120%"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
+          "formula": "Ke check tested across 0.59-1.25",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B7:B8",
+          "highlight_terms": [
+            "0.59",
+            "4.23%"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Adds Indonesia equity volatility premium above Baa2 sovereign spread.",
+          "formula": "CRP = 1.618% x 1.5234 = 2.465%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B9",
+          "highlight_terms": [
+            "2.465%"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Ke = 8.45% measures the minimum annual return shareholders demand.",
+          "formula": "Ke = 8.45%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B10",
+          "highlight_terms": [
+            "8.45%"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Uses GoTo's actual 2025 effective borrowing cost adjusted for the 22% statutory tax rate.",
+          "formula": "6.91% x 0.78 = 5.39%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B13:B15",
+          "highlight_terms": [
+            "5.39%",
+            "6.91%"
+          ],
+          "evidence_img": "/evidence/goto_note20_borrowings_summary.png",
+          "evidence_caption": "Notes 19-20 Debt Schedule"
+        },
+        {
+          "detail_explanation": "Consolidated WACC links automatically to DCF Valuation!B16.",
+          "formula": "WACC = 7.76%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B22",
+          "highlight_terms": [
+            "7.76%"
+          ],
+          "evidence_img": "/evidence/goto_balance_sheet_liabilities_equity_highlighted.png",
+          "evidence_caption": "WACC Weighting"
+        }
+      ]
+    },
+    "supporting_schedules": [
+      {
+        "title": "Jembatan Perbandingan DCF vs. Residual Income — Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
+        "headers": [
+          "Komponen Valuasi (Rp miliar / Rp per Saham)",
+          "Model DCF (WACC = 7,76%)",
+          "Residual Income (Ke = 8,45%)"
+        ],
+        "rows": [
+          [
+            "Input tahunan 2026F–2028F",
+            "FCFF: (7,738.7) / (7,006.3) / (7,152.6)",
+            "RI: (6,163.7) / (6,203.6) / (6,253.9)"
+          ],
+          [
+            "PV periode eksplisit",
+            "Rp (18,930.7) bn",
+            "Rp (15,860.4) bn"
+          ],
+          [
+            "PV nilai terminal, g = 3%",
+            "Rp (123,667.0) bn",
+            "Rp (92,621.5) bn"
+          ],
+          [
+            "Capital Bridge (Add Net Cash / Start Book Equity)",
+            "EV (142,597.7) + Net Cash 14,012.5",
+            "Book Equity 28,711.7 + PV(RI) (108,481.9)"
+          ],
+          [
+            "Implied Total Equity Value & Value per Share",
+            "Rp (128,585.2) bn  |  Rp (121.1) / share",
+            "Rp (79,770.2) bn  |  Rp (75.1) / share"
+          ]
+        ],
+        "row_details": [
+          {
+            "detail_explanation": "Input tahunan 2026F–2028F; FCFF: (7,738.7) / (7,006.3) / (7,152.6); RI: (6,163.7) / (6,203.6) / (6,253.9)",
+            "formula": "EBIT -4.0T to -5.0T; Capex 16.3%; Net Loss -3.7T to -4.5T",
+            "calc_steps": [],
+            "data_origin": "Assignment 14 'DCF Valuation' & 'Residual Income'",
+            "highlight_terms": [
+              "7,738.7",
+              "6,164"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "PV periode eksplisit; Rp (18,930.7) bn; Rp (15,860.4) bn",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "DCF!B22 & RI!B20",
+            "highlight_terms": [
+              "18,930.7",
+              "15,860.4"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "PV nilai terminal, g = 3%; Rp (123,667.0) bn; Rp (92,621.5) bn",
+            "formula": "WACC - g = 4.76% (DCF); Ke - g = 5.45% (RI)",
+            "calc_steps": [],
+            "data_origin": "DCF!B23 & RI!B21",
+            "highlight_terms": [
+              "123,667.0",
+              "92,621.5"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Capital Bridge (Add Net Cash / Start Book Equity); EV (142,597.7) + Net Cash 14,012.5; Book Equity 28,711.7 + PV(RI) (108,481.9)",
+            "formula": "Net Cash = 21,755 - 7,743 = 14,012.5 bn",
+            "calc_steps": [],
+            "data_origin": "DCF!B25 & RI!B22",
+            "highlight_terms": [
+              "14,012.5",
+              "28,711.7"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Implied Total Equity Value & Value per Share; Rp (128,585.2) bn  |  Rp (121.1) / share; Rp (79,770.2) bn  |  Rp (75.1) / share",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "DCF!B28 & RI!B25",
+            "highlight_terms": [
+              "121.1",
+              "75.1"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          }
+        ]
+      },
+      {
+        "title": "Beta / WACC / Terminal Growth Sensitivity & Breakeven Check",
+        "headers": [
+          "Sensitivity / Breakeven Test",
+          "Assumptions / Inputs",
+          "2026F / DCF Result",
+          "2027F-2028F / RI Result"
+        ],
+        "rows": [
+          [
+            "Base Scaled OpEx (78.5% of Rev)",
+            "Breakeven Rev Rp 27.2T-33.8T",
+            "EBIT: (4,003) bn | DOL: n/a",
+            "Below Breakeven (2026F-2028F)"
+          ],
+          [
+            "Fixed OpEx Freeze (Rp 10,954 bn)",
+            "Breakeven Rev Rp 18,604 bn",
+            "2026F EBIT: +1,062 bn (DOL 11.31x)",
+            "2027F +2,430 (5.51x) | 2028F +3,954 (3.77x)"
+          ],
+          [
+            "Base Valuation (Beta 0.59, g = 3.0%)",
+            "Ke = 8.45% | WACC = 7.76%",
+            "DCF: Rp (121.1) / share",
+            "Residual Income: Rp (75.1) / share"
+          ],
+          [
+            "Lower Terminal g (Beta 0.59, g = 2.0%)",
+            "Ke = 8.45% | WACC = 7.76%",
+            "DCF: Rp (99.9) / share",
+            "Residual Income: Rp (60.9) / share"
+          ],
+          [
+            "IDX Avg Beta (Beta 1.00, g = 3.0%)",
+            "Ke = 11.20% | WACC = 9.89%",
+            "DCF: Rp (79.9) / share",
+            "Residual Income: Rp (47.5) / share"
+          ],
+          [
+            "High-Beta Tech (Beta 1.25, g = 3.0%)",
+            "Ke = 12.87% | WACC = 11.18%",
+            "DCF: Rp (65.3) / share",
+            "Residual Income: Rp (38.3) / share"
+          ]
+        ],
+        "row_details": [
+          {
+            "detail_explanation": "Milestone 4 Base Case scales opex at 78.5%, staying unprofitable.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Milestone 4 Table 4",
+            "highlight_terms": [
+              "27.2T",
+              "4,003"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Freezing opex at Rp 10,954 bn drops breakeven to Rp 18,604 bn.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Final Report Table 5",
+            "highlight_terms": [
+              "18,604",
+              "1,062",
+              "11.31x"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Assignment 14 baseline WACC (7.76%) & terminal g (3.0%).",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Valuation Summary",
+            "highlight_terms": [
+              "121.1",
+              "75.1"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Lowering g to 2.0% leaves both DCF (-99.9) & RI (-60.9) deeply negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Sensitivity Check",
+            "highlight_terms": [
+              "99.9",
+              "60.9"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Market beta (1.00) yields WACC 9.89%, still deeply negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Beta 1.00 Check",
+            "highlight_terms": [
+              "79.9",
+              "47.5"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "High tech beta (1.25) yields WACC 11.18%, still negative.",
+            "formula": "",
+            "calc_steps": [],
+            "data_origin": "Beta 1.25 Check",
+            "highlight_terms": [
+              "65.3",
+              "38.3"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          }
+        ]
+      },
+      {
+        "title": "How forecast profit becomes FCFF (Rp bn)",
+        "headers": [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        "rows": [
+          [
+            "EBIT",
+            "(4,003.4)",
+            "(4,459.4)",
+            "(4,967.4)"
+          ],
+          [
+            "Less: Tax on EBIT",
+            "0.0",
+            "0.0",
+            "0.0"
+          ],
+          [
+            "EBIAT (NOPAT)",
+            "(4,003.4)",
+            "(4,459.4)",
+            "(4,967.4)"
+          ],
+          [
+            "Add: Depreciation & Amortization",
+            "190.4",
+            "1,151.1",
+            "1,934.0"
+          ],
+          [
+            "Less: Capital Expenditures",
+            "(3,329.8)",
+            "(3,709.1)",
+            "(4,131.6)"
+          ],
+          [
+            "Less: Increase in Net Working Capital",
+            "(595.9)",
+            "11.1",
+            "12.4"
+          ],
+          [
+            "Free Cash Flow to Firm (FCFF)",
+            "(7,738.7)",
+            "(7,006.3)",
+            "(7,152.6)"
+          ]
+        ],
+        "note": "Source: submitted Assignment 14 workbook. Cash uses are negative; a working-capital cash release is positive."
+      },
+      {
+        "title": "How forecast profit becomes residual income (Rp bn)",
+        "headers": [
+          "Line item",
+          "2026F",
+          "2027F",
+          "2028F"
+        ],
+        "rows": [
+          [
+            "Beginning Book Value of Equity",
+            "28,711.7",
+            "24,974.7",
+            "20,882.0"
+          ],
+          [
+            "Forecast Net Income",
+            "(3,737.0)",
+            "(4,092.7)",
+            "(4,488.9)"
+          ],
+          [
+            "Dividends Paid (reduces equity)",
+            "0.0",
+            "0.0",
+            "0.0"
+          ],
+          [
+            "Cost of Equity (linked)",
+            "8.45%",
+            "8.45%",
+            "8.45%"
+          ],
+          [
+            "Equity Charge (Beg. BVE x Cost of Equity)",
+            "2,426.7",
+            "2,110.9",
+            "1,765.0"
+          ],
+          [
+            "Residual Income",
+            "(6,163.7)",
+            "(6,203.6)",
+            "(6,253.9)"
+          ]
+        ],
+        "note": "Source: submitted Assignment 14 workbook. Cash uses are negative; a working-capital cash release is positive."
+      },
+      {
+        "title": "Perhitungan pembanding Grab",
+        "headers": [
+          "Ukuran",
+          "Nilai",
+          "Dasar"
+        ],
+        "rows": [
+          [
+            "GRAB price",
+            "US$4.99",
+            "31 Dec 2025 close"
+          ],
+          [
+            "GRAB parent equity / shares",
+            "US$6,728m / 4,097.647m",
+            "FY2025 audited; Class A + B"
+          ],
+          [
+            "GRAB BVPS / P/B",
+            "US$1.6419 / 3.0391x",
+            "Same USD basis; no FX conversion"
+          ],
+          [
+            "GoTo parent BVPS",
+            "Rp 29.9479",
+            "Rp31,805.025bn / 1,062.0102bn shares"
+          ],
+          [
+            "GoTo P/B benchmark",
+            "Rp 91.0 / share",
+            "3.0391x × Rp 29.9479"
+          ],
+          [
+            "P/E / EV–EBITDA",
+            "Excluded / withheld",
+            "Loss-making GoTo / EBITDA basis differs"
+          ]
+        ],
+        "row_details": [
+          {
+            "detail_explanation": "Harga penutupan saham Grab Holdings Limited (NASDAQ: GRAB) pada 31 Desember 2025, selaras dengan tanggal pelaporan FY2025.",
+            "formula": "Harga Saham GRAB = US$4.99 (penutupan 31 Des 2025)",
+            "calc_steps": [
+              "Harga penutupan pasar per 31 Des 2025 = US$4.99 / saham"
+            ],
+            "data_origin": "Market Multiples!B5 (Workbook Tugas 14)",
+            "highlight_terms": [
+              "4.99",
+              "GRAB"
+            ]
+          },
+          {
+            "detail_explanation": "Ekuitas induk auditan FY2025 Grab (US$6,728m) dibagi total saham biasa Kelas A (3.969.290.878) dan Kelas B (128.355.800).",
+            "formula": "Total Saham = 3,969,290,878 + 128,355,800 = 4,097,646,678",
+            "calc_steps": [
+              "Ekuitas induk (auditan FY2025) = US$6,728.0m",
+              "Saham biasa Kelas A = 3,969.291m",
+              "Saham biasa Kelas B = 128.356m",
+              "Total saham biasa = 4,097.647m"
+            ],
+            "data_origin": "Market Multiples!B6:B7 (Grab FY2025 20-F / Auditan)",
+            "highlight_terms": [
+              "6,728",
+              "4,097.647"
+            ]
+          },
+          {
+            "detail_explanation": "Nilai buku per saham (BVPS) dan rasio P/B Grab dihitung pada basis USD yang sama tanpa konversi kurs.",
+            "formula": "P/B GRAB = US$4.99 / (US$6,728m / 4,097.647m) = 3.0391x",
+            "calc_steps": [
+              "BVPS GRAB = US$6,728m / 4,097.646678m = US$1.641918 / saham",
+              "P/B GRAB = US$4.99 / US$1.641918 = 3.03913x"
+            ],
+            "data_origin": "Market Multiples!B8:B9 (Workbook Tugas 14)",
+            "highlight_terms": [
+              "1.6419",
+              "3.0391x"
+            ]
+          },
+          {
+            "detail_explanation": "Nilai buku per saham induk GoTo yang dinormalisasi memakai ekuitas pemilik entitas induk auditan FY2025 dan jumlah saham beredar.",
+            "formula": "BVPS GoTo = Rp 31.805,025 M / 1.062,0102 M saham = Rp 29,9479 / saham",
+            "calc_steps": [
+              "Ekuitas induk GoTo (FY2025) = Rp 31.805,025 miliar",
+              "Jumlah saham beredar = 1.062,0102 miliar lembar",
+              "BVPS ternormalisasi = Rp 29,9479 / saham"
+            ],
+            "data_origin": "Market Multiples!C16:C18 (LK Auditan GoTo FY2025)",
+            "highlight_terms": [
+              "29.9479",
+              "31,805.025"
+            ]
+          },
+          {
+            "detail_explanation": "Pembanding P/B bersyarat dengan mengalikan P/B Grab (3,0391x) dan BVPS induk GoTo (Rp 29,9479). Bukan median peer atau target harga.",
+            "formula": "Pembanding = 3.03913x × Rp 29.9479 = Rp 91.02 / saham (Rp 91.0)",
+            "calc_steps": [
+              "P/B Grab = 3.03913x",
+              "BVPS induk GoTo ternormalisasi = Rp 29.9479",
+              "Pembanding P/B tersirat = Rp 91.015 / saham (dibulatkan Rp 91.0)"
+            ],
+            "data_origin": "Market Multiples!D19 (Workbook Tugas 14)",
+            "highlight_terms": [
+              "91.0",
+              "3.0391x"
+            ]
+          },
+          {
+            "detail_explanation": "P/E dikeluarkan karena GoTo masih rugi GAAP; EV/EBITDA ditahan karena Adjusted EBITDA Grab tidak sebanding dengan basis EBITDA GoTo.",
+            "formula": "P/E = N/M (laba negatif); EV/EBITDA = Ditahan (basis berbeda)",
+            "calc_steps": [
+              "Rugi bersih GAAP FY2025 GoTo membuat rasio P/E tidak bermakna",
+              "Grab memakai Adjusted EBITDA sedangkan basis EBITDA GoTo berbeda"
+            ],
+            "data_origin": "Market Multiples & Laporan Akhir Bagian 6.3",
+            "highlight_terms": [
+              "Excluded",
+              "withheld"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Why the other comparators are excluded",
+        "headers": [
+          "Company",
+          "Reason"
+        ],
+        "rows": [
+          [
+            "Shopee / Sea",
+            "Shopee tidak tercatat terpisah. Sea juga mencakup Garena dan Monee, sehingga bauran bisnis berbeda dari GoTo."
+          ],
+          [
+            "BUKA",
+            "Keuntungan investasi mendistorsi perbandingan laba operasi; eksposur gaming, Mitra, serta investasi berbeda dari GoTo."
+          ],
+          [
+            "BELI",
+            "Ritel omnichannel dengan persediaan dan toko fisik. EBITDA FY2025 negatif, sehingga kelipatan positif 12x tidak digunakan."
+          ]
+        ]
+      }
+    ],
+    "analysis_points": [
+      {
+        "heading": "Metode Valuasi",
+        "text": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
+        "calc_steps": [
+          "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
+          "DCF has zero cash tax refund on negative EBIT. Inputs in Rp billion."
+        ],
+        "formula": "EBIT after operating tax + D&A − Capex − Increase in working capital"
+      },
+      {
+        "heading": "Proyeksi dan Nilai Terminal",
+        "text": "Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
+        "calc_steps": [
+          "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
+          "This terminal value is then discounted for three years."
+        ],
+        "formula": "Final-year FCFF × (1 + g) / (WACC − g)"
+      },
+      {
+        "heading": "Hasil Valuasi",
+        "text": "Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
+        "calc_steps": [
+          "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
+          "Values and shares are both in billions, giving rupiah per share. Assignment 14 share basis retained."
+        ],
+        "formula": "(Enterprise value − Net debt) / Shares outstanding"
+      }
+    ],
+    "study_explanation": "Lampiran ini menggabungkan seluruh tabel pendukung valuasi: pembangunan CAPM & WACC tertanggal (Ke 8,45%, Kd setelah pajak 5,39%, WACC 7,76%), rekonsiliasi DCF vs Residual Income dengan proyeksi sama dan g = 3,0%, uji sensitivitas beta/pertumbuhan, penurunan FCFF & RI 2026F–2028F, serta cross-check P/B Grab berbasis aktual FY2025 pada kedua sisi (Rp91,0/saham) beserta alasan pengecualian Sea, BUKA, dan BELI.",
+    "speaker_notes": "Metode Valuasi: DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nProyeksi dan Nilai Terminal: Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nHasil Valuasi: Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+    "source_footer": "Assignment 14 Workbook (Cost of Capital, DCF, RI); Grab 20-F FY2025; LK GOTO FY2025 PDF p.16",
+    "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
+    "calculation_notes": [
+      {
+        "label": "Cost of Equity",
+        "formula": "Rf + Beta × (Mature ERP + Country risk premium)",
+        "substitution": "4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%",
+        "result": "8.45%",
+        "note": "Assignment CAPM specification.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.0845205
+      },
+      {
+        "label": "After-Tax Debt Cost",
+        "formula": "Pre-tax debt rate × (1 − Tax rate)",
+        "substitution": "6.91% × (1 − 22%) = 5.3898%",
+        "result": "5.39%",
+        "note": "Model tax-shield assumption.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.053897999999999995
+      },
+      {
+        "label": "Capital Weights",
+        "formula": "Equity weight = E / (E + D); Debt weight = D / (E + D)",
+        "substitution": "E = 26,550.255; D = 7,742.643; E/(E+D) ≈ 77.4%; D/(E+D) ≈ 22.6%",
+        "result": "77.4% / 22.6%",
+        "note": "Inputs in Rp billion.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.7742202190086123
+      },
+      {
+        "label": "WACC",
+        "formula": "Equity weight × Ke + Debt weight × After-tax Kd",
+        "substitution": "[0.774220219 × 8.45205%] + [0.225779781 × 5.3898%] = 7.7606559%",
+        "result": "7.76%",
+        "note": "Unrounded weights and rates are used.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.07760655865659122
+      },
+      {
+        "label": "2026F FCFF",
+        "formula": "EBIT after operating tax + D&A − Capex − Increase in working capital",
+        "substitution": "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
+        "result": "−Rp7,738.7bn",
+        "note": "DCF has zero cash tax refund on negative EBIT. Inputs in Rp billion.",
+        "source": "Assignment 14 DCF Valuation!B6:B12",
+        "result_numeric": -7738.7
+      },
+      {
+        "label": "Present Value of Cash Flow",
+        "formula": "PV(FCFF in year t) = FCFF_t / (1 + WACC)^t",
+        "substitution": "2026F: −7,738.7 / (1 + 0.0776065587) = −7,181.4",
+        "result": "−Rp7,181.4bn",
+        "note": "Inputs in Rp billion. End-of-year discounting.",
+        "source": "Assignment 14 DCF Valuation",
+        "result_numeric": -7181.377969383859
+      },
+      {
+        "label": "DCF Terminal Value",
+        "formula": "Final-year FCFF × (1 + g) / (WACC − g)",
+        "substitution": "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
+        "result": "−Rp154,751.3bn",
+        "note": "This terminal value is then discounted for three years.",
+        "source": "Assignment 14 DCF Valuation",
+        "result_numeric": -154751.3243530784
+      },
+      {
+        "label": "DCF Value per Share",
+        "formula": "(Enterprise value − Net debt) / Shares outstanding",
+        "substitution": "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
+        "result": "−Rp121.1/share",
+        "note": "Values and shares are both in billions, giving rupiah per share. Assignment 14 share basis retained.",
+        "source": "Assignment 14 DCF Valuation",
+        "result_numeric": -121.07716748190161
+      },
+      {
+        "label": "2026F Residual Income",
+        "formula": "Forecast net income − Ke × Beginning book equity",
+        "substitution": "−3,737.0 − (8.45205% × 28,711.657) ≈ −6,163.724",
+        "result": "−Rp6,163.7bn",
+        "note": "Inputs in Rp billion.",
+        "source": "Assignment 14 Residual Income Valuation",
+        "result_numeric": -6163.7236054685
+      },
+      {
+        "label": "RI Value per Share",
+        "formula": "[Beginning book equity + PV(explicit RI) + PV(terminal RI)] / Shares",
+        "substitution": "(28,711.657 − 15,860.369 − 92,621.497) / 1,062.0102 ≈ −75.112",
+        "result": "−Rp75.1/share",
+        "note": "Values and shares are both in billions.",
+        "source": "Assignment 14 Residual Income Valuation",
+        "result_numeric": -75.11247015182498
+      },
+      {
+        "label": "Grab Parent BVPS",
+        "formula": "Parent equity / Year-end ordinary shares",
+        "substitution": "US$6,728m / 4,097.646678m = US$1.641918",
+        "result": "US$1.641918",
+        "note": "Class A and B ordinary shares included.",
+        "source": "Grab audited FY2025 20-F cover and F-5",
+        "result_numeric": 1.6419180394742663
+      },
+      {
+        "label": "Grab P/B",
+        "formula": "Share price / Parent BVPS",
+        "substitution": "US$4.99 / US$1.641918 = 3.039129x",
+        "result": "3.0391x",
+        "note": "Closing price: 31 December 2025.",
+        "source": "Grab audited FY2025 equity and historical share price",
+        "result_numeric": 3.039128555769917
+      },
+      {
+        "label": "GoTo Parent BVPS",
+        "formula": "Parent equity / Year-end ordinary shares",
+        "substitution": "Rp31,805.025bn / 1,062.010200395bn = Rp29.947947",
+        "result": "Rp29.9479",
+        "note": "Parent equity and year-end ordinary shares, matching the comparator basis.",
+        "source": "GoTo FY2025 parent-equity statement",
+        "result_numeric": 29.947946816490614
+      },
+      {
+        "label": "Grab P/B Benchmark",
+        "formula": "Grab P/B × GoTo Parent BVPS",
+        "substitution": "3.039128556 × Rp29.94794682 = Rp91.015660",
+        "result": "Rp91.0/share",
+        "note": "This is the approved conditional P/B benchmark.",
+        "source": "Revised Assignment 14 Grab-only comparison",
+        "result_numeric": 91.0156603566754
+      }
+    ],
+    "assignment_evidence": [
+      {
+        "metric": "CAPM / WACC",
+        "value": "Ke 8.45205%; WACC 7.76066%",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "Cost of Capital!B6:B22"
+      },
+      {
+        "metric": "Borrowing cost",
+        "value": "6.91% pre-tax; 5.3898% after-tax",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "Cost of Capital!B13:B15"
+      },
+      {
+        "metric": "DCF per share",
+        "value": "Rp -121.077167",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "DCF Valuation!B6:D28"
+      },
+      {
+        "metric": "Residual income per share",
+        "value": "Rp -75.112470",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "Residual Income Valuation!B6:D25"
+      },
+      {
+        "metric": "Common terminal growth",
+        "value": "3.00%",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "Terminal Growth!B23:B25"
+      },
+      {
+        "metric": "GoTo submitted BVPS",
+        "value": "Rp27.03 (original consolidated-equity basis), retained in original assignments",
+        "file": "Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "path": "ASSIGNMENTS/ASSSIGNMENT 14/Group4_FSA_Valuation_Workbook_GOTO.xlsx",
+        "location": "Market Multiples!B16"
+      },
+      {
+        "metric": "GoTo parent equity",
+        "value": "Rp31,805.025bn; normalized BVPS Rp29.94795",
+        "file": "LK GOTO 31 Dec 2025.pdf",
+        "path": "GOTO FINANCIAL REPORT/LK GOTO 31 Dec 2025.pdf",
+        "location": "PDF p.16, equity attributable to owners of parent"
+      },
+      {
+        "metric": "Grab parent equity / shares",
+        "value": "US$6,728m / 4,097,646,678 ordinary shares",
+        "file": "GRAB.pdf",
+        "path": "COMPETITORS/GRAB.pdf",
+        "location": "Cover, PDF p.2; balance sheet PDF p.149 (F-5)"
+      }
+    ],
+    "lecture_traces": [
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 6,
+        "mapping_note": "Adjusting Risk-Free Rate for Sovereign Default Spread and Adding Country Risk Premium",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 8,
+        "mapping_note": "Computing GoTo's Effective Pre-Tax (6.91%) and After-Tax (5.39%) Cost of Debt",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 9,
+        "mapping_note": "Weighting Cost of Equity (8.45%) and After-Tax Cost of Debt (5.39%)",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week9",
+        "week_label": "Week 9",
+        "slide_num": 14,
+        "mapping_note": "Quantifying the Impact of Debt Gearing on DuPont ROE, Solvency & Coverage",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 11,
+        "mapping_note": "Computing Free Cash Flow to Firm, Enterprise Value & Net-Cash Equity Bridge",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 12,
+        "mapping_note": "Why Fundamental g = Reinvestment x ROIC Fails for Loss-Making Firms",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 14,
+        "mapping_note": "Book Equity + Present Value of Earnings Above the 8.45% Cost of Equity",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 16,
+        "mapping_note": "Why Mathematical Equivalence Holds When Accounting Is Clean",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week5",
+        "week_label": "Week 5",
+        "slide_num": 15,
+        "mapping_note": "Choosing Peers & Harmonizing Accounting Standards",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week10",
+        "week_label": "Week 10",
+        "slide_num": 20,
+        "mapping_note": "Why Analysts Must Compute ROE and Gearing on Parent-Attributable Figures",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 17,
+        "mapping_note": "Pricing GoTo Against Pure-Play SEA Tech Peers (BUKA, GRAB, SE, BELI)",
+        "trace_role": "Valuasi"
+      },
+      {
+        "week_id": "week14",
+        "week_label": "Week 14",
+        "slide_num": 18,
+        "mapping_note": "Fixing Negative EPS (-Rp 1.41) & Bridging EV/EBITDA with Net Cash (+Rp 13.20/sh)",
+        "trace_role": "Valuasi"
+      }
+    ],
+    "assignment_traces": [
+      {
+        "assignment_id": "a14",
+        "assignment_code": "Assignment 14 (Week 14)",
+        "sheet_name": "Cost of Capital",
+        "cell_or_section_ref": "Rows 6-22",
+        "mapping_note": "Sourced & dated Rf (4.502%), Beta (0.59), Ke (8.45%), Kd (5.39%), WACC (7.76%).",
+        "evidence_img": "/evidence/goto_note20_borrowings_summary.png",
+        "evidence_caption": "Debt Principal & Effective Rate",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a14",
+        "assignment_code": "Assignment 14 (Week 14)",
+        "sheet_name": "DCF Valuation",
+        "cell_or_section_ref": "Rows 6-28",
+        "mapping_note": "FCFF burn (-7.0T to -7.7T/yr) and Equity Value -Rp 121.1/sh.",
+        "evidence_img": "/evidence/goto_cash_flows_p1_highlighted.png",
+        "evidence_caption": "DCF Cash Flows",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a14",
+        "assignment_code": "Assignment 14 (Week 14)",
+        "sheet_name": "Residual Income Valuation",
+        "cell_or_section_ref": "Rows 6-25",
+        "mapping_note": "BVE Rp 28,711.7 bn start and -Rp 75.1/sh output.",
+        "evidence_img": "/evidence/goto_equity_deficit_highlighted.png",
+        "evidence_caption": "Clean-Surplus Book Equity",
+        "trace_role": "Workbook & Filing Source"
+      },
+      {
+        "assignment_id": "a14",
+        "assignment_code": "Assignment 14 (Week 14)",
+        "sheet_name": "Market Multiples",
+        "cell_or_section_ref": "Rows 5-19",
+        "mapping_note": "Original Assignment 14 retained for traceability. Current presentation supersedes its peer group with the user-directed Grab-only P/B benchmark.",
+        "evidence_img": "/evidence/goto_balance_sheet_assets_highlighted.png",
+        "evidence_caption": "Net Cash Adjustment",
+        "trace_role": "Workbook & Filing Source"
+      }
+    ]
   }
 ]

@@ -127,7 +127,7 @@ const editorialRows = computed(() => {
     },
     {
       name: 'Tokopedia',
-      value: '24.99%',
+      value: 'Rp 820 bn',
       img: '/visuals/row_tokopedia.png',
       text: id ? 'Kepemilikan tersisa. Rp 820 miliar pendapatan jasa.' : 'Retained stake. Rp 820 bn in service fee revenue.',
       detail_explanation: id
@@ -543,12 +543,15 @@ const provisionGrowth = computed(() => {
               </div>
             </div>
             <template v-else-if="table">
+              <div v-if="slide.is_appendix && table.title" class="slide-appendix-schedule">
+                <h3>{{ table.title }}</h3>
+              </div>
               <table
                 class="slide-financial-table"
                 :class="{
                   'slide-table-dense': slide.is_appendix,
-                  'slide-table-wacc': layoutSlide === 7,
-                  'slide-table-multiples': layoutSlide === 9,
+                  'slide-table-wacc': !slide.is_appendix && layoutSlide === 7,
+                  'slide-table-multiples': !slide.is_appendix && layoutSlide === 9,
                 }"
               >
                 <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
@@ -562,6 +565,27 @@ const provisionGrowth = computed(() => {
                   </tr>
                 </tbody>
               </table>
+              <p v-if="slide.is_appendix && table.note" class="slide-appendix-note">{{ table.note }}</p>
+              <template v-if="slide.is_appendix && slide.supporting_schedules?.length">
+                <div v-for="(sched, sIdx) in slide.supporting_schedules" :key="'apx-sched-'+sIdx" class="slide-appendix-schedule">
+                  <h3>{{ sched.title }}</h3>
+                  <table class="slide-financial-table slide-table-dense">
+                    <thead><tr><th v-for="(cell, i) in sched.headers" :key="i">{{ cell }}</th></tr></thead>
+                    <tbody>
+                      <tr
+                        v-for="(row, r) in sched.rows"
+                        :key="r"
+                        @click="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: sched.title, text: row.join(' | ') })"
+                        tabindex="0"
+                        @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: sched.title, text: row.join(' | ') })"
+                      >
+                        <td v-for="(cell, c) in row" :key="c">{{ cell }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p v-if="sched.note" class="slide-appendix-note">{{ sched.note }}</p>
+                </div>
+              </template>
             </template>
             <button v-else-if="slide.chart_url" class="slide-chart" @click="emit('zoom', slide.chart_url, title)" :aria-label="lang === 'id' ? 'Perbesar grafik' : 'Enlarge chart'">
               <img :src="slide.chart_url" :alt="slide.title" />
@@ -787,7 +811,10 @@ const provisionGrowth = computed(() => {
 .slide-table-dense td { padding: .55cqw .7cqw; }
 .slide-table-dense th { padding: .65cqw .7cqw; }
 .slide-table-dense td:first-child, .slide-table-dense th:first-child { width: 30%; }
-.slide-appendix .slide-evidence { padding: 1.2cqw; }
+.slide-appendix .slide-evidence { padding: 1.2cqw; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 1.2cqw; overflow-y: auto; }
+.slide-appendix-schedule { display: flex; flex-direction: column; gap: .45cqw; }
+.slide-appendix-schedule h3 { margin: .2cqw 0 0; font-size: .95cqw; color: #006b23; font-weight: 700; }
+.slide-appendix-note { margin: 0; font-size: .78cqw; color: #526a59; }
 .slide-appendix .slide-financial-table:not(.slide-table-dense) { font-size: 1.05cqw; }
 .slide-cover { background: linear-gradient(135deg, #007222 0%, #005419 100%); }
 .slide-cover-top { position: absolute; left: 5%; right: 5%; top: 7%; display: flex; justify-content: space-between; align-items: center; }

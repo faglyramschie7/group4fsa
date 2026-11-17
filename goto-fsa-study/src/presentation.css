@@ -69,22 +69,99 @@
 .drawer-backdrop .source-drawer .drawer-schedule-table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; }
 .drawer-backdrop .source-drawer .drawer-schedule-table :is(th,td) { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #dce7df; }
 .drawer-backdrop .source-drawer .drawer-schedule-table th { background: #edf6ef; color: #153b22; font-weight: 650; }
-.drawer-backdrop .source-drawer .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #dce7df; border-radius: 6px; background: #fff; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar { margin-bottom: 0; min-height: 70px; max-height: none; overflow: visible; background: #edf4f8 !important; border-color: #93c5fd !important; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-bar-top { align-items: flex-start; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .worksheet-cell-ref { background: #fff !important; color: #123b57 !important; border-color: #93c5fd !important; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .worksheet-fx { color: #475569 !important; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar code { white-space: normal; overflow: visible; text-overflow: unset; overflow-wrap: anywhere; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-val-tag { color: #475569 !important; }
+.drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-val-display { color: #123b57 !important; white-space: normal; overflow: visible; }
+.drawer-backdrop .source-drawer .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #dce7df; border-radius: 6px; background: #fff !important; }
 .drawer-backdrop .source-drawer .drawer-formula-table { width: 100%; min-width: 920px; table-layout: fixed; border-collapse: collapse; color: #24382b; font-size: 12px; line-height: 1.65; }
 .drawer-backdrop .source-drawer .drawer-formula-table :is(th,td) { padding: 12px; border: 1px solid #dce7df; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead th { background: #edf6ef; color: #153b22; font-weight: 700; }
-.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(1) { width: 22%; }
-.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(2) { width: 15%; }
-.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(3) { width: 28%; }
-.drawer-backdrop .source-drawer .drawer-formula-table th:nth-child(4) { width: 35%; }
-.drawer-backdrop .source-drawer .drawer-formula-table tbody th { background: #fff; color: #153b22; font-weight: 650; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead .worksheet-letters th { background: #f3f8f4 !important; color: #5f7265 !important; font-size: 11px; font-weight: 700; padding: 6px 12px; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead .worksheet-headings th { background: #edf6ef !important; color: #153b22 !important; font-weight: 700; }
+.drawer-backdrop .source-drawer .drawer-formula-table .row-num-th { width: 38px; text-align: center; background: #f3f8f4 !important; color: #5f7265 !important; font-weight: 600; padding: 10px 6px; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(2) { width: 22%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(3) { width: 14%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(4) { width: 27%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(5) { width: 33%; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:nth-child(even) { background: #fff !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody th[scope="row"] { background: #fff !important; color: #153b22 !important; font-weight: 650; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody td { background: #fff !important; color: #24382b !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody td.drawer-formula-result { color: #007f2a !important; font-weight: 650; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td) { cursor: pointer; transition: background 0.12s ease; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover { background: #f3f8f4 !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td) { background: #f3f8f4 !important; color: #24382b !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover td.drawer-formula-result { color: #007f2a !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-selected,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-selected { background: #dceaf1 !important; color: #123b57 !important; outline: 2px solid #2563eb; outline-offset: -2px; }
 .drawer-backdrop .source-drawer .drawer-formula-result { color: #007f2a; font-weight: 650; }
 .drawer-backdrop .source-drawer :is(.drawer-formula-source,.drawer-formula-note) { display: block; margin-top: 8px; color: #5f7265; font-size: 11px; font-weight: 400; line-height: 1.6; }
 .drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table:has(tr > :nth-child(6)) { min-width: 860px; }
 .drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table td:nth-child(6) { min-width: 260px; color: #153b22; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; }
 .drawer-backdrop .source-drawer .drawer-section { gap: 12px; }
-.drawer-backdrop .source-drawer .drawer-sec-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: transparent; padding: 0 0 10px; border: 0; border-bottom: 1px solid #dce7df; border-radius: 0; color: #006b23; font-size: 13px; font-weight: 700; line-height: 1.5; margin: 0; }
-.drawer-backdrop .source-drawer .drawer-sec-title > span { display: grid; place-items: center; flex-shrink: 0; width: 24px; height: 24px; background: #e7f3e9; color: #006b23; border-radius: 50%; font-size: 11px; }
+.drawer-backdrop .source-drawer .drawer-sec-title,
+.drawer-popout-card .drawer-sec-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: transparent; padding: 0 0 10px; border: 0; border-bottom: 1px solid #dce7df; border-radius: 0; color: #006b23; font-size: 13px; font-weight: 700; line-height: 1.5; margin: 0; }
+.drawer-backdrop .source-drawer .drawer-sec-title .drawer-sec-count,
+.drawer-popout-card .drawer-sec-title .drawer-sec-count { display: grid; place-items: center; flex-shrink: 0; width: 24px; height: 24px; background: #e7f3e9; color: #006b23; border-radius: 50%; font-size: 11px; }
+.drawer-sec-actions { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.drawer-box-hdr-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.drawer-popout-btn { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; padding: 0; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff; color: #153b22; font-size: 14px; font-weight: 700; line-height: 1; cursor: pointer; flex-shrink: 0; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+.drawer-popout-btn:hover { background: #008c2c; color: #fff; border-color: #008c2c; }
+.drawer-popout-overlay { position: fixed; inset: 0; z-index: 980; background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.drawer-popout-card { width: min(1140px, 94vw); max-height: 88vh; display: flex; flex-direction: column; background: #f6f9f6; border: 1px solid #cbd5e1; border-radius: 14px; box-shadow: 0 24px 64px rgba(15, 23, 42, 0.35); overflow: hidden; }
+.drawer-popout-hdr { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 22px; background: #006b23; color: #fff; flex-shrink: 0; }
+.drawer-popout-kicker { font-size: 15px; font-weight: 700; line-height: 1.3; }
+.drawer-popout-close { width: 32px; height: 32px; border-radius: 6px; border: 1px solid #ffffff60; background: transparent; color: #fff; font-size: 22px; line-height: 1; display: grid; place-items: center; cursor: pointer; flex-shrink: 0; }
+.drawer-popout-close:hover { background: #ffffff18; border-color: #fff; }
+.drawer-popout-body { padding: 24px; overflow-y: auto; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.drawer-popout-card .drawer-worksheet-formula-bar { margin-bottom: 0; min-height: 70px; max-height: none; overflow: visible; background: #edf4f8 !important; border-color: #93c5fd !important; position: sticky; top: 0; z-index: 5; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); }
+.drawer-worksheet-formula-bar.is-formula-locked { border-color: #2563eb !important; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); }
+.formula-lock-badge { margin-left: auto; padding: 2px 8px; border-radius: 999px; background: #dbeafe; color: #1e40af; font-size: 10px; font-weight: 700; letter-spacing: 0.03em; flex-shrink: 0; }
+.drawer-popout-card .drawer-worksheet-formula-bar .formula-bar-top { align-items: flex-start; }
+.drawer-popout-card .drawer-worksheet-formula-bar .worksheet-cell-ref { background: #fff !important; color: #123b57 !important; border-color: #93c5fd !important; }
+.drawer-popout-card .drawer-worksheet-formula-bar .worksheet-fx { color: #475569 !important; }
+.drawer-popout-card .drawer-worksheet-formula-bar code { white-space: normal; overflow: visible; text-overflow: unset; overflow-wrap: anywhere; }
+.drawer-popout-card .drawer-worksheet-formula-bar .formula-val-tag { color: #475569 !important; }
+.drawer-popout-card .drawer-worksheet-formula-bar .formula-val-display { color: #123b57 !important; white-space: normal; overflow: visible; }
+.drawer-popout-card .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #dce7df; border-radius: 6px; background: #fff !important; }
+.drawer-popout-card .drawer-support-tbl-hdr { background: #edf6ef !important; color: #006b23 !important; padding: 8px 12px; font-weight: 650; }
+.drawer-popout-card .drawer-formula-table { width: 100%; min-width: 880px; table-layout: fixed; border-collapse: collapse; color: #24382b; font-size: 12px; line-height: 1.65; }
+.drawer-popout-card .drawer-formula-table :is(th,td) { padding: 12px; border: 1px solid #dce7df; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
+.drawer-popout-card .drawer-formula-table thead .worksheet-letters th { background: #f3f8f4 !important; color: #5f7265 !important; font-size: 11px; font-weight: 700; padding: 6px 12px; }
+.drawer-popout-card .drawer-formula-table thead .worksheet-headings th { background: #edf6ef !important; color: #153b22 !important; font-weight: 700; }
+.drawer-popout-card .drawer-formula-table .row-num-th { width: 38px; text-align: center; background: #f3f8f4 !important; color: #5f7265 !important; font-weight: 600; padding: 10px 6px; }
+.drawer-popout-card .drawer-formula-table thead th:nth-child(2) { width: 22%; }
+.drawer-popout-card .drawer-formula-table thead th:nth-child(3) { width: 14%; }
+.drawer-popout-card .drawer-formula-table thead th:nth-child(4) { width: 27%; }
+.drawer-popout-card .drawer-formula-table thead th:nth-child(5) { width: 33%; }
+.drawer-popout-card .drawer-formula-table tbody tr,
+.drawer-popout-card .drawer-formula-table tbody tr:nth-child(even) { background: #fff !important; }
+.drawer-popout-card .drawer-formula-table tbody th[scope="row"] { background: #fff !important; color: #153b22 !important; font-weight: 650; }
+.drawer-popout-card .drawer-formula-table tbody td { background: #fff !important; color: #24382b !important; }
+.drawer-popout-card .drawer-formula-table tbody td.drawer-formula-result { color: #007f2a !important; font-weight: 650; }
+.drawer-popout-card :is(.drawer-formula-source,.drawer-formula-note) { display: block; margin-top: 6px; color: #5f7265 !important; font-size: 11px; font-weight: 400; line-height: 1.55; }
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td) { cursor: pointer; transition: background 0.12s ease; }
+.drawer-popout-card .drawer-formula-table tbody tr:hover { background: #f3f8f4 !important; }
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td) { background: #f3f8f4 !important; color: #24382b !important; }
+.drawer-popout-card .drawer-formula-table tbody tr:hover td.drawer-formula-result { color: #007f2a !important; }
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-selected,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-selected { background: #dceaf1 !important; color: #123b57 !important; outline: 2px solid #2563eb; outline-offset: -2px; }
+.drawer-popout-card .drawer-summary-box,
+.drawer-popout-card .drawer-calc-box,
+.drawer-popout-card .drawer-featured-ev,
+.drawer-popout-card .drawer-trace-card { background: #fff; border: 1px solid #dce7df; border-radius: 8px; box-shadow: none; padding: 18px; color: #24382b; }
+.drawer-popout-card .drawer-summary-box { border-left: 3px solid #008c2c; font-size: 14px; line-height: 1.7; }
+.drawer-popout-card .drawer-summary-box strong { color: #006b23; }
+.drawer-popout-card .drawer-summary-box p { margin: 0; white-space: pre-line; }
+.drawer-popout-card .drawer-section { display: flex; flex-direction: column; gap: 12px; }
+.drawer-popout-card .drawer-thumb { display: block; width: 100%; max-height: 440px; object-fit: contain; padding: 0; border: 1px solid #e2ebe5; border-radius: 5px; background: #fff; }
+.drawer-popout-card .trace-mini-table-wrap { background: #fff; border-color: #dce7df; overflow-x: auto; }
+.drawer-popout-card .trace-mini-table :is(th,td) { color: #24382b; background: #fff; border-color: #e2ebe5; }
+.drawer-popout-card .trace-mini-table th { background: #edf6ef; color: #153b22; }
+.drawer-popout-card .drawer-support-tbl-hdr { color: #006b23 !important; background: #edf6ef; font-weight: 600; line-height: 1.5; }
 .drawer-backdrop .source-drawer .trace-item-top { align-items: flex-start; flex-wrap: nowrap; gap: 12px; }
 .drawer-backdrop .source-drawer .trace-pill { padding: 0; border: 0; border-radius: 0; background: transparent; color: #153b22; font-size: 14px; line-height: 1.55; font-weight: 650; }
 .drawer-backdrop .source-drawer .trace-jump-btn { background: #007f2a; color: #fff; border: 1px solid #007f2a; border-radius: 5px; padding: 6px 12px; white-space: nowrap; font-size: 12px; flex-shrink: 0; }
@@ -111,6 +188,45 @@
 .drawer-backdrop .source-drawer .support-hit-badge { background: #d4ecd9; color: #005c1e; border-color: #a7cdb1; }
 .drawer-backdrop .source-drawer :is(button,[tabindex]):focus-visible { outline: 2px solid #008c2c; outline-offset: 3px; }
 .drawer-backdrop .source-drawer .drawer-close-btn:focus-visible { outline-color: white; }
+
+/* Excel-style referenced cell highlighting & formula bar color tokens */
+.formula-ref-token { display: inline-block; padding: 0 5px; border-radius: 4px; font-weight: 700; line-height: 1.45; }
+.formula-ref-token.ref-color-0 { background: #dbeafe; color: #1d4ed8; }
+.formula-ref-token.ref-color-1 { background: #fee2e2; color: #b91c1c; }
+.formula-ref-token.ref-color-2 { background: #ede9fe; color: #6d28d9; }
+.formula-ref-token.ref-color-3 { background: #fef3c7; color: #b45309; }
+.formula-ref-token.ref-color-4 { background: #ccfbf1; color: #0f766e; }
+.formula-ref-token.ref-color-5 { background: #fce7f3; color: #be185d; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-0,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-0,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-0,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-0 { background: #eff6ff !important; outline: 2px dashed #2563eb; outline-offset: -2px; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-1,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-1,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-1,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-1 { background: #fef2f2 !important; outline: 2px dashed #dc2626; outline-offset: -2px; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-2,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-2,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-2,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-2 { background: #f5f3ff !important; outline: 2px dashed #7c3aed; outline-offset: -2px; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-3,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-3,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-3,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-3 { background: #fffbeb !important; outline: 2px dashed #d97706; outline-offset: -2px; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-4,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-4,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-4,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-4 { background: #f0fdfa !important; outline: 2px dashed #0d9488; outline-offset: -2px; }
+
+.drawer-backdrop .source-drawer .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-5,
+.drawer-backdrop .source-drawer .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-5,
+.drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-5,
+.drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-ref-highlight.ref-color-5 { background: #fdf2f8 !important; outline: 2px dashed #db2777; outline-offset: -2px; }
 @media (max-width: 480px) {
   .drawer-backdrop .source-drawer .drawer-top-hdr { padding: 20px 16px; }
   .drawer-backdrop .source-drawer .drawer-scroll-body { padding: 16px; }
