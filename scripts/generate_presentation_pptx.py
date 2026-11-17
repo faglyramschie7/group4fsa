@@ -1,377 +1,394 @@
-"""Generate Group4_Presentation_GOTO.pptx (EN & ID) from presentation_deck*.json."""
+"""Build editable PowerPoint slides using the web deck's green 16:9 layout.
+
+The JSON used by FinancialSlide.vue remains the content source. Pillow previews
+use the same measured lines and geometry as the editable PowerPoint shapes.
+"""
 from pathlib import Path
 import json
+import math
+from copy import deepcopy
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
-from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
+from pptx.oxml.xmlchemy import OxmlElement
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'goto-fsa-study' / 'src' / 'data'
-PUBLIC = ROOT / 'goto-fsa-study' / 'public'
-LOGO_PATH = PUBLIC / 'goto_logo.png'
-
-GREEN_DARK = RGBColor(0x00, 0x54, 0x19)
-GREEN_MAIN = RGBColor(0x00, 0x6B, 0x23)
-GREEN_LIGHT = RGBColor(0xED, 0xF6, 0xEF)
-GREEN_BORDER = RGBColor(0xDC, 0xE7, 0xDF)
-TEXT_DARK = RGBColor(0x15, 0x3B, 0x22)
-TEXT_BODY = RGBColor(0x24, 0x38, 0x2B)
-TEXT_MUTED = RGBColor(0x5F, 0x72, 0x65)
-WHITE = RGBColor(0xFF, 0xFF, 0xFF)
-BG_LIGHT = RGBColor(0xF6, 0xF9, 0xF6)
+DATA = ROOT / 'goto-fsa-study/src/data'
+PUBLIC = ROOT / 'goto-fsa-study/public'
+PREVIEW = ROOT / 'outputs/presentation-preview'
+W, H = 1280, 720
+SCALE = 914400 / 96
+WHITE, DARK, BODY = '#ffffff', '#173d25', '#253d2d'
+GREEN, PALE, RULE, MUTED = '#008c2c', '#edf6ef', '#dce8df', '#63786a'
+FONT_DIR = Path('/System/Library/Fonts/Supplemental')
 
 
-def set_slide_bg(slide, color):
-    bg = slide.background
-    fill = bg.fill
-    fill.solid()
-    fill.fore_color.rgb = color
+def emu(px): return round(px * SCALE)
+def rgb(color): return RGBColor.from_string(color.lstrip('#'))
+def font(size, bold=False):
+    return ImageFont.truetype(str(FONT_DIR / ('Arial Bold.ttf' if bold else 'Arial.ttf')), round(size * 2))
 
 
-def add_header_footer(slide, section_label, title_text, source_footer, folio_text):
-    set_slide_bg(slide, BG_LIGHT)
-
-    # Top green banner
-    hdr = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0), Inches(0), Inches(13.333), Inches(1.15))
-    hdr.fill.solid()
-    hdr.fill.fore_color.rgb = GREEN_MAIN
-    hdr.line.fill.background()
-
-    tb = slide.shapes.add_textbox(Inches(0.5), Inches(0.14), Inches(10.8), Inches(0.92))
-    tf = tb.text_frame
-    tf.word_wrap = True
-    p0 = tf.paragraphs[0]
-    p0.text = section_label.upper()
-    p0.font.size = Pt(10)
-    p0.font.bold = True
-    p0.font.color.rgb = RGBColor(0xC5, 0xF1, 0xCB)
-
-    p1 = tf.add_paragraph()
-    p1.text = title_text
-    p1.font.size = Pt(22)
-    p1.font.bold = True
-    p1.font.color.rgb = WHITE
-
-    if LOGO_PATH.is_file():
-        logo_bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(11.65), Inches(0.22), Inches(1.2), Inches(0.7))
-        logo_bg.fill.solid()
-        logo_bg.fill.fore_color.rgb = WHITE
-        logo_bg.line.fill.background()
-        slide.shapes.add_picture(str(LOGO_PATH), Inches(11.75), Inches(0.28), width=Inches(1.0))
-
-    # Footer bar
-    ft = slide.shapes.add_textbox(Inches(0.5), Inches(7.08), Inches(12.333), Inches(0.32))
-    ft_tf = ft.text_frame
-    ft_tf.word_wrap = True
-    fp = ft_tf.paragraphs[0]
-    fp.text = f"GROUP 4  /  IDX: GOTO   |   {source_footer or ''}   |   {folio_text}"
-    fp.font.size = Pt(8.5)
-    fp.font.color.rgb = TEXT_MUTED
+def measure(text, size, bold=False):
+    return font(size, bold).getlength(str(text)) / 2
 
 
-def add_table(slide, headers, rows, left, top, width, height, font_size=10):
-    n_rows = 1 + len(rows)
-    n_cols = len(headers)
-    if n_cols == 0 or n_rows == 0:
-        return
-    shape = slide.shapes.add_table(n_rows, n_cols, left, top, width, height)
-    tbl = shape.table
-
-    for c_idx, h in enumerate(headers):
-        cell = tbl.cell(0, c_idx)
-        cell.fill.solid()
-        cell.fill.fore_color.rgb = GREEN_MAIN
-        cell.vertical_anchor = MSO_ANCHOR.MIDDLE
-        p = cell.text_frame.paragraphs[0]
-        p.text = str(h)
-        p.font.size = Pt(font_size)
-        p.font.bold = True
-        p.font.color.rgb = WHITE
-
-    for r_idx, row in enumerate(rows):
-        bg_color = WHITE if r_idx % 2 == 0 else GREEN_LIGHT
-        for c_idx in range(n_cols):
-            val = row[c_idx] if c_idx < len(row) else ''
-            cell = tbl.cell(r_idx + 1, c_idx)
-            cell.fill.solid()
-            cell.fill.fore_color.rgb = bg_color
-            cell.vertical_anchor = MSO_ANCHOR.MIDDLE
-            p = cell.text_frame.paragraphs[0]
-            p.text = str(val)
-            p.font.size = Pt(font_size - 0.5)
-            p.font.bold = (c_idx == 0)
-            p.font.color.rgb = TEXT_DARK if c_idx == 0 else TEXT_BODY
+def lines_for(text, width, size, bold=False):
+    lines = []
+    for para in str(text).split('\n'):
+        words = para.split()
+        line = ''
+        for word in words:
+            candidate = f'{line} {word}'.strip()
+            if line and measure(candidate, size, bold) > width:
+                lines.append(line)
+                line = word
+            else:
+                line = candidate
+        lines.append(line)
+    return lines
 
 
-def build_cover(prs, slide_data, is_id, total_slides):
-    slide = prs.slides.add_slide(prs.slide_layouts[6])
-    set_slide_bg(slide, GREEN_DARK)
+class Canvas:
+    gradient_preview = None
+    def __init__(self, prs):
+        self.slide = prs.slides.add_slide(prs.slide_layouts[6])
+        # Native, editable DrawingML gradient matching FinancialSlide.vue.
+        fill = self.slide.background.fill
+        fill.solid()
+        fill.fore_color.rgb = rgb('#005419')
+        bgpr = self.slide.background._cSld.bg.bgPr
+        for node in list(bgpr): bgpr.remove(node)
+        grad = OxmlElement('a:gradFill')
+        stops = OxmlElement('a:gsLst')
+        for pos, color in [('0', '007222'), ('100000', '005419')]:
+            stop = OxmlElement('a:gs'); stop.set('pos', pos)
+            c = OxmlElement('a:srgbClr'); c.set('val', color); stop.append(c); stops.append(stop)
+        grad.append(stops)
+        lin = OxmlElement('a:lin'); lin.set('ang', '2700000'); lin.set('scaled', '1'); grad.append(lin)
+        bgpr.append(grad)
+        if Canvas.gradient_preview is None:
+            image = Image.new('RGB', (W*2,H*2))
+            pixels=image.load()
+            for yy in range(H*2):
+                for xx in range(W*2):
+                    t=(xx/2+yy/2)/(W+H)
+                    pixels[xx,yy]=(0,round(114-30*t),round(34-9*t))
+            Canvas.gradient_preview=image
+        self.img=Canvas.gradient_preview.copy()
+        self.draw = ImageDraw.Draw(self.img)
 
-    if LOGO_PATH.is_file():
-        logo_bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.6), Inches(0.45), Inches(1.5), Inches(0.85))
-        logo_bg.fill.solid()
-        logo_bg.fill.fore_color.rgb = WHITE
-        logo_bg.line.fill.background()
-        slide.shapes.add_picture(str(LOGO_PATH), Inches(0.72), Inches(0.55), width=Inches(1.25))
+    def rect(self, x,y,w,h,color,stroke=None):
+        sh = self.slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, emu(x),emu(y),emu(w),emu(h))
+        sh.fill.solid(); sh.fill.fore_color.rgb=rgb(color)
+        if stroke: sh.line.color.rgb=rgb(stroke); sh.line.width=Pt(.5)
+        else: sh.line.fill.background()
+        self.draw.rectangle((x*2,y*2,(x+w)*2,(y+h)*2),fill=color,outline=stroke,width=1)
+        return sh
 
-    tb = slide.shapes.add_textbox(Inches(0.6), Inches(1.65), Inches(7.0), Inches(4.2))
-    tf = tb.text_frame
-    tf.word_wrap = True
-    p0 = tf.paragraphs[0]
-    p0.text = 'PT GoTo Gojek Tokopedia Tbk (IDX: GOTO)'
-    p0.font.size = Pt(14)
-    p0.font.color.rgb = RGBColor(0xC5, 0xF1, 0xCB)
+    def rule(self,x,y,w,color=RULE): self.rect(x,y,w,.65,color)
 
-    p1 = tf.add_paragraph()
-    p1.text = 'GoTo'
-    p1.font.size = Pt(54)
-    p1.font.bold = True
-    p1.font.color.rgb = WHITE
+    def text(self, text,x,y,w,h,size=14,color=BODY,bold=False,align='left',min_size=None):
+        if not text: return 0
+        minimum = min_size or size
+        while True:
+            lines = lines_for(text,w,size,bold)
+            leading=size*1.45
+            if (len(lines)-1)*leading+size*1.1 <= h+.1 or size<=minimum: break
+            size-=.5
+        if (len(lines)-1)*leading+size*1.1>h+2:
+            raise ValueError(f'Text overflow at ({x},{y}): {str(text)[:90]} ({len(lines)*leading:.1f}>{h})')
+        for i,line in enumerate(lines):
+            xx=x
+            linew=measure(line,size,bold)
+            if align=='right': xx=x+w-linew
+            elif align=='center': xx=x+(w-linew)/2
+            shape=self.slide.shapes.add_textbox(emu(xx),emu(y+i*leading),emu(max(linew+8,w if align=='left' else linew+8)),emu(leading+3))
+            tf=shape.text_frame;tf.word_wrap=False
+            tf.margin_left=tf.margin_right=tf.margin_top=tf.margin_bottom=0
+            p=tf.paragraphs[0];p.text=line;p.font.name='Arial';p.font.size=Pt(size*.75);p.font.bold=bold;p.font.color.rgb=rgb(color)
+            p.space_before=p.space_after=Pt(0)
+            self.draw.text((xx*2,(y+i*leading)*2),line,font=font(size,bold),fill=color,anchor='lt')
+        return len(lines)*leading
 
-    p2 = tf.add_paragraph()
-    p2.text = 'Analisis Ekuitas' if is_id else 'Equity Analysis'
-    p2.font.size = Pt(30)
-    p2.font.bold = True
-    p2.font.color.rgb = WHITE
+    def picture(self,path,x,y,w,h):
+        path=PUBLIC/str(path).lstrip('/')
+        if not path.is_file(): return
+        im=Image.open(path).convert('RGBA')
+        scale=min(w/im.width,h/im.height); iw=im.width*scale;ih=im.height*scale
+        xx=x+(w-iw)/2;yy=y+(h-ih)/2
+        self.slide.shapes.add_picture(str(path),emu(xx),emu(yy),width=emu(iw),height=emu(ih))
+        im=im.resize((max(1,round(iw*2)),max(1,round(ih*2))),Image.Resampling.LANCZOS)
+        self.img.paste(im,(round(xx*2),round(yy*2)),im)
 
-    p3 = tf.add_paragraph()
-    p3.text = (
-        'Gojek · GoTo Financial · 24,99% Tokopedia'
-        if is_id else 'Gojek · GoTo Financial · 24.99% Tokopedia'
-    )
-    p3.font.size = Pt(13)
-    p3.font.bold = True
-    p3.font.color.rgb = RGBColor(0xE7, 0xF5, 0xEA)
-    p3.space_before = Pt(12)
-
-    p4 = tf.add_paragraph()
-    p4.text = (
-        'Dari model bisnis hingga arus kas, valuasi, dan keputusan.'
-        if is_id else 'From the business model to cash flow, value, and a decision.'
-    )
-    p4.font.size = Pt(15)
-    p4.font.color.rgb = RGBColor(0xE7, 0xF5, 0xEA)
-    p4.space_before = Pt(10)
-
-    # Right summary card
-    card = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(8.1), Inches(1.6), Inches(4.6), Inches(4.4))
-    card.fill.solid()
-    card.fill.fore_color.rgb = RGBColor(0x00, 0x6B, 0x23)
-    card.line.color.rgb = RGBColor(0x52, 0xA8, 0x68)
-
-    ctb = slide.shapes.add_textbox(Inches(8.35), Inches(1.85), Inches(4.1), Inches(3.9))
-    ctf = ctb.text_frame
-    ctf.word_wrap = True
-    items = [
-        ('UNTUK SIAPA' if is_id else 'OUR USER', 'Investor saham publik jangka pendek' if is_id else 'Short-term public equity investor'),
-        ('HARGA ACUAN TUGAS' if is_id else 'ASSIGNMENT REFERENCE PRICE', 'Rp 25 per saham' if is_id else 'Rp 25 per share'),
-        ('CAKUPAN ANALISIS' if is_id else 'ANALYSIS SCOPE', 'Aktual 2023–2025 · Proyeksi 2026–2028' if is_id else '2023–2025 actuals · 2026–2028 forecasts'),
-    ]
-    for idx, (lbl, val) in enumerate(items):
-        pl = ctf.paragraphs[0] if idx == 0 else ctf.add_paragraph()
-        pl.text = lbl
-        pl.font.size = Pt(9.5)
-        pl.font.bold = True
-        pl.font.color.rgb = RGBColor(0xC5, 0xE8, 0xCE)
-        if idx > 0:
-            pl.space_before = Pt(14)
-        pv = ctf.add_paragraph()
-        pv.text = val
-        pv.font.size = Pt(15)
-        pv.font.bold = True
-        pv.font.color.rgb = WHITE
-
-    # Team footer
-    ftb = slide.shapes.add_textbox(Inches(0.6), Inches(6.45), Inches(12.1), Inches(0.75))
-    ftf = ftb.text_frame
-    fp0 = ftf.paragraphs[0]
-    fp0.text = 'GROUP 4  —  Fagly Ramschie · Anggreini Ruitan · Galatia Rompas  |  Magister Manajemen, Universitas Klabat'
-    fp0.font.size = Pt(11)
-    fp0.font.color.rgb = RGBColor(0xC5, 0xE8, 0xCE)
-
-    if slide_data.get('speaker_notes'):
-        slide.notes_slide.notes_text_frame.text = slide_data['speaker_notes']
+    def save_preview(self,lang,index):
+        folder=PREVIEW/lang;folder.mkdir(parents=True,exist_ok=True)
+        self.img.resize((W,H),Image.Resampling.LANCZOS).save(folder/f'{index:02}.png')
 
 
-def build_main_slide(prs, s, is_id, total_slides):
-    slide = prs.slides.add_slide(prs.slide_layouts[6])
-    title_text = s.get('display_title') or s.get('title', '')
-    section_label = s.get('section_name') or s.get('section_tag') or ''
-    folio = f"{s['slide_num']:02d} / {total_slides}"
-    add_header_footer(slide, section_label, title_text, s.get('source_footer', ''), folio)
+def logo(c,x,y,w=102,h=59):
+    c.rect(x,y,w,h,WHITE);c.picture('/goto_logo.png',x+12,y+9,w-24,h-18)
 
-    # Left evidence area (x=0.5..8.2)
-    left_x = Inches(0.5)
-    left_w = Inches(7.7)
-    cur_y = Inches(1.4)
 
-    if s.get('five_forces'):
-        headers = ['Kekuatan' if is_id else 'Force', 'Penilaian' if is_id else 'Rating', 'Dasar penilaian' if is_id else 'Basis for assessment']
-        add_table(slide, headers, s['five_forces'], left_x, cur_y, left_w, Inches(3.2), font_size=10)
-        cur_y = Inches(4.8)
-        cc = s.get('competition_chart', {})
-        sc = s.get('competitive_spending_chart', {})
-        if cc or sc:
-            box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left_x, cur_y, left_w, Inches(2.0))
-            box.fill.solid()
-            box.fill.fore_color.rgb = WHITE
-            box.line.color.rgb = GREEN_BORDER
-            bt = slide.shapes.add_textbox(Inches(0.7), cur_y + Inches(0.12), Inches(7.3), Inches(1.75))
-            btf = bt.text_frame
-            btf.word_wrap = True
-            p = btf.paragraphs[0]
-            p.text = ('Belanja Bersaing & Provisi Kredit (FY2025)' if is_id else '2025 Spending & Credit-Loss Provisions')
-            p.font.size = Pt(11)
-            p.font.bold = True
-            p.font.color.rgb = TEXT_DARK
-            if sc.get('series'):
-                p2 = btf.add_paragraph()
-                p2.text = ' · '.join(f"{r['label']}: Rp {r['value']}T" for r in sc['series'])
-                p2.font.size = Pt(10.5)
-                p2.font.color.rgb = TEXT_BODY
-                p2.space_before = Pt(6)
-            if cc.get('series'):
-                p3 = btf.add_paragraph()
-                p3.text = f"Provisions: {cc['series'][0]['period']} Rp {cc['series'][0]['value']}bn → {cc['series'][1]['period']} Rp {cc['series'][1]['value']}bn | Net loans: Rp {cc.get('consumer_loans_bn', 2731)}bn"
-                p3.font.size = Pt(10.5)
-                p3.font.color.rgb = TEXT_BODY
-                p3.space_before = Pt(4)
-    elif s.get('visual_rows'):
-        headers = ['Item', 'Nilai' if is_id else 'Value', 'Keterangan' if is_id else 'Summary']
-        rows = [[r.get('name', ''), r.get('value', ''), r.get('text', '')] for r in s['visual_rows']]
-        add_table(slide, headers, rows, left_x, cur_y, left_w, Inches(3.6), font_size=11)
+def frame(c,s,total,is_id,title=None,folio=None):
+    section=s.get('section_name') or s.get('section_tag','')
+    c.text(section.upper(),51,35,1000,20,11,'#c5f1cb',True)
+    c.text(title or s.get('display_title') or s['title'],51,65,975,105,35,WHITE,True,min_size=25)
+    logo(c,1127,35)
+    c.rule(51,670,1178,'#4d8b5c')
+    c.text('GROUP 4 / IDX: GOTO',51,683,145,18,8,WHITE,True)
+    c.text(s.get('source_footer',''),205,683,940,24,8,'#d9f0df')
+    c.text(folio or f"{s['slide_num']:02} / {total}",1150,683,78,18,8,'#d9f0df',align='right')
+
+
+def notes(c,s):
+    parts=[s.get('speaker_notes','')]
+    if s.get('study_explanation'):parts.append(s['study_explanation'])
+    if s.get('calculation_notes'):
+        parts.append('\nFORMULAS AND CALCULATIONS')
+        for n in s['calculation_notes']:
+            parts.append('\n'.join(str(n.get(k,'')) for k in ['label','formula','substitution','result','note','source']))
+    c.slide.notes_slide.notes_text_frame.text='\n\n'.join(p for p in parts if p)
+
+
+def cover(prs,s,total,is_id):
+    c=Canvas(prs)
+    logo(c,64,50,141,77)
+    c.text('Pembukaan' if is_id else 'Opening',1060,86,155,22,13,WHITE,True,align='right')
+    c.text('PT GoTo Gojek Tokopedia Tbk',64,167,680,26,16,'#edffeb')
+    c.text('GoTo',60,208,700,116,92,WHITE,True)
+    c.text('Analisis ekuitas' if is_id else 'Equity analysis',64,325,700,70,43,WHITE,True)
+    c.text('Gojek · GoTo Financial · 24,99% Tokopedia' if is_id else 'Gojek · GoTo Financial · 24.99% Tokopedia',64,404,680,30,14,WHITE,True)
+    c.text('Dari model bisnis hingga arus kas, valuasi, dan keputusan.' if is_id else 'From the business model to cash flow, value, and a decision.',64,452,640,80,17,'#e7f5ea')
+    c.rect(806,158,.8,472,'#4d8b5c')
+    items=[('UNTUK SIAPA' if is_id else 'OUR USER','Investor saham publik jangka pendek' if is_id else 'Short-term public equity investor'),('HARGA ACUAN TUGAS' if is_id else 'ASSIGNMENT REFERENCE PRICE','Rp 25 per saham' if is_id else 'Rp 25 per share'),('CAKUPAN ANALISIS' if is_id else 'ANALYSIS SCOPE','Model bisnis, industri, hasil keuangan, kualitas akuntansi, proyeksi dan valuasi.' if is_id else 'Business model, industry, financial results, accounting quality, forecasts and valuation.')]
+    yy=172
+    for i,(label,value) in enumerate(items):
+        if i:c.rule(833,yy-19,382,'#4d8b5c')
+        c.text(label,833,yy,382,20,10,'#c5e8ce',True)
+        ht=c.text(value,833,yy+30,376,105,27 if i==1 else 15,WHITE,i==1)
+        yy+=max(114,ht+66)
+    c.text('Aktual 2023–2025 · Proyeksi 2026–2028' if is_id else '2023–2025 actuals · 2026–2028 forecasts',833,yy-6,375,32,10,'#c5e8ce')
+    c.text('GROUP 4',64,581,650,18,10,WHITE,True)
+    c.text('Fagly Ramschie · Anggreini Ruitan · Galatia Rompas\nMagister Manajemen, Universitas Klabat',64,606,680,42,12,WHITE)
+    c.rule(51,670,1178,'#4d8b5c')
+    c.text('IDX: GOTO',51,683,90,18,8,WHITE,True)
+    c.text(s.get('source_footer',''),155,683,960,24,8,'#d9f0df')
+    c.text(f'01 / {total}',1150,683,78,18,8,'#d9f0df',align='right')
+    notes(c,s);return c
+
+
+def analysis(c,s,x,w,is_id):
+    points=s.get('analysis_points',[])[:3]
+    gap=22
+    heights=[]
+    # The web uses open white paragraphs on the green canvas, no UI cards.
+    size=14
+    while True:
+        heights=[28+len(lines_for(p.get('text',''),w,size))*size*1.5 for p in points]
+        if sum(heights)+gap*(len(points)-1)<=450 or size<=12:break
+        size-=.5
+    spare=max(0,452-sum(heights)-gap*(len(points)-1))
+    yy=190
+    for i,(p,hh) in enumerate(zip(points,heights)):
+        if i:c.rule(x,yy-13,w,'#4d8b5c')
+        c.text(p.get('heading',''),x,yy,w,28,15,WHITE,True,min_size=13)
+        c.text(p.get('text',''),x,yy+29,w,hh-25,size,'#f1f8f3')
+        yy+=hh+gap+(spare/2 if i<2 else 0)
+
+
+def table(c,headers,rows,x,y,w,maxh,font_size=14,widths=None,padding=20,center=False):
+    n=len(headers)
+    widths=widths or ([.34]+[(1-.34)/(n-1)]*(n-1) if n>1 else [1])
+    # Measure all cells to allocate natural row heights rather than fixed boxes.
+    size=font_size
+    while True:
+        hh=max(len(lines_for(v,w*widths[i]-18,size-1,True))*(size-1)*1.4+padding for i,v in enumerate(headers))
+        heights=[max(len(lines_for(str(row[i]) if i<len(row) else '',w*widths[i]-18,size,i==0))*size*1.4+padding for i in range(n)) for row in rows]
+        if hh+sum(heights)<=maxh or size<=8:break
+        size-=.5
+    if hh+sum(heights)>maxh:raise ValueError('Table does not fit: '+str(headers))
+    if center:y+=(maxh-hh-sum(heights))/2
+    xx=x
+    for i,v in enumerate(headers):
+        cw=w*widths[i];c.rect(xx,y,cw,hh,PALE)
+        c.text(v,xx+9,y+padding/2,cw-18,hh-padding/2,size-1,GREEN,True)
+        xx+=cw
+    yy=y+hh
+    for ri,row in enumerate(rows):
+        xx=x; rh=heights[ri]
+        for i in range(n):
+            cw=w*widths[i]
+            c.text(str(row[i]) if i<len(row) else '',xx+9,yy+padding/2,cw-18,rh-padding/2,size,DARK if i==0 else BODY,i==0)
+            xx+=cw
+        if ri<len(rows)-1:c.rule(x,yy+rh,w)
+        yy+=rh
+    return yy
+
+
+def editorial(c,rows,x,y,w,h):
+    for i,row in enumerate(rows):
+        yy=y+i*h/3;hh=h/3
+        image=row.get('img');ix=0
+        if image:
+            c.picture(image,x+12,yy+(hh-86)/2,104,86);ix=124
+        val=str(row.get('value',''))
+        vw=max(100,min(220,measure(val,23,True)+4))
+        tw=w-ix-vw-42
+        c.text(row.get('name',''),x+16+ix,yy+34,tw,42,19,DARK,True,min_size=16)
+        c.text(row.get('text',''),x+16+ix,yy+82,tw+14,hh-87,14,MUTED,min_size=12)
+        c.text(val,x+w-vw-16,yy+(hh-34)/2,vw,70,23,GREEN,True,align='right',min_size=18)
+        if i<len(rows)-1:c.rule(x+16,yy+hh,w-32)
+
+
+def bars(c,series,x,y,w,h,title,unit='',formula='',provisions=False):
+    c.text(title,x,y,w,38,12,DARK,True)
+    if unit:c.text(unit,x,y+27,w,20,10,MUTED)
+    start=y+58;maxval=max(abs(r['value']) for r in series)*1.1
+    step=min(48,(h-75)/max(1,len(series)))
+    for i,r in enumerate(series):
+        yy=start+i*step
+        label=r.get('label',r.get('period',''))
+        val=r['value'];value=f'{abs(val):,}' if isinstance(val,int) else f'{val:.2f}'
+        if val<0:value='−'+value
+        if provisions:
+            c.text(label,x,yy,w*.18,20,12,MUTED)
+            tx=x+w*.2;tw=w*.60
+            c.rect(tx,yy+3,tw,14,PALE);c.rect(tx,yy+3,tw*abs(val)/maxval,14,GREEN if i==len(series)-1 else '#9ecbaa')
+            c.text(value,x+w*.82,yy,w*.18,22,13,DARK,True,align='right')
+        else:
+            c.text(label,x,yy,w-65,25,11,MUTED)
+            c.text(value,x+w-70,yy,70,22,14,DARK,True,align='right')
+            c.rect(x,yy+25,w,10,PALE);c.rect(x,yy+25,w*abs(val)/maxval,10,GREEN if i==0 else DARK)
+    if formula:c.text(formula,x,y+h-25,w,30,9,MUTED)
+
+
+def valuation(c,s,x,y,w,h):
+    c.text('Hasil Valuasi (Rp/saham)' if s.get('_is_id') else 'Valuation Results (Rp/share)',x,y,w,24,12,DARK,True)
+    left=x+123;right=x+w-67;span=right-left
+    def pos(v):return left+(v+140)/260*span
+    c.rect(pos(0),y+34,.7,112,'#a4bfae');c.rect(pos(25),y+34,.7,112,DARK)
+    c.text('Rp25',pos(25)-30,y+18,60,18,9,MUTED,align='center')
+    for i,r in enumerate(s['valuation_range']):
+        yy=y+48+i*34;v=r['value']
+        c.text(r['label'],x,yy,115,22,12,DARK)
+        c.rect(min(pos(v),pos(0)),yy,max(1,abs(pos(v)-pos(0))),20,'#a8cdb3' if v<0 else GREEN)
+        c.text(('−' if v<0 else '+')+f'{abs(v):.1f}',right+7,yy,60,22,13,DARK,True,align='right')
+    if s.get('chart_formula'):c.text(s['chart_formula'],x,y+h-25,w,30,9,MUTED)
+
+
+def main_slide(prs,s,total,is_id):
+    c=Canvas(prs);frame(c,s,total,is_id)
+    # Coordinates reproduce the Vue grid: evidence left, open analysis right.
+    x,y,w,h=51,180,716,468
+    if s.get('topic_id')=='business':w=657
+    right=x+w+38;rw=1229-right
+    c.rect(x,y,w,h,WHITE)
+    analysis(c,s,right,rw,is_id)
+    if s.get('visual_rows'):
+        editorial(c,s['visual_rows'],x+14,y+7,w-28,h-14)
+    elif s.get('five_forces'):
+        headers=['Kekuatan','Penilaian','Dasar penilaian'] if is_id else ['Force','Rating','Basis for assessment']
+        end=table(c,headers,s['five_forces'],x+15,y+15,w-30,260,12,widths=[.21,.25,.54])
+        cy=max(end+25,y+270);cw=(w-65)/2
+        c.rule(x+18,cy-15,w-36)
+        sc=s.get('competitive_spending_chart',{})
+        spending=deepcopy(sc.get('series',[]))
+        if is_id:
+            for r in spending:r['label']=r.get('label_id',r['label'])
+        bars(c,spending,x+20,cy,cw,h-(cy-y)-8,'Belanja untuk bersaing' if is_id else 'Spending to compete','2025 · Rp triliun' if is_id else '2025 · Rp trillion')
+        cc=s.get('competition_chart',{})
+        bars(c,cc.get('series',[]),x+45+cw,cy,cw,h-(cy-y)-8,'Provisi kerugian kredit' if is_id else 'Credit-loss provisions','Rp miliar · +134%' if is_id else 'Rp billion · +134%',cc.get('formula',''),True)
     elif s.get('table'):
-        tbl = s['table']
-        row_h = min(5.3, max(2.2, 0.48 * (1 + len(tbl.get('rows', [])))))
-        add_table(slide, tbl.get('headers', []), tbl.get('rows', []), left_x, cur_y, left_w, Inches(row_h), font_size=9.5)
-    elif s.get('loss_chart'):
-        lc = s['loss_chart']
-        headers = [lc.get('title', 'Operating Loss (Rp bn)'), 'Rp bn']
-        rows = [[r['label'], f"{r['value']:,}"] for r in lc.get('series', [])]
-        add_table(slide, headers, rows, left_x, cur_y, left_w, Inches(3.2), font_size=10.5)
-    elif s.get('valuation_range'):
-        headers = ['Metode' if is_id else 'Method', 'Nilai (Rp/saham)' if is_id else 'Value (Rp/share)']
-        rows = [[r['label'], f"{r['value']:+.1f}" if isinstance(r['value'], (int, float)) else str(r['value'])] for r in s['valuation_range']]
-        add_table(slide, headers, rows, left_x, cur_y, left_w, Inches(2.5), font_size=10.5)
-        if s.get('peer_exclusions'):
-            ex_headers = ['Perusahaan Dikeluarkan' if is_id else 'Excluded Peer', 'Alasan' if is_id else 'Reason']
-            ex_rows = [[p['company'], p['reason']] for p in s['peer_exclusions']]
-            add_table(slide, ex_headers, ex_rows, left_x, Inches(4.15), left_w, Inches(2.6), font_size=9.5)
-
-    # Right analysis points (x=8.45..12.83)
-    right_x = Inches(8.45)
-    right_w = Inches(4.38)
-    points = s.get('analysis_points', [])
-    for idx, pt in enumerate(points[:3]):
-        py = Inches(1.4 + idx * 1.85)
-        card = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, right_x, py, right_w, Inches(1.7))
-        card.fill.solid()
-        card.fill.fore_color.rgb = WHITE
-        card.line.color.rgb = GREEN_BORDER
-
-        ptb = slide.shapes.add_textbox(right_x + Inches(0.15), py + Inches(0.1), right_w - Inches(0.3), Inches(1.5))
-        ptf = ptb.text_frame
-        ptf.word_wrap = True
-        ph = ptf.paragraphs[0]
-        ph.text = pt.get('heading', '')
-        ph.font.size = Pt(12)
-        ph.font.bold = True
-        ph.font.color.rgb = GREEN_MAIN
-
-        pb = ptf.add_paragraph()
-        pb.text = pt.get('text', '')
-        pb.font.size = Pt(10)
-        pb.font.color.rgb = TEXT_BODY
-        pb.space_before = Pt(4)
-
-    if s.get('speaker_notes'):
-        slide.notes_slide.notes_text_frame.text = s['speaker_notes']
-
-
-def build_appendix_slides(prs, s, total_slides):
-    apx_num = s['slide_num'] - 12
-    title_text = s.get('display_title') or s.get('title', '')
-    section_label = f"{s.get('section_name', 'APPENDIX')}  /  A{apx_num}"
-    schedules = []
-    if s.get('table'):
-        schedules.append(s['table'])
-    schedules.extend(s.get('supporting_schedules', []))
-
-    # Group schedules into slide pages so no table overflows vertically
-    pages = []
-    current_page = []
-    used_h = 0.0
-    max_h = 5.4
-    for sched in schedules:
-        est_h = 0.45 + 0.32 * (1 + len(sched.get('rows', []))) + (0.25 if sched.get('note') else 0.0)
-        est_h = min(est_h, max_h)
-        if current_page and used_h + est_h > max_h:
-            pages.append(current_page)
-            current_page = [(sched, est_h)]
-            used_h = est_h
+        tbl=s['table'];tx=x+16;tw=w-32
+        if s.get('loss_chart'):
+            end=table(c,tbl['headers'],tbl['rows'],tx,y+17,tw,230,13)
+            cy=end+26;c.rule(tx,cy-12,tw)
+            bars(c,s['loss_chart']['series'],tx,cy,tw,h-(cy-y)-9,s['loss_chart']['title'],'',s.get('chart_formula',''),True)
+        elif s.get('valuation_range'):
+            end=table(c,tbl['headers'],tbl['rows'],tx,y+13,tw,165,11,widths=[.64,.36])
+            cy=end+15;c.rule(tx,cy-5,tw)
+            valuation(c,{**s,'_is_id':is_id},tx,cy,tw,170)
+            yy=cy+173
+            c.rule(tx,yy,tw)
+            for p in s.get('peer_exclusions',[]):
+                c.text(p['company'],tx,yy+9,107,30,11,DARK,True)
+                ht=c.text(p['reason'],tx+112,yy+9,tw-112,58,10,MUTED,min_size=9)
+                yy+=max(36,ht+14)
         else:
-            current_page.append((sched, est_h))
-            used_h += est_h + 0.2
-    if current_page:
-        pages.append(current_page)
-
-    for p_idx, page_scheds in enumerate(pages):
-        slide = prs.slides.add_slide(prs.slide_layouts[6])
-        suffix = f" ({p_idx + 1}/{len(pages)})" if len(pages) > 1 else ''
-        folio = f"A{apx_num}{suffix} / {total_slides}"
-        add_header_footer(slide, section_label, f"{title_text}{suffix}", s.get('source_footer', ''), folio)
-
-        cur_y = Inches(1.32)
-        for sched, est_h in page_scheds:
-            tb = slide.shapes.add_textbox(Inches(0.5), cur_y, Inches(12.333), Inches(0.32))
-            p = tb.text_frame.paragraphs[0]
-            p.text = sched.get('title', '')
-            p.font.size = Pt(11)
-            p.font.bold = True
-            p.font.color.rgb = GREEN_MAIN
-            cur_y += Inches(0.32)
-
-            tbl_h = max(1.1, est_h - 0.55)
-            add_table(slide, sched.get('headers', []), sched.get('rows', []), Inches(0.5), cur_y, Inches(12.333), Inches(tbl_h), font_size=8.5)
-            cur_y += Inches(tbl_h + 0.06)
-
-            if sched.get('note'):
-                ntb = slide.shapes.add_textbox(Inches(0.5), cur_y, Inches(12.333), Inches(0.24))
-                np = ntb.text_frame.paragraphs[0]
-                np.text = sched['note']
-                np.font.size = Pt(8)
-                np.font.color.rgb = TEXT_MUTED
-                cur_y += Inches(0.24)
-            cur_y += Inches(0.12)
-
-        if s.get('speaker_notes'):
-            slide.notes_slide.notes_text_frame.text = s['speaker_notes']
+            widths=None
+            if s.get('topic_id')=='wacc': widths=[.33,.16,.51]
+            table(c,tbl['headers'],tbl['rows'],tx,y+24,tw,h-48,14,widths,center=True)
+    notes(c,s);return c
 
 
-def generate_pptx(json_path, out_path, is_id):
-    deck = json.loads(json_path.read_text(encoding='utf-8'))
-    prs = Presentation()
-    prs.core_properties.author = 'Fagly Ramschie'
-    prs.core_properties.last_modified_by = 'Fagly Ramschie'
-    prs.core_properties.title = 'PT GoTo Gojek Tokopedia Tbk (IDX: GOTO) — Equity Analysis'
-    prs.slide_width = Inches(13.333)
-    prs.slide_height = Inches(7.5)
-    total = len(deck)
+def appendix(prs,s,total,is_id):
+    # Preserve the established grouping of the exported workbook schedules.
+    schedules=([s['table']] if s.get('table') else [])+s.get('supporting_schedules',[])
+    pages=[];page=[];used=0
+    for schedule in schedules:
+        est=min(5.4,.45+.32*(1+len(schedule.get('rows',[])))+(.25 if schedule.get('note') else 0))
+        if page and used+est>5.4:
+            pages.append(page);page=[];used=0
+        page.append((schedule,est));used+=est+.2
+    if page:pages.append(page)
+    output=[]
+    for pi,page in enumerate(pages):
+        c=Canvas(prs)
+        # Short section heading keeps the appendix title clear above its tables.
+        title=s.get('display_title') or s['title']
+        title=title.split(': ',1)[-1]
+        frame(c,s,total,is_id,title=title,folio=f"A{s['slide_num']-12} · {pi+1}/{len(pages)}")
+        c.rect(51,180,1178,468,WHITE)
+        available=440
+        estimates=sum(est for _,est in page)+.2*(len(page)-1)
+        yy=192
+        for schedule,est in page:
+            height=available*est/estimates
+            c.text(schedule.get('title',''),69,yy,1140,35,12,GREEN,True,min_size=10)
+            th=height-43-(23 if schedule.get('note') else 0)
+            headers=schedule.get('headers',[])
+            widths=None
+            if len(headers)==7:widths=[.18,.08,.24,.08,.17,.08,.17]
+            elif len(headers)==6:widths=[.28,.15,.15,.14,.12,.16]
+            elif len(headers)==3:widths=[.28,.18,.54]
+            table(c,headers,schedule.get('rows',[]),69,yy+36,1142,th,12,widths,padding=10)
+            if schedule.get('note'):
+                c.text(schedule['note'],69,yy+height-25,1142,25,8,MUTED,min_size=7)
+            yy+=height+8
+        notes(c,s);output.append(c)
+    return output
 
+
+def generate(json_path,out,is_id):
+    deck=json.loads(json_path.read_text())
+    prs=Presentation();prs.slide_width=emu(W);prs.slide_height=emu(H)
+    prs.core_properties.author='Group 4';prs.core_properties.title='GoTo Equity Analysis';prs.core_properties.subject='Web presentation design, editable PowerPoint export'
+    canvases=[]
     for s in deck:
-        if s['slide_num'] == 1:
-            build_cover(prs, s, is_id, total)
-        elif s.get('is_appendix'):
-            build_appendix_slides(prs, s, total)
-        else:
-            build_main_slide(prs, s, is_id, total)
+        if s['slide_num']==1:canvases.append(cover(prs,s,len(deck),is_id))
+        elif s.get('is_appendix'):canvases.extend(appendix(prs,s,len(deck),is_id))
+        else:canvases.append(main_slide(prs,s,len(deck),is_id))
+    out.parent.mkdir(parents=True,exist_ok=True);prs.save(out)
+    lang='id' if is_id else 'en'
+    for i,c in enumerate(canvases,1):c.save_preview(lang,i)
+    # Visual contact sheet for all exported pages.
+    cols=4;thumbw=400;thumbh=225
+    sheet=Image.new('RGB',(cols*thumbw,math.ceil(len(canvases)/cols)*(thumbh+28)),'#14251b')
+    dr=ImageDraw.Draw(sheet)
+    for i,c in enumerate(canvases):
+        xx=(i%cols)*thumbw;yy=(i//cols)*(thumbh+28)
+        sheet.paste(c.img.resize((thumbw,thumbh),Image.Resampling.LANCZOS),(xx,yy))
+        dr.text((xx+10,yy+thumbh+5),f'{i+1:02}',fill='white')
+    sheet.save(PREVIEW/f'contact-{lang}.jpg')
+    print(f'Generated {out}: {len(prs.slides)} slides; editable text, tables and charts; previews {PREVIEW/lang}')
 
-    prs.save(str(out_path))
-    print(f'Generated {out_path} ({len(prs.slides)} PowerPoint slides)')
 
-
-if __name__ == '__main__':
-    generate_pptx(DATA / 'presentation_deck.json', PUBLIC / 'Group4_Presentation_GOTO.pptx', is_id=False)
-    generate_pptx(DATA / 'presentation_deck_id.json', PUBLIC / 'Group4_Presentation_GOTO_ID.pptx', is_id=True)
+if __name__=='__main__':
+    generate(DATA/'presentation_deck.json',PUBLIC/'Group4_Presentation_GOTO.pptx',False)
+    generate(DATA/'presentation_deck_id.json',PUBLIC/'Group4_Presentation_GOTO_ID.pptx',True)
+    # The assignment folder is also a user-facing copy of this same deck.
+    import shutil
+    shutil.copy2(PUBLIC/'Group4_Presentation_GOTO.pptx',ROOT/'ASSIGNMENTS/ASSSIGNMENT 16/Group4_Presentation_GOTO.pptx')
