@@ -18,7 +18,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Company: GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.\n\nTarget Investor: The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.\n\nPresentation Scope: The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.",
-    "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
+    "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025; Appendix A1–A6",
     "lecture_traces": [
       {
         "week_id": "week1",
@@ -155,7 +155,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Revenue: Gojek revenue is Rp12,361bn, compared with Rp5,191bn from GoTo Financial and about Rp820bn in Tokopedia service fees.\n\nBusiness Activities: Gojek provides rides, food and delivery. GoTo Financial provides payments and lending. Tokopedia is an associate, rather than a business controlled by GoTo.\n\nTokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from Tokopedia in 2025. GoTo retains a 24.99% ownership stake in Tokopedia.",
-    "source_footer": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
+    "source_footer": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14; Appendix A1",
     "lecture_traces": [
       {
         "week_id": "week2",
@@ -408,8 +408,8 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Operating Expenses: Sales and marketing expense is Rp3.09T. Product-development expense is Rp2.15T.\n\nCompetition: GoTo offers affordable prices and connected services, but similar services are available from rivals. This limits how easily GoTo can raise prices without losing orders.\n\nCredit-Loss Provisions: Provisions rise from Rp174bn to Rp408bn alongside a Rp2,731bn net consumer-loan balance. More lending can increase revenue and estimated credit losses at the same time.",
-    "source_footer": "Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27",
+    "speaker_notes": "Operating Expenses: Sales and marketing expense is Rp3.09T (+8% YoY). Product-development expense is Rp2.15T (+23% YoY).\n\nCompetition: GoTo offers affordable prices and connected services, but similar services are available from rivals. This limits how easily GoTo can raise prices without losing orders.\n\nCredit-Loss Provisions: Provisions rise from Rp174bn to Rp408bn alongside a Rp2,731bn net consumer-loan balance. More lending can increase revenue and estimated credit losses at the same time.",
+    "source_footer": "Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27; Appendix A1",
     "lecture_traces": [
       {
         "week_id": "week2",
@@ -487,22 +487,22 @@
     "analysis_points": [
       {
         "heading": "Operating Expenses",
-        "text": "Sales and marketing expense is Rp3.09T. Product-development expense is Rp2.15T.",
-        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nLending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.\n\nThe provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
+        "text": "Sales and marketing expense is Rp3.09T (+8% YoY). Product-development expense is Rp2.15T (+23% YoY).",
+        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nBecause ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).\n\nA bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
         "data_origin": "Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27",
         "calc_steps": []
       },
       {
         "heading": "Competition",
         "text": "GoTo offers affordable prices and connected services, but similar services are available from rivals. This limits how easily GoTo can raise prices without losing orders.",
-        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nLending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.\n\nThe provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
+        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nBecause ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).\n\nA bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
         "data_origin": "Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27",
         "calc_steps": []
       },
       {
         "heading": "Credit-Loss Provisions",
-        "text": "Provisions rise from Rp174bn to Rp408bn alongside a Rp2,731bn net consumer-loan balance. More lending can increase revenue and estimated credit losses at the same time.",
-        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nLending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.\n\nThe provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
+        "text": "Consumer loans jumped +72.6% (Rp1,582bn → Rp2,731bn), and the bad-loan buffer (provisions) more than doubled (+134%, Rp174bn → Rp408bn). Lending to more users brings in extra interest revenue, but it also raises the risk of unpaid loans.",
+        "detail_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nBecause ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).\n\nA bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
         "data_origin": "Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27",
         "calc_steps": [
           "(408 − 174) / 174 × 100% = 134.48% ≈ 134%",
@@ -578,7 +578,7 @@
     "hide_banner": true,
     "display_title": "Industry and Competition",
     "display_takeaway": "",
-    "study_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nLending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.\n\nThe provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
+    "study_explanation": "GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.\n\nFY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.\n\nBecause ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).\n\nA bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.",
     "supporting_schedules": [],
     "five_forces": [
       [
@@ -631,14 +631,14 @@
       "series": [
         {
           "key": "marketing",
-          "label": "Sales & marketing",
-          "label_id": "Penjualan & pemasaran",
+          "label": "Sales & marketing (+8% YoY)",
+          "label_id": "Penjualan & pemasaran (+8% YoY)",
           "value": 3.09
         },
         {
           "key": "product",
-          "label": "Product development",
-          "label_id": "Pengembangan produk",
+          "label": "Product development (+23% YoY)",
+          "label_id": "Pengembangan produk (+23% YoY)",
           "value": 2.15
         }
       ],
@@ -671,10 +671,10 @@
     "time_budget": "1.75 mins",
     "rubric_points": "20 pts (section)",
     "kpis": [],
-    "chart_url": null,
+    "chart_url": "/charts/chart1_financial_inflection.png",
     "cards": [],
     "speaker_notes": "Operating Loss: Operating loss falls from Rp10,279bn in 2023 to Rp378bn in 2025. The 2025 result is still a loss, with net margin of −8.2%.\n\nDuPont ROE: DuPont gives approximately −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier = −5.2% ROE.\n\nNet Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other items.",
-    "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+    "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1; Appendix A2",
     "lecture_traces": [
       {
         "week_id": "week5",
@@ -1324,8 +1324,8 @@
     "kpis": [],
     "chart_url": null,
     "cards": [],
-    "speaker_notes": "Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.\n\nInterest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.\n\nAltman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
-    "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
+    "speaker_notes": "Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).\n\nInterest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.\n\nAltman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
+    "source_footer": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1; Appendix A3",
     "lecture_traces": [
       {
         "week_id": "week5",
@@ -1403,8 +1403,8 @@
     "analysis_points": [
       {
         "heading": "Cash and Liquidity",
-        "text": "Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "text": "Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -1415,7 +1415,7 @@
       {
         "heading": "Interest Coverage",
         "text": "Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -1426,7 +1426,7 @@
       {
         "heading": "Altman Z-Score",
         "text": "The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -1516,7 +1516,7 @@
     "hide_banner": true,
     "display_title": "Liquidity and Z-Score",
     "display_takeaway": "",
-    "study_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+    "study_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
     "supporting_schedules": [
       {
         "title": "Completed Week 6 five-factor calculation",
@@ -1576,8 +1576,8 @@
       {
         "name": "Current ratio",
         "value": "2.73x",
-        "text": "Current assets / current liabilities",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "text": "Current assets / current liabilities\nRp29,059bn / Rp10,648bn",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "Current assets / Current liabilities",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -1590,10 +1590,10 @@
         ]
       },
       {
-        "name": "Interest coverage",
+        "name": "Interest coverage (TIE)",
         "value": "−0.71x",
-        "text": "Operating earnings do not cover interest",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "text": "EBIT / interest expense\n−Rp378bn / Rp535bn",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "EBIT / Interest expense",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -1608,8 +1608,8 @@
       {
         "name": "Week 6 Z-score",
         "value": "−4.72",
-        "text": "Screening signal; not proof of immediate default",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "text": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5\nDistress threshold < 1.81",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(−378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -1842,7 +1842,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Free Cash Flow: GoTo generates Rp307bn CFO and spends Rp1,182bn on cash capex. Operations cover 25.97% of that investment.\n\nAccrual Ratio: The milestone accrual ratio is −3.95%: (net income − CFO) / closing assets. Noncash expenses and payment timing create a gap between profit and cash.\n\nAsset Valuation: Associates represent 22.57% of assets. Level 3 investments also rely on estimates. A write-down would reduce recorded assets and equity, without itself creating a new cash payment.",
-    "source_footer": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
+    "source_footer": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities; Appendix A3",
     "lecture_traces": [
       {
         "week_id": "week3",
@@ -2206,7 +2206,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Base Assumptions: Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.\n\nHistorical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.\n\nScenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
-    "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+    "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e); Appendix A4",
     "lecture_traces": [
       {
         "week_id": "week12",
@@ -2625,7 +2625,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Base Case: The model projects revenue of Rp25,321bn in 2028F, but operating losses continue and ending cash falls from Rp21,755bn to Rp968bn.\n\nOperating Cost Ratio: The base gives Rp58.90 gross profit but Rp78.50 operating costs per Rp100 of sales. The Rp19.60 shortfall grows when both sales and these costs increase together.\n\nFixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954bn. It produces positive 2026F EBIT of about Rp1,062bn, rather than the base-case loss of Rp4,003bn.",
-    "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
+    "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e); Appendix A5",
     "lecture_traces": [
       {
         "week_id": "week12",
@@ -3456,7 +3456,7 @@
     "chart_url": null,
     "kpis": [],
     "speaker_notes": "Cost of Equity and Debt: The assignment calculates cost of equity at 8.45% and after-tax debt cost at 5.39%.\n\nCapital Weights and WACC: Market equity carries 77.4% of the weight and debt 22.6%. Their weighted cost is the discount rate for DCF business cash flows.\n\nDiscount Rates: RI values profit attributable to the equity model, so it uses 8.45%. DCF values cash before the debt bridge, so it uses the combined 7.76% rate.",
-    "source_footer": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
+    "source_footer": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026); Appendix A6",
     "lecture_traces": [
       {
         "week_id": "week14",
@@ -3786,7 +3786,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.\n\nForecast and Terminal Value: Both models use Milestone 4. The terminal calculation extends the weak final-year result beyond 2028, with the assignment’s 3% growth assumption.\n\nValuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
-    "source_footer": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
+    "source_footer": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%; Appendix A6",
     "lecture_traces": [
       {
         "week_id": "week14",
@@ -4391,7 +4391,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Comparable Selection: Its rides, delivery and financial-services mix is closest to GoTo. Sea includes Shopee and other businesses; BUKA and BELI also have different business mixes.\n\nGrab P/B: 3.0391x Grab P/B × Rp29.9479 GoTo parent BVPS = about Rp91.0. This applies Grab’s market multiple to GoTo’s recorded parent equity.\n\nValuation Differences: DCF and RI include forecast losses. P/B applies another company’s multiple to historical book equity. An average would mix these assumptions rather than resolve their differences.",
-    "source_footer": "Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.",
+    "source_footer": "Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.; Appendix A6",
     "lecture_traces": [
       {
         "week_id": "week5",
@@ -4831,7 +4831,7 @@
     "kpis": [],
     "cards": [],
     "speaker_notes": "Recommendation: The submitted recommendation is SELL / AVOID at the Rp25 assignment reference price. It is based on negative FCF and the weak base forecast.\n\nConditions: Cash covering capex, controlled operating costs and better lending results would weaken the negative fundamental case. A near-term catalyst and trading signal remain unestablished in this FSA.\n\nRisks: Better operations could make the base too cautious. Credit losses, impairments and cash use could worsen it. The valuation results do not establish the timing of the next price move.",
-    "source_footer": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
+    "source_footer": "Group 4 Final Report Section (g) & Integrated Valuation Findings; Appendix A1–A6",
     "lecture_traces": [
       {
         "week_id": "week1",
@@ -5970,8 +5970,8 @@
     "analysis_points": [
       {
         "heading": "Cash and Liquidity",
-        "text": "Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "text": "Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -5982,7 +5982,7 @@
       {
         "heading": "Interest Coverage",
         "text": "Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -5993,7 +5993,7 @@
       {
         "heading": "Altman Z-Score",
         "text": "The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nInterest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -6003,7 +6003,7 @@
       }
     ],
     "study_explanation": "This appendix provides the full five-factor Week 6 Altman Z-Score build-up (X1 through X5 = −4.721750 using the submitted worksheet book equity / total liabilities proxy) alongside all Milestone 3 accounting-quality and footnote schedules (−3.95% accrual ratio, 25.97% capex coverage, 22.57% associate assets, and Level 3 estimates).",
-    "speaker_notes": "Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.\n\nInterest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.\n\nAltman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
+    "speaker_notes": "Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).\n\nInterest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.\n\nAltman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
     "source_footer": "Week 6 Worksheet; Milestone 2; Milestone 3!Calculations; LK GOTO FY2025 Notes 14, 15, 29 & 38",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "calculation_notes": [

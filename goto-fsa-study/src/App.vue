@@ -131,7 +131,19 @@ const uiText = computed(() => lang.value === 'id' ? {
   asgSourceRefLabel: 'Referensi Sumber:',
   asgSecTableBadge: 'TABEL DATA & ANALISIS TERSTRUKTUR',
   asgProofBadge: 'BUKTI LAPORAN KEUANGAN AUDITAN (LK GOTO 2025)',
-  asgZoomHint: 'Klik gambar untuk memperbesar dokumen asli →'
+  asgZoomHint: 'Klik gambar untuk memperbesar dokumen asli →',
+  searchGlobalPlaceholder: 'Cari semua: TIE, Z-score, angka (307, -4.72, 18.322), rumus...',
+  searchSidebarPlaceholder: 'Cari semua (TIE, Z-score, angka...)',
+  searchAllTab: 'Semua',
+  searchDeckTab: 'Dek Presentasi',
+  searchSlidesTab: 'Slide Kuliah',
+  searchTasksTab: 'Tugas & Excel',
+  searchResultsTitle: 'Hasil Pencarian Menyeluruh',
+  searchNoResults: 'Tidak ditemukan slide, tabel, rumus, atau angka yang cocok.',
+  searchShowResults: 'Lihat Semua Hasil',
+  searchHideResults: 'Sembunyikan Daftar',
+  searchClear: 'Hapus',
+  searchHitsLabel: 'cocok'
 } : {
   brandSub: 'GoTo Study & Research Suite',
   searchDeckPlaceholder: 'Search deck slides...',
@@ -207,7 +219,19 @@ const uiText = computed(() => lang.value === 'id' ? {
   asgSourceRefLabel: 'Source Reference:',
   asgSecTableBadge: 'STRUCTURED FINANCIAL & ANALYTICAL SCHEDULE',
   asgProofBadge: 'AUDITED FINANCIAL STATEMENT PROOF (LK GOTO 2025)',
-  asgZoomHint: 'Click image to zoom full-resolution filing proof →'
+  asgZoomHint: 'Click image to zoom full-resolution filing proof →',
+  searchGlobalPlaceholder: 'Search everything: TIE, Z-score, numbers (307, -4.72, 18,322), formulas...',
+  searchSidebarPlaceholder: 'Search everything (TIE, Z-score, numbers...)',
+  searchAllTab: 'All',
+  searchDeckTab: 'Presentation Deck',
+  searchSlidesTab: 'Lecture Slides',
+  searchTasksTab: 'Assignments & Excel',
+  searchResultsTitle: 'Universal Search Results',
+  searchNoResults: 'No matching slides, tables, formulas, or numbers found.',
+  searchShowResults: 'Show All Results',
+  searchHideResults: 'Minimize Results',
+  searchClear: 'Clear',
+  searchHitsLabel: 'hits'
 })
 
 watch(lang, (val) => {
@@ -226,7 +250,30 @@ const clickPopup = ref(null)
 const detailDrawerItem = ref(null)
 const activeTab = ref(readStorage('goto-fsa-active-tab', 'presentation')) // 'presentation', 'slides', 'assignments', 'goto', 'flashcards', 'roadmap'
 const searchQuery = ref('')
+const isSearchPanelOpen = ref(false)
+const searchCategoryFilter = ref('all') // 'all' | 'presentation' | 'slides' | 'assignments'
+const searchHighlightTargetId = ref('')
+const globalSearchInputRef = ref(null)
+const scrollContainerRef = ref(null)
 const sidebarMode = ref(readStorage('goto-fsa-sidebar-mode', 'presentation')) // 'presentation', 'slides', 'assignments'
+
+watch(searchQuery, (val) => {
+  searchCategoryFilter.value = 'all'
+  if (val.trim()) {
+    isSearchPanelOpen.value = true
+  } else {
+    isSearchPanelOpen.value = false
+    searchHighlightTargetId.value = ''
+  }
+})
+
+watch(isSearchPanelOpen, (open) => {
+  if (open) {
+    nextTick(() => {
+      if (scrollContainerRef.value) scrollContainerRef.value.scrollTop = 0
+    })
+  }
+})
 
 // For assignments tab
 const selectedAssignmentId = ref(readStorage('goto-fsa-selected-assignment', 'm1'))
@@ -1451,16 +1498,6 @@ const currentPresSlide = computed(() => {
   return presentationSlides.value.find(s => s.slide_num === selectedPresSlideNum.value) || presentationSlides.value[0]
 })
 
-const filteredPresSlides = computed(() => {
-  if (!searchQuery.value.trim()) return presentationSlides.value
-  const q = searchQuery.value.toLowerCase()
-  return presentationSlides.value.filter(s =>
-    s.section_tag.toLowerCase().includes(q) ||
-    s.title.toLowerCase().includes(q) ||
-    s.subtitle.toLowerCase().includes(q)
-  )
-})
-
 const getLectureSlideObj = (weekId, slideNum) => {
   const mod = modules.value.find(m => m.id === weekId)
   if (!mod || !mod.slides) return null
@@ -1571,6 +1608,7 @@ const selectPresSlide = (num) => {
   selectedPresSlideNum.value = num
   activeTab.value = 'presentation'
   sidebarMode.value = 'presentation'
+  isSearchPanelOpen.value = false
 }
 
 const prevPresSlide = () => {
@@ -2021,6 +2059,25 @@ const openTermPopup = (event, termHelp) => {
 }
 
 const handlePresentKeydown = (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault()
+    isPresentMode.value = false
+    nextTick(() => {
+      globalSearchInputRef.value?.focus()
+      globalSearchInputRef.value?.select()
+    })
+    return
+  }
+  const tag = e.target?.tagName
+  if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
+    e.preventDefault()
+    isPresentMode.value = false
+    nextTick(() => {
+      globalSearchInputRef.value?.focus()
+      globalSearchInputRef.value?.select()
+    })
+    return
+  }
   if (e.key === 'Escape') {
     if (clickPopup.value) {
       clickPopup.value = null
@@ -2034,12 +2091,15 @@ const handlePresentKeydown = (e) => {
       detailDrawerItem.value = null
       return
     }
+    if (isSearchPanelOpen.value) {
+      isSearchPanelOpen.value = false
+      return
+    }
     if (isPresentMode.value) {
       isPresentMode.value = false
       return
     }
   }
-  const tag = e.target?.tagName
   if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
   if (!isPresentMode.value && activeTab.value !== 'presentation') return
   if (e.key === 'ArrowLeft') {
@@ -2145,6 +2205,7 @@ const jumpToLectureSlide = (weekId, slideNum) => {
   selectedWeekId.value = weekId
   activeTab.value = 'slides'
   sidebarMode.value = 'slides'
+  isSearchPanelOpen.value = false
   nextTick(() => {
     const el = document.getElementById(`lecture-slide-${weekId}-${slideNum}`)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -2154,31 +2215,999 @@ const jumpToLectureSlide = (weekId, slideNum) => {
 const jumpToAssignmentSheet = (asgId, sheetName) => {
   selectAssignment(asgId)
   if (sheetName) {
+    selectedWorkbookSheet.value = sheetName
     nextTick(() => {
       selectedWorkbookSheet.value = sheetName
     })
   }
 }
 
+/* ================= UNIVERSAL DEEP SEARCH ENGINE ================= */
+const SEARCH_SYNONYMS = {
+  tie: ['times interest earned', 'interest coverage', 'cakupan bunga', 'ebit / interest expense', 'ebit ÷ interest expense'],
+  'z-score': ['altman', 'five-factor z-score', 'five-factor z', 'z-score', 'z score', 'zscore', 'distress'],
+  zscore: ['altman', 'five-factor z-score', 'five-factor z', 'z-score', 'z score'],
+  altman: ['z-score', 'five-factor z-score', 'z score'],
+  cfo: ['operating cash flow', 'arus kas operasi'],
+  fcf: ['free cash flow', 'arus kas bebas'],
+  wacc: ['cost of capital', 'biaya modal'],
+  capex: ['capital expenditure', 'belanja modal'],
+  opex: ['operating expenses', 'beban operasi', 'operating expense'],
+  dupont: ['roe', 'return on equity', 'asset turnover', 'equity multiplier', 'imbal hasil ekuitas'],
+  roe: ['return on equity', 'dupont'],
+  roa: ['return on assets', 'imbal hasil aset'],
+  dcf: ['discounted cash flow', 'arus kas terdiskonto'],
+  ri: ['residual income', 'laba residual'],
+  ebit: ['operating profit', 'operating loss', 'laba usaha', 'rugi usaha'],
+  wc: ['working capital', 'modal kerja'],
+}
+
+const escapeRegex = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+const escapeHtml = (str) => String(str ?? '')
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;')
+
+const normalizeSearchStr = (raw) => {
+  return String(raw ?? '')
+    .toLowerCase()
+    .replace(/[−–—]/g, '-')
+    .replace(/[’‘]/g, "'")
+    .replace(/z''-?score|z'-?score/g, 'z-score')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+const buildIndexableText = (parts) => {
+  const joined = (Array.isArray(parts) ? parts : [parts])
+    .flat(Infinity)
+    .filter(v => v !== null && v !== undefined && v !== '')
+    .map(v => String(v))
+    .join(' ')
+  const base = normalizeSearchStr(joined)
+  if (!base) return ''
+
+  const acctExpanded = base
+    .replace(/-\(rp\s*(\d[\d.,]*)/gi, '-(rp -$1 $1')
+    .replace(/\((\d[\d.,]*)\)/g, ' -$1 $1 ')
+    .replace(/(?<![a-z0-9])-rp\s*(\d[\d.,]*)/gi, ' -rp -$1 $1 ')
+    .replace(/\b(rp|us\$|idr)(\d)/gi, '$1 $2')
+
+  const enFlat = acctExpanded
+    .replace(/,(\d{3})(?!\d)/g, '$1')
+    .replace(/,(\d{3})(?!\d)/g, '$1')
+
+  const idFlat = acctExpanded
+    .replace(/(\d),(\d{1,2})(?!\d)/g, '$1.$2')
+    .replace(/\.(\d{3})(?!\d)/g, '$1')
+    .replace(/\.(\d{3})(?!\d)/g, '$1')
+
+  const zVariants = base.includes('z-score') ? ' z score zscore' : ''
+  return Array.from(new Set([base, acctExpanded, enFlat, idFlat])).join(' ') + zVariants
+}
+
+const parseSearchTokens = (rawQuery) => {
+  const norm = normalizeSearchStr(rawQuery)
+  if (!norm) return []
+  return norm.split(/\s+/).filter(Boolean)
+}
+
+const doesTextMatchToken = (text, token) => {
+  if (!text || !token) return false
+  const synonyms = SEARCH_SYNONYMS[token] || []
+  const checkSynonyms = () => synonyms.some(syn => text.includes(syn))
+
+  if (/^[a-z]{1,3}$/.test(token)) {
+    const re = new RegExp(`(?<![a-z0-9])${escapeRegex(token)}(?![a-z0-9])`)
+    return re.test(text) || checkSynonyms()
+  }
+
+  if (/\d/.test(token)) {
+    const noComma = token
+      .replace(/,(\d{3})(?!\d)/g, '$1')
+      .replace(/,(\d{3})(?!\d)/g, '$1')
+    const dotDec = noComma.replace(/(\d),(\d{1,2})(?!\d)/g, '$1.$2')
+    const noDotThousand = /^[1-9]\d{0,2}(?:\.\d{3})+$/.test(dotDec) ? dotDec.replace(/\./g, '') : ''
+    const stripUnit = dotDec.replace(/(%|x|bn|m|t)$/i, '')
+    const candidates = Array.from(new Set([token, noComma, dotDec, noDotThousand, stripUnit])).filter(Boolean)
+
+    return candidates.some((cand) => {
+      if (/^-?\d{1,2}$/.test(cand)) {
+        const re = new RegExp(`(?<![0-9.,])${escapeRegex(cand)}(?![0-9]|,\\d{3}|\\.\\d{3})`)
+        return re.test(text)
+      }
+      if (/^-?\d[\d.]*$/.test(cand)) {
+        const re = new RegExp(`(?<![0-9])${escapeRegex(cand)}`)
+        return re.test(text)
+      }
+      const re = new RegExp(`(?<![a-z0-9])${escapeRegex(cand)}`)
+      return re.test(text)
+    })
+  }
+
+  if (text.includes(token)) return true
+  if (token.includes('-')) {
+    if (text.includes(token.replace(/-/g, ' ')) || text.includes(token.replace(/-/g, ''))) return true
+  }
+  return checkSynonyms()
+}
+
+const highlightSearchText = (rawText, query) => {
+  const text = String(rawText ?? '')
+  if (!text) return ''
+  const tokens = parseSearchTokens(query)
+  if (!tokens.length) return escapeHtml(text)
+
+  const patterns = []
+  for (const tk of tokens) {
+    if (/^[a-z]{1,3}$/.test(tk)) {
+      patterns.push(`\\b${escapeRegex(tk)}\\b`)
+      for (const syn of (SEARCH_SYNONYMS[tk] || [])) {
+        if (syn.length >= 4) patterns.push(escapeRegex(syn))
+      }
+    } else if (/\d/.test(tk)) {
+      const clean = tk.replace(/,/g, '').replace(/(%|x|bn|m|t)$/i, '')
+      if (/^-?\d{1,2}$/.test(clean)) {
+        const digitsOnly = clean.replace(/^-/, '')
+        const sign = clean.startsWith('-') ? '[−\\-]?' : ''
+        patterns.push(`(?<![0-9.,])${sign}${escapeRegex(digitsOnly)}(?![0-9]|,\\d{3}|\\.\\d{3})`)
+      } else if (clean.length >= 2) {
+        const digitsOnly = clean.replace(/^-/, '')
+        const flexNum = digitsOnly
+          .split('')
+          .map(ch => (ch === '.' ? '[.,]' : escapeRegex(ch)))
+          .join('[.,]?')
+        const sign = clean.startsWith('-') ? '[−\\-]?' : ''
+        patterns.push(`${sign}${flexNum}`)
+      }
+    } else if (tk.length >= 2) {
+      patterns.push(escapeRegex(tk))
+      if (tk.includes('-')) {
+        patterns.push(escapeRegex(tk.replace(/-/g, ' ')))
+      }
+      for (const syn of (SEARCH_SYNONYMS[tk] || [])) {
+        if (syn.length >= 4) patterns.push(escapeRegex(syn))
+      }
+    }
+  }
+
+  const uniquePatterns = Array.from(new Set(patterns)).sort((a, b) => b.length - a.length)
+  if (!uniquePatterns.length) return escapeHtml(text)
+  try {
+    const re = new RegExp(`(${uniquePatterns.join('|')})`, 'gi')
+    let out = ''
+    let last = 0
+    let m
+    while ((m = re.exec(text)) !== null) {
+      if (m[0].length === 0) {
+        re.lastIndex++
+        continue
+      }
+      out += escapeHtml(text.slice(last, m.index))
+      out += `<mark class="search-hl">${escapeHtml(m[0])}</mark>`
+      last = m.index + m[0].length
+    }
+    out += escapeHtml(text.slice(last))
+    return out
+  } catch {
+    return escapeHtml(text)
+  }
+}
+
+const makeSearchSnippet = (rawText, query, maxLen = 175) => {
+  const text = String(rawText ?? '').replace(/\s+/g, ' ').trim()
+  if (!text) return ''
+  if (text.length <= maxLen) return text
+  const tokens = parseSearchTokens(query)
+  const low = normalizeSearchStr(text)
+  let hitPos = -1
+  for (const tk of tokens) {
+    const idx = low.indexOf(tk)
+    if (idx !== -1 && (hitPos === -1 || idx < hitPos)) hitPos = idx
+    if (hitPos === -1 && SEARCH_SYNONYMS[tk]) {
+      for (const syn of SEARCH_SYNONYMS[tk]) {
+        const sIdx = low.indexOf(syn)
+        if (sIdx !== -1 && (hitPos === -1 || sIdx < hitPos)) hitPos = sIdx
+      }
+    }
+  }
+  if (hitPos <= 60) return text.slice(0, maxLen) + '…'
+  const start = Math.max(0, hitPos - 55)
+  const end = Math.min(text.length, start + maxLen)
+  return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '')
+}
+
+const universalSearchIndex = computed(() => {
+  const items = []
+  const isId = lang.value === 'id'
+
+  const pushItem = (entry) => {
+    const fullText = buildIndexableText(entry.searchParts)
+    if (!fullText) return
+    items.push({
+      id: entry.id,
+      category: entry.category,
+      subType: entry.subType,
+      parentKey: entry.parentKey,
+      location: entry.location,
+      title: entry.title,
+      value: entry.value || '',
+      rawContext: entry.rawContext || '',
+      priorityBoost: entry.priorityBoost || 0,
+      titleNorm: buildIndexableText([entry.title]),
+      valueNorm: buildIndexableText([entry.value]),
+      fullText,
+      action: entry.action,
+    })
+  }
+
+  // 1. Presentation Deck (Slides 1..18)
+  for (const s of presentationSlides.value) {
+    const slideTag = s.is_appendix
+      ? `${uiText.value.apxWord} A${s.slide_num - 12}`
+      : `${uiText.value.slideWord} ${s.slide_num}`
+    const slideTitle = s.display_title || s.title
+    const slideLoc = `${slideTag} • ${slideTitle}`
+    const parentKey = `pres-${s.slide_num}`
+
+    pushItem({
+      id: `pres-${s.slide_num}-overview`,
+      category: 'presentation',
+      subType: isId ? 'Ringkasan & Naskah Slide' : 'Slide & Speaker Notes',
+      parentKey,
+      location: `${slideTag} • ${s.section_tag}`,
+      title: slideTitle,
+      value: s.section_tag || '',
+      rawContext: [s.display_takeaway, s.subtitle, s.speaker_notes, s.methodology_note].filter(Boolean).join(' — '),
+      priorityBoost: 45,
+      searchParts: [
+        slideTag, s.title, s.display_title, s.section_tag, s.section_name,
+        s.subtitle, s.display_takeaway, s.methodology_note, s.source_footer,
+        s.speaker_notes, s.study_explanation, s.chart_formula,
+        s.target_user_revision, s.peer_revision
+      ],
+      action: { type: 'pres_slide', slideNum: s.slide_num },
+    })
+
+    ;(s.kpis || []).forEach((k, kIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-kpi-${kIdx}`,
+        category: 'presentation',
+        subType: 'KPI',
+        parentKey,
+        location: slideLoc,
+        title: k.label,
+        value: k.val,
+        rawContext: [k.sub, k.formula, k.detail_explanation].filter(Boolean).join(' • '),
+        priorityBoost: 70,
+        searchParts: [k.label, k.val, k.sub, k.formula, k.detail_explanation, k.calc_steps, k.data_origin, k.evidence_caption, k.highlight_terms],
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'kpi', itemData: k, itemIdx: kIdx },
+      })
+    })
+
+    ;(s.visual_rows || []).forEach((vr, vrIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-visual-${vrIdx}`,
+        category: 'presentation',
+        subType: isId ? 'Metrik Utama' : 'Key Metric',
+        parentKey,
+        location: slideLoc,
+        title: vr.name,
+        value: vr.value,
+        rawContext: [vr.text, vr.formula, ...(vr.calc_steps || [])].filter(Boolean).join(' • '),
+        priorityBoost: 75,
+        searchParts: [vr.name, vr.value, vr.text, vr.formula, vr.detail_explanation, vr.calc_steps, vr.data_origin, vr.evidence_caption, vr.highlight_terms],
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'editorial', itemData: vr, itemIdx: vrIdx },
+      })
+    })
+
+    ;(s.analysis_points || []).forEach((pt, ptIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-point-${ptIdx}`,
+        category: 'presentation',
+        subType: isId ? 'Poin Analisis' : 'Analysis Point',
+        parentKey,
+        location: slideLoc,
+        title: pt.heading || slideTitle,
+        value: '',
+        rawContext: [pt.text, pt.formula, pt.detail_explanation].filter(Boolean).join(' • '),
+        priorityBoost: 55,
+        searchParts: [pt.heading, pt.text, pt.formula, pt.detail_explanation, pt.calc_steps, pt.data_origin, pt.highlight_terms],
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'claim', itemData: pt, itemIdx: ptIdx },
+      })
+    })
+
+    ;(s.cards || []).forEach((card, cIdx) => {
+      const bulletsTxt = (card.bullets || []).map(b => `${b.bold} ${b.text}`).join(' ')
+      pushItem({
+        id: `pres-${s.slide_num}-card-${cIdx}`,
+        category: 'presentation',
+        subType: isId ? 'Kartu Slide' : 'Slide Card',
+        parentKey,
+        location: slideLoc,
+        title: card.title,
+        value: '',
+        rawContext: [bulletsTxt, card.formula, card.detail_explanation].filter(Boolean).join(' • '),
+        priorityBoost: 50,
+        searchParts: [card.title, bulletsTxt, card.formula, card.detail_explanation, card.calc_steps, card.data_origin],
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'card', itemData: card, itemIdx: cIdx },
+      })
+    })
+
+    ;(s.five_forces || []).forEach((row, fIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-force-${fIdx}`,
+        category: 'presentation',
+        subType: 'Porter Five Forces',
+        parentKey,
+        location: slideLoc,
+        title: row[0] || 'Five Forces',
+        value: row[1] || '',
+        rawContext: row[2] || '',
+        priorityBoost: 60,
+        searchParts: row,
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'five_force', itemData: row, itemIdx: fIdx },
+      })
+    })
+
+    if (s.table && Array.isArray(s.table.rows)) {
+      s.table.rows.forEach((row, rIdx) => {
+        const rd = (s.table.row_details && s.table.row_details[rIdx]) || {}
+        pushItem({
+          id: `pres-${s.slide_num}-row-${rIdx}`,
+          category: 'presentation',
+          subType: isId ? 'Baris Tabel Slide' : 'Slide Table Row',
+          parentKey,
+          location: `${slideTag} • ${s.table.title || slideTitle}`,
+          title: String(row[0] ?? s.table.title ?? slideTitle),
+          value: row.slice(1).filter(Boolean).join(' | '),
+          rawContext: [rd.formula, rd.detail_explanation, s.table.title].filter(Boolean).join(' • '),
+          priorityBoost: 65,
+          searchParts: [s.table.title, s.table.headers, row, rd.detail_explanation, rd.formula, rd.calc_steps, rd.data_origin, rd.highlight_terms],
+          action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'row', itemData: row, itemIdx: rIdx },
+        })
+      })
+    }
+
+    ;(s.calculation_notes || []).forEach((c, calcIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-calc-${calcIdx}`,
+        category: 'presentation',
+        subType: isId ? 'Rumus & Perhitungan' : 'Formula & Calc',
+        parentKey,
+        location: `${slideTag} • ${isId ? 'Tabel Perhitungan' : 'Calculation Table'}`,
+        title: c.label,
+        value: c.result,
+        rawContext: `${c.formula} → ${c.substitution}${c.note ? ' (' + c.note + ')' : ''}`,
+        priorityBoost: 80,
+        searchParts: [c.label, c.result, c.formula, c.substitution, c.note, c.source, c.result_numeric],
+        action: { type: 'pres_calc', slideNum: s.slide_num, calcIdx, calcObj: c },
+      })
+    })
+
+    if (s.z_score_schedule) {
+      const zs = s.z_score_schedule
+      pushItem({
+        id: `pres-${s.slide_num}-zsched-summary`,
+        category: 'presentation',
+        subType: 'Z-Score Schedule',
+        parentKey,
+        location: `${slideTag} • Week 6 Z-Score`,
+        title: `Week 6 Z-Score (${zs.formula})`,
+        value: `Z = ${Number(zs.result).toFixed(2)}`,
+        rawContext: `${zs.formula} | Z = ${Number(zs.result).toFixed(6)} (${zs.x4_basis || ''})`,
+        priorityBoost: 75,
+        searchParts: [zs.formula, zs.result, Number(zs.result).toFixed(2), Number(zs.result).toFixed(6), zs.x4_basis, zs.headers],
+        action: {
+          type: 'pres_custom_drawer',
+          slideNum: s.slide_num,
+          payload: {
+            title: isId ? 'Jadwal Z-Score Minggu 6' : 'Week 6 Z-Score Schedule',
+            value: `Z = ${Number(zs.result).toFixed(6)}`,
+            explanation: `${zs.formula} (${zs.x4_basis || ''})`,
+            detail_explanation: `${zs.formula}\nResult: Z = ${Number(zs.result).toFixed(6)}\nBasis: ${zs.x4_basis || ''}`,
+            formula: zs.formula,
+            calc_steps: (zs.rows || []).map(r => r.join(' | ')),
+            data_origin: s.source_footer || '',
+            highlight_terms: ['Z-score', Number(zs.result).toFixed(2)],
+            keywords: 'z-score altman week 6',
+          },
+        },
+      })
+      ;(zs.rows || []).forEach((zRow, zIdx) => {
+        pushItem({
+          id: `pres-${s.slide_num}-zsched-${zIdx}`,
+          category: 'presentation',
+          subType: 'Z-Score Factor',
+          parentKey,
+          location: `${slideTag} • Z-Score Schedule`,
+          title: String(zRow[0] ?? 'Z-Score Component'),
+          value: zRow[zRow.length - 1] || '',
+          rawContext: zRow.join(' | '),
+          priorityBoost: 68,
+          searchParts: [zs.headers, zRow],
+          action: {
+            type: 'pres_custom_drawer',
+            slideNum: s.slide_num,
+            payload: {
+              title: String(zRow[0] ?? 'Z-Score Component'),
+              value: zRow[zRow.length - 1] || '',
+              explanation: zRow.join(' | '),
+              detail_explanation: `${zs.formula}\n${zRow.join(' | ')}`,
+              formula: zs.formula,
+              calc_steps: [zRow.join(' | ')],
+              data_origin: s.source_footer || '',
+              highlight_terms: [zRow[0], zRow[zRow.length - 1]],
+              keywords: zRow.join(' '),
+            },
+          },
+        })
+      })
+    }
+
+    ;(s.supporting_schedules || []).forEach((sched, scIdx) => {
+      ;(sched.rows || []).forEach((sRow, srIdx) => {
+        pushItem({
+          id: `pres-${s.slide_num}-sched-${scIdx}-${srIdx}`,
+          category: 'presentation',
+          subType: isId ? 'Jadwal Pendukung' : 'Supporting Schedule',
+          parentKey,
+          location: `${slideTag} • ${sched.title}`,
+          title: String(sRow[0] ?? sched.title),
+          value: sRow.slice(1).filter(Boolean).join(' | '),
+          rawContext: `${sched.title}: ${sRow.join(' | ')}${sched.note ? ' — ' + sched.note : ''}`,
+          priorityBoost: 62,
+          searchParts: [sched.title, sched.headers, sRow, sched.note],
+          action: {
+            type: 'pres_custom_drawer',
+            slideNum: s.slide_num,
+            payload: {
+              title: String(sRow[0] ?? sched.title),
+              value: sRow.slice(1).filter(Boolean).join(' | '),
+              explanation: sched.note || sched.title,
+              detail_explanation: `${sched.title}\n${sRow.join(' | ')}${sched.note ? '\n' + sched.note : ''}`,
+              formula: '',
+              calc_steps: [sRow.join(' | ')],
+              data_origin: s.source_footer || '',
+              highlight_terms: sRow.slice(0, 2),
+              keywords: `${sched.title} ${sRow.join(' ')}`,
+            },
+          },
+        })
+      })
+    })
+
+    ;(s.peer_exclusions || []).forEach((peer, pIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-peer-${pIdx}`,
+        category: 'presentation',
+        subType: 'Peer Exclusion',
+        parentKey,
+        location: slideLoc,
+        title: peer.company,
+        value: isId ? 'Dikeluarkan' : 'Excluded',
+        rawContext: peer.reason,
+        priorityBoost: 55,
+        searchParts: [peer.company, peer.reason],
+        action: { type: 'pres_item', slideNum: s.slide_num, itemKind: 'peer_exclusion', itemData: peer, itemIdx: pIdx },
+      })
+    })
+
+    ;(s.valuation_range || []).forEach((vr, vIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-valrange-${vIdx}`,
+        category: 'presentation',
+        subType: 'Valuation Range',
+        parentKey,
+        location: slideLoc,
+        title: vr.label,
+        value: `${vr.value > 0 ? '+' : ''}${vr.value} Rp/share`,
+        rawContext: `${vr.label}: ${vr.value} Rp/share (${s.chart_formula || ''})`,
+        priorityBoost: 65,
+        searchParts: [vr.label, vr.value, s.chart_formula],
+        action: { type: 'pres_slide', slideNum: s.slide_num },
+      })
+    })
+
+    ;[...(s.lecture_traces || []), ...(s.assignment_traces || [])].forEach((tr, tIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-trace-${tIdx}`,
+        category: 'presentation',
+        subType: isId ? 'Jejak Audit' : 'Audit Trace',
+        parentKey,
+        location: `${slideTag} • ${tr.week_label || tr.assignment_code || ''}`,
+        title: tr.trace_role || tr.mapping_note || (tr.assignment_code || tr.week_label),
+        value: tr.cell_or_section_ref || (tr.slide_num ? `Slide ${tr.slide_num}` : ''),
+        rawContext: [tr.mapping_note, tr.evidence_caption, tr.sheet_name].filter(Boolean).join(' • '),
+        priorityBoost: 30,
+        searchParts: [tr.week_label, tr.assignment_code, tr.sheet_name, tr.cell_or_section_ref, tr.trace_role, tr.mapping_note, tr.evidence_caption],
+        action: { type: 'pres_audit', slideNum: s.slide_num },
+      })
+    })
+
+    ;(s.assignment_evidence || []).forEach((ev, evIdx) => {
+      pushItem({
+        id: `pres-${s.slide_num}-asgev-${evIdx}`,
+        category: 'presentation',
+        subType: 'Assignment Evidence',
+        parentKey,
+        location: `${slideTag} • ${ev.file || ''}`,
+        title: ev.metric,
+        value: ev.value,
+        rawContext: `${ev.file} — ${ev.location}`,
+        priorityBoost: 55,
+        searchParts: [ev.metric, ev.value, ev.file, ev.location],
+        action: { type: 'pres_audit', slideNum: s.slide_num },
+      })
+    })
+  }
+
+  // 2. Lecture Slides & GoTo Empirical Models (12 Weeks)
+  for (const mod of modules.value) {
+    const parentKey = mod.id
+
+    pushItem({
+      id: `mod-${mod.id}-overview`,
+      category: 'slides',
+      subType: isId ? 'Ringkasan Minggu' : 'Week Overview',
+      parentKey,
+      location: `${mod.week} • ${mod.category}`,
+      title: mod.title,
+      value: `${mod.slides?.length || 0} ${uiText.value.slidesWord}`,
+      rawContext: [mod.core_question, mod.story_clue, mod.reading].filter(Boolean).join(' • '),
+      priorityBoost: 35,
+      searchParts: [mod.week, mod.title, mod.category, mod.core_question, mod.reading, mod.story_clue],
+      action: { type: 'lecture_slide', weekId: mod.id, slideNum: mod.slides?.[0]?.slide_num || 1 },
+    })
+
+    ;(mod.study_takeaways || []).forEach((tk, tkIdx) => {
+      pushItem({
+        id: `mod-${mod.id}-tk-${tkIdx}`,
+        category: 'slides',
+        subType: isId ? 'Intisari Kuliah' : 'Key Takeaway',
+        parentKey,
+        location: `${mod.week} • ${uiText.value.takeaways}`,
+        title: `${mod.week} Takeaway #${tkIdx + 1}`,
+        value: '',
+        rawContext: tk,
+        priorityBoost: 35,
+        searchParts: [mod.week, tk],
+        action: { type: 'lecture_takeaways', weekId: mod.id },
+      })
+    })
+
+    if (mod.goto_application) {
+      const ga = mod.goto_application
+      pushItem({
+        id: `mod-${mod.id}-gotoapp`,
+        category: 'slides',
+        subType: isId ? 'Model Keuangan GoTo' : 'GoTo Model',
+        parentKey,
+        location: `${mod.week} • ${uiText.value.financials}`,
+        title: ga.title || mod.title,
+        value: '',
+        rawContext: [ga.verdict, ...(ga.forces || []).map(f => `${f.force} (${f.rating}): ${f.analysis}`)].filter(Boolean).join(' • '),
+        priorityBoost: 45,
+        searchParts: [ga.title, ga.verdict, (ga.forces || []).map(f => `${f.force} ${f.rating} ${f.analysis}`)],
+        action: { type: 'lecture_app', weekId: mod.id },
+      })
+    }
+
+    for (const sl of mod.slides || []) {
+      const slideLoc = `${mod.week} • Slide ${sl.slide_num}`
+
+      pushItem({
+        id: `mod-${mod.id}-sl-${sl.slide_num}`,
+        category: 'slides',
+        subType: isId ? 'Slide Kuliah' : 'Lecture Slide',
+        parentKey,
+        location: slideLoc,
+        title: sl.header || `${mod.week} Slide ${sl.slide_num}`,
+        value: sl.subtitle || '',
+        rawContext: [sl.goto_explanation, sl.theory_explanation, sl.raw_text].filter(Boolean).join(' — '),
+        priorityBoost: 45,
+        searchParts: [mod.week, `Slide ${sl.slide_num}`, sl.header, sl.subtitle, sl.raw_text, sl.theory_explanation, sl.goto_explanation],
+        action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
+      })
+
+      const rep = getLectureReportObj(mod.id, sl.slide_num)
+      if (rep) {
+        if (rep.title || rep.description || rep.analytical_note) {
+          pushItem({
+            id: `mod-${mod.id}-sl-${sl.slide_num}-rep`,
+            category: 'slides',
+            subType: 'GoTo Analysis',
+            parentKey,
+            location: `${slideLoc} • ${rep.badge || 'GoTo'}`,
+            title: rep.title || sl.header,
+            value: '',
+            rawContext: [rep.description, rep.analytical_note].filter(Boolean).join(' — '),
+            priorityBoost: 50,
+            searchParts: [rep.badge, rep.title, rep.description, rep.analytical_note],
+            action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
+          })
+        }
+
+        ;(rep.key_metrics || []).forEach((km, kmIdx) => {
+          pushItem({
+            id: `mod-${mod.id}-sl-${sl.slide_num}-km-${kmIdx}`,
+            category: 'slides',
+            subType: 'GoTo Metric',
+            parentKey,
+            location: `${slideLoc} • ${rep.title || ''}`,
+            title: km.label,
+            value: km.val,
+            rawContext: km.note || rep.title || '',
+            priorityBoost: 65,
+            searchParts: [km.label, km.val, km.note, rep.title],
+            action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
+          })
+        })
+
+        ;(rep.table_rows || []).forEach((rVals, rIdx) => {
+          if (!Array.isArray(rVals) || !rVals.some(c => String(c ?? '').trim() !== '')) return
+          pushItem({
+            id: `mod-${mod.id}-sl-${sl.slide_num}-row-${rIdx}`,
+            category: 'slides',
+            subType: isId ? 'Baris Tabel Kuliah' : 'Lecture Table Row',
+            parentKey,
+            location: `${slideLoc} • ${rep.title || ''}`,
+            title: String(rVals[0] ?? rep.title ?? sl.header),
+            value: rVals.slice(1).filter(c => String(c ?? '').trim() !== '').join(' | '),
+            rawContext: `${rep.title || ''}: ${rVals.join(' | ')}`,
+            priorityBoost: 65,
+            searchParts: [rep.title, rep.table_headers, rVals],
+            action: { type: 'lecture_row', weekId: mod.id, slideNum: sl.slide_num, rowIdx: rIdx, rowVals: rVals },
+          })
+        })
+      }
+
+      if (sl.audit_evidence) {
+        const ev = sl.audit_evidence
+        pushItem({
+          id: `mod-${mod.id}-sl-${sl.slide_num}-ev`,
+          category: 'slides',
+          subType: 'Audited Proof',
+          parentKey,
+          location: slideLoc,
+          title: ev.title || 'Audited Evidence',
+          value: (ev.key_figures || []).map(kf => `${kf.label}: ${kf.val}`).slice(0, 2).join(' | '),
+          rawContext: [ev.caption, ...(ev.key_figures || []).map(kf => `${kf.label}: ${kf.val} (${kf.ref || ''})`)].filter(Boolean).join(' • '),
+          priorityBoost: 55,
+          searchParts: [ev.title, ev.caption, (ev.key_figures || []).map(kf => `${kf.label} ${kf.val} ${kf.ref || ''}`)],
+          action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
+        })
+      }
+    }
+  }
+
+  // 3. Completed Assignments & Excel Workbooks (7 Dossiers)
+  for (const asg of assignments.value) {
+    const parentKey = asg.id
+
+    pushItem({
+      id: `asg-${asg.id}-overview`,
+      category: 'assignments',
+      subType: isId ? 'Berkas Tugas' : 'Assignment',
+      parentKey,
+      location: `${asg.code} • ${asg.week}`,
+      title: asg.title,
+      value: asg.xlsx_file || asg.docx_file || '',
+      rawContext: asg.summary || '',
+      priorityBoost: 40,
+      searchParts: [asg.code, asg.week, asg.title, asg.summary, asg.folder, asg.docx_file, asg.xlsx_file],
+      action: { type: 'assignment_sec', asgId: asg.id, secIdx: 0 },
+    })
+
+    ;(asg.sections || []).forEach((sec, secIdx) => {
+      pushItem({
+        id: `asg-${asg.id}-sec-${secIdx}`,
+        category: 'assignments',
+        subType: isId ? 'Bagian Tugas' : 'Report Section',
+        parentKey,
+        location: `${asg.code} • ${asg.week}`,
+        title: sec.heading,
+        value: sec.source_citation || '',
+        rawContext: [...(sec.paragraphs || []), sec.evidence_caption].filter(Boolean).join(' '),
+        priorityBoost: 50,
+        searchParts: [asg.code, sec.heading, sec.source_citation, sec.evidence_caption, sec.paragraphs],
+        action: { type: 'assignment_sec', asgId: asg.id, secIdx },
+      })
+
+      ;(sec.tables || []).forEach((tbl, tblIdx) => {
+        if (!Array.isArray(tbl) || tbl.length === 0) return
+        const headers = tbl[0] || []
+        tbl.slice(1).forEach((rVals, rIdx) => {
+          if (!Array.isArray(rVals) || !rVals.some(c => String(c ?? '').trim() !== '')) return
+          pushItem({
+            id: `asg-${asg.id}-sec-${secIdx}-tbl-${tblIdx}-row-${rIdx}`,
+            category: 'assignments',
+            subType: isId ? 'Baris Tabel Tugas' : 'Report Table Row',
+            parentKey,
+            location: `${asg.code} • ${sec.heading}`,
+            title: String(rVals[0] ?? sec.heading),
+            value: rVals.slice(1).filter(c => String(c ?? '').trim() !== '').join(' | '),
+            rawContext: rVals.join(' | '),
+            priorityBoost: 68,
+            searchParts: [asg.code, sec.heading, headers, rVals],
+            action: { type: 'assignment_table_row', asgId: asg.id, secIdx, tblIdx, rowIdx: rIdx },
+          })
+        })
+      })
+    })
+
+    if (asg.workbook) {
+      for (const sheetName of Object.keys(asg.workbook)) {
+        const grid = getWorkbookGrid(asg.id, sheetName) || []
+        grid.forEach((row, rIdx) => {
+          if (!Array.isArray(row)) return
+          const nonEmpty = row.map(c => String(c ?? '').trim()).filter(Boolean)
+          if (!nonEmpty.length) return
+          pushItem({
+            id: `asg-${asg.id}-wb-${sheetName}-${rIdx}`,
+            category: 'assignments',
+            subType: 'Excel Row',
+            parentKey,
+            location: `${asg.code} • ${sheetName} (Row ${rIdx + 1})`,
+            title: nonEmpty[0],
+            value: nonEmpty.slice(1, 5).join(' | '),
+            rawContext: `${sheetName}: ${nonEmpty.join(' | ')}`,
+            priorityBoost: 72,
+            searchParts: [asg.code, asg.xlsx_file, sheetName, nonEmpty],
+            action: { type: 'workbook_row', asgId: asg.id, sheetName, rowIdx: rIdx },
+          })
+        })
+      }
+    }
+  }
+
+  return items
+})
+
+const allSearchResults = computed(() => {
+  const tokens = parseSearchTokens(searchQuery.value)
+  if (!tokens.length) return []
+  const qNorm = normalizeSearchStr(searchQuery.value)
+
+  const results = []
+  for (const item of universalSearchIndex.value) {
+    let matchedCount = 0
+    let fieldBoost = 0
+    for (const tk of tokens) {
+      if (doesTextMatchToken(item.fullText, tk)) {
+        matchedCount++
+        if (doesTextMatchToken(item.titleNorm, tk)) fieldBoost += 140
+        if (item.valueNorm && doesTextMatchToken(item.valueNorm, tk)) fieldBoost += 110
+      }
+    }
+    if (matchedCount === 0) continue
+
+    const allMatched = matchedCount === tokens.length
+    let score = matchedCount * 120 + fieldBoost + (item.priorityBoost || 0)
+    if (allMatched) score += 600
+    if (qNorm.length >= 2 && item.fullText.includes(qNorm)) score += 200
+    if (qNorm.length >= 2 && item.titleNorm.includes(qNorm)) score += 220
+
+    results.push({
+      ...item,
+      _score: score,
+      _allMatched: allMatched,
+      _matchedCount: matchedCount,
+      snippet: makeSearchSnippet(item.rawContext || item.location, searchQuery.value),
+    })
+  }
+
+  results.sort((a, b) => b._score - a._score)
+  const allMatchedResults = results.filter(r => r._allMatched)
+  return allMatchedResults.length > 0 ? allMatchedResults : results
+})
+
+const searchCounts = computed(() => {
+  const counts = { all: allSearchResults.value.length, presentation: 0, slides: 0, assignments: 0 }
+  for (const r of allSearchResults.value) {
+    if (counts[r.category] !== undefined) counts[r.category]++
+  }
+  return counts
+})
+
+const displayedSearchResults = computed(() => {
+  const list = searchCategoryFilter.value === 'all'
+    ? allSearchResults.value
+    : allSearchResults.value.filter(r => r.category === searchCategoryFilter.value)
+  return list.slice(0, 80)
+})
+
+const searchMatchesByParent = computed(() => {
+  const map = {}
+  for (const r of allSearchResults.value) {
+    if (!map[r.parentKey]) map[r.parentKey] = []
+    map[r.parentKey].push(r)
+  }
+  return map
+})
+
+const doesRowMatchSearchQuery = (row) => {
+  const tokens = parseSearchTokens(searchQuery.value)
+  if (!tokens.length || !Array.isArray(row)) return false
+  const text = buildIndexableText(row)
+  if (!text) return false
+  return tokens.every(tk => doesTextMatchToken(text, tk))
+}
+
+const applyQuickSearch = (term) => {
+  searchQuery.value = term
+  isSearchPanelOpen.value = true
+}
+
+const clearUniversalSearch = () => {
+  searchQuery.value = ''
+  isSearchPanelOpen.value = false
+  searchHighlightTargetId.value = ''
+}
+
+const executeSearchResultAction = (res) => {
+  if (!res || !res.action) return
+  const act = res.action
+  isSearchPanelOpen.value = false
+  isPresentMode.value = false
+  clickPopup.value = null
+
+  if (act.type === 'pres_slide') {
+    showAuditDrawer.value = false
+    detailDrawerItem.value = null
+    selectPresSlide(act.slideNum)
+    return
+  }
+
+  if (act.type === 'pres_item') {
+    selectPresSlide(act.slideNum)
+    nextTick(() => {
+      onPresItemDblClick(buildPresItemPayload(act.itemKind, act.itemData, act.itemIdx ?? 0))
+    })
+    return
+  }
+
+  if (act.type === 'pres_calc') {
+    selectPresSlide(act.slideNum)
+    const c = act.calcObj
+    nextTick(() => {
+      const slide = currentPresSlide.value
+      onPresItemDblClick({
+        title: c.label,
+        value: c.result,
+        explanation: c.note || c.substitution || c.formula,
+        detail_explanation: `${c.formula || ''} → ${c.substitution || ''}${c.note ? '\n' + c.note : ''}`,
+        formula: c.formula || '',
+        calc_steps: [c.substitution].filter(Boolean),
+        data_origin: c.source || slide?.source_footer || '',
+        highlight_terms: [c.label, c.result],
+        evidence_img: null,
+        evidence_caption: '',
+        keywords: `${c.label} ${c.result} ${c.formula}`,
+      })
+      nextTick(() => {
+        selectDrawerFormulaCell(c, act.calcIdx, 1)
+        isDrawerFormulaLocked.value = true
+        const rowEl = document.querySelectorAll('.drawer-formula-table tbody tr')[act.calcIdx]
+        if (rowEl) rowEl.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      })
+    })
+    return
+  }
+
+  if (act.type === 'pres_custom_drawer') {
+    selectPresSlide(act.slideNum)
+    nextTick(() => {
+      onPresItemDblClick(act.payload)
+    })
+    return
+  }
+
+  if (act.type === 'pres_audit') {
+    detailDrawerItem.value = null
+    selectPresSlide(act.slideNum)
+    showAuditDrawer.value = true
+    nextTick(() => {
+      const el = document.querySelector('.audit-drawer-wrapper')
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+    return
+  }
+
+  if (act.type === 'lecture_slide') {
+    detailDrawerItem.value = null
+    searchHighlightTargetId.value = `lecture-slide-${act.weekId}-${act.slideNum}`
+    jumpToLectureSlide(act.weekId, act.slideNum)
+    return
+  }
+
+  if (act.type === 'lecture_row') {
+    detailDrawerItem.value = null
+    selectedWeekId.value = act.weekId
+    activeTab.value = 'slides'
+    sidebarMode.value = 'slides'
+    const domId = `table-row-${act.slideNum}-${act.rowIdx}`
+    searchHighlightTargetId.value = domId
+    nextTick(() => {
+      const el = document.getElementById(domId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      } else {
+        const slideEl = document.getElementById(`lecture-slide-${act.weekId}-${act.slideNum}`)
+        if (slideEl) slideEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+      if (act.rowVals) onHoverCell(act.slideNum, act.rowIdx, 1, act.rowVals)
+    })
+    return
+  }
+
+  if (act.type === 'lecture_takeaways') {
+    detailDrawerItem.value = null
+    selectedWeekId.value = act.weekId
+    activeTab.value = 'flashcards'
+    sidebarMode.value = 'slides'
+    return
+  }
+
+  if (act.type === 'lecture_app') {
+    detailDrawerItem.value = null
+    selectedWeekId.value = act.weekId
+    activeTab.value = 'goto'
+    sidebarMode.value = 'slides'
+    return
+  }
+
+  if (act.type === 'assignment_sec') {
+    detailDrawerItem.value = null
+    selectAssignment(act.asgId)
+    const domId = `asg-sec-${act.secIdx}`
+    searchHighlightTargetId.value = domId
+    nextTick(() => scrollToAsgSection(domId))
+    return
+  }
+
+  if (act.type === 'assignment_table_row') {
+    detailDrawerItem.value = null
+    selectAssignment(act.asgId)
+    const domId = `asg-sec-${act.secIdx}-tbl-${act.tblIdx}-row-${act.rowIdx}`
+    searchHighlightTargetId.value = domId
+    nextTick(() => {
+      const el = document.getElementById(domId)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+    return
+  }
+
+  if (act.type === 'workbook_row') {
+    detailDrawerItem.value = null
+    jumpToAssignmentSheet(act.asgId, act.sheetName)
+    const domId = `wb-row-${act.rowIdx}`
+    searchHighlightTargetId.value = domId
+    nextTick(() => {
+      nextTick(() => {
+        const el = document.getElementById(domId)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      })
+    })
+  }
+}
+
+const filteredPresSlides = computed(() => {
+  if (!searchQuery.value.trim()) return presentationSlides.value
+  return presentationSlides.value.filter(s => (searchMatchesByParent.value[`pres-${s.slide_num}`]?.length || 0) > 0)
+})
+
 const filteredModules = computed(() => {
   if (!searchQuery.value.trim()) return modules.value
-  const q = searchQuery.value.toLowerCase()
-  return modules.value.filter(m => 
-    m.week.toLowerCase().includes(q) ||
-    m.title.toLowerCase().includes(q) ||
-    m.category.toLowerCase().includes(q) ||
-    m.core_question.toLowerCase().includes(q)
-  )
+  return modules.value.filter(m => (searchMatchesByParent.value[m.id]?.length || 0) > 0)
 })
 
 const filteredAssignments = computed(() => {
   if (!searchQuery.value.trim()) return assignments.value
-  const q = searchQuery.value.toLowerCase()
-  return assignments.value.filter(a => 
-    a.title.toLowerCase().includes(q) ||
-    a.code.toLowerCase().includes(q) ||
-    a.summary.toLowerCase().includes(q)
-  )
+  return assignments.value.filter(a => (searchMatchesByParent.value[a.id]?.length || 0) > 0)
 })
 
 watch(activeTab, (newTab) => {
@@ -2220,12 +3249,14 @@ const selectWeek = (id) => {
   selectedWeekId.value = id
   activeTab.value = 'slides'
   sidebarMode.value = 'slides'
+  isSearchPanelOpen.value = false
 }
 
 const selectAssignment = (id) => {
   selectedAssignmentId.value = id
   activeTab.value = 'assignments'
   sidebarMode.value = 'assignments'
+  isSearchPanelOpen.value = false
   const a = assignments.value.find(item => item.id === id)
   if (a && a.workbook) {
     selectedWorkbookSheet.value = Object.keys(a.workbook)[0] || ''
@@ -2450,11 +3481,35 @@ const isColNumeric = (tbl, cIdx) => {
       </div>
 
       <div class="search-box">
-        <input 
-          v-model="searchQuery" 
-          type="text" 
-          :placeholder="sidebarMode === 'assignments' ? uiText.searchTasksPlaceholder : (sidebarMode === 'presentation' ? uiText.searchDeckPlaceholder : uiText.searchSlidesPlaceholder)" 
-        />
+        <div class="search-input-wrap">
+          <span class="search-input-icon" aria-hidden="true">🔍</span>
+          <input 
+            v-model="searchQuery" 
+            type="text" 
+            :placeholder="uiText.searchSidebarPlaceholder"
+            @keydown.enter="searchQuery.trim() && (isSearchPanelOpen = true)"
+          />
+          <button
+            v-if="searchQuery.trim()"
+            type="button"
+            class="search-clear-btn"
+            :aria-label="uiText.searchClear"
+            :title="uiText.searchClear"
+            @click="clearUniversalSearch"
+          >&times;</button>
+        </div>
+        <div v-if="searchQuery.trim()" class="sidebar-search-meta">
+          <span class="sidebar-search-count">
+            {{ allSearchResults.length }} {{ uiText.searchHitsLabel }}
+          </span>
+          <button
+            type="button"
+            class="sidebar-open-results-btn"
+            @click="isSearchPanelOpen = !isSearchPanelOpen"
+          >
+            {{ isSearchPanelOpen ? uiText.searchHideResults : uiText.searchShowResults }}
+          </button>
+        </div>
       </div>
 
       <!-- Top Switcher Menu for Final Deck / Slides / Assignments -->
@@ -2464,7 +3519,7 @@ const isColNumeric = (tbl, cIdx) => {
           @click="sidebarMode = 'presentation'; activeTab = 'presentation'"
         >
           <span>{{ uiText.switchDeck }}</span>
-          <span class="switcher-badge">14</span>
+          <span class="switcher-badge">{{ searchQuery.trim() ? filteredPresSlides.length : 14 }}</span>
         </button>
 
         <button 
@@ -2472,7 +3527,7 @@ const isColNumeric = (tbl, cIdx) => {
           @click="sidebarMode = 'slides'; activeTab = 'slides'"
         >
           <span>{{ uiText.switchSlides }}</span>
-          <span class="switcher-badge">12</span>
+          <span class="switcher-badge">{{ searchQuery.trim() ? filteredModules.length : 12 }}</span>
         </button>
 
         <button 
@@ -2480,7 +3535,7 @@ const isColNumeric = (tbl, cIdx) => {
           @click="sidebarMode = 'assignments'; activeTab = 'assignments'"
         >
           <span>{{ uiText.switchTasks }}</span>
-          <span class="switcher-badge">7</span>
+          <span class="switcher-badge">{{ searchQuery.trim() ? filteredAssignments.length : 7 }}</span>
         </button>
       </div>
 
@@ -2498,12 +3553,31 @@ const isColNumeric = (tbl, cIdx) => {
               <span :class="['week-badge', ps.is_appendix ? 'apx-badge' : 'pres-badge']">
                 {{ ps.is_appendix ? uiText.apxWord + ' A' + (ps.slide_num - 12) : uiText.slideWord.toUpperCase() + ' ' + ps.slide_num }}
               </span>
-              <span class="slide-count-badge">
+              <span v-if="searchQuery.trim() && searchMatchesByParent['pres-' + ps.slide_num]?.length" class="slide-count-badge nav-hits-badge">
+                {{ searchMatchesByParent['pres-' + ps.slide_num].length }} {{ uiText.searchHitsLabel }}
+              </span>
+              <span v-else class="slide-count-badge">
                 L:{{ ps.lecture_traces.length }} | A:{{ ps.assignment_traces.length }}
               </span>
             </div>
             <div class="nav-item-title">{{ ps.title }}</div>
             <div class="category-tag">{{ ps.section_tag }}</div>
+            <div v-if="searchQuery.trim() && searchMatchesByParent['pres-' + ps.slide_num]?.length" class="nav-match-list">
+              <button
+                v-for="hit in searchMatchesByParent['pres-' + ps.slide_num].slice(0, 2)"
+                :key="hit.id"
+                type="button"
+                class="nav-match-chip"
+                @click.stop="executeSearchResultAction(hit)"
+              >
+                <span class="nav-match-type">{{ hit.subType }}</span>
+                <span class="nav-match-title">{{ hit.title }}</span>
+                <span v-if="hit.value" class="nav-match-val">{{ hit.value }}</span>
+              </button>
+            </div>
+          </div>
+          <div v-if="searchQuery.trim() && filteredPresSlides.length === 0" class="sidebar-empty-note">
+            {{ uiText.searchNoResults }}
           </div>
         </div>
 
@@ -2518,10 +3592,29 @@ const isColNumeric = (tbl, cIdx) => {
           >
             <div class="nav-item-top">
               <span class="week-badge">{{ item.week }}</span>
-              <span class="slide-count-badge">{{ item.slides.length }} {{ uiText.slidesWord }}</span>
+              <span v-if="searchQuery.trim() && searchMatchesByParent[item.id]?.length" class="slide-count-badge nav-hits-badge">
+                {{ searchMatchesByParent[item.id].length }} {{ uiText.searchHitsLabel }}
+              </span>
+              <span v-else class="slide-count-badge">{{ item.slides.length }} {{ uiText.slidesWord }}</span>
             </div>
             <div class="nav-item-title">{{ item.title }}</div>
             <div class="category-tag">{{ item.category }}</div>
+            <div v-if="searchQuery.trim() && searchMatchesByParent[item.id]?.length" class="nav-match-list">
+              <button
+                v-for="hit in searchMatchesByParent[item.id].slice(0, 2)"
+                :key="hit.id"
+                type="button"
+                class="nav-match-chip"
+                @click.stop="executeSearchResultAction(hit)"
+              >
+                <span class="nav-match-type">{{ hit.subType }}</span>
+                <span class="nav-match-title">{{ hit.title }}</span>
+                <span v-if="hit.value" class="nav-match-val">{{ hit.value }}</span>
+              </button>
+            </div>
+          </div>
+          <div v-if="searchQuery.trim() && filteredModules.length === 0" class="sidebar-empty-note">
+            {{ uiText.searchNoResults }}
           </div>
         </div>
 
@@ -2536,9 +3629,28 @@ const isColNumeric = (tbl, cIdx) => {
           >
             <div class="nav-item-top">
               <span class="week-badge asg-badge">{{ a.code }}</span>
-              <span class="slide-count-badge">{{ a.week }}</span>
+              <span v-if="searchQuery.trim() && searchMatchesByParent[a.id]?.length" class="slide-count-badge nav-hits-badge">
+                {{ searchMatchesByParent[a.id].length }} {{ uiText.searchHitsLabel }}
+              </span>
+              <span v-else class="slide-count-badge">{{ a.week }}</span>
             </div>
             <div class="nav-item-title">{{ a.title }}</div>
+            <div v-if="searchQuery.trim() && searchMatchesByParent[a.id]?.length" class="nav-match-list">
+              <button
+                v-for="hit in searchMatchesByParent[a.id].slice(0, 2)"
+                :key="hit.id"
+                type="button"
+                class="nav-match-chip"
+                @click.stop="executeSearchResultAction(hit)"
+              >
+                <span class="nav-match-type">{{ hit.subType }}</span>
+                <span class="nav-match-title">{{ hit.title }}</span>
+                <span v-if="hit.value" class="nav-match-val">{{ hit.value }}</span>
+              </button>
+            </div>
+          </div>
+          <div v-if="searchQuery.trim() && filteredAssignments.length === 0" class="sidebar-empty-note">
+            {{ uiText.searchNoResults }}
           </div>
         </div>
       </div>
@@ -2635,8 +3747,29 @@ const isColNumeric = (tbl, cIdx) => {
           </div>
         </div>
 
-        <!-- Right: Status / Context Indicator & Theme Toggle -->
+        <!-- Right: Global Search + Theme Toggle + Status Indicator -->
         <div class="header-right">
+          <div class="header-search-wrap">
+            <span class="header-search-icon" aria-hidden="true">🔍</span>
+            <input
+              ref="globalSearchInputRef"
+              v-model="searchQuery"
+              type="text"
+              class="header-search-input"
+              :placeholder="uiText.searchGlobalPlaceholder"
+              aria-label="Search everything"
+              @focus="searchQuery.trim() && (isSearchPanelOpen = true)"
+              @keydown.enter="searchQuery.trim() && (isSearchPanelOpen = true)"
+            />
+            <button
+              v-if="searchQuery.trim()"
+              type="button"
+              class="header-search-clear"
+              :aria-label="uiText.searchClear"
+              @click="clearUniversalSearch"
+            >&times;</button>
+            <kbd v-else class="header-search-kbd">⌘K</kbd>
+          </div>
           <button
             type="button"
             class="theme-toggle-btn"
@@ -2657,7 +3790,121 @@ const isColNumeric = (tbl, cIdx) => {
       </header>
 
       <!-- Main Body Container -->
-      <div class="scroll-container">
+      <div class="scroll-container" ref="scrollContainerRef">
+        <!-- Compact Active Search Banner (when user jumped to a result or minimized panel) -->
+        <div v-if="searchQuery.trim() && !isSearchPanelOpen" class="active-search-banner">
+          <div class="active-search-info">
+            <span class="active-search-icon">🔍</span>
+            <span>
+              <strong>"{{ searchQuery }}"</strong> — {{ allSearchResults.length }} {{ uiText.searchHitsLabel }}
+            </span>
+          </div>
+          <div class="active-search-actions">
+            <button type="button" class="active-search-btn primary" @click="isSearchPanelOpen = true">
+              {{ uiText.searchShowResults }}
+            </button>
+            <button type="button" class="active-search-btn" @click="clearUniversalSearch">
+              {{ uiText.searchClear }} &times;
+            </button>
+          </div>
+        </div>
+
+        <!-- Universal Search Results Panel -->
+        <section v-if="searchQuery.trim() && isSearchPanelOpen" class="universal-search-panel" aria-label="Universal Search Results">
+          <div class="usp-header">
+            <div class="usp-title-group">
+              <span class="usp-kicker">SEARCH EVERYTHING • DECK + LECTURES + EXCEL + NUMBERS</span>
+              <h2 class="usp-title">
+                {{ uiText.searchResultsTitle }}: <span class="usp-query">"{{ searchQuery }}"</span>
+              </h2>
+            </div>
+            <div class="usp-header-actions">
+              <span class="usp-total-badge">{{ allSearchResults.length }} {{ uiText.searchHitsLabel }}</span>
+              <button type="button" class="usp-action-btn" @click="isSearchPanelOpen = false">
+                {{ uiText.searchHideResults }}
+              </button>
+              <button type="button" class="usp-action-btn danger" @click="clearUniversalSearch">
+                {{ uiText.searchClear }} &times;
+              </button>
+            </div>
+          </div>
+
+          <div class="usp-quick-chips">
+            <span class="usp-chips-lbl">{{ lang === 'id' ? 'Contoh cepat:' : 'Quick tries:' }}</span>
+            <button
+              v-for="chip in ['TIE', 'z-score', 'TIE z-score', '-0.71', '-4.72', '18,322', '307', 'WACC 7.76%', 'DCF -121.1', 'DuPont']"
+              :key="chip"
+              type="button"
+              class="usp-chip-btn"
+              @click="applyQuickSearch(chip)"
+            >{{ chip }}</button>
+          </div>
+
+          <div class="usp-filter-tabs" role="tablist">
+            <button
+              type="button"
+              :class="['usp-tab-btn', { active: searchCategoryFilter === 'all' }]"
+              @click="searchCategoryFilter = 'all'"
+            >
+              <span>{{ uiText.searchAllTab }}</span>
+              <span class="usp-tab-count">{{ searchCounts.all }}</span>
+            </button>
+            <button
+              type="button"
+              :class="['usp-tab-btn', { active: searchCategoryFilter === 'presentation' }]"
+              @click="searchCategoryFilter = 'presentation'"
+            >
+              <span>{{ uiText.searchDeckTab }}</span>
+              <span class="usp-tab-count">{{ searchCounts.presentation }}</span>
+            </button>
+            <button
+              type="button"
+              :class="['usp-tab-btn', { active: searchCategoryFilter === 'slides' }]"
+              @click="searchCategoryFilter = 'slides'"
+            >
+              <span>{{ uiText.searchSlidesTab }}</span>
+              <span class="usp-tab-count">{{ searchCounts.slides }}</span>
+            </button>
+            <button
+              type="button"
+              :class="['usp-tab-btn', { active: searchCategoryFilter === 'assignments' }]"
+              @click="searchCategoryFilter = 'assignments'"
+            >
+              <span>{{ uiText.searchTasksTab }}</span>
+              <span class="usp-tab-count">{{ searchCounts.assignments }}</span>
+            </button>
+          </div>
+
+          <div v-if="displayedSearchResults.length === 0" class="usp-empty-state">
+            <p>{{ uiText.searchNoResults }}</p>
+          </div>
+
+          <div v-else class="usp-results-grid">
+            <button
+              v-for="res in displayedSearchResults"
+              :key="res.id"
+              type="button"
+              class="usp-result-card"
+              @click="executeSearchResultAction(res)"
+            >
+              <div class="usp-card-top">
+                <span :class="['usp-pillar-badge', `pillar-${res.category}`]">
+                  {{ res.category === 'presentation' ? uiText.switchDeck.toUpperCase() : (res.category === 'slides' ? uiText.switchSlides.toUpperCase() : uiText.switchTasks.toUpperCase()) }}
+                </span>
+                <span class="usp-subtype-badge">{{ res.subType }}</span>
+                <span class="usp-location">{{ res.location }}</span>
+                <span class="usp-jump-arrow" aria-hidden="true">→</span>
+              </div>
+              <div class="usp-card-main">
+                <span class="usp-card-title" v-html="highlightSearchText(res.title, searchQuery)"></span>
+                <span v-if="res.value" class="usp-card-val" v-html="highlightSearchText(res.value, searchQuery)"></span>
+              </div>
+              <p v-if="res.snippet" class="usp-card-snippet" v-html="highlightSearchText(res.snippet, searchQuery)"></p>
+            </button>
+          </div>
+        </section>
+
+        <div v-show="!(searchQuery.trim() && isSearchPanelOpen)">
 
         <!-- ================= TAB 0: INTERACTIVE WEB PRESENTATION (ASSIGNMENT 16) ================= -->
         <div v-if="activeTab === 'presentation'" class="tab-pane pres-tab-pane">
@@ -2690,9 +3937,22 @@ const isColNumeric = (tbl, cIdx) => {
             <div class="pres-meta-pills">
               <span class="pres-time-badge">⏱ {{ currentPresSlide.time_budget }}</span>
               <span class="pres-pts-badge">🏆 {{ currentPresSlide.rubric_points }}</span>
-              <button v-if="currentPresSlide.study_explanation" class="pres-reveal-btn" @click="onPresItemDblClick(buildPresItemPayload('claim', { heading: currentPresSlide.title, text: currentPresSlide.study_explanation, detail_explanation: currentPresSlide.study_explanation }))">
-                {{ lang === 'id' ? 'Jelaskan slide ini' : 'Explain this slide' }}
-              </button>
+              <a
+                class="pres-download-btn"
+                href="/appendix.xlsx"
+                download="appendix.xlsx"
+                :title="lang === 'id' ? 'Unduh lampiran Excel (appendix.xlsx)' : 'Download Appendix Excel (appendix.xlsx)'"
+              >
+                ⬇ {{ lang === 'id' ? 'Unduh Appendix.xlsx' : 'Download Appendix.xlsx' }}
+              </a>
+              <a
+                class="pres-download-btn"
+                :href="lang === 'id' ? '/Group4_Presentation_GOTO_ID.pptx' : '/Group4_Presentation_GOTO.pptx'"
+                :download="lang === 'id' ? 'Group4_Presentation_GOTO_ID.pptx' : 'Group4_Presentation_GOTO.pptx'"
+                :title="lang === 'id' ? 'Unduh file PowerPoint (.pptx)' : 'Download PowerPoint deck (.pptx)'"
+              >
+                ⬇ {{ lang === 'id' ? 'Unduh PPTX' : 'Download PPTX' }}
+              </a>
               <button class="pres-present-btn" @click="isPresentMode = true" :title="uiText.presentTitle">
                 ▶ {{ uiText.presentBtn }}
               </button>
@@ -3033,7 +4293,8 @@ const isColNumeric = (tbl, cIdx) => {
                     <tr 
                       v-for="(row, rIdx) in currentAssignment.workbook[selectedWorkbookSheet]" 
                       :key="rIdx"
-                      :class="getWbRowClass(row, rIdx)"
+                      :id="'wb-row-' + rIdx"
+                      :class="[getWbRowClass(row, rIdx), { 'search-row-highlight': searchHighlightTargetId === 'wb-row-' + rIdx || (searchQuery.trim() && doesRowMatchSearchQuery(row)) }]"
                     >
                       <td v-for="(val, cIdx) in row" :key="cIdx" :class="getCellClass(val, cIdx)">
                         {{ val }}
@@ -3050,7 +4311,7 @@ const isColNumeric = (tbl, cIdx) => {
                 v-for="(sec, sIdx) in currentAssignment.sections" 
                 :key="sIdx"
                 :id="'asg-sec-' + sIdx"
-                class="card asg-section-card"
+                :class="['card asg-section-card', { 'search-target-pulse': searchHighlightTargetId === 'asg-sec-' + sIdx }]"
               >
                 <div class="sec-card-header-bar">
                   <div class="sec-heading-group">
@@ -3091,7 +4352,8 @@ const isColNumeric = (tbl, cIdx) => {
                         <tr
                           v-for="(rVals, rIdx) in tbl.slice(1)"
                           :key="rIdx"
-                          :class="getSecTableRowClass(rVals)"
+                          :id="'asg-sec-' + sIdx + '-tbl-' + tIdx + '-row-' + rIdx"
+                          :class="[getSecTableRowClass(rVals), { 'search-row-highlight': searchHighlightTargetId === 'asg-sec-' + sIdx + '-tbl-' + tIdx + '-row-' + rIdx || (searchQuery.trim() && doesRowMatchSearchQuery(rVals)) }]"
                         >
                           <td v-for="(val, cIdx) in rVals" :key="cIdx" :class="getCellClass(val, cIdx)">
                             {{ val }}
@@ -3154,7 +4416,7 @@ const isColNumeric = (tbl, cIdx) => {
               v-for="slide in currentLecture.slides" 
               :key="slide.slide_num"
               :id="'lecture-slide-' + currentLecture.id + '-' + slide.slide_num"
-              class="slide-entry-card"
+              :class="['slide-entry-card', { 'search-target-pulse': searchHighlightTargetId === 'lecture-slide-' + currentLecture.id + '-' + slide.slide_num }]"
             >
               <!-- Card Header -->
               <div class="slide-card-header">
@@ -3613,7 +4875,7 @@ const isColNumeric = (tbl, cIdx) => {
                           v-for="(rVals, rIdx) in slide.goto_report.table_rows" 
                           :key="rIdx"
                           :id="`table-row-${slide.slide_num}-${rIdx}`"
-                          :class="{ 'is-row-lit': hoveredRowIdx === rIdx }"
+                          :class="{ 'is-row-lit': hoveredRowIdx === rIdx, 'search-row-highlight': searchHighlightTargetId === `table-row-${slide.slide_num}-${rIdx}` || (searchQuery.trim() && doesRowMatchSearchQuery(rVals)) }"
                         >
                           <!-- Row Number on the Left (2, 3, 4, ...) -->
                           <th class="row-num-th">{{ rIdx + 2 }}</th>
@@ -3867,6 +5129,8 @@ const isColNumeric = (tbl, cIdx) => {
           </div>
         </div>
 
+        </div>
+
       </div>
     </main>
 
@@ -3925,7 +5189,7 @@ const isColNumeric = (tbl, cIdx) => {
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'summary'">
             <div class="drawer-summary-box">
               <div class="drawer-box-hdr-row">
-                <strong>{{ uiText.drawerWhatMeans }}</strong>
+                <span aria-hidden="true"></span>
                 <button
                   type="button"
                   class="drawer-popout-btn"
@@ -4148,17 +5412,13 @@ const isColNumeric = (tbl, cIdx) => {
                     <tr
                       v-for="(wbRow, wrIdx) in getSupportingWorkbookRows(at.assignment_id, at.sheet_name, detailDrawerItem.highlight_terms, detailDrawerItem.keywords)"
                       :key="'dwb-'+wrIdx"
-                      :class="{ 'highlighted-support-row': wbRow.matched, 'trace-wb-hdr': wbRow.origIdx <= 2 }"
+                      :class="{ 'trace-wb-hdr': wbRow.origIdx <= 2 }"
                     >
                       <td
                         v-for="(wbCell, wcIdx) in wbRow.cells"
                         :key="'dwbc-'+wcIdx"
-                        :class="{
-                          'bold-cell': wcIdx === 0,
-                          'highlighted-support-cell': wbRow.matched && isCellHighlighted(wbCell, detailDrawerItem.highlight_terms, detailDrawerItem.keywords)
-                        }"
+                        :class="{ 'bold-cell': wcIdx === 0 }"
                       >
-                        <span v-if="wbRow.matched && wcIdx === 0" class="support-hit-badge">★ {{ uiText.drawerSupportBadge }}</span>
                         {{ wbCell }}
                       </td>
                     </tr>
@@ -4228,17 +5488,12 @@ const isColNumeric = (tbl, cIdx) => {
                     <tr
                       v-for="(lRow, lrIdx) in getLectureReportObj(lt.week_id, lt.slide_num).table_rows"
                       :key="'dlr-'+lrIdx"
-                      :class="{ 'highlighted-support-row': isRowHighlighted(lRow, detailDrawerItem.highlight_terms, detailDrawerItem.keywords) }"
                     >
                       <td
                         v-for="(lCell, lcIdx) in lRow"
                         :key="'dlc-'+lcIdx"
-                        :class="{
-                          'bold-cell': lcIdx === 0,
-                          'highlighted-support-cell': isCellHighlighted(lCell, detailDrawerItem.highlight_terms, detailDrawerItem.keywords)
-                        }"
+                        :class="{ 'bold-cell': lcIdx === 0 }"
                       >
-                        <span v-if="lcIdx === 0 && isRowHighlighted(lRow, detailDrawerItem.highlight_terms, detailDrawerItem.keywords)" class="support-hit-badge">★ {{ uiText.drawerSupportBadge }}</span>
                         {{ lCell }}
                         <button
                           v-if="getCellTermHelp(lCell)"
@@ -4362,21 +5617,91 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .search-box {
-  padding: 14px 20px;
+  padding: 10px 16px 12px;
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 11px;
+  font-size: 12px;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .search-box input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 9px 28px 9px 32px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
   color: #fff;
-  font-size: 13px;
+  font-size: 12.5px;
   outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .search-box input:focus {
+  border-color: var(--goto-green);
+  background: rgba(255,255,255,0.1);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-clear-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+.sidebar-search-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 7px;
+  padding: 0 2px;
+}
+
+.sidebar-search-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6ee7b7;
+}
+
+.sidebar-open-results-btn {
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  background: rgba(16, 185, 129, 0.15);
+  color: #a7f3d0;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sidebar-open-results-btn:hover {
+  background: var(--goto-green);
+  color: #052e16;
   border-color: var(--goto-green);
 }
 
@@ -6272,6 +7597,9 @@ const isColNumeric = (tbl, cIdx) => {
 
 /* ================= EFFICIENT DIVERSIFICATION TABLE & FORMULA BAR DESIGN ================= */
 .worksheet-formula-bar { 
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6283,9 +7611,8 @@ const isColNumeric = (tbl, cIdx) => {
   margin-bottom: 12px;
   border: 1px solid #d4dfe6;
   min-height: 70px;
-  max-height: 70px;
   box-sizing: border-box;
-  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .worksheet-formula-bar.worksheet-active { 
@@ -7676,6 +9003,28 @@ const isColNumeric = (tbl, cIdx) => {
   box-shadow: 0 4px 12px rgba(0, 170, 19, 0.45);
 }
 
+.pres-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #047857;
+  background: #edf6ef;
+  color: #065f46;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.pres-download-btn:hover {
+  background: #047857;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .present-overlay {
   position: fixed;
   inset: 0;
@@ -8420,5 +9769,539 @@ body.is-table-dragging-x {
   background: #008c2c;
   color: #fff;
   border-color: #008c2c;
+}
+
+/* ================= UNIVERSAL SEARCH UI STYLES ================= */
+.nav-hits-badge {
+  background: rgba(16, 185, 129, 0.24) !important;
+  color: #6ee7b7 !important;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.nav-match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 7px;
+}
+
+.nav-match-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  text-align: left;
+  padding: 4px 7px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #d1fae5;
+  font-size: 10.5px;
+  cursor: pointer;
+  transition: background 0.14s ease, border-color 0.14s ease;
+}
+
+.nav-match-chip:hover {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.nav-match-type {
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #a7f3d0;
+}
+
+.nav-match-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #f0fdf4;
+  font-weight: 600;
+}
+
+.nav-match-val {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fde68a;
+  max-width: 78px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-empty-note {
+  padding: 16px 12px;
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* Header Global Search Input */
+.header-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  max-width: 32vw;
+}
+
+.header-search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.header-search-input {
+  width: 100%;
+  padding: 6px 38px 6px 30px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.header-search-input:focus {
+  border-color: var(--goto-green);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px var(--goto-green-glow);
+}
+
+.header-search-clear {
+  position: absolute;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border-strong);
+  color: var(--bg-card);
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-search-kbd {
+  position: absolute;
+  right: 9px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+  .header-search-wrap {
+    width: 200px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header-search-wrap {
+    display: none;
+  }
+}
+
+/* Compact Active Search Banner */
+.active-search-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--goto-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.active-search-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.active-search-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.active-search-btn {
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-search-btn.primary {
+  background: var(--goto-green);
+  border-color: var(--goto-green);
+  color: #fff;
+}
+
+.active-search-btn:hover {
+  opacity: 0.92;
+}
+
+/* Universal Search Results Panel */
+.universal-search-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.usp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.usp-kicker {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--goto-green);
+  margin-bottom: 4px;
+}
+
+.usp-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.usp-query {
+  color: var(--goto-green);
+}
+
+.usp-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.usp-total-badge {
+  padding: 5px 11px;
+  border-radius: 9999px;
+  background: var(--goto-green-light);
+  color: var(--goto-green-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.usp-action-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.usp-action-btn:hover {
+  border-color: var(--goto-green);
+}
+
+.usp-action-btn.danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.usp-quick-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.usp-chips-lbl {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+.usp-chip-btn {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.usp-chip-btn:hover {
+  border-color: var(--goto-green);
+  background: var(--goto-green-light);
+  color: var(--goto-green-dark);
+}
+
+.usp-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.usp-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.usp-tab-btn.active {
+  background: var(--goto-green);
+  border-color: var(--goto-green);
+  color: #ffffff;
+}
+
+.usp-tab-count {
+  padding: 1px 7px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.12);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.usp-tab-btn.active .usp-tab-count {
+  background: rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+
+.usp-empty-state {
+  padding: 42px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.usp-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.usp-result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.usp-result-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--goto-green);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md);
+}
+
+.usp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.usp-pillar-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.usp-pillar-badge.pillar-presentation {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.usp-pillar-badge.pillar-slides {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.usp-pillar-badge.pillar-assignments {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.usp-subtype-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.usp-location {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usp-jump-arrow {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--goto-green);
+}
+
+.usp-card-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.usp-card-title {
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--text-heading);
+  line-height: 1.35;
+}
+
+.usp-card-val {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--goto-green-light);
+  color: var(--goto-green-dark);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.usp-card-snippet {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+:deep(mark.search-hl) {
+  background: #fde047;
+  color: #0f172a;
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 800;
+}
+
+:global(html[data-theme="dark"]) :deep(mark.search-hl) {
+  background: #facc15;
+  color: #090f1a;
+}
+
+:global(html[data-theme="dark"]) .usp-total-badge,
+:global(html[data-theme="dark"]) .usp-card-val {
+  color: #6ee7b7;
+}
+
+:global(html[data-theme="dark"]) .usp-pillar-badge.pillar-presentation {
+  background: rgba(16, 185, 129, 0.22);
+  color: #6ee7b7;
+}
+
+:global(html[data-theme="dark"]) .usp-pillar-badge.pillar-slides {
+  background: rgba(5, 150, 105, 0.26);
+  color: #a7f3d0;
+}
+
+:global(html[data-theme="dark"]) .usp-pillar-badge.pillar-assignments {
+  background: rgba(59, 130, 246, 0.24);
+  color: #93c5fd;
+}
+
+.search-row-highlight td,
+.search-row-highlight th {
+  background: #fef9c3 !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 0 #eab308, inset 0 -1px 0 #eab308;
+}
+
+:global(html[data-theme="dark"]) .search-row-highlight td,
+:global(html[data-theme="dark"]) .search-row-highlight th {
+  background: rgba(234, 179, 8, 0.18) !important;
+  color: #fef08a !important;
+  box-shadow: inset 0 1px 0 rgba(250, 204, 21, 0.5), inset 0 -1px 0 rgba(250, 204, 21, 0.5);
+}
+
+.search-target-pulse {
+  outline: 2px solid var(--goto-green) !important;
+  box-shadow: 0 0 0 4px var(--goto-green-glow) !important;
 }
 </style>

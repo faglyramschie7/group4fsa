@@ -537,7 +537,14 @@ const provisionGrowth = computed(() => {
                     class="slide-editorial-thumb"
                     @click.stop="emit('zoom', row.img, row.name)"
                   />
-                  <div><h2>{{ row.name }}</h2><p>{{ row.text }}</p></div>
+                  <div>
+                    <h2>{{ row.name }}</h2>
+                    <p v-if="row.text && row.text.includes('\n')">
+                      <em class="slide-editorial-formula">{{ row.text.split('\n')[0] }}</em>
+                      <span class="slide-editorial-calc">{{ row.text.split('\n').slice(1).join('\n') }}</span>
+                    </p>
+                    <p v-else>{{ row.text }}</p>
+                  </div>
                 </div>
                 <strong>{{ row.value }}</strong>
               </div>
@@ -590,15 +597,20 @@ const provisionGrowth = computed(() => {
             <button v-else-if="slide.chart_url" class="slide-chart" @click="emit('zoom', slide.chart_url, title)" :aria-label="lang === 'id' ? 'Perbesar grafik' : 'Enlarge chart'">
               <img :src="slide.chart_url" :alt="slide.title" />
             </button>
-            <figure v-if="slide.loss_chart" class="slide-story-chart" role="button" tabindex="0" :aria-label="slide.loss_chart.title" @click="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points[0])">
-              <figcaption>{{ slide.loss_chart.title }}</figcaption>
-              <div v-for="row in slide.loss_chart.series" :key="row.label" class="slide-loss-row">
-                <span>{{ row.label }}</span>
-                <div class="slide-provision-track"><span class="slide-provision-current" :style="{ width: `${Math.abs(row.value) / lossScale * 100}%` }"></span></div>
-                <strong>−{{ Math.abs(row.value).toLocaleString(lang === 'id' ? 'id-ID' : 'en-US') }}</strong>
-              </div>
-              <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
-            </figure>
+            <div v-if="slide.loss_chart" :class="{ 'slide-loss-grid': Boolean(slide.chart_url) }">
+              <figure class="slide-story-chart" role="button" tabindex="0" :aria-label="slide.loss_chart.title" @click="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points[0])">
+                <figcaption>{{ slide.loss_chart.title }}</figcaption>
+                <div v-for="row in slide.loss_chart.series" :key="row.label" class="slide-loss-row">
+                  <span>{{ row.label }}</span>
+                  <div class="slide-provision-track"><span class="slide-provision-current" :style="{ width: `${Math.abs(row.value) / lossScale * 100}%` }"></span></div>
+                  <strong>−{{ Math.abs(row.value).toLocaleString(lang === 'id' ? 'id-ID' : 'en-US') }}</strong>
+                </div>
+                <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
+              </figure>
+              <button v-if="slide.chart_url" class="slide-chart slide-loss-chart-btn" @click="emit('zoom', slide.chart_url, title)" :aria-label="lang === 'id' ? 'Perbesar grafik' : 'Enlarge chart'">
+                <img :src="slide.chart_url" :alt="slide.title" />
+              </button>
+            </div>
             <figure v-if="slide.valuation_range" class="slide-story-chart slide-range-chart">
               <figcaption>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</figcaption>
               <svg viewBox="0 0 560 175" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
@@ -748,10 +760,16 @@ const provisionGrowth = computed(() => {
 .slide-editorial-thumb { width: 8.2cqw; height: 6.4cqw; object-fit: cover; border-radius: .5cqw; border: 1px solid #dce8df; flex-shrink: 0; cursor: zoom-in; background: #edf6ef; }
 .slide-editorial-row:last-child { border: 0; }
 .slide-editorial-row h2 { font-size: 1.45cqw; color: #173d25; line-height: 1.3; margin: 0 0 .5cqw; }
-.slide-editorial-row p { font-size: 1.05cqw; line-height: 1.45; color: #63786a; margin: 0; max-width: 24cqw; }
+.slide-editorial-row p { font-size: 1.05cqw; line-height: 1.45; color: #63786a; margin: 0; max-width: 28cqw; white-space: pre-line; }
+.slide-editorial-formula { display: block; font-style: italic; }
+.slide-editorial-calc { display: block; font-style: normal; }
 .slide-editorial-row strong { flex-shrink: 0; font-size: 1.75cqw; font-weight: 750; color: #008c2c; letter-spacing: -.07cqw; }
 .slide-chart { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: white; cursor: zoom-in; }
 .slide-chart img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.slide-loss-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1cqw; align-items: center; margin-top: .8cqw; }
+.slide-loss-grid .slide-story-chart { margin-top: 0; }
+.slide-loss-chart-btn { height: auto; max-height: 11.5cqw; border-radius: .5cqw; border: 1px solid #dce8df; overflow: hidden; padding: .2cqw; }
+.slide-loss-chart-btn img { max-height: 11cqw; width: 100%; object-fit: contain; }
 .slide-key-figures { min-height: 0; display: flex; flex-direction: column; justify-content: space-between; }
 .slide-analysis-point + .slide-analysis-point { border-top: 1px solid #ffffff40; padding-top: 1.15cqw; }
 .slide-analysis-point.has-point-icon { display: flex; align-items: flex-start; gap: 1cqw; }

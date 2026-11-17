@@ -27,7 +27,7 @@ Target Investor: The target user is a short-term public equity investor. The ass
 
 Presentation Scope: The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.
 
-*Sources: Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025*
+*Sources: Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025; Appendix A1–A6*
 
 ---
 
@@ -60,7 +60,7 @@ Business Activities: Gojek provides rides, food and delivery. GoTo Financial pro
 
 Tokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from Tokopedia in 2025. GoTo retains a 24.99% ownership stake in Tokopedia.
 
-*Sources: Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14*
+*Sources: Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14; Appendix A1*
 
 ---
 
@@ -70,20 +70,20 @@ Tokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from T
 ### Sidebar: the full explanation in simple language
 GoTo competes through affordable prices, convenience and connections between services such as Gojek, GoPay and GoTransit. Similar rides, delivery and payment services are available from other providers. Customers can compare offers across apps, which limits pricing power.
 
-FY2025 sales and marketing expense is about Rp3.09T and product-development expense is Rp2.15T. Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.
+FY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.
 
-Lending creates credit exposure. Net consumer loans are Rp2,731bn. Provisions increase from Rp174bn to Rp408bn, about 134%. Provisions represent estimated credit losses recorded in the accounts. The increase can reflect loan growth as well as changes in estimated borrower risk; it does not, by itself, establish that every loan became riskier.
+Because ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).
 
-The provision amount is not a customer default rate. More loan volume can increase both revenue and estimated losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.
+A bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.
 
 ### Speaker Notes
-Operating Expenses: Sales and marketing expense is Rp3.09T. Product-development expense is Rp2.15T.
+Operating Expenses: Sales and marketing expense is Rp3.09T (+8% YoY). Product-development expense is Rp2.15T (+23% YoY).
 
 Competition: GoTo offers affordable prices and connected services, but similar services are available from rivals. This limits how easily GoTo can raise prices without losing orders.
 
 Credit-Loss Provisions: Provisions rise from Rp174bn to Rp408bn alongside a Rp2,731bn net consumer-loan balance. More lending can increase revenue and estimated credit losses at the same time.
 
-*Sources: Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27*
+*Sources: Group 4 Final Report §b, Five Forces worksheet; Week 2 slides 20–27; Appendix A1*
 
 ---
 
@@ -137,7 +137,7 @@ DuPont ROE: DuPont gives approximately −8.2% net margin × 0.40x asset turnove
 
 Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other items.
 
-*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
+*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1; Appendix A2*
 
 ---
 
@@ -147,7 +147,7 @@ Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other ite
 ### Sidebar: the full explanation in simple language
 GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.
 
-Interest-bearing debt is 0.27 times the milestone equity base. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.
+GoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.
 
 The completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.
 
@@ -163,13 +163,13 @@ The course distress threshold is below 1.81. That classification is a screening 
 | X5: Revenue / total assets | 18,322.117 | 45,757.642 | 0.400417 | 1.0 | +0.400417 |
 
 ### Speaker Notes
-Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.
+Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).
 
 Interest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.
 
 Altman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.
 
-*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1*
+*Sources: Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1; Appendix A3*
 
 ---
 
@@ -204,7 +204,7 @@ Accrual Ratio: The milestone accrual ratio is −3.95%: (net income − CFO) / c
 
 Asset Valuation: Associates represent 22.57% of assets. Level 3 investments also rely on estimates. A write-down would reduce recorded assets and equity, without itself creating a new cash payment.
 
-*Sources: Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities*
+*Sources: Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities; Appendix A3*
 
 ---
 
@@ -259,7 +259,7 @@ Historical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average
 
 Scenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.
 
-*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)*
+*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e); Appendix A4*
 
 ---
 
@@ -388,7 +388,7 @@ Operating Cost Ratio: The base gives Rp58.90 gross profit but Rp78.50 operating 
 
 Fixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954bn. It produces positive 2026F EBIT of about Rp1,062bn, rather than the base-case loss of Rp4,003bn.
 
-*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)*
+*Sources: Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e); Appendix A5*
 
 ---
 
@@ -430,7 +430,7 @@ Capital Weights and WACC: Market equity carries 77.4% of the weight and debt 22.
 
 Discount Rates: RI values profit attributable to the equity model, so it uses 8.45%. DCF values cash before the debt bridge, so it uses the combined 7.76% rate.
 
-*Sources: Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)*
+*Sources: Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026); Appendix A6*
 
 ---
 
@@ -512,7 +512,7 @@ Forecast and Terminal Value: Both models use Milestone 4. The terminal calculati
 
 Valuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.
 
-*Sources: Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%*
+*Sources: Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%; Appendix A6*
 
 ---
 
@@ -562,7 +562,7 @@ Grab P/B: 3.0391x Grab P/B × Rp29.9479 GoTo parent BVPS = about Rp91.0. This ap
 
 Valuation Differences: DCF and RI include forecast losses. P/B applies another company’s multiple to historical book equity. An average would mix these assumptions rather than resolve their differences.
 
-*Sources: Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.*
+*Sources: Grab FY2025 20-F cover & F-5; GRAB close 31 Dec 2025 $4.99; LK GoTo FY2025 PDF p.16. Single comparable.; Appendix A6*
 
 ---
 
@@ -585,7 +585,7 @@ Conditions: Cash covering capex, controlled operating costs and better lending r
 
 Risks: Better operations could make the base too cautious. Credit losses, impairments and cash use could worsen it. The valuation results do not establish the timing of the next price move.
 
-*Sources: Group 4 Final Report Section (g) & Integrated Valuation Findings*
+*Sources: Group 4 Final Report Section (g) & Integrated Valuation Findings; Appendix A1–A6*
 
 ---
 
@@ -730,7 +730,7 @@ This appendix provides the full five-factor Week 6 Altman Z-Score build-up (X1 t
 | 20% haircut sensitivity | Rp1,820bn before tax | Hypothetical, not a recorded impairment; no double-count of goodwill |
 
 ### Speaker Notes
-Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Interest-bearing debt is 0.27 times the milestone equity base.
+Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).
 
 Interest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.
 
