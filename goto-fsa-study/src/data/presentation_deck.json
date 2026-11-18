@@ -4396,6 +4396,75 @@
           ]
         ],
         "note": "Source: submitted Assignment 14 workbook. Cash uses are negative; a working-capital cash release is positive."
+      },
+      {
+        "title": "Residual Income Step-by-Step: Starting Equity + Raw vs. Discounted Shortfalls (at 8.45% Ke, Rp bn)",
+        "headers": [
+          "Line Item / Period",
+          "2026F",
+          "2027F",
+          "2028F",
+          "Total / Impact"
+        ],
+        "rows": [
+          [
+            "Beginning Book Equity",
+            "28,711.7",
+            "24,974.7",
+            "20,882.0",
+            "Starts at +Rp 28.7T (+Rp 27.0/sh)"
+          ],
+          [
+            "Forecast Net Income (Base)",
+            "−3,737.0",
+            "−4,092.7",
+            "−4,488.9",
+            "−12,318.6 (3-yr net loss)"
+          ],
+          [
+            "Equity Charge (8.45% × Beg. Equity)",
+            "2,426.7",
+            "2,110.9",
+            "1,765.0",
+            "6,302.6 (opportunity cost)"
+          ],
+          [
+            "Raw Residual Income (Net Inc − Charge)",
+            "−6,163.7",
+            "−6,203.6",
+            "−6,253.9",
+            "−18,621.2 (undiscounted)"
+          ],
+          [
+            "Discounted PV of RI (at 8.45% Ke)",
+            "−5,683.4",
+            "−5,274.3",
+            "−4,902.7",
+            "−15,860.4 (PV Years 1–3)"
+          ],
+          [
+            "PV of Terminal RI (after 2028F, g = 3.0%)",
+            "—",
+            "—",
+            "—",
+            "−92,621.5"
+          ],
+          [
+            "Equity Value (28,711.7 − 15,860.4 − 92,621.5)",
+            "—",
+            "—",
+            "—",
+            "−79,770.2"
+          ],
+          [
+            "RI Value per Share (÷ 1,062.01B shares)",
+            "—",
+            "—",
+            "—",
+            "−Rp 75.1 / share"
+          ]
+        ],
+        "note": "Residual Income starts with GoTo’s existing +Rp 28,711.7 bn book equity cushion, then subtracts each year’s shortfall below the 8.45% shareholder hurdle (Ke). Projected losses plus the missed 8.45% opportunity cost wipe out the starting book equity, leaving −Rp 75.1/share."
       }
     ],
     "table": {

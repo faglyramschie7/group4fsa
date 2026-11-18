@@ -57,6 +57,22 @@
 .drawer-backdrop .source-drawer .drawer-section > *,
 .drawer-backdrop .source-drawer .drawer-trace-card > * { flex-shrink: 0; }
 .drawer-backdrop .source-drawer .drawer-summary-box,
+.drawer-backdrop .source-drawer .drawer-yoy-box { background: #fff; border: 1px solid #dce7df; border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.drawer-backdrop .source-drawer .drawer-yoy-title { font-size: 13px; font-weight: 700; color: #006b23; }
+.drawer-backdrop .source-drawer .drawer-yoy-list { display: flex; flex-direction: column; gap: 10px; }
+.drawer-backdrop .source-drawer .drawer-yoy-card { background: #f4faf5; border: 1px solid #d5e6d9; border-radius: 6px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+.drawer-backdrop .source-drawer .drawer-yoy-hdr { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.drawer-backdrop .source-drawer .drawer-yoy-hdr strong { font-size: 12.5px; color: #173d25; font-weight: 700; }
+.drawer-backdrop .source-drawer .drawer-yoy-hdr span { font-size: 11px; color: #008c2c; font-weight: 700; white-space: nowrap; }
+.drawer-backdrop .source-drawer .drawer-yoy-bar-row { display: grid; grid-template-columns: 36px 1fr 52px; align-items: center; gap: 8px; }
+.drawer-backdrop .source-drawer .drawer-yoy-yr { font-size: 11px; color: #63786a; font-variant-numeric: tabular-nums; }
+.drawer-backdrop .source-drawer .drawer-yoy-track { height: 7px; background: #e1eee4; border-radius: 999px; overflow: hidden; }
+.drawer-backdrop .source-drawer .drawer-yoy-fill { display: block; height: 100%; background: #a8cdb3; border-radius: 999px; }
+.drawer-backdrop .source-drawer .drawer-yoy-fill.is-current { background: #008c2c; }
+.drawer-backdrop .source-drawer .drawer-yoy-fill.is-neg { background: #e5989b; }
+.drawer-backdrop .source-drawer .drawer-yoy-fill.is-neg.is-current { background: #c1121f; }
+.drawer-backdrop .source-drawer .drawer-yoy-val { font-size: 11.5px; color: #36503f; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.drawer-backdrop .source-drawer .drawer-yoy-val.is-current { color: #008c2c; font-weight: 750; }
 .drawer-backdrop .source-drawer .drawer-calc-box,
 .drawer-backdrop .source-drawer .drawer-featured-ev,
 .drawer-backdrop .source-drawer .drawer-trace-card { background: #fff; border: 1px solid #dce7df; border-radius: 8px; box-shadow: none; padding: 18px; color: #24382b; }
@@ -65,9 +81,9 @@
 .drawer-backdrop .source-drawer .drawer-summary-box p { margin: 0; }
 .drawer-backdrop .source-drawer .drawer-summary-box p { white-space: pre-line; }
 .drawer-backdrop .source-drawer .drawer-schedule-title { margin: 0; color: #153b22; font-size: 14px; line-height: 1.5; }
-.drawer-backdrop .source-drawer .drawer-schedule-scroll { overflow-x: auto; max-width: 100%; }
-.drawer-backdrop .source-drawer .drawer-schedule-table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; }
-.drawer-backdrop .source-drawer .drawer-schedule-table :is(th,td) { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #dce7df; }
+.drawer-backdrop .source-drawer .drawer-schedule-scroll { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+.drawer-backdrop .source-drawer .drawer-schedule-table { width: 100%; min-width: 0; border-collapse: collapse; font-size: 11.5px; line-height: 1.5; color: #24382b; }
+.drawer-backdrop .source-drawer .drawer-schedule-table :is(th,td) { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid #dce7df; overflow-wrap: break-word; }
 .drawer-backdrop .source-drawer .drawer-schedule-table th { background: #edf6ef; color: #153b22; font-weight: 650; }
 .drawer-backdrop .source-drawer .drawer-worksheet-formula-bar { margin-bottom: 0; min-height: 70px; max-height: none; overflow: visible; background: #edf4f8 !important; border-color: #93c5fd !important; }
 .drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-bar-top { align-items: flex-start; }
@@ -76,16 +92,18 @@
 .drawer-backdrop .source-drawer .drawer-worksheet-formula-bar code { white-space: normal; overflow: visible; text-overflow: unset; overflow-wrap: anywhere; }
 .drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-val-tag { color: #475569 !important; }
 .drawer-backdrop .source-drawer .drawer-worksheet-formula-bar .formula-val-display { color: #123b57 !important; white-space: normal; overflow: visible; }
-.drawer-backdrop .source-drawer .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #dce7df; border-radius: 6px; background: #fff !important; }
-.drawer-backdrop .source-drawer .drawer-formula-table { width: 100%; min-width: 920px; table-layout: fixed; border-collapse: collapse; color: #24382b; font-size: 12px; line-height: 1.65; }
-.drawer-backdrop .source-drawer .drawer-formula-table :is(th,td) { padding: 12px; border: 1px solid #dce7df; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead .worksheet-letters th { background: #f3f8f4 !important; color: #5f7265 !important; font-size: 11px; font-weight: 700; padding: 6px 12px; }
+.drawer-backdrop .source-drawer .drawer-formula-table-wrap { max-width: 100%; overflow-x: auto; overflow-y: hidden; border: 1px solid #dce7df; border-radius: 6px; background: #fff !important; }
+.drawer-backdrop .source-drawer .drawer-formula-table { width: 100%; min-width: 680px; table-layout: fixed; border-collapse: collapse; color: #24382b; font-size: 12px; line-height: 1.65; }
+.drawer-backdrop .source-drawer .drawer-formula-table :is(th,td) { padding: 10px; border: 1px solid #dce7df; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead .worksheet-letters th { background: #f3f8f4 !important; color: #5f7265 !important; font-size: 11px; font-weight: 700; padding: 6px 10px; }
 .drawer-backdrop .source-drawer .drawer-formula-table thead .worksheet-headings th { background: #edf6ef !important; color: #153b22 !important; font-weight: 700; }
-.drawer-backdrop .source-drawer .drawer-formula-table .row-num-th { width: 38px; text-align: center; background: #f3f8f4 !important; color: #5f7265 !important; font-weight: 600; padding: 10px 6px; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(2) { width: 22%; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(3) { width: 14%; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(4) { width: 27%; }
-.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(5) { width: 33%; }
+.drawer-backdrop .source-drawer .drawer-formula-table .row-num-th { width: 34px; text-align: center; background: #f3f8f4 !important; color: #5f7265 !important; font-weight: 600; padding: 10px 4px; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(2) { width: 24%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(3) { width: 16%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(4) { width: 32%; }
+.drawer-backdrop .source-drawer .drawer-formula-table thead th:nth-child(5) { width: 28%; }
+.drawer-backdrop .source-drawer .drawer-formula-table .katex-calc-display { padding: 6px 8px; margin: 2px 0; font-size: 11px; overflow-x: visible; }
+.drawer-backdrop .source-drawer .drawer-formula-table .katex-calc-display .katex { white-space: normal; }
 .drawer-backdrop .source-drawer .drawer-formula-table tbody tr,
 .drawer-backdrop .source-drawer .drawer-formula-table tbody tr:nth-child(even) { background: #fff !important; }
 .drawer-backdrop .source-drawer .drawer-formula-table tbody th[scope="row"] { background: #fff !important; color: #153b22 !important; font-weight: 650; }
@@ -102,6 +120,8 @@
 .drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table:has(tr > :nth-child(6)) { min-width: 860px; }
 .drawer-backdrop .source-drawer .drawer-support-table-wrap .trace-mini-table td:nth-child(6) { min-width: 260px; color: #153b22; font-family: var(--font-mono); font-size: 11px; line-height: 1.7; }
 .drawer-backdrop .source-drawer .drawer-section { gap: 12px; }
+.drawer-backdrop .source-drawer .drawer-sec-title.drawer-sec-toggle { cursor: pointer; user-select: none; padding: 10px 12px; background: #edf6ef; border: 1px solid #d4e5d9; border-radius: 8px; transition: background 0.15s ease; }
+.drawer-backdrop .source-drawer .drawer-sec-title.drawer-sec-toggle:hover { background: #e1efe5; }
 .drawer-backdrop .source-drawer .drawer-sec-title,
 .drawer-popout-card .drawer-sec-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: transparent; padding: 0 0 10px; border: 0; border-bottom: 1px solid #dce7df; border-radius: 0; color: #006b23; font-size: 13px; font-weight: 700; line-height: 1.5; margin: 0; }
 .drawer-backdrop .source-drawer .drawer-sec-title .drawer-sec-count,
@@ -152,8 +172,8 @@
 .drawer-schedule-hdr-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
 .schedule-scenario-select { font-size: 12px; font-weight: 600; color: #153b22; background: #edf6ef; border: 1px solid #a7cdb1; border-radius: 6px; padding: 4px 8px; cursor: pointer; }
 .drawer-popout-card .drawer-schedule-title { color: #006b23; font-size: 13px; font-weight: 700; margin: 0; }
-.drawer-popout-card .drawer-schedule-scroll { overflow-x: auto; }
-.drawer-popout-card .drawer-schedule-table { width: 100%; min-width: 780px; table-layout: fixed; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; background: #fff !important; }
+.drawer-popout-card .drawer-schedule-scroll { overflow-x: auto; overflow-y: hidden; }
+.drawer-popout-card .drawer-schedule-table { width: 100%; min-width: 0; table-layout: auto; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; background: #fff !important; }
 .drawer-popout-card .drawer-schedule-table :is(th, td) { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #dce7df; overflow-wrap: anywhere; }
 .drawer-popout-card .drawer-schedule-table th { background: #edf6ef !important; color: #153b22 !important; font-weight: 650; }
 .drawer-popout-card .drawer-schedule-table tbody td { background: #fff !important; color: #24382b !important; }

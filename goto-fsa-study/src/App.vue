@@ -1851,13 +1851,69 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
   }
 }
 
-const renderMathLatex = (str) => {
+const findTopLevelSlash = (expr) => {
+  let depth = 0
+  for (let i = 0; i < expr.length; i++) {
+    const ch = expr[i]
+    if (ch === '(' || ch === '[') depth++
+    else if (ch === ')' || ch === ']') depth = Math.max(0, depth - 1)
+    else if (ch === '/' && depth === 0) return i
+  }
+  return -1
+}
+
+const stripOuterMathGroup = (s) => {
+  const t = s.trim()
+  if ((t.startsWith('(') && t.endsWith(')')) || (t.startsWith('[') && t.endsWith(']'))) {
+    const open = t[0]
+    const close = t[t.length - 1]
+    let depth = 0
+    for (let i = 0; i < t.length; i++) {
+      if (t[i] === open) depth++
+      else if (t[i] === close) depth--
+      if (depth === 0 && i < t.length - 1) return t
+    }
+    return t.slice(1, -1).trim()
+  }
+  return t
+}
+
+const formatMathTokensToTex = (s) => {
+  let t = s
+    .replace(/−/g, '-')
+    .replace(/×/g, ' \\times ')
+    .replace(/÷/g, ' \\div ')
+    .replace(/%/g, '\\%')
+    .replace(/\$/g, '\\$')
+    .replace(/&/g, '\\&')
+    .replace(/(\d),(?=\d{3}\b)/g, '$1{,}')
+    .replace(/([A-Za-z]+)_([A-Za-z0-9]+)/g, (_, a, b) => `\\text{${a}}_{${b}}`)
+    .replace(/\^([A-Za-z0-9]+)/g, '^{$1}')
+  t = t.replace(/(?<!\\)(?<![A-Za-z{])([A-Za-z][A-Za-z0-9\\&\-]*(?:\s+[A-Za-z][A-Za-z0-9\\&\-]*)*)/g, (m) => {
+    if (['times', 'div', 'approx', 'frac', 'text', 'left', 'right'].includes(m)) return m
+    if (m.length === 1) return m
+    return `\\text{${m}}`
+  })
+  return t
+}
+
+const mathExprToTex = (expr) => {
+  const slashIdx = findTopLevelSlash(expr)
+  if (slashIdx > 0 && slashIdx < expr.length - 1) {
+    const left = stripOuterMathGroup(expr.slice(0, slashIdx))
+    const right = stripOuterMathGroup(expr.slice(slashIdx + 1))
+    return `\\frac{${mathExprToTex(left)}}{${mathExprToTex(right)}}`
+  }
+  return formatMathTokensToTex(expr)
+}
+
+const renderMathLatex = (str, inline = false) => {
   if (!str) return ''
   const trimmed = String(str).trim()
   if (trimmed.includes('15,894.462') && trimmed.includes('14,785.492') && trimmed.includes('18,322.117')) {
     try {
       const tex = '\\frac{\\left(\\frac{15{,}894.462}{14{,}785.492} - 1\\right) + \\left(\\frac{18{,}322.117}{15{,}894.462} - 1\\right)}{2} = 11.3869916\\% \\approx 11.4\\%'
-      return `<div class="katex-calc-display">${katex.renderToString(tex, { throwOnError: false, displayMode: true })}</div>`
+      return `<div class="katex-calc-display">${katex.renderToString(tex, { throwOnError: false, displayMode: !inline })}</div>`
     } catch {
       return ''
     }
@@ -1876,7 +1932,33 @@ const renderMathLatex = (str) => {
       return ''
     }
   }
-  return ''
+  // Auto-convert math formulas & substitutions (skip long prose paragraphs, pipe-separated cells, multi-slash year lists, unit suffixes like "/ share", or parenthetical labels)
+  if (trimmed.length > 150) return ''
+  if (trimmed.includes('|')) return ''
+  if (/\([^)]*[=≈][^)]*\)/.test(trimmed)) return ''
+  const withoutUnitSlash = trimmed.replace(/\s+\/\s+(?:share|shares|yr|year|mo|month|day|unit|user|order|trip)\b/gi, '')
+  if ((withoutUnitSlash.match(/\s+\/\s+/g) || []).length >= 2) return ''
+  if (!/[=≈×÷\^]|\s+\/\s+|\s+[+−\-]\s+/.test(withoutUnitSlash)) return ''
+  try {
+    let prefix = ''
+    let body = trimmed
+    const prefMatch = body.match(/^([A-Za-z0-9]+):\s+(.+)$/)
+    if (prefMatch) {
+      prefix = `\\text{${prefMatch[1]}: } `
+      body = prefMatch[2]
+    }
+    const parts = body.split(/\s*(=|≈)\s*/)
+    const tex = prefix + parts.map((p, idx) => {
+      if (idx % 2 === 1) return p === '≈' ? '\\approx' : '='
+      return mathExprToTex(p)
+    }).join(' ')
+    const rendered = katex.renderToString(tex, { throwOnError: true, displayMode: !inline })
+    return inline
+      ? `<span class="katex-calc-inline">${rendered}</span>`
+      : `<div class="katex-calc-display">${rendered}</div>`
+  } catch {
+    return ''
+  }
 }
 
 const formatGreenNumbers = (raw) => {
@@ -1935,9 +2017,57 @@ const closeClickPopup = () => {
 const activeDrawerFormulaCell = ref(null)
 const isDrawerFormulaLocked = ref(false)
 const expandedDrawerSection = ref(null)
+const drawerOpenSections = ref({ formula_table: false, schedules: false, assignments: false, lectures: false })
+
+const drawerYoyCharts = computed(() => {
+  if (detailDrawerItem.value?.slide?.slide_num !== 5) return null
+  const id = lang.value === 'id'
+  return [
+    {
+      title: id ? 'Rasio Lancar (Current Ratio)' : 'Current Ratio',
+      delta: '+0.11x vs 2023',
+      maxAbs: 3.0,
+      isNeg: false,
+      bars: [
+        { yr: '2023', val: 2.62, label: '2.62x' },
+        { yr: '2024', val: 2.62, label: '2.62x' },
+        { yr: '2025', val: 2.73, label: '2.73x' },
+      ],
+    },
+    {
+      title: id ? 'Utang / Ekuitas (Debt-to-Equity)' : 'Debt-to-Equity',
+      delta: '+0.17x vs 2023',
+      maxAbs: 0.3,
+      isNeg: false,
+      bars: [
+        { yr: '2023', val: 0.10, label: '0.10x' },
+        { yr: '2024', val: 0.13, label: '0.13x' },
+        { yr: '2025', val: 0.27, label: '0.27x' },
+      ],
+    },
+    {
+      title: id ? 'Cakupan Bunga (TIE)' : 'Interest Coverage (TIE)',
+      delta: id ? '+27.1x membaik' : '+27.1x recovery',
+      maxAbs: 28.0,
+      isNeg: true,
+      bars: [
+        { yr: '2023', val: 27.8, label: '−27.8x' },
+        { yr: '2024', val: 4.5, label: '−4.5x' },
+        { yr: '2025', val: 0.71, label: '−0.71x' },
+      ],
+    },
+  ]
+})
 
 const toggleDrawerSectionPopout = (sectionId) => {
   expandedDrawerSection.value = expandedDrawerSection.value === sectionId ? null : sectionId
+}
+
+const toggleDrawerAccordion = (sectionId) => {
+  drawerOpenSections.value = {
+    ...drawerOpenSections.value,
+    [sectionId]: !drawerOpenSections.value[sectionId]
+  }
 }
 
 const hoverDrawerFormulaCell = (calc, rowIndex, colIndex) => {
@@ -2474,6 +2604,7 @@ const selectScheduleCell = (scheduleIdx, schedule, row, rIdx, cIdx) => {
 
 watch(detailDrawerItem, (item) => {
   expandedDrawerSection.value = null
+  drawerOpenSections.value = { formula_table: false, schedules: false, assignments: false, lectures: false }
   isDrawerFormulaLocked.value = false
   activeScheduleCell.value = null
   const notes = item?.slide?.calculation_notes
@@ -5647,6 +5778,30 @@ const isColNumeric = (tbl, cIdx) => {
         </div>
 
         <div class="drawer-scroll-body">
+          <!-- 0. Year-over-Year Ratio Movement Chart (Slide 5) -->
+          <div v-if="drawerYoyCharts" class="drawer-yoy-box">
+            <div class="drawer-yoy-title">{{ lang === 'id' ? 'Perubahan Rasio YoY (2023–2025)' : 'Year-over-Year Ratio Movement (2023–2025)' }}</div>
+            <div class="drawer-yoy-list">
+              <div v-for="card in drawerYoyCharts" :key="card.title" class="drawer-yoy-card">
+                <div class="drawer-yoy-hdr">
+                  <strong>{{ card.title }}</strong>
+                  <span>{{ card.delta }}</span>
+                </div>
+                <div v-for="(bar, bIdx) in card.bars" :key="bar.yr" class="drawer-yoy-bar-row">
+                  <span class="drawer-yoy-yr">{{ bar.yr }}</span>
+                  <div class="drawer-yoy-track">
+                    <span
+                      class="drawer-yoy-fill"
+                      :class="{ 'is-current': bIdx === 2, 'is-neg': card.isNeg }"
+                      :style="{ width: `${Math.max(4, (bar.val / card.maxAbs) * 100)}%` }"
+                    ></span>
+                  </div>
+                  <span class="drawer-yoy-val" :class="{ 'is-current': bIdx === 2 }">{{ bar.label }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- 1. Detailed Meaning & Explanation -->
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'summary'">
             <div class="drawer-summary-box">
@@ -5679,7 +5834,8 @@ const isColNumeric = (tbl, cIdx) => {
               </div>
               <div v-if="detailDrawerItem.formula" class="drawer-formula-pill">
                 <span class="formula-lbl">{{ uiText.drawerFormulaLabel }}</span>
-                <code>{{ detailDrawerItem.formula }}</code>
+                <span v-if="renderMathLatex(detailDrawerItem.formula, true)" v-html="renderMathLatex(detailDrawerItem.formula, true)"></span>
+                <code v-else>{{ detailDrawerItem.formula }}</code>
               </div>
               <ul v-if="detailDrawerItem.calc_steps && detailDrawerItem.calc_steps.length" class="drawer-calc-steps">
                 <li v-for="(step, sIdx) in detailDrawerItem.calc_steps" :key="'cs-'+sIdx" v-html="formatGreenNumbers(step)"></li>
@@ -5693,8 +5849,8 @@ const isColNumeric = (tbl, cIdx) => {
           <!-- 3. Featured Highlighted Audited LK GOTO Page -->
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'formula_table'">
             <section v-if="detailDrawerItem.slide.calculation_notes?.length" class="drawer-section">
-              <h4 class="drawer-sec-title">
-                <span class="drawer-sec-title-text">{{ lang === 'id' ? 'Tabel Perhitungan' : 'Calculation Table' }}</span>
+              <h4 class="drawer-sec-title drawer-sec-toggle" @click="toggleDrawerAccordion('formula_table')">
+                <span class="drawer-sec-title-text">{{ (drawerOpenSections.formula_table || expandedDrawerSection === 'formula_table') ? '▾' : '▸' }} {{ lang === 'id' ? 'Tabel Perhitungan' : 'Calculation Table' }}</span>
                 <span class="drawer-sec-actions">
                   <span class="drawer-sec-count">{{ detailDrawerItem.slide.calculation_notes.length }}</span>
                   <button
@@ -5702,11 +5858,12 @@ const isColNumeric = (tbl, cIdx) => {
                     class="drawer-popout-btn"
                     :title="expandedDrawerSection === 'formula_table' ? (lang === 'id' ? 'Kembalikan ke sidebar' : 'Return to sidebar') : (lang === 'id' ? 'Perbesar di tengah layar' : 'Pop out centered')"
                     :aria-label="expandedDrawerSection === 'formula_table' ? 'Collapse section' : 'Pop out section'"
-                    @click="toggleDrawerSectionPopout('formula_table')"
+                    @click.stop="toggleDrawerSectionPopout('formula_table')"
                   >{{ expandedDrawerSection === 'formula_table' ? '⤡' : '⤢' }}</button>
                 </span>
               </h4>
-            <div class="worksheet-formula-bar drawer-worksheet-formula-bar" :class="{ 'worksheet-active': activeDrawerFormulaCell, 'is-formula-locked': isDrawerFormulaLocked }">
+            <template v-if="drawerOpenSections.formula_table || expandedDrawerSection === 'formula_table'">
+            <div v-if="activeDrawerFormulaCell" class="worksheet-formula-bar drawer-worksheet-formula-bar" :class="{ 'worksheet-active': activeDrawerFormulaCell, 'is-formula-locked': isDrawerFormulaLocked }">
               <div class="formula-bar-top">
                 <span class="worksheet-cell-ref">{{ activeDrawerFormulaCell ? activeDrawerFormulaCell.ref : 'fx' }}</span>
                 <span class="worksheet-fx">fx</span>
@@ -5787,7 +5944,8 @@ const isColNumeric = (tbl, cIdx) => {
                       @click="selectDrawerFormulaCell(calculation, index, 2)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 2)"
                     >
-                      <template v-for="(tok, tIdx) in splitFormulaTokens(calculation.formula, activeDrawerFormulaCell && activeDrawerFormulaCell.rowIndex === index ? activeDrawerFormulaRefs : null, 'terms')" :key="tIdx">
+                      <div v-if="renderMathLatex(calculation.formula)" v-html="renderMathLatex(calculation.formula)"></div>
+                      <template v-else v-for="(tok, tIdx) in splitFormulaTokens(calculation.formula, activeDrawerFormulaCell && activeDrawerFormulaCell.rowIndex === index ? activeDrawerFormulaRefs : null, 'terms')" :key="tIdx">
                         <span v-if="tok.colorIdx !== null" class="formula-ref-token" :class="`ref-color-${tok.colorIdx}`">{{ tok.text }}</span>
                         <template v-else>{{ tok.text }}</template>
                       </template>
@@ -5822,6 +5980,7 @@ const isColNumeric = (tbl, cIdx) => {
                 </div>
               </div>
             </div>
+            </template>
           </section>
           </Teleport>
 
@@ -5850,8 +6009,8 @@ const isColNumeric = (tbl, cIdx) => {
 
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'schedules'">
             <section v-if="detailDrawerItem.slide.supporting_schedules?.length" class="drawer-section">
-              <h4 class="drawer-sec-title">
-                <span class="drawer-sec-title-text">{{ lang === 'id' ? 'Jadwal & Temuan Pendukung' : 'Supporting Schedules & Findings' }}</span>
+              <h4 class="drawer-sec-title drawer-sec-toggle" @click="toggleDrawerAccordion('schedules')">
+                <span class="drawer-sec-title-text">{{ (drawerOpenSections.schedules || expandedDrawerSection === 'schedules') ? '▾' : '▸' }} {{ lang === 'id' ? 'Jadwal & Temuan Pendukung' : 'Supporting Schedules & Findings' }}</span>
                 <span class="drawer-sec-actions">
                   <span class="drawer-sec-count">{{ detailDrawerItem.slide.supporting_schedules.length }}</span>
                   <button
@@ -5859,11 +6018,12 @@ const isColNumeric = (tbl, cIdx) => {
                     class="drawer-popout-btn"
                     :title="expandedDrawerSection === 'schedules' ? (lang === 'id' ? 'Kembalikan ke sidebar' : 'Return to sidebar') : (lang === 'id' ? 'Perbesar di tengah layar' : 'Pop out centered')"
                     :aria-label="expandedDrawerSection === 'schedules' ? 'Collapse section' : 'Pop out section'"
-                    @click="toggleDrawerSectionPopout('schedules')"
+                    @click.stop="toggleDrawerSectionPopout('schedules')"
                   >{{ expandedDrawerSection === 'schedules' ? '⤡' : '⤢' }}</button>
                 </span>
               </h4>
-              <div class="worksheet-formula-bar drawer-worksheet-formula-bar" :class="{ 'worksheet-active': activeScheduleCell }">
+              <template v-if="drawerOpenSections.schedules || expandedDrawerSection === 'schedules'">
+              <div v-if="activeScheduleCell" class="worksheet-formula-bar drawer-worksheet-formula-bar" :class="{ 'worksheet-active': activeScheduleCell }">
                 <div class="formula-bar-top">
                   <span class="worksheet-cell-ref">{{ activeScheduleCell ? activeScheduleCell.ref : 'fx' }}</span>
                   <span class="worksheet-fx">fx</span>
@@ -5912,21 +6072,24 @@ const isColNumeric = (tbl, cIdx) => {
                           :key="c"
                           :class="{ 'worksheet-selected': activeScheduleCell && activeScheduleCell.scheduleIdx === index && activeScheduleCell.rIdx === r && activeScheduleCell.cIdx === c }"
                           @click="selectScheduleCell(index, schedule, row, r, c)"
-                        >{{ row[c] }}</td>
+                        >
+                          {{ row[c] }}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <p v-if="schedule.note" class="trace-mapping-note">{{ schedule.note }}</p>
               </div>
+              </template>
             </section>
           </Teleport>
 
           <!-- 4. Matched Assignments & Audited Filings (with Highlighted Workbook Supporting Rows) -->
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'assignments'">
             <div class="drawer-section">
-              <h4 class="drawer-sec-title asg-sec">
-                <span class="drawer-sec-title-text">{{ uiText.drawerAsgTitle }}</span>
+              <h4 class="drawer-sec-title asg-sec drawer-sec-toggle" @click="toggleDrawerAccordion('assignments')">
+                <span class="drawer-sec-title-text">{{ (drawerOpenSections.assignments || expandedDrawerSection === 'assignments') ? '▾' : '▸' }} {{ uiText.drawerAsgTitle }}</span>
                 <span class="drawer-sec-actions">
                   <span class="drawer-sec-count">{{ detailDrawerItem.matchedAssignments.length }}</span>
                   <button
@@ -5934,10 +6097,11 @@ const isColNumeric = (tbl, cIdx) => {
                     class="drawer-popout-btn"
                     :title="expandedDrawerSection === 'assignments' ? (lang === 'id' ? 'Kembalikan ke sidebar' : 'Return to sidebar') : (lang === 'id' ? 'Perbesar di tengah layar' : 'Pop out centered')"
                     :aria-label="expandedDrawerSection === 'assignments' ? 'Collapse section' : 'Pop out section'"
-                    @click="toggleDrawerSectionPopout('assignments')"
+                    @click.stop="toggleDrawerSectionPopout('assignments')"
                   >{{ expandedDrawerSection === 'assignments' ? '⤡' : '⤢' }}</button>
                 </span>
               </h4>
+            <template v-if="drawerOpenSections.assignments || expandedDrawerSection === 'assignments'">
             <div v-for="(at, idx) in detailDrawerItem.matchedAssignments" :key="'da-'+idx" class="drawer-trace-card">
               <div class="trace-item-top">
                 <span class="trace-pill asg-pill">{{ at.assignment_code }}</span>
@@ -5981,14 +6145,15 @@ const isColNumeric = (tbl, cIdx) => {
                 @click="openLightbox(at.evidence_img, at.assignment_code, at.evidence_caption)"
               />
             </div>
+            </template>
           </div>
           </Teleport>
 
           <!-- 5. Matched Lecture Slides (with Highlighted Knowledge Base Table Rows) -->
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'lectures'">
             <div class="drawer-section">
-              <h4 class="drawer-sec-title lecture-sec">
-                <span class="drawer-sec-title-text">{{ uiText.drawerLectureTitle }}</span>
+              <h4 class="drawer-sec-title lecture-sec drawer-sec-toggle" @click="toggleDrawerAccordion('lectures')">
+                <span class="drawer-sec-title-text">{{ (drawerOpenSections.lectures || expandedDrawerSection === 'lectures') ? '▾' : '▸' }} {{ uiText.drawerLectureTitle }}</span>
                 <span class="drawer-sec-actions">
                   <span class="drawer-sec-count">{{ detailDrawerItem.matchedLectures.length }}</span>
                   <button
@@ -5996,10 +6161,11 @@ const isColNumeric = (tbl, cIdx) => {
                     class="drawer-popout-btn"
                     :title="expandedDrawerSection === 'lectures' ? (lang === 'id' ? 'Kembalikan ke sidebar' : 'Return to sidebar') : (lang === 'id' ? 'Perbesar di tengah layar' : 'Pop out centered')"
                     :aria-label="expandedDrawerSection === 'lectures' ? 'Collapse section' : 'Pop out section'"
-                    @click="toggleDrawerSectionPopout('lectures')"
+                    @click.stop="toggleDrawerSectionPopout('lectures')"
                   >{{ expandedDrawerSection === 'lectures' ? '⤡' : '⤢' }}</button>
                 </span>
               </h4>
+            <template v-if="drawerOpenSections.lectures || expandedDrawerSection === 'lectures'">
             <div v-for="(lt, idx) in detailDrawerItem.matchedLectures" :key="'dl-'+idx" class="drawer-trace-card">
               <div class="trace-item-top">
                 <span class="trace-pill lecture-pill">{{ lt.week_label }} | {{ uiText.slideWord }} {{ lt.slide_num }}</span>
@@ -6056,6 +6222,7 @@ const isColNumeric = (tbl, cIdx) => {
                 </table>
               </div>
             </div>
+            </template>
           </div>
           </Teleport>
         </div>
