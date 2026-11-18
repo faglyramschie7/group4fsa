@@ -17,7 +17,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Perusahaan: GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nInvestor Sasaran: Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.\n\nCakupan Presentasi: Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
+    "speaker_notes": "Perusahaan: GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nInvestor Sasaran: Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.\n\nCakupan Presentasi: Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
     "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
     "lecture_traces": [
       {
@@ -59,33 +59,33 @@
       {
         "heading": "Perusahaan",
         "text": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.",
-        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
+        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.",
-          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.",
+          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.",
           "Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir."
         ]
       },
       {
         "heading": "Investor Sasaran",
-        "text": "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.",
-        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
+        "text": "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.",
+        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.",
-          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.",
+          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.",
           "Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir."
         ]
       },
       {
         "heading": "Cakupan Presentasi",
         "text": "Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
-        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
+        "detail_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.",
-          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.",
+          "Pengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.",
           "Analisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir."
         ]
       }
@@ -133,7 +133,7 @@
     "hide_banner": true,
     "display_title": "Analisis Ekuitas GoTo",
     "display_takeaway": "",
-    "study_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan tugas, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
+    "study_explanation": "GoTo menjalankan Gojek dan GoTo Financial serta memiliki 24,99% Tokopedia.\n\nPengguna analisis adalah investor saham publik jangka pendek. Rp25 merupakan harga acuan pembanding kami, bukan harga pasar langsung.\n\nAnalisis mencakup bisnis, laporan keuangan, kas, proyeksi dan valuasi. Rekomendasi diberikan pada slide terakhir.",
     "supporting_schedules": [],
     "rubric_section": "Opening",
     "explanation_structure": [
@@ -2205,7 +2205,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Asumsi Dasar: Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nRasio Biaya Historis: Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nAsumsi Skenario: Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+    "speaker_notes": "Asumsi Dasar: Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nRasio Biaya Historis: Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nAsumsi Skenario: Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
     "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
     "lecture_traces": [
       {
@@ -2291,8 +2291,8 @@
     "analysis_points": [
       {
         "heading": "Asumsi Dasar",
-        "text": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "text": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
@@ -2303,7 +2303,7 @@
       {
         "heading": "Rasio Biaya Historis",
         "text": "Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -2314,7 +2314,7 @@
       {
         "heading": "Asumsi Skenario",
         "text": "Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -2410,7 +2410,7 @@
     "hide_banner": true,
     "display_title": "Asumsi Proyeksi",
     "display_takeaway": "",
-    "study_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+    "study_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
     "supporting_schedules": [
       {
         "title": "All key assumptions and the reason for each",
@@ -3323,13 +3323,6 @@
           "14,282",
           "7,642",
           "968"
-        ],
-        [
-          "Fixed-cost illustration: EBIT",
-          "(378)",
-          "+1,062",
-          "+2,430",
-          "+3,954"
         ]
       ],
       "row_details": [
@@ -3381,19 +3374,6 @@
             "14,282",
             "7,642",
             "968"
-          ],
-          "evidence_img": null,
-          "evidence_caption": ""
-        },
-        {
-          "detail_explanation": "Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.",
-          "formula": "Breakeven = Rp 18,604 bn",
-          "calc_steps": [],
-          "data_origin": "Milestone 4 & Final Report Table 5",
-          "highlight_terms": [
-            "1,062",
-            "2,430",
-            "3,954"
           ],
           "evidence_img": null,
           "evidence_caption": ""
@@ -3455,7 +3435,7 @@
     "rubric_points": "20 pts (section)",
     "chart_url": null,
     "kpis": [],
-    "speaker_notes": "Biaya Ekuitas dan Utang: Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.\n\nBobot Modal dan WACC: Bobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nTingkat Diskonto: RI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
+    "speaker_notes": "Biaya Ekuitas dan Utang: Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot Modal dan WACC: Bobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nTingkat Diskonto: RI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
     "source_footer": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
     "lecture_traces": [
       {
@@ -3503,8 +3483,8 @@
     "analysis_points": [
       {
         "heading": "Biaya Ekuitas dan Utang",
-        "text": "Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.",
-        "detail_explanation": "Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
+        "text": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.",
+        "detail_explanation": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%",
@@ -3515,7 +3495,7 @@
       {
         "heading": "Bobot Modal dan WACC",
         "text": "Bobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.",
-        "detail_explanation": "Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
+        "detail_explanation": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "[0.774220219 × 8.45205%] + [0.225779781 × 5.3898%] = 7.7606559%",
@@ -3526,7 +3506,7 @@
       {
         "heading": "Tingkat Diskonto",
         "text": "RI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
-        "detail_explanation": "Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
+        "detail_explanation": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%",
@@ -3585,7 +3565,7 @@
     "display_title": "Biaya Modal",
     "cards": [],
     "display_takeaway": "",
-    "study_explanation": "Tugas menghitung biaya ekuitas 8,45% dan biaya utang setelah pajak 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
+    "study_explanation": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
     "supporting_schedules": [
       {
         "title": "Rincian CAPM Pasar Berkembang & WACC (Semua Input Bersumber & Bertanggal)",
@@ -3598,12 +3578,17 @@
           [
             "Risk-Free Rate Proxy (Rf)",
             "4.502%",
-            "Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026)"
+            "Indonesia 10Y SUN (10-Year Indonesian Government Bond) yield 6.120% (Investing.com, 30 Dec 2025) − Moody's Baa2 sovereign default spread 1.618% (Damodaran, 1 Jan 2026) — default spread is subtracted because the bond yield contains sovereign default risk and Country Risk Premium (CRP) is added separately."
           ],
           [
-            "Levered Beta & Mature ERP",
-            "0.59  |  4.23%",
-            "GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026)"
+            "Levered Beta",
+            "0.59",
+            "GOTO Levered Beta 0.59 (Investing.com Key Stats, Dec 2025) — measures how strongly GoTo's stock moves relative to the market"
+          ],
+          [
+            "Mature-Market Equity Risk Premium (Mature ERP)",
+            "4.23%",
+            "Implied Mature-Market ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) — baseline extra return investors demand for stocks over a risk-free bond in a developed market (United States)"
           ],
           [
             "Indonesia Country Risk Premium (CRP)",
@@ -3618,7 +3603,7 @@
           [
             "Pre-Tax Debt (6.91%) & After-Tax Debt",
             "5.39%",
-            "FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate)"
+            "FY2025 effective rate: Rp 535.2 bn interest / Rp 7,742.6 bn total debt (Short-Term Rp 1,523.8 bn + Long-Term Rp 6,218.9 bn) = 6.91%, × (1 − 22% Indonesia statutory corporate tax rate) = 5.39%"
           ],
           [
             "Capital Weights & Consolidated WACC",
@@ -3628,7 +3613,7 @@
         ],
         "row_details": [
           {
-            "detail_explanation": "Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.",
+            "detail_explanation": "A true Risk-Free Rate (Rf) assumes zero default risk. Because Indonesia is rated Moody's Baa2, its 10-year IDR bond yield (6.120%) includes a 1.618% sovereign default spread. Subtracting 1.618% gives a clean IDR Rf (4.502%) and avoids double-counting country risk since CRP is added separately.",
             "formula": "Rf = 6.120% - 1.618% = 4.502%",
             "calc_steps": [],
             "data_origin": "Cost of Capital!B6",
@@ -3640,12 +3625,22 @@
             "evidence_caption": ""
           },
           {
-            "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
-            "formula": "Ke check tested across 0.59-1.25",
+            "detail_explanation": "Observed Levered Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is tested in Appendix A2.",
+            "formula": "Ke sensitivity tested across Beta 0.59–1.25",
             "calc_steps": [],
-            "data_origin": "Cost of Capital!B7:B8",
+            "data_origin": "Cost of Capital!B7",
             "highlight_terms": [
-              "0.59",
+              "0.59"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Damodaran's forward-looking implied Equity Risk Premium for a mature developed market (United States); Indonesia's Country Risk Premium (2.465%) is added on top of this baseline.",
+            "formula": "Total ERP = Mature ERP (4.23%) + CRP (2.465%) = 6.695%",
+            "calc_steps": [],
+            "data_origin": "Cost of Capital!B8",
+            "highlight_terms": [
               "4.23%"
             ],
             "evidence_img": null,
@@ -3718,9 +3713,14 @@
           "6.91% × (1 − 22%)"
         ],
         [
-          "Equity / debt weights",
-          "77.4% / 22.6%",
-          "Weight each funding source"
+          "Equity weight",
+          "77.4%",
+          "Porsi ekuitas pasar: E / (E + D)"
+        ],
+        [
+          "Debt weight",
+          "22.6%",
+          "Porsi utang: D / (E + D)"
         ],
         [
           "Combined rate: WACC",
@@ -3746,6 +3746,38 @@
         "result_numeric": 0.0845205
       },
       {
+        "label": "Pre-Tax Debt Cost",
+        "formula": "FY2025 Interest Expense / Total Interest-Bearing Debt (Short-Term + Long-Term)",
+        "substitution": "535.152 / (1,523.758 + 6,218.885) = 535.152 / 7,742.643 = 6.9117%",
+        "result": "6.91%",
+        "note": "Inputs in Rp billion (Income Statement interest Rp 535,152m; Balance Sheet Short-Term debt Rp 1,523,758m + Long-Term debt Rp 6,218,885m).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.06911723813173357,
+        "evidence_imgs": [
+          {
+            "label": "Income Statement (Interest Rp 535.2bn)",
+            "src": "/evidence/goto_income_statement_finance_costs_highlighted.png",
+            "title": "FY2025 Income Statement — Finance Costs (Rp 535,152m)",
+            "caption": "FY2025 Biaya keuangan / Finance costs (Note 27b) = Rp 535,152 million (Rp 535.2 billion)."
+          },
+          {
+            "label": "Balance Sheet (ST + LT Debt = Rp 7,742.6bn)",
+            "src": "/evidence/goto_balance_sheet_debt_highlighted.png",
+            "title": "31 Dec 2025 Balance Sheet — Short-Term & Long-Term Interest-Bearing Debt",
+            "caption": "Short-Term Debt (Rp 1,523,758m: blue) + Long-Term Debt (Rp 6,218,885m: green) = Rp 7,742,643m (Rp 7,742.6bn)."
+          }
+        ]
+      },
+      {
+        "label": "Effective Tax Rate",
+        "formula": "Tarif pajak penghasilan badan Indonesia (Cost of Capital B14)",
+        "substitution": "Tarif pajak badan statutori = 22,0%",
+        "result": "22.0%",
+        "note": "Asumsi tax-shield model (tarif PPh Badan UU HPP).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.22
+      },
+      {
         "label": "After-Tax Debt Cost",
         "formula": "Pre-tax debt rate × (1 − Tax rate)",
         "substitution": "6.91% × (1 − 22%) = 5.3898%",
@@ -3755,13 +3787,22 @@
         "result_numeric": 0.053897999999999995
       },
       {
-        "label": "Capital Weights",
-        "formula": "Equity weight = E / (E + D); Debt weight = D / (E + D)",
-        "substitution": "E = 26,550.255; D = 7,742.643; E/(E+D) ≈ 77.4%; D/(E+D) ≈ 22.6%",
-        "result": "77.4% / 22.6%",
-        "note": "Inputs in Rp billion.",
+        "label": "Equity Weight",
+        "formula": "E / (E + D)",
+        "substitution": "26,550.255 / (26,550.255 + 7,742.643) = 77.4220%",
+        "result": "77.4%",
+        "note": "Nilai pasar ekuitas (Rp 25,00 × 1.062.010,2 juta saham) dalam Rp miliar.",
         "source": "Assignment 14 Cost of Capital",
         "result_numeric": 0.7742202190086123
+      },
+      {
+        "label": "Debt Weight",
+        "formula": "D / (E + D)",
+        "substitution": "7,742.643 / (26,550.255 + 7,742.643) = 22.5780%",
+        "result": "22.6%",
+        "note": "Total utang berbunga (Jangka Pendek Rp 1.523,8M + Jangka Panjang Rp 6.218,9M) dalam Rp miliar.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.2257797809913877
       },
       {
         "label": "WACC",
@@ -3785,7 +3826,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Metode Valuasi: DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nProyeksi dan Nilai Terminal: Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nHasil Valuasi: Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+    "speaker_notes": "Metode Valuasi: DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nProyeksi dan Nilai Terminal: Keduanya memakai proyeksi dasar 2026F–2028F dan pertumbuhan terminal manual 3,0%. Karena laba operasi setelah pajak (NOPAT) 2028F negatif (−Rp 4.967,4 M), pertumbuhan fundamental (reinvestasi × ROIC) tidak bermakna; Tugas 14 memilih 3,0%—batas atas rentang wajar 0%–3% dari templat bagi perusahaan merugi—yang tetap di bawah batas bebas risiko 4,502%, WACC 7,76%, dan Ke 8,45%.\n\nHasil Valuasi: Angka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
     "source_footer": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
     "lecture_traces": [
       {
@@ -3844,7 +3885,7 @@
       {
         "heading": "Metode Valuasi",
         "text": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
@@ -3854,8 +3895,8 @@
       },
       {
         "heading": "Proyeksi dan Nilai Terminal",
-        "text": "Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "text": "Keduanya memakai proyeksi dasar 2026F–2028F dan pertumbuhan terminal manual 3,0% (batas atas 0%–3% perusahaan merugi), di bawah Rf 4,502%, WACC 7,76%, dan Ke 8,45% karena NOPAT (laba operasi setelah pajak) negatif membuat g fundamental tak bermakna.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
@@ -3865,8 +3906,8 @@
       },
       {
         "heading": "Hasil Valuasi",
-        "text": "Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "text": "Angka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
@@ -3931,7 +3972,7 @@
     "hide_banner": true,
     "display_title": "DCF dan Residual Income",
     "display_takeaway": "",
-    "study_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+    "study_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
     "supporting_schedules": [
       {
         "title": "Jembatan Perbandingan DCF vs. Residual Income: Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
@@ -4205,6 +4246,72 @@
           ]
         ],
         "note": "Source: submitted Assignment 14 workbook. Cash uses are negative; a working-capital cash release is positive."
+      },
+      {
+        "title": "Arus Kas Proyeksi Mentah (Tanpa DCF) vs. Arus Kas Terdiskonto (Dengan DCF WACC 7,76%, Rp miliar)",
+        "headers": [
+          "Periode",
+          "Tanpa DCF (FCFF Mentah)",
+          "Dengan DCF (PV pada WACC 7,76%)",
+          "Efek Diskonto"
+        ],
+        "rows": [
+          [
+            "2026F (Tahun 1)",
+            "−7.738,7",
+            "−7.181,4",
+            "−7,2% (1 tahun ke depan)"
+          ],
+          [
+            "2027F (Tahun 2)",
+            "−7.006,3",
+            "−6.033,4",
+            "−13,9% (2 tahun ke depan)"
+          ],
+          [
+            "2028F (Tahun 3)",
+            "−7.152,6",
+            "−5.715,8",
+            "−20,1% (3 tahun ke depan)"
+          ],
+          [
+            "Subtotal 3 Tahun (2026F–2028F)",
+            "−21.897,6",
+            "−18.930,7",
+            "−13,5%"
+          ],
+          [
+            "Nilai Terminal (setelah 2028F)",
+            "−154.740,8",
+            "−123.657,4",
+            "−20,1%"
+          ],
+          [
+            "Total Nilai Perusahaan (EV)",
+            "−176.638,4",
+            "−142.597,7",
+            "−19,3%"
+          ],
+          [
+            "+ Jembatan Kas Bersih",
+            "+14.012,5",
+            "+14.012,5",
+            "Tetap (nilai hari ini)"
+          ],
+          [
+            "Nilai Ekuitas Tersirat",
+            "−162.625,9",
+            "−128.585,2",
+            "—"
+          ],
+          [
+            "Per Saham (÷ 1.062,01M saham)",
+            "−Rp 153,1",
+            "−Rp 121,1",
+            "DCF memperkecil rugi Rp 32,0/lbr"
+          ]
+        ],
+        "note": "Bahkan sebelum didiskonto, FCFF proyeksi mentah sudah negatif setiap tahun (−Rp 21,90T selama 2026F–2028F). Diskonto pada WACC 7,76% bukan penyebab hasil negatif—diskonto justru memperkecil rugi masa depan menjadi nilai hari ini (−Rp 121,1/saham). Kolom tanpa diskonto hanya ditampilkan untuk mengilustrasikan efek nilai waktu uang, bukan sebagai metode valuasi terpisah."
       },
       {
         "title": "How forecast profit becomes residual income (Rp bn)",
@@ -5972,7 +6079,7 @@
         "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5"
       }
     ],
-    "study_explanation": "Lampiran ini merinci perhitungan lengkap lima faktor Altman Z-Score Minggu 6 (X1 hingga X5 = −4,721750 memakai proksi book equity / total liabilities dari lembar kerja kelompok) bersama temuan kualitas akuntansi dan catatan kaki Milestone 3 (akrual −3,95%, cakupan capex 25,97%, asosiasi 22,57% dari total aset, dan Level 3).",
+    "study_explanation": "Lampiran ini merinci perhitungan lengkap lima faktor Altman Z-Score (X1 hingga X5 = −4,721750 memakai proksi book equity / total liabilities ) bersama temuan kualitas akuntansi dan catatan kaki kami (akrual −3,95%, cakupan capex 25,97%, asosiasi 22,57% dari total aset, dan Level 3).",
     "speaker_notes": "Kas dan Likuiditas: Kas Rp21,76T dan rasio lancar 2,73x. Utang berbunga sebesar 0,27 kali basis ekuitas milestone.\n\nCakupan Bunga: Cakupan bunga −0,71x karena EBIT negatif. Kas dapat tetap positif walaupun laba operasi belum membayar bunga.\n\nAltman Z-Score: Skor lima faktor Minggu 6 berada dalam zona distress terutama karena akumulasi rugi. Skor ini bukan bukti kebangkrutan segera.",
     "source_footer": "Week 6 Worksheet; Milestone 2; Milestone 3!Calculations; LK GOTO FY2025 Notes 14, 15, 29 & 38",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -6552,8 +6659,8 @@
     "analysis_points": [
       {
         "heading": "Asumsi Dasar",
-        "text": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "text": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
@@ -6564,7 +6671,7 @@
       {
         "heading": "Rasio Biaya Historis",
         "text": "Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -6575,7 +6682,7 @@
       {
         "heading": "Asumsi Skenario",
         "text": "Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
-        "detail_explanation": "Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+        "detail_explanation": "Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nBiaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nKasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -6584,8 +6691,8 @@
         "formula": "Average historical cash operating-cost ratios"
       }
     ],
-    "study_explanation": "Lampiran ini mendokumentasikan seluruh asumsi utama proyeksi Milestone 4 untuk skenario Optimistis, Dasar, dan Konservatif (pertumbuhan pendapatan 11,39%, COGS 42,28%, OpEx 78,49%, D&A, modal kerja DSO/DIO/DPO, capex 16,32%, pajak 22%, dan bunga 6,91%) beserta rasional ekonominya dan pemisahan biaya tetap vs variabel.",
-    "speaker_notes": "Asumsi Dasar: Pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5% dan capex 16,3% mengikuti Milestone 4.\n\nRasio Biaya Historis: Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nAsumsi Skenario: Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
+    "study_explanation": "Lampiran ini mendokumentasikan seluruh asumsi utama proyeksi kami untuk skenario Optimistis, Dasar, dan Konservatif (pertumbuhan pendapatan 11,39%, COGS 42,28%, OpEx 78,49%, D&A, modal kerja DSO/DIO/DPO, capex 16,32%, pajak 22%, dan bunga 6,91%) beserta rasional ekonominya dan pemisahan biaya tetap vs variabel.",
+    "speaker_notes": "Asumsi Dasar: Proyeksi skenario dasar kami mengasumsikan pertumbuhan 11,4%, COGS 41,1%, biaya operasi 78,5%, dan capex 16,3%.\n\nRasio Biaya Historis: Biaya operasi 2023 sebesar 117% dan capex 2024 yang tinggi menaikkan rata-rata dasar melebihi tingkat 2025.\n\nAsumsi Skenario: Kasus optimistis memakai biaya operasi 55,7% dan capex 6,5%, dibandingkan 78,5% dan 16,3% pada kasus dasar. Ini asumsi, bukan hasil masa depan yang sudah terjadi.",
     "source_footer": "Milestone 4 §1–3; Assignment 14 Assumptions & Forecasts",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "calculation_notes": [
@@ -7228,7 +7335,7 @@
         "formula": "Fixed operating costs / Gross-margin ratio"
       }
     ],
-    "study_explanation": "Lampiran ini berisi ketiga laporan keuangan pro forma lengkap 2026F–2028F dari Milestone 4 (Laba Rugi, Neraca, dan Arus Kas skenario dasar), serta analisis titik impas (breakeven), derajat leverage operasi (DOL), dan uji sensitivitas pembekuan OpEx tetap Rp10.954 miliar.",
+    "study_explanation": "Lampiran ini berisi ketiga laporan keuangan pro forma lengkap 2026F–2028F kami (Laba Rugi, Neraca, dan Arus Kas skenario dasar), serta analisis titik impas (breakeven), derajat leverage operasi (DOL), dan uji sensitivitas pembekuan OpEx tetap Rp10.954 miliar.",
     "speaker_notes": "Kasus Dasar: Model memproyeksikan pendapatan Rp25.321 miliar pada 2028F, tetapi kas turun dari Rp21.755 menjadi Rp968 miliar dan rugi operasi berlanjut.\n\nRasio Biaya Operasi: Kasus dasar menghasilkan laba kotor Rp58,90 dan biaya operasi Rp78,50 per Rp100 penjualan. Kekurangan Rp19,60 membesar bila keduanya tumbuh bersama.\n\nSkenario Biaya Tetap: Ilustrasi terpisah mempertahankan biaya operasi Rp10.954 miliar dan menghasilkan EBIT 2026F positif Rp1.062 miliar, bukan rugi dasar Rp4.003 miliar.",
     "source_footer": "Milestone 4 Tables 4–7; Final Report Table 5; Assignment 14 Financial Forecast",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -7410,12 +7517,17 @@
         [
           "Risk-Free Rate Proxy (Rf)",
           "4.502%",
-          "Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026)"
+          "Indonesia 10Y SUN (10-Year Indonesian Government Bond) yield 6.120% (Investing.com, 30 Dec 2025) − Moody's Baa2 sovereign default spread 1.618% (Damodaran, 1 Jan 2026) — default spread is subtracted because the bond yield contains sovereign default risk and Country Risk Premium (CRP) is added separately."
         ],
         [
-          "Levered Beta & Mature ERP",
-          "0.59  |  4.23%",
-          "GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026)"
+          "Levered Beta",
+          "0.59",
+          "GOTO Levered Beta 0.59 (Investing.com Key Stats, Dec 2025) — measures how strongly GoTo's stock moves relative to the market"
+        ],
+        [
+          "Mature-Market Equity Risk Premium (Mature ERP)",
+          "4.23%",
+          "Implied Mature-Market ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) — baseline extra return investors demand for stocks over a risk-free bond in a developed market (United States)"
         ],
         [
           "Indonesia Country Risk Premium (CRP)",
@@ -7430,7 +7542,7 @@
         [
           "Pre-Tax Debt (6.91%) & After-Tax Debt",
           "5.39%",
-          "FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate)"
+          "FY2025 effective rate: Rp 535.2 bn interest / Rp 7,742.6 bn total debt (Short-Term Rp 1,523.8 bn + Long-Term Rp 6,218.9 bn) = 6.91%, × (1 − 22% Indonesia statutory corporate tax rate) = 5.39%"
         ],
         [
           "Capital Weights & Consolidated WACC",
@@ -7440,7 +7552,7 @@
       ],
       "row_details": [
         {
-          "detail_explanation": "Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.",
+          "detail_explanation": "A true Risk-Free Rate (Rf) assumes zero default risk. Because Indonesia is rated Moody's Baa2, its 10-year IDR bond yield (6.120%) includes a 1.618% sovereign default spread. Subtracting 1.618% gives a clean IDR Rf (4.502%) and avoids double-counting country risk since CRP is added separately.",
           "formula": "Rf = 6.120% - 1.618% = 4.502%",
           "calc_steps": [],
           "data_origin": "Cost of Capital!B6",
@@ -7452,12 +7564,22 @@
           "evidence_caption": ""
         },
         {
-          "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
-          "formula": "Ke check tested across 0.59-1.25",
+          "detail_explanation": "Observed Levered Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is tested in Appendix A2.",
+          "formula": "Ke sensitivity tested across Beta 0.59–1.25",
           "calc_steps": [],
-          "data_origin": "Cost of Capital!B7:B8",
+          "data_origin": "Cost of Capital!B7",
           "highlight_terms": [
-            "0.59",
+            "0.59"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Damodaran's forward-looking implied Equity Risk Premium for a mature developed market (United States); Indonesia's Country Risk Premium (2.465%) is added on top of this baseline.",
+          "formula": "Total ERP = Mature ERP (4.23%) + CRP (2.465%) = 6.695%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B8",
+          "highlight_terms": [
             "4.23%"
           ],
           "evidence_img": null,
@@ -7981,7 +8103,7 @@
       {
         "heading": "Metode Valuasi",
         "text": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
@@ -7991,8 +8113,8 @@
       },
       {
         "heading": "Proyeksi dan Nilai Terminal",
-        "text": "Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "text": "Keduanya memakai proyeksi dasar 2026F–2028F dan pertumbuhan terminal manual 3,0% (batas atas 0%–3% perusahaan merugi), di bawah Rf 4,502%, WACC 7,76%, dan Ke 8,45% karena NOPAT (laba operasi setelah pajak) negatif membuat g fundamental tak bermakna.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
@@ -8002,8 +8124,8 @@
       },
       {
         "heading": "Hasil Valuasi",
-        "text": "Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
-        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "text": "Angka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+        "detail_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai proyeksi skenario dasar 2026F–2028F kami. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan terminal 3,0%.\n\nAngka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
@@ -8013,7 +8135,7 @@
       }
     ],
     "study_explanation": "Lampiran ini menggabungkan seluruh tabel pendukung valuasi: pembangunan CAPM & WACC tertanggal (Ke 8,45%, Kd setelah pajak 5,39%, WACC 7,76%), rekonsiliasi DCF vs Residual Income dengan proyeksi sama dan g = 3,0%, uji sensitivitas beta/pertumbuhan, penurunan FCFF & RI 2026F–2028F, serta cross-check P/B Grab berbasis aktual FY2025 pada kedua sisi (Rp91,0/saham) beserta alasan pengecualian Sea, BUKA, dan BELI.",
-    "speaker_notes": "Metode Valuasi: DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nProyeksi dan Nilai Terminal: Keduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nHasil Valuasi: Angka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
+    "speaker_notes": "Metode Valuasi: DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nProyeksi dan Nilai Terminal: Keduanya memakai proyeksi dasar 2026F–2028F dan pertumbuhan terminal manual 3,0%. Karena laba operasi setelah pajak (NOPAT) 2028F negatif (−Rp 4.967,4 M), pertumbuhan fundamental (reinvestasi × ROIC) tidak bermakna; Tugas 14 memilih 3,0%—batas atas rentang wajar 0%–3% dari templat bagi perusahaan merugi—yang tetap di bawah batas bebas risiko 4,502%, WACC 7,76%, dan Ke 8,45%.\n\nHasil Valuasi: Angka tersebut berasal dari asumsi model kami. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
     "source_footer": "Assignment 14 Workbook (Cost of Capital, DCF, RI); Grab 20-F FY2025; LK GOTO FY2025 PDF p.16",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "calculation_notes": [
@@ -8027,6 +8149,38 @@
         "result_numeric": 0.0845205
       },
       {
+        "label": "Pre-Tax Debt Cost",
+        "formula": "FY2025 Interest Expense / Total Interest-Bearing Debt (Short-Term + Long-Term)",
+        "substitution": "535.152 / (1,523.758 + 6,218.885) = 535.152 / 7,742.643 = 6.9117%",
+        "result": "6.91%",
+        "note": "Inputs in Rp billion (Income Statement interest Rp 535,152m; Balance Sheet Short-Term debt Rp 1,523,758m + Long-Term debt Rp 6,218,885m).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.06911723813173357,
+        "evidence_imgs": [
+          {
+            "label": "Income Statement (Interest Rp 535.2bn)",
+            "src": "/evidence/goto_income_statement_finance_costs_highlighted.png",
+            "title": "FY2025 Income Statement — Finance Costs (Rp 535,152m)",
+            "caption": "FY2025 Biaya keuangan / Finance costs (Note 27b) = Rp 535,152 million (Rp 535.2 billion)."
+          },
+          {
+            "label": "Balance Sheet (ST + LT Debt = Rp 7,742.6bn)",
+            "src": "/evidence/goto_balance_sheet_debt_highlighted.png",
+            "title": "31 Dec 2025 Balance Sheet — Short-Term & Long-Term Interest-Bearing Debt",
+            "caption": "Short-Term Debt (Rp 1,523,758m: blue) + Long-Term Debt (Rp 6,218,885m: green) = Rp 7,742,643m (Rp 7,742.6bn)."
+          }
+        ]
+      },
+      {
+        "label": "Effective Tax Rate",
+        "formula": "Tarif pajak penghasilan badan Indonesia (Cost of Capital B14)",
+        "substitution": "Tarif pajak badan statutori = 22,0%",
+        "result": "22.0%",
+        "note": "Asumsi tax-shield model (tarif PPh Badan UU HPP).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.22
+      },
+      {
         "label": "After-Tax Debt Cost",
         "formula": "Pre-tax debt rate × (1 − Tax rate)",
         "substitution": "6.91% × (1 − 22%) = 5.3898%",
@@ -8036,13 +8190,22 @@
         "result_numeric": 0.053897999999999995
       },
       {
-        "label": "Capital Weights",
-        "formula": "Equity weight = E / (E + D); Debt weight = D / (E + D)",
-        "substitution": "E = 26,550.255; D = 7,742.643; E/(E+D) ≈ 77.4%; D/(E+D) ≈ 22.6%",
-        "result": "77.4% / 22.6%",
-        "note": "Inputs in Rp billion.",
+        "label": "Equity Weight",
+        "formula": "E / (E + D)",
+        "substitution": "26,550.255 / (26,550.255 + 7,742.643) = 77.4220%",
+        "result": "77.4%",
+        "note": "Nilai pasar ekuitas (Rp 25,00 × 1.062.010,2 juta saham) dalam Rp miliar.",
         "source": "Assignment 14 Cost of Capital",
         "result_numeric": 0.7742202190086123
+      },
+      {
+        "label": "Debt Weight",
+        "formula": "D / (E + D)",
+        "substitution": "7,742.643 / (26,550.255 + 7,742.643) = 22.5780%",
+        "result": "22.6%",
+        "note": "Total utang berbunga (Jangka Pendek Rp 1.523,8M + Jangka Panjang Rp 6.218,9M) dalam Rp miliar.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.2257797809913877
       },
       {
         "label": "WACC",

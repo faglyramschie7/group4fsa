@@ -1854,7 +1854,7 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
 const renderMathLatex = (str) => {
   if (!str) return ''
   const trimmed = String(str).trim()
-  if (trimmed.includes('15,894.462') && trimmed.includes('14,785.492')) {
+  if (trimmed.includes('15,894.462') && trimmed.includes('14,785.492') && trimmed.includes('18,322.117')) {
     try {
       const tex = '\\frac{\\left(\\frac{15{,}894.462}{14{,}785.492} - 1\\right) + \\left(\\frac{18{,}322.117}{15{,}894.462} - 1\\right)}{2} = 11.3869916\\% \\approx 11.4\\%'
       return `<div class="katex-calc-display">${katex.renderToString(tex, { throwOnError: false, displayMode: true })}</div>`
@@ -1973,39 +1973,238 @@ const selectDrawerFormulaCell = (calc, rowIndex, colIndex) => {
     textFormula,
     val: calc.result,
     explanation,
+    label: calc.label || '',
+    evidence_img: calc.evidence_img || null,
+    evidence_caption: calc.evidence_caption || '',
+    evidence_imgs: calc.evidence_imgs || null,
   }
 }
 
-const activeDrawerFormulaRefs = computed(() => {
+const FORMULA_TERM_ALIASES = {
+  'cost of equity': ['Cost of Equity', 'Ke'],
+  'pre-tax debt cost': ['Pre-Tax Debt Cost', 'Pre-tax debt rate', 'Pre-tax Kd'],
+  'after-tax debt cost': ['After-Tax Debt Cost', 'After-tax Kd', 'Kd'],
+  'capital weights': ['Capital Weights', 'Equity weight', 'Debt weight'],
+  'net profit margin': ['Net Profit Margin', 'Net margin'],
+  'gross margin': ['Gross Margin', 'Gross margin'],
+  'operating margin': ['Operating Margin', 'Operating margin'],
+  'asset turnover': ['Asset Turnover', 'Asset turnover'],
+  'equity multiplier': ['Equity Multiplier', 'Equity multiplier'],
+  'tax burden': ['Tax Burden', 'Tax burden'],
+  'interest burden': ['Interest Burden', 'Interest burden'],
+  '2026f fcff': ['2026F FCFF', 'FCFF in year t', 'FCFF_t'],
+  'base revenue growth': ['Base Revenue Growth', 'Base growth'],
+  'goto parent bvps': ['GoTo Parent BVPS'],
+  'grab parent bvps': ['Grab Parent BVPS', 'Parent BVPS'],
+  'grab p/b': ['Grab P/B'],
+  'wacc': ['WACC'],
+}
+
+const getCalcRowAliases = (note) => {
+  const lbl = String(note?.label || '').trim()
+  if (!lbl) return []
+  const lower = lbl.toLowerCase()
+  const aliases = new Set([lbl])
+  const parenMatch = lbl.match(/\(([A-Z0-9/]+)\)/)
+  if (parenMatch) aliases.add(parenMatch[1])
+  if (FORMULA_TERM_ALIASES[lower]) {
+    for (const a of FORMULA_TERM_ALIASES[lower]) aliases.add(a)
+  }
+  return Array.from(aliases).filter((a) => a.length >= 2)
+}
+
+const parseNumericToken = (raw) => {
+  const cleaned = String(raw || '').replace(/−/g, '-').replace(/,/g, '').trim()
+  const isPct = cleaned.endsWith('%')
+  const num = parseFloat(isPct ? cleaned.slice(0, -1) : cleaned)
+  if (!Number.isFinite(num)) return null
+  return isPct ? num / 100 : num
+}
+
+const numbersClose = (a, b) => {
+  if (!Number.isFinite(a) || !Number.isFinite(b)) return false
+  const tol = Math.max(1e-4, Math.abs(b) * 5e-4)
+  return Math.abs(a - b) <= tol
+}
+
+const isTrivialConstant = (val, raw) => {
+  if (!Number.isFinite(val)) return true
+  if (Math.abs(val) <= 1e-9) return true
+  const s = String(raw || '').trim()
+  if (!s.includes('%') && Number.isInteger(val) && Math.abs(val) <= 365) return true
+  return false
+}
+
+const activeDrawerFormulaDepInfo = computed(() => {
   const cell = activeDrawerFormulaCell.value
-  if (!cell || !cell.rawFormula) return {}
-  const matches = cell.rawFormula.match(/\b[A-D](?:[2-9]|[1-9]\d+)\b/g)
-  if (!matches) return {}
-  const map = {}
+  const refMap = {}
+  const termMatchers = []
+  const numMatchers = []
+  if (!cell) return { refMap, termMatchers, numMatchers }
+
   let colorIdx = 0
-  for (const ref of matches) {
-    if (ref !== cell.ref && map[ref] === undefined) {
-      map[ref] = colorIdx % 6
+  const assignColor = (refCode) => {
+    if (refCode === cell.ref) return null
+    if (refMap[refCode] === undefined) {
+      refMap[refCode] = colorIdx % 6
       colorIdx++
     }
+    return refMap[refCode]
   }
-  return map
+
+  // 1. Explicit Excel cell references (e.g. B2, C3)
+  if (cell.rawFormula) {
+    const matches = cell.rawFormula.match(/\b[A-D](?:[2-9]|[1-9]\d+)\b/g)
+    if (matches) {
+      for (const ref of matches) assignColor(ref)
+    }
+  }
+
+  // 2. Semantic & numeric dependencies on other rows in the Calculation Table
+  const notes = detailDrawerItem.value?.slide?.calculation_notes
+  if (Array.isArray(notes) && notes.length > 1) {
+    const curNote = notes[cell.rowIndex]
+    const formulaStr = String(curNote?.formula || '')
+    const subStr = String(curNote?.substitution || '')
+    // Strip trailing "= <final value>" or "≈ <final value>" so we only match input operands
+    const subLhs = subStr.replace(/\s*[=≈]\s*[^=≈]+$/, '')
+
+    // Collect candidate alias matches ordered by position in formulaStr
+    const aliasHits = []
+    notes.forEach((other, j) => {
+      if (j === cell.rowIndex) return
+      const refCode = `B${j + 2}`
+      for (const alias of getCalcRowAliases(other)) {
+        const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const re = new RegExp(`(?<![A-Za-z0-9_])${escaped}(?![A-Za-z0-9_])`, 'gi')
+        let m
+        while ((m = re.exec(formulaStr)) !== null) {
+          aliasHits.push({ idx: m.index, len: m[0].length, refCode, alias })
+        }
+      }
+    })
+    aliasHits.sort((a, b) => a.idx - b.idx || b.len - a.len)
+
+    // Deduplicate overlapping alias hits
+    const acceptedAliases = []
+    for (const hit of aliasHits) {
+      const overlaps = acceptedAliases.some((a) => hit.idx < a.idx + a.len && hit.idx + hit.len > a.idx)
+      if (!overlaps) {
+        acceptedAliases.push(hit)
+        const cIdx = assignColor(hit.refCode)
+        if (cIdx !== null) {
+          termMatchers.push({ text: hit.alias, colorIdx: cIdx })
+        }
+      }
+    }
+
+    // Match numeric operands in substitution LHS against other rows' result_numeric
+    const numRegex = /[−-]?\d[\d,]*(?:\.\d+)?%?/g
+    let nm
+    while ((nm = numRegex.exec(subLhs)) !== null) {
+      const rawToken = nm[0]
+      const val = parseNumericToken(rawToken)
+      if (isTrivialConstant(val, rawToken)) continue
+      for (let j = 0; j < notes.length; j++) {
+        if (j === cell.rowIndex) continue
+        const other = notes[j]
+        const target = other?.result_numeric
+        if (typeof target !== 'number' || !Number.isFinite(target)) continue
+        const hasSplitResult = String(other.result || '').includes('/')
+        const matched =
+          numbersClose(val, target) ||
+          (hasSplitResult && numbersClose(val, 1 - target))
+        if (matched) {
+          const refCode = `B${j + 2}`
+          const cIdx = assignColor(refCode)
+          if (cIdx !== null) {
+            numMatchers.push({ raw: rawToken, colorIdx: cIdx })
+          }
+          break
+        }
+      }
+    }
+  }
+
+  return { refMap, termMatchers, numMatchers }
 })
 
-const splitFormulaTokens = (text, refMap) => {
+const activeDrawerFormulaRefs = computed(() => activeDrawerFormulaDepInfo.value.refMap)
+
+const splitFormulaTokens = (text, refMap, mode = 'auto') => {
   if (!text) return []
   const str = String(text)
-  if (!refMap || !Object.keys(refMap).length) {
+  const depInfo = activeDrawerFormulaDepInfo.value
+  const effectiveMap = refMap || {}
+
+  // If explicit Excel refs exist in the string, highlight them
+  const hasCellRefs = Object.keys(effectiveMap).length > 0 && /\b[A-D](?:[2-9]|[1-9]\d+)\b/.test(str)
+  if (hasCellRefs) {
+    const regex = /(\b[A-D](?:[2-9]|[1-9]\d+)\b)/g
+    return str
+      .split(regex)
+      .filter((p) => p.length > 0)
+      .map((part) => ({
+        text: part,
+        colorIdx: Object.prototype.hasOwnProperty.call(effectiveMap, part) ? effectiveMap[part] : null,
+      }))
+  }
+
+  // Only apply semantic/numeric token highlighting when refMap is active for this row
+  if (!refMap || !Object.keys(effectiveMap).length) {
     return [{ text: str, colorIdx: null }]
   }
-  const regex = /(\b[A-D](?:[2-9]|[1-9]\d+)\b)/g
-  const parts = str.split(regex)
-  return parts
-    .filter((p) => p.length > 0)
-    .map((part) => ({
-      text: part,
-      colorIdx: Object.prototype.hasOwnProperty.call(refMap, part) ? refMap[part] : null,
-    }))
+
+  const tokensToMatch = []
+  if (mode === 'terms' || mode === 'auto') {
+    for (const tm of depInfo.termMatchers) {
+      const escaped = tm.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const re = new RegExp(`(?<![A-Za-z0-9_])${escaped}(?![A-Za-z0-9_])`, 'gi')
+      let m
+      while ((m = re.exec(str)) !== null) {
+        tokensToMatch.push({ start: m.index, end: m.index + m[0].length, colorIdx: tm.colorIdx })
+      }
+    }
+  }
+  if (mode === 'numbers' || mode === 'auto') {
+    // Only highlight numbers before any trailing "= <result>" or "≈ <result>"
+    const eqMatch = str.match(/\s*[=≈]\s*[^=≈]+$/)
+    const limit = eqMatch ? eqMatch.index : str.length
+    const seenRanges = new Set()
+    for (const nm of depInfo.numMatchers) {
+      const escaped = nm.raw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const re = new RegExp(`(?<![\\d.,])${escaped}(?![\\d.,%])`, 'g')
+      let m
+      while ((m = re.exec(str)) !== null) {
+        if (m.index >= limit) continue
+        const key = `${m.index}:${m.index + m[0].length}`
+        if (!seenRanges.has(key)) {
+          seenRanges.add(key)
+          tokensToMatch.push({ start: m.index, end: m.index + m[0].length, colorIdx: nm.colorIdx })
+        }
+      }
+    }
+  }
+
+  if (!tokensToMatch.length) {
+    return [{ text: str, colorIdx: null }]
+  }
+
+  tokensToMatch.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start))
+  const result = []
+  let cursor = 0
+  for (const tok of tokensToMatch) {
+    if (tok.start < cursor) continue
+    if (tok.start > cursor) {
+      result.push({ text: str.slice(cursor, tok.start), colorIdx: null })
+    }
+    result.push({ text: str.slice(tok.start, tok.end), colorIdx: tok.colorIdx })
+    cursor = tok.end
+  }
+  if (cursor < str.length) {
+    result.push({ text: str.slice(cursor), colorIdx: null })
+  }
+  return result
 }
 
 const getDrawerCellClasses = (rowIndex, colIndex) => {
@@ -2042,6 +2241,201 @@ const findMatchingCalcNoteForRow = (row, slide) => {
   }) || null
 }
 
+const ASSUMPTION_CELL_SPECS = [
+  {
+    match: 'revenue growth',
+    base: {
+      fx: '[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.39% ≈ 11.4%',
+      formula: '((Rev 2024 / Rev 2023 − 1) + (Rev 2025 / Rev 2024 − 1)) / 2',
+      exp: 'Average of 2024 growth (7.50%) and 2025 growth (15.27%) from Milestone 4 Sources!E52.',
+    },
+    opt: {
+      fx: '(18,322.117 / 15,894.462 − 1) × 100% = 15.27% ≈ 15.3%',
+      formula: '(Rev 2025 / Rev 2024 − 1) × 100%',
+      exp: 'Matches FY2025 revenue growth (Rp15,894.5bn to Rp18,322.1bn) driven by GoPay loans and Gojek.',
+    },
+    cons: {
+      fx: '(15,894.462 / 14,785.492 − 1) × 100% = 7.50% ≈ 7.5%',
+      formula: '(Rev 2024 / Rev 2023 − 1) × 100%',
+      exp: 'Matches slower FY2024 post-Tokopedia transition growth (Rp14,785.5bn to Rp15,894.5bn).',
+    },
+  },
+  {
+    match: 'cogs',
+    base: {
+      fx: '(34.45% + 46.64% + 42.28%) / 3 = 41.12% ≈ 41.1%',
+      formula: '(COGS/Rev 2023 + COGS/Rev 2024 + COGS/Rev 2025) / 3',
+      exp: '3-year average COGS %: 2023 (5,093.2/14,785.5 = 34.45%), 2024 (7,413.4/15,894.5 = 46.64%), 2025 (7,746.0/18,322.1 = 42.28%).',
+    },
+    opt: {
+      fx: '4,192,326 / 10,994,113 × 100% = 38.13% ≈ 38.1%',
+      formula: 'First half 2026 Cost of Revenues / First half 2026 Net Revenues (LKFS 30 June 2026, p. 2/1)',
+      exp: "From GoTo's unaudited first half 2026 financial statement (30 June 2026): Rp4,192,326m cost of revenues ÷ Rp10,994,113m net revenues = 38.13%.",
+    },
+    cons: {
+      fx: '7,413.392 / 15,894.462 × 100% = 46.64% ≈ 46.6%',
+      formula: 'COGS 2024 / Revenue 2024 × 100%',
+      exp: "Matches GoTo's highest historical COGS % in FY2024 (Rp7,413.4bn ÷ Rp15,894.5bn = 46.64%).",
+    },
+  },
+  {
+    match: 'operating expenses',
+    base: {
+      fx: '(117.01% + 62.78% + 55.70%) / 3 = 78.49% ≈ 78.5%',
+      formula: '(Cash Opex/Rev 2023 + 2024 + 2025) / 3',
+      exp: '3-year average cash opex (SG&A minus D&A) / Revenue: 2023 (17,300.1/14,785.5 = 117.0%), 2024 (9,977.8/15,894.5 = 62.8%), 2025 (10,205.8/18,322.1 = 55.7%).',
+    },
+    opt: {
+      fx: '(10,954.337 − 748.552) / 18,322.117 × 100% = 55.70% ≈ 55.7%',
+      formula: '(Opex 2025 − D&A 2025) / Revenue 2025 × 100%',
+      exp: 'Matches FY2025 cash opex ratio (Rp10,205.8bn ÷ Rp18,322.1bn = 55.70%) after promo discipline.',
+    },
+    cons: {
+      fx: '0.85 (Milestone 4 Assumptions!F9 — judgmental stress input)',
+      formula: 'Set above Base (78.5%), between FY2024 (62.8%) and FY2023 (117.0%)',
+      exp: 'Judgmental stress input (not a historical ratio): set above the 78.5% Base average and between 2024 (62.8%) and 2023 (117.0%) to model heavy promo competition returning without repeating 2023.',
+    },
+  },
+  {
+    match: 'days sales outstanding',
+    base: {
+      fx: '(14.75 + 46.89 + 10.90) / 3 = 24.18 ≈ 24.2 days',
+      formula: '(DSO 2023 + DSO 2024 + DSO 2025) / 3',
+      exp: '3-year average of (AR / Revenue × 365): 2023 (14.75d), 2024 (46.89d), 2025 (10.90d).',
+    },
+    opt: {
+      fx: '(268.342 + 278.951) / 18,322.117 × 365 = 10.90 ≈ 10.9 days',
+      formula: 'AR 2025 / Revenue 2025 × 365',
+      exp: 'Matches FY2025 collection period (Rp547.3bn closing AR ÷ Rp18,322.1bn revenue × 365 = 10.90 days).',
+    },
+    cons: {
+      fx: '30.0 (Milestone 4 Assumptions!F10 scenario input)',
+      formula: 'Our downside assumption (above 24.2d average, below 2024 46.9d)',
+      exp: 'Assumes slower partner collections at 30.0 days.',
+    },
+  },
+  {
+    match: 'days inventory',
+    base: {
+      fx: '(12.38 + 1.35 + 0.66) / 3 = 4.80 ≈ 4.8 days',
+      formula: '(DIO 2023 + DIO 2024 + DIO 2025) / 3',
+      exp: '3-year average of (Inventory / COGS × 365): 2023 (12.38d), 2024 (1.35d), 2025 (0.66d).',
+    },
+    opt: {
+      fx: '14.093 / 7,746.034 × 365 = 0.664 ≈ 0.7 days',
+      formula: 'Inventory 2025 / COGS 2025 × 365',
+      exp: 'Matches FY2025 minimal digital inventory (Rp14.1bn ÷ Rp7,746.0bn COGS × 365 = 0.66 days).',
+    },
+    cons: {
+      fx: '8.0 (Milestone 4 Assumptions!F11 scenario input)',
+      formula: 'Our downside assumption (between 4.8d average and 2023 12.4d)',
+      exp: 'Assumes higher inventory holding closer to 2023 levels (8.0 days).',
+    },
+  },
+  {
+    match: 'days payable',
+    base: {
+      fx: '(83.26 + 61.10 + 59.11) / 3 = 67.82 ≈ 67.8 days',
+      formula: '(DPO 2023 + DPO 2024 + DPO 2025) / 3',
+      exp: '3-year average of (AP / COGS × 365): 2023 (83.26d), 2024 (61.10d), 2025 (59.11d).',
+    },
+    opt: {
+      fx: '75.0 (Milestone 4 Assumptions!D12 scenario input)',
+      formula: 'Our upside assumption (between 67.8d average and 2023 83.3d)',
+      exp: 'Assumes longer vendor payment terms (75.0 days) keep cash in GoTo longer.',
+    },
+    cons: {
+      fx: '(1,129.649 + 124.740) / 7,746.034 × 365 = 59.11 ≈ 59.1 days',
+      formula: 'AP 2025 / COGS 2025 × 365',
+      exp: 'Matches FY2025 vendor payment period (Rp1,254.4bn AP ÷ Rp7,746.0bn COGS × 365 = 59.11 days).',
+    },
+  },
+  {
+    match: 'capex',
+    base: {
+      fx: '(1.49% + 41.01% + 6.45%) / 3 = 16.32% ≈ 16.3%',
+      formula: '(Capex/Rev 2023 + 2024 + 2025) / 3',
+      exp: '3-year average Capex / Revenue: 2023 (220.4/14,785.5 = 1.49%), 2024 (6,518.9/15,894.5 = 41.01%), 2025 (1,182.4/18,322.1 = 6.45%).',
+    },
+    opt: {
+      fx: '(302.071 + 880.289) / 18,322.117 × 100% = 6.45% ≈ 6.5%',
+      formula: 'Cash Capex 2025 / Revenue 2025 × 100%',
+      exp: 'Matches FY2025 capital spending (Rp1,182.4bn ÷ Rp18,322.1bn revenue = 6.45%).',
+    },
+    cons: {
+      fx: '0.20 (Milestone 4 Assumptions!F13 scenario input)',
+      formula: 'Our downside assumption (above 16.3% 3-year average)',
+      exp: 'Assumes heavier server and tech investment at 20.0% of revenue.',
+    },
+  },
+  {
+    match: 'd&a',
+    base: {
+      fx: '(17.32% + 43.89%) / 2 = 30.60% ≈ 30.6%',
+      formula: '(Depr 2024 / Beg PP&E 2024 + Depr 2025 / Beg PP&E 2025) / 2',
+      exp: '2-year average PP&E depreciation rate: 2024 (220.5/1,272.7 = 17.32%) and 2025 (200.6/457.0 = 43.89%).',
+    },
+    opt: {
+      fx: '0.25 (Milestone 4 Assumptions!D14 scenario input)',
+      formula: 'Our upside assumption (lower than 30.6% average)',
+      exp: 'Assumes longer useful life on servers/equipment, lowering depreciation to 25.0% of beginning Net PP&E.',
+    },
+    cons: {
+      fx: '200.556 / 456.997 × 100% = 43.89% ≈ 43.9%',
+      formula: 'PP&E Depreciation 2025 / Beginning Net PP&E 2025 × 100%',
+      exp: 'Matches FY2025 PP&E depreciation rate (Rp200.6bn ÷ Rp457.0bn opening Net PP&E = 43.89%).',
+    },
+  },
+  {
+    match: 'effective tax rate',
+    base: { fx: '0.22 (Indonesian statutory corporate tax rate)', formula: 'Indonesia standard statutory CIT rate (22%)', exp: 'Standard Indonesian corporate income tax rate applied across all three scenarios.' },
+    opt: { fx: '0.22 (Indonesian statutory corporate tax rate)', formula: 'Indonesia standard statutory CIT rate (22%)', exp: 'Standard Indonesian corporate income tax rate applied across all three scenarios.' },
+    cons: { fx: '0.22 (Indonesian statutory corporate tax rate)', formula: 'Indonesia standard statutory CIT rate (22%)', exp: 'Standard Indonesian corporate income tax rate applied across all three scenarios.' },
+  },
+  {
+    match: 'interest rate',
+    base: {
+      fx: '(10.67% + 12.93% + 6.91%) / 3 = 10.17% ≈ 10.2%',
+      formula: '(Int/Debt 2023 + 2024 + 2025) / 3',
+      exp: '3-year average Interest Expense / Total Debt: 2023 (369.3/3,460.4 = 10.67%), 2024 (494.1/3,820.4 = 12.93%), 2025 (535.2/7,742.6 = 6.91%).',
+    },
+    opt: {
+      fx: '535.152 / 7,742.643 × 100% = 6.91% ≈ 6.9%',
+      formula: 'Interest Expense 2025 / Total Debt 2025 × 100%',
+      exp: 'Matches FY2025 effective borrowing cost (Rp535.2bn interest ÷ Rp7,742.6bn total debt = 6.91%).',
+    },
+    cons: {
+      fx: '494.053 / 3,820.367 × 100% = 12.93% ≈ 12.9%',
+      formula: 'Interest Expense 2024 / Total Debt 2024 × 100%',
+      exp: 'Matches higher FY2024 effective borrowing cost (Rp494.1bn interest ÷ Rp3,820.4bn total debt = 12.93%).',
+    },
+  },
+  {
+    match: 'dividend payout',
+    base: { fx: '0 / Net Income = 0.0% (FY2023-FY2025 actuals)', formula: 'Dividends Paid / Net Income', exp: 'GoTo paid Rp0 dividends in 2023-2025 due to accumulated losses and retains all cash.' },
+    opt: { fx: '0 / Net Income = 0.0% (FY2023-FY2025 actuals)', formula: 'Dividends Paid / Net Income', exp: 'Reinvests all profits into growth with 0% dividend payout.' },
+    cons: { fx: '0 / Net Income = 0.0% (FY2023-FY2025 actuals)', formula: 'Dividends Paid / Net Income', exp: 'Retains all cash in the bank with 0% dividend payout.' },
+  },
+]
+
+const assumptionScenarioFilter = ref('all')
+
+const isAssumptionSchedule = (schedule) => {
+  const hdrs = schedule?.headers || []
+  return hdrs.includes('Optimistic') && hdrs.includes('Conservative')
+}
+
+const getVisibleScheduleColIndices = (schedule) => {
+  const count = schedule?.headers?.length || 0
+  if (!isAssumptionSchedule(schedule) || assumptionScenarioFilter.value === 'all') {
+    return Array.from({ length: count }, (_, i) => i)
+  }
+  if (assumptionScenarioFilter.value === 'base') return [0, 1, 2].filter(i => i < count)
+  if (assumptionScenarioFilter.value === 'optimistic') return [0, 3, 4].filter(i => i < count)
+  if (assumptionScenarioFilter.value === 'conservative') return [0, 5, 6].filter(i => i < count)
+  return Array.from({ length: count }, (_, i) => i)
+}
+
 const selectScheduleCell = (scheduleIdx, schedule, row, rIdx, cIdx) => {
   const colLetter = String.fromCharCode(65 + (cIdx % 26))
   const refCode = `${colLetter}${rIdx + 2}`
@@ -2056,11 +2450,13 @@ const selectScheduleCell = (scheduleIdx, schedule, row, rIdx, cIdx) => {
   let textFormula = matchedCalc?.formula || ''
   let explanation = matchedCalc?.explanation || matchedCalc?.note || colRationale
 
-  // Clarify scenario assumptions (e.g., Optimistic COGS 38.1%) when clicking scenario columns
-  if (!matchedCalc && String(row[0] || '').toLowerCase().includes('cogs') && isOptCol) {
-    formulaExpr = '= 4,192,326 / 10,994,113 × 100% = 38.13% ≈ 38.1%'
-    textFormula = '1H 2026 Cost of Revenues / 1H 2026 Net Revenues (LKFS 30 June 2026, p. 2/1)'
-    explanation = "From GoTo's unaudited 1H 2026 financial statement (30 June 2026): Rp4,192,326m cost of revenues ÷ Rp10,994,113m net revenues = 38.13%."
+  const rowDriver = String(row[0] || '').toLowerCase()
+  const spec = schedule?.headers?.length >= 6 ? ASSUMPTION_CELL_SPECS.find(s => rowDriver.includes(s.match)) : null
+  if (spec) {
+    const scen = isOptCol ? spec.opt : isConsCol ? spec.cons : spec.base
+    formulaExpr = `= ${scen.fx}`
+    textFormula = scen.formula
+    explanation = scen.exp
   }
 
   activeScheduleCell.value = {
@@ -2070,7 +2466,7 @@ const selectScheduleCell = (scheduleIdx, schedule, row, rIdx, cIdx) => {
     ref: refCode,
     val: `${headerName}: ${cellVal}`,
     formula: formulaExpr,
-    rawSubstitution: matchedCalc?.substitution || '',
+    rawSubstitution: spec ? '' : (matchedCalc?.substitution || ''),
     textFormula,
     explanation,
   }
@@ -5332,10 +5728,24 @@ const isColNumeric = (tbl, cIdx) => {
               </div>
               <div v-if="activeDrawerFormulaCell && activeDrawerFormulaCell.textFormula" class="formula-bar-bottom">
                 <span class="formula-val-tag">FORMULA:</span>
-                <span class="formula-text-display">{{ activeDrawerFormulaCell.textFormula }}</span>
+                <span class="formula-text-display">
+                  <template v-for="(tok, tIdx) in splitFormulaTokens(activeDrawerFormulaCell.textFormula, activeDrawerFormulaRefs, 'terms')" :key="tIdx">
+                    <span v-if="tok.colorIdx !== null" class="formula-ref-token" :class="`ref-color-${tok.colorIdx}`">{{ tok.text }}</span>
+                    <template v-else>{{ tok.text }}</template>
+                  </template>
+                </span>
               </div>
               <div v-if="activeDrawerFormulaCell && activeDrawerFormulaCell.explanation" class="formula-bar-explanation">
                 {{ activeDrawerFormulaCell.explanation }}
+              </div>
+              <div v-if="activeDrawerFormulaCell && (activeDrawerFormulaCell.evidence_imgs?.length || activeDrawerFormulaCell.evidence_img)" class="calc-proof-links">
+                <button
+                  v-for="(ev, eIdx) in (activeDrawerFormulaCell.evidence_imgs || [{ label: lang === 'id' ? 'Lihat Bukti Laporan Keuangan' : 'View Financial Statement Proof', src: activeDrawerFormulaCell.evidence_img, title: activeDrawerFormulaCell.label, caption: activeDrawerFormulaCell.evidence_caption }])"
+                  :key="'fproof-'+eIdx"
+                  type="button"
+                  class="calc-proof-btn"
+                  @click.stop="openLightbox(ev.src, ev.title || activeDrawerFormulaCell.label, ev.caption || activeDrawerFormulaCell.explanation)"
+                >🔍 {{ ev.label }}</button>
               </div>
             </div>
             <div class="trace-mini-table-wrap drawer-support-table-wrap drawer-formula-table-wrap" tabindex="0" :aria-label="lang === 'id' ? 'Tabel rumus dan perhitungan' : 'Formulas and calculations table'">
@@ -5377,7 +5787,7 @@ const isColNumeric = (tbl, cIdx) => {
                       @click="selectDrawerFormulaCell(calculation, index, 2)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 2)"
                     >
-                      <template v-for="(tok, tIdx) in splitFormulaTokens(calculation.formula, activeDrawerFormulaCell && activeDrawerFormulaCell.rowIndex === index ? activeDrawerFormulaRefs : null)" :key="tIdx">
+                      <template v-for="(tok, tIdx) in splitFormulaTokens(calculation.formula, activeDrawerFormulaCell && activeDrawerFormulaCell.rowIndex === index ? activeDrawerFormulaRefs : null, 'terms')" :key="tIdx">
                         <span v-if="tok.colorIdx !== null" class="formula-ref-token" :class="`ref-color-${tok.colorIdx}`">{{ tok.text }}</span>
                         <template v-else>{{ tok.text }}</template>
                       </template>
@@ -5388,12 +5798,29 @@ const isColNumeric = (tbl, cIdx) => {
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 3)"
                     >
                       <div v-if="renderMathLatex(calculation.substitution)" v-html="renderMathLatex(calculation.substitution)"></div>
-                      <template v-else>{{ calculation.substitution }}</template>
+                      <template v-else v-for="(tok, sIdx) in splitFormulaTokens(calculation.substitution, activeDrawerFormulaCell && activeDrawerFormulaCell.rowIndex === index ? activeDrawerFormulaRefs : null, 'numbers')" :key="'sub-'+sIdx">
+                        <span v-if="tok.colorIdx !== null" class="formula-ref-token" :class="`ref-color-${tok.colorIdx}`">{{ tok.text }}</span>
+                        <template v-else>{{ tok.text }}</template>
+                      </template>
                       <small v-if="calculation.note" class="drawer-formula-note">{{ calculation.note }}</small>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              <div v-if="detailDrawerItem.slide.calculation_notes.some(c => c.evidence_imgs?.length || c.evidence_img)" class="calc-sources-footer">
+                <span class="calc-sources-label">{{ lang === 'id' ? 'Sumber Laporan Keuangan:' : 'Financial Statement Sources:' }}</span>
+                <div class="calc-proof-links">
+                  <template v-for="(calculation, cIdx) in detailDrawerItem.slide.calculation_notes" :key="'csource-'+cIdx">
+                    <button
+                      v-for="(ev, eIdx) in (calculation.evidence_imgs || (calculation.evidence_img ? [{ label: calculation.label, src: calculation.evidence_img, title: calculation.label, caption: calculation.evidence_caption }] : []))"
+                      :key="'csource-btn-'+cIdx+'-'+eIdx"
+                      type="button"
+                      class="calc-proof-btn"
+                      @click.stop="openLightbox(ev.src, ev.title || calculation.label, ev.caption || calculation.note)"
+                    >🔍 {{ ev.label }}</button>
+                  </template>
+                </div>
+              </div>
             </div>
           </section>
           </Teleport>
@@ -5461,18 +5888,31 @@ const isColNumeric = (tbl, cIdx) => {
                 </div>
               </div>
               <div v-for="(schedule,index) in detailDrawerItem.slide.supporting_schedules" :key="'schedule-'+index" class="drawer-trace-card">
-                <h4 class="drawer-schedule-title">{{ schedule.title }}</h4>
+                <div class="drawer-schedule-hdr-row">
+                  <h4 class="drawer-schedule-title">{{ schedule.title }}</h4>
+                  <select
+                    v-if="isAssumptionSchedule(schedule)"
+                    v-model="assumptionScenarioFilter"
+                    class="schedule-scenario-select"
+                    :aria-label="lang === 'id' ? 'Filter skenario' : 'Filter scenario'"
+                  >
+                    <option value="all">{{ lang === 'id' ? 'Semua Skenario' : 'All Scenarios' }}</option>
+                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata)' : 'Base (Avg)' }}</option>
+                    <option value="optimistic">{{ lang === 'id' ? 'Optimis' : 'Optimistic' }}</option>
+                    <option value="conservative">{{ lang === 'id' ? 'Konservatif (Pesimis)' : 'Conservative (Pessimistic)' }}</option>
+                  </select>
+                </div>
                 <div class="drawer-schedule-scroll" tabindex="0" :aria-label="schedule.title">
                   <table class="drawer-schedule-table">
-                    <thead><tr><th v-for="(cell,c) in schedule.headers" :key="c">{{ cell }}</th></tr></thead>
+                    <thead><tr><th v-for="c in getVisibleScheduleColIndices(schedule)" :key="c">{{ schedule.headers[c] }}</th></tr></thead>
                     <tbody>
                       <tr v-for="(row,r) in schedule.rows" :key="r">
                         <td
-                          v-for="(cell,c) in row"
+                          v-for="c in getVisibleScheduleColIndices(schedule)"
                           :key="c"
                           :class="{ 'worksheet-selected': activeScheduleCell && activeScheduleCell.scheduleIdx === index && activeScheduleCell.rIdx === r && activeScheduleCell.cIdx === c }"
                           @click="selectScheduleCell(index, schedule, row, r, c)"
-                        >{{ cell }}</td>
+                        >{{ row[c] }}</td>
                       </tr>
                     </tbody>
                   </table>

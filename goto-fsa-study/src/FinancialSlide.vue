@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 12 } })
 const emit = defineEmits(['explain', 'evidence', 'zoom'])
@@ -67,8 +67,38 @@ const layoutSlide = computed(() => props.slide.layout_slide || props.slide.slide
 const title = computed(() => props.slide.display_title || titles[props.lang]?.[layoutSlide.value - 1] || props.slide.title)
 const takeaway = computed(() => props.slide.display_takeaway || props.slide.analysis_points?.[1]?.text || takeaways[props.lang]?.[layoutSlide.value - 1] || '')
 const table = computed(() => props.slide.table)
+const forecastScenario = ref('base')
+const isForecastSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 8)
+const forecastScenarioData = computed(() => {
+  const id = props.lang === 'id'
+  return {
+    optimistic: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Opt', '2027F Opt', '2028F Opt'],
+      rows: [
+        ['Revenue', '18,322', '21,125', '24,358', '28,084'],
+        [id ? 'Optimistic operating profit' : 'Optimistic operating profit', '(378)', '+1,309.8', '+1,510.2', '+1,741.2'],
+        [id ? 'Optimistic net income' : 'Optimistic net income', '(1,502)', '+604.9', '+761.2', '+941.4'],
+        [id ? 'Optimistic ending cash' : 'Optimistic ending cash', '21,755', '21,457', '21,249', '21,284'],
+      ],
+    },
+    conservative: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Cons', '2027F Cons', '2028F Cons'],
+      rows: [
+        ['Revenue', '18,322', '19,696', '21,174', '22,762'],
+        [id ? 'Conservative operating loss' : 'Conservative operating loss', '(378)', '(6,224.0)', '(6,690.8)', '(7,192.6)'],
+        [id ? 'Conservative net loss' : 'Conservative net loss', '(1,502)', '(5,633.8)', '(5,997.9)', '(6,389.3)'],
+        [id ? 'Conservative ending cash' : 'Conservative ending cash', '21,755', '11,428', '3,053', '(5,000)'],
+      ],
+    },
+  }
+})
 // Detailed source columns remain in the study notes, outside the projected slide.
-const visibleHeaders = computed(() => table.value?.headers || [])
+const visibleHeaders = computed(() => {
+  if (isForecastSlide.value && forecastScenario.value !== 'base') {
+    return forecastScenarioData.value[forecastScenario.value]?.headers || table.value?.headers || []
+  }
+  return table.value?.headers || []
+})
 const datedWaccSources = [
   'SUN: 30 Dec 2025. Default spread: Damodaran, 1 Jan 2026.',
   'Beta: Investing.com, Dec 2025. ERP: Damodaran, 1 Jan 2026.',
@@ -77,7 +107,84 @@ const datedWaccSources = [
   'FY2025 interest / year-end debt. Statutory tax assumption: 22%.',
   'Rp 25 case reference × shares. Debt: FY2025. Weights: 77.4% / 22.6%.',
 ]
-const visibleRows = computed(() => props.slide.story_rebuilt ? table.value?.rows || [] : (table.value?.rows || []).map((row, i) => layoutSlide.value === 7 ? [row[0], row[1], datedWaccSources[i]] : row))
+const visibleRows = computed(() => {
+  if (isForecastSlide.value && forecastScenario.value !== 'base') {
+    return forecastScenarioData.value[forecastScenario.value]?.rows || table.value?.rows || []
+  }
+  return props.slide.story_rebuilt ? table.value?.rows || [] : (table.value?.rows || []).map((row, i) => layoutSlide.value === 7 ? [row[0], row[1], datedWaccSources[i]] : row)
+})
+const visibleAnalysisPoints = computed(() => {
+  if (!isForecastSlide.value) return props.slide.analysis_points || []
+  const id = props.lang === 'id'
+  const byScenario = {
+    base: [
+      {
+        heading: id ? 'Kasus Dasar (Base)' : 'Base Case',
+        text: id
+          ? 'Model memproyeksikan pendapatan Rp25.321M pada 2028F, tetapi rugi operasi berlanjut (-Rp4.967M) dan kas akhir turun dari Rp21.755M menjadi Rp968M.'
+          : 'The model projects revenue of Rp25,321bn in 2028F, but operating losses continue (-Rp4,967bn) and ending cash falls from Rp21,755bn to Rp968bn.',
+      },
+      {
+        heading: id ? 'Rasio Biaya Operasi' : 'Operating Cost Ratio',
+        text: id
+          ? 'Untuk setiap Rp100 penjualan, Kasus Dasar menghasilkan laba kotor Rp58,90 tetapi membelanjakan Rp78,50 untuk biaya operasi, mengunci defisit Rp19,60 per Rp100 pendapatan.'
+          : 'For every Rp100 of sales, the Base Case earns Rp58.90 in gross profit but spends Rp78.50 on operating costs, locking in a Rp19.60 loss per Rp100 of revenue that grows as sales scale.',
+      },
+      {
+        heading: id ? 'Penurunan Cadangan Kas' : 'Cash Cushion Drain',
+        text: id
+          ? 'Kerugian operasi dan CapEx 16,3% menguras kas Rp20.787M selama tiga tahun, menyisakan hanya Rp968M pada 2028F.'
+          : 'Operating losses and 16.3% CapEx consume Rp20,787bn of cash over three years, leaving only Rp968bn by 2028F.',
+      },
+    ],
+    optimistic: [
+      {
+        heading: id ? 'Kasus Optimistis' : 'Optimistic Case',
+        text: id
+          ? 'Pendapatan mencapai Rp28.084M pada 2028F (+15,3%/thn), laba operasi berbalik positif (+Rp1.741M), dan kas akhir terjaga di Rp21.284M.'
+          : 'Revenue reaches Rp28,084bn in 2028F (+15.3%/yr), operating profit turns positive (+Rp1,741bn), and ending cash stays healthy at Rp21,284bn.',
+      },
+      {
+        heading: id ? 'Rasio Biaya Operasi' : 'Operating Cost Ratio',
+        text: id
+          ? 'Untuk setiap Rp100 penjualan, Kasus Optimistis menghasilkan laba kotor Rp61,90 dengan biaya operasi Rp55,70, mencetak margin operasi +Rp6,20 per Rp100 pendapatan.'
+          : 'For every Rp100 of sales, the Optimistic Case earns Rp61.90 in gross profit and spends Rp55.70 on operating costs, generating a +Rp6.20 operating margin per Rp100 of sales.',
+      },
+      {
+        heading: id ? 'Pertumbuhan Didanai Sendiri' : 'Self-Funded Growth',
+        text: id
+          ? 'Laba bersih positif (+Rp605M hingga +Rp941M) dan CapEx efisien 6,5% menjaga kas tetap stabil di sekitar Rp21,3T hingga 2028F.'
+          : 'Positive net income (+Rp605bn to +Rp941bn) and lean 6.5% CapEx keep cash roughly flat around Rp21.3T through 2028F without external funding.',
+      },
+    ],
+    conservative: [
+      {
+        heading: id ? 'Kasus Konservatif' : 'Conservative Case',
+        text: id
+          ? 'Pendapatan tumbuh lambat ke Rp22.762M pada 2028F (+7,5%/thn), rugi operasi melebar ke -Rp7.193M, dan kas akhir berbalik negatif menjadi -Rp5.000M.'
+          : 'Revenue grows slowly to Rp22,762bn in 2028F (+7.5%/yr), operating losses widen to -Rp7,193bn, and ending cash turns negative at -Rp5,000bn.',
+      },
+      {
+        heading: id ? 'Rasio Biaya Operasi' : 'Operating Cost Ratio',
+        text: id
+          ? 'Untuk setiap Rp100 penjualan, Kasus Konservatif menghasilkan laba kotor Rp53,40 tetapi membelanjakan Rp85,00 untuk biaya operasi, menciptakan defisit -Rp31,60 per Rp100 penjualan.'
+          : 'For every Rp100 of sales, the Conservative Case earns Rp53.40 in gross profit but spends Rp85.00 on operating costs, creating a -Rp31.60 operating shortfall per Rp100 of sales.',
+      },
+      {
+        heading: id ? 'Defisit Likuiditas' : 'Liquidity Deficit',
+        text: id
+          ? 'Pembakaran kas yang besar dan CapEx 20,0% menghabiskan cadangan kas Rp21.755M pada 2028F (defisit -Rp5.000M), sehingga membutuhkan pendanaan atau pemangkasan biaya.'
+          : 'Heavy burn and 20.0% CapEx exhaust the Rp21,755bn cash buffer by 2028F (-Rp5,000bn deficit), requiring financing or sharp cost cuts.',
+      },
+    ],
+  }
+  const basePoints = props.slide.analysis_points || []
+  return (byScenario[forecastScenario.value] || byScenario.base).map((pt, idx) => ({
+    ...basePoints[idx],
+    ...pt,
+    detail_explanation: pt.text,
+  }))
+})
 const label = computed(() => props.slide.section_name || (props.lang === 'id' ? 'ANALISIS LAPORAN KEUANGAN' : 'FINANCIAL STATEMENT ANALYSIS'))
 const editorialRows = computed(() => {
   if (props.slide.visual_rows) return props.slide.visual_rows
@@ -550,28 +657,38 @@ const provisionGrowth = computed(() => {
               </div>
             </div>
             <template v-else-if="table">
-              <div v-if="slide.is_appendix && table.title" class="slide-appendix-schedule">
-                <h3>{{ table.title }}</h3>
+              <div class="slide-table-stack">
+                <div v-if="isForecastSlide" class="slide-scenario-bar" @click.stop>
+                  <span class="slide-scenario-label">{{ lang === 'id' ? 'Skenario:' : 'Scenario:' }}</span>
+                  <select v-model="forecastScenario" class="slide-scenario-select" aria-label="Select forecast scenario">
+                    <option value="base">Base</option>
+                    <option value="optimistic">Optimistic</option>
+                    <option value="conservative">Conservative</option>
+                  </select>
+                </div>
+                <div v-if="slide.is_appendix && table.title" class="slide-appendix-schedule">
+                  <h3>{{ table.title }}</h3>
+                </div>
+                <table
+                  class="slide-financial-table"
+                  :class="{
+                    'slide-table-dense': slide.is_appendix,
+                    'slide-table-wacc': !slide.is_appendix && layoutSlide === 7,
+                    'slide-table-multiples': !slide.is_appendix && layoutSlide === 9,
+                  }"
+                >
+                  <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
+                  <tbody>
+                    <tr v-for="(row, r) in visibleRows" :key="r" @click="emit('explain', $event, 'row', table.rows[r])" @dblclick="emit('evidence', 'row', table.rows[r])" tabindex="0" @keydown.enter="emit('explain', $event, 'row', table.rows[r])">
+                      <td
+                      v-for="(cell, c) in row"
+                      :key="c"
+                      :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
+                    >{{ cell }}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <table
-                class="slide-financial-table"
-                :class="{
-                  'slide-table-dense': slide.is_appendix,
-                  'slide-table-wacc': !slide.is_appendix && layoutSlide === 7,
-                  'slide-table-multiples': !slide.is_appendix && layoutSlide === 9,
-                }"
-              >
-                <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
-                <tbody>
-                  <tr v-for="(row, r) in visibleRows" :key="r" @click="emit('explain', $event, 'row', table.rows[r])" @dblclick="emit('evidence', 'row', table.rows[r])" tabindex="0" @keydown.enter="emit('explain', $event, 'row', table.rows[r])">
-                    <td
-                    v-for="(cell, c) in row"
-                    :key="c"
-                    :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
-                  >{{ cell }}</td>
-                  </tr>
-                </tbody>
-              </table>
               <p v-if="slide.is_appendix && table.note" class="slide-appendix-note">{{ table.note }}</p>
               <template v-if="slide.is_appendix && slide.supporting_schedules?.length">
                 <div v-for="(sched, sIdx) in slide.supporting_schedules" :key="'apx-sched-'+sIdx" class="slide-appendix-schedule">
@@ -613,18 +730,18 @@ const provisionGrowth = computed(() => {
             </div>
             <figure v-if="slide.valuation_range" class="slide-story-chart slide-range-chart">
               <figcaption>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</figcaption>
-              <svg viewBox="0 0 560 175" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
-                <line :x1="rangeX(0)" :x2="rangeX(0)" y1="22" y2="145" stroke="#a4bfae" />
-                <line :x1="rangeX(25)" :x2="rangeX(25)" y1="22" y2="145" stroke="#173d25" stroke-dasharray="4 4" />
-                <text :x="rangeX(25)" y="14" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
+              <svg viewBox="0 0 560 154" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
+                <line :x1="rangeX(0)" :x2="rangeX(0)" y1="20" y2="128" stroke="#a4bfae" />
+                <line :x1="rangeX(25)" :x2="rangeX(25)" y1="20" y2="128" stroke="#173d25" stroke-dasharray="4 4" />
+                <text :x="rangeX(25)" y="13" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
                 <g v-for="(row,i) in slide.valuation_range" :key="row.label">
-                  <text x="0" :y="46+i*40" fill="#173d25" font-size="15">{{ row.label }}</text>
-                  <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="30+i*40" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="23" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
-                  <text x="552" :y="46+i*40" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
+                  <text x="0" :y="42+i*33" fill="#173d25" font-size="15">{{ row.label }}</text>
+                  <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="27+i*33" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="21" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
+                  <text x="552" :y="42+i*33" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
                 </g>
-                <text :x="rangeX(-140)" y="165" fill="#63786a" font-size="12">−140</text>
-                <text :x="rangeX(0)" y="165" text-anchor="middle" fill="#63786a" font-size="12">0</text>
-                <text :x="rangeX(120)" y="165" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
+                <text :x="rangeX(-140)" y="144" fill="#63786a" font-size="12">−140</text>
+                <text :x="rangeX(0)" y="144" text-anchor="middle" fill="#63786a" font-size="12">0</text>
+                <text :x="rangeX(120)" y="144" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
               </svg>
               <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
             </figure>
@@ -645,9 +762,9 @@ const provisionGrowth = computed(() => {
           </div>
 
           <aside v-if="!slide.is_appendix" class="slide-key-figures" :class="{ 'slide-analysis-panel': slide.analysis_points?.length }">
-            <template v-if="slide.analysis_points?.length">
+            <template v-if="visibleAnalysisPoints.length">
               <div
-                v-for="(point, i) in slide.analysis_points"
+                v-for="(point, i) in visibleAnalysisPoints"
                 :key="i"
                 class="slide-analysis-point is-clickable-claim"
                 :class="{ 'has-point-icon': layoutSlide === 2 || Boolean(getPointIcon(layoutSlide, i)) }"
@@ -710,8 +827,8 @@ const provisionGrowth = computed(() => {
 .slide-heading h1 { margin: 0; color: white; font-size: 2.75cqw; line-height: 1.2; letter-spacing: -.09cqw; font-weight: 750; }
 .slide-evidence-layout { position: absolute; top: 25%; left: 4%; right: 4%; bottom: 10%; display: grid; grid-template-columns: 1.65fr 1fr; gap: 3cqw; align-items: stretch; }
 .slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
-.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: 1.4cqw; gap: 1.4cqw; }
-.slide-story-chart { margin: 0; padding-top: 1.3cqw; border-top: 1px solid #dce8df; }
+.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: 1.15cqw 1.35cqw; gap: 1cqw; }
+.slide-story-chart { margin: 0; padding-top: 1cqw; border-top: 1px solid #dce8df; }
 .slide-story-chart figcaption { font-size: .94cqw; color: #173d25; font-weight: 650; margin-bottom: 1cqw; line-height: 1.4; }
 .slide-chart-formula { color: #526a59; font-size: .76cqw; line-height: 1.5; margin: .7cqw 0 0; overflow-wrap: anywhere; }
 .slide-loss-row { display: grid; grid-template-columns: 3.2cqw 1fr 5cqw; align-items: center; gap: .8cqw; margin-top: .8cqw; font-size: .95cqw; }
@@ -783,9 +900,9 @@ const provisionGrowth = computed(() => {
 .slide-analysis-point h2 { color: #fff; font-size: 1.18cqw; line-height: 1.35; margin: 0 0 .6cqw; font-weight: 750; }
 .slide-analysis-point p { color: #e7f5ea; font-size: 1.02cqw; line-height: 1.55; margin: 0; }
 .slide-business-layout { grid-template-columns: 1.35fr 1fr; gap: 2cqw; }
-.slide-analysis-panel { background: transparent; color: #ffffff; padding: 1.3cqw; gap: .75cqw; }
+.slide-analysis-panel { background: transparent; color: #ffffff; padding: .35cqw 1.3cqw .8cqw; gap: .6cqw; }
 .slide-analysis-panel .slide-analysis-point { min-width: 0; border-radius: 0; }
-.slide-analysis-panel .slide-analysis-point + .slide-analysis-point { border-color: #ffffff35; padding-top: .8cqw; }
+.slide-analysis-panel .slide-analysis-point + .slide-analysis-point { border-color: #ffffff35; padding-top: .65cqw; }
 .slide-analysis-panel .slide-analysis-point.has-point-icon { display: grid; grid-template-columns: 2.4cqw minmax(0, 1fr); column-gap: .75cqw; row-gap: .5cqw; align-items: center; }
 .slide-analysis-panel .has-point-icon .slide-point-copy { display: contents; }
 .slide-analysis-panel .slide-point-icon { grid-column: 1; grid-row: 1; width: 2.4cqw; height: 2.4cqw; box-shadow: none; border-color: #d5e3d9; border-radius: .3cqw; }
@@ -811,6 +928,10 @@ const provisionGrowth = computed(() => {
 .slide-source { flex: 1; }
 .slide-folio { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slide-table-only { grid-template-columns: 1fr; }
+.slide-table-stack { width: 100%; display: flex; flex-direction: column; }
+.slide-scenario-bar { display: flex; align-items: center; justify-content: space-between; gap: .8cqw; margin-bottom: .9cqw; }
+.slide-scenario-label { font-size: .85cqw; font-weight: 700; color: #153b22; }
+.slide-scenario-select { font-size: .85cqw; font-weight: 650; color: #153b22; background: #edf6ef; border: 1px solid #a7cdb1; border-radius: .45cqw; padding: .35cqw .7cqw; cursor: pointer; font-family: inherit; }
 .slide-financial-table { width: 100%; border-collapse: collapse; font-size: 1cqw; line-height: 1.45; table-layout: fixed; }
 .slide-financial-table th { color: #007b2b; text-align: right; background: #edf6ef; padding: 1cqw .7cqw; font-size: .85cqw; font-weight: 750; }
 .slide-financial-table td { padding: 1.1cqw .7cqw; text-align: right; border-bottom: 1px solid #dce8df; color: #253d2d; overflow-wrap: anywhere; }

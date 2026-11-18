@@ -17,7 +17,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Company: GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.\n\nTarget Investor: The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.\n\nPresentation Scope: The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.",
+    "speaker_notes": "Company: GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.\n\nTarget Investor: The target user is a short-term public equity investor. Our benchmark reference price is Rp25 per share.\n\nPresentation Scope: The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.",
     "source_footer": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025; Appendix A1–A6",
     "lecture_traces": [
       {
@@ -59,33 +59,33 @@
       {
         "heading": "Company",
         "text": "GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.",
-        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is the assignment reference price rather than a current market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
+        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is our benchmark reference price rather than a live market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.",
-          "The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.",
+          "The target user is a short-term public equity investor. Our benchmark reference price is Rp25 per share.",
           "The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide."
         ]
       },
       {
         "heading": "Target Investor",
-        "text": "The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.",
-        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is the assignment reference price rather than a current market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
+        "text": "The target user is a short-term public equity investor. Our benchmark reference price is Rp25 per share.",
+        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is our benchmark reference price rather than a live market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.",
-          "The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.",
+          "The target user is a short-term public equity investor. Our benchmark reference price is Rp25 per share.",
           "The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide."
         ]
       },
       {
         "heading": "Presentation Scope",
         "text": "The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide.",
-        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is the assignment reference price rather than a current market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
+        "detail_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is our benchmark reference price rather than a live market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
         "data_origin": "Group 4 Final Report Sections (a)-(b) & LK GOTO FY2025",
         "calc_steps": [
           "GoTo operates Gojek and GoTo Financial. It also holds 24.99% of Tokopedia.",
-          "The target user is a short-term public equity investor. The assignment reference price is Rp25 per share.",
+          "The target user is a short-term public equity investor. Our benchmark reference price is Rp25 per share.",
           "The analysis covers the business, financial results, cash needs, forecast and valuation. The recommendation appears on the final slide."
         ]
       }
@@ -133,7 +133,7 @@
     "hide_banner": true,
     "display_title": "GoTo Equity Analysis",
     "display_takeaway": "",
-    "study_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is the assignment reference price rather than a current market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
+    "study_explanation": "GoTo operates Gojek and GoTo Financial and retains a 24.99% investment in Tokopedia. A share represents a small ownership interest in the company.\n\nThe presentation uses the perspective of a short-term public equity investor. Rp25 per share is our benchmark reference price rather than a live market quote.\n\nThe financial statements describe reported business performance and recorded assets, liabilities and cash. The forecast describes results under stated assumptions. Neither establishes the timing or direction of the next market-price move. The recommendation is presented after that evidence on the final slide.",
     "supporting_schedules": [],
     "rubric_section": "Opening",
     "explanation_structure": [
@@ -1404,7 +1404,7 @@
       {
         "heading": "Cash and Liquidity",
         "text": "Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -1415,7 +1415,7 @@
       {
         "heading": "Interest Coverage",
         "text": "Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -1426,7 +1426,7 @@
       {
         "heading": "Altman Z-Score",
         "text": "The Altman Z-Score lands in the distress zone, mostly because of past accumulated losses, not because GoTo is about to run out of cash today.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -1516,7 +1516,7 @@
     "hide_banner": true,
     "display_title": "Liquidity and Z-Score",
     "display_takeaway": "",
-    "study_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+    "study_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
     "supporting_schedules": [
       {
         "title": "Completed Week 6 five-factor calculation",
@@ -1577,7 +1577,7 @@
         "name": "Current ratio",
         "value": "2.73x",
         "text": "Current assets / current liabilities\nRp29,059bn / Rp10,648bn",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "Current assets / Current liabilities",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -1593,7 +1593,7 @@
         "name": "Interest coverage (TIE)",
         "value": "−0.71x",
         "text": "EBIT / interest expense\n−Rp378bn / Rp535bn",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "EBIT / Interest expense",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -1609,7 +1609,7 @@
         "name": "Week 6 Z-score",
         "value": "−4.72",
         "text": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5\nDistress threshold < 1.81",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(−378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -1928,7 +1928,7 @@
       {
         "heading": "Free Cash Flow",
         "text": "GoTo generates Rp307bn CFO and spends Rp1,182bn on cash capex. Operations cover 25.97% of that investment.",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "calc_steps": [
           "307.025 − 1,182.360 = −875.335",
@@ -1939,7 +1939,7 @@
       {
         "heading": "Accrual Ratio",
         "text": "The −3.95% accrual ratio ((Net Income − CFO) ÷ Assets) shows cash flow is actually stronger than reported net profit, due to non-cash charges and payment timing.",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "calc_steps": [
           "(−1,501.685 − 307.025) / 45,757.642 × 100% = −3.9528%",
@@ -1950,7 +1950,7 @@
       {
         "heading": "Asset Valuation",
         "text": "Associates (like Tokopedia) make up 22.57% of assets, and Level 3 investments rely on estimates; any future write-down would cut book equity on paper without costing cash.",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "calc_steps": [
           "(7,432,326 + 2,894,921) / 45,757,642 × 100% = 22.5694%",
@@ -2053,7 +2053,7 @@
     "hide_banner": true,
     "display_title": "Cash Flow and Accounting Quality",
     "display_takeaway": "",
-    "study_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+    "study_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
     "supporting_schedules": [
       {
         "title": "Milestone 3 accounting and footnote findings",
@@ -2101,7 +2101,7 @@
         "name": "Operating cash flow",
         "value": "+Rp307bn",
         "text": "Cash from everyday operations",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "highlight_terms": [
           "Operating cash flow",
@@ -2112,7 +2112,7 @@
         "name": "Cash capex",
         "value": "Rp1,182bn",
         "text": "Cash paid for fixed and intangible assets",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "highlight_terms": [
           "Cash capex",
@@ -2123,7 +2123,7 @@
         "name": "Free cash flow",
         "value": "−Rp875bn",
         "text": "CFO minus cash capex; coverage is only 25.97%",
-        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nMilestone 3 calculates accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
+        "detail_explanation": "Operating cash flow, or CFO, records cash generated by operating activities. It differs from net income because recorded sales and expenses do not always occur at the same time as cash receipts and payments. Depreciation, for example, reduces profit without being a new cash payment that year.\n\nFY2025 CFO is Rp307.025bn. Cash expenditure on fixed and intangible assets is Rp1,182.360bn. CFO minus that capex equals −Rp875.335bn free cash flow. Operations therefore fund 25.97% of the investment, leaving a cash gap.\n\nWe calculate accruals as (net income − CFO) / closing assets. The FY2025 calculation is (−1,501.685 − 307.025) / 45,757.642 = −3.95%, compared with −11.21% in 2024. This measures the difference between profit and operating cash relative to assets; it is not an automatic earnings-quality rating.\n\nTokopedia and Bank Jago investments together represent 22.57% of assets. Level 3 investments rely on estimates rather than directly quoted market prices. Related-party revenue is 7.13% of revenue. Incentive treatment can reduce revenue or create expenses depending on the service received. A hypothetical 20% haircut on Tokopedia and Level 3 investments reduces value by Rp1,820bn before tax. That is a sensitivity, not a recorded impairment. Embedded goodwill is already inside the associate balance.\n\nDeposit settlements and new borrowing can support the cash balance without increasing operating cash flow. An investment write-down can reduce recorded equity without itself causing a new cash outflow on the date of the charge.",
         "data_origin": "Milestone 3 workbook, Calculations!D8:D68; Milestone 3 assessment and sensitivities",
         "highlight_terms": [
           "Free cash flow",
@@ -2211,7 +2211,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Base Assumptions: Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.\n\nHistorical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.\n\nScenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
+    "speaker_notes": "Base Assumptions: Our base-case forecast assumes 11.4% revenue growth, 41.1% COGS, 78.5% operating costs, and 16.3% capex.\n\nHistorical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.\n\nScenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
     "source_footer": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e); Appendix A4",
     "lecture_traces": [
       {
@@ -2297,8 +2297,8 @@
     "analysis_points": [
       {
         "heading": "Base Assumptions",
-        "text": "Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "text": "Our base-case forecast assumes 11.4% revenue growth, 41.1% COGS, 78.5% operating costs, and 16.3% capex.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
@@ -2309,7 +2309,7 @@
       {
         "heading": "Historical Cost Ratios",
         "text": "The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -2320,7 +2320,7 @@
       {
         "heading": "Scenario Assumptions",
         "text": "The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -2416,7 +2416,7 @@
     "hide_banner": true,
     "display_title": "Forecast Assumptions",
     "display_takeaway": "",
-    "study_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+    "study_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
     "supporting_schedules": [
       {
         "title": "All key assumptions and the reason for each",
@@ -3329,13 +3329,6 @@
           "14,282",
           "7,642",
           "968"
-        ],
-        [
-          "Fixed-cost illustration: EBIT",
-          "(378)",
-          "+1,062",
-          "+2,430",
-          "+3,954"
         ]
       ],
       "row_details": [
@@ -3387,19 +3380,6 @@
             "14,282",
             "7,642",
             "968"
-          ],
-          "evidence_img": null,
-          "evidence_caption": ""
-        },
-        {
-          "detail_explanation": "Freezing OpEx at Rp 10,954 bn flips EBIT positive immediately.",
-          "formula": "Breakeven = Rp 18,604 bn",
-          "calc_steps": [],
-          "data_origin": "Milestone 4 & Final Report Table 5",
-          "highlight_terms": [
-            "1,062",
-            "2,430",
-            "3,954"
           ],
           "evidence_img": null,
           "evidence_caption": ""
@@ -3461,7 +3441,7 @@
     "rubric_points": "20 pts (section)",
     "chart_url": null,
     "kpis": [],
-    "speaker_notes": "Cost of Equity and Debt: The assignment calculates cost of equity at 8.45% and after-tax debt cost at 5.39%.\n\nCapital Weights and WACC: Market equity carries 77.4% of the weight and debt 22.6%. Their weighted cost is the discount rate for DCF business cash flows.\n\nDiscount Rates: RI values profit attributable to the equity model, so it uses 8.45%. DCF values cash before the debt bridge, so it uses the combined 7.76% rate.",
+    "speaker_notes": "Cost of Equity and Debt: We calculate cost of equity at 8.45% and after-tax debt cost at 5.39%.\n\nCapital Weights and WACC: Market equity carries 77.4% of the weight and debt 22.6%. Their weighted cost is the discount rate for DCF business cash flows.\n\nDiscount Rates: RI values profit attributable to the equity model, so it uses 8.45%. DCF values cash before the debt bridge, so it uses the combined 7.76% rate.",
     "source_footer": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026); Appendix A6",
     "lecture_traces": [
       {
@@ -3509,8 +3489,8 @@
     "analysis_points": [
       {
         "heading": "Cost of Equity and Debt",
-        "text": "The assignment calculates cost of equity at 8.45% and after-tax debt cost at 5.39%.",
-        "detail_explanation": "Cost of equity is the return required by the assignment equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the assignment government-bond yield after its sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
+        "text": "We calculate cost of equity at 8.45% and after-tax debt cost at 5.39%.",
+        "detail_explanation": "Cost of equity is the return required by our CAPM equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the Indonesian government-bond yield after sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%",
@@ -3521,7 +3501,7 @@
       {
         "heading": "Capital Weights and WACC",
         "text": "Market equity carries 77.4% of the weight and debt 22.6%. Their weighted cost is the discount rate for DCF business cash flows.",
-        "detail_explanation": "Cost of equity is the return required by the assignment equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the assignment government-bond yield after its sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
+        "detail_explanation": "Cost of equity is the return required by our CAPM equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the Indonesian government-bond yield after sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "[0.774220219 × 8.45205%] + [0.225779781 × 5.3898%] = 7.7606559%",
@@ -3532,7 +3512,7 @@
       {
         "heading": "Discount Rates",
         "text": "Residual Income values profit left for shareholders, so it discounts at Cost of Equity (8.45%). DCF values total firm cash flows before paying debt, so it discounts at WACC (7.76%).",
-        "detail_explanation": "Cost of equity is the return required by the assignment equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the assignment government-bond yield after its sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
+        "detail_explanation": "Cost of equity is the return required by our CAPM equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the Indonesian government-bond yield after sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
         "data_origin": "Assignment 14 Workbook 'Cost of Capital' (Investing.com 30 Dec 2025; Damodaran 1 Jan 2026)",
         "calc_steps": [
           "4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%",
@@ -3591,7 +3571,7 @@
     "display_title": "Cost of Capital",
     "cards": [],
     "display_takeaway": "",
-    "study_explanation": "Cost of equity is the return required by the assignment equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the assignment government-bond yield after its sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
+    "study_explanation": "Cost of equity is the return required by our CAPM equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the Indonesian government-bond yield after sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
     "supporting_schedules": [
       {
         "title": "Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)",
@@ -3604,12 +3584,17 @@
           [
             "Risk-Free Rate Proxy (Rf)",
             "4.502%",
-            "Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026)"
+            "Indonesia 10Y SUN (10-Year Indonesian Government Bond) yield 6.120% (Investing.com, 30 Dec 2025) − Moody's Baa2 sovereign default spread 1.618% (Damodaran, 1 Jan 2026) — default spread is subtracted because the bond yield contains sovereign default risk and Country Risk Premium (CRP) is added separately."
           ],
           [
-            "Levered Beta & Mature ERP",
-            "0.59  |  4.23%",
-            "GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026)"
+            "Levered Beta",
+            "0.59",
+            "GOTO Levered Beta 0.59 (Investing.com Key Stats, Dec 2025) — measures how strongly GoTo's stock moves relative to the market"
+          ],
+          [
+            "Mature-Market Equity Risk Premium (Mature ERP)",
+            "4.23%",
+            "Implied Mature-Market ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) — baseline extra return investors demand for stocks over a risk-free bond in a developed market (United States)"
           ],
           [
             "Indonesia Country Risk Premium (CRP)",
@@ -3624,7 +3609,7 @@
           [
             "Pre-Tax Debt (6.91%) & After-Tax Debt",
             "5.39%",
-            "FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate)"
+            "FY2025 effective rate: Rp 535.2 bn interest / Rp 7,742.6 bn total debt (Short-Term Rp 1,523.8 bn + Long-Term Rp 6,218.9 bn) = 6.91%, × (1 − 22% Indonesia statutory corporate tax rate) = 5.39%"
           ],
           [
             "Capital Weights & Consolidated WACC",
@@ -3634,7 +3619,7 @@
         ],
         "row_details": [
           {
-            "detail_explanation": "Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.",
+            "detail_explanation": "A true Risk-Free Rate (Rf) assumes zero default risk. Because Indonesia is rated Moody's Baa2, its 10-year IDR bond yield (6.120%) includes a 1.618% sovereign default spread. Subtracting 1.618% gives a clean IDR Rf (4.502%) and avoids double-counting country risk since CRP is added separately.",
             "formula": "Rf = 6.120% - 1.618% = 4.502%",
             "calc_steps": [],
             "data_origin": "Cost of Capital!B6",
@@ -3646,12 +3631,22 @@
             "evidence_caption": ""
           },
           {
-            "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
-            "formula": "Ke check tested across 0.59-1.25",
+            "detail_explanation": "Observed Levered Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is tested in Appendix A2.",
+            "formula": "Ke sensitivity tested across Beta 0.59–1.25",
             "calc_steps": [],
-            "data_origin": "Cost of Capital!B7:B8",
+            "data_origin": "Cost of Capital!B7",
             "highlight_terms": [
-              "0.59",
+              "0.59"
+            ],
+            "evidence_img": null,
+            "evidence_caption": ""
+          },
+          {
+            "detail_explanation": "Damodaran's forward-looking implied Equity Risk Premium for a mature developed market (United States); Indonesia's Country Risk Premium (2.465%) is added on top of this baseline.",
+            "formula": "Total ERP = Mature ERP (4.23%) + CRP (2.465%) = 6.695%",
+            "calc_steps": [],
+            "data_origin": "Cost of Capital!B8",
+            "highlight_terms": [
               "4.23%"
             ],
             "evidence_img": null,
@@ -3724,9 +3719,14 @@
           "6.91% × (1 − 22%)"
         ],
         [
-          "Equity / debt weights",
-          "77.4% / 22.6%",
-          "Weight each funding source"
+          "Equity weight",
+          "77.4%",
+          "Market equity share: E / (E + D)"
+        ],
+        [
+          "Debt weight",
+          "22.6%",
+          "Debt share: D / (E + D)"
         ],
         [
           "Combined rate: WACC",
@@ -3752,6 +3752,38 @@
         "result_numeric": 0.0845205
       },
       {
+        "label": "Pre-Tax Debt Cost",
+        "formula": "FY2025 Interest Expense / Total Interest-Bearing Debt (Short-Term + Long-Term)",
+        "substitution": "535.152 / (1,523.758 + 6,218.885) = 535.152 / 7,742.643 = 6.9117%",
+        "result": "6.91%",
+        "note": "Inputs in Rp billion (Income Statement interest Rp 535,152m; Balance Sheet Short-Term debt Rp 1,523,758m + Long-Term debt Rp 6,218,885m).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.06911723813173357,
+        "evidence_imgs": [
+          {
+            "label": "Income Statement (Interest Rp 535.2bn)",
+            "src": "/evidence/goto_income_statement_finance_costs_highlighted.png",
+            "title": "FY2025 Income Statement — Finance Costs (Rp 535,152m)",
+            "caption": "FY2025 Biaya keuangan / Finance costs (Note 27b) = Rp 535,152 million (Rp 535.2 billion)."
+          },
+          {
+            "label": "Balance Sheet (ST + LT Debt = Rp 7,742.6bn)",
+            "src": "/evidence/goto_balance_sheet_debt_highlighted.png",
+            "title": "31 Dec 2025 Balance Sheet — Short-Term & Long-Term Interest-Bearing Debt",
+            "caption": "Short-Term Debt (Rp 1,523,758m: blue) + Long-Term Debt (Rp 6,218,885m: green) = Rp 7,742,643m (Rp 7,742.6bn)."
+          }
+        ]
+      },
+      {
+        "label": "Effective Tax Rate",
+        "formula": "Indonesian statutory corporate tax rate (Cost of Capital B14)",
+        "substitution": "Statutory corporate income tax rate = 22.0%",
+        "result": "22.0%",
+        "note": "Model tax-shield assumption (UU HPP corporate tax rate).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.22
+      },
+      {
         "label": "After-Tax Debt Cost",
         "formula": "Pre-tax debt rate × (1 − Tax rate)",
         "substitution": "6.91% × (1 − 22%) = 5.3898%",
@@ -3761,13 +3793,22 @@
         "result_numeric": 0.053897999999999995
       },
       {
-        "label": "Capital Weights",
-        "formula": "Equity weight = E / (E + D); Debt weight = D / (E + D)",
-        "substitution": "E = 26,550.255; D = 7,742.643; E/(E+D) ≈ 77.4%; D/(E+D) ≈ 22.6%",
-        "result": "77.4% / 22.6%",
-        "note": "Inputs in Rp billion.",
+        "label": "Equity Weight",
+        "formula": "E / (E + D)",
+        "substitution": "26,550.255 / (26,550.255 + 7,742.643) = 77.4220%",
+        "result": "77.4%",
+        "note": "Market value of equity (Rp 25.00 × 1,062,010.2m shares) in Rp billion.",
         "source": "Assignment 14 Cost of Capital",
         "result_numeric": 0.7742202190086123
+      },
+      {
+        "label": "Debt Weight",
+        "formula": "D / (E + D)",
+        "substitution": "7,742.643 / (26,550.255 + 7,742.643) = 22.5780%",
+        "result": "22.6%",
+        "note": "Total interest-bearing debt (ST Rp 1,523.8bn + LT Rp 6,218.9bn) in Rp billion.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.2257797809913877
       },
       {
         "label": "WACC",
@@ -3791,7 +3832,7 @@
     "chart_url": null,
     "kpis": [],
     "cards": [],
-    "speaker_notes": "Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.\n\nForecast and Terminal Value: Both models use Milestone 4. The terminal calculation extends the weak final-year result beyond 2028, with the assignment’s 3% growth assumption.\n\nValuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
+    "speaker_notes": "Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.\n\nForecast and Terminal Value: Both models use our 2026F–2028F base-case forecast and a manual 3.0% terminal growth rate. Because 2028F after-tax operating profit (NOPAT) is negative (−Rp 4,967.4 bn), fundamental growth (reinvestment × ROIC) is not meaningful; Assignment 14 therefore uses 3.0%—the top of the template's 0%–3% defensible range for loss-making firms—while staying below the 4.502% risk-free cap, 7.76% WACC, and 8.45% Cost of Equity.\n\nValuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
     "source_footer": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%; Appendix A6",
     "lecture_traces": [
       {
@@ -3850,7 +3891,7 @@
       {
         "heading": "Valuation Methods",
         "text": "DCF values future free cash flows. Residual Income starts with current book equity (Rp28.7T) and adds or subtracts profits above or below the 8.45% shareholder hurdle.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
@@ -3860,8 +3901,8 @@
       },
       {
         "heading": "Forecast and Terminal Value",
-        "text": "Both models plug in Milestone 4's Base Case, and the terminal value projects 2028F's heavy losses onward at 3% growth.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "text": "Both models use our 2026F–2028F Base Case forecast and a manual 3.0% terminal growth rate (top of the 0%–3% loss-making range), kept below 4.502% Rf, 7.76% WACC, and 8.45% Ke since negative NOPAT (operating profit after tax) makes fundamental g meaningless.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
@@ -3872,7 +3913,7 @@
       {
         "heading": "Valuation Results",
         "text": "Because those Base Case losses continue into the terminal year, DCF drops to −Rp121.1/share and Residual Income to −Rp75.1/share.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
@@ -3937,7 +3978,7 @@
     "hide_banner": true,
     "display_title": "DCF and Residual Income",
     "display_takeaway": "",
-    "study_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+    "study_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
     "supporting_schedules": [
       {
         "title": "DCF vs. Residual Income Side-by-Side Valuation Bridge: Same Forecast & g = 3.0% (Full Schedules in Appendix A2)",
@@ -4159,7 +4200,7 @@
         ]
       },
       {
-        "title": "Why the assignment uses 3% terminal growth",
+        "title": "Why we use 3% terminal growth",
         "headers": [
           "Check",
           "Assignment treatment",
@@ -4173,13 +4214,13 @@
           ],
           [
             "Chosen terminal growth",
-            "Manual analyst judgment: 3.0%",
-            "Same g for DCF and RI"
+            "Manual analyst judgment: 3.0% (0%–3% range)",
+            "Top of template's defensible range for loss-making firms; same g for DCF and RI"
           ],
           [
             "Rate limits",
-            "3.0% < 4.502% risk-free proxy < 7.76% WACC",
-            "Below the model limits; not a guarantee"
+            "3.0% < 4.502% Rf cap < 7.76% WACC < 8.45% Ke",
+            "Passes all three workbook checks; not a guarantee"
           ],
           [
             "Negative terminal cash flow",
@@ -4241,6 +4282,72 @@
           ]
         ],
         "note": "Source: submitted Assignment 14 workbook. Cash uses are negative; a working-capital cash release is positive."
+      },
+      {
+        "title": "Raw Projected Cash Flow (Without DCF) vs. Discounted Cash Flow (With DCF at 7.76% WACC, Rp bn)",
+        "headers": [
+          "Period",
+          "Without DCF (Raw FCFF)",
+          "With DCF (PV at 7.76% WACC)",
+          "Discounting Effect"
+        ],
+        "rows": [
+          [
+            "2026F (Year 1)",
+            "−7,738.7",
+            "−7,181.4",
+            "−7.2% (1 year away)"
+          ],
+          [
+            "2027F (Year 2)",
+            "−7,006.3",
+            "−6,033.4",
+            "−13.9% (2 years away)"
+          ],
+          [
+            "2028F (Year 3)",
+            "−7,152.6",
+            "−5,715.8",
+            "−20.1% (3 years away)"
+          ],
+          [
+            "3-Year Subtotal (2026F–2028F)",
+            "−21,897.6",
+            "−18,930.7",
+            "−13.5%"
+          ],
+          [
+            "Terminal Value (after 2028F)",
+            "−154,740.8",
+            "−123,657.4",
+            "−20.1%"
+          ],
+          [
+            "Total Enterprise Value",
+            "−176,638.4",
+            "−142,597.7",
+            "−19.3%"
+          ],
+          [
+            "+ Net Cash Bridge",
+            "+14,012.5",
+            "+14,012.5",
+            "Unchanged (today)"
+          ],
+          [
+            "Implied Equity Value",
+            "−162,625.9",
+            "−128,585.2",
+            "—"
+          ],
+          [
+            "Per Share (÷ 1,062.01B shares)",
+            "−Rp 153.1",
+            "−Rp 121.1",
+            "DCF shrinks loss by Rp 32.0/sh"
+          ]
+        ],
+        "note": "Even before discounting, raw projected FCFF is negative every year (−Rp 21.90T over 2026F–2028F). Discounting at 7.76% WACC does not cause the negative result—it shrinks future losses to today’s value (−Rp 121.1/share). The undiscounted column is shown only to illustrate the time-value effect, not as a standalone valuation."
       },
       {
         "title": "How forecast profit becomes residual income (Rp bn)",
@@ -4878,7 +4985,7 @@
       {
         "heading": "Recommendation",
         "text": "We recommend SELL (or AVOID for new buyers) at Rp25/share, because Free Cash Flow is still negative and the Base Case projects ongoing losses.",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "calc_steps": [
           "The submitted recommendation is SELL / AVOID at the Rp25 assignment reference price. It is based on negative FCF and the weak base forecast.",
@@ -4889,7 +4996,7 @@
       {
         "heading": "Conditions",
         "text": "We would reconsider if operating cash consistently covers CapEx, operating costs stay capped, and lending defaults stay low. This FSA does not predict short-term stock price timing.",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "calc_steps": [
           "The submitted recommendation is SELL / AVOID at the Rp25 assignment reference price. It is based on negative FCF and the weak base forecast.",
@@ -4900,7 +5007,7 @@
       {
         "heading": "Risks",
         "text": "Upside risk: GoTo keeps FY2025's leaner cost structure permanently. Downside risk: loan defaults, asset write-downs, or renewed cash burn.",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "calc_steps": [
           "The submitted recommendation is SELL / AVOID at the Rp25 assignment reference price. It is based on negative FCF and the weak base forecast.",
@@ -4950,14 +5057,14 @@
     "hide_banner": true,
     "display_title": "Recommendation",
     "display_takeaway": "",
-    "study_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+    "study_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
     "supporting_schedules": [],
     "visual_rows": [
       {
         "name": "New short-term position",
         "value": "AVOID",
         "text": "Submitted view for a new position",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "highlight_terms": [
           "New short-term position",
@@ -4968,7 +5075,7 @@
         "name": "Submitted fundamental case",
         "value": "SELL / AVOID",
         "text": "Conditional on the base assumptions",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "highlight_terms": [
           "Submitted fundamental case",
@@ -4979,7 +5086,7 @@
         "name": "Next price move",
         "value": "Not established",
         "text": "Valuation does not supply trade timing",
-        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at the assignment reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
+        "detail_explanation": "The submitted fundamental recommendation is SELL / AVOID at our benchmark reference price of Rp25. The basis is the combination of negative free cash flow, continued base-case losses and a higher relative benchmark whose comparable-earning-power assumption is not established.\n\nFor a new short-term position, the AVOID conclusion means the FSA does not establish a supported entry case. The SELL conclusion for an existing position remains conditional on the weak fundamental scenario. It is a recommendation based on stated assumptions, not an observed fact about the next share-price move.\n\nCash covering capex, controlled operating expenses and improved lending results would weaken the negative fundamental case. A near-term catalyst, market liquidity and a trading signal remain unestablished by the submitted FSA.\n\nBetter operations could make the historical-cost base too cautious. Credit losses, investment impairments and further cash use could worsen it. The annual equity charge is a fundamental benchmark; the earlier two-year profit condition is not a required short-term holding period.",
         "data_origin": "Group 4 Final Report Section (g) & Integrated Valuation Findings",
         "highlight_terms": [
           "Next price move",
@@ -5130,7 +5237,7 @@
         "calc_steps": []
       }
     ],
-    "study_explanation": "This appendix shows the full segment-to-consolidated revenue bridge (Gojek Rp12,361.259bn + GoTo Financial Rp5,190.617bn + Tokopedia contractual e-commerce service fee Rp819.724bn − eliminations Rp49.483bn = Rp18,322.117bn) alongside the Milestone 1 Five Forces matrix and Note 35 lending credit-provision exposure.",
+    "study_explanation": "This appendix shows the full segment-to-consolidated revenue bridge (Gojek Rp12,361.259bn + GoTo Financial Rp5,190.617bn + Tokopedia contractual e-commerce service fee Rp819.724bn − eliminations Rp49.483bn = Rp18,322.117bn) alongside our Porter Five Forces matrix and Note 35 lending credit-provision exposure.",
     "speaker_notes": "Revenue: Gojek revenue is Rp12,361bn, compared with Rp5,191bn from GoTo Financial and about Rp820bn in Tokopedia service fees.\n\nBusiness Activities: Gojek provides rides, food and delivery. GoTo Financial provides payments and lending. Tokopedia is an associate, rather than a business controlled by GoTo.\n\nTokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from Tokopedia in 2025. GoTo retains a 24.99% ownership stake in Tokopedia.",
     "source_footer": "LK GOTO FY2025 Note 14, Note 29, Note 35; Milestone 1 §4.3; Final Report §(a)–(b)",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -5642,7 +5749,7 @@
         "formula": "Net income / Revenue × 100%"
       }
     ],
-    "study_explanation": "This appendix consolidates historical FY2023–FY2025 performance alongside the 2026F–2028F Milestone 4 base case (revenue, gross profit, EBIT, net income, assets, equity, CFO, capex, and FCF) plus the 3-step and 5-step FY2025 DuPont decompositions (−8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier = −5.23% ROE).",
+    "study_explanation": "This appendix consolidates historical FY2023–FY2025 performance alongside our 2026F–2028F base-case forecast (revenue, gross profit, EBIT, net income, assets, equity, CFO, capex, and FCF) plus the 3-step and 5-step FY2025 DuPont decompositions (−8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier = −5.23% ROE).",
     "speaker_notes": "Operating Loss: Operating loss falls from Rp10,279bn in 2023 to Rp378bn in 2025. The 2025 result is still a loss, with net margin of −8.2%.\n\nDuPont ROE: DuPont gives approximately −8.2% net margin × 0.40x asset turnover × 1.59x equity multiplier = −5.2% ROE.\n\nNet Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other items.",
     "source_footer": "LK GOTO FY2025; Milestone 2 Ratio/DuPont; Milestone 4 Base Pro Forma",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -5977,7 +6084,7 @@
       {
         "heading": "Cash and Liquidity",
         "text": "Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "29,059,226 / 10,647,524 ≈ 2.73x",
@@ -5988,7 +6095,7 @@
       {
         "heading": "Interest Coverage",
         "text": "Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "−378,254 / 535,152 ≈ −0.71x",
@@ -5999,7 +6106,7 @@
       {
         "heading": "Altman Z-Score",
         "text": "The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
-        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
+        "detail_explanation": "GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.\n\nGoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, consolidated book equity rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.\n\nThe completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.\n\nThe course distress threshold is below 1.81. That classification is a screening signal. It does not establish an immediate bankruptcy, a specific default probability for GoTo, or a short-term stock-price movement.",
         "data_origin": "Week 6 lecture slides 15–19; Group 4 Week 6 worksheet pp. 1–3; LK GoTo FY2025 pp. 1/1, 1/2, 2/1",
         "calc_steps": [
           "1.2×(18,411,702/45,757,642) + 1.4×(−215,334,000/45,757,642) + 3.3×(-378,254/45,757,642) + 0.6×(28,711,657/17,045,985) + (18,322,117/45,757,642) = −4.721750",
@@ -6008,7 +6115,7 @@
         "formula": "1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5"
       }
     ],
-    "study_explanation": "This appendix provides the full five-factor Week 6 Altman Z-Score build-up (X1 through X5 = −4.721750 using the submitted worksheet book equity / total liabilities proxy) alongside all Milestone 3 accounting-quality and footnote schedules (−3.95% accrual ratio, 25.97% capex coverage, 22.57% associate assets, and Level 3 estimates).",
+    "study_explanation": "This appendix provides the full five-factor Altman Z-Score build-up (X1 through X5 = −4.721750 using book equity / total liabilities) alongside our accounting-quality and footnote schedules (−3.95% accrual ratio, 25.97% capex coverage, 22.57% associate assets, and Level 3 estimates).",
     "speaker_notes": "Cash and Liquidity: Cash is Rp21.76T and the current ratio is 2.73x. Debt-to-equity is 0.27x (Rp7,743bn debt ÷ Rp28,712bn total equity).\n\nInterest Coverage: Interest coverage is −0.71x because EBIT is negative. The cash balance can remain positive while operating earnings are insufficient to pay interest.\n\nAltman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly because of past accumulated losses. This score is not proof of immediate bankruptcy.",
     "source_footer": "Week 6 Worksheet; Milestone 2; Milestone 3!Calculations; LK GOTO FY2025 Notes 14, 15, 29 & 38",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -6588,8 +6695,8 @@
     "analysis_points": [
       {
         "heading": "Base Assumptions",
-        "text": "Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "text": "Our base-case forecast assumes 11.4% revenue growth, 41.1% COGS, 78.5% operating costs, and 16.3% capex.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
@@ -6600,7 +6707,7 @@
       {
         "heading": "Historical Cost Ratios",
         "text": "The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -6611,7 +6718,7 @@
       {
         "heading": "Scenario Assumptions",
         "text": "The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
-        "detail_explanation": "Milestone 4 uses a base revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
+        "detail_explanation": "Our base-case forecast uses a revenue-growth assumption of 11.4%, the average of the observed 7.5% and 15.3% growth rates. Its historical averages also set COGS at 41.1% of revenue, operating costs at 78.5% and capex at 16.3%. These percentages are model inputs, not future results already observed.\n\nThe cash operating-cost ratio was 117% in 2023, 62.8% in 2024 and 55.7% in 2025. Their average is 78.5%. The base therefore assumes a larger future cost share than the latest historical year.\n\nCapex was about 1.5%, 41.0% and 6.5% of revenue across the same years. Its 16.3% base average is also above the 2025 level. The optimistic case instead uses 55.7% operating costs and 6.5% capex. The difference between those assumptions helps explain the difference between scenarios.\n\nWorking-capital days describe timing: DSO 24.2 days for sales collection, DIO 4.8 days for inventory and DPO 67.8 days for supplier payments. Cash tied up before collection can increase even when revenue grows. The model also assumes depreciation of 30.6% of beginning net PP&E, interest of 10.2%, tax of 22% and zero dividends. The forecast interest assumption is different from the 6.91% debt-cost input used for WACC.",
         "data_origin": "Group 4 Milestone 4 Pro Forma Workbook & Final Report Section (e)",
         "calc_steps": [
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
@@ -6620,8 +6727,8 @@
         "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3"
       }
     ],
-    "study_explanation": "This appendix documents every Milestone 4 key forecast assumption across Optimistic, Base, and Conservative cases (11.39% revenue growth, 42.28% COGS, 78.49% OpEx, D&A, DSO/DIO/DPO working capital, 16.32% capex, 22% statutory tax, and 6.91% interest) along with each economic rationale and fixed-vs-variable cost judgment.",
-    "speaker_notes": "Base Assumptions: Growth is 11.4%, COGS is 41.1% of sales, operating costs are 78.5%, and capex is 16.3%, following Milestone 4.\n\nHistorical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.\n\nScenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
+    "study_explanation": "This appendix documents every key forecast assumption in our model across Optimistic, Base, and Conservative cases (11.39% revenue growth, 42.28% COGS, 78.49% OpEx, D&A, DSO/DIO/DPO working capital, 16.32% capex, 22% statutory tax, and 6.91% interest) along with each economic rationale and fixed-vs-variable cost judgment.",
+    "speaker_notes": "Base Assumptions: Our base-case forecast assumes 11.4% revenue growth, 41.1% COGS, 78.5% operating costs, and 16.3% capex.\n\nHistorical Cost Ratios: The 117% operating-cost ratio in 2023 raises the average. The high 2024 capex ratio also raises assumed future investment above the 2025 level.\n\nScenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% capex, compared with 78.5% and 16.3% in the base case.",
     "source_footer": "Milestone 4 §1–3; Assignment 14 Assumptions & Forecasts",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "calculation_notes": [
@@ -7264,7 +7371,7 @@
         "formula": "Fixed operating costs / Gross-margin ratio"
       }
     ],
-    "study_explanation": "This appendix contains the complete Milestone 4 three-year base pro forma statements (Income Statement, Balance Sheet, and Cash Flow Statement for 2026F–2028F), together with the breakeven revenue analysis, degree of operating leverage (DOL), and fixed-OpEx freeze (Rp10,954bn) sensitivity test.",
+    "study_explanation": "This appendix contains the complete three-year base-case pro forma statements (Income Statement, Balance Sheet, and Cash Flow Statement for 2026F–2028F), together with the breakeven revenue analysis, degree of operating leverage (DOL), and fixed-OpEx freeze (Rp10,954bn) sensitivity test.",
     "speaker_notes": "Base Case: The model projects revenue of Rp25,321bn in 2028F, but operating losses continue and ending cash falls from Rp21,755bn to Rp968bn.\n\nOperating Cost Ratio: The base gives Rp58.90 gross profit but Rp78.50 operating costs per Rp100 of sales. The Rp19.60 shortfall grows when both sales and these costs increase together.\n\nFixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954bn. It produces positive 2026F EBIT of about Rp1,062bn, rather than the base-case loss of Rp4,003bn.",
     "source_footer": "Milestone 4 Tables 4–7; Final Report Table 5; Assignment 14 Financial Forecast",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
@@ -7446,12 +7553,17 @@
         [
           "Risk-Free Rate Proxy (Rf)",
           "4.502%",
-          "Indonesia 10Y SUN yield 6.120% (Investing.com, 30 Dec 2025) - Moody's Baa2 default spread 1.618% (Damodaran, 1 Jan 2026)"
+          "Indonesia 10Y SUN (10-Year Indonesian Government Bond) yield 6.120% (Investing.com, 30 Dec 2025) − Moody's Baa2 sovereign default spread 1.618% (Damodaran, 1 Jan 2026) — default spread is subtracted because the bond yield contains sovereign default risk and Country Risk Premium (CRP) is added separately."
         ],
         [
-          "Levered Beta & Mature ERP",
-          "0.59  |  4.23%",
-          "GOTO Beta 0.59 (Investing.com Key Stats, Dec 2025); Implied Mature ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026)"
+          "Levered Beta",
+          "0.59",
+          "GOTO Levered Beta 0.59 (Investing.com Key Stats, Dec 2025) — measures how strongly GoTo's stock moves relative to the market"
+        ],
+        [
+          "Mature-Market Equity Risk Premium (Mature ERP)",
+          "4.23%",
+          "Implied Mature-Market ERP 4.23% (Damodaran ctryprem.xlsx, 1 Jan 2026) — baseline extra return investors demand for stocks over a risk-free bond in a developed market (United States)"
         ],
         [
           "Indonesia Country Risk Premium (CRP)",
@@ -7466,7 +7578,7 @@
         [
           "Pre-Tax Debt (6.91%) & After-Tax Debt",
           "5.39%",
-          "FY2025 effective rate: Rp 535.2 bn int. / Rp 7,742.6 bn debt x (1 - 22% Indonesia statutory corporate tax rate)"
+          "FY2025 effective rate: Rp 535.2 bn interest / Rp 7,742.6 bn total debt (Short-Term Rp 1,523.8 bn + Long-Term Rp 6,218.9 bn) = 6.91%, × (1 − 22% Indonesia statutory corporate tax rate) = 5.39%"
         ],
         [
           "Capital Weights & Consolidated WACC",
@@ -7476,7 +7588,7 @@
       ],
       "row_details": [
         {
-          "detail_explanation": "Removes sovereign default risk from the 10Y IDR bond yield to keep Rf strictly risk-free.",
+          "detail_explanation": "A true Risk-Free Rate (Rf) assumes zero default risk. Because Indonesia is rated Moody's Baa2, its 10-year IDR bond yield (6.120%) includes a 1.618% sovereign default spread. Subtracting 1.618% gives a clean IDR Rf (4.502%) and avoids double-counting country risk since CRP is added separately.",
           "formula": "Rf = 6.120% - 1.618% = 4.502%",
           "calc_steps": [],
           "data_origin": "Cost of Capital!B6",
@@ -7488,12 +7600,22 @@
           "evidence_caption": ""
         },
         {
-          "detail_explanation": "Observed Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is in Appendix A2.",
-          "formula": "Ke check tested across 0.59-1.25",
+          "detail_explanation": "Observed Levered Beta 0.59 is lower than typical tech peers; sensitivity up to Beta 1.25 is tested in Appendix A2.",
+          "formula": "Ke sensitivity tested across Beta 0.59–1.25",
           "calc_steps": [],
-          "data_origin": "Cost of Capital!B7:B8",
+          "data_origin": "Cost of Capital!B7",
           "highlight_terms": [
-            "0.59",
+            "0.59"
+          ],
+          "evidence_img": null,
+          "evidence_caption": ""
+        },
+        {
+          "detail_explanation": "Damodaran's forward-looking implied Equity Risk Premium for a mature developed market (United States); Indonesia's Country Risk Premium (2.465%) is added on top of this baseline.",
+          "formula": "Total ERP = Mature ERP (4.23%) + CRP (2.465%) = 6.695%",
+          "calc_steps": [],
+          "data_origin": "Cost of Capital!B8",
+          "highlight_terms": [
             "4.23%"
           ],
           "evidence_img": null,
@@ -7781,13 +7903,13 @@
           ],
           [
             "Chosen terminal growth",
-            "Manual analyst judgment: 3.0%",
-            "Same g for DCF and RI"
+            "Manual analyst judgment: 3.0% (0%–3% range)",
+            "Top of template's defensible range for loss-making firms; same g for DCF and RI"
           ],
           [
             "Rate limits",
-            "3.0% < 4.502% risk-free proxy < 7.76% WACC",
-            "Below the model limits; not a guarantee"
+            "3.0% < 4.502% Rf cap < 7.76% WACC < 8.45% Ke",
+            "Passes all three workbook checks; not a guarantee"
           ],
           [
             "Negative terminal cash flow",
@@ -8047,7 +8169,7 @@
       {
         "heading": "Valuation Methods",
         "text": "DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−4,003.4 + 190.4 − 3,329.8 − 595.9 = −7,738.7",
@@ -8057,8 +8179,8 @@
       },
       {
         "heading": "Forecast and Terminal Value",
-        "text": "Both models use Milestone 4. The terminal calculation extends the weak final-year result beyond 2028, with the assignment’s 3% growth assumption.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "text": "Both models use our 2026F–2028F base-case forecast. The terminal calculation extends the weak final-year result beyond 2028 using our 3.0% perpetual growth assumption.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "−7,152.6 × 1.03 / (0.0776065587 − 0.03) ≈ −154,751.3",
@@ -8069,7 +8191,7 @@
       {
         "heading": "Valuation Results",
         "text": "DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
-        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nAssignment 14 discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same Milestone 4 net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3% assumption in Assignment 14. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
+        "detail_explanation": "DCF values future free cash flow to the firm, or FCFF. This is cash after operating tax and reinvestment, before debt claims. It is calculated from after-tax operating profit plus depreciation, minus cash capex and additional working-capital investment. Depreciation is added back because it reduced profit without being a new cash payment in that period. Working capital can use or release cash, so its sign affects the result.\n\nOur DCF model discounts FCFF at 7.76%, adds terminal value and applies the net-debt bridge to reach equity value. Residual income uses the same 2026F–2028F base-case net-income forecast. It subtracts Ke × beginning book equity from each year’s net income and discounts the result at 8.45%, then adds starting book equity.\n\nBoth results are negative because the base forecast continues to produce losses. The terminal calculation carries the weak final-year pattern beyond 2028. DCF is −Rp121.1 per share and RI is −Rp75.1. These outputs are consequences of the modeled path. They are not prices at which ordinary shares can trade, immediate-default findings, or forecasts of the next market-price change.\n\nTerminal growth is a manual 3.0% perpetual growth assumption in our model. The workbook fundamental-growth calculation is not meaningful with negative NOPAT. The chosen rate is below the 4.502% risk-free proxy and 7.76% WACC. Those bounds do not establish that sustainable 3% growth will occur. With negative terminal cash flow, a higher growth assumption can extend larger losses.\n\nDCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.",
         "data_origin": "Assignment 14 valuation workbook: DCF Valuation!B6:D28; Residual Income Valuation!B6:D25; g 3.0%",
         "calc_steps": [
           "[−142,597.709 − (7,742.643 − 21,755.165)] / 1,062.0102 ≈ −121.077",
@@ -8078,8 +8200,8 @@
         "formula": "(Enterprise value − Net debt) / Shares outstanding"
       }
     ],
-    "study_explanation": "This appendix consolidates all valuation backup schedules: the dated CAPM & WACC build-up (Ke 8.45%, after-tax Kd 5.39%, WACC 7.76%), the side-by-side DCF vs. Residual Income bridge using the same Milestone 4 forecast and g = 3.0%, beta/growth sensitivity, 2026F–2028F FCFF and RI build-ups, and the same-basis actual FY2025 Grab P/B cross-check (Rp91.0/share) with peer exclusion rationales for Sea, BUKA, and BELI.",
-    "speaker_notes": "Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.\n\nForecast and Terminal Value: Both models use Milestone 4. The terminal calculation extends the weak final-year result beyond 2028, with the assignment’s 3% growth assumption.\n\nValuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
+    "study_explanation": "This appendix consolidates all valuation backup schedules: the dated CAPM & WACC build-up (Ke 8.45%, after-tax Kd 5.39%, WACC 7.76%), the side-by-side DCF vs. Residual Income bridge using the same 2026F–2028F forecast and g = 3.0%, beta/growth sensitivity, 2026F–2028F FCFF and RI build-ups, and the same-basis actual FY2025 Grab P/B cross-check (Rp91.0/share) with peer exclusion rationales for Sea, BUKA, and BELI.",
+    "speaker_notes": "Valuation Methods: DCF discounts future business cash. RI deducts an equity charge from forecast profit, then adds discounted residual income to starting book equity.\n\nForecast and Terminal Value: Both models use our 2026F–2028F base-case forecast and a manual 3.0% terminal growth rate. Because 2028F after-tax operating profit (NOPAT) is negative (−Rp 4,967.4 bn), fundamental growth (reinvestment × ROIC) is not meaningful; Assignment 14 therefore uses 3.0%—the top of the template's 0%–3% defensible range for loss-making firms—while staying below the 4.502% risk-free cap, 7.76% WACC, and 8.45% Cost of Equity.\n\nValuation Results: DCF gives −Rp121.1 per share and RI gives −Rp75.1 under the submitted assumptions. Continued losses and the terminal calculation drive these results.",
     "source_footer": "Assignment 14 Workbook (Cost of Capital, DCF, RI); Grab 20-F FY2025; LK GOTO FY2025 PDF p.16",
     "source_policy": "Submitted assignments control the deck. Detailed schedules appear in both the interactive sidebar and Appendix slides A1–A6.",
     "calculation_notes": [
@@ -8093,6 +8215,38 @@
         "result_numeric": 0.0845205
       },
       {
+        "label": "Pre-Tax Debt Cost",
+        "formula": "FY2025 Interest Expense / Total Interest-Bearing Debt (Short-Term + Long-Term)",
+        "substitution": "535.152 / (1,523.758 + 6,218.885) = 535.152 / 7,742.643 = 6.9117%",
+        "result": "6.91%",
+        "note": "Inputs in Rp billion (Income Statement interest Rp 535,152m; Balance Sheet Short-Term debt Rp 1,523,758m + Long-Term debt Rp 6,218,885m).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.06911723813173357,
+        "evidence_imgs": [
+          {
+            "label": "Income Statement (Interest Rp 535.2bn)",
+            "src": "/evidence/goto_income_statement_finance_costs_highlighted.png",
+            "title": "FY2025 Income Statement — Finance Costs (Rp 535,152m)",
+            "caption": "FY2025 Biaya keuangan / Finance costs (Note 27b) = Rp 535,152 million (Rp 535.2 billion)."
+          },
+          {
+            "label": "Balance Sheet (ST + LT Debt = Rp 7,742.6bn)",
+            "src": "/evidence/goto_balance_sheet_debt_highlighted.png",
+            "title": "31 Dec 2025 Balance Sheet — Short-Term & Long-Term Interest-Bearing Debt",
+            "caption": "Short-Term Debt (Rp 1,523,758m: blue) + Long-Term Debt (Rp 6,218,885m: green) = Rp 7,742,643m (Rp 7,742.6bn)."
+          }
+        ]
+      },
+      {
+        "label": "Effective Tax Rate",
+        "formula": "Indonesian statutory corporate tax rate (Cost of Capital B14)",
+        "substitution": "Statutory corporate income tax rate = 22.0%",
+        "result": "22.0%",
+        "note": "Model tax-shield assumption (UU HPP corporate tax rate).",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.22
+      },
+      {
         "label": "After-Tax Debt Cost",
         "formula": "Pre-tax debt rate × (1 − Tax rate)",
         "substitution": "6.91% × (1 − 22%) = 5.3898%",
@@ -8102,13 +8256,22 @@
         "result_numeric": 0.053897999999999995
       },
       {
-        "label": "Capital Weights",
-        "formula": "Equity weight = E / (E + D); Debt weight = D / (E + D)",
-        "substitution": "E = 26,550.255; D = 7,742.643; E/(E+D) ≈ 77.4%; D/(E+D) ≈ 22.6%",
-        "result": "77.4% / 22.6%",
-        "note": "Inputs in Rp billion.",
+        "label": "Equity Weight",
+        "formula": "E / (E + D)",
+        "substitution": "26,550.255 / (26,550.255 + 7,742.643) = 77.4220%",
+        "result": "77.4%",
+        "note": "Market value of equity (Rp 25.00 × 1,062,010.2m shares) in Rp billion.",
         "source": "Assignment 14 Cost of Capital",
         "result_numeric": 0.7742202190086123
+      },
+      {
+        "label": "Debt Weight",
+        "formula": "D / (E + D)",
+        "substitution": "7,742.643 / (26,550.255 + 7,742.643) = 22.5780%",
+        "result": "22.6%",
+        "note": "Total interest-bearing debt (ST Rp 1,523.8bn + LT Rp 6,218.9bn) in Rp billion.",
+        "source": "Assignment 14 Cost of Capital",
+        "result_numeric": 0.2257797809913877
       },
       {
         "label": "WACC",
