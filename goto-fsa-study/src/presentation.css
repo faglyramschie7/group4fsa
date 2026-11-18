@@ -149,10 +149,20 @@
 .drawer-popout-card .drawer-formula-table tbody tr:hover td.drawer-formula-result { color: #007f2a !important; }
 .drawer-popout-card .drawer-formula-table tbody :is(th[scope="row"], td).worksheet-selected,
 .drawer-popout-card .drawer-formula-table tbody tr:hover :is(th[scope="row"], td).worksheet-selected { background: #dceaf1 !important; color: #123b57 !important; outline: 2px solid #2563eb; outline-offset: -2px; }
+.drawer-popout-card .drawer-schedule-title { color: #006b23; font-size: 13px; font-weight: 700; margin: 0 0 10px; }
+.drawer-popout-card .drawer-schedule-scroll { overflow-x: auto; }
+.drawer-popout-card .drawer-schedule-table { width: 100%; min-width: 780px; table-layout: fixed; border-collapse: collapse; font-size: 12px; line-height: 1.6; color: #24382b; background: #fff !important; }
+.drawer-popout-card .drawer-schedule-table :is(th, td) { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #dce7df; overflow-wrap: anywhere; }
+.drawer-popout-card .drawer-schedule-table th { background: #edf6ef !important; color: #153b22 !important; font-weight: 650; }
+.drawer-popout-card .drawer-schedule-table tbody td { background: #fff !important; color: #24382b !important; }
+.drawer-schedule-table tbody td { cursor: pointer; transition: background 0.12s ease; }
+.drawer-schedule-table tbody td:hover { background: #f3f8f4 !important; }
+.drawer-schedule-table tbody td.worksheet-selected,
+.drawer-schedule-table tbody td.worksheet-selected:hover { background: #dceaf1 !important; color: #123b57 !important; outline: 2px solid #2563eb; outline-offset: -2px; }
 .drawer-popout-card .drawer-summary-box,
 .drawer-popout-card .drawer-calc-box,
 .drawer-popout-card .drawer-featured-ev,
-.drawer-popout-card .drawer-trace-card { background: #fff; border: 1px solid #dce7df; border-radius: 8px; box-shadow: none; padding: 18px; color: #24382b; }
+.drawer-popout-card .drawer-trace-card { background: #fff !important; border: 1px solid #dce7df !important; border-radius: 8px; box-shadow: none; padding: 18px; color: #24382b !important; }
 .drawer-popout-card .drawer-summary-box { border-left: 3px solid #008c2c; font-size: 14px; line-height: 1.7; }
 .drawer-popout-card .drawer-summary-box strong { color: #006b23; }
 .drawer-popout-card .drawer-summary-box p { margin: 0; white-space: pre-line; }
@@ -178,6 +188,33 @@
 .drawer-backdrop .source-drawer .drawer-formula-pill { background: #edf6ef; border: 1px solid #dce7df; color: #153b22; box-shadow: none; }
 .drawer-backdrop .source-drawer .drawer-calc-steps li { color: #24382b; line-height: 1.7; }
 .drawer-backdrop .source-drawer .drawer-zoom-hint { text-align: left; color: #5f7265; line-height: 1.5; font-weight: 400; margin-top: 8px; }
+
+.katex-calc-display {
+  margin: 6px 0;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #153b22;
+  overflow-x: auto;
+  text-align: left;
+}
+.worksheet-formula-bar .katex-calc-display {
+  background: transparent;
+  border: none;
+  padding: 2px 0;
+  margin: 0;
+  color: inherit;
+}
+.katex-calc-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+:root.dark .katex-calc-display {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
 .drawer-backdrop .source-drawer .drawer-support-tbl-hdr { color: #006b23 !important; background: #edf6ef; font-weight: 600; line-height: 1.5; }
 .drawer-backdrop .source-drawer .trace-mini-table-wrap { background: #fff; border-color: #dce7df; }
 .drawer-backdrop .source-drawer .trace-mini-table :is(th,td) { color: #24382b; background: #fff; border-color: #e2ebe5; }

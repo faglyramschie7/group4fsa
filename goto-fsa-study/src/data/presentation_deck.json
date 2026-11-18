@@ -2141,6 +2141,7 @@
       {
         "label": "Free Cash Flow",
         "formula": "CFO − Cash capex",
+        "explanation": "Operations made +Rp307bn in cash, but GoTo spent Rp1,182bn on tech/equipment (capex), leaving −Rp875bn short in cash.",
         "substitution": "307.025 − 1,182.360 = −875.335",
         "result": "−Rp875.335bn",
         "note": "Inputs in Rp billion.",
@@ -2150,6 +2151,7 @@
       {
         "label": "Capex Coverage",
         "formula": "CFO / Cash capex × 100%",
+        "explanation": "Day-to-day operations paid for only 26% of tech/equipment spending; the remaining 74% came from cash reserves or financing.",
         "substitution": "307.025 / 1,182.360 × 100% = 25.9671%",
         "result": "25.97%",
         "note": "Inputs in Rp billion.",
@@ -2159,6 +2161,7 @@
       {
         "label": "Accrual Ratio",
         "formula": "(Net income − CFO) / Closing assets × 100%",
+        "explanation": "Compares paper loss (−Rp1,502bn) vs. real operating cash (+Rp307bn); negative means actual cash did better than paper profit.",
         "substitution": "(−1,501.685 − 307.025) / 45,757.642 × 100% = −3.9528%",
         "result": "−3.95%",
         "note": "Closing assets follow the milestone definition. Inputs in Rp billion.",
@@ -2168,6 +2171,7 @@
       {
         "label": "Associates / Assets",
         "formula": "(Tokopedia + Bank Jago carrying values) / Total assets × 100%",
+        "explanation": "Nearly a quarter of GoTo's balance-sheet assets are ownership stakes in Tokopedia and Bank Jago rather than core operating assets.",
         "substitution": "(7,432,326 + 2,894,921) / 45,757,642 × 100% = 22.5694%",
         "result": "22.57%",
         "note": "Inputs in Rp million.",
@@ -2177,6 +2181,7 @@
       {
         "label": "Related-Party Revenue Share",
         "formula": "Related-party revenue / Total revenue × 100%",
+        "explanation": "About 7% of sales come from partner companies (e.g., Tokopedia/Bank Jago), so analysts check that pricing is fair and collected in cash.",
         "substitution": "1,306,110 / 18,322,117 × 100% ≈ 7.13%",
         "result": "7.13%",
         "note": "Inputs in Rp million.",
@@ -2186,6 +2191,7 @@
       {
         "label": "20% Asset Haircut Sensitivity",
         "formula": "20% × (Tokopedia carrying value + Level 3 investments)",
+        "explanation": "A stress test: if Tokopedia and hard-to-price private investments (Level 3) drop 20% in value, book value drops Rp1.82T pre-tax.",
         "substitution": "20% × (7,432,326 + 1,668,574) = 1,820,180",
         "result": "Rp1,820.180bn",
         "note": "Inputs in Rp million. Hypothetical before-tax sensitivity; embedded goodwill is already included.",
@@ -2298,7 +2304,7 @@
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
           "The model uses unrounded source ratios."
         ],
-        "formula": "Average of exact 2024 and 2025 revenue-growth rates"
+        "formula": "((Revenue 2024 / Revenue 2023 − 1) + (Revenue 2025 / Revenue 2024 − 1)) / 2"
       },
       {
         "heading": "Historical Cost Ratios",
@@ -2309,7 +2315,7 @@
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
           "The displayed historical percentages are rounded. Forecast calculations use source precision."
         ],
-        "formula": "Average historical cash operating-cost ratios"
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3"
       },
       {
         "heading": "Scenario Assumptions",
@@ -2320,7 +2326,7 @@
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
           "The displayed historical percentages are rounded. Forecast calculations use source precision."
         ],
-        "formula": "Average historical cash operating-cost ratios"
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3"
       }
     ],
     "course_basis": [
@@ -2595,7 +2601,7 @@
     "calculation_notes": [
       {
         "label": "Base Revenue Growth",
-        "formula": "Average of exact 2024 and 2025 revenue-growth rates",
+        "formula": "((Revenue 2024 / Revenue 2023 − 1) + (Revenue 2025 / Revenue 2024 − 1)) / 2",
         "substitution": "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
         "result": "11.4% displayed",
         "note": "The model uses unrounded source ratios.",
@@ -2604,7 +2610,7 @@
       },
       {
         "label": "Operating-Cost Assumption",
-        "formula": "Average historical cash operating-cost ratios",
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3",
         "substitution": "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
         "result": "78.5% displayed",
         "note": "The displayed historical percentages are rounded. Forecast calculations use source precision.",
@@ -6589,7 +6595,7 @@
           "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
           "The model uses unrounded source ratios."
         ],
-        "formula": "Average of exact 2024 and 2025 revenue-growth rates"
+        "formula": "((Revenue 2024 / Revenue 2023 − 1) + (Revenue 2025 / Revenue 2024 − 1)) / 2"
       },
       {
         "heading": "Historical Cost Ratios",
@@ -6600,7 +6606,7 @@
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
           "The displayed historical percentages are rounded. Forecast calculations use source precision."
         ],
-        "formula": "Average historical cash operating-cost ratios"
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3"
       },
       {
         "heading": "Scenario Assumptions",
@@ -6611,7 +6617,7 @@
           "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
           "The displayed historical percentages are rounded. Forecast calculations use source precision."
         ],
-        "formula": "Average historical cash operating-cost ratios"
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3"
       }
     ],
     "study_explanation": "This appendix documents every Milestone 4 key forecast assumption across Optimistic, Base, and Conservative cases (11.39% revenue growth, 42.28% COGS, 78.49% OpEx, D&A, DSO/DIO/DPO working capital, 16.32% capex, 22% statutory tax, and 6.91% interest) along with each economic rationale and fixed-vs-variable cost judgment.",
@@ -6621,7 +6627,7 @@
     "calculation_notes": [
       {
         "label": "Base Revenue Growth",
-        "formula": "Average of exact 2024 and 2025 revenue-growth rates",
+        "formula": "((Revenue 2024 / Revenue 2023 − 1) + (Revenue 2025 / Revenue 2024 − 1)) / 2",
         "substitution": "[(15,894.462 / 14,785.492 − 1) + (18,322.117 / 15,894.462 − 1)] / 2 = 11.3869916%",
         "result": "11.4% displayed",
         "note": "The model uses unrounded source ratios.",
@@ -6630,7 +6636,7 @@
       },
       {
         "label": "Operating-Cost Assumption",
-        "formula": "Average historical cash operating-cost ratios",
+        "formula": "(Opex/Rev 2023 + Opex/Rev 2024 + Opex/Rev 2025) / 3",
         "substitution": "(117.0% + 62.8% + 55.7%) / 3 ≈ 78.5%",
         "result": "78.5% displayed",
         "note": "The displayed historical percentages are rounded. Forecast calculations use source precision.",

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
+import katex from 'katex'
 import FinancialSlide from './FinancialSlide.vue'
 import fullModulesData from './data/full_slides_knowledgebase.json'
 import assignmentsData from './data/all_assignments_bundle.json'
@@ -1850,15 +1851,47 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
   }
 }
 
+const renderMathLatex = (str) => {
+  if (!str) return ''
+  const trimmed = String(str).trim()
+  if (trimmed.includes('15,894.462') && trimmed.includes('14,785.492')) {
+    try {
+      const tex = '\\frac{\\left(\\frac{15{,}894.462}{14{,}785.492} - 1\\right) + \\left(\\frac{18{,}322.117}{15{,}894.462} - 1\\right)}{2} = 11.3869916\\% \\approx 11.4\\%'
+      return `<div class="katex-calc-display">${katex.renderToString(tex, { throwOnError: false, displayMode: true })}</div>`
+    } catch {
+      return ''
+    }
+  }
+  if (trimmed.startsWith('$$') && trimmed.endsWith('$$') && trimmed.length > 4) {
+    try {
+      return `<div class="katex-calc-display">${katex.renderToString(trimmed.slice(2, -2), { throwOnError: false, displayMode: true })}</div>`
+    } catch {
+      return ''
+    }
+  }
+  if (trimmed.startsWith('$') && trimmed.endsWith('$') && trimmed.length > 2) {
+    try {
+      return `<span class="katex-calc-inline">${katex.renderToString(trimmed.slice(1, -1), { throwOnError: false, displayMode: false })}</span>`
+    } catch {
+      return ''
+    }
+  }
+  return ''
+}
+
 const formatGreenNumbers = (raw) => {
   if (!raw) return ''
+  const mathHtml = renderMathLatex(raw)
+  if (mathHtml) {
+    return mathHtml
+  }
   const escaped = String(raw)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
-  const numPattern = /((?:[−\-+]?\s*(?:Rp|US\$)\s*\d[\d.,]*(?:\s*(?:bn|M|T|m|%|x))?)|(?:[−\-+]?\d[\d.,]*(?:%|x|\s*(?:bn|T)\b))|(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?)|(?:\d+\.\d+))/g
+  const numPattern = /((?:[−\-+]?\s*(?:Rp|US\$)\s*\d(?:[\d.,]*\d)?(?:\s*(?:(?:bn|M|T|m)\b|%|x))?)|(?:[−\-+]?\d(?:[\d.,]*\d)?(?:%|x|\s*(?:bn|T)\b))|(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?)|(?:\d+\.\d+))/g
   return escaped.replace(numPattern, (match) => {
     const cls = /^[−\-]/.test(match.trim()) ? 'gojek-num-neg' : 'gojek-num'
     return `<span class="${cls}">${match}</span>`
@@ -1928,42 +1961,18 @@ const selectDrawerFormulaCell = (calc, rowIndex, colIndex) => {
   if (!calc) return
   const colLetter = ['A', 'B', 'C', 'D'][colIndex] || 'A'
   const refCode = `${colLetter}${rowIndex + 2}`
-  if (colIndex === 0) {
-    activeDrawerFormulaCell.value = {
-      ref: refCode,
-      rowIndex,
-      colIndex,
-      rawFormula: '',
-      formula: `= ${calc.source || calc.label}`,
-      val: calc.label,
-    }
-  } else if (colIndex === 1) {
-    activeDrawerFormulaCell.value = {
-      ref: refCode,
-      rowIndex,
-      colIndex,
-      rawFormula: calc.formula || '',
-      formula: `= ${calc.formula}  →  ${calc.substitution}`,
-      val: calc.result,
-    }
-  } else if (colIndex === 2) {
-    activeDrawerFormulaCell.value = {
-      ref: refCode,
-      rowIndex,
-      colIndex,
-      rawFormula: calc.formula || '',
-      formula: `= ${calc.formula}`,
-      val: calc.substitution || calc.result,
-    }
-  } else {
-    activeDrawerFormulaCell.value = {
-      ref: refCode,
-      rowIndex,
-      colIndex,
-      rawFormula: calc.formula || '',
-      formula: `= ${calc.substitution}${calc.note ? ' (' + calc.note + ')' : ''}`,
-      val: calc.result,
-    }
+  const explanation = calc.explanation || calc.note || ''
+  const numExpr = calc.substitution || calc.formula || calc.source || calc.label
+  const textFormula = calc.formula && calc.formula !== calc.substitution ? calc.formula : ''
+  activeDrawerFormulaCell.value = {
+    ref: refCode,
+    rowIndex,
+    colIndex,
+    rawFormula: calc.formula || '',
+    formula: `= ${numExpr}`,
+    textFormula,
+    val: calc.result,
+    explanation,
   }
 }
 
@@ -2011,9 +2020,66 @@ const getDrawerCellClasses = (rowIndex, colIndex) => {
   }
 }
 
+const activeScheduleCell = ref(null)
+
+const findMatchingCalcNoteForRow = (row, slide) => {
+  const notes = slide?.calculation_notes
+  if (!notes?.length || !Array.isArray(row) || !row.length) return null
+  const rowText = row.map(c => String(c || '').toLowerCase()).join(' ')
+  const firstCol = String(row[0] || '').toLowerCase()
+  return notes.find((c) => {
+    const lbl = String(c.label || '').toLowerCase()
+    const res = String(c.result || '').toLowerCase().replace(/\s*displayed$/i, '').trim()
+    if (lbl && (firstCol.includes(lbl) || lbl.includes(firstCol))) return true
+    if (firstCol.includes('revenue growth') && lbl.includes('revenue growth')) return true
+    if (firstCol.includes('cogs') && lbl.includes('cogs')) return true
+    if (firstCol.includes('operating expenses') && lbl.includes('operating')) return true
+    if (res && row.some(cell => String(cell || '').toLowerCase().trim() === res)) {
+      const words = lbl.split(/\s+/).filter(w => w.length > 3)
+      if (words.some(w => rowText.includes(w))) return true
+    }
+    return false
+  }) || null
+}
+
+const selectScheduleCell = (scheduleIdx, schedule, row, rIdx, cIdx) => {
+  const colLetter = String.fromCharCode(65 + (cIdx % 26))
+  const refCode = `${colLetter}${rIdx + 2}`
+  const cellVal = row[cIdx] ?? ''
+  const headerName = schedule?.headers?.[cIdx] || colLetter
+  const isBaseCol = cIdx === 1 || cIdx === 2
+  const isOptCol = cIdx === 3 || cIdx === 4
+  const isConsCol = cIdx === 5 || cIdx === 6
+  const matchedCalc = isBaseCol ? findMatchingCalcNoteForRow(row, detailDrawerItem.value?.slide) : null
+  const colRationale = isOptCol && row[4] ? String(row[4]) : isConsCol && row[6] ? String(row[6]) : row[2] ? String(row[2]) : ''
+  let formulaExpr = matchedCalc ? `= ${matchedCalc.substitution || matchedCalc.formula || cellVal}` : `= ${cellVal}`
+  let textFormula = matchedCalc?.formula || ''
+  let explanation = matchedCalc?.explanation || matchedCalc?.note || colRationale
+
+  // Clarify scenario assumptions (e.g., Optimistic COGS 38.1%) when clicking scenario columns
+  if (!matchedCalc && String(row[0] || '').toLowerCase().includes('cogs') && isOptCol) {
+    formulaExpr = '= 4,192,326 / 10,994,113 × 100% = 38.13% ≈ 38.1%'
+    textFormula = '1H 2026 Cost of Revenues / 1H 2026 Net Revenues (LKFS 30 June 2026, p. 2/1)'
+    explanation = "From GoTo's unaudited 1H 2026 financial statement (30 June 2026): Rp4,192,326m cost of revenues ÷ Rp10,994,113m net revenues = 38.13%."
+  }
+
+  activeScheduleCell.value = {
+    scheduleIdx,
+    rIdx,
+    cIdx,
+    ref: refCode,
+    val: `${headerName}: ${cellVal}`,
+    formula: formulaExpr,
+    rawSubstitution: matchedCalc?.substitution || '',
+    textFormula,
+    explanation,
+  }
+}
+
 watch(detailDrawerItem, (item) => {
   expandedDrawerSection.value = null
   isDrawerFormulaLocked.value = false
+  activeScheduleCell.value = null
   const notes = item?.slide?.calculation_notes
   if (!notes?.length) {
     activeDrawerFormulaCell.value = null
@@ -5250,7 +5316,8 @@ const isColNumeric = (tbl, cIdx) => {
                 <span class="worksheet-fx">fx</span>
                 <code :title="activeDrawerFormulaCell ? activeDrawerFormulaCell.formula : ''">
                   <template v-if="activeDrawerFormulaCell">
-                    <template v-for="(tok, tIdx) in splitFormulaTokens(activeDrawerFormulaCell.formula, activeDrawerFormulaRefs)" :key="tIdx">
+                    <div v-if="renderMathLatex(activeDrawerFormulaCell.formula)" v-html="renderMathLatex(activeDrawerFormulaCell.formula)"></div>
+                    <template v-else v-for="(tok, tIdx) in splitFormulaTokens(activeDrawerFormulaCell.formula, activeDrawerFormulaRefs)" :key="tIdx">
                       <span v-if="tok.colorIdx !== null" class="formula-ref-token" :class="`ref-color-${tok.colorIdx}`">{{ tok.text }}</span>
                       <template v-else>{{ tok.text }}</template>
                     </template>
@@ -5262,6 +5329,13 @@ const isColNumeric = (tbl, cIdx) => {
                 <span class="formula-val-tag">VALUE:</span>
                 <span class="formula-val-display">{{ activeDrawerFormulaCell ? activeDrawerFormulaCell.val : '—' }}</span>
                 <span v-if="isDrawerFormulaLocked" class="formula-lock-badge">{{ lang === 'id' ? 'TERKUNCI (klik di luar untuk lepas)' : 'LOCKED (click outside cell to unlock)' }}</span>
+              </div>
+              <div v-if="activeDrawerFormulaCell && activeDrawerFormulaCell.textFormula" class="formula-bar-bottom">
+                <span class="formula-val-tag">FORMULA:</span>
+                <span class="formula-text-display">{{ activeDrawerFormulaCell.textFormula }}</span>
+              </div>
+              <div v-if="activeDrawerFormulaCell && activeDrawerFormulaCell.explanation" class="formula-bar-explanation">
+                {{ activeDrawerFormulaCell.explanation }}
               </div>
             </div>
             <div class="trace-mini-table-wrap drawer-support-table-wrap drawer-formula-table-wrap" tabindex="0" :aria-label="lang === 'id' ? 'Tabel rumus dan perhitungan' : 'Formulas and calculations table'">
@@ -5316,7 +5390,11 @@ const isColNumeric = (tbl, cIdx) => {
                       @mouseenter="hoverDrawerFormulaCell(calculation, index, 3)"
                       @click="selectDrawerFormulaCell(calculation, index, 3)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 3)"
-                    >{{ calculation.substitution }}<small v-if="calculation.note" class="drawer-formula-note">{{ calculation.note }}</small></td>
+                    >
+                      <div v-if="renderMathLatex(calculation.substitution)" v-html="renderMathLatex(calculation.substitution)"></div>
+                      <template v-else>{{ calculation.substitution }}</template>
+                      <small v-if="calculation.note" class="drawer-formula-note">{{ calculation.note }}</small>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -5362,12 +5440,45 @@ const isColNumeric = (tbl, cIdx) => {
                   >{{ expandedDrawerSection === 'schedules' ? '⤡' : '⤢' }}</button>
                 </span>
               </h4>
+              <div class="worksheet-formula-bar drawer-worksheet-formula-bar" :class="{ 'worksheet-active': activeScheduleCell }">
+                <div class="formula-bar-top">
+                  <span class="worksheet-cell-ref">{{ activeScheduleCell ? activeScheduleCell.ref : 'fx' }}</span>
+                  <span class="worksheet-fx">fx</span>
+                  <code :title="activeScheduleCell ? activeScheduleCell.formula : ''">
+                    <template v-if="activeScheduleCell">
+                      <div v-if="renderMathLatex(activeScheduleCell.rawSubstitution || activeScheduleCell.formula)" v-html="renderMathLatex(activeScheduleCell.rawSubstitution || activeScheduleCell.formula)"></div>
+                      <template v-else>{{ activeScheduleCell.formula }}</template>
+                    </template>
+                    <template v-else>{{ lang === 'id' ? 'Klik atau arahkan kursor ke sel tabel untuk melihat rumus' : 'Click or hover any cell to inspect formula & source' }}</template>
+                  </code>
+                </div>
+                <div class="formula-bar-bottom">
+                  <span class="formula-val-tag">VALUE:</span>
+                  <span class="formula-val-display">{{ activeScheduleCell ? activeScheduleCell.val : '—' }}</span>
+                </div>
+                <div v-if="activeScheduleCell && activeScheduleCell.textFormula" class="formula-bar-bottom">
+                  <span class="formula-val-tag">FORMULA:</span>
+                  <span class="formula-text-display">{{ activeScheduleCell.textFormula }}</span>
+                </div>
+                <div v-if="activeScheduleCell && activeScheduleCell.explanation" class="formula-bar-explanation">
+                  {{ activeScheduleCell.explanation }}
+                </div>
+              </div>
               <div v-for="(schedule,index) in detailDrawerItem.slide.supporting_schedules" :key="'schedule-'+index" class="drawer-trace-card">
                 <h4 class="drawer-schedule-title">{{ schedule.title }}</h4>
                 <div class="drawer-schedule-scroll" tabindex="0" :aria-label="schedule.title">
                   <table class="drawer-schedule-table">
                     <thead><tr><th v-for="(cell,c) in schedule.headers" :key="c">{{ cell }}</th></tr></thead>
-                    <tbody><tr v-for="(row,r) in schedule.rows" :key="r"><td v-for="(cell,c) in row" :key="c">{{ cell }}</td></tr></tbody>
+                    <tbody>
+                      <tr v-for="(row,r) in schedule.rows" :key="r">
+                        <td
+                          v-for="(cell,c) in row"
+                          :key="c"
+                          :class="{ 'worksheet-selected': activeScheduleCell && activeScheduleCell.scheduleIdx === index && activeScheduleCell.rIdx === r && activeScheduleCell.cIdx === c }"
+                          @click="selectScheduleCell(index, schedule, row, r, c)"
+                        >{{ cell }}</td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
                 <p v-if="schedule.note" class="trace-mapping-note">{{ schedule.note }}</p>
@@ -7620,6 +7731,14 @@ const isColNumeric = (tbl, cIdx) => {
   border-color: #315c74;
 }
 
+.drawer-worksheet-formula-bar {
+  min-height: 110px;
+  height: auto;
+  max-height: none;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
 .formula-bar-top {
   display: flex;
   align-items: center;
@@ -7688,6 +7807,15 @@ const isColNumeric = (tbl, cIdx) => {
   padding-left: 2px;
 }
 
+.formula-bar-explanation {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #334155;
+  border-top: 1px solid #cbd5e1;
+  padding: 5px 2px 0;
+  margin-top: 2px;
+}
+
 .formula-val-tag {
   color: #61717d;
   font-weight: 600;
@@ -7705,6 +7833,13 @@ const isColNumeric = (tbl, cIdx) => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.formula-text-display {
+  color: #334155;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .val-table-wrap {
