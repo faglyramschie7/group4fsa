@@ -103,7 +103,7 @@ const editorialRows = computed(() => {
       data_origin: '2025 Annual Report p. 468 & LK GOTO FY2025 p. 133 (Note 29: Segment Operations)',
       highlight_terms: ['12,361', '12,361,259', 'On-Demand', 'Gojek'],
       evidence_img: '/evidence/annual_report_p468_segment_note29.png',
-      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations) — On-Demand Services Net Third-Party Revenue = Rp 12,361,259m',
+      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations): On-Demand Services Net Third-Party Revenue = Rp 12,361,259m',
     },
     {
       name: 'GoTo Financial',
@@ -123,7 +123,7 @@ const editorialRows = computed(() => {
       data_origin: '2025 Annual Report p. 468 & LK GOTO FY2025 p. 133 (Note 29: Segment Operations)',
       highlight_terms: ['5,191', '5,190,617', 'Financial technology', 'GoPay'],
       evidence_img: '/evidence/annual_report_p468_segment_note29.png',
-      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations) — Financial Technology Net Third-Party Revenue = Rp 5,190,617m',
+      evidence_caption: '2025 Annual Report p. 468 (Note 29: Segment Operations): Financial Technology Net Third-Party Revenue = Rp 5,190,617m',
     },
     {
       name: 'Tokopedia',
@@ -142,7 +142,7 @@ const editorialRows = computed(() => {
       data_origin: 'LK GOTO FY2025 Note 14 (Associates) & Annual Report p. 468 (Note 29)',
       highlight_terms: ['24.99%', '819,724', 'Tokopedia'],
       evidence_img: '/evidence/goto_note14_associates_tokopedia_jago.png',
-      evidence_caption: 'LK GOTO FY2025 Note 14 — Investments in Associates (PT Tokopedia 24.99% & Bank Jago)',
+      evidence_caption: 'LK GOTO FY2025 Note 14: Investments in Associates (PT Tokopedia 24.99% & Bank Jago)',
     },
   ]
   if (props.slide.slide_num === 5) return [
@@ -162,7 +162,7 @@ const editorialRows = computed(() => {
       data_origin: 'LK GOTO FY2025 Consolidated Statement of Cash Flows & Milestone 3!Calculations D12',
       highlight_terms: ['307', '307,183', 'Operating'],
       evidence_img: '/evidence/goto_cash_flows_p1_highlighted.png',
-      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 1) — Operating Cash Flow = +Rp 307,183m',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 1): Operating Cash Flow = +Rp 307,183m',
     },
     {
       name: id ? 'Belanja modal' : 'Capital expenditure',
@@ -181,7 +181,7 @@ const editorialRows = computed(() => {
       data_origin: 'LK GOTO FY2025 Cash Flows (Investing) & Milestone 3!Calculations D36',
       highlight_terms: ['1,182', '25.97%', '26%'],
       evidence_img: '/evidence/goto_cash_flows_p2_highlighted.png',
-      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 2) — Investing Capex & Cash Bridge',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows (Part 2): Investing Capex & Cash Bridge',
     },
     {
       name: id ? 'Arus kas bebas' : 'Free cash flow',
@@ -198,7 +198,7 @@ const editorialRows = computed(() => {
       data_origin: 'Milestone 3!Calculations D37 (−875,335)',
       highlight_terms: ['875', 'Free cash flow'],
       evidence_img: '/evidence/goto_cash_flows_p2_highlighted.png',
-      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows — CFO vs. Investing Capex Shortfall',
+      evidence_caption: 'LK GOTO FY2025 Consolidated Statement of Cash Flows: CFO vs. Investing Capex Shortfall',
     },
   ]
   if (props.slide.slide_num === 11) return [
@@ -217,7 +217,7 @@ const editorialRows = computed(() => {
       data_origin: 'Final Report Section 7 & Milestone 3!Calculations D36:D37',
       highlight_terms: ['1.2T', 'capex', 'CFO'],
       evidence_img: '/evidence/goto_cash_flows_p1_highlighted.png',
-      evidence_caption: 'LK GOTO FY2025 Cash Flows — Baseline CFO (+Rp 307 bn) vs. > Rp 1.2T Self-Funding Hurdle',
+      evidence_caption: 'LK GOTO FY2025 Cash Flows: Baseline CFO (+Rp 307 bn) vs. > Rp 1.2T Self-Funding Hurdle',
     },
     {
       name: id ? '02  Disiplin biaya' : '02  Operating cost discipline',
@@ -234,7 +234,7 @@ const editorialRows = computed(() => {
       data_origin: 'Milestone 4 & Assignment 14 Sensitivity/Breakeven',
       highlight_terms: ['56%', '78.5%', 'OpEx'],
       evidence_img: '/evidence/goto_gross_profit_opex_highlighted.png',
-      evidence_caption: 'LK GOTO FY2025 Income Statement — Gross Profit vs. Operating Expenses Structure',
+      evidence_caption: 'LK GOTO FY2025 Income Statement: Gross Profit vs. Operating Expenses Structure',
     },
     {
       name: id ? '03  Laba berkelanjutan' : '03  Sustained profitability',

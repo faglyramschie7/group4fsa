@@ -72,7 +72,7 @@ GoTo competes through affordable prices, convenience and connections between ser
 
 FY2025 sales and marketing expense is about Rp3.09T (+8% YoY) and product-development expense is Rp2.15T (+23% YoY). Marketing includes more than customer discounts, and product development includes the cost of maintaining and improving services. These figures describe whole expense categories. They do not measure only spending directly caused by rivalry.
 
-Because ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN—the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).
+Because ride and food competition is tough, GoTo pushed GoPay consumer lending (PayLater and cash loans) to earn extra interest and fees. Net consumer loans grew +72.6% from Rp1,582bn (2024) to Rp2,731bn (2025). At the same time, credit-loss provisions (CKPN, the buffer set aside for loans borrowers might not repay) more than doubled from Rp174bn to Rp408bn (+134%).
 
 A bigger buffer is not a customer default rate and does not mean every borrower is failing to pay; it grows because GoTo lent out much more money and may be estimating higher borrower risk. Lending to more users can boost revenue, but it also increases potential loan losses. The milestone rates rivalry High, buyers Medium, substitutes Medium, suppliers Low and new entrants Low–moderate. Individual buyers are small, while their ability to choose competing apps still affects the business.
 
@@ -147,7 +147,7 @@ Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other ite
 ### Sidebar: the full explanation in simple language
 GoTo has Rp21.76T of cash. The current ratio of 2.73x means current assets are 2.73 times current liabilities. Current assets include more than cash, and the liabilities do not all fall due on the same day. These balances describe near-term resources and claims.
 
-GoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn—the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.
+GoTo’s interest-bearing debt-to-equity ratio is 0.27x, calculated as Total Interest-Bearing Debt (Rp7,743bn) divided by consolidated Total Shareholders’ Equity (Rp28,712bn, the book equity base used in Milestone 2 and the Week 6 worksheet, rather than parent-only equity). This indicates conservative balance-sheet leverage, with debt financing equal to 27% of total book equity. The interest-coverage ratio compares operating profit with interest expense. Its −0.71x result arises because operating profit is negative. This means current operating earnings do not cover the interest expense, even though cash remains in the bank.
 
 The completed Week 6 Z-score combines five ratios: 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + X5. The submitted worksheet uses book equity divided by liabilities for X4. The result is −4.721750. Accumulated losses of −Rp215,334,000 million contribute most of the negative score.
 
@@ -457,7 +457,7 @@ Terminal growth is a manual 3% assumption in Assignment 14. The workbook fundame
 
 DCF and RI use different cash, tax and capital-base treatments. Their numerical outputs therefore differ even though they share the submitted operating forecast.
 
-### Sidebar calculation: DCF vs. Residual Income Side-by-Side Valuation Bridge — Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
+### Sidebar calculation: DCF vs. Residual Income Side-by-Side Valuation Bridge: Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
 | Valuation Component (Rp bn / Rp per Share) | DCF Model (WACC = 7.76%) | Residual Income (Ke = 8.45%) |
 | --- | --- | --- |
 | 2026F–2028F annual inputs | FCFF: (7,738.7) / (7,006.3) / (7,152.6) | RI: (6,163.7) / (6,203.6) / (6,253.9) |
@@ -590,7 +590,7 @@ Risks: Better operations could make the base too cautious. Credit losses, impair
 ---
 
 ## Appendix Slide 13: Appendix A1: Revenue Bridge & Competitive Risk Schedules
-*Section: Appendix — Strategy & industry | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Strategy & industry | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Revenue bridge to consolidated GoTo revenue
 
@@ -628,7 +628,7 @@ Tokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from T
 ---
 
 ## Appendix Slide 14: Appendix A2: Historical & Pro Forma Summary (FY2023–2028F) & DuPont
-*Section: Appendix — Financial analysis | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Financial analysis | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Consolidated Historical & Pro Forma Financial Summary (Rp billion)
 
@@ -704,7 +704,7 @@ Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other ite
 ---
 
 ## Appendix Slide 15: Appendix A3: Liquidity, Working Capital, Week 6 Z-Score & Footnotes
-*Section: Appendix — Financial & accounting quality | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Financial & accounting quality | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Completed Week 6 five-factor calculation
 
@@ -741,7 +741,7 @@ Altman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly
 ---
 
 ## Appendix Slide 16: Appendix A4: Scenario Drivers, Forecast Rationales & Cost Behavior
-*Section: Appendix — Forecast assumptions | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Forecast assumptions | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### All key assumptions and the reason for each
 
@@ -782,7 +782,7 @@ Scenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% ca
 ---
 
 ## Appendix Slide 17: Appendix A5: Three-Year Pro Forma Statements & Operating Leverage
-*Section: Appendix — Three-year pro forma | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Three-year pro forma | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Base projected income statement
 
@@ -874,7 +874,7 @@ Fixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954
 ---
 
 ## Appendix Slide 18: Appendix A6: Dated WACC, DCF, Residual Income & FY2025 Grab P/B Schedules
-*Section: Appendix — Valuation schedules | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
+*Section: Appendix: Valuation schedules | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)
 
@@ -916,7 +916,7 @@ Fixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954
 ### Sidebar: the full explanation in simple language
 This appendix consolidates all valuation backup schedules: the dated CAPM & WACC build-up (Ke 8.45%, after-tax Kd 5.39%, WACC 7.76%), the side-by-side DCF vs. Residual Income bridge using the same Milestone 4 forecast and g = 3.0%, beta/growth sensitivity, 2026F–2028F FCFF and RI build-ups, and the same-basis actual FY2025 Grab P/B cross-check (Rp91.0/share) with peer exclusion rationales for Sea, BUKA, and BELI.
 
-### Sidebar calculation: DCF vs. Residual Income Side-by-Side Valuation Bridge — Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
+### Sidebar calculation: DCF vs. Residual Income Side-by-Side Valuation Bridge: Same Forecast & g = 3.0% (Full Schedules in Appendix A2)
 | Valuation Component (Rp bn / Rp per Share) | DCF Model (WACC = 7.76%) | Residual Income (Ke = 8.45%) |
 | --- | --- | --- |
 | 2026F–2028F annual inputs | FCFF: (7,738.7) / (7,006.3) / (7,152.6) | RI: (6,163.7) / (6,203.6) / (6,253.9) |

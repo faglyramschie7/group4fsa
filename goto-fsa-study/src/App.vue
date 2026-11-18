@@ -1699,8 +1699,8 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
         : 'High Capital + Tech Scale + Licensing = High Barriers to Entry (Low–Moderate Threat)'
     } else if (fKey.includes('supplier') || fKey.includes('pemasok')) {
       detail = isId
-        ? `Pengemudi, merchant, dan vendor teknologi GoTo tersebar dalam jumlah banyak—tidak ada satu pemasok pun yang bisa mengendalikan bisnis GoTo. Pengemudi dan merchant kecil bergantung pada platform GoTo untuk pendapatan harian, sehingga bargaining power pemasok rendah untuk menuntut komisi lebih tinggi.`
-        : `GoTo's drivers, merchants, and tech vendors are fragmented—no single supplier controls GoTo's business. Individual drivers and small merchants depend on GoTo's platform for daily income, so suppliers have low bargaining power to demand higher fees.`
+        ? `Pengemudi, merchant, dan vendor teknologi GoTo tersebar dalam jumlah banyak, sehingga tidak ada satu pemasok pun yang bisa mengendalikan bisnis GoTo. Pengemudi dan merchant kecil bergantung pada platform GoTo untuk pendapatan harian, sehingga bargaining power pemasok rendah untuk menuntut komisi lebih tinggi.`
+        : `GoTo's drivers, merchants, and tech vendors are fragmented, so no single supplier controls GoTo's business. Individual drivers and small merchants depend on GoTo's platform for daily income, so suppliers have low bargaining power to demand higher fees.`
       formulaText = isId
         ? 'Pengemudi & Merchant Tersebar + Ketergantungan Platform = Bargaining Power Pemasok Rendah'
         : 'Fragmented Drivers & Merchants + Platform Dependency = Low Supplier Bargaining Power'
@@ -1713,8 +1713,8 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
         : 'Fragmented Users (Low Power) + Near-Zero Switching Costs = Medium Buyer Bargaining Power'
     } else if (fKey.includes('substitut') || fKey.includes('substitusi')) {
       detail = isId
-        ? `Pelanggan tidak wajib memakai aplikasi GoTo—mereka bisa naik transportasi umum atau kendaraan pribadi daripada GoRide, makan di tempat daripada GoFood, atau memakai transfer bank/QRIS daripada GoPay. Alternatif di luar platform ini membatasi seberapa tinggi GoTo bisa menaikkan harga sebelum pengguna beralih.`
-        : `Customers do not have to use GoTo's app—they can take public transit or drive themselves instead of GoRide, eat at restaurants instead of GoFood, or use regular bank transfers/QRIS instead of GoPay. These outside alternatives cap how much GoTo can raise prices before users switch away.`
+        ? `Pelanggan tidak wajib memakai aplikasi GoTo; mereka bisa naik transportasi umum atau kendaraan pribadi daripada GoRide, makan di tempat daripada GoFood, atau memakai transfer bank/QRIS daripada GoPay. Alternatif di luar platform ini membatasi seberapa tinggi GoTo bisa menaikkan harga sebelum pengguna beralih.`
+        : `Customers do not have to use GoTo's app; they can take public transit or drive themselves instead of GoRide, eat at restaurants instead of GoFood, or use regular bank transfers/QRIS instead of GoPay. These outside alternatives cap how much GoTo can raise prices before users switch away.`
       formulaText = isId
         ? 'Transportasi Umum + Makan di Tempat + Transfer Bank/QRIS = Alternatif Luar Membatasi Pricing Power (Sedang)'
         : 'Public Transit + Dine-In + Bank Transfers/QRIS = Outside Alternatives Capping Pricing Power (Medium)'
@@ -2527,7 +2527,7 @@ const universalSearchIndex = computed(() => {
       location: `${slideTag} • ${s.section_tag}`,
       title: slideTitle,
       value: s.section_tag || '',
-      rawContext: [s.display_takeaway, s.subtitle, s.speaker_notes, s.methodology_note].filter(Boolean).join(' — '),
+      rawContext: [s.display_takeaway, s.subtitle, s.speaker_notes, s.methodology_note].filter(Boolean).join(' - '),
       priorityBoost: 45,
       searchParts: [
         slideTag, s.title, s.display_title, s.section_tag, s.section_name,
@@ -2724,7 +2724,7 @@ const universalSearchIndex = computed(() => {
           location: `${slideTag} • ${sched.title}`,
           title: String(sRow[0] ?? sched.title),
           value: sRow.slice(1).filter(Boolean).join(' | '),
-          rawContext: `${sched.title}: ${sRow.join(' | ')}${sched.note ? ' — ' + sched.note : ''}`,
+          rawContext: `${sched.title}: ${sRow.join(' | ')}${sched.note ? ' - ' + sched.note : ''}`,
           priorityBoost: 62,
           searchParts: [sched.title, sched.headers, sRow, sched.note],
           action: {
@@ -2803,7 +2803,7 @@ const universalSearchIndex = computed(() => {
         location: `${slideTag} • ${ev.file || ''}`,
         title: ev.metric,
         value: ev.value,
-        rawContext: `${ev.file} — ${ev.location}`,
+        rawContext: `${ev.file} - ${ev.location}`,
         priorityBoost: 55,
         searchParts: [ev.metric, ev.value, ev.file, ev.location],
         action: { type: 'pres_audit', slideNum: s.slide_num },
@@ -2873,7 +2873,7 @@ const universalSearchIndex = computed(() => {
         location: slideLoc,
         title: sl.header || `${mod.week} Slide ${sl.slide_num}`,
         value: sl.subtitle || '',
-        rawContext: [sl.goto_explanation, sl.theory_explanation, sl.raw_text].filter(Boolean).join(' — '),
+        rawContext: [sl.goto_explanation, sl.theory_explanation, sl.raw_text].filter(Boolean).join(' - '),
         priorityBoost: 45,
         searchParts: [mod.week, `Slide ${sl.slide_num}`, sl.header, sl.subtitle, sl.raw_text, sl.theory_explanation, sl.goto_explanation],
         action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
@@ -2890,7 +2890,7 @@ const universalSearchIndex = computed(() => {
             location: `${slideLoc} • ${rep.badge || 'GoTo'}`,
             title: rep.title || sl.header,
             value: '',
-            rawContext: [rep.description, rep.analytical_note].filter(Boolean).join(' — '),
+            rawContext: [rep.description, rep.analytical_note].filter(Boolean).join(' - '),
             priorityBoost: 50,
             searchParts: [rep.badge, rep.title, rep.description, rep.analytical_note],
             action: { type: 'lecture_slide', weekId: mod.id, slideNum: sl.slide_num },
@@ -3862,7 +3862,7 @@ const isColNumeric = (tbl, cIdx) => {
           <div class="active-search-info">
             <span class="active-search-icon">🔍</span>
             <span>
-              <strong>"{{ searchQuery }}"</strong> — {{ allSearchResults.length }} {{ uiText.searchHitsLabel }}
+              <strong>"{{ searchQuery }}"</strong> - {{ allSearchResults.length }} {{ uiText.searchHitsLabel }}
             </span>
           </div>
           <div class="active-search-actions">
@@ -4063,7 +4063,7 @@ const isColNumeric = (tbl, cIdx) => {
                 <h3>{{ lang === 'id' ? 'Sumber pembanding yang diperiksa' : 'Checked comparable sources' }}</h3>
                 <p v-for="(source, i) in currentPresSlide.external_sources" :key="i">
                   <a v-if="source.url" :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}</a>
-                  <strong v-else>{{ source.title }}</strong> — {{ source.location }}
+                  <strong v-else>{{ source.title }}</strong> - {{ source.location }}
                 </p>
               </div>
               <div v-if="currentPresSlide.assignment_evidence?.length" class="slide-study-table-wrap">
@@ -5363,20 +5363,17 @@ const isColNumeric = (tbl, cIdx) => {
                     <th
                       scope="row"
                       :class="getDrawerCellClasses(index, 0)"
-                      @mouseenter="hoverDrawerFormulaCell(calculation, index, 0)"
                       @click="selectDrawerFormulaCell(calculation, index, 0)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 0)"
                     >{{ calculation.label }}<small class="drawer-formula-source">{{ calculation.source }}</small></th>
                     <td
                       class="drawer-formula-result"
                       :class="getDrawerCellClasses(index, 1)"
-                      @mouseenter="hoverDrawerFormulaCell(calculation, index, 1)"
                       @click="selectDrawerFormulaCell(calculation, index, 1)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 1)"
                     >{{ calculation.result }}</td>
                     <td
                       :class="getDrawerCellClasses(index, 2)"
-                      @mouseenter="hoverDrawerFormulaCell(calculation, index, 2)"
                       @click="selectDrawerFormulaCell(calculation, index, 2)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 2)"
                     >
@@ -5387,7 +5384,6 @@ const isColNumeric = (tbl, cIdx) => {
                     </td>
                     <td
                       :class="getDrawerCellClasses(index, 3)"
-                      @mouseenter="hoverDrawerFormulaCell(calculation, index, 3)"
                       @click="selectDrawerFormulaCell(calculation, index, 3)"
                       @dblclick="dblClickDrawerFormulaCell(calculation, index, 3)"
                     >
@@ -5428,7 +5424,7 @@ const isColNumeric = (tbl, cIdx) => {
           <Teleport to="#drawer-popout-slot" :disabled="expandedDrawerSection !== 'schedules'">
             <section v-if="detailDrawerItem.slide.supporting_schedules?.length" class="drawer-section">
               <h4 class="drawer-sec-title">
-                <span class="drawer-sec-title-text">{{ lang === 'id' ? 'Angka dan perhitungan lengkap' : 'Numbers and calculations, step by step' }}</span>
+                <span class="drawer-sec-title-text">{{ lang === 'id' ? 'Jadwal & Temuan Pendukung' : 'Supporting Schedules & Findings' }}</span>
                 <span class="drawer-sec-actions">
                   <span class="drawer-sec-count">{{ detailDrawerItem.slide.supporting_schedules.length }}</span>
                   <button

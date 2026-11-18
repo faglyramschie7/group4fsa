@@ -13,7 +13,7 @@
       "Anggreini Ruitan",
       "Galatia Rompas"
     ],
-    "institution": "Magister Manajemen — Universitas Klabat",
+    "institution": "Magister Manajemen: Universitas Klabat",
     "chart_url": null,
     "kpis": [],
     "cards": [],
@@ -220,7 +220,7 @@
       {
         "heading": "Pendapatan",
         "text": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": [
           "12,361.259 + 5,190.617 + 819.724 − 49.483 = 18,322.117",
@@ -231,14 +231,14 @@
       {
         "heading": "Kegiatan Usaha",
         "text": "Gojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       },
       {
         "heading": "Imbalan Jasa Tokopedia",
         "text": "GoTo mencatat sekitar Rp820 miliar pendapatan imbalan jasa dari Tokopedia pada 2025. GoTo memiliki 24,99% saham Tokopedia.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       }
@@ -298,7 +298,7 @@
     "hide_banner": true,
     "display_title": "Model Bisnis",
     "display_takeaway": "",
-    "study_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+    "study_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
     "supporting_schedules": [
       {
         "title": "Revenue bridge to consolidated GoTo revenue",
@@ -347,7 +347,7 @@
         "value": "Rp12,361bn",
         "img": "/visuals/row_gojek.png",
         "text": "Transportasi, makanan dan pengantaran",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "Gojek",
@@ -359,7 +359,7 @@
         "value": "Rp5,191bn",
         "img": "/visuals/row_gofinancial.png",
         "text": "Pembayaran dan pinjaman konsumen",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "GoTo Financial",
@@ -371,7 +371,7 @@
         "value": "Rp820bn",
         "img": "/visuals/row_tokopedia.png",
         "text": "Saham tersisa (24,99%); imbalan jasa e-commerce",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "highlight_terms": [
           "Tokopedia",
@@ -3934,7 +3934,7 @@
     "study_explanation": "DCF mendiskontokan kas bisnis. RI mengurangi laba dengan beban ekuitas lalu menambahkan nilai kini residual income pada ekuitas awal.\n\nKeduanya memakai Milestone 4. Perhitungan terminal membawa hasil akhir yang lemah setelah 2028 dengan asumsi pertumbuhan 3%.\n\nAngka tersebut berasal dari asumsi tugas. Keduanya bukan harga transaksi saham atau kepastian penurunan harga pasar.",
     "supporting_schedules": [
       {
-        "title": "Jembatan Perbandingan DCF vs. Residual Income — Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
+        "title": "Jembatan Perbandingan DCF vs. Residual Income: Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
         "headers": [
           "Komponen Valuasi (Rp miliar / Rp per Saham)",
           "Model DCF (WACC = 7,76%)",
@@ -4966,8 +4966,8 @@
     "topic_id": "appendix_a1",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Strategy & industry",
-    "section_name": "Appendix — Strategy & industry",
+    "section_tag": "Appendix: Strategy & industry",
+    "section_name": "Appendix: Strategy & industry",
     "title": "Lampiran A1: Jembatan Pendapatan & Jadwal Risiko Persaingan",
     "display_title": "Lampiran A1: Jembatan Pendapatan & Jadwal Risiko Persaingan",
     "display_takeaway": "",
@@ -5071,7 +5071,7 @@
       {
         "heading": "Pendapatan",
         "text": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": [
           "12,361.259 + 5,190.617 + 819.724 − 49.483 = 18,322.117",
@@ -5082,14 +5082,14 @@
       {
         "heading": "Kegiatan Usaha",
         "text": "Gojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       },
       {
         "heading": "Imbalan Jasa Tokopedia",
         "text": "GoTo mencatat sekitar Rp820 miliar pendapatan imbalan jasa dari Tokopedia pada 2025. GoTo memiliki 24,99% saham Tokopedia.",
-        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan—bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
+        "detail_explanation": "Pendapatan Gojek Rp12.361 miliar, GoTo Financial Rp5.191 miliar dan imbalan jasa Tokopedia sekitar Rp820 miliar.\n\nGojek menyediakan transportasi, makanan dan pengantaran. GoTo Financial menyediakan pembayaran dan pinjaman. Tokopedia merupakan asosiasi, bukan bisnis yang dikendalikan GoTo.\n\nAngka Tokopedia mencatat pendapatan imbalan jasa e-commerce kontraktual yang dibayarkan Tokopedia (yang kini dikendalikan ByteDance/TikTok) kepada GoTo atas layanan ekosistem dan platform berkelanjutan, bukan seluruh penjualan Tokopedia dan bukan dividen dari kepemilikan saham. Pendapatan Gojek dan GoTo Financial menggambarkan dua bisnis operasi; saham Tokopedia adalah investasi terpisah.",
         "data_origin": "Group 4 Final Report Sections (a)-(b), LK GOTO FY2025 p. 17 & Note 14",
         "calc_steps": []
       }
@@ -5277,8 +5277,8 @@
     "topic_id": "appendix_a2",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Financial analysis",
-    "section_name": "Appendix — Financial analysis",
+    "section_tag": "Appendix: Financial analysis",
+    "section_name": "Appendix: Financial analysis",
     "title": "Lampiran A2: Ringkasan Historis & Pro Forma (FY2023–2028F) & DuPont",
     "display_title": "Lampiran A2: Ringkasan Historis & Pro Forma (FY2023–2028F) & DuPont",
     "display_takeaway": "",
@@ -5831,8 +5831,8 @@
     "topic_id": "appendix_a3",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Financial & accounting quality",
-    "section_name": "Appendix — Financial & accounting quality",
+    "section_tag": "Appendix: Financial & accounting quality",
+    "section_name": "Appendix: Financial & accounting quality",
     "title": "Lampiran A3: Likuiditas, Modal Kerja, Z-Score Minggu 6 & Catatan Kaki",
     "display_title": "Lampiran A3: Likuiditas, Modal Kerja, Z-Score Minggu 6 & Catatan Kaki",
     "display_takeaway": "",
@@ -6398,8 +6398,8 @@
     "topic_id": "appendix_a4",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Forecast assumptions",
-    "section_name": "Appendix — Forecast assumptions",
+    "section_tag": "Appendix: Forecast assumptions",
+    "section_name": "Appendix: Forecast assumptions",
     "title": "Lampiran A4: Pendorong Skenario, Alasan Proyeksi & Perilaku Biaya",
     "display_title": "Lampiran A4: Pendorong Skenario, Alasan Proyeksi & Perilaku Biaya",
     "display_takeaway": "",
@@ -6726,8 +6726,8 @@
     "topic_id": "appendix_a5",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Three-year pro forma",
-    "section_name": "Appendix — Three-year pro forma",
+    "section_tag": "Appendix: Three-year pro forma",
+    "section_name": "Appendix: Three-year pro forma",
     "title": "Lampiran A5: Laporan Pro Forma Tiga Tahun & Leverage Operasi",
     "display_title": "Lampiran A5: Laporan Pro Forma Tiga Tahun & Leverage Operasi",
     "display_takeaway": "",
@@ -7388,8 +7388,8 @@
     "topic_id": "appendix_a6",
     "story_rebuilt": true,
     "hide_banner": true,
-    "section_tag": "Appendix — Valuation schedules",
-    "section_name": "Appendix — Valuation schedules",
+    "section_tag": "Appendix: Valuation schedules",
+    "section_name": "Appendix: Valuation schedules",
     "title": "Lampiran A6: Jadwal WACC Tertanggal, DCF, Residual Income & P/B Grab FY2025",
     "display_title": "Lampiran A6: Jadwal WACC Tertanggal, DCF, Residual Income & P/B Grab FY2025",
     "display_takeaway": "",
@@ -7512,7 +7512,7 @@
     },
     "supporting_schedules": [
       {
-        "title": "Jembatan Perbandingan DCF vs. Residual Income — Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
+        "title": "Jembatan Perbandingan DCF vs. Residual Income: Proyeksi Sama & g = 3,0% (Rincian Penuh di Lampiran A2)",
         "headers": [
           "Komponen Valuasi (Rp miliar / Rp per Saham)",
           "Model DCF (WACC = 7,76%)",
