@@ -2607,7 +2607,8 @@ const getScheduleRows = (schedule) => {
         ['EBIT', '(754.6)', '(840.5)', '(936.2)'],
         [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
         [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '(1,542)', '(1,628)', '(1,724)'],
-        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '(1,202.9)', '(1,269.9)', '(1,344.6)'],
+        [id ? 'Beban / (Manfaat) Pajak (22,0%)' : 'Tax Expense / (Benefit) (22.0%)', '(339)', '(358)', '(379)'],
+        [id ? 'Laba / (Rugi) Bersih' : 'Net Income / (Loss)', '(1,202.9)', '(1,269.9)', '(1,344.6)'],
       ]
     }
     if (drawerForecastScenario.value === 'optimistic') {
@@ -2619,7 +2620,8 @@ const getScheduleRows = (schedule) => {
         ['EBIT', '+1,309.8', '+1,510.2', '+1,741.2'],
         [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
         [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '+522', '+723', '+954'],
-        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '+604.9', '+761.2', '+941.4'],
+        [id ? 'Beban / (Manfaat) Pajak (22,0%)' : 'Tax Expense / (Benefit) (22.0%)', '+115', '+159', '+210'],
+        [id ? 'Laba / (Rugi) Bersih' : 'Net Income / (Loss)', '+604.9', '+761.2', '+941.4'],
       ]
     }
     if (drawerForecastScenario.value === 'conservative') {
@@ -2631,7 +2633,8 @@ const getScheduleRows = (schedule) => {
         ['EBIT', '(6,224.0)', '(6,690.8)', '(7,192.6)'],
         [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
         [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '(7,012)', '(7,478)', '(7,980)'],
-        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '(5,633.8)', '(5,997.9)', '(6,389.3)'],
+        [id ? 'Beban / (Manfaat) Pajak (22,0%)' : 'Tax Expense / (Benefit) (22.0%)', '(1,543)', '(1,645)', '(1,756)'],
+        [id ? 'Laba / (Rugi) Bersih' : 'Net Income / (Loss)', '(5,633.8)', '(5,997.9)', '(6,389.3)'],
       ]
     }
   }
@@ -6169,7 +6172,7 @@ const isColNumeric = (tbl, cIdx) => {
                           :class="{ 'worksheet-selected': activeScheduleCell && activeScheduleCell.scheduleIdx === index && activeScheduleCell.rIdx === r && activeScheduleCell.cIdx === c }"
                           @click="selectScheduleCell(index, schedule, row, r, c)"
                         >
-                          <span v-if="renderMathLatex(row[c], true)" v-html="renderMathLatex(row[c], true)"></span>
+                          <span v-if="c > 0 && renderMathLatex(row[c], true)" v-html="renderMathLatex(row[c], true)"></span>
                           <template v-else>{{ row[c] }}</template>
                         </td>
                       </tr>
