@@ -68,7 +68,20 @@ const title = computed(() => props.slide.display_title || titles[props.lang]?.[l
 const takeaway = computed(() => props.slide.display_takeaway || props.slide.analysis_points?.[1]?.text || takeaways[props.lang]?.[layoutSlide.value - 1] || '')
 const table = computed(() => props.slide.table)
 const forecastScenario = ref('base')
+const valuationBasis = ref('3yr') // '3yr' | '2yr'
 const isForecastSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 8)
+const isDcfRiSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 10)
+const isGrabSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 11)
+const isValuationSlide = computed(() => isDcfRiSlide.value || isGrabSlide.value)
+const visibleValuationRange = computed(() => {
+  const baseRange = props.slide.valuation_range || []
+  if (!isValuationSlide.value || valuationBasis.value !== '2yr') return baseRange
+  return baseRange.map((row) => {
+    if (row.label === 'DCF') return { ...row, value: -72.5 }
+    if (row.label === 'RI') return { ...row, value: -31.3 }
+    return row
+  })
+})
 const forecastScenarioData = computed(() => {
   const id = props.lang === 'id'
   return {
@@ -120,9 +133,36 @@ const visibleRows = computed(() => {
   if (isForecastSlide.value && forecastScenario.value !== 'base') {
     return forecastScenarioData.value[forecastScenario.value]?.rows || table.value?.rows || []
   }
+  if (isDcfRiSlide.value && valuationBasis.value === '2yr') {
+    const baseRows = table.value?.rows || []
+    return baseRows.map((row, idx) => (idx === baseRows.length - 1 ? [row[0], '−Rp72.5', '−Rp31.3'] : row))
+  }
   return props.slide.story_rebuilt ? table.value?.rows || [] : (table.value?.rows || []).map((row, i) => layoutSlide.value === 7 ? [row[0], row[1], datedWaccSources[i]] : row)
 })
 const visibleAnalysisPoints = computed(() => {
+  if (isDcfRiSlide.value && valuationBasis.value === '2yr') {
+    const id = props.lang === 'id'
+    const basePts = props.slide.analysis_points || []
+    return basePts.map((pt, idx) => {
+      if (idx === 1) {
+        return {
+          ...pt,
+          text: id
+            ? 'Kedua model memakai rata-rata 2 tahun (2024–2025: OpEx 59,2%, COGS 44,5%, CapEx 23,8%) tanpa 2023, dan nilai terminal melanjutkan rugi 2028F dengan pertumbuhan 3,0%.'
+            : 'Both models use the 2-year average (2024–2025: 59.2% OpEx, 44.5% COGS, 23.8% CapEx), dropping 2023, with terminal value extending 2028F losses at 3.0% growth.',
+        }
+      }
+      if (idx === 2) {
+        return {
+          ...pt,
+          text: id
+            ? 'Rugi menyusut tajam dibanding basis 3 tahun, namun arus kas bebas tetap negatif sehingga DCF menjadi −Rp72,5/saham dan Residual Income −Rp31,3/saham.'
+            : 'Losses shrink sharply versus the 3-year base, yet free cash flow and net income stay negative—putting DCF at −Rp72.5/share and Residual Income at −Rp31.3/share.',
+        }
+      }
+      return pt
+    })
+  }
   if (!isForecastSlide.value) return props.slide.analysis_points || []
   const id = props.lang === 'id'
   const byScenario = {
@@ -696,6 +736,13 @@ const provisionGrowth = computed(() => {
                     <option value="conservative">Conservative</option>
                   </select>
                 </div>
+                <div v-if="isDcfRiSlide" class="slide-scenario-bar" @click.stop>
+                  <span class="slide-scenario-label">{{ lang === 'id' ? 'Basis Proyeksi:' : 'Base Basis:' }}</span>
+                  <select v-model="valuationBasis" class="slide-scenario-select" aria-label="Select valuation base basis">
+                    <option value="3yr">{{ lang === 'id' ? 'Rata-rata 3 Tahun (2023–2025)' : '3-Yr Avg (2023–2025)' }}</option>
+                    <option value="2yr">{{ lang === 'id' ? 'Rata-rata 2 Tahun (2024–2025)' : '2-Yr Avg (2024–2025)' }}</option>
+                  </select>
+                </div>
                 <div v-if="slide.is_appendix && table.title" class="slide-appendix-schedule">
                   <h3>{{ table.title }}</h3>
                 </div>
@@ -759,12 +806,18 @@ const provisionGrowth = computed(() => {
               </button>
             </div>
             <figure v-if="slide.valuation_range" class="slide-story-chart slide-range-chart">
-              <figcaption>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</figcaption>
+              <figcaption class="slide-range-hdr">
+                <span>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</span>
+                <select v-if="isGrabSlide" v-model="valuationBasis" class="slide-scenario-select" aria-label="Select valuation base basis" @click.stop>
+                  <option value="3yr">{{ lang === 'id' ? '3-Thn (2023–2025)' : '3-Yr Avg (2023–2025)' }}</option>
+                  <option value="2yr">{{ lang === 'id' ? '2-Thn (2024–2025)' : '2-Yr Avg (2024–2025)' }}</option>
+                </select>
+              </figcaption>
               <svg viewBox="0 0 560 154" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
                 <line :x1="rangeX(0)" :x2="rangeX(0)" y1="20" y2="128" stroke="#a4bfae" />
                 <line :x1="rangeX(25)" :x2="rangeX(25)" y1="20" y2="128" stroke="#173d25" stroke-dasharray="4 4" />
                 <text :x="rangeX(25)" y="13" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
-                <g v-for="(row,i) in slide.valuation_range" :key="row.label">
+                <g v-for="(row,i) in visibleValuationRange" :key="row.label">
                   <text x="0" :y="42+i*33" fill="#173d25" font-size="15">{{ row.label }}</text>
                   <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="27+i*33" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="21" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
                   <text x="552" :y="42+i*33" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
@@ -857,13 +910,15 @@ const provisionGrowth = computed(() => {
 .slide-heading h1 { margin: 0; color: white; font-size: 2.75cqw; line-height: 1.2; letter-spacing: -.09cqw; font-weight: 750; }
 .slide-evidence-layout { position: absolute; top: 25%; left: 4%; right: 4%; bottom: 10%; display: grid; grid-template-columns: 1.65fr 1fr; gap: 3cqw; align-items: stretch; }
 .slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
-.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: 1.15cqw 1.35cqw; gap: 1cqw; }
-.slide-story-chart { margin: 0; padding-top: 1cqw; border-top: 1px solid #dce8df; }
-.slide-story-chart figcaption { font-size: .94cqw; color: #173d25; font-weight: 650; margin-bottom: 1cqw; line-height: 1.4; }
-.slide-chart-formula { color: #526a59; font-size: .76cqw; line-height: 1.5; margin: .7cqw 0 0; overflow-wrap: anywhere; }
+.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: .95cqw 1.3cqw; gap: .65cqw; }
+.slide-story-chart { margin: 0; padding-top: .75cqw; border-top: 1px solid #dce8df; }
+.slide-story-chart figcaption { font-size: .94cqw; color: #173d25; font-weight: 650; margin-bottom: .65cqw; line-height: 1.35; }
+.slide-chart-formula { color: #526a59; font-size: .76cqw; line-height: 1.45; margin: .35cqw 0 0; overflow-wrap: anywhere; }
 .slide-loss-row { display: grid; grid-template-columns: 3.2cqw 1fr 5cqw; align-items: center; gap: .8cqw; margin-top: .8cqw; font-size: .95cqw; }
 .slide-loss-row strong { text-align: right; font-variant-numeric: tabular-nums; }
 .slide-loss-row .slide-provision-track { height: 1cqw; }
+.slide-range-chart figcaption.slide-range-hdr { display: flex; align-items: center; justify-content: space-between; gap: .8cqw; }
+.slide-range-hdr .slide-scenario-select { padding: .15cqw .5cqw; font-size: .78cqw; }
 .slide-range-chart svg { display: block; width: 100%; height: auto; }
 .slide-evidence.slide-evidence-peer { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 1cqw; padding: 1.2cqw; }
 .slide-evidence-peer .slide-financial-table { font-size: .86cqw; line-height: 1.3; }
