@@ -3574,6 +3574,42 @@
     "study_explanation": "Cost of equity is the return required by our CAPM equity model. It is not a return that GoTo has already earned or promised to pay. The calculation is 4.502% + 0.59 × (4.23% + 2.465%) = 8.45205%, rounded to 8.45%.\n\nThe 4.502% risk-free proxy is the Indonesian government-bond yield after sovereign-default-spread adjustment. Beta of 0.59 measures the model market sensitivity. The equity and country premiums represent additional risk compensation. Sources and observation dates are recorded in the sidebar table.\n\nPre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5.39%. This is a model tax-shield calculation rather than evidence of an immediate cash tax saving while the company is loss-making.\n\nEquity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.",
     "supporting_schedules": [
       {
+        "title": "Cost of Capital Step-by-Step Formulas (KaTeX)",
+        "headers": [
+          "Step",
+          "Result",
+          "Formula & Calculation"
+        ],
+        "rows": [
+          [
+            "Shareholder return (Ke)",
+            "8.45%",
+            "60949K_e = R_f + \beta(\text{ERP} + \text{CRP}) = 4.502\\% + 0.59(4.23\\% + 2.465\\%) = 8.45\\%60949"
+          ],
+          [
+            "Debt cost after tax",
+            "5.39%",
+            "60949K_d(1 - T) = 6.91\\% \times (1 - 22\\%) = 5.39\\%60949"
+          ],
+          [
+            "Equity weight",
+            "77.4%",
+            "60949w_E = \frac{E}{E + D} = \frac{26{,}550.3}{26{,}550.3 + 7{,}742.6} = 77.4\\%60949"
+          ],
+          [
+            "Debt weight",
+            "22.6%",
+            "60949w_D = \frac{D}{E + D} = \frac{7{,}742.6}{26{,}550.3 + 7{,}742.6} = 22.6\\%60949"
+          ],
+          [
+            "Combined rate (WACC)",
+            "7.76%",
+            "60949\text{WACC} = (77.4\\% \times 8.45\\%) + (22.6\\% \times 5.39\\%) = 7.76\\%60949"
+          ]
+        ],
+        "note": "Ke (8.45%) is used to discount Residual Income (shareholder-level profits). WACC (7.76%) blends equity and after-tax debt to discount DCF business cash flows."
+      },
+      {
         "title": "Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)",
         "headers": [
           "Parameter / Result",

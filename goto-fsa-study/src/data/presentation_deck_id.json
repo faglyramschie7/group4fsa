@@ -3568,6 +3568,42 @@
     "study_explanation": "Kami menghitung biaya ekuitas sebesar 8,45% dan biaya utang setelah pajak sebesar 5,39%.\n\nBobot ekuitas pasar 77,4% dan utang 22,6% menghasilkan biaya gabungan 7,76%, yang dipakai pada arus kas bisnis DCF.\n\nRI memakai 8,45% karena mengukur laba setelah beban ekuitas. DCF memakai 7,76% karena arus kasnya dinilai sebelum penyesuaian utang.",
     "supporting_schedules": [
       {
+        "title": "Rumus Biaya Modal Langkah demi Langkah (KaTeX)",
+        "headers": [
+          "Langkah",
+          "Hasil",
+          "Rumus & Perhitungan"
+        ],
+        "rows": [
+          [
+            "Imbal hasil pemegang saham (Ke)",
+            "8,45%",
+            "60949K_e = R_f + \beta(\text{ERP} + \text{CRP}) = 4.502\\% + 0.59(4.23\\% + 2.465\\%) = 8.45\\%60949"
+          ],
+          [
+            "Biaya utang setelah pajak",
+            "5,39%",
+            "60949K_d(1 - T) = 6.91\\% \times (1 - 22\\%) = 5.39\\%60949"
+          ],
+          [
+            "Bobot ekuitas",
+            "77,4%",
+            "60949w_E = \frac{E}{E + D} = \frac{26{,}550.3}{26{,}550.3 + 7{,}742.6} = 77.4\\%60949"
+          ],
+          [
+            "Bobot utang",
+            "22,6%",
+            "60949w_D = \frac{D}{E + D} = \frac{7{,}742.6}{26{,}550.3 + 7{,}742.6} = 22.6\\%60949"
+          ],
+          [
+            "Tarif gabungan (WACC)",
+            "7,76%",
+            "60949\text{WACC} = (77.4\\% \times 8.45\\%) + (22.6\\% \times 5.39\\%) = 7.76\\%60949"
+          ]
+        ],
+        "note": "Ke (8,45%) digunakan untuk mendiskonto Residual Income (laba pemegang saham). WACC (7,76%) menggabungkan ekuitas dan utang setelah pajak untuk mendiskonto arus kas bisnis DCF."
+      },
+      {
         "title": "Rincian CAPM Pasar Berkembang & WACC (Semua Input Bersumber & Bertanggal)",
         "headers": [
           "Parameter / Hasil",

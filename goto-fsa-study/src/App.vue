@@ -2549,15 +2549,99 @@ const ASSUMPTION_CELL_SPECS = [
 ]
 
 const assumptionScenarioFilter = ref('all')
+const drawerForecastScenario = ref('base')
 
 const isAssumptionSchedule = (schedule) => {
   const hdrs = schedule?.headers || []
   return hdrs.includes('Optimistic') && hdrs.includes('Conservative')
 }
 
+const isForecastIncomeSchedule = (schedule) => {
+  const t = String(schedule?.title || '').toLowerCase()
+  return t.includes('base projected income statement') || t.includes('proyeksi laba rugi skenario dasar')
+}
+
+const getScheduleHeaders = (schedule) => {
+  if (isAssumptionSchedule(schedule) && assumptionScenarioFilter.value === 'base_2yr') {
+    return [schedule.headers[0], lang.value === 'id' ? 'Base (2 Thn)' : 'Base (2-Yr Avg)', lang.value === 'id' ? 'Alasan Base (2024–2025)' : 'Base Rationale (2024–2025)']
+  }
+  if (isForecastIncomeSchedule(schedule) && drawerForecastScenario.value !== 'base') {
+    const id = lang.value === 'id'
+    if (drawerForecastScenario.value === 'base_2yr') {
+      return [id ? 'Pos (Rp miliar)' : 'Line Item (Rp bn)', '2026F (2-Yr)', '2027F (2-Yr)', '2028F (2-Yr)']
+    }
+    if (drawerForecastScenario.value === 'optimistic') {
+      return [id ? 'Pos (Rp miliar)' : 'Line Item (Rp bn)', '2026F Opt', '2027F Opt', '2028F Opt']
+    }
+    if (drawerForecastScenario.value === 'conservative') {
+      return [id ? 'Pos (Rp miliar)' : 'Line Item (Rp bn)', '2026F Cons', '2027F Cons', '2028F Cons']
+    }
+  }
+  return schedule?.headers || []
+}
+
+const getScheduleRows = (schedule) => {
+  if (isAssumptionSchedule(schedule) && assumptionScenarioFilter.value === 'base_2yr') {
+    const id = lang.value === 'id'
+    const map2Yr = {
+      'revenue growth': ['11.4%', id ? 'Rata-rata pertumbuhan 2024 (7,5%) & 2025 (15,3%).' : 'Average of 2024 (7.5%) and 2025 (15.3%) growth.'],
+      'cogs': ['44.5%', id ? 'Rata-rata 2 tahun (2024: 46,6%, 2025: 42,3%), tanpa 2023.' : 'Two-year average (2024: 46.6%, 2025: 42.3%), excluding 2023.'],
+      'operating expenses': ['59.2%', id ? 'Rata-rata 2 tahun (2024: 62,8%, 2025: 55,7%), tanpa lonjakan 2023 (117%).' : 'Two-year average (2024: 62.8%, 2025: 55.7%), dropping 2023 (117%).'],
+      'capex': ['23.8%', id ? 'Rata-rata 2 tahun (2024: 41,0%, 2025: 6,5%), lebih tinggi karena CapEx 2024.' : 'Two-year average (2024: 41.0%, 2025: 6.5%), pulled up by 2024 CapEx.'],
+    }
+    return (schedule.rows || []).map((r) => {
+      const key = String(r[0] || '').toLowerCase()
+      const hit = Object.keys(map2Yr).find(k => key.includes(k))
+      if (hit) return [r[0], map2Yr[hit][0], map2Yr[hit][1]]
+      return [r[0], r[1], r[2]]
+    })
+  }
+  if (isForecastIncomeSchedule(schedule) && drawerForecastScenario.value !== 'base') {
+    const id = lang.value === 'id'
+    if (drawerForecastScenario.value === 'base_2yr') {
+      return [
+        [id ? 'Pendapatan (tumbuh 11,4%)' : 'Revenue (11.4% growth)', '20,408', '22,732', '25,321'],
+        [id ? 'Beban Pokok / COGS (44,5%)' : 'Cost of Goods Sold (44.5% of Rev)', '9,072', '10,105', '11,255'],
+        [id ? 'Laba Kotor (Margin 55,5%)' : 'Gross Profit (55.5% Margin)', '11,337', '12,628', '14,066'],
+        [id ? 'Biaya Operasi (59,2% rata-rata 2 thn)' : 'Operating Expenses (59.2% 2-Yr Avg)', '12,092', '13,469', '15,003'],
+        ['EBIT', '(754.6)', '(840.5)', '(936.2)'],
+        [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
+        [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '(1,542)', '(1,628)', '(1,724)'],
+        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '(1,202.9)', '(1,269.9)', '(1,344.6)'],
+      ]
+    }
+    if (drawerForecastScenario.value === 'optimistic') {
+      return [
+        [id ? 'Pendapatan (tumbuh 15,3%)' : 'Revenue (15.3% growth)', '21,125', '24,358', '28,084'],
+        [id ? 'Beban Pokok / COGS (38,1%)' : 'Cost of Goods Sold (38.1% of Rev)', '8,049', '9,280', '10,700'],
+        [id ? 'Laba Kotor (Margin 61,9%)' : 'Gross Profit (61.9% Margin)', '13,077', '15,077', '17,384'],
+        [id ? 'Biaya Operasi (55,7% rasio 2025)' : 'Operating Expenses (55.7% 2025 ratio)', '11,767', '13,567', '15,643'],
+        ['EBIT', '+1,309.8', '+1,510.2', '+1,741.2'],
+        [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
+        [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '+522', '+723', '+954'],
+        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '+604.9', '+761.2', '+941.4'],
+      ]
+    }
+    if (drawerForecastScenario.value === 'conservative') {
+      return [
+        [id ? 'Pendapatan (tumbuh 7,5%)' : 'Revenue (7.5% growth)', '19,696', '21,174', '22,762'],
+        [id ? 'Beban Pokok / COGS (46,6%)' : 'Cost of Goods Sold (46.6% of Rev)', '9,179', '9,867', '10,607'],
+        [id ? 'Laba Kotor (Margin 53,4%)' : 'Gross Profit (53.4% Margin)', '10,518', '11,307', '12,155'],
+        [id ? 'Biaya Operasi (85,0%)' : 'Operating Expenses (85.0% of Rev)', '16,742', '17,998', '19,348'],
+        ['EBIT', '(6,224.0)', '(6,690.8)', '(7,192.6)'],
+        [id ? 'Beban Bunga (10,2% atas Utang)' : 'Interest Expense (10.2% on Debt)', '788', '788', '788'],
+        [id ? 'Laba Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '(7,012)', '(7,478)', '(7,980)'],
+        [id ? 'Laba / (Rugi) Bersih (Pajak 22%)' : 'Net Income / (Loss) (22% Tax)', '(5,633.8)', '(5,997.9)', '(6,389.3)'],
+      ]
+    }
+  }
+  return schedule?.rows || []
+}
+
 const getVisibleScheduleColIndices = (schedule) => {
-  const count = schedule?.headers?.length || 0
-  if (!isAssumptionSchedule(schedule) || assumptionScenarioFilter.value === 'all') {
+  const hdrs = getScheduleHeaders(schedule)
+  const count = hdrs.length
+  if (!isAssumptionSchedule(schedule) || assumptionScenarioFilter.value === 'all' || assumptionScenarioFilter.value === 'base_2yr') {
     return Array.from({ length: count }, (_, i) => i)
   }
   if (assumptionScenarioFilter.value === 'base') return [0, 1, 2].filter(i => i < count)
@@ -6057,23 +6141,36 @@ const isColNumeric = (tbl, cIdx) => {
                     :aria-label="lang === 'id' ? 'Filter skenario' : 'Filter scenario'"
                   >
                     <option value="all">{{ lang === 'id' ? 'Semua Skenario' : 'All Scenarios' }}</option>
-                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata)' : 'Base (Avg)' }}</option>
+                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata 3 Thn)' : 'Base (3-Yr Avg)' }}</option>
+                    <option value="base_2yr">{{ lang === 'id' ? 'Base (Rata-rata 2 Thn: 2024–2025)' : 'Base (2-Yr Avg: 2024–2025)' }}</option>
                     <option value="optimistic">{{ lang === 'id' ? 'Optimis' : 'Optimistic' }}</option>
                     <option value="conservative">{{ lang === 'id' ? 'Konservatif (Pesimis)' : 'Conservative (Pessimistic)' }}</option>
+                  </select>
+                  <select
+                    v-else-if="isForecastIncomeSchedule(schedule)"
+                    v-model="drawerForecastScenario"
+                    class="schedule-scenario-select"
+                    :aria-label="lang === 'id' ? 'Pilih skenario proyeksi' : 'Select forecast scenario'"
+                  >
+                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata 3 Thn)' : 'Base (3-Yr Avg)' }}</option>
+                    <option value="base_2yr">{{ lang === 'id' ? 'Base (Rata-rata 2 Thn: 2024–2025)' : 'Base (2-Yr Avg: 2024–2025)' }}</option>
+                    <option value="optimistic">{{ lang === 'id' ? 'Optimis' : 'Optimistic' }}</option>
+                    <option value="conservative">{{ lang === 'id' ? 'Konservatif' : 'Conservative' }}</option>
                   </select>
                 </div>
                 <div class="drawer-schedule-scroll" tabindex="0" :aria-label="schedule.title">
                   <table class="drawer-schedule-table">
-                    <thead><tr><th v-for="c in getVisibleScheduleColIndices(schedule)" :key="c">{{ schedule.headers[c] }}</th></tr></thead>
+                    <thead><tr><th v-for="c in getVisibleScheduleColIndices(schedule)" :key="c">{{ getScheduleHeaders(schedule)[c] }}</th></tr></thead>
                     <tbody>
-                      <tr v-for="(row,r) in schedule.rows" :key="r">
+                      <tr v-for="(row,r) in getScheduleRows(schedule)" :key="r">
                         <td
                           v-for="c in getVisibleScheduleColIndices(schedule)"
                           :key="c"
                           :class="{ 'worksheet-selected': activeScheduleCell && activeScheduleCell.scheduleIdx === index && activeScheduleCell.rIdx === r && activeScheduleCell.cIdx === c }"
                           @click="selectScheduleCell(index, schedule, row, r, c)"
                         >
-                          {{ row[c] }}
+                          <span v-if="renderMathLatex(row[c], true)" v-html="renderMathLatex(row[c], true)"></span>
+                          <template v-else>{{ row[c] }}</template>
                         </td>
                       </tr>
                     </tbody>

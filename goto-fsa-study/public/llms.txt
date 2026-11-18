@@ -409,6 +409,15 @@ Pre-tax debt cost is 6.91%. With the 22% tax assumption, the after-tax rate is 5
 
 Equity receives 77.4% of the funding weight and debt receives 22.6%. Their weighted cost is WACC of 7.76%. DCF applies WACC to business cash flows before the debt bridge. Residual income uses the 8.45% equity rate because its profit measure and equity charge concern the equity model.
 
+### Sidebar calculation: Cost of Capital Step-by-Step Formulas (KaTeX)
+| Step | Result | Formula & Calculation |
+| --- | --- | --- |
+| Shareholder return (Ke) | 8.45% | 60949K_e = R_f + eta(	ext{ERP} + 	ext{CRP}) = 4.502\% + 0.59(4.23\% + 2.465\%) = 8.45\%60949 |
+| Debt cost after tax | 5.39% | 60949K_d(1 - T) = 6.91\% 	imes (1 - 22\%) = 5.39\%60949 |
+| Equity weight | 77.4% | 60949w_E = rac{E}{E + D} = rac{26{,}550.3}{26{,}550.3 + 7{,}742.6} = 77.4\%60949 |
+| Debt weight | 22.6% | 60949w_D = rac{D}{E + D} = rac{7{,}742.6}{26{,}550.3 + 7{,}742.6} = 22.6\%60949 |
+| Combined rate (WACC) | 7.76% | 60949	ext{WACC} = (77.4\% 	imes 8.45\%) + (22.6\% 	imes 5.39\%) = 7.76\%60949 |
+
 ### Sidebar calculation: Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)
 | Parameter / Result | Value | Exact External Source & Observation Date |
 | --- | --- | --- |

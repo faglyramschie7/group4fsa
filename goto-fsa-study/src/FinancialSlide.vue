@@ -72,6 +72,15 @@ const isForecastSlide = computed(() => !props.slide.is_appendix && props.slide.s
 const forecastScenarioData = computed(() => {
   const id = props.lang === 'id'
   return {
+    base_2yr: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F (2-Yr)', '2027F (2-Yr)', '2028F (2-Yr)'],
+      rows: [
+        ['Revenue', '18,322', '20,408', '22,732', '25,321'],
+        [id ? 'Rugi operasi (Rata-rata 2 Thn)' : '2-Yr Avg operating loss', '(378)', '(754.6)', '(840.5)', '(936.2)'],
+        [id ? 'Rugi bersih (Rata-rata 2 Thn)' : '2-Yr Avg net loss', '(1,502)', '(1,202.9)', '(1,269.9)', '(1,344.6)'],
+        [id ? 'Kas akhir (Rata-rata 2 Thn)' : '2-Yr Avg ending cash', '21,755', '15,300', '9,966', '5,071'],
+      ],
+    },
     optimistic: {
       headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Opt', '2027F Opt', '2028F Opt'],
       rows: [
@@ -135,6 +144,26 @@ const visibleAnalysisPoints = computed(() => {
         text: id
           ? 'Kerugian operasi dan CapEx 16,3% menguras kas Rp20.787M selama tiga tahun, menyisakan hanya Rp968M pada 2028F.'
           : 'Operating losses and 16.3% CapEx consume Rp20,787bn of cash over three years, leaving only Rp968bn by 2028F.',
+      },
+    ],
+    base_2yr: [
+      {
+        heading: id ? 'Kasus Rata-rata 2 Tahun (2024–2025)' : '2-Year Avg Case (2024–2025)',
+        text: id
+          ? 'Mengeluarkan pembakaran biaya 2023 (117%) menurunkan OpEx dari 78,5% menjadi 59,2% (COGS 44,5%), sehingga rugi operasi 2026F menyusut 81% menjadi -Rp754,6M (vs -Rp4.003,4M).'
+          : 'Dropping 2023’s 117% burn lowers OpEx from 78.5% to 59.2% (COGS 44.5%), shrinking 2026F operating loss by 81% to -Rp754.6bn (vs -Rp4,003.4bn in 3-yr Base).',
+      },
+      {
+        heading: id ? 'Rasio Biaya Operasi (2 Tahun)' : 'Operating Cost Ratio (2-Yr Avg)',
+        text: id
+          ? 'Untuk setiap Rp100 penjualan, laba kotor Rp55,50 berbanding biaya operasi Rp59,20, menyisakan defisit operasi tipis -Rp3,70 per Rp100 penjualan (jauh lebih baik dari -Rp19,60).'
+          : 'For every Rp100 of sales, gross profit is Rp55.50 vs Rp59.20 in cash OpEx—a small -Rp3.70 operating shortfall per Rp100 of sales (vs -Rp19.60 under 3-yr Base).',
+      },
+      {
+        heading: id ? 'Kas Akhir & CapEx (2 Tahun)' : 'Cash Buffer & CapEx (2-Yr Avg)',
+        text: id
+          ? 'Dengan CapEx rata-rata 2 tahun sebesar 23,8% (terpengaruh lonjakan CapEx 2024 sebesar 41,0%), kas akhir 2028F tetap terjaga di Rp5.071M (vs Rp968M pada Base 3 tahun).'
+          : 'With 2-year avg CapEx at 23.8% (pulled up by 2024’s 41.0% CapEx), 2028F ending cash stays at Rp5,071bn (vs Rp968bn in the 3-yr Base).',
       },
     ],
     optimistic: [
@@ -661,7 +690,8 @@ const provisionGrowth = computed(() => {
                 <div v-if="isForecastSlide" class="slide-scenario-bar" @click.stop>
                   <span class="slide-scenario-label">{{ lang === 'id' ? 'Skenario:' : 'Scenario:' }}</span>
                   <select v-model="forecastScenario" class="slide-scenario-select" aria-label="Select forecast scenario">
-                    <option value="base">Base</option>
+                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata 3 Thn)' : 'Base (3-Yr Avg)' }}</option>
+                    <option value="base_2yr">{{ lang === 'id' ? 'Base (Rata-rata 2 Thn: 2024–2025)' : 'Base (2-Yr Avg: 2024–2025)' }}</option>
                     <option value="optimistic">Optimistic</option>
                     <option value="conservative">Conservative</option>
                   </select>
