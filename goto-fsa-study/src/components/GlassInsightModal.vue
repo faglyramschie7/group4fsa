@@ -1598,6 +1598,86 @@ const slide7AssumptionsTable = computed(() => {
     ],
   }
 })
+
+// Slide 10: Restated Sensitivity Analysis (2D WACC x g Grid + Beta / WACC / RI Boundary Checks, Table 16)
+const slide10SensitivityTables = computed(() => {
+  if (props.item.slide?.slide_num !== 10) return null
+  const id = isId.value
+  return {
+    gridTitle: id
+      ? 'Uji Sensitivitas DCF Base Case: WACC × Pertumbuhan Terminal g (Rp / saham · Tabel 16)'
+      : 'Base DCF Sensitivity Matrix: WACC × Terminal Growth g (Rp / share · Table 16)',
+    gridHeaders: ['WACC \\ g', '1.0%', '2.0%', '3.0% (Base)', '3.5%', '4.0%'],
+    gridRows: [
+      ['6.76% (−100 bps)', 'Rp 10.68', 'Rp 10.33', 'Rp 9.79', 'Rp 9.40', 'Rp 8.86'],
+      ['7.76% (Baseline)', 'Rp 10.97', 'Rp 10.73', 'Rp 10.38', 'Rp 10.15', 'Rp 9.85'],
+      ['8.76% (+100 bps)', 'Rp 11.18', 'Rp 11.00', 'Rp 10.77', 'Rp 10.61', 'Rp 10.43'],
+    ],
+    gridNote: id
+      ? 'Nilai DCF bergerak sempit di Rp 8,86–Rp 11,18/saham. WACC lebih tinggi sedikit menaikkan DCF karena diskonto mengecilkan Enterprise Value negatif (−Rp 2,99T) terhadap Kas Bersih Rp 14,01T.'
+      : 'Tightly bounded between Rp 8.86 and Rp 11.18/share. Higher WACC slightly raises Base DCF because discounting shrinks negative Enterprise Value (−Rp 2.99T) relative to fixed Rp 14.01T Net Cash.',
+    stressTitle: id
+      ? 'Uji Stres Beta, WACC Tanpa Tax Shield & Batas Residual Income (Tabel 14–16)'
+      : 'Beta Stress, Zero-Tax-Shield WACC & Residual Income Boundary Checks (Tables 14–16)',
+    stressHeaders: id
+      ? ['Skenario Uji Stres', 'Ke / WACC', 'DCF / Saham', 'RI / Saham']
+      : ['Sensitivity / Boundary Test', 'Ke / WACC', 'DCF / Share', 'RI / Share'],
+    stressRows: [
+      [id ? 'Beta Dasar Investing.com (0,59)' : 'Base Investing.com Beta (0.59)', '8.45% / 7.76%', '+Rp 10.38', '−Rp 12.23'],
+      [id ? 'WACC Tanpa Tax Shield (Pajak 0%)' : 'Zero-Tax-Shield WACC (0% Tax)', '8.45% / 8.10%', '+Rp 10.52', '−Rp 12.23'],
+      [id ? 'Beta Teknologi Normal (1,01)' : 'Normalized Tech Beta (1.01)', '11.26% / 9.94%', '+Rp 11.09', '−Rp 8.45'],
+      [id ? 'Beta Volatilitas Tinggi (1,30)' : 'High-Volatility Beta (1.30)', '13.21% / 11.45%', '+Rp 11.36', '−Rp 6.00'],
+      [id ? 'Batas RI Tanpa Pertumbuhan (g = 0%)' : 'Residual Income Floor (g = 0% forever)', id ? 'Tanpa rugi tumbuh kekal' : 'No perpetual loss growth', '—', '+Rp 0.24'],
+      [id ? 'Konvergensi RI Tahun 4+ (ROE = Ke)' : 'Residual Income Yr 4+ Convergence', id ? 'ROE menyamai Ke (8,45%)' : 'ROE converges to Ke (8.45%)', '—', '+Rp 21.13'],
+    ],
+  }
+})
+
+// Slide 11: 3-Scenario Valuation Matrix & Defensible Range Reconciliation (Table 16 & Workbook 3)
+const slide11ScenarioMatrix = computed(() => {
+  if (props.item.slide?.slide_num !== 11) return null
+  const id = isId.value
+  return {
+    title: id
+      ? 'Matriks Valuasi 3 Skenario & Rekonsiliasi Rentang Nilai Wajar (Rp / saham · Tabel 16)'
+      : '3-Scenario Valuation Matrix & Defensible Range Reconciliation (Rp / share · Table 16)',
+    headers: id
+      ? ['Skenario / Tolok Ukur', 'DCF / Saham', 'RI / Saham', 'Interpretasi Ekonomi']
+      : ['Scenario / Benchmark', 'DCF / Share', 'RI / Share', 'Economic Driver & Role'],
+    rows: [
+      [
+        id ? 'Base (2024→2025 YoY)' : 'Base (2024→2025 YoY)',
+        '+Rp 10.38',
+        '−Rp 12.23',
+        id ? 'EBIT positif, namun ROIC 2,70% < WACC 7,76%. Menjadi lantai rentang nilai.' : 'Positive EBIT, but 2.70% ROIC < 7.76% WACC. Anchors intrinsic floor.',
+      ],
+      [
+        id ? 'Optimis (Efisiensi 1H 2026)' : 'Optimistic (1H 2026 OpEx)',
+        '+Rp 47.34',
+        '+Rp 16.75',
+        id ? 'Pertumbuhan 18%, COGS 38,1%, OpEx 51,2% mengangkat ROE 2028F ke 6,18%. Plafon RI.' : '18% growth, 38.1% COGS, 51.2% OpEx lifts 2028F ROE to 6.18%. Anchors RI ceiling.',
+      ],
+      [
+        id ? 'Konservatif (Lantai 2024)' : 'Conservative (2024 Floor)',
+        '−Rp 33.95',
+        '−Rp 44.42',
+        id ? 'OpEx 62,78% & COGS 46,64% mengembalikan rugi EBIT −Rp2,14T. Risiko turun tajam.' : '62.78% OpEx & 46.64% COGS restore −Rp2.14T EBIT losses. Severe downside.',
+      ],
+      [
+        id ? 'Kas Bersih per Saham (FY2025)' : 'Net Cash Backing (FY2025)',
+        '+Rp 13.19',
+        '—',
+        id ? 'Kas bersih Rp14,01T / 1.062M saham. Titik tengah rentang Rp10,38–Rp16,75.' : 'Rp14.01T Net Cash / 1,062B shares. Center of Rp10.38–Rp16.75 range.',
+      ],
+      [
+        id ? 'Pembanding P/B Grab (3,04x)' : 'Grab-Only P/B Peer (3.04x)',
+        'Rp 91.02',
+        id ? '(Kondisional)' : '(Conditional)',
+        id ? 'Grab sudah profit (+2,96% ROE). Plafon aspiratif saja, tidak dirata-rata.' : 'Profitable peer (+2.96% ROE). Aspirational ceiling only, not blended.',
+      ],
+    ],
+  }
+})
 </script>
 
 <template>
@@ -2218,6 +2298,79 @@ const slide7AssumptionsTable = computed(() => {
                     <tbody>
                       <tr v-for="(row, rIdx) in slide7AssumptionsTable.rows" :key="rIdx">
                         <td v-for="(cell, cIdx) in row" :key="cIdx" :class="{ 'is-base-col': cIdx === 3 }">{{ cell }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Slide 10: Restated Sensitivity Analysis (2D WACC x g + Beta & RI Checks) -->
+              <template v-if="slide10SensitivityTables">
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
+                    </svg>
+                    <span>{{ slide10SensitivityTables.gridTitle }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-assumptions-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide10SensitivityTables.gridHeaders" :key="hIdx" :class="{ 'is-base-col': hIdx === 3 }">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(row, rIdx) in slide10SensitivityTables.gridRows" :key="rIdx" :class="{ 'is-base-row': rIdx === 1 }">
+                          <td v-for="(cell, cIdx) in row" :key="cIdx" :class="{ 'is-base-col': cIdx === 3 }">{{ cell }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="glass-yoy-note" style="margin-top: 8px;">{{ slide10SensitivityTables.gridNote }}</p>
+                </div>
+
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 2v20M2 12h20" />
+                    </svg>
+                    <span>{{ slide10SensitivityTables.stressTitle }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-assumptions-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide10SensitivityTables.stressHeaders" :key="hIdx">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(row, rIdx) in slide10SensitivityTables.stressRows" :key="rIdx" :class="{ 'is-base-row': rIdx === 0 }">
+                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </template>
+
+              <!-- Slide 11: 3-Scenario Valuation Matrix & Range Reconciliation -->
+              <div v-if="slide11ScenarioMatrix" class="glass-card glass-assumptions-card">
+                <div class="glass-sec-label">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
+                  </svg>
+                  <span>{{ slide11ScenarioMatrix.title }}</span>
+                </div>
+                <div class="glass-table-scroll">
+                  <table class="glass-data-table glass-scenario-tbl">
+                    <thead>
+                      <tr>
+                        <th v-for="(h, hIdx) in slide11ScenarioMatrix.headers" :key="hIdx">{{ h }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(row, rIdx) in slide11ScenarioMatrix.rows" :key="rIdx" :class="{ 'is-base-row': rIdx === 0 }">
+                        <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -3172,6 +3325,27 @@ const slide7AssumptionsTable = computed(() => {
   background: rgba(34, 197, 94, 0.14);
   color: #bbf7d0;
   font-weight: 700;
+}
+
+.glass-assumptions-tbl tr.is-base-row td,
+.glass-scenario-tbl tr.is-base-row td {
+  background: rgba(34, 197, 94, 0.12);
+  color: #eefaf1;
+  font-weight: 700;
+}
+
+.glass-scenario-tbl th:nth-child(2),
+.glass-scenario-tbl td:nth-child(2),
+.glass-scenario-tbl th:nth-child(3),
+.glass-scenario-tbl td:nth-child(3) {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-scenario-tbl td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
 }
 
 .glass-vchart-val {
