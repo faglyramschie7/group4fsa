@@ -1656,11 +1656,11 @@ const provisionGrowth = computed(() => {
 .slide-table-wacc th:nth-child(3), .slide-table-wacc td:nth-child(3) { width: 51%; text-align: left; }
 .slide-table-multiples { font-size: .86cqw; }
 .slide-table-multiples th:first-child, .slide-table-multiples td:first-child { width: 28%; }
-.slide-table-restatement { font-size: .82cqw; line-height: 1.32; }
-.slide-table-restatement th, .slide-table-restatement td { text-align: left; padding: .52cqw .55cqw; }
-.slide-table-restatement th:first-child, .slide-table-restatement td:first-child { width: 24%; }
-.slide-table-restatement th:nth-child(2), .slide-table-restatement td:nth-child(2) { width: 25%; }
-.slide-table-restatement th:nth-child(3), .slide-table-restatement td:nth-child(3) { width: 25%; }
+.slide-table-restatement { font-size: 1.02cqw; line-height: 1.38; }
+.slide-table-restatement th, .slide-table-restatement td { text-align: left; padding: .72cqw .68cqw; vertical-align: top; }
+.slide-table-restatement th:first-child, .slide-table-restatement td:first-child { width: 22%; }
+.slide-table-restatement th:nth-child(2), .slide-table-restatement td:nth-child(2) { width: 26%; }
+.slide-table-restatement th:nth-child(3), .slide-table-restatement td:nth-child(3) { width: 26%; }
 .slide-table-restatement th:nth-child(4), .slide-table-restatement td:nth-child(4) { width: 26%; }
 .slide-financial-table tbody tr:last-child td { border: 0; }
 .slide-financial-table tbody tr:hover td { background: #edf6ef; cursor: pointer; }

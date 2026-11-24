@@ -7809,11 +7809,12 @@ const isColNumeric = (tbl, cIdx) => {
 }
 
 .pres-tab-pane {
-  max-width: 1280px;
+  max-width: 1580px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .pres-controls-bar {
@@ -7824,9 +7825,9 @@ const isColNumeric = (tbl, cIdx) => {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
   background: #fff;
-  padding: 12px 18px;
+  padding: 8px 14px;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
