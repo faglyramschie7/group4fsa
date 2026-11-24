@@ -1188,14 +1188,16 @@ const visibleYoyRatioCards = computed(() => {
 </script>
 
 <template>
-  <Transition name="glass-fade">
-    <div class="glass-modal-backdrop" @click.self="emit('close')">
-      <section
-        class="glass-modal-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="glass-modal-title"
-      >
+  <Teleport to="body">
+    <Transition name="glass-fade">
+      <div class="glass-modal-backdrop">
+        <div class="glass-modal-scrim" @click="emit('close')" aria-hidden="true"></div>
+        <section
+          class="glass-modal-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="glass-modal-title"
+        >
         <!-- Header -->
         <header class="glass-modal-header">
           <div class="glass-hdr-left">
@@ -1810,9 +1812,10 @@ const visibleYoyRatioCards = computed(() => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  </Transition>
+        </section>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -1820,16 +1823,25 @@ const visibleYoyRatioCards = computed(() => {
   position: fixed;
   inset: 0;
   z-index: 10020;
-  background: rgba(4, 18, 10, 0.34);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(14px, 2.5vw, 32px);
 }
 
+/* Sibling scrim avoids nested backdrop-filter, which Firefox drops per the Backdrop Root spec */
+.glass-modal-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(3, 12, 8, 0.56);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .glass-modal-panel {
+  position: relative;
+  z-index: 1;
   width: min(1280px, 96vw);
   height: min(88vh, 840px);
   max-height: 92vh;
@@ -1838,11 +1850,20 @@ const visibleYoyRatioCards = computed(() => {
   overflow: hidden;
   border-radius: 20px;
   color: #eefaf1;
-  background: linear-gradient(145deg, rgba(10, 34, 21, 0.84), rgba(7, 24, 15, 0.78));
-  backdrop-filter: blur(28px) saturate(165%);
-  -webkit-backdrop-filter: blur(28px) saturate(165%);
+  background: linear-gradient(145deg, rgba(8, 28, 18, 0.93), rgba(5, 19, 12, 0.90));
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.20);
-  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.54), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-modal-scrim {
+    background: rgba(3, 12, 8, 0.78);
+  }
+  .glass-modal-panel {
+    background: linear-gradient(145deg, rgba(8, 28, 18, 0.98), rgba(5, 19, 12, 0.98));
+  }
 }
 
 .glass-modal-header {
