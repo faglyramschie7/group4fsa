@@ -20,7 +20,7 @@ const chartBasis = computed({
   },
 })
 const showMoreAnalysis = ref(false)
-const showRightPanel = ref(true)
+const showRightPanel = ref(false)
 const showAllCalcRows = ref(false)
 const showAllTraces = ref(false)
 const openSchedules = ref({ 0: true })
@@ -37,7 +37,7 @@ watch(
   () => {
     activeTab.value = 'overview'
     showMoreAnalysis.value = false
-    showRightPanel.value = true
+    showRightPanel.value = false
     showAllCalcRows.value = false
     showAllTraces.value = false
     openSchedules.value = { 0: true }
