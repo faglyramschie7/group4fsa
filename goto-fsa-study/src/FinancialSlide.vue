@@ -424,28 +424,28 @@ const restatedPointsMap = computed(() => {
     ],
     6: [
       {
-        heading: id ? 'Normalisasi CapEx 2024 (41,0% → 6,63%)' : '2024 Continuing CapEx (41.0% → 6.63%)',
+        heading: id ? 'Red Flag 1: Asosiasi & Aset Level 3' : 'Red Flag 1: Associates & Level 3 Assets',
         text: id
-          ? 'Catatan 12 membuktikan Rp5.464,9M penambahan aset takberwujud 2024 berasal dari transfer pra-dekonsolidasi Tokopedia; tanpanya, CapEx lanjutan 2024 hanya Rp1.054,0M (6,63% pendapatan).'
-          : 'Note 12 proves Rp5,464.9bn of 2024 intangible additions belonged to Tokopedia before loss of control, lowering 2024 continuing CapEx to Rp1,054.0bn (6.63% of revenue).',
-        formula: '2024 Continuing CapEx = (Rp6,518.9bn − Rp5,464.9bn) / Rp15,894.5bn = 6.63%',
-        data_origin: 'Final Report §2.3 & Appendix B Table B1 #5',
+          ? 'Tokopedia (Rp7,43T) & Bank Jago (Rp2,89T) mencapai 22,57% aset; investasi Level 3 Rp1,67T mencatat rugi nilai wajar Rp596,7M. Penurunan nilai 20% memangkas ekuitas 6,34%.'
+          : 'Tokopedia (Rp7.43T) & Bank Jago (Rp2.89T) represent 22.57% of assets, while Rp1.67T Level 3 stakes posted a Rp596.7bn FV loss. A 20% write-down cuts equity by 6.34%.',
+        formula: '20% Stress on Rp9,100.9bn (Tokopedia + L3) = −Rp1,820.2bn (−3.98% assets / −6.34% equity)',
+        data_origin: 'Final Report §2.1 (Table 4; Notes 14 & 15)',
       },
       {
-        heading: id ? 'Rasio Akrual Sebelum & Sesudah Penyesuaian' : 'Before & After Accrual Ratios',
+        heading: id ? 'Red Flag 2: Insentif & Pihak Berelasi' : 'Red Flag 2: Incentives & Related Parties',
         text: id
-          ? 'Akrual yang dilaporkan membaik dari −11,21% menjadi −3,95%, sedangkan akrual laba berulang (mempertahankan SBC Rp593,4M & provisi kredit) turun dari −3,69% menjadi −1,94%.'
-          : 'Reported accruals narrowed from −11.21% to −3.95%, while adjusted recurring accruals (retaining SBC & credit provisions) narrowed from −3.69% to −1.94%.',
-        formula: 'Adjusted Recurring EBT: −Rp2,029.3bn (2024) → −Rp165.0bn (2025)',
-        data_origin: 'Final Report §2.2 (Table 5)',
+          ? 'Sebagai agen (PSAK 72), insentif pelanggan Rp1.076,9M dibebankan ke pemasaran (Catatan 26), sementara pendapatan pihak berelasi (jasa Tokopedia) naik dari 5,20% menjadi 7,13% (Rp1.306,1M).'
+          : 'Under agent accounting (Note 2s), Rp1,076.9bn of excess customer incentives moved into sales & marketing (Note 26), while related-party revenue rose from 5.20% to 7.13% (Rp1,306.1bn).',
+        formula: 'Related-Party Rev = Rp1,306.1bn (7.13% of Rev) | Expensed Incentives = Rp1,076.9bn',
+        data_origin: 'Final Report §2.1 (Notes 2s, 25 & 26)',
       },
       {
-        heading: id ? 'Risiko Kredit (+134,9%) & Aset Level 3' : 'Credit Risk (+134.9%) & Level 3 Assets',
+        heading: id ? 'Red Flag 3: Pinjaman & Provisi Kredit (+134,9%)' : 'Red Flag 3: Lending & Credit Loss (+134.9%)',
         text: id
-          ? 'Provisi kredit Catatan 7 melonjak +134,9% (Rp407,7M; 12,99% pinjaman bruto), sementara penurunan nilai 20% atas Tokopedia & Level 3 (Rp9,10T) memangkas ekuitas 6,34%.'
-          : 'Note 7 credit provisions surged +134.9% (Rp407.7bn; 12.99% of gross loans), while a 20% write-down on Tokopedia & Level 3 stakes cuts equity by 6.34%.',
-        formula: '20% Stress on Rp9,100.9bn (Tokopedia + L3) = −Rp1,820.2bn pre-tax (−6.34% equity)',
-        data_origin: 'Final Report §2.1 (Table 4)',
+          ? 'Piutang pinjaman Catatan 7 melonjak +72,64% ke Rp2,73T (menyerap −Rp2,02T CFO), sementara cadangan kerugian kredit naik +134,9% ke Rp407,7M (12,99% pinjaman bruto).'
+          : 'Note 7 consumer lending jumped +72.64% to Rp2.73T (absorbing −Rp2.02T CFO), while expected credit loss provisions surged +134.9% to Rp407.7bn (12.99% of gross loans).',
+        formula: 'ECL Allowance: Rp173.6bn → Rp407.7bn (+134.9%) | +500 bps loss = −Rp136.5bn (32% of 2026F EBIT)',
+        data_origin: 'Final Report §2.1 (Note 7 & Cash Flow p. 21)',
       },
     ],
     7: [
