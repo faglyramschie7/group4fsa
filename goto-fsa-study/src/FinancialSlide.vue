@@ -582,6 +582,11 @@ const visibleAnalysisPoints = computed(() => {
       return pt
     })
   }
+  if (props.slide.slide_num === 6 && !isRestated.value) {
+    const pts = props.slide.analysis_points || []
+    if (pts.length >= 3) return [pts[0], pts[2], pts[1]]
+    return pts
+  }
   if (!isForecastSlide.value) return props.slide.analysis_points || []
   const id = props.lang === 'id'
   const byScenario = {
@@ -1075,7 +1080,23 @@ const pointIcons = {
     svg: '<circle cx="24" cy="24" r="14" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M18 24l4 4 8-8" stroke="#008c2c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
   },
 }
-const getPointIcon = (slideNum, index) => pointIcons[`${slideNum}-${index}`] || null
+const slide6RedFlagIcon = {
+  risk: true,
+  svg: '<path d="M13 10v28" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round"/><path d="M13 12h22l-4.5 7 4.5 7H13V12z" fill="#fca5a5" stroke="#dc2626" stroke-width="2.2" stroke-linejoin="round"/>',
+}
+const slide6AssetRedIcon = {
+  risk: true,
+  svg: '<rect x="10" y="9" width="20" height="28" rx="3" fill="#fecaca" stroke="#dc2626" stroke-width="2.2"/><path d="M15 16h10M15 22h8" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/><circle cx="31" cy="29" r="6" fill="#fef2f2" stroke="#dc2626" stroke-width="2.2"/><path d="M35.5 33.5L40 38" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>',
+}
+const getPointIcon = (slideNum, index) => {
+  if (props.slide.slide_num === 6) {
+    if (isRestated.value) return slide6RedFlagIcon
+    if (index === 0) return pointIcons['5-0']
+    if (index === 1) return slide6AssetRedIcon
+    if (index === 2) return pointIcons['5-1']
+  }
+  return pointIcons[`${slideNum}-${index}`] || null
+}
 const competitionChart = computed(() => props.slide.competition_chart)
 const spendingChart = computed(() => props.slide.competitive_spending_chart)
 const spendingScale = computed(() => Math.max(...(spendingChart.value?.series || []).map(row => row.value), 1) * 1.1)
