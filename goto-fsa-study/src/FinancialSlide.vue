@@ -1583,7 +1583,10 @@ const provisionGrowth = computed(() => {
 .slide-evidence-layout.has-restatement-bar .slide-editorial-row p { font-size: .96cqw; line-height: 1.38; max-width: 30cqw; }
 .slide-evidence-layout.has-restatement-bar .slide-analysis-panel .slide-analysis-point p { font-size: 1.04cqw; line-height: 1.44; }
 .slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
-.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: .95cqw 1.3cqw; gap: .65cqw; }
+.slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: .75cqw 1.2cqw; gap: .4cqw; }
+.slide-evidence.slide-evidence-explained .slide-financial-table th { padding: .52cqw .65cqw; }
+.slide-evidence.slide-evidence-explained .slide-financial-table td { padding: .48cqw .65cqw; line-height: 1.28; }
+.slide-evidence.slide-evidence-explained .slide-abbr-sub { font-size: .62cqw; line-height: 1.15; margin-top: .04cqw; }
 .slide-story-chart { margin: 0; padding-top: .75cqw; border-top: 1px solid #dce8df; }
 .slide-story-chart figcaption { font-size: .94cqw; color: #173d25; font-weight: 650; margin-bottom: .65cqw; line-height: 1.35; }
 .slide-chart-formula { color: #526a59; font-size: .76cqw; line-height: 1.45; margin: .35cqw 0 0; overflow-wrap: anywhere; }
