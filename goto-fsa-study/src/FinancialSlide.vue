@@ -947,14 +947,14 @@ const editorialRows = computed(() => {
       name: id ? '03  Laba berkelanjutan' : '03  Sustained profitability',
       value: '> Rp 2.43T',
       img: '/visuals/row_hurdle_profit.png',
-      text: id ? 'Laba bersih GAAP selama dua tahun berturut-turut' : 'Annual GAAP net income for two consecutive years',
+      text: id ? 'Laba bersih selama dua tahun berturut-turut' : 'Annual net income for two consecutive years',
       detail_explanation: id
-        ? 'Syarat ketiga: laba bersih GAAP harus melampaui beban biaya ekuitas tahunan (Rp 28.711,66 M × Ke 8,45% = Rp 2,43T/tahun) selama dua tahun berturut-turut. Tanpa melewati Rp 2,43T, Residual Income tetap negatif dan perusahaan belum menciptakan nilai ekonomi bagi pemegang saham.'
-        : 'Third hurdle: annual GAAP net income must exceed the equity capital charge (Rp 28,711.66 bn × 8.45% Ke = Rp 2.43T/yr) for two consecutive years. Below Rp 2.43T, Residual Income remains negative and destroys shareholder value.',
+        ? 'Syarat ketiga: laba bersih harus melampaui beban biaya ekuitas tahunan (Rp 28.711,66 M × Ke 8,45% = Rp 2,43T/tahun) selama dua tahun berturut-turut. Tanpa melewati Rp 2,43T, Residual Income tetap negatif dan perusahaan belum menciptakan nilai ekonomi bagi pemegang saham.'
+        : 'Third hurdle: annual net income must exceed the equity capital charge (Rp 28,711.66 bn × 8.45% Ke = Rp 2.43T/yr) for two consecutive years. Below Rp 2.43T, Residual Income remains negative and destroys shareholder value.',
       formula: id ? 'Beban Ekuitas = BVE Awal (Rp 28.711,66 M) × Ke (8,45%) = Rp 2,43T / tahun' : 'Equity Charge = Beginning BVE (Rp 28,711.66 bn) × Ke (8.45%) = Rp 2.43T / yr',
       calc_steps: [
-        id ? 'Residual Income = Laba Bersih GAAP − (BVE Awal × 8,45%)' : 'Residual Income = GAAP Net Income − (Beginning BVE × 8.45%)',
-        id ? 'RI > 0 hanya tercapai jika Laba Bersih > Rp 2,43T/tahun' : 'RI > 0 only when GAAP Net Income > Rp 2.43T/yr',
+        id ? 'Residual Income = Laba Bersih − (BVE Awal × 8,45%)' : 'Residual Income = Net Income − (Beginning BVE × 8.45%)',
+        id ? 'RI > 0 hanya tercapai jika Laba Bersih > Rp 2,43T/tahun' : 'RI > 0 only when Net Income > Rp 2.43T/yr',
       ],
       data_origin: 'Residual Income Valuation!B5:D10 (Assignment 14 Workbook)',
       highlight_terms: ['2.43T', '8.45%', 'Residual Income'],
