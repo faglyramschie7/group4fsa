@@ -3309,6 +3309,48 @@ const slide11ScenarioMatrix = computed(() => {
   border-left: 1.5px dashed rgba(251, 191, 36, 0.55);
 }
 
+.glass-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.glass-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #e4f5ea;
+}
+
+.glass-data-table thead th {
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #a7f3d0;
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-data-table tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: middle;
+}
+
+.glass-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.glass-data-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .glass-assumptions-tbl th,
 .glass-assumptions-tbl td {
   white-space: nowrap;
@@ -3330,7 +3372,7 @@ const slide11ScenarioMatrix = computed(() => {
 .glass-assumptions-tbl tr.is-base-row td,
 .glass-scenario-tbl tr.is-base-row td {
   background: rgba(34, 197, 94, 0.12);
-  color: #eefaf1;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -3340,12 +3382,21 @@ const slide11ScenarioMatrix = computed(() => {
 .glass-scenario-tbl td:nth-child(3) {
   text-align: right;
   white-space: nowrap;
+  padding-right: 18px;
   font-variant-numeric: tabular-nums;
+}
+
+.glass-scenario-tbl th:nth-child(4),
+.glass-scenario-tbl td:nth-child(4) {
+  padding-left: 18px;
+  color: #c8e7d3;
+  line-height: 1.45;
 }
 
 .glass-scenario-tbl td:first-child {
   white-space: nowrap;
   font-weight: 600;
+  color: #f0fdf4;
 }
 
 .glass-vchart-val {
