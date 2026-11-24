@@ -1829,12 +1829,12 @@ const visibleYoyRatioCards = computed(() => {
   padding: clamp(14px, 2.5vw, 32px);
 }
 
-/* Sibling scrim avoids nested backdrop-filter, which Firefox drops per the Backdrop Root spec */
+/* Sibling scrim + .app-layout.is-glass-open filter ensures true frosted blur even when Firefox skips backdrop-filter */
 .glass-modal-scrim {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: rgba(3, 12, 8, 0.56);
+  background: rgba(3, 12, 8, 0.62);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -1850,11 +1850,13 @@ const visibleYoyRatioCards = computed(() => {
   overflow: hidden;
   border-radius: 20px;
   color: #eefaf1;
-  background: linear-gradient(145deg, rgba(8, 28, 18, 0.93), rgba(5, 19, 12, 0.90));
-  backdrop-filter: blur(28px) saturate(160%);
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.54), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(74, 222, 128, 0.09), transparent 44%),
+    linear-gradient(145deg, rgba(7, 25, 16, 0.96), rgba(4, 16, 10, 0.97));
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.62), inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {

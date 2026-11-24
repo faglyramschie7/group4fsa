@@ -3429,7 +3429,7 @@ const isColNumeric = (tbl, cIdx) => {
 </script>
 
 <template>
-  <div class="app-layout">
+  <div :class="['app-layout', { 'is-glass-open': !!detailDrawerItem && !lightboxImage }]">
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="brand">
@@ -5204,6 +5204,11 @@ const isColNumeric = (tbl, cIdx) => {
   width: 100vw;
   overflow: hidden;
   background: var(--bg-main);
+  transition: filter 0.18s ease;
+}
+
+.app-layout.is-glass-open {
+  filter: blur(10px) saturate(0.85);
 }
 
 /* Sidebar Styles */
