@@ -1062,8 +1062,8 @@ const yoyRatioCards = computed(() => {
         delta: '+74.05% YoY',
         tone: 'pos',
         note: id
-          ? '90,96% pertumbuhan grup; rugi segmen menyusut −64,3% (−Rp1,11T → −Rp397B).'
-          : '90.96% of group growth; segment loss narrowed −64.3% (−Rp1.11T → −Rp397B).',
+          ? '90,96% pertumbuhan grup. Rugi segmen menyusut −64,3% (−Rp1,11T → −Rp397B).'
+          : '90.96% of group growth. Segment loss narrowed −64.3% (−Rp1.11T → −Rp397B).',
         bars: [
           { yr: '2024', val: 'Rp2.98T', pct: 57 },
           { yr: '2025', val: 'Rp5.19T', pct: 100, current: true },
@@ -1148,8 +1148,8 @@ const yoyRatioCards = computed(() => {
         delta: '+2,618 bps YoY',
         tone: 'warn',
         note: id
-          ? 'Rugi bersih menyusut, namun SBC Rp593B & bunga jaga hasil negatif.'
-          : 'Bottom line improved sharply, yet Rp593B SBC & finance costs weigh.',
+          ? 'Rugi bersih menyusut, namun kompensasi berbasis saham Rp593B & bunga masih membebani.'
+          : 'Bottom line improved sharply, yet Rp593B share-based compensation & finance costs weigh.',
         bars: [
           { yr: '2023*', val: '−612.2%', pct: 100 },
           { yr: '2024', val: '−34.38%', pct: 28 },
@@ -1231,7 +1231,7 @@ const yoyRatioCards = computed(() => {
         delta: '+3.83x YoY',
         tone: 'warn',
         note: id
-          ? 'EBIT membaik −Rp2,24T → −Rp378B; bunga Catatan 27b Rp535,2B.'
+          ? 'EBIT membaik −Rp2,24T → −Rp378B. Bunga Catatan 27b sebesar Rp535,2B.'
           : 'Narrowing EBIT loss (−Rp2.24T → −Rp378B) vs. Rp535.2B Note 27b interest.',
         bars: [
           { yr: '2023*', val: '−27.83x', pct: 100 },
@@ -1275,8 +1275,8 @@ const yoyRatioCards = computed(() => {
         delta: '+726 bps YoY',
         tone: 'warn',
         note: id
-          ? '2023* terdistorsi goodwill Rp78,8T; non-tunai menyusut tajam pasca-exit.'
-          : '2023* distorted by Rp78.8T goodwill write-off; non-cash charges shrank post-exit.',
+          ? '2023* terdistorsi goodwill Rp78,8T. Beban non-tunai menyusut tajam pasca-exit.'
+          : '2023* distorted by Rp78.8T goodwill write-off. Non-cash charges shrank post-exit.',
         bars: [
           { yr: '2023*', val: '−159.3%', pct: 100 },
           { yr: '2024', val: '−11.21%', pct: 32 },
@@ -1288,8 +1288,8 @@ const yoyRatioCards = computed(() => {
         delta: '+175 bps YoY',
         tone: 'warn',
         note: id
-          ? '2023* tanpa goodwill; tetap menahan SBC (Rp593B) & provisi kredit sebagai biaya riil.'
-          : '2023* ex-goodwill; retains SBC (Rp593B) & loan provisions as real recurring costs.',
+          ? '2023* tanpa goodwill. Tetap menahan kompensasi berbasis saham (Rp593B) & provisi kredit.'
+          : '2023* ex-goodwill. Retains share-based compensation (Rp593B) & loan provisions as real costs.',
         bars: [
           { yr: '2023*', val: '−13.73%', pct: 100 },
           { yr: '2024', val: '−3.69%', pct: 36 },
@@ -1307,8 +1307,8 @@ const yoyRatioCards = computed(() => {
         tone: 'pos',
         focused: titleText.includes('cogs') || titleText.includes('pokok'),
         note: id
-          ? 'Bauran segmen lonjakkan 2024; efisiensi cloud >50% pangkas COGS 2025 & 1H26.'
-          : 'Mix shift spiked 2024 post-exit; >50% cloud savings cut COGS in 2025 & 1H26.',
+          ? 'Bauran segmen lonjakkan 2024. Efisiensi cloud >50% pangkas COGS 2025 & 1H26.'
+          : 'Mix shift spiked 2024 post-exit. Over 50% cloud savings cut COGS in 2025 & 1H26.',
         bars: [
           { yr: '2023*', val: '34.45%', pct: 74 },
           { yr: '2024', val: '46.64%', pct: 100 },
