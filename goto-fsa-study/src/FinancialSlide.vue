@@ -714,42 +714,6 @@ const editorialRows = computed(() => {
       },
     ]
   }
-  if (isRestated.value && props.slide.slide_num === 6) {
-    const base = props.slide.visual_rows || []
-    return [
-      {
-        ...base[0],
-        value: '+Rp307.0bn',
-        text: id
-          ? 'Akrual berulang −1,94% (turun dari −3,69% di 2024)\nProvisi kredit Catatan 7 melonjak +134,9% YoY'
-          : 'Adjusted recurring accrual −1.94% (from −3.69%)\nNote 7 credit-loss provisions surged +134.9% YoY',
-        detail_explanation: id
-          ? 'Setelah mengeluarkan pos non-operasi (goodwill, penyesuaian nilai wajar) sambil tetap menahan SBC (Rp593,4M) dan provisi kredit, akrual berulang menyempit dari −3,69% menjadi −1,94% seiring CFO berbalik +Rp307,0M.'
-          : 'After isolating non-operating goodwill and fair-value swings while retaining SBC (Rp593.4bn) and loan provisions, recurring accruals narrowed from −3.69% to −1.94% as CFO turned +Rp307.0bn.',
-      },
-      {
-        ...base[1],
-        name: id ? 'Belanja modal lanjutan' : 'Continuing cash capex',
-        value: 'Rp1,182bn (6.45%)',
-        text: id
-          ? 'CapEx 2024 direvisi turun 41,0% → 6,63% (Rp1.054M)\nSetelah keluarkan transfer Tokopedia Rp5,46T (Cat. 12)'
-          : '2024 CapEx restated down 41.0% → 6.63% (Rp1,054bn)\nExcludes Rp5,465bn Tokopedia Note 12 transfer',
-        detail_explanation: id
-          ? 'Catatan 12 membuktikan Rp5.464,9M penambahan aset takberwujud 2024 milik Tokopedia sebelum keluar dari konsolidasi. Mengeluarkannya menurunkan CapEx lanjutan 2024 dari 41,0% menjadi 6,63% (sejalan dengan 6,45% di 2025).'
-          : 'Note 12 proves Rp5,464.9bn of 2024 intangible additions belonged to Tokopedia prior to deconsolidation, lowering 2024 continuing CapEx from 41.0% to 6.63% (in line with FY2025’s 6.45%).',
-      },
-      {
-        ...base[2],
-        value: '−Rp875.3bn',
-        text: id
-          ? 'CFO hanya menutup 25,97% CapEx; investasi inti −Rp867,4M\nKas terbantu pencairan deposito Rp1,39T & utang baru Rp3,72T'
-          : 'CFO covers 25.97% of CapEx; core CFI −Rp867.4bn\nSupported by Rp1.39T deposit maturity & Rp3.72T new debt',
-        detail_explanation: id
-          ? 'Arus kas bebas tetap negatif −Rp875,3M karena CFO Rp307,0M hanya menutup 25,97% CapEx Rp1.182,4M. Positifnya CFI (+Rp519,1M) bergantung pada pencairan deposito berjangka Rp1.386,5M.'
-          : 'FCF remained −Rp875.3bn as Rp307.0bn CFO covered only 25.97% of Rp1,182.4bn CapEx. Headline investing inflow (+Rp519.1bn) relied on settling Rp1,386.5bn of time deposits.',
-      },
-    ]
-  }
   if (isRestated.value && props.slide.slide_num === 12) {
     const base = props.slide.visual_rows || []
     return [
