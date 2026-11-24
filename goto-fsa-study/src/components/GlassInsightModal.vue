@@ -8,7 +8,28 @@ const props = defineProps({
   renderMath: { type: Function, default: null },
 })
 
-const emit = defineEmits(['close', 'zoom', 'jump-assignment', 'jump-lecture'])
+const emit = defineEmits(['close', 'zoom', 'jump-assignment', 'jump-lecture', 'jump-slide'])
+
+const appendixMap = {
+  2: { code: 'A1', slideNum: 15 },
+  3: { code: 'A1', slideNum: 15 },
+  4: { code: 'A2', slideNum: 16 },
+  5: { code: 'A3', slideNum: 17 },
+  6: { code: 'A3', slideNum: 17 },
+  7: { code: 'A4', slideNum: 18 },
+  8: { code: 'A5', slideNum: 19 },
+  9: { code: 'A6', slideNum: 20 },
+  10: { code: 'A6', slideNum: 20 },
+  11: { code: 'A6', slideNum: 20 },
+  12: { code: 'A6', slideNum: 20 },
+  13: { code: 'A6', slideNum: 20 },
+  14: { code: 'A6', slideNum: 20 },
+}
+const appendixTarget = computed(() => {
+  const s = props.item.slide
+  if (!s || s.is_appendix) return null
+  return appendixMap[s.slide_num] || null
+})
 
 const { reportViewMode } = useReportMode()
 
@@ -1043,13 +1064,13 @@ const yoySectionTitle = computed(() => {
   const span = id ? '2023* | 2024–2025 Pasca-Exit' : '2023* | 2024–2025 Post-Exit'
   const span1H = id ? '2023* | 2024–1H26 Pasca-Exit' : '2023* | 2024–1H26 Post-Exit'
   const titles = {
-    2: id ? `Perubahan Segmen YoY (${span} · Catatan 29)` : `Segment YoY Trajectory (${span} · Note 29)`,
-    3: id ? `Tekanan Biaya & Risiko Kredit YoY (${span})` : `Competitive Cost & Credit Risk YoY (${span})`,
-    4: id ? `Perubahan Rasio & DuPont YoY (${span} · Tabel 8–9)` : `Year-over-Year DuPont & Margin Trajectory (${span} · Tables 8–9)`,
-    5: id ? `Perubahan Likuiditas & Solvabilitas YoY (${span} · Tabel 8)` : `Year-over-Year Liquidity & Leverage Movement (${span} · Table 8)`,
-    6: id ? `Perubahan Kualitas Laba & Arus Kas YoY (${span} · Tabel 5)` : `Year-over-Year Cash Flow & Accrual Quality (${span} · Table 5)`,
-    7: id ? `Lintasan Historis YoY di Balik Asumsi Driver (${span1H} · Tabel 11)` : `Historical YoY Driver Trajectory Behind Forecast Inputs (${span1H} · Table 11)`,
-    8: id ? 'Lintasan Proyeksi Base Case (2025A → 2028F · Tabel 12)' : 'Restated Base Forecast Trajectory (2025A → 2028F · Table 12)',
+    2: id ? `Perubahan Segmen YoY (${span} · Appendix A1)` : `Segment YoY Trajectory (${span} · Appendix A1)`,
+    3: id ? `Tekanan Biaya & Risiko Kredit YoY (${span} · Appendix A1)` : `Competitive Cost & Credit Risk YoY (${span} · Appendix A1)`,
+    4: id ? `Perubahan Rasio & DuPont YoY (${span} · Appendix A2)` : `Year-over-Year DuPont & Margin Trajectory (${span} · Appendix A2)`,
+    5: id ? `Perubahan Likuiditas & Solvabilitas YoY (${span} · Appendix A3)` : `Year-over-Year Liquidity & Leverage Movement (${span} · Appendix A3)`,
+    6: id ? `Perubahan Kualitas Laba & Arus Kas YoY (${span} · Appendix A3)` : `Year-over-Year Cash Flow & Accrual Quality (${span} · Appendix A3)`,
+    7: id ? `Lintasan Historis YoY di Balik Asumsi Driver (${span1H} · Appendix A4)` : `Historical YoY Driver Trajectory Behind Forecast Inputs (${span1H} · Appendix A4)`,
+    8: id ? 'Lintasan Proyeksi Base Case (2025A → 2028F · Appendix A5)' : 'Restated Base Forecast Trajectory (2025A → 2028F · Appendix A5)',
   }
   return titles[sn] || ''
 })
@@ -1695,18 +1716,33 @@ const slide7AssumptionsTable = computed(() => {
             </button>
           </div>
 
-          <button
-            v-if="activeTab === 'overview' && hasAnalysisTab && !isSlide9Walkthrough"
-            type="button"
-            class="glass-panel-toggle"
-            :class="{ 'is-on': showRightPanel }"
-            @click="showRightPanel = !showRightPanel"
-          >
-            <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M15 3v18" />
-            </svg>
-            <span>{{ showRightPanel ? (isId ? 'Sembunyikan Analisis' : 'Hide Analysis') : (isId ? 'Tampilkan Analisis' : 'Show Analysis') }}</span>
-          </button>
+          <div class="glass-tab-right-actions">
+            <button
+              v-if="appendixTarget"
+              type="button"
+              class="glass-panel-toggle is-apx"
+              @click="emit('jump-slide', appendixTarget.slideNum)"
+              :title="isId ? `Lompat ke Appendix ${appendixTarget.code}` : `Jump to Appendix ${appendixTarget.code}`"
+            >
+              <span>Appendix {{ appendixTarget.code }}</span>
+              <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+              </svg>
+            </button>
+
+            <button
+              v-if="activeTab === 'overview' && hasAnalysisTab && !isSlide9Walkthrough"
+              type="button"
+              class="glass-panel-toggle"
+              :class="{ 'is-on': showRightPanel }"
+              @click="showRightPanel = !showRightPanel"
+            >
+              <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M15 3v18" />
+              </svg>
+              <span>{{ showRightPanel ? (isId ? 'Sembunyikan Analisis' : 'Hide Analysis') : (isId ? 'Tampilkan Analisis' : 'Show Analysis') }}</span>
+            </button>
+          </div>
         </nav>
 
         <!-- Slide 9 Interactive Component Sub-Menu Bar (directly below main top bar) -->
@@ -2591,6 +2627,25 @@ const slide7AssumptionsTable = computed(() => {
 .glass-panel-toggle.is-on {
   border-color: rgba(134, 239, 172, 0.42);
   background: rgba(34, 197, 94, 0.14);
+}
+
+.glass-tab-right-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.glass-panel-toggle.is-apx {
+  border-color: rgba(134, 239, 172, 0.42);
+  background: rgba(34, 197, 94, 0.12);
+  color: #bbf7d0;
+}
+
+.glass-panel-toggle.is-apx:hover {
+  background: rgba(34, 197, 94, 0.28);
+  border-color: rgba(134, 239, 172, 0.72);
+  color: #ffffff;
 }
 
 .glass-tab-bar::-webkit-scrollbar {

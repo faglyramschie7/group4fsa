@@ -624,7 +624,7 @@ Risks: Better operations could make the base too cautious. Credit losses, impair
 **Correcting the 2023 pre-Tokopedia distortion and 4 historical data errors documented in Final Report Appendix B**
 *Section: Restatement & Governance | Time Budget: 1.5 mins | Rubric: B4 / C1 / E4*
 
-### Table B1: Five Forensic Corrections Applied Across Deliverables
+### Five Forensic Corrections Applied Across Deliverables (Appendix A6)
 
 | Corrected Item | Earlier Deck Error | Restated Audited Basis | Impact |
 | --- | --- | --- | --- |

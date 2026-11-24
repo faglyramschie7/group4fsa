@@ -1504,6 +1504,16 @@ const currentPresSlide = computed(() => {
   return presentationSlides.value.find(s => s.slide_num === selectedPresSlideNum.value) || presentationSlides.value[0]
 })
 
+const lastMainSlideNum = ref(12)
+const jumpToPresSlide = (targetSlideNum) => {
+  const cur = currentPresSlide.value
+  if (cur && !cur.is_appendix && targetSlideNum > mainPresSlideCount.value) {
+    lastMainSlideNum.value = cur.slide_num
+  }
+  activeTab.value = 'presentation'
+  selectedPresSlideNum.value = targetSlideNum
+}
+
 const getLectureSlideObj = (weekId, slideNum) => {
   const mod = modules.value.find(m => m.id === weekId)
   if (!mod || !mod.slides) return null
@@ -3930,9 +3940,11 @@ const isColNumeric = (tbl, cIdx) => {
               :slide="currentPresSlide"
               :lang="lang"
               :total="presentationSlides.length"
+              :back-slide-num="lastMainSlideNum"
               @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
               @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
               @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
+              @jump-slide="jumpToPresSlide"
             />
 
             <button
@@ -5097,9 +5109,11 @@ const isColNumeric = (tbl, cIdx) => {
           :slide="currentPresSlide"
           :lang="lang"
           :total="presentationSlides.length"
+          :back-slide-num="lastMainSlideNum"
           @explain="(event, type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
           @evidence="(type, item) => onPresItemDblClick(buildPresItemPayload(type, item, type === 'row' ? currentPresSlide.table.rows.indexOf(item) : null))"
           @zoom="(imgUrl, imgTitle) => openLightbox(imgUrl || currentPresSlide.chart_url, imgTitle || currentPresSlide.title, currentPresSlide.source_footer)"
+          @jump-slide="jumpToPresSlide"
         />
       </div>
     </div>
@@ -5137,6 +5151,7 @@ const isColNumeric = (tbl, cIdx) => {
       @zoom="(src, title, caption) => openLightbox(src, title, caption)"
       @jump-assignment="(id, sheet) => { detailDrawerItem = null; isPresentMode = false; jumpToAssignmentSheet(id, sheet) }"
       @jump-lecture="(wk, sn) => { detailDrawerItem = null; isPresentMode = false; jumpToLectureSlide(wk, sn) }"
+      @jump-slide="(sn) => { detailDrawerItem = null; jumpToPresSlide(sn) }"
     />
 
     <!-- ================= LIGHTBOX / FULLSCREEN MODAL ================= -->

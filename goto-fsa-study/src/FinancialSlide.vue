@@ -4,8 +4,38 @@ import { useReportMode } from './composables/useReportMode'
 
 const { reportViewMode } = useReportMode()
 
-const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 12 } })
-const emit = defineEmits(['explain', 'evidence', 'zoom'])
+const props = defineProps({
+  slide: { type: Object, required: true },
+  lang: { type: String, default: 'en' },
+  total: { type: Number, default: 12 },
+  backSlideNum: { type: Number, default: 12 },
+})
+const emit = defineEmits(['explain', 'evidence', 'zoom', 'jump-slide'])
+
+const appendixMap = {
+  2: { code: 'A1', slideNum: 15 },
+  3: { code: 'A1', slideNum: 15 },
+  4: { code: 'A2', slideNum: 16 },
+  5: { code: 'A3', slideNum: 17 },
+  6: { code: 'A3', slideNum: 17 },
+  7: { code: 'A4', slideNum: 18 },
+  8: { code: 'A5', slideNum: 19 },
+  9: { code: 'A6', slideNum: 20 },
+  10: { code: 'A6', slideNum: 20 },
+  11: { code: 'A6', slideNum: 20 },
+  12: { code: 'A6', slideNum: 20 },
+  13: { code: 'A6', slideNum: 20 },
+  14: { code: 'A6', slideNum: 20 },
+}
+const appendixTarget = computed(() => (!props.slide.is_appendix ? appendixMap[props.slide.slide_num] || null : null))
+const appendixList = [
+  { code: 'A1', slideNum: 15 },
+  { code: 'A2', slideNum: 16 },
+  { code: 'A3', slideNum: 17 },
+  { code: 'A4', slideNum: 18 },
+  { code: 'A5', slideNum: 19 },
+  { code: 'A6', slideNum: 20 },
+]
 const restatableSlides = new Set([4, 5, 6, 7, 8, 10, 11, 12])
 const hasRestatement = computed(() => !props.slide.is_appendix && restatableSlides.has(props.slide.slide_num))
 const isRestated = computed(() => hasRestatement.value && reportViewMode.value === 'restated')
@@ -165,8 +195,8 @@ const restatedSlideTables = computed(() => {
   return {
     4: {
       headers: id
-        ? ['Rasio / DuPont (Tabel 8–9)', '2023*', '2024', '2025', 'YoY 24→25']
-        : ['Ratio / DuPont (Report T8–9)', '2023*', '2024', '2025', 'YoY 24→25'],
+        ? ['Rasio / DuPont (Appendix A2)', '2023*', '2024', '2025', 'YoY 24→25']
+        : ['Ratio / DuPont (Appendix A2)', '2023*', '2024', '2025', 'YoY 24→25'],
       rows: [
         [id ? 'Margin Operasi (EBIT %)' : 'Operating Margin (EBIT %)', '−69.5%', '−14.10%', '−2.06%', '+1,204 bps'],
         [id ? 'Margin Laba Bersih' : 'Net Profit Margin', '−612.2%', '−34.38%', '−8.20%', '+2,618 bps'],
@@ -537,12 +567,12 @@ const restatedPointsMap = computed(() => {
         data_origin: 'Final Report §6.1',
       },
       {
-        heading: id ? 'Ambang Re-Rating Terukur (Tabel 17)' : 'Quantitative Re-Rating Triggers (Table 17)',
+        heading: id ? 'Ambang Re-Rating Terukur (Appendix A6)' : 'Quantitative Re-Rating Triggers (Appendix A6)',
         text: id
           ? 'Upgrade BUY jika Cash OpEx ≤ 51,2% & GM ≥ 61,9% dua kuartal beruntun; HOLD jika harga ≤ Rp13,20 (1,0x Kas Bersih) dengan FCF positif; Perkuat SELL jika OpEx ≥ 60% atau provisi ≥ Rp650M.'
           : 'BUY trigger: Cash OpEx ≤ 51.2% & GM ≥ 61.9% for 2 quarters. HOLD trigger: Price ≤ Rp13.20 (1.0x Net Cash) with FCF > 0. Reinforce SELL: OpEx ≥ 60% or provisions ≥ Rp650bn.',
         formula: 'BUY: OpEx ≤ 51.2% & GM ≥ 61.9% | HOLD: Price ≤ Rp13.20 & FCF > 0',
-        data_origin: 'Final Report §6.2 (Table 17)',
+        data_origin: 'Appendix A6 · Re-Rating Triggers',
       },
       {
         heading: id ? 'Risiko Utama & Pengembalian Modal' : 'ROIC Spread & Key Thesis Risks',
@@ -746,14 +776,14 @@ const editorialRows = computed(() => {
       },
       {
         ...base[2],
-        name: id ? 'Pemicu re-rating terukur (Tabel 17)' : 'Upgrade triggers (Table 17)',
+        name: id ? 'Pemicu re-rating terukur (Appendix A6)' : 'Upgrade triggers (Appendix A6)',
         value: '≤ Rp13.20 / ≤ 51.2%',
         text: id
           ? 'HOLD: harga ≤ Rp13,20 (1,0x Kas Bersih) & FCF > 0\nBUY: Cash OpEx ≤ 51,2% & Margin Kotor ≥ 61,9% (2Q)'
           : 'HOLD: price ≤ Rp13.20 (1.0x Net Cash) w/ FCF > 0\nBUY: Cash OpEx ≤ 51.2% & Gross Margin ≥ 61.9% (2Q)',
         detail_explanation: id
-          ? 'Tabel 17 Laporan Akhir menetapkan syarat kuantitatif: HOLD bila harga turun ≤ Rp13,20 dengan FCF positif, BUY bila efisiensi 1H 2026 (Cash OpEx ≤ 51,2%, GM ≥ 61,9%) bertahan dua kuartal berturut-turut.'
-          : 'Final Report Table 17 defines exact thresholds: upgrade to HOLD if IDX price pulls back to ≤ Rp13.20 with positive FCF; upgrade to BUY if Cash OpEx ≤ 51.2% and Gross Margin ≥ 61.9% hold for two consecutive quarters.',
+          ? 'Ambang re-rating kuantitatif (Appendix A6): naikkan ke HOLD bila harga turun ≤ Rp13,20 dengan FCF positif, naikkan ke BUY bila efisiensi 1H 2026 (Cash OpEx ≤ 51,2%, GM ≥ 61,9%) bertahan dua kuartal berturut-turut.'
+          : 'Quantitative re-rating thresholds (Appendix A6): upgrade to HOLD if IDX price pulls back to ≤ Rp13.20 with positive FCF; upgrade to BUY if Cash OpEx ≤ 51.2% and Gross Margin ≥ 61.9% hold for two consecutive quarters.',
       },
     ]
   }
@@ -1472,7 +1502,45 @@ const provisionGrowth = computed(() => {
       <footer class="slide-footline">
         <span>{{ slide.slide_num === 1 ? 'IDX: GOTO' : 'GROUP 4   /   IDX: GOTO' }}</span>
         <span class="slide-source">{{ slide.source_footer }}</span>
-        <span class="slide-folio">{{ String(slide.slide_num).padStart(2, '0') }} / {{ total }}</span>
+        <div class="slide-foot-right" @click.stop>
+          <button
+            v-if="appendixTarget"
+            type="button"
+            class="slide-apx-jump"
+            @click="emit('jump-slide', appendixTarget.slideNum)"
+            :title="lang === 'id' ? `Lompat ke Appendix ${appendixTarget.code}` : `Jump to Appendix ${appendixTarget.code}`"
+          >
+            <span>Appendix {{ appendixTarget.code }}</span>
+            <svg class="slide-apx-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+            </svg>
+          </button>
+          <template v-else-if="slide.is_appendix">
+            <button
+              type="button"
+              class="slide-apx-jump is-back"
+              @click="emit('jump-slide', backSlideNum || 12)"
+            >
+              <svg class="slide-apx-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span>{{ lang === 'id' ? `Kembali ke Slide ${backSlideNum || 12}` : `Back to Slide ${backSlideNum || 12}` }}</span>
+            </button>
+            <div class="slide-apx-mini-nav" role="navigation" aria-label="Appendix quick jump">
+              <button
+                v-for="apx in appendixList"
+                :key="apx.code"
+                type="button"
+                class="slide-apx-dot"
+                :class="{ active: slide.slide_num === apx.slideNum }"
+                @click="emit('jump-slide', apx.slideNum)"
+              >
+                {{ apx.code }}
+              </button>
+            </div>
+          </template>
+          <span class="slide-folio">{{ String(slide.slide_num).padStart(2, '0') }} / {{ total }}</span>
+        </div>
       </footer>
     </article>
   </div>
@@ -1707,4 +1775,14 @@ button:focus-visible, tr:focus-visible, [role="button"]:focus-visible { outline:
 .slide-cover-thesis.is-clickable-claim:hover { background: rgba(255, 255, 255, 0.12); padding-left: .6cqw; padding-right: .6cqw; margin-left: -.6cqw; margin-right: -.6cqw; }
 .slide-cover-verdict.is-clickable-claim:hover { background: transparent; }
 .slide-cover-verdict:focus-visible { outline-color: #ffffff; }
+.slide-foot-right { display: inline-flex; align-items: center; gap: .75cqw; flex-shrink: 0; }
+.slide-apx-jump { display: inline-flex; align-items: center; gap: .32cqw; padding: .24cqw .68cqw; border-radius: .38cqw; border: 1px solid rgba(134, 239, 172, 0.48); background: rgba(255, 255, 255, 0.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #eaffef; font: inherit; font-size: .74cqw; font-weight: 750; letter-spacing: .03em; cursor: pointer; white-space: nowrap; transition: background-color .15s ease, border-color .15s ease, transform .15s ease; }
+.slide-apx-jump:hover { background: rgba(34, 197, 94, 0.42); border-color: rgba(134, 239, 172, 0.85); color: #ffffff; transform: translateY(-1px); }
+.slide-apx-jump.is-back { border-color: rgba(251, 191, 36, 0.55); background: rgba(245, 158, 11, 0.24); color: #fef3c7; }
+.slide-apx-jump.is-back:hover { background: rgba(245, 158, 11, 0.46); color: #ffffff; }
+.slide-apx-ico { width: .82cqw; height: .82cqw; flex-shrink: 0; }
+.slide-apx-mini-nav { display: inline-flex; align-items: center; gap: .22cqw; }
+.slide-apx-dot { border: 1px solid rgba(255, 255, 255, 0.26); background: rgba(0, 0, 0, 0.22); color: #d1fae5; font: inherit; font-size: .68cqw; font-weight: 700; padding: .18cqw .42cqw; border-radius: .26cqw; cursor: pointer; transition: background-color .14s ease, color .14s ease; }
+.slide-apx-dot:hover { background: rgba(255, 255, 255, 0.20); color: #ffffff; }
+.slide-apx-dot.active { background: #4ade80; border-color: #4ade80; color: #052e16; }
 </style>

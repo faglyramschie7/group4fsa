@@ -5252,7 +5252,7 @@
     "study_explanation": "During preparation of the Final Report, a forensic audit uncovered five calculation errors in the earlier Milestone 2, Milestone 4, and Assignment 14 submissions. Acknowledging and correcting them reconciles the presentation deck with the submitted paper.",
     "speaker_notes": "Before closing, we want to transparently acknowledge five errors in our earlier submitted files that we corrected in our Final Report. First and largest: our original deck averaged 2023 pre-Tokopedia OpEx (117%) and 2024 Tokopedia intangible transfers (41% CapEx) into Base Case assumptions. Second, we added back Rp 1,582bn of omitted 2024 Note 7 lending receivables. Third, we separated Note 6 trade receivables so 2024 DSO drops from 46.9d to 10.56d. Fourth, we included short-term debt and all leases (Notes 19-20) and live Note 27b interest. Fifth, we stripped Note 12 Tokopedia intangibles out of 2024 continuing CapEx (41.0% to 6.63%).",
     "table": {
-      "title": "Table B1: Five Forensic Corrections Applied Across Deliverables",
+      "title": "Five Forensic Corrections Applied Across Deliverables (Appendix A6)",
       "headers": [
         "Corrected Item",
         "Earlier Deck Error",
@@ -5558,7 +5558,7 @@
         "data_origin": "Final Report §5.3 & §6.1"
       },
       {
-        "heading": "Clear Re-Rating Triggers (Table 17)",
+        "heading": "Clear Re-Rating Triggers (Appendix A6)",
         "text": "Only sustaining 1H 2026 cost containment (OpEx ≤ 51.2%, GM ≥ 61.9%) unlocks BUY upside (Rp16.75 RI–Rp47.34 DCF); a pullback ≤ Rp13.20 with FCF > 0 supports HOLD.",
         "formula": "BUY: OpEx ≤ 51.2% & GM ≥ 61.9% (2Q) | HOLD: Price ≤ Rp13.20 & FCF > 0",
         "calc_steps": [
