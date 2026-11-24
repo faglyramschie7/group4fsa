@@ -9,7 +9,7 @@ const readInitialMode = () => {
   } catch {
     // ignore storage access errors
   }
-  return 'restated'
+  return 'original'
 }
 
 const reportViewMode = ref(readInitialMode()) // 'original' (Previous / With 2023) | 'restated' (Current / Post-Exit)
