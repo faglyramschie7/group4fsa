@@ -3890,30 +3890,6 @@ const isColNumeric = (tbl, cIdx) => {
         <div v-if="activeTab === 'presentation'" class="tab-pane pres-tab-pane">
           <!-- Slide Control Bar -->
           <div class="pres-controls-bar">
-            <div class="pres-nav-buttons">
-              <button class="pres-nav-btn" :disabled="selectedPresSlideNum <= 1" @click="prevPresSlide">
-                &larr; {{ uiText.prevBtn }}
-              </button>
-              <span class="pres-counter-pill">
-                {{ uiText.slideWord }} {{ currentPresSlide.slide_num }} {{ uiText.ofWord }} {{ presentationSlides.length }}
-              </span>
-              <button class="pres-nav-btn" :disabled="selectedPresSlideNum >= presentationSlides.length" @click="nextPresSlide">
-                {{ uiText.nextBtn }} &rarr;
-              </button>
-            </div>
-
-            <div class="pres-slide-strip">
-              <button
-                v-for="ps in presentationSlides"
-                :key="ps.slide_num"
-                :class="['pres-dot-btn', { active: ps.slide_num === selectedPresSlideNum, apx: ps.is_appendix }]"
-                @click="selectPresSlide(ps.slide_num)"
-                :title="ps.section_tag + ': ' + ps.title"
-              >
-                {{ ps.is_appendix ? 'A' + (ps.slide_num - mainPresSlideCount) : ps.slide_num }}
-              </button>
-            </div>
-
             <div class="pres-meta-pills">
               <span class="pres-time-badge">⏱ {{ currentPresSlide.time_budget }}</span>
               <span class="pres-pts-badge">🏆 {{ currentPresSlide.rubric_points }}</span>
