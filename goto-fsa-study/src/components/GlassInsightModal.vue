@@ -511,6 +511,23 @@ const explanationParagraphs = computed(() => {
       )
     }
   }
+  if (sn === 11) {
+    paras.push(
+      id
+        ? 'Basis Rentang Wajar (Rp10,38–Rp16,75/saham · Bab 5.2–5.3, Tabel 15–16): Lantai Rp10,38 berasal dari Base DCF (WACC 7,76%, g 3,0%): Kas Bersih +Rp14.012,5M (Rp13,19/sh) dikurangi Enterprise Value negatif −Rp2.988,5M (karena ROIC 2,70% < WACC 7,76%) = +Rp11.024,0M ÷ 1.062,01M saham.'
+        : 'Basis of Defensible Range (Rp 10.38–Rp 16.75/share · Sections 5.2–5.3, Tables 15–16): The Rp 10.38 floor is Base Case DCF (WACC 7.76%, g 3.0%): Net Cash (+Rp 14,012.5B, or Rp 13.19/sh center) minus negative Enterprise Value (−Rp 2,988.5B, since 2.70% ROIC < 7.76% WACC) = +Rp 11,024.0B ÷ 1,062.01B shares (full step-by-step math on PDF p. 19).'
+    )
+    paras.push(
+      id
+        ? 'Plafon Rp16,75 berasal dari Optimistic Residual Income (rasio biaya 1H 2026: pertumbuhan 18,0%, COGS 38,10%, Cash OpEx 51,20% → EBIT 2028F Rp3.221,1M, ROE 6,18% vs. Ke 8,45%; rincian tahunan di Workbook Valuasi).'
+        : 'The Rp 16.75 ceiling is Optimistic Residual Income using 1H 2026 interim cost ratios (18.00% growth, 38.10% COGS, 51.20% Cash OpEx → 2028F EBIT Rp 3,221.1B, ROE 6.18% vs. 8.45% Ke; drivers & output in PDF Tables 11, 13 & 16, year-by-year RI schedule in the Valuation Workbook).'
+    )
+    paras.push(
+      id
+        ? 'Mengapa metode lain dikecualikan: P/B Grab (3,04x → Rp91,02/sh) ditolak karena Grab sudah membukukan ROE positif (+2,96%); Optimistic DCF (Rp47,34/sh) menuntut bukti efisiensi 1H26 bertahan setahun penuh; sedangkan Base RI (−Rp12,23/sh) dan Konservatif (−Rp33,95/−Rp44,42) berada di bawah bantalan kas bersih Rp13,19/sh.'
+        : 'Why other valuations were excluded: Grab P/B (3.04x → Rp 91.02/sh) is rejected because Grab already earns +2.96% ROE; Optimistic DCF (Rp 47.34/sh) requires full-year proof of 51.20% OpEx; and Base Perpetual RI (−Rp 12.23/sh) / Conservative (−Rp 33.95 DCF, −Rp 44.42 RI) fall below the Rp 13.19/sh net cash floor.'
+    )
+  }
   return paras
 })
 
@@ -2012,6 +2029,48 @@ const slide7AssumptionsTable = computed(() => {
                     <p v-if="card.note" class="glass-yoy-note">{{ card.note }}</p>
                   </div>
                 </div>
+              </div>
+
+              <!-- Slide 11: Defensible Range Basis & Exclusions Breakdown -->
+              <div v-if="item.slide?.slide_num === 11" class="glass-card glass-yoy-wrap">
+                <div class="glass-sec-label">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3v18" /><path d="M5 7h14" /><path d="M5 17h14" />
+                  </svg>
+                  <span>{{ isId ? 'Basis Rentang Wajar Rp 10,38 – Rp 16,75 (Bab 5.2–5.3 · Tabel 15–16)' : 'Defensible Range Basis: Rp 10.38 – Rp 16.75 (Sections 5.2–5.3 · Tables 15–16)' }}</span>
+                </div>
+                <div class="glass-vchart-grid">
+                  <div class="glass-vchart-card is-focused">
+                    <div class="glass-vchart-hdr">
+                      <strong>{{ isId ? 'Lantai: Base Case DCF' : 'Floor: Base Case DCF' }}</strong>
+                      <span class="glass-yoy-delta tone-pos">Rp 10.38 / sh</span>
+                    </div>
+                    <p class="glass-yoy-note">
+                      {{ isId ? 'Kas Bersih +Rp14.012,5M − EV −Rp2.988,5M (ROIC 2,70% < WACC 7,76%) = +Rp11.024,0M ÷ 1.062,01M saham. Rincian lengkap di PDF hal. 19.' : 'Net Cash (+Rp 14,012.5B) minus negative EV (−Rp 2,988.5B, since 2.70% ROIC < 7.76% WACC) = +Rp 11,024.0B ÷ 1,062.01B shares. Full math on PDF p. 19.' }}
+                    </p>
+                  </div>
+                  <div class="glass-vchart-card">
+                    <div class="glass-vchart-hdr">
+                      <strong>{{ isId ? 'Pusat: Kas Bersih YE25' : 'Center: YE25 Net Cash' }}</strong>
+                      <span class="glass-yoy-delta tone-accent">Rp 13.19 / sh</span>
+                    </div>
+                    <p class="glass-yoy-note">
+                      {{ isId ? 'Kas Rp21.755,2M − Total Utang & Sewa Rp7.742,6M = +Rp14.012,5M kas bersih sebagai bantalan nilai intrinsik.' : 'Cash Rp 21,755.2B minus Total Debt & Leases Rp 7,742.6B = +Rp 14,012.5B net cash buffer anchoring the valuation.' }}
+                    </p>
+                  </div>
+                  <div class="glass-vchart-card is-focused">
+                    <div class="glass-vchart-hdr">
+                      <strong>{{ isId ? 'Plafon: Optimistic RI' : 'Ceiling: Optimistic RI' }}</strong>
+                      <span class="glass-yoy-delta tone-pos">Rp 16.75 / sh</span>
+                    </div>
+                    <p class="glass-yoy-note">
+                      {{ isId ? 'Rasio biaya 1H26 (tumbuh 18%, COGS 38,1%, OpEx 51,2% → EBIT 2028F Rp3.221,1M, ROE 6,18% vs Ke 8,45%). Jadwal tahunan di Workbook Valuasi.' : '1H26 cost ratios (18% growth, 38.1% COGS, 51.2% OpEx → 2028F EBIT Rp 3,221.1B, ROE 6.18% vs. 8.45% Ke). Yearly schedule in Valuation Workbook.' }}
+                    </p>
+                  </div>
+                </div>
+                <p class="glass-yoy-note" style="margin-top: 10px;">
+                  {{ isId ? 'Mengapa lainya ditolak: Grab P/B (Rp91,02) punya ROE +2,96%; Opt. DCF (Rp47,34) butuh bukti OpEx 51,2% setahun penuh; Base RI (−Rp12,23) & Konservatif (−Rp33,95/−Rp44,42) di bawah lantai kas bersih.' : 'Excluded methods: Grab P/B (Rp 91.02) reflects +2.96% ROE; Opt. DCF (Rp 47.34) requires full-year proof of 51.2% OpEx; Base RI (−Rp 12.23) & Conservative (−Rp 33.95 / −Rp 44.42) sit below the net cash floor.' }}
+                </p>
               </div>
 
               <!-- Year-over-Year Trajectory Grid (Slides 2–8, hidden when top chart already renders vertical ratio cards) -->
