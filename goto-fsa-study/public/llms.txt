@@ -620,7 +620,144 @@ Risks: Better operations could make the base too cautious. Credit losses, impair
 
 ---
 
-## Appendix Slide 13: Appendix A1: Revenue Bridge & Competitive Risk Schedules
+## Slide 13: Forensic Restatement: 5 Mistakes Corrected
+**Correcting the 2023 pre-Tokopedia distortion and 4 historical data errors documented in Final Report Appendix B**
+*Section: Restatement & Governance | Time Budget: 1.5 mins | Rubric: B4 / C1 / E4*
+
+### Table B1: Five Forensic Corrections Applied Across Deliverables
+
+| Corrected Item | Earlier Deck Error | Restated Audited Basis | Impact |
+| --- | --- | --- | --- |
+| 1. Remove 2023 Pre-Exit | 3-yr avg (78.5% OpEx, 16.3% CapEx) | Post-Tokopedia 2024–25 (55.7% OpEx, 6.45% CapEx) | 2028F EBIT −Rp4.97T → +Rp567B; DCF −121.1 → +10.38 |
+| 2. 2024 Balance Sheet | Omitted Rp1,582B Note 7 loans (Check −1.58T) | Restored Note 7 → Assets Rp43,208B (Check = 0) | 2024 CR 2.46x → 2.62x; EM 1.37x → 1.42x |
+| 3. 2024 Trade AR DSO | Mixed Note 6 & Note 7 (Rp2,042B → 46.88d) | Strict Note 6 Trade AR (Rp460B → 547B) | True DSO 10.56d → 10.90d; removes WC drag |
+| 4. Debt Basis & Live TIE | Excluded current debt & leases; TIE = N/M | Full Notes 19–20 debt + Note 27b interest | 2024 D/E 12.57% → 15.85%; live TIE −4.54x → −0.71x |
+| 5. 2024 Continuing CapEx | 41.0% CapEx incl. Rp5,465B Tokopedia | Excluded Note 12 transfer → 6.63% CapEx | Clean 2024 Conservative floor without artifacts |
+
+#### Row-by-Row Formulas & Calculations
+- **1. Remove 2023 Pre-Exit**
+  - Explanation: Averaging 2023 pre-exit operating expenses (117.01% of revenue) and 2024 Tokopedia intangibles (41.0% CapEx) into Base Case drivers produced artificial cash depletion and a -Rp 121.1/sh DCF. Anchoring cleanly on post-Tokopedia 2024–2025 reverses Base EBIT to +Rp 567.2bn by 2028F.
+  - Formula: `Clean Base Drivers: +15.27% Rev Growth | 42.28% COGS | 55.70% Cash OpEx | 6.45% CapEx`
+  - Steps:
+    - 2028F EBIT: −Rp4,967.4bn → +Rp567.2bn
+    - Base DCF: −Rp121.1/sh → +Rp10.38/sh
+  - Source: Final Report Appendix B Table B1 #1 & LK GOTO FY2025 Note 34c
+- **2. 2024 Balance Sheet**
+  - Explanation: Earlier 2024 Balance Sheet omitted Rp 1,581,770m of Note 7 consumer lending receivables, leaving a -Rp 1,581,770m balance-sheet check error. Restoring it reconciles Total Assets to Rp 43,207,884m (Check = 0).
+  - Formula: `2024 Total Assets = Rp43,207,884m (Balance Check = 0)`
+  - Steps:
+    - 2024 Current Ratio: 2.46x → 2.62x
+    - 2024 Asset Turnover: 0.3818x → 0.3679x
+    - 2024 Equity Multiplier: 1.369x → 1.421x
+  - Source: Final Report Appendix B Table B1 #2 & LK GOTO FY2025 Note 7
+- **3. 2024 Trade AR DSO**
+  - Explanation: Combining Note 6 trade receivables with Note 7 lending inflated 2024 AR to Rp 2,041.7bn (46.88d DSO). Aligning strictly to Note 6 restores true partner collection DSO of 10.56 days.
+  - Formula: `Trade AR (Note 6): Rp601.2bn (2023) → Rp460.0bn (2024) → Rp547.3bn (2025)`
+  - Steps:
+    - True DSO: 14.84d → 10.56d → 10.90d
+  - Source: Final Report Appendix B Table B1 #3 & LK GOTO FY2025 Note 6
+- **4. Debt Basis & Live TIE**
+  - Explanation: 2023–2024 debt previously omitted current loan maturities and lease liabilities (Notes 19 & 20) and lacked Note 27b finance costs. Harmonizing both yields consistent D/E and live TIE.
+  - Formula: `Total Debt & Leases: Rp4,335.3bn (2023) → Rp4,819.0bn (2024) → Rp7,742.6bn (2025)`
+  - Steps:
+    - 2024 Debt/Equity: 12.57% → 15.85%
+    - Live TIE: −27.83x → −4.54x → −0.71x
+  - Source: Final Report Appendix B Table B1 #4 & Notes 19, 20, 27b
+- **5. 2024 Continuing CapEx**
+  - Explanation: Note 12 proves Rp 5,464.9bn of 2024 intangible purchases belonged to Tokopedia prior to loss of control. Excluding that transfer lowers 2024 continuing CapEx from 41.0% to 6.63%.
+  - Formula: `2024 Continuing CapEx = (Rp6,518.9bn − Rp5,464.9bn) / Rp15,894.5bn = 6.63%`
+  - Steps:
+    - 2024 Conservative CapEx drops 41.0% → 6.63%
+  - Source: Final Report Appendix B Table B1 #5 & Note 12 p. 97
+
+### Sidebar: the full explanation in simple language
+During preparation of the Final Report, a forensic audit uncovered five calculation errors in the earlier Milestone 2, Milestone 4, and Assignment 14 submissions. Acknowledging and correcting them reconciles the presentation deck with the submitted paper.
+
+### Speaker Notes
+Before closing, we want to transparently acknowledge five errors in our earlier submitted files that we corrected in our Final Report. First and largest: our original deck averaged 2023 pre-Tokopedia OpEx (117%) and 2024 Tokopedia intangible transfers (41% CapEx) into Base Case assumptions. Second, we added back Rp 1,582bn of omitted 2024 Note 7 lending receivables. Third, we separated Note 6 trade receivables so 2024 DSO drops from 46.9d to 10.56d. Fourth, we included short-term debt and all leases (Notes 19-20) and live Note 27b interest. Fifth, we stripped Note 12 Tokopedia intangibles out of 2024 continuing CapEx (41.0% to 6.63%).
+
+*Sources: Group 4 Final Report Appendix B (Table B1); Audited LK GOTO FY2025 Notes 6, 7, 12, 19, 20, 27b, 34c.*
+
+---
+
+## Slide 14: Old Deck vs. Final Report: Why SELL Still Holds
+**Correcting the errors turns GoTo GAAP-profitable by 2028F, yet ROIC (+2.70%) still trails WACC (7.76%) by 506 bps**
+*Section: Restatement & Governance | Time Budget: 1.5 mins | Rubric: D2 / C4*
+
+### Original Deck vs. Final Report Reconciliation
+
+| Metric | Original Deck (Old) | Final Report (Restated) | Key Takeaway |
+| --- | --- | --- | --- |
+| Base Cash OpEx (% Rev) | 78.5% | 55.70% | −2,280 bps post-Tokopedia |
+| 2028F Base EBIT | −Rp4,967B | +Rp567.2B | Turns EBIT-positive in 2026F |
+| 2028F Base Net Income | −Rp4,489B | +Rp25.0B | Reaches GAAP profit by Yr 3 |
+| 2028F Ending Cash | Rp968B | Rp19,421B | No liquidity crisis |
+| Base DCF / Share | −Rp121.1 | +Rp10.38 | Below Rp13.19 Net Cash |
+| Base Residual Income | −Rp75.1 | −Rp12.23 (+0.24 g=0%) | 0.09% ROE << 8.45% Ke |
+| Defensible Range | Neg. vs. Rp91.0 | Rp10.38 – Rp16.75 | 33%–58% below Rp25.00 |
+| Final Verdict | SELL / AVOID | SELL / AVOID | 2.70% ROIC < 7.76% WACC |
+
+#### Row-by-Row Formulas & Calculations
+- **Base Cash OpEx (% Rev)**
+  - Explanation: Removing 2023 (117.01% OpEx) lowers Base Cash OpEx from 78.5% to 55.70%.
+  - Formula: `FY2025 Cash OpEx = 55.70%`
+  - Steps:
+    - Old 3-yr avg: 78.5% → Restated FY2025: 55.70%
+  - Source: Final Report Table 11
+- **2028F Base EBIT**
+  - Explanation: With 57.72% gross margin exceeding 55.70% OpEx by 202 bps, Base EBIT flips from −Rp4,967B to +Rp567.2B.
+  - Formula: `2028F EBIT = Rp28,065.0B × 2.02% = +Rp567.2B`
+  - Steps:
+    - 2026F: +Rp426.9B | 2027F: +Rp492.1B | 2028F: +Rp567.2B
+  - Source: Final Report Table 12
+- **2028F Base Net Income**
+  - Explanation: After Rp535.2bn fixed annual interest expense, Base Net Income turns +Rp25.0bn in 2028F.
+  - Formula: `2028F EBT +Rp32.1B − 22% Tax Rp7.1B = +Rp25.0B`
+  - Steps:
+    - GAAP Net Income turns positive in Year 3
+  - Source: Final Report Table 12
+- **2028F Ending Cash**
+  - Explanation: Clean 6.45% CapEx and positive EBIT preserve Rp19,421.1bn in ending cash instead of depleting to Rp968bn.
+  - Formula: `2028F Cash = Rp19,421.1B`
+  - Steps:
+    - Net Cash buffer remains ~Rp13.19/share at base date
+  - Source: Final Report Table 12
+- **Base DCF / Share**
+  - Explanation: Even with positive EBIT, CapEx exceeds EBIT+D&A so EV is −Rp2,988.5B, yielding +Rp10.38/sh after Net Cash.
+  - Formula: `(−Rp2,988.5B EV + Rp14,012.5B Net Cash) / 1,062.01B sh = +Rp10.38/sh`
+  - Steps:
+    - Old DCF −Rp121.1 → Restated Base DCF +Rp10.38
+  - Source: Final Report Table 15
+- **Base Residual Income**
+  - Explanation: 2028F ROE (+0.09%) trails 8.452% Ke hurdle (~Rp2.42T/yr charge), yielding −Rp12.23/sh perpetual RI (+Rp0.24 at g=0%).
+  - Formula: `Beg BVE Rp28,711.7B − PV(RI) Rp41,698.6B = −Rp12,987.0B (−Rp12.23/sh)`
+  - Steps:
+    - g=0% floor = +Rp0.24/sh; Yr4+ convergence = +Rp21.13/sh
+  - Source: Final Report Table 15
+- **Defensible Range**
+  - Explanation: Spans Base DCF (+Rp10.38/sh) to Optimistic 1H26 RI (+Rp16.75/sh), centered near Rp13.19/sh Net Cash.
+  - Formula: `Defensible Range: Rp10.38 – Rp16.75/sh vs Rp25.00 Market`
+  - Steps:
+    - Grab P/B (Rp91.02/sh) rejected due to 506 bps ROIC-WACC deficit
+  - Source: Final Report §5.3 & Table 16
+- **Final Verdict**
+  - Explanation: Positive accounting profit (+Rp25B) still falls short of the 7.76% WACC capital cost, confirming SELL / AVOID.
+  - Formula: `2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps`
+  - Steps:
+    - Recommendation unchanged: SELL / AVOID at Rp25.00
+  - Source: Final Report §6.1
+
+### Sidebar: the full explanation in simple language
+Side-by-side comparison proving that GoTo is overvalued at Rp 25.00 not because of 2023 modeling artifacts, but because clean post-Tokopedia 2028F ROIC (+2.70%) remains 506 bps below WACC (7.76%).
+
+### Speaker Notes
+Here is the ultimate takeaway from reconciling our earlier slides with our Final Report. In the old deck, Base OpEx of 78.5% produced a -Rp 4.97T operating loss and a -Rp 121.1 DCF—which looked catastrophic mainly because 2023 pre-Tokopedia numbers were averaged in. Once we fix that mistake in the Final Report, Base EBIT flips to +Rp 567.2bn and cash holds at Rp 19.42T—a far healthier operational reality. Yet Base DCF rises only to +Rp 10.38/sh and our Defensible Intrinsic Range is Rp 10.38 to Rp 16.75/sh, because 2028F ROIC (+2.70%) still trails WACC (7.76%). That makes our SELL / AVOID verdict at Rp 25.00 structurally stronger and far harder to challenge.
+
+*Sources: Group 4 Final Report Tables 1, 12, 15, 16, 17; Investing.com (Dec 30, 2025: Rp 25.00/sh); LK GOTO FY2025.*
+
+---
+
+## Appendix Slide 15: Appendix A1: Revenue Bridge & Competitive Risk Schedules
 *Section: Appendix: Strategy & industry | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Revenue bridge to consolidated GoTo revenue
@@ -658,7 +795,7 @@ Tokopedia Service Fee: GoTo recorded about Rp820bn in service-fee revenue from T
 
 ---
 
-## Appendix Slide 14: Appendix A2: Historical & Pro Forma Summary (FY2023–2028F) & DuPont
+## Appendix Slide 16: Appendix A2: Historical & Pro Forma Summary (FY2023–2028F) & DuPont
 *Section: Appendix: Financial analysis | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Consolidated Historical & Pro Forma Financial Summary (Rp billion)
@@ -734,7 +871,7 @@ Net Loss: The 2025 net loss is about Rp1,502bn after interest, tax and other ite
 
 ---
 
-## Appendix Slide 15: Appendix A3: Liquidity, Working Capital, Week 6 Z-Score & Footnotes
+## Appendix Slide 17: Appendix A3: Liquidity, Working Capital, Week 6 Z-Score & Footnotes
 *Section: Appendix: Financial & accounting quality | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Completed Week 6 five-factor calculation
@@ -771,7 +908,7 @@ Altman Z-Score: The completed Week 6 formula gives a distress-zone score, mainly
 
 ---
 
-## Appendix Slide 16: Appendix A4: Scenario Drivers, Forecast Rationales & Cost Behavior
+## Appendix Slide 18: Appendix A4: Scenario Drivers, Forecast Rationales & Cost Behavior
 *Section: Appendix: Forecast assumptions | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### All key assumptions and the reason for each
@@ -812,7 +949,7 @@ Scenario Assumptions: The optimistic case uses 55.7% operating costs and 6.5% ca
 
 ---
 
-## Appendix Slide 17: Appendix A5: Three-Year Pro Forma Statements & Operating Leverage
+## Appendix Slide 19: Appendix A5: Three-Year Pro Forma Statements & Operating Leverage
 *Section: Appendix: Three-year pro forma | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Base projected income statement
@@ -904,7 +1041,7 @@ Fixed-Cost Scenario: The separate illustration holds operating costs at Rp10,954
 
 ---
 
-## Appendix Slide 18: Appendix A6: Dated WACC, DCF, Residual Income & FY2025 Grab P/B Schedules
+## Appendix Slide 20: Appendix A6: Dated WACC, DCF, Residual Income & FY2025 Grab P/B Schedules
 *Section: Appendix: Valuation schedules | Time Budget: 0 mins (appendix) | Rubric: Appendix backup*
 
 ### Emerging-Market CAPM & WACC Build-Up (Every Input Dated & Sourced)

@@ -1,8 +1,45 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { useReportMode } from './composables/useReportMode'
+
+const { reportViewMode } = useReportMode()
 
 const props = defineProps({ slide: { type: Object, required: true }, lang: { type: String, default: 'en' }, total: { type: Number, default: 12 } })
 const emit = defineEmits(['explain', 'evidence', 'zoom'])
+const restatableSlides = new Set([4, 5, 6, 7, 8, 10, 11, 12])
+const hasRestatement = computed(() => !props.slide.is_appendix && restatableSlides.has(props.slide.slide_num))
+const isRestated = computed(() => hasRestatement.value && reportViewMode.value === 'restated')
+const restatementSummary = computed(() => {
+  const id = props.lang === 'id'
+  const sn = props.slide.slide_num
+  const map = {
+    4: id
+      ? 'Restatement: Aset 2024 +Rp1.582M (Catatan 7); AT 0,3679x, EM 1,421x; EBIT Gojek +Rp888,6M'
+      : 'Restatement: 2024 Assets +Rp1,582B (Note 7); AT 0.3679x, EM 1.421x; Gojek EBIT +Rp888.6B',
+    5: id
+      ? 'Restatement: CR 2024 2,46x→2,62x; DSO 46,9h→10,56h (Cat. 6); utang+sewa penuh (TIE −4,54x→−0,71x)'
+      : 'Restatement: 2024 CR 2.46x→2.62x; DSO 46.9d→10.56d (Note 6); full debt+leases (TIE −4.54x→−0.71x)',
+    6: id
+      ? 'Restatement: CapEx lanjutan 2024 turun 41,0%→6,63% (Rp1.054M) setelah keluarkan transfer Tokopedia'
+      : 'Restatement: 2024 continuing CapEx drops 41.0%→6.63% (Rp1,054B) ex-Tokopedia intangibles',
+    7: id
+      ? 'Restatement: Keluarkan 2023 (OpEx 117%); Base murni 2024–2025 (OpEx 55,70%, CapEx 6,45%)'
+      : 'Restatement: 2023 excluded (117% OpEx); Base anchored on 2024–2025 (55.70% OpEx, 6.45% CapEx)',
+    8: id
+      ? 'Restatement: EBIT 2028F −Rp4.967M→+Rp567,2M; Laba Bersih +Rp25,0M; Kas Akhir Rp19,42T'
+      : 'Restatement: 2028F EBIT −Rp4,967B→+Rp567.2B; Net Income +Rp25.0B; Ending Cash Rp19.42T',
+    10: id
+      ? 'Restatement: Basis pasca-Tokopedia angkat DCF Dasar −Rp121,1→+Rp10,38 & RI −Rp75,1→−Rp12,23'
+      : 'Restatement: Clean post-Tokopedia FCF lifts Base DCF −Rp121.1→+Rp10.38 & RI −Rp75.1→−Rp12.23',
+    11: id
+      ? 'Restatement: Rentang Nilai Wajar Rp10,38–Rp16,75/sh vs harga pasar Rp25,00 (P/B Grab Rp91,02 ditolak)'
+      : 'Restatement: Defensible Range Rp10.38–Rp16.75/sh vs Rp25.00 market (Grab P/B Rp91.02 rejected)',
+    12: id
+      ? 'Restatement: SELL / AVOID tetap berlaku — ROIC 2028F (+2,70%) tertinggal 506 bps di bawah WACC (7,76%)'
+      : 'Restatement: SELL / AVOID holds — 2028F ROIC (+2.70%) trails WACC (7.76%) by 506 bps',
+  }
+  return map[sn] || ''
+})
 const titles = {
   en: [
     'GoTo equity analysis',
@@ -69,12 +106,20 @@ const takeaway = computed(() => props.slide.display_takeaway || props.slide.anal
 const table = computed(() => props.slide.table)
 const forecastScenario = ref('base')
 const valuationBasis = ref('3yr') // '3yr' | '2yr'
+const tableAnimKey = computed(() => `${props.slide.slide_num}-${reportViewMode.value}-${forecastScenario.value}-${valuationBasis.value}`)
 const isForecastSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 8)
 const isDcfRiSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 10)
 const isGrabSlide = computed(() => !props.slide.is_appendix && props.slide.slide_num === 11)
 const isValuationSlide = computed(() => isDcfRiSlide.value || isGrabSlide.value)
 const visibleValuationRange = computed(() => {
   const baseRange = props.slide.valuation_range || []
+  if (isRestated.value && isGrabSlide.value) {
+    return [
+      { label: 'DCF', value: 10.38 },
+      { label: 'RI', value: -12.23 },
+      { label: 'Grab P/B', value: 91.02 },
+    ]
+  }
   if (!isValuationSlide.value || valuationBasis.value !== '2yr') return baseRange
   return baseRange.map((row) => {
     if (row.label === 'DCF') return { ...row, value: -72.5 }
@@ -82,6 +127,102 @@ const visibleValuationRange = computed(() => {
     return row
   })
 })
+const restatedForecastData = computed(() => {
+  const id = props.lang === 'id'
+  return {
+    base: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Base', '2027F Base', '2028F Base'],
+      rows: [
+        [id ? 'Pendapatan Bersih (+15,27%)' : 'Net Revenue (+15.27%)', '18,322.1', '21,120.6', '24,346.4', '28,065.0'],
+        [id ? 'Laba Operasi (EBIT)' : 'Operating Profit (EBIT)', '(378.3)', '+426.9', '+492.1', '+567.2'],
+        [id ? 'Laba / (Rugi) Bersih' : 'Consolidated Net Income', '(1,501.7)', '(84.5)', '(33.6)', '+25.0'],
+        [id ? 'Kas Akhir Tahun' : 'Ending Cash Balance', '21,755.2', '20,686.7', '19,955.4', '19,421.1'],
+      ],
+    },
+    optimistic: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Opt', '2027F Opt', '2028F Opt'],
+      rows: [
+        [id ? 'Pendapatan Bersih (+18,00%)' : 'Net Revenue (+18.00%)', '18,322.1', '21,620.1', '25,511.7', '30,103.8'],
+        [id ? 'Laba Operasi (EBIT)' : 'Operating Profit (EBIT)', '(378.3)', '+2,313.4', '+2,729.8', '+3,221.1'],
+        [id ? 'Laba Bersih Konsolidasian' : 'Consolidated Net Income', '(1,501.7)', '+1,387.1', '+1,711.8', '+2,095.0'],
+        [id ? 'Kas Akhir Tahun' : 'Ending Cash Balance', '21,755.2', '22,570.6', '23,604.2', '24,795.0'],
+      ],
+    },
+    conservative: {
+      headers: [id ? 'Pos Utama (Rp miliar)' : 'Key Line Item (Rp bn)', '2025A', '2026F Cons', '2027F Cons', '2028F Cons'],
+      rows: [
+        [id ? 'Pendapatan Bersih (+7,50%)' : 'Net Revenue (+7.50%)', '18,322.1', '19,696.3', '21,173.5', '22,761.8'],
+        [id ? 'Rugi Operasi (EBIT)' : 'Operating Loss (EBIT)', '(378.3)', '(1,854.7)', '(1,993.8)', '(2,143.4)'],
+        [id ? 'Rugi Bersih Konsolidasian' : 'Consolidated Net Loss', '(1,501.7)', '(2,071.5)', '(2,177.2)', '(2,291.0)'],
+        [id ? 'Kas Akhir Tahun' : 'Ending Cash Balance', '21,755.2', '18,754.2', '16,133.1', '13,516.5'],
+      ],
+    },
+  }
+})
+const restatedSlideTables = computed(() => {
+  const id = props.lang === 'id'
+  const scenKey = forecastScenario.value === 'base_2yr' ? 'base' : forecastScenario.value
+  return {
+    4: {
+      headers: id
+        ? ['Rasio / DuPont (Tabel 8–9)', '2023*', '2024', '2025', 'YoY 24→25']
+        : ['Ratio / DuPont (Report T8–9)', '2023*', '2024', '2025', 'YoY 24→25'],
+      rows: [
+        [id ? 'Margin Operasi (EBIT %)' : 'Operating Margin (EBIT %)', '−69.5%', '−14.10%', '−2.06%', '+1,204 bps'],
+        [id ? 'Margin Laba Bersih' : 'Net Profit Margin', '−612.2%', '−34.38%', '−8.20%', '+2,618 bps'],
+        [id ? 'Perputaran Aset (ATO)' : 'Asset Turnover (Rev / Assets)', '0.27x', '0.37x', '0.40x', '+8.8%'],
+        [id ? 'Multiplier Ekuitas (EM)' : 'Equity Multiplier (Assets / Eq)', '1.51x', '1.42x', '1.59x', '+0.17x'],
+        ['ROA (Cons.)', '−167.3%', '−12.65%', '−3.28%', '+937 bps'],
+        [id ? 'ROE (Kons. / Induk)' : 'ROE (Cons. / Parent)', '−253.4%', '−17.97%', '−5.23% / −3.73%', '+1,274 bps'],
+      ],
+    },
+    7: {
+      headers: id
+        ? ['Asumsi Utama', 'Optimistis (1H26)', 'Base (Pasca-Exit)', 'Konservatif (2024)']
+        : ['Assumption', 'Optimistic (1H26)', 'Base (Post-Exit)', 'Conservative (2024)'],
+      rows: [
+        [id ? 'Pertumbuhan pendapatan' : 'Revenue growth', '18.00%', '15.27%', '7.50%'],
+        [id ? 'Beban pokok / pendapatan' : 'COGS / revenue', '38.10%', '42.28%', '46.64%'],
+        [id ? 'Beban operasi tunai / pend.' : 'Cash OpEx / revenue', '51.20%', '55.70%', '62.78%'],
+        [id ? 'CapEx / pendapatan' : 'CapEx / revenue', '6.45%', '6.45%', '6.63%'],
+        [id ? 'Suku bunga utang (pra-pajak)' : 'Borrowing rate (pre-tax)', '6.91%', '6.91%', '10.25%'],
+      ],
+    },
+    8: restatedForecastData.value[scenKey] || restatedForecastData.value.base,
+    10: {
+      headers: id ? ['Tahap Model', 'DCF', 'Residual Income'] : ['Model Step', 'DCF', 'Residual Income'],
+      rows: [
+        [id ? 'Tingkat diskonto' : 'Discount rate', 'WACC: 7.76%', 'Ke: 8.45%'],
+        [id ? 'Pertumbuhan terminal (g_fund +3,41%)' : 'Terminal growth (g_fund +3.41%)', '3.00% (TV 67.6% EV)', '3.00% (TV 85.0% PV)'],
+        [id ? 'Jembatan nilai ekuitas' : 'Equity bridge', 'EV −2,988.5B + NetCash 14,012.5B', 'BVE 28,711.7B − PV(RI) 41,698.6B'],
+        [id ? 'Hasil per saham' : 'Model output / share', '+Rp10.38', '−Rp12.23 (+Rp0.24 g=0%)'],
+      ],
+    },
+    11: {
+      headers: id ? ['Input / Hasil Valuasi', 'Nilai Laporan Akhir'] : ['Input / Result', 'Final Report Value'],
+      rows: [
+        ['Grab P/B (31 Dec 2025)', '3.0391x'],
+        [id ? 'BVPS Induk GoTo' : 'GoTo parent BVPS', 'Rp29.95 / share'],
+        [id ? 'Pembanding P/B bersyarat' : 'Conditional P/B benchmark', id ? 'Rp91.02 / sh (Ditolak)' : 'Rp91.02 / sh (Rejected)'],
+        [id ? 'Rentang Nilai Intrinsik Wajar' : 'Defensible Intrinsic Range', 'Rp10.38 – Rp16.75 / sh'],
+      ],
+    },
+  }
+})
+const restatedRowDetail = (row) => {
+  const id = props.lang === 'id'
+  return {
+    heading: row[0],
+    text: `${row.slice(1).join('  |  ')} — ${restatementSummary.value}`,
+    detail_explanation: id
+      ? `Nilai restated dari Laporan Akhir Final (Group4_FinalReport_GOTO.docx): ${row[0]} = ${row.slice(1).join(' | ')}. ${restatementSummary.value}`
+      : `Restated value from the Final Report (Group4_FinalReport_GOTO.docx): ${row[0]} = ${row.slice(1).join(' | ')}. ${restatementSummary.value}`,
+    formula: restatementSummary.value,
+    calc_steps: row.map((c, idx) => `${visibleHeaders.value[idx] || 'Col ' + (idx + 1)}: ${c}`),
+    data_origin: 'Group4_FinalReport_GOTO.docx (Restated Post-Tokopedia Model) & LK GOTO FY2025',
+    evidence_img: null,
+  }
+}
 const forecastScenarioData = computed(() => {
   const id = props.lang === 'id'
   return {
@@ -116,6 +257,9 @@ const forecastScenarioData = computed(() => {
 })
 // Detailed source columns remain in the study notes, outside the projected slide.
 const visibleHeaders = computed(() => {
+  if (isRestated.value && restatedSlideTables.value[props.slide.slide_num]) {
+    return restatedSlideTables.value[props.slide.slide_num].headers
+  }
   if (isForecastSlide.value && forecastScenario.value !== 'base') {
     return forecastScenarioData.value[forecastScenario.value]?.headers || table.value?.headers || []
   }
@@ -130,6 +274,9 @@ const datedWaccSources = [
   'Rp 25 case reference × shares. Debt: FY2025. Weights: 77.4% / 22.6%.',
 ]
 const visibleRows = computed(() => {
+  if (isRestated.value && restatedSlideTables.value[props.slide.slide_num]) {
+    return restatedSlideTables.value[props.slide.slide_num].rows
+  }
   if (isForecastSlide.value && forecastScenario.value !== 'base') {
     return forecastScenarioData.value[forecastScenario.value]?.rows || table.value?.rows || []
   }
@@ -139,7 +286,279 @@ const visibleRows = computed(() => {
   }
   return props.slide.story_rebuilt ? table.value?.rows || [] : (table.value?.rows || []).map((row, i) => layoutSlide.value === 7 ? [row[0], row[1], datedWaccSources[i]] : row)
 })
+const restatedPointsMap = computed(() => {
+  const id = props.lang === 'id'
+  const scenKey = forecastScenario.value === 'base_2yr' ? 'base' : forecastScenario.value
+  const s8ByScenario = {
+    base: [
+      {
+        heading: id ? 'EBIT Positif di 2026F–2028F' : 'Positive EBIT in 2026F–2028F',
+        text: id
+          ? 'Tanpa distorsi 2023, pendapatan Base tumbuh ke Rp28,07T pada 2028F, EBIT berbalik positif (+Rp426,9M → +Rp567,2M), dan laba bersih mencapai +Rp25,0M.'
+          : 'Excluding 2023 distortions, Base revenue grows to Rp28.07T by 2028F, EBIT flips positive (+Rp426.9bn → +Rp567.2bn), and Net Income turns +Rp25.0bn.',
+        formula: '2026F EBIT = Rp21,120.6bn × (57.72% GM − 55.70% Cash OpEx) = +Rp426.9bn',
+        data_origin: 'Final Report §4.2 (Table 12)',
+      },
+      {
+        heading: id ? 'Titik Impas Tipis & DOL 28,56x' : 'Tight Breakeven & 28.56x DOL',
+        text: id
+          ? 'Titik impas operasi 2026F adalah Rp20,38T, menyisakan Margin of Safety +3,50% (+Rp739,5M). Setiap kenaikan atau penurunan biaya langsung mengayunkan EBIT 28,56x.'
+          : '2026F operating breakeven is Rp20,381.1bn, leaving just a +3.50% (+Rp739.5bn) Margin of Safety and a high 28.56x cost-structure DOL.',
+        formula: 'Breakeven = Rp11,764.6bn / 57.723% = Rp20,381.1bn (+3.50% Margin of Safety)',
+        data_origin: 'Final Report §4.3 (Eq. 4)',
+      },
+      {
+        heading: id ? 'ROIC 2028F (+2,70%) < WACC (7,76%)' : '2028F ROIC (+2.70%) < WACC (7.76%)',
+        text: id
+          ? 'Kas akhir 2028F terjaga kuat di Rp19,42T (vs Rp968M pada dek lama), namun ROIC (+2,70%) tetap 506 bps di bawah WACC (7,76%).'
+          : '2028F ending cash stays resilient at Rp19.42T (vs Rp968bn in the old deck), yet ROIC (+2.70%) still trails WACC (7.76%) by 506 bps.',
+        formula: '2028F ROIC = NOPAT Rp442.42bn / Beginning IC Rp16,380.8bn = +2.70% vs 7.76% WACC',
+        data_origin: 'Final Report §5.1 & Table 14',
+      },
+    ],
+    optimistic: [
+      {
+        heading: id ? 'Skenario Optimistis (OpEx 1H 2026)' : 'Optimistic Case (1H 2026 OpEx)',
+        text: id
+          ? 'Memakai rasio biaya aktual 1H 2026 (COGS 38,10%, Cash OpEx 51,20%) dengan pertumbuhan 18,0%, EBIT 2028F melonjak 5,7x menjadi +Rp3.221,1M.'
+          : 'Applying 1H 2026 interim cost ratios (38.10% COGS, 51.20% Cash OpEx) at 18.0% growth lifts 2028F EBIT 5.7x to +Rp3,221.1bn.',
+        formula: '2028F Opt EBIT = Rp30,103.8bn × (61.90% GM − 51.20% OpEx) = +Rp3,221.1bn',
+        data_origin: 'Final Report §4.1 & Table 13',
+      },
+      {
+        heading: id ? 'Laba & Arus Kas Bebas Positif' : 'Positive Net Income & FCFF',
+        text: id
+          ? 'Laba bersih mencapai +Rp2.095,0M dan kas akhir tumbuh ke Rp24,80T pada 2028F dengan FCFF positif (+Rp1.887,0M).'
+          : 'Net income reaches +Rp2,095.0bn and ending cash builds to Rp24.80T by 2028F with positive FCFF (+Rp1,887.0bn).',
+        formula: '2028F Opt NI = +Rp2,095.0bn | 2028F Opt FCFF = +Rp1,887.0bn',
+        data_origin: 'Final Report Table 13',
+      },
+      {
+        heading: id ? 'Batas Atas Nilai Intrinsik' : 'Intrinsic Value Ceiling',
+        text: id
+          ? 'Jika efisiensi 1H 2026 bertahan penuh setahun, nilai intrinsik naik ke Rp16,75/saham (RI Optimistis) hingga Rp47,34/saham (DCF Optimistis).'
+          : 'Sustaining 1H 2026 cost containment lifts intrinsic equity value to Rp16.75/share (Optimistic RI) and Rp47.34/share (Optimistic DCF).',
+        formula: 'Optimistic RI = Rp16.75/sh | Optimistic DCF = Rp47.34/sh',
+        data_origin: 'Final Report Table 16',
+      },
+    ],
+    conservative: [
+      {
+        heading: id ? 'Skenario Konservatif (Lantai 2024)' : 'Conservative Case (2024 Floor)',
+        text: id
+          ? 'Kembali ke rasio biaya pasca-exit 2024 (COGS 46,64%, OpEx 62,78%, utang 10,25%) tanpa menyentuh 2023 menghasilkan rugi EBIT 2028F −Rp2.143,4M.'
+          : 'Reverting to GoTo’s 2024 post-exit floor (46.64% COGS, 62.78% OpEx, 10.25% debt cost) without touching 2023 yields −Rp2,143.4bn 2028F EBIT.',
+        formula: '2028F Cons EBIT = Rp22,761.8bn × (53.36% GM − 62.78% OpEx) = −Rp2,143.4bn',
+        data_origin: 'Final Report Table 11 & Table 13',
+      },
+      {
+        heading: id ? 'Erosi Kas Tanpa Defisit (−Rp5T)' : 'Cash Erosion Without Insolvency',
+        text: id
+          ? 'Berbeda dengan dek lama yang menguras kas ke −Rp5,0T, model bersih 2024 menjaga kas akhir 2028F tetap positif di Rp13,52T.'
+          : 'Unlike the old 2023-polluted model (−Rp5.0T cash), the clean 2024 floor preserves Rp13.52T of ending cash in 2028F.',
+        formula: '2028F Cons Ending Cash = Rp13,516.5bn (vs −Rp5,000bn old deck)',
+        data_origin: 'Final Report Table 13 & Appendix B #5',
+      },
+      {
+        heading: id ? 'Batas Bawah Valuasi' : 'Downside Valuation Floor',
+        text: id
+          ? 'Kembalinya intensitas subsidi seperti 2024 menekan nilai wajar turun ke −Rp33,95/sh (DCF) dan −Rp44,42/sh (RI).'
+          : 'Reverting to 2024 promotional intensity drops intrinsic value to −Rp33.95/share (DCF) and −Rp44.42/share (RI).',
+        formula: 'Conservative DCF = −Rp33.95/sh | Conservative RI = −Rp44.42/sh',
+        data_origin: 'Final Report Table 16',
+      },
+    ],
+  }
+  return {
+    4: [
+      {
+        heading: id ? 'Isolasi 2023 & Lonjakan EBIT Gojek' : '2023 Quarantine & Gojek EBIT Surge',
+        text: id
+          ? 'Angka 2023 (−253,4% ROE) mencerminkan pra-Tokopedia. Pada 2025, EBIT Gojek melesat 12,8x ke +Rp888,6M berkat pangkas insentif (−Rp504,2M), take-rate +149 bps, efisiensi cloud >50%, dan keluar dari Vietnam.'
+          : '2023 (−253.4% ROE) reflects pre-Tokopedia operations. In 2025, Gojek EBIT jumped 12.8x to +Rp888.6bn via a −Rp504.2bn incentive cut, +149 bps net take rate, >50% cloud savings, and Vietnam exit.',
+        formula: 'Gojek 2025 EBIT: +Rp69.4bn → +Rp888.6bn (+1,180% YoY)',
+        data_origin: 'Final Report §1.1 & LK GOTO FY2025 Note 29 pp. 133–134',
+      },
+      {
+        heading: id ? 'Restatement Aset 2024 (+Rp1.582M)' : '2024 Asset Restatement (+Rp1,582B)',
+        text: id
+          ? 'Menambahkan piutang pinjaman Catatan 7 (Rp1.581,8M) memulihkan Total Aset 2024 ke Rp43.207,9M, mengubah Asset Turnover 2024 dari 0,3818x menjadi 0,3679x dan EM dari 1,369x menjadi 1,421x.'
+          : 'Restoring Rp1,581.8bn of omitted Note 7 lending receivables adjusts 2024 Total Assets to Rp43,207.9bn, shifting 2024 Asset Turnover (0.3818x→0.3679x) and Equity Multiplier (1.369x→1.421x).',
+        formula: '2024 Assets = Rp43,207,884m (Check = 0); 2024 ROE = −17.97%',
+        data_origin: 'Final Report Appendix B Table B1 #2 & §3.1',
+      },
+      {
+        heading: id ? 'DuPont Induk vs. Grab' : 'Parent DuPont vs. Grab Peer',
+        text: id
+          ? 'ROE Konsolidasian 2025 −5,23% (−3,73% ekuitas induk) tetap jauh di bawah Grab (+2,96% konsolidasian, +3,98% induk) akibat margin bersih negatif (−8,20%).'
+          : '2025 Consolidated ROE (−5.23%; −3.73% parent) lags Grab (+2.96% consolidated; +3.98% parent) because negative Net Margin (−8.20%) offsets GoTo’s 0.40x asset turnover.',
+        formula: 'Cons. ROE = −8.20% × 0.4004x × 1.5937x = −5.23%',
+        data_origin: 'Final Report §3.3 (Table 9)',
+      },
+    ],
+    5: [
+      {
+        heading: id ? 'Likuiditas 2024 & DSO Diperbaiki' : '2024 Liquidity & Trade DSO Fixed',
+        text: id
+          ? 'Current Ratio 2024 naik dari 2,46x menjadi 2,62x (2025: 2,73x). Memisahkan piutang usaha Catatan 6 memperbaiki DSO 2024 dari 46,88 hari menjadi 10,56 hari (2025: 10,90 hari).'
+          : '2024 Current Ratio rises from 2.46x to 2.62x (2025: 2.73x). Aligning AR strictly to Note 6 fixes 2024 DSO from 46.88d to 10.56d (2025: 10.90d; −47.54d CCC).',
+        formula: '2024 Current Ratio = 2.62x | DSO = 10.56d (2024) → 10.90d (2025)',
+        data_origin: 'Final Report Appendix B Table B1 #2–#3 & §3.2',
+      },
+      {
+        heading: id ? 'Utang Penuh & TIE Langsung' : 'Full Debt Basis & Live TIE',
+        text: id
+          ? 'Memasukkan seluruh utang jangka pendek & liabilitas sewa (Catatan 19–20: Rp4,82T→Rp7,74T) serta beban bunga Catatan 27b mengganti "N/M" dengan TIE langsung: −4,54x (2024) → −0,71x (2025).'
+          : 'Including current borrowings and all leases (Notes 19–20: Rp4.82T→Rp7.74T) with Note 27b interest replaces "N/M" with live TIE: −4.54x (2024) → −0.71x (2025).',
+        formula: '2024 D/E = 15.85% (was 12.57%); 2025 D/E = 26.97%; TIE = −0.71x',
+        data_origin: 'Final Report Appendix B Table B1 #4 & Table 8',
+      },
+      {
+        heading: id ? 'Sensitivitas Z-Score (Buku vs. Pasar)' : 'Altman Z-Score X4 Sensitivity',
+        text: id
+          ? 'Z-Score FY2025 berada di −4,72 (Nilai Buku) atau −4,80 (Harga Pasar Rp25); faktor X2 (−6,59) dipicu akumulasi rugi historis 2023, bukan risiko gagal bayar 12 bulan.'
+          : 'FY2025 Z-Score runs −4.72 (Book) vs −4.80 (Market at Rp25); X2 (−6.59 weight) reflects sunk 2023 losses while X1 (+0.40) & X4 (1.56x–1.68x) stay healthy.',
+        formula: 'Z (Book) = −4.72 | Z (Market Rp25.00) = −4.80 (< 1.81 distress cutoff)',
+        data_origin: 'Final Report §3.4 (Table 10)',
+      },
+    ],
+    6: [
+      {
+        heading: id ? 'Normalisasi CapEx 2024 (41,0% → 6,63%)' : '2024 Continuing CapEx (41.0% → 6.63%)',
+        text: id
+          ? 'Catatan 12 membuktikan Rp5.464,9M penambahan aset takberwujud 2024 berasal dari transfer pra-dekonsolidasi Tokopedia; tanpanya, CapEx lanjutan 2024 hanya Rp1.054,0M (6,63% pendapatan).'
+          : 'Note 12 proves Rp5,464.9bn of 2024 intangible additions belonged to Tokopedia before loss of control, lowering 2024 continuing CapEx to Rp1,054.0bn (6.63% of revenue).',
+        formula: '2024 Continuing CapEx = (Rp6,518.9bn − Rp5,464.9bn) / Rp15,894.5bn = 6.63%',
+        data_origin: 'Final Report §2.3 & Appendix B Table B1 #5',
+      },
+      {
+        heading: id ? 'Rasio Akrual Sebelum & Sesudah Penyesuaian' : 'Before & After Accrual Ratios',
+        text: id
+          ? 'Akrual yang dilaporkan membaik dari −11,21% menjadi −3,95%, sedangkan akrual laba berulang (mempertahankan SBC Rp593,4M & provisi kredit) turun dari −3,69% menjadi −1,94%.'
+          : 'Reported accruals narrowed from −11.21% to −3.95%, while adjusted recurring accruals (retaining SBC & credit provisions) narrowed from −3.69% to −1.94%.',
+        formula: 'Adjusted Recurring EBT: −Rp2,029.3bn (2024) → −Rp165.0bn (2025)',
+        data_origin: 'Final Report §2.2 (Table 5)',
+      },
+      {
+        heading: id ? 'Risiko Kredit (+134,9%) & Aset Level 3' : 'Credit Risk (+134.9%) & Level 3 Assets',
+        text: id
+          ? 'Provisi kredit Catatan 7 melonjak +134,9% (Rp407,7M; 12,99% pinjaman bruto), sementara penurunan nilai 20% atas Tokopedia & Level 3 (Rp9,10T) memangkas ekuitas 6,34%.'
+          : 'Note 7 credit provisions surged +134.9% (Rp407.7bn; 12.99% of gross loans), while a 20% write-down on Tokopedia & Level 3 stakes cuts equity by 6.34%.',
+        formula: '20% Stress on Rp9,100.9bn (Tokopedia + L3) = −Rp1,820.2bn pre-tax (−6.34% equity)',
+        data_origin: 'Final Report §2.1 (Table 4)',
+      },
+    ],
+    7: [
+      {
+        heading: id ? 'Driver Dasar Pasca-Tokopedia' : 'Post-Tokopedia Base Drivers',
+        text: id
+          ? 'Mengaitkan Base Case murni ke kinerja lanjutan 2024–2025: pertumbuhan +15,27%, COGS 42,28%, Cash OpEx 55,70% (−708 bps YoY), dan CapEx 6,45%.'
+          : 'Anchoring Base Case strictly on continuing 2024–2025 trends sets growth at +15.27%, COGS 42.28%, Cash OpEx 55.70% (−708 bps YoY), and CapEx 6.45%.',
+        formula: '2025 Margin Spread = 57.72% Gross Margin − 55.70% Cash OpEx = +202 bps',
+        data_origin: 'Final Report §4.1 (Table 11)',
+      },
+      {
+        heading: id ? 'Mengapa 2023 Dikeluarkan' : 'Why 2023 Averages Were Dropped',
+        text: id
+          ? 'Dek awal mencampur OpEx pra-exit 2023 (117,01%) dan CapEx Tokopedia 2024 (41,0%), menciptakan rata-rata buatan 78,5% OpEx dan 16,3% CapEx yang merusak proyeksi.'
+          : 'The earlier deck averaged 2023 pre-exit OpEx (117.01%) and 2024 Tokopedia intangibles (41.0% CapEx), inflating Base drivers to 78.5% OpEx and 16.3% CapEx.',
+        formula: 'Cash OpEx Restated: 78.5% (3-yr old) → 55.70% (FY2025 clean)',
+        data_origin: 'Final Report §1.3 & Appendix B Table B1 #1',
+      },
+      {
+        heading: id ? 'Tiga Skenario Terukur' : 'Non-Arbitrary Scenario Anchors',
+        text: id
+          ? 'Optimistis memakai rasio biaya interim 1H 2026 (COGS 38,10%, OpEx 51,20%); Konservatif memakai lantai transisi 2024 (OpEx 62,78%, utang 10,25%).'
+          : 'Optimistic adopts audited 1H 2026 cost ratios (38.10% COGS, 51.20% OpEx); Conservative reverts to the clean 2024 post-exit floor (62.78% OpEx, 10.25% debt).',
+        formula: 'Scenarios: Opt (51.2% OpEx) | Base (55.7% OpEx) | Cons (62.8% OpEx)',
+        data_origin: 'Final Report §4.1 (Table 11)',
+      },
+    ],
+    8: s8ByScenario[scenKey] || s8ByScenario.base,
+    10: [
+      {
+        heading: id ? 'DCF Berbalik Positif (+Rp10,38)' : 'DCF Flips Positive (+Rp10.38)',
+        text: id
+          ? 'Menghapus pembakaran kas 2023 menaikkan DCF Dasar dari −Rp121,1 menjadi +Rp10,38/saham (Nilai Perusahaan −Rp2.988,5M ditambah Kas Bersih +Rp14.012,5M).'
+          : 'Stripping out 2023 distortions lifts Base DCF from −Rp121.1 to +Rp10.38/share (−Rp2,988.5bn Enterprise Value plus +Rp14,012.5bn Net Cash).',
+        formula: 'Equity Value = −Rp2,988.5bn EV + Rp14,012.5bn Net Cash = +Rp11,024.0bn (+Rp10.38/sh)',
+        data_origin: 'Final Report §5.2 (Table 15)',
+      },
+      {
+        heading: id ? 'Nilai Perusahaan Negatif vs. Kas' : 'Negative EV vs. Net Cash Cushion',
+        text: id
+          ? 'Meski EBIT positif, CapEx (Rp1,36T–1,81T) melebihi EBIT+D&A sehingga FCFF tetap negatif (−Rp651M hingga −Rp117M), membuat nilai DCF berada di bawah Kas Bersih Rp13,19/saham.'
+          : 'Even with positive EBIT, CapEx exceeds EBIT+D&A so explicit FCFF stays negative (−Rp651bn to −Rp117bn), leaving DCF below Rp13.19/sh Net Cash.',
+        formula: 'PV Explicit FCFF (−Rp967.9bn) + PV Terminal Value (−Rp2,020.6bn, 67.6% EV) = −Rp2,988.5bn',
+        data_origin: 'Final Report §5.2',
+      },
+      {
+        heading: id ? 'Penalti Residual Income (−Rp12,23)' : 'Residual Income Penalty (−Rp12.23)',
+        text: id
+          ? 'ROE 2028F hanya +0,09% melawan beban Ke 8,452% (~Rp2,42T/thn), menghasilkan RI −Rp12,23/saham (atau +Rp0,24/sh pada g = 0%; +Rp21,13/sh jika ROE = Ke setelah Tahun 3).'
+          : 'With 2028F ROE at just +0.09% vs an 8.452% Ke hurdle (~Rp2.42T/yr), perpetual RI is −Rp12.23/sh (+Rp0.24/sh at g = 0%; +Rp21.13/sh if ROE = Ke in Yr 4+).',
+        formula: 'g_fund = 126.42% × 2.70% ROIC = +3.41% (capped at 3.00% < 4.502% Rf)',
+        data_origin: 'Final Report §5.1–5.2 (Tables 14–15)',
+      },
+    ],
+    11: [
+      {
+        heading: id ? 'Rentang Nilai Wajar: Rp10,38–Rp16,75' : 'Defensible Range: Rp10.38–Rp16.75',
+        text: id
+          ? 'Rentang intrinsik Laporan Akhir mencakup Base DCF (+Rp10,38/sh) hingga Optimistic RI (+Rp16,75/sh), berpusat di sekitar Kas Bersih Rp13,19/sh—jauh di bawah Rp25,00.'
+          : 'Our defensible range spans Base DCF (+Rp10.38/sh) to Optimistic RI (+Rp16.75/sh), centered around Rp13.19/sh Net Cash—well below the Rp25.00 market price.',
+        formula: 'Intrinsic Floor Rp10.38 (Base DCF) to Ceiling Rp16.75 (Opt. RI) vs Rp25.00 Market',
+        data_origin: 'Final Report §5.3 (Table 16)',
+      },
+      {
+        heading: id ? 'Mengapa P/B Grab (Rp91,02) Ditolak' : 'Why Grab P/B (Rp91.02) Is Rejected',
+        text: id
+          ? 'Kelipatan P/B 3,04x Grab mencerminkan emiten dengan ROE +2,96% dan EBIT positif; memakainya untuk GoTo (ROIC 2,70% < WACC 7,76%) tidak valid secara ekonomi.'
+          : 'Grab’s 3.04x P/B reflects +2.96% ROE and positive EBIT; blending it with GoTo (2.70% ROIC < 7.76% WACC; +0.09% ROE) is economically invalid.',
+        formula: 'Grab P/B = US$4.99 / US$1.6419 = 3.0391x × Rp29.95 BVPS = Rp91.02/sh (Rejected)',
+        data_origin: 'Final Report §5.3 & Grab FY2025 20-F',
+      },
+      {
+        heading: id ? 'Penyelarasan Tanggal Informasi' : 'Information-Date Alignment',
+        text: id
+          ? 'Harga acuan Rp25,00 (30 Des 2025) dibandingkan terhadap LK Auditan FY2025 (terbit Maret 2026) serta rasio biaya interim 1H 2026 khusus untuk skenario Optimistis.'
+          : 'Benchmarks the Dec 30, 2025 Rp25.00 share price against March 2026 audited FY2025 results (and 1H 2026 cost ratios in the Optimistic scenario only).',
+        formula: 'Market Quote: Dec 30, 2025 | FY2025 Audited Filing: March 2026',
+        data_origin: 'Final Report §5.3 (Rubric C4)',
+      },
+    ],
+    12: [
+      {
+        heading: id ? 'SELL / AVOID Tetap Konsisten' : 'SELL / AVOID Confirmed at Rp25.00',
+        text: id
+          ? 'Meski 5 kesalahan historis sudah dikoreksi dan Base Case berbalik laba pada 2028F (+Rp25,0M), harga Rp25,00 (2,41x Base DCF Rp10,38 & 1,90x Kas Bersih) masih terlalu mahal.'
+          : 'Even after fixing all 5 errors and turning GAAP net-positive in 2028F (+Rp25.0bn), Rp25.00 (2.41x Base DCF & 1.90x Net Cash) prices in unachieved upside.',
+        formula: 'Market Rp25.00 vs Defensible Range Rp10.38–Rp16.75 (−33% to −58% gap)',
+        data_origin: 'Final Report §6.1',
+      },
+      {
+        heading: id ? 'Ambang Re-Rating Terukur (Tabel 17)' : 'Quantitative Re-Rating Triggers (Table 17)',
+        text: id
+          ? 'Upgrade BUY jika Cash OpEx ≤ 51,2% & GM ≥ 61,9% dua kuartal beruntun; HOLD jika harga ≤ Rp13,20 (1,0x Kas Bersih) dengan FCF positif; Perkuat SELL jika OpEx ≥ 60% atau provisi ≥ Rp650M.'
+          : 'BUY trigger: Cash OpEx ≤ 51.2% & GM ≥ 61.9% for 2 quarters. HOLD trigger: Price ≤ Rp13.20 (1.0x Net Cash) with FCF > 0. Reinforce SELL: OpEx ≥ 60% or provisions ≥ Rp650bn.',
+        formula: 'BUY: OpEx ≤ 51.2% & GM ≥ 61.9% | HOLD: Price ≤ Rp13.20 & FCF > 0',
+        data_origin: 'Final Report §6.2 (Table 17)',
+      },
+      {
+        heading: id ? 'Risiko Utama & Pengembalian Modal' : 'ROIC Spread & Key Thesis Risks',
+        text: id
+          ? 'Risiko naik: efisiensi biaya 1H 2026 bertahan penuh atau M&A strategis. Risiko turun: provisi kredit Catatan 7 (+134,9%) dan potensi penurunan nilai Tokopedia.'
+          : 'Upside risks: full-year 1H 2026 cost containment or strategic M&A. Downside risks: Note 7 credit losses (+134.9%) and Tokopedia associate write-downs.',
+        formula: '2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps economic spread',
+        data_origin: 'Final Report §6.3',
+      },
+    ],
+  }
+})
 const visibleAnalysisPoints = computed(() => {
+  if (isRestated.value && restatedPointsMap.value[props.slide.slide_num]) {
+    return restatedPointsMap.value[props.slide.slide_num]
+  }
   if (isDcfRiSlide.value && valuationBasis.value === '2yr') {
     const id = props.lang === 'id'
     const basePts = props.slide.analysis_points || []
@@ -256,9 +675,121 @@ const visibleAnalysisPoints = computed(() => {
 })
 const label = computed(() => props.slide.section_name || (props.lang === 'id' ? 'ANALISIS LAPORAN KEUANGAN' : 'FINANCIAL STATEMENT ANALYSIS'))
 const editorialRows = computed(() => {
+  const id = props.lang === 'id'
+  if (isRestated.value && props.slide.slide_num === 5) {
+    const base = props.slide.visual_rows || []
+    return [
+      {
+        ...base[0],
+        name: id ? 'Likuiditas & Siklus Modal Kerja' : 'Liquidity & Working Capital Cycle',
+        value: '2.73x (+0.11x)',
+        text: id
+          ? 'Current Ratio: 2,62x (23) → 2,62x (24) → 2,73x (25)\nDSO 10,56h → 10,90h | DPO 61,1h → 59,1h | CCC −49,2h → −47,5h'
+          : 'Current Ratio: 2.62x (23) → 2.62x (24) → 2.73x (25)\nDSO 10.56d → 10.90d | DPO 61.1d → 59.1d | CCC −49.2d → −47.5d',
+        detail_explanation: id
+          ? 'Menambahkan piutang pinjaman Catatan 7 (+Rp1.581,8M) memulihkan Current Ratio 2024 ke 2,62x dan 2025 meningkat +0,11x ke 2,73x (Modal Kerja naik Rp16,29T → Rp18,41T). Memisahkan piutang usaha Catatan 6 memperbaiki DSO YoY menjadi 14,84h (2023) → 10,56h (2024) → 10,90h (2025), dengan DPO 59,11h menjaga siklus kas negatif −47,54 hari.'
+          : 'Restoring Rp1,581.8bn of omitted Note 7 lending receivables adjusts 2024 Current Ratio to 2.62x before rising +0.11x YoY to 2.73x in 2025 (Working Capital Rp16.29T → Rp18.41T). Aligning AR to Note 6 sets Trade DSO at 14.84d (2023) → 10.56d (2024) → 10.90d (2025), while 59.11d DPO keeps CCC negative at −47.54d.',
+      },
+      {
+        ...base[1],
+        name: id ? 'Solvabilitas & Cakupan Bunga' : 'Leverage & Interest Coverage',
+        value: '26.97% / −0.71x',
+        text: id
+          ? 'Debt/Equity: 12,14% → 15,85% → 26,97% (+11,12 pp YoY)\nTIE: −27,83x → −4,54x → −0,71x (+3,83x YoY, Cat. 27b)'
+          : 'Debt/Equity: 12.14% → 15.85% → 26.97% (+11.12 pp YoY)\nTIE: −27.83x → −4.54x → −0.71x (+3.83x YoY, Note 27b)',
+        detail_explanation: id
+          ? 'Memasukkan porsi utang jangka pendek dan semua liabilitas sewa (Catatan 19–20: Rp4,34T di 2023 → Rp4,82T di 2024 → Rp7,74T di 2025) mencatat D/E YoY 12,14% → 15,85% → 26,97% (+11,12 pp YoY), serta menautkan bunga Catatan 27b sehingga TIE membaik YoY dari −27,83x → −4,54x → −0,71x (+3,83x YoY).'
+          : 'Harmonizing all short/long-term borrowings and leases (Notes 19–20: Rp4.34T → Rp4.82T → Rp7.74T) tracks Debt/Equity YoY at 12.14% → 15.85% → 26.97% (+11.12 pp YoY) and links Note 27b finance costs for live TIE improvement from −27.83x (2023) → −4.54x (2024) → −0.71x (2025, +3.83x YoY).',
+      },
+      {
+        ...base[2],
+        name: id ? 'Altman Z-Score (Buku / Pasar)' : 'Altman Z-Score (Book / Mkt)',
+        value: '−4.72 / −4.80',
+        text: id
+          ? 'Sensitivitas X4: Buku 1,68x (−4,72) vs Pasar Rp25 1,56x (−4,80)\nX2 (−6,59 rugi historis 2023) mendominasi; X1 (+0,40) sehat'
+          : 'X4 Sensitivity: Book 1.68x (−4.72) vs Mkt Rp25 1.56x (−4.80)\nX2 (−6.59 sunk 2023 losses) dominates; X1 (+0.40) healthy',
+        detail_explanation: id
+          ? 'Uji sensitivitas X4 antara Ekuitas Buku (1,6844x → Z = −4,72) dan Nilai Pasar Rp25,00 (1,5576x → Z = −4,80) membuktikan zona distress (< 1,81) berasal dari X2 (−6,59 akibat akumulasi rugi historis 2023) alih-alih krisis kas jangka pendek (X1 tetap kuat +0,40).'
+          : 'Testing X4 sensitivity between Book Equity (1.6844x → Z = −4.72) and Market Cap at Rp25.00 (1.5576x → Z = −4.80) confirms the distress score (< 1.81) stems from sunk 2023 accumulated losses (X2 = −6.59) rather than 12-month liquidity risk (X1 stays healthy at +0.40).',
+      },
+    ]
+  }
+  if (isRestated.value && props.slide.slide_num === 6) {
+    const base = props.slide.visual_rows || []
+    return [
+      {
+        ...base[0],
+        value: '+Rp307.0bn',
+        text: id
+          ? 'Akrual berulang −1,94% (turun dari −3,69% di 2024)\nProvisi kredit Catatan 7 melonjak +134,9% YoY'
+          : 'Adjusted recurring accrual −1.94% (from −3.69%)\nNote 7 credit-loss provisions surged +134.9% YoY',
+        detail_explanation: id
+          ? 'Setelah mengeluarkan pos non-operasi (goodwill, penyesuaian nilai wajar) sambil tetap menahan SBC (Rp593,4M) dan provisi kredit, akrual berulang menyempit dari −3,69% menjadi −1,94% seiring CFO berbalik +Rp307,0M.'
+          : 'After isolating non-operating goodwill and fair-value swings while retaining SBC (Rp593.4bn) and loan provisions, recurring accruals narrowed from −3.69% to −1.94% as CFO turned +Rp307.0bn.',
+      },
+      {
+        ...base[1],
+        name: id ? 'Belanja modal lanjutan' : 'Continuing cash capex',
+        value: 'Rp1,182bn (6.45%)',
+        text: id
+          ? 'CapEx 2024 direvisi turun 41,0% → 6,63% (Rp1.054M)\nSetelah keluarkan transfer Tokopedia Rp5,46T (Cat. 12)'
+          : '2024 CapEx restated down 41.0% → 6.63% (Rp1,054bn)\nExcludes Rp5,465bn Tokopedia Note 12 transfer',
+        detail_explanation: id
+          ? 'Catatan 12 membuktikan Rp5.464,9M penambahan aset takberwujud 2024 milik Tokopedia sebelum keluar dari konsolidasi. Mengeluarkannya menurunkan CapEx lanjutan 2024 dari 41,0% menjadi 6,63% (sejalan dengan 6,45% di 2025).'
+          : 'Note 12 proves Rp5,464.9bn of 2024 intangible additions belonged to Tokopedia prior to deconsolidation, lowering 2024 continuing CapEx from 41.0% to 6.63% (in line with FY2025’s 6.45%).',
+      },
+      {
+        ...base[2],
+        value: '−Rp875.3bn',
+        text: id
+          ? 'CFO hanya menutup 25,97% CapEx; investasi inti −Rp867,4M\nKas terbantu pencairan deposito Rp1,39T & utang baru Rp3,72T'
+          : 'CFO covers 25.97% of CapEx; core CFI −Rp867.4bn\nSupported by Rp1.39T deposit maturity & Rp3.72T new debt',
+        detail_explanation: id
+          ? 'Arus kas bebas tetap negatif −Rp875,3M karena CFO Rp307,0M hanya menutup 25,97% CapEx Rp1.182,4M. Positifnya CFI (+Rp519,1M) bergantung pada pencairan deposito berjangka Rp1.386,5M.'
+          : 'FCF remained −Rp875.3bn as Rp307.0bn CFO covered only 25.97% of Rp1,182.4bn CapEx. Headline investing inflow (+Rp519.1bn) relied on settling Rp1,386.5bn of time deposits.',
+      },
+    ]
+  }
+  if (isRestated.value && props.slide.slide_num === 12) {
+    const base = props.slide.visual_rows || []
+    return [
+      {
+        ...base[0],
+        name: id ? 'Rekomendasi final (12 bulan)' : 'Final verdict (12-month horizon)',
+        value: 'SELL / AVOID',
+        text: id
+          ? 'Harga pasar Rp25,00 jauh di atas rentang Rp10,38–Rp16,75\n(2,41x Base DCF Rp10,38 & 1,90x Kas Bersih Rp13,19)'
+          : 'Rp25.00 market price exceeds Rp10.38–Rp16.75 range\n(2.41x Base DCF Rp10.38 & 1.90x Net Cash Rp13.19)',
+        detail_explanation: id
+          ? 'Berdasarkan Laporan Akhir yang direvisi, rekomendasi SELL / AVOID pada Rp25,00 tetap dipertahankan bagi investor ekuitas jangka pendek karena harga pasar mencerminkan premi 50%–141% di atas nilai intrinsik fundamental.'
+          : 'Under the restated Final Report, SELL / AVOID at Rp25.00 holds for a short-term public equity investor: market pricing stands well above our Rp10.38–Rp16.75/share intrinsic range.',
+      },
+      {
+        ...base[1],
+        name: id ? 'Spread nilai ekonomi (ROIC vs WACC)' : 'Economic spread (ROIC vs WACC)',
+        value: '−506 bps',
+        text: id
+          ? '2028F ROIC (+2,70%) tertinggal di bawah WACC (7,76%)\nLaba akuntansi positif (+Rp25M) belum ciptakan nilai'
+          : '2028F Base ROIC (+2.70%) trails WACC (7.76%)\nGAAP net profit (+Rp25bn) still destroys economic value',
+        detail_explanation: id
+          ? 'Meskipun perbaikan pasca-Tokopedia membalik EBIT 2026F (+Rp426,9M) dan Laba Bersih 2028F (+Rp25,0M) menjadi positif, ROIC 2028F (+2,70%) tetap jauh di bawah WACC (7,76%) dan ROE (+0,09%) di bawah Ke (8,45%).'
+          : 'Although removing 2023 distortions turns Base EBIT (+Rp426.9bn in 2026F) and Net Income (+Rp25.0bn in 2028F) positive, 2028F ROIC (+2.70%) still trails WACC (7.76%) by 506 bps.',
+      },
+      {
+        ...base[2],
+        name: id ? 'Pemicu re-rating terukur (Tabel 17)' : 'Upgrade triggers (Table 17)',
+        value: '≤ Rp13.20 / ≤ 51.2%',
+        text: id
+          ? 'HOLD: harga ≤ Rp13,20 (1,0x Kas Bersih) & FCF > 0\nBUY: Cash OpEx ≤ 51,2% & Margin Kotor ≥ 61,9% (2Q)'
+          : 'HOLD: price ≤ Rp13.20 (1.0x Net Cash) w/ FCF > 0\nBUY: Cash OpEx ≤ 51.2% & Gross Margin ≥ 61.9% (2Q)',
+        detail_explanation: id
+          ? 'Tabel 17 Laporan Akhir menetapkan syarat kuantitatif: HOLD bila harga turun ≤ Rp13,20 dengan FCF positif, BUY bila efisiensi 1H 2026 (Cash OpEx ≤ 51,2%, GM ≥ 61,9%) bertahan dua kuartal berturut-turut.'
+          : 'Final Report Table 17 defines exact thresholds: upgrade to HOLD if IDX price pulls back to ≤ Rp13.20 with positive FCF; upgrade to BUY if Cash OpEx ≤ 51.2% and Gross Margin ≥ 61.9% hold for two consecutive quarters.',
+      },
+    ]
+  }
   if (props.slide.visual_rows) return props.slide.visual_rows
   if (props.slide.story_rebuilt) return null
-  const id = props.lang === 'id'
   if (props.slide.slide_num === 2) return [
     {
       name: 'Gojek',
@@ -555,6 +1086,30 @@ const pointIcons = {
     risk: true,
     svg: '<path d="M17 12v24M17 12l-5 5M17 12l5 5" stroke="#008c2c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 36V12M31 36l-5-5M31 36l5-5" stroke="#dc2626" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>',
   },
+  '13-0': {
+    risk: true,
+    svg: '<path d="M14 14l20 20M34 14L14 34" stroke="#dc2626" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="14" fill="#fecaca" fill-opacity="0.35" stroke="#dc2626" stroke-width="2"/>',
+  },
+  '13-1': {
+    risk: false,
+    svg: '<rect x="10" y="10" width="28" height="28" rx="4" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M16 24l5 5 11-11" stroke="#008c2c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
+  '13-2': {
+    risk: false,
+    svg: '<path d="M12 16h24M12 24h24M12 32h16" stroke="#008c2c" stroke-width="2.4" stroke-linecap="round"/><circle cx="34" cy="32" r="4" fill="#86efac" stroke="#008c2c" stroke-width="2"/>',
+  },
+  '14-0': {
+    risk: false,
+    svg: '<rect x="10" y="24" width="6" height="13" rx="1.5" fill="#9ecbaa" stroke="#008c2c" stroke-width="1.8"/><rect x="21" y="17" width="6" height="20" rx="1.5" fill="#86efac" stroke="#008c2c" stroke-width="1.8"/><rect x="32" y="11" width="6" height="26" rx="1.5" fill="#008c2c"/>',
+  },
+  '14-1': {
+    risk: true,
+    svg: '<path d="M24 9l15 27H9L24 9z" fill="#fecaca" stroke="#dc2626" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 19v7M24 30v1" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round"/>',
+  },
+  '14-2': {
+    risk: false,
+    svg: '<circle cx="24" cy="24" r="14" fill="#bbf7d0" stroke="#008c2c" stroke-width="2.2"/><path d="M18 24l4 4 8-8" stroke="#008c2c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  },
 }
 const getPointIcon = (slideNum, index) => pointIcons[`${slideNum}-${index}`] || null
 const competitionChart = computed(() => props.slide.competition_chart)
@@ -619,7 +1174,32 @@ const provisionGrowth = computed(() => {
           <img class="slide-brand" src="/goto_logo.png" alt="GoTo" />
         </header>
 
-        <main class="slide-evidence-layout" :class="{ 'slide-table-only': slide.is_appendix, 'slide-business-layout': layoutSlide === 2 }">
+        <div v-if="hasRestatement" class="slide-restatement-bar" :class="{ 'is-restated': isRestated }" @click.stop>
+          <div class="restatement-pills" role="tablist" :aria-label="lang === 'id' ? 'Pilih versi data laporan' : 'Select report data version'">
+            <button
+              type="button"
+              class="restatement-pill"
+              :class="{ active: !isRestated }"
+              @click="reportViewMode = 'original'"
+            >
+              {{ lang === 'id' ? 'Dek Awal (Tersubmit)' : 'Original Deck' }}
+            </button>
+            <button
+              type="button"
+              class="restatement-pill"
+              :class="{ active: isRestated }"
+              @click="reportViewMode = 'restated'; if (forecastScenario === 'base_2yr') forecastScenario = 'base'"
+            >
+              {{ lang === 'id' ? 'Laporan Akhir (Restated)' : 'Final Report (Restated)' }}
+            </button>
+          </div>
+          <span class="restatement-delta">
+            <strong>{{ isRestated ? (lang === 'id' ? 'Apa yang Direvisi:' : 'Final Report Fix:') : (lang === 'id' ? 'Catatan Revisi:' : 'Paper Update:') }}</strong>
+            {{ restatementSummary }}
+          </span>
+        </div>
+
+        <main class="slide-evidence-layout" :class="{ 'slide-table-only': slide.is_appendix, 'slide-business-layout': layoutSlide === 2, 'has-restatement-bar': hasRestatement }">
           <div class="slide-evidence" :class="{ 'slide-evidence-stacked': slideBannerUrl, 'slide-evidence-peer': slide.peer_exclusions, 'slide-evidence-competition': competitionChart, 'slide-evidence-explained': slide.loss_chart || slide.valuation_range }">
             <button
               v-if="slideBannerUrl"
@@ -632,11 +1212,12 @@ const provisionGrowth = computed(() => {
             <template v-if="slide.five_forces">
             <table class="slide-forces-table">
               <thead><tr><th>{{ lang === 'id' ? 'Kekuatan' : 'Force' }}</th><th>{{ lang === 'id' ? 'Penilaian' : 'Rating' }}</th><th>{{ lang === 'id' ? 'Dasar penilaian' : 'Basis for assessment' }}</th></tr></thead>
-              <tbody>
+              <tbody :key="tableAnimKey">
                 <tr
                   v-for="(row, index) in slide.five_forces"
                   :key="index"
                   class="is-clickable-row"
+                  :style="{ animationDelay: `${index * 55}ms` }"
                   tabindex="0"
                   @click="emit('explain', $event, 'five_force', row)"
                   @keydown.enter="emit('explain', $event, 'five_force', row)"
@@ -695,11 +1276,12 @@ const provisionGrowth = computed(() => {
             </figure>
             </div>
             </template>
-            <div v-else-if="editorialRows" class="slide-editorial-rows">
+            <div v-else-if="editorialRows" :key="tableAnimKey" class="slide-editorial-rows">
               <div
                 v-for="(row, index) in editorialRows"
                 :key="index"
                 class="slide-editorial-row is-clickable-row"
+                :style="{ animationDelay: `${index * 60}ms` }"
                 role="button"
                 tabindex="0"
                 @click="emit('explain', $event, 'editorial', row)"
@@ -730,13 +1312,13 @@ const provisionGrowth = computed(() => {
                 <div v-if="isForecastSlide" class="slide-scenario-bar" @click.stop>
                   <span class="slide-scenario-label">{{ lang === 'id' ? 'Skenario:' : 'Scenario:' }}</span>
                   <select v-model="forecastScenario" class="slide-scenario-select" aria-label="Select forecast scenario">
-                    <option value="base">{{ lang === 'id' ? 'Base (Rata-rata 3 Thn)' : 'Base (3-Yr Avg)' }}</option>
-                    <option value="base_2yr">{{ lang === 'id' ? 'Base (Rata-rata 2 Thn: 2024–2025)' : 'Base (2-Yr Avg: 2024–2025)' }}</option>
-                    <option value="optimistic">Optimistic</option>
-                    <option value="conservative">Conservative</option>
+                    <option value="base">{{ isRestated ? (lang === 'id' ? 'Base (Pasca-Tokopedia 2024–2025)' : 'Base (Post-Tokopedia 2024–2025)') : (lang === 'id' ? 'Base (Rata-rata 3 Thn)' : 'Base (3-Yr Avg)') }}</option>
+                    <option v-if="!isRestated" value="base_2yr">{{ lang === 'id' ? 'Base (Rata-rata 2 Thn: 2024–2025)' : 'Base (2-Yr Avg: 2024–2025)' }}</option>
+                    <option value="optimistic">{{ isRestated ? (lang === 'id' ? 'Optimistis (OpEx 1H 2026: 51,2%)' : 'Optimistic (1H 2026 OpEx: 51.2%)') : 'Optimistic' }}</option>
+                    <option value="conservative">{{ isRestated ? (lang === 'id' ? 'Konservatif (Lantai 2024: 62,8%)' : 'Conservative (2024 Floor: 62.8%)') : 'Conservative' }}</option>
                   </select>
                 </div>
-                <div v-if="isDcfRiSlide" class="slide-scenario-bar" @click.stop>
+                <div v-if="isDcfRiSlide && !isRestated" class="slide-scenario-bar" @click.stop>
                   <span class="slide-scenario-label">{{ lang === 'id' ? 'Basis Proyeksi:' : 'Base Basis:' }}</span>
                   <select v-model="valuationBasis" class="slide-scenario-select" aria-label="Select valuation base basis">
                     <option value="3yr">{{ lang === 'id' ? 'Rata-rata 3 Tahun (2023–2025)' : '3-Yr Avg (2023–2025)' }}</option>
@@ -750,13 +1332,23 @@ const provisionGrowth = computed(() => {
                   class="slide-financial-table"
                   :class="{
                     'slide-table-dense': slide.is_appendix,
+                    'slide-table-ratios': isRestated && slide.slide_num === 4,
                     'slide-table-wacc': !slide.is_appendix && layoutSlide === 7,
                     'slide-table-multiples': !slide.is_appendix && layoutSlide === 9,
+                    'slide-table-restatement': !slide.is_appendix && (layoutSlide === 13 || layoutSlide === 14),
                   }"
                 >
                   <thead><tr><th v-for="(cell, i) in visibleHeaders" :key="i">{{ cell }}</th></tr></thead>
-                  <tbody>
-                    <tr v-for="(row, r) in visibleRows" :key="r" @click="emit('explain', $event, 'row', table.rows[r])" @dblclick="emit('evidence', 'row', table.rows[r])" tabindex="0" @keydown.enter="emit('explain', $event, 'row', table.rows[r])">
+                  <tbody :key="tableAnimKey">
+                    <tr
+                      v-for="(row, r) in visibleRows"
+                      :key="r"
+                      :style="{ animationDelay: `${r * 55}ms` }"
+                      @click="isRestated ? emit('explain', $event, 'claim', restatedRowDetail(row)) : emit('explain', $event, 'row', table.rows[r])"
+                      @dblclick="isRestated ? emit('evidence', 'claim', restatedRowDetail(row)) : emit('evidence', 'row', table.rows[r])"
+                      tabindex="0"
+                      @keydown.enter="isRestated ? emit('explain', $event, 'claim', restatedRowDetail(row)) : emit('explain', $event, 'row', table.rows[r])"
+                    >
                       <td
                       v-for="(cell, c) in row"
                       :key="c"
@@ -772,10 +1364,11 @@ const provisionGrowth = computed(() => {
                   <h3>{{ sched.title }}</h3>
                   <table class="slide-financial-table slide-table-dense">
                     <thead><tr><th v-for="(cell, i) in sched.headers" :key="i">{{ cell }}</th></tr></thead>
-                    <tbody>
+                    <tbody :key="tableAnimKey + '-' + sIdx">
                       <tr
                         v-for="(row, r) in sched.rows"
                         :key="r"
+                        :style="{ animationDelay: `${r * 55}ms` }"
                         @click="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: sched.title, text: row.join(' | ') })"
                         tabindex="0"
                         @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points?.[0] || { heading: sched.title, text: row.join(' | ') })"
@@ -792,7 +1385,7 @@ const provisionGrowth = computed(() => {
               <img :src="slide.chart_url" :alt="slide.title" />
             </button>
             <div v-if="slide.loss_chart" :class="{ 'slide-loss-grid': Boolean(slide.chart_url) }">
-              <figure class="slide-story-chart" role="button" tabindex="0" :aria-label="slide.loss_chart.title" @click="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.enter="emit('explain', $event, 'claim', slide.analysis_points[0])" @keydown.space.prevent="emit('explain', $event, 'claim', slide.analysis_points[0])">
+              <figure class="slide-story-chart" role="button" tabindex="0" :aria-label="slide.loss_chart.title" @click="emit('explain', $event, 'claim', visibleAnalysisPoints[0])" @keydown.enter="emit('explain', $event, 'claim', visibleAnalysisPoints[0])" @keydown.space.prevent="emit('explain', $event, 'claim', visibleAnalysisPoints[0])">
                 <figcaption>{{ slide.loss_chart.title }}</figcaption>
                 <div v-for="row in slide.loss_chart.series" :key="row.label" class="slide-loss-row">
                   <span>{{ row.label }}</span>
@@ -808,12 +1401,12 @@ const provisionGrowth = computed(() => {
             <figure v-if="slide.valuation_range" class="slide-story-chart slide-range-chart">
               <figcaption class="slide-range-hdr">
                 <span>{{ lang === 'id' ? 'Hasil Valuasi (Rp/saham)' : 'Valuation Results (Rp/share)' }}</span>
-                <select v-if="isGrabSlide" v-model="valuationBasis" class="slide-scenario-select" aria-label="Select valuation base basis" @click.stop>
+                <select v-if="isGrabSlide && !isRestated" v-model="valuationBasis" class="slide-scenario-select" aria-label="Select valuation base basis" @click.stop>
                   <option value="3yr">{{ lang === 'id' ? '3-Thn (2023–2025)' : '3-Yr Avg (2023–2025)' }}</option>
                   <option value="2yr">{{ lang === 'id' ? '2-Thn (2024–2025)' : '2-Yr Avg (2024–2025)' }}</option>
                 </select>
               </figcaption>
-              <svg viewBox="0 0 560 154" role="img" :aria-label="lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.'">
+              <svg viewBox="0 0 560 154" role="img" :aria-label="isRestated ? (lang === 'id' ? 'DCF plus 10,4; RI minus 12,2; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF plus 10.4; RI minus 12.2; Grab P/B 91.0; reference price 25 rupiah per share.') : (lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.')">
                 <line :x1="rangeX(0)" :x2="rangeX(0)" y1="20" y2="128" stroke="#a4bfae" />
                 <line :x1="rangeX(25)" :x2="rangeX(25)" y1="20" y2="128" stroke="#173d25" stroke-dasharray="4 4" />
                 <text :x="rangeX(25)" y="13" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
@@ -826,7 +1419,8 @@ const provisionGrowth = computed(() => {
                 <text :x="rangeX(0)" y="144" text-anchor="middle" fill="#63786a" font-size="12">0</text>
                 <text :x="rangeX(120)" y="144" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
               </svg>
-              <p v-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
+              <p v-if="isRestated && isGrabSlide" class="slide-chart-formula">{{ lang === 'id' ? 'Rentang Nilai Wajar: Base DCF (+Rp10,38) – Opt. RI (+Rp16,75) · Kas Bersih Rp13,19/sh vs Harga Pasar Rp25,00' : 'Defensible Range: Base DCF (+Rp10.38) – Opt. RI (+Rp16.75) · Net Cash Rp13.19/sh vs Market Rp25.00' }}</p>
+              <p v-else-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>
             </figure>
             <section v-if="slide.peer_exclusions" class="slide-peer-exclusions">
               <h2>{{ lang === 'id' ? 'Mengapa pembanding lain dikeluarkan?' : 'Why the other companies are excluded' }}</h2>
@@ -904,11 +1498,32 @@ const provisionGrowth = computed(() => {
 .slide-sheet { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: linear-gradient(135deg, #007222 0%, #005419 100%); color: white; font-family: 'Plus Jakarta Sans', sans-serif; box-shadow: 0 16px 48px #0002; }
 .slide-sheet *, .slide-sheet *::before, .slide-sheet *::after { box-sizing: border-box; }
 .slide-brand { display: block; width: 8cqw; height: 4.6cqw; object-fit: contain; background: white; padding: .75cqw 1cqw; border-radius: 0; flex-shrink: 0; }
-.slide-heading { position: absolute; top: 4.8%; left: 4%; right: 4%; display: flex; justify-content: space-between; gap: 3cqw; align-items: flex-start; }
+.slide-heading { position: absolute; top: 4.4%; left: 4%; right: 4%; display: flex; justify-content: space-between; gap: 3cqw; align-items: flex-start; }
 .slide-heading-copy { max-width: 76cqw; }
 .slide-heading p { margin: 0 0 .9cqw; font-size: .85cqw; letter-spacing: .16cqw; color: #c5f1cb; font-weight: 600; }
 .slide-heading h1 { margin: 0; color: white; font-size: 2.75cqw; line-height: 1.2; letter-spacing: -.09cqw; font-weight: 750; }
+.slide-restatement-bar { position: absolute; top: 16.5%; left: 4%; right: 4%; display: flex; align-items: center; justify-content: space-between; gap: 1.3cqw; background: linear-gradient(135deg, rgba(48, 32, 8, 0.46), rgba(28, 20, 6, 0.36)); backdrop-filter: blur(18px) saturate(165%); -webkit-backdrop-filter: blur(18px) saturate(165%); border: 1px solid rgba(251, 191, 36, 0.44); border-radius: .75cqw; padding: .52cqw .85cqw; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.24); z-index: 2; }
+.slide-restatement-bar.is-restated { background: linear-gradient(135deg, rgba(12, 54, 28, 0.56), rgba(8, 36, 19, 0.44)); border-color: rgba(134, 239, 172, 0.48); color: #eefaf2; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.26); }
+.restatement-pills { display: inline-flex; align-items: center; gap: .35cqw; background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.16); padding: .28cqw; border-radius: .55cqw; flex-shrink: 0; }
+.slide-restatement-bar.is-restated .restatement-pills { background: rgba(0, 0, 0, 0.28); border-color: rgba(134, 239, 172, 0.22); }
+.restatement-pill { border: 0; background: transparent; color: rgba(235, 250, 240, 0.86); font: inherit; font-size: 1.02cqw; font-weight: 700; padding: .46cqw 1.05cqw; border-radius: .42cqw; cursor: pointer; white-space: nowrap; transition: background-color .16s ease, color .16s ease, box-shadow .16s ease; }
+.restatement-pill:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
+.slide-restatement-bar.is-restated .restatement-pill { color: rgba(224, 247, 232, 0.86); }
+.restatement-pill.active { background: linear-gradient(135deg, rgba(245, 158, 11, 0.92), rgba(217, 119, 6, 0.92)); color: #ffffff; box-shadow: 0 3px 12px rgba(245, 158, 11, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.34); }
+.slide-restatement-bar.is-restated .restatement-pill.active { background: linear-gradient(135deg, rgba(34, 197, 94, 0.92), rgba(22, 163, 74, 0.92)); color: #ffffff; box-shadow: 0 3px 12px rgba(34, 197, 94, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+.restatement-delta { flex: 1; min-width: 0; font-size: .96cqw; line-height: 1.35; color: #eefaf2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.restatement-delta strong { color: #fde68a; margin-right: .4cqw; font-weight: 750; }
+.slide-restatement-bar.is-restated .restatement-delta { color: #eefaf2; }
+.slide-restatement-bar.is-restated .restatement-delta strong { color: #fde68a; }
 .slide-evidence-layout { position: absolute; top: 25%; left: 4%; right: 4%; bottom: 10%; display: grid; grid-template-columns: 1.65fr 1fr; gap: 3cqw; align-items: stretch; }
+.slide-evidence-layout.has-restatement-bar { top: 27.6%; bottom: 9.6%; }
+.slide-evidence-layout.has-restatement-bar .slide-evidence.slide-evidence-peer { padding: .85cqw 1.1cqw; gap: .55cqw; }
+.slide-evidence-layout.has-restatement-bar .slide-evidence-peer .slide-financial-table th,
+.slide-evidence-layout.has-restatement-bar .slide-evidence-peer .slide-financial-table td { padding: .42cqw .55cqw; }
+.slide-evidence-layout.has-restatement-bar .slide-peer-exclusion { padding: .38cqw 0; font-size: .86cqw; }
+.slide-evidence-layout.has-restatement-bar .slide-editorial-row h2 { font-size: 1.35cqw; margin-bottom: .35cqw; }
+.slide-evidence-layout.has-restatement-bar .slide-editorial-row p { font-size: .96cqw; line-height: 1.38; max-width: 30cqw; }
+.slide-evidence-layout.has-restatement-bar .slide-analysis-panel .slide-analysis-point p { font-size: 1.04cqw; line-height: 1.44; }
 .slide-evidence { background: #fff; color: #172e21; overflow: hidden; min-width: 0; display: flex; align-items: center; padding: 1cqw; }
 .slide-evidence.slide-evidence-explained { flex-direction: column; align-items: stretch; justify-content: space-between; padding: .95cqw 1.3cqw; gap: .65cqw; }
 .slide-story-chart { margin: 0; padding-top: .75cqw; border-top: 1px solid #dce8df; }
@@ -1024,11 +1639,44 @@ const provisionGrowth = computed(() => {
 .slide-evidence-stacked .slide-financial-table th { padding: .38cqw .48cqw; font-size: .74cqw; }
 .slide-evidence-stacked .slide-financial-table td { padding: .36cqw .48cqw; }
 .slide-financial-table th:first-child, .slide-financial-table td:first-child { width: 34%; text-align: left; font-weight: 650; }
+.slide-table-ratios { font-size: .84cqw; line-height: 1.28; }
+.slide-table-ratios th { padding: .56cqw .48cqw; font-size: .75cqw; }
+.slide-table-ratios td { padding: .60cqw .48cqw; }
+.slide-table-ratios th:first-child, .slide-table-ratios td:first-child { width: 31%; }
+.slide-table-ratios th:nth-child(5), .slide-table-ratios td:nth-child(5) { color: #007b2b; font-weight: 700; }
+@keyframes slideRowUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-financial-table tbody tr,
+.slide-forces-table tbody tr,
+.slide-editorial-row {
+  animation: slideRowUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide-financial-table tbody tr,
+  .slide-forces-table tbody tr,
+  .slide-editorial-row {
+    animation: none;
+  }
+}
 .slide-table-wacc th:first-child, .slide-table-wacc td:first-child { width: 33%; }
 .slide-table-wacc th:nth-child(2), .slide-table-wacc td:nth-child(2) { width: 16%; }
 .slide-table-wacc th:nth-child(3), .slide-table-wacc td:nth-child(3) { width: 51%; text-align: left; }
 .slide-table-multiples { font-size: .86cqw; }
 .slide-table-multiples th:first-child, .slide-table-multiples td:first-child { width: 28%; }
+.slide-table-restatement { font-size: .82cqw; line-height: 1.32; }
+.slide-table-restatement th, .slide-table-restatement td { text-align: left; padding: .52cqw .55cqw; }
+.slide-table-restatement th:first-child, .slide-table-restatement td:first-child { width: 24%; }
+.slide-table-restatement th:nth-child(2), .slide-table-restatement td:nth-child(2) { width: 25%; }
+.slide-table-restatement th:nth-child(3), .slide-table-restatement td:nth-child(3) { width: 25%; }
+.slide-table-restatement th:nth-child(4), .slide-table-restatement td:nth-child(4) { width: 26%; }
 .slide-financial-table tbody tr:last-child td { border: 0; }
 .slide-financial-table tbody tr:hover td { background: #edf6ef; cursor: pointer; }
 .slide-table-dense { font-size: .92cqw; }

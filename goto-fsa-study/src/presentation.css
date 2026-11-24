@@ -50,6 +50,9 @@
 .drawer-backdrop .source-drawer .drawer-badge { color: #c9ebd2; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 8px; }
 .drawer-backdrop .source-drawer .drawer-top-hdr h3 { color: #fff; font-size: 22px; font-weight: 650; line-height: 1.35; margin: 0; }
 .drawer-backdrop .source-drawer .drawer-val-pill { display: block; background: transparent; color: #def0e3; padding: 0; border: 0; margin-top: 8px; border-radius: 0; font-size: 12px; line-height: 1.5; font-weight: 400; }
+.drawer-backdrop .source-drawer .drawer-top-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.drawer-backdrop .source-drawer .drawer-glass-btn { height: 36px; padding: 0 11px; background: rgba(255, 255, 255, 0.14); border: 1px solid #ffffff60; color: #fff; border-radius: 6px; font: inherit; font-size: 12px; font-weight: 650; cursor: pointer; }
+.drawer-backdrop .source-drawer .drawer-glass-btn:hover { background: #ffffff28; border-color: #fff; }
 .drawer-backdrop .source-drawer .drawer-close-btn { width: 36px; height: 36px; background: transparent; border: 1px solid #ffffff60; color: #fff; border-radius: 6px; font-size: 24px; }
 .drawer-backdrop .source-drawer .drawer-close-btn:hover { background: #ffffff18; border-color: #fff; }
 .drawer-backdrop .source-drawer .drawer-scroll-body { display: block; min-height: 0; padding: 24px; overflow-y: auto; overflow-x: hidden; background: #f6f9f6; scrollbar-color: #b9cdbf #f6f9f6; overscroll-behavior: contain; }

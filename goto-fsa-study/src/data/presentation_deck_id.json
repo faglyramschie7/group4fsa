@@ -5173,8 +5173,369 @@
   },
   {
     "slide_num": 13,
-    "is_appendix": true,
     "layout_slide": 13,
+    "topic_id": "forensic_restatement",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "is_appendix": false,
+    "section_tag": "Restatement & Tata Kelola",
+    "section_name": "Audit Forensik",
+    "title": "Restatement Forensik: 5 Kesalahan yang Diperbaiki",
+    "display_title": "Restatement Forensik: 5 Kesalahan yang Diperbaiki",
+    "display_takeaway": "",
+    "subtitle": "Memperbaiki distorsi pra-Tokopedia 2023 dan 4 kesalahan data historis pada Lampiran B Laporan Akhir",
+    "time_budget": "1.5 mins",
+    "rubric_points": "B4 / C1 / E4",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "supporting_schedules": [],
+    "calculation_notes": [],
+    "course_basis": [],
+    "assignment_evidence": [
+      {
+        "metric": "Table B1 Restatements (5 Fixes)",
+        "value": "Check = 0 across all workbooks",
+        "file": "Group4_FinalReport_GOTO.docx",
+        "path": "ASSIGNMENTS/FINAL REPORT/Group4_FinalReport_GOTO.docx",
+        "location": "Appendix B: Table B1"
+      }
+    ],
+    "lecture_traces": [],
+    "assignment_traces": [
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Final Report",
+        "sheet_name": "Appendix B (Table B1)",
+        "cell_or_section_ref": "Items 1-5",
+        "mapping_note": "Reconciles earlier Milestone 2/4 and Assignment 14 errors to the audited post-Tokopedia Final Report."
+      }
+    ],
+    "source_policy": "Final Report Appendix B (Table B1) reconciles submitted presentation errors to audited LK GOTO FY2025.",
+    "source_footer": "Laporan Akhir Kelompok 4 Lampiran B (Tabel B1); LK Auditan GOTO FY2025 Catatan 6, 7, 12, 19, 20, 27b, 34c.",
+    "study_explanation": "Selama penyusunan Laporan Akhir, audit forensik menemukan lima kesalahan hitung pada Milestone 2, Milestone 4, dan Tugas 14 sebelumnya. Pengakuan dan koreksi ini menyelaraskan dek presentasi dengan laporan akhir tertulis.",
+    "speaker_notes": "Sebelum menutup, kami secara transparan mengakui lima kesalahan pada file tugas sebelumnya yang telah kami perbaiki di Laporan Akhir. Pertama dan terbesar: dek awal merata-ratakan OpEx pra-Tokopedia 2023 (117%) dan transfer aset takberwujud Tokopedia 2024 (CapEx 41%). Kedua, kami memulihkan Rp 1.582M piutang pinjaman Catatan 7 tahun 2024. Ketiga, kami memisahkan piutang usaha Catatan 6 sehingga DSO 2024 turun dari 46,9h ke 10,56h. Keempat, kami memasukkan utang jangka pendek dan seluruh sewa (Catatan 19-20) beserta bunga Catatan 27b. Kelima, kami mengeluarkan aset takberwujud Tokopedia dari CapEx lanjutan 2024 (41,0% ke 6,63%).",
+    "table": {
+      "title": "Tabel B1: Lima Koreksi Forensik di Seluruh Dokumen",
+      "headers": [
+        "Pos Dikoreksi",
+        "Kesalahan Dek Awal",
+        "Basis Auditan Direvisi",
+        "Dampak"
+      ],
+      "rows": [
+        [
+          "1. Keluarkan Pra-Exit 2023",
+          "Rata-rata 3 thn (OpEx 78,5%, CapEx 16,3%)",
+          "Pasca-Tokopedia 2024–25 (OpEx 55,7%, CapEx 6,45%)",
+          "EBIT 2028F −Rp4,97T → +Rp567M; DCF −121,1 → +10,38"
+        ],
+        [
+          "2. Neraca 2024",
+          "Hilang Rp1.582M pinjaman Cat. 7 (Check −1,58T)",
+          "Pulihkan Cat. 7 → Aset Rp43.208M (Check = 0)",
+          "2024 CR 2.46x → 2.62x; EM 1.37x → 1.42x"
+        ],
+        [
+          "3. DSO Piutang 2024",
+          "Campur Cat. 6 & 7 (Rp2.042M → 46,88h)",
+          "Khusus Cat. 6 Piutang Usaha (Rp460M → 547M)",
+          "DSO asli 10,56h → 10,90h; hapus beban WC"
+        ],
+        [
+          "4. Basis Utang & TIE",
+          "Utang lancar & sewa tidak masuk; TIE = N/M",
+          "Utang penuh Cat. 19–20 + bunga Cat. 27b",
+          "D/E 2024 12,57% → 15,85%; TIE −4,54x → −0,71x"
+        ],
+        [
+          "5. CapEx Lanjutan 2024",
+          "CapEx 41,0% termasuk Rp5.465M Tokopedia",
+          "Keluarkan transfer Cat. 12 → CapEx 6,63%",
+          "Lantai Konservatif 2024 bersih tanpa artefak"
+        ]
+      ],
+      "row_details": [
+        {
+          "detail_explanation": "Merata-ratakan OpEx pra-exit 2023 (117,01%) dan aset takberwujud Tokopedia 2024 (CapEx 41,0%) membuat proyeksi menguras kas secara buatan (DCF −Rp121,1/sh). Berbasis pasca-Tokopedia 2024–2025 membalik EBIT Base ke +Rp567,2M pada 2028F.",
+          "formula": "Clean Base Drivers: +15.27% Rev Growth | 42.28% COGS | 55.70% Cash OpEx | 6.45% CapEx",
+          "calc_steps": [
+            "2028F EBIT: −Rp4,967.4bn → +Rp567.2bn",
+            "Base DCF: −Rp121.1/sh → +Rp10.38/sh"
+          ],
+          "data_origin": "Final Report Appendix B Table B1 #1 & LK GOTO FY2025 Note 34c"
+        },
+        {
+          "detail_explanation": "Neraca 2024 sebelumnya melewatkan Rp1.581.770 juta piutang pinjaman konsumen Catatan 7 sehingga selisih neraca −Rp1.581.770 juta. Pemulihan menyelaraskan Total Aset ke Rp43.207.884 juta (Check = 0).",
+          "formula": "2024 Total Assets = Rp43,207,884m (Balance Check = 0)",
+          "calc_steps": [
+            "2024 Current Ratio: 2.46x → 2.62x",
+            "2024 Asset Turnover: 0.3818x → 0.3679x",
+            "2024 Equity Multiplier: 1.369x → 1.421x"
+          ],
+          "data_origin": "Final Report Appendix B Table B1 #2 & LK GOTO FY2025 Note 7"
+        },
+        {
+          "detail_explanation": "Menggabungkan piutang usaha Catatan 6 dan pinjaman Catatan 7 menggelembungkan piutang 2024 ke Rp2.041,7M (DSO 46,88 hari). Pemisahan memulihkan DSO asli 10,56 hari.",
+          "formula": "Trade AR (Note 6): Rp601.2bn (2023) → Rp460.0bn (2024) → Rp547.3bn (2025)",
+          "calc_steps": [
+            "True DSO: 14.84d → 10.56d → 10.90d"
+          ],
+          "data_origin": "Final Report Appendix B Table B1 #3 & LK GOTO FY2025 Note 6"
+        },
+        {
+          "detail_explanation": "Utang 2023–2024 sebelumnya tidak memasukkan porsi utang lancar dan liabilitas sewa (Catatan 19–20) serta beban bunga Catatan 27b. Penyelarasan menghasilkan D/E konsisten dan TIE langsung.",
+          "formula": "Total Debt & Leases: Rp4,335.3bn (2023) → Rp4,819.0bn (2024) → Rp7,742.6bn (2025)",
+          "calc_steps": [
+            "2024 Debt/Equity: 12.57% → 15.85%",
+            "Live TIE: −27.83x → −4.54x → −0.71x"
+          ],
+          "data_origin": "Final Report Appendix B Table B1 #4 & Notes 19, 20, 27b"
+        },
+        {
+          "detail_explanation": "Catatan 12 membuktikan Rp5.464,9M penambahan aset takberwujud 2024 milik Tokopedia pra-dekonsolidasi. Pengeluaran pos itu menurunkan CapEx lanjutan 2024 dari 41,0% menjadi 6,63%.",
+          "formula": "2024 Continuing CapEx = (Rp6,518.9bn − Rp5,464.9bn) / Rp15,894.5bn = 6.63%",
+          "calc_steps": [
+            "2024 Conservative CapEx drops 41.0% → 6.63%"
+          ],
+          "data_origin": "Final Report Appendix B Table B1 #5 & Note 12 p. 97"
+        }
+      ]
+    },
+    "analysis_points": [
+      {
+        "heading": "Mengapa Mengakui Kesalahan Awal",
+        "text": "Alih-alih menyembunyikan kesalahan Milestone 2/4 dan Tugas 14 sebelumnya, Lampiran B Laporan Akhir mendokumentasikan kelima koreksi secara transparan dan dapat diaudit.",
+        "formula": "5 Audit Fixes → Balance Check = 0 & Cash Check = 0.0000",
+        "calc_steps": [
+          "Removed 2023 regime break",
+          "Restored Note 7, fixed Note 6 DSO, harmonized Debt & Note 12 CapEx"
+        ],
+        "data_origin": "Final Report Appendix B (Table B1)"
+      },
+      {
+        "heading": "Koreksi Terbesar: Keluarkan 2023",
+        "text": "Mengeluarkan OpEx pra-Tokopedia 2023 (117,01%) dan aset takberwujud Catatan 12 (Rp5,46T) menurunkan Cash OpEx Base dari 78,5% ke 55,70% dan CapEx dari 16,3% ke 6,45%.",
+        "formula": "Post-Tokopedia Base: 57.72% Gross Margin − 55.70% Cash OpEx = +2.02% EBIT Margin",
+        "calc_steps": [
+          "Base 2026F EBIT flips from −Rp4,003.4bn to +Rp426.9bn"
+        ],
+        "data_origin": "Final Report §1.3 & §4.1"
+      },
+      {
+        "heading": "Jejak Audit Tanpa Selisih",
+        "text": "Ketiga workbook revisi (Rasio/DuPont, Proyeksi Pro Forma, Valuasi) terhubung langsung ke LK Auditan FY2024–FY2025 dengan Balance Check = 0.",
+        "formula": "2024 Assets = Rp43,207,884m | 2025 Assets = Rp45,757,642m",
+        "calc_steps": [
+          "Full cell-level mapping documented in Final Report Table A1"
+        ],
+        "data_origin": "Final Report Appendices A & B"
+      }
+    ]
+  },
+  {
+    "slide_num": 14,
+    "layout_slide": 14,
+    "topic_id": "final_reconciliation",
+    "story_rebuilt": true,
+    "hide_banner": true,
+    "is_appendix": false,
+    "section_tag": "Restatement & Tata Kelola",
+    "section_name": "Rekonsiliasi Laporan",
+    "title": "Dek Awal vs. Laporan Akhir: Mengapa SELL Tetap Kuat",
+    "display_title": "Dek Awal vs. Laporan Akhir: Mengapa SELL Tetap Kuat",
+    "display_takeaway": "",
+    "subtitle": "Koreksi kesalahan membuat GoTo laba GAAP pada 2028F, namun ROIC (+2,70%) masih tertinggal 506 bps di bawah WACC (7,76%)",
+    "time_budget": "1.5 mins",
+    "rubric_points": "D2 / C4",
+    "chart_url": null,
+    "kpis": [],
+    "cards": [],
+    "supporting_schedules": [],
+    "calculation_notes": [],
+    "course_basis": [],
+    "assignment_evidence": [
+      {
+        "metric": "Restated Intrinsic Range vs Market",
+        "value": "Rp 10.38 – Rp 16.75 vs Rp 25.00",
+        "file": "Group4_FinalReport_GOTO.docx",
+        "path": "ASSIGNMENTS/FINAL REPORT/Group4_FinalReport_GOTO.docx",
+        "location": "Executive Summary & Section 5.3"
+      }
+    ],
+    "lecture_traces": [],
+    "assignment_traces": [
+      {
+        "assignment_id": "a15",
+        "assignment_code": "Final Report",
+        "sheet_name": "Sections 4, 5 & 6",
+        "cell_or_section_ref": "Tables 1, 12, 15, 16, 17",
+        "mapping_note": "Demonstrates why SELL / AVOID at Rp 25.00 holds even after fixing 2023 distortions."
+      }
+    ],
+    "source_policy": "Reconciles original submitted deck values against restated Final Report conclusions.",
+    "source_footer": "Laporan Akhir Kelompok 4 Tabel 1, 12, 15, 16, 17; Investing.com (30 Des 2025: Rp 25,00/sh); LK GOTO FY2025.",
+    "study_explanation": "Perbandingan berdampingan yang membuktikan bahwa GoTo overvalued pada Rp 25,00 bukan karena artefak data 2023, melainkan karena ROIC 2028F pasca-Tokopedia (+2,70%) masih tertinggal 506 bps di bawah WACC (7,76%).",
+    "speaker_notes": "Inilah kesimpulan utama dari rekonsiliasi dek awal dengan Laporan Akhir kami. Di dek lama, OpEx Dasar 78,5% menghasilkan rugi operasi −Rp4,97T dan DCF −Rp121,1 karena data pra-Tokopedia 2023 ikut dirata-ratakan. Setelah kesalahan itu diperbaiki di Laporan Akhir, EBIT Dasar berbalik positif +Rp567,2M dan kas terjaga di Rp19,42T. Namun DCF Dasar hanya naik ke +Rp10,38/saham dengan Rentang Nilai Wajar Rp10,38–Rp16,75/saham, karena ROIC 2028F (+2,70%) tetap di bawah WACC (7,76%). Artinya rekomendasi SELL / AVOID di harga Rp25,00 justru berdiri di atas argumen yang jauh lebih kuat dan tahan uji.",
+    "table": {
+      "title": "Rekonsiliasi Dek Awal vs. Laporan Akhir",
+      "headers": [
+        "Metrik",
+        "Dek Awal (Lama)",
+        "Laporan Akhir (Revisi)",
+        "Kesimpulan Utama"
+      ],
+      "rows": [
+        [
+          "Cash OpEx Dasar (% Pend.)",
+          "78.5%",
+          "55.70%",
+          "−2.280 bps pasca-Tokopedia"
+        ],
+        [
+          "EBIT Dasar 2028F",
+          "−Rp4,967B",
+          "+Rp567.2B",
+          "Berbalik EBIT+ mulai 2026F"
+        ],
+        [
+          "Laba Bersih Dasar 2028F",
+          "−Rp4,489B",
+          "+Rp25.0B",
+          "Laba GAAP positif di Thn ke-3"
+        ],
+        [
+          "Kas Akhir 2028F",
+          "Rp968B",
+          "Rp19,421B",
+          "Tidak ada krisis likuiditas"
+        ],
+        [
+          "DCF Dasar / Saham",
+          "−Rp121.1",
+          "+Rp10.38",
+          "Di bawah Kas Bersih Rp13,19"
+        ],
+        [
+          "Residual Income Dasar",
+          "−Rp75.1",
+          "−Rp12.23 (+0.24 g=0%)",
+          "0.09% ROE << 8.45% Ke"
+        ],
+        [
+          "Rentang Nilai Wajar",
+          "Neg. vs Rp91,0",
+          "Rp10.38 – Rp16.75",
+          "33%–58% di bawah Rp25,00"
+        ],
+        [
+          "Rekomendasi Akhir",
+          "SELL / AVOID",
+          "SELL / AVOID",
+          "2.70% ROIC < 7.76% WACC"
+        ]
+      ],
+      "row_details": [
+        {
+          "detail_explanation": "Removing 2023 (117.01% OpEx) lowers Base Cash OpEx from 78.5% to 55.70%.",
+          "formula": "FY2025 Cash OpEx = 55.70%",
+          "calc_steps": [
+            "Old 3-yr avg: 78.5% → Restated FY2025: 55.70%"
+          ],
+          "data_origin": "Final Report Table 11"
+        },
+        {
+          "detail_explanation": "With 57.72% gross margin exceeding 55.70% OpEx by 202 bps, Base EBIT flips from −Rp4,967B to +Rp567.2B.",
+          "formula": "2028F EBIT = Rp28,065.0B × 2.02% = +Rp567.2B",
+          "calc_steps": [
+            "2026F: +Rp426.9B | 2027F: +Rp492.1B | 2028F: +Rp567.2B"
+          ],
+          "data_origin": "Final Report Table 12"
+        },
+        {
+          "detail_explanation": "After Rp535.2bn fixed annual interest expense, Base Net Income turns +Rp25.0bn in 2028F.",
+          "formula": "2028F EBT +Rp32.1B − 22% Tax Rp7.1B = +Rp25.0B",
+          "calc_steps": [
+            "GAAP Net Income turns positive in Year 3"
+          ],
+          "data_origin": "Final Report Table 12"
+        },
+        {
+          "detail_explanation": "Clean 6.45% CapEx and positive EBIT preserve Rp19,421.1bn in ending cash instead of depleting to Rp968bn.",
+          "formula": "2028F Cash = Rp19,421.1B",
+          "calc_steps": [
+            "Net Cash buffer remains ~Rp13.19/share at base date"
+          ],
+          "data_origin": "Final Report Table 12"
+        },
+        {
+          "detail_explanation": "Even with positive EBIT, CapEx exceeds EBIT+D&A so EV is −Rp2,988.5B, yielding +Rp10.38/sh after Net Cash.",
+          "formula": "(−Rp2,988.5B EV + Rp14,012.5B Net Cash) / 1,062.01B sh = +Rp10.38/sh",
+          "calc_steps": [
+            "Old DCF −Rp121.1 → Restated Base DCF +Rp10.38"
+          ],
+          "data_origin": "Final Report Table 15"
+        },
+        {
+          "detail_explanation": "2028F ROE (+0.09%) trails 8.452% Ke hurdle (~Rp2.42T/yr charge), yielding −Rp12.23/sh perpetual RI (+Rp0.24 at g=0%).",
+          "formula": "Beg BVE Rp28,711.7B − PV(RI) Rp41,698.6B = −Rp12,987.0B (−Rp12.23/sh)",
+          "calc_steps": [
+            "g=0% floor = +Rp0.24/sh; Yr4+ convergence = +Rp21.13/sh"
+          ],
+          "data_origin": "Final Report Table 15"
+        },
+        {
+          "detail_explanation": "Spans Base DCF (+Rp10.38/sh) to Optimistic 1H26 RI (+Rp16.75/sh), centered near Rp13.19/sh Net Cash.",
+          "formula": "Defensible Range: Rp10.38 – Rp16.75/sh vs Rp25.00 Market",
+          "calc_steps": [
+            "Grab P/B (Rp91.02/sh) rejected due to 506 bps ROIC-WACC deficit"
+          ],
+          "data_origin": "Final Report §5.3 & Table 16"
+        },
+        {
+          "detail_explanation": "Positive accounting profit (+Rp25B) still falls short of the 7.76% WACC capital cost, confirming SELL / AVOID.",
+          "formula": "2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps",
+          "calc_steps": [
+            "Recommendation unchanged: SELL / AVOID at Rp25.00"
+          ],
+          "data_origin": "Final Report §6.1"
+        }
+      ]
+    },
+    "analysis_points": [
+      {
+        "heading": "Laba Akuntansi ≠ Laba Ekonomi",
+        "text": "Koreksi 2023 mengangkat EBIT 2028F (+Rp567,2M) dan kas (Rp19,42T), namun ROIC 2028F (+2,70%) masih tertinggal 506 bps di bawah WACC (7,76%).",
+        "formula": "2028F ROIC = +2.70% vs WACC = 7.76% (Spread = −506 bps)",
+        "calc_steps": [
+          "NOPAT Rp442.42B / Beginning IC Rp16,380.8B = +2.70%"
+        ],
+        "data_origin": "Final Report Executive Summary & §5.1"
+      },
+      {
+        "heading": "Mengapa Argumen SELL Kini Lebih Kuat",
+        "text": "DCF lama −Rp121,1 bergantung pada biaya 2023 yang usang. Rentang revisi Rp10,38–Rp16,75 membuktikan harga Rp25,00 tetap mahal meski dengan ekonomi bersih pasca-Tokopedia.",
+        "formula": "Market Rp25.00 = 2.41× Base DCF (Rp10.38) & 1.90× Net Cash (Rp13.19)",
+        "calc_steps": [
+          "33%–58% downside gap from Rp25.00 to intrinsic range"
+        ],
+        "data_origin": "Final Report §5.3 & §6.1"
+      },
+      {
+        "heading": "Pemicu Re-Rating Jelas (Tabel 17)",
+        "text": "Hanya efisiensi biaya 1H 2026 berkelanjutan (OpEx ≤ 51,2%, GM ≥ 61,9%) yang membuka BUY (Rp16,75–Rp47,34); koreksi harga ≤ Rp13,20 dengan FCF > 0 mendukung HOLD.",
+        "formula": "BUY: OpEx ≤ 51.2% & GM ≥ 61.9% (2Q) | HOLD: Price ≤ Rp13.20 & FCF > 0",
+        "calc_steps": [
+          "Reinforce SELL if OpEx ≥ 60.0%, Provisions ≥ Rp650B, or Tokopedia impairment > 15%"
+        ],
+        "data_origin": "Final Report Table 17"
+      }
+    ]
+  },
+  {
+    "slide_num": 15,
+    "is_appendix": true,
+    "layout_slide": 15,
     "topic_id": "appendix_a1",
     "story_rebuilt": true,
     "hide_banner": true,
@@ -5483,9 +5844,9 @@
     ]
   },
   {
-    "slide_num": 14,
+    "slide_num": 16,
     "is_appendix": true,
-    "layout_slide": 14,
+    "layout_slide": 16,
     "topic_id": "appendix_a2",
     "story_rebuilt": true,
     "hide_banner": true,
@@ -6037,9 +6398,9 @@
     ]
   },
   {
-    "slide_num": 15,
+    "slide_num": 17,
     "is_appendix": true,
-    "layout_slide": 15,
+    "layout_slide": 17,
     "topic_id": "appendix_a3",
     "story_rebuilt": true,
     "hide_banner": true,
@@ -6604,9 +6965,9 @@
     ]
   },
   {
-    "slide_num": 16,
+    "slide_num": 18,
     "is_appendix": true,
-    "layout_slide": 16,
+    "layout_slide": 18,
     "topic_id": "appendix_a4",
     "story_rebuilt": true,
     "hide_banner": true,
@@ -6932,9 +7293,9 @@
     ]
   },
   {
-    "slide_num": 17,
+    "slide_num": 19,
     "is_appendix": true,
-    "layout_slide": 17,
+    "layout_slide": 19,
     "topic_id": "appendix_a5",
     "story_rebuilt": true,
     "hide_banner": true,
@@ -7594,9 +7955,9 @@
     ]
   },
   {
-    "slide_num": 18,
+    "slide_num": 20,
     "is_appendix": true,
-    "layout_slide": 18,
+    "layout_slide": 20,
     "topic_id": "appendix_a6",
     "story_rebuilt": true,
     "hide_banner": true,
