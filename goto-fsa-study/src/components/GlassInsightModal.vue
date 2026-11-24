@@ -25,6 +25,261 @@ const showAllCalcRows = ref(false)
 const showAllTraces = ref(false)
 const openSchedules = ref({ 0: true })
 
+// Slide 9 (Cost of Capital) interactive Source & Math walk-through sub-menu
+const isSlide9Walkthrough = computed(() => (props.item.slide?.slide_num || 0) === 9)
+const activeSlide9Comp = ref('wacc')
+
+const detectInitialSlide9Comp = (item) => {
+  const txt = `${item?.title || ''} ${item?.value || ''} ${item?.keywords || ''} ${item?.detail || ''}`.toLowerCase()
+  if (txt.includes('risk-free') || txt.includes('risk free') || txt.includes('4.502') || txt.includes('6.120') || txt.includes('sovereign')) return 'rf'
+  if (txt.includes('capm') || txt.includes('cost of equity') || txt.includes('8.452') || txt.includes('beta') || txt.includes('erp')) return 'capm'
+  if (txt.includes('cost of debt') || txt.includes('5.390') || txt.includes('6.912') || txt.includes('535.15') || txt.includes('tax shield')) return 'kd'
+  if (txt.includes('weight') || txt.includes('77.42') || txt.includes('22.58') || txt.includes('capital structure') || txt.includes('market cap')) return 'weights'
+  if (txt.includes('terminal') || txt.includes('growth') || txt.includes('3.00%') || txt.includes('3.41%') || txt.includes('reinvestment') || txt.includes('roic')) return 'growth'
+  return 'wacc'
+}
+
+const slide9Components = computed(() => {
+  const id = isId.value
+  return [
+    {
+      id: 'rf',
+      shortLabel: id ? '1. Risk-Free (4,502%)' : '1. Risk-Free Rate (4.502%)',
+      title: id ? 'Suku Bunga Bebas Risiko IDR (Risk-Free Rate)' : 'IDR Risk-Free Rate (Spread-Adjusted)',
+      result: '4.502%',
+      formula: 'Rf = ID 10Y Bond Yield (6.120%) − Sovereign Default Spread (1.618%)',
+      summary: id
+        ? 'Yield obligasi pemerintah Indonesia 10 tahun (6,120%) masih mengandung risiko gagal bayar negara (peringkat Baa2), sehingga kita kurangi spread gagal bayar agar murni bebas risiko dan tidak dihitung ganda dengan CRP.'
+        : 'Indonesia\'s 10-year government bond yield (6.120%) still contains sovereign default risk (Baa2 rating), so we deduct the default spread to get a clean default-free IDR rate and avoid double-counting country risk.',
+      usedIn: id ? 'Masuk ke langkah 2: CAPM Cost of Equity (8,452%) dan batas atas Terminal Growth.' : 'Feeds Step 2: CAPM Cost of Equity (8.452%) and caps Terminal Growth (g).',
+      sources: [
+        {
+          label: id ? 'Yield Obligasi RI 10 Tahun' : 'Indonesia 10Y Gov. Bond Yield',
+          value: '6.120%',
+          source: 'Investing.com • Dec 30, 2025',
+          note: id ? 'Suku bunga obligasi pemerintah denominasi Rupiah pada tanggal valuasi.' : 'Local IDR government bond yield on the valuation date.',
+        },
+        {
+          label: id ? 'Sovereign Default Spread (Baa2)' : 'Sovereign Default Spread (Baa2)',
+          value: '−1.618%',
+          source: 'Damodaran • Jan 1, 2026',
+          note: id ? 'Kompensasi risiko gagal bayar untuk peringkat kredit Moody\'s Indonesia (Baa2).' : 'Default risk spread for Indonesia\'s Moody\'s Baa2 sovereign rating.',
+        },
+      ],
+      steps: [
+        { step: '1', expr: '6.120% (ID 10Y Bond) − 1.618% (Baa2 Default Spread)', out: '4.502% Clean IDR Rf' },
+      ],
+    },
+    {
+      id: 'capm',
+      shortLabel: id ? '2. CAPM / Ke (8,452%)' : '2. CAPM / Ke (8.452%)',
+      title: id ? 'Biaya Ekuitas (CAPM Cost of Equity)' : 'CAPM Cost of Equity (Ke)',
+      result: '8.452%',
+      formula: 'Ke = Rf (4.502%) + Beta (0.59) × [Mature ERP (4.230%) + Country Risk Premium (2.465%)]',
+      summary: id
+        ? 'Imbal hasil minimum yang diminta investor saham untuk memegang saham GoTo dibandingkan obligasi bebas risiko. Digunakan langsung sebagai tingkat diskonto pada model Residual Income.'
+        : 'The minimum annual return stock investors demand to hold GoTo shares instead of a risk-free bond. Used directly as the discount rate in our Residual Income model.',
+      usedIn: id ? 'Masuk ke langkah 5: WACC (bobot ekuitas 77,42%) & diskonto Residual Income.' : 'Feeds Step 5: WACC (77.42% equity weight) and discounts Residual Income.',
+      sources: [
+        {
+          label: id ? 'Risk-Free Rate IDR (Rf)' : 'Clean IDR Risk-Free Rate (Rf)',
+          value: '4.502%',
+          source: id ? 'Langkah 1 (Investing.com + Damodaran)' : 'Step 1 (Investing.com − Damodaran)',
+          note: id ? 'Dasar imbal hasil bebas risiko dalam Rupiah.' : 'Default-free IDR baseline return.',
+        },
+        {
+          label: id ? 'Levered Beta 5 Tahun' : '5-Year Levered Beta (β)',
+          value: '0.59',
+          source: 'Investing.com • Dec 30, 2025',
+          note: id ? 'Sensitivitas saham GOTO terhadap pasar; juga diuji stres hingga 1,30 di Tabel 17.' : 'GoTo stock sensitivity vs. market; also stress-tested up to 1.30 in Table 17.',
+        },
+        {
+          label: id ? 'Mature-Market ERP' : 'Mature-Market ERP',
+          value: '4.230%',
+          source: 'Damodaran • Jan 1, 2026',
+          note: id ? 'Premi risiko saham pasar maju (US S&P 500) di atas obligasi.' : 'Baseline equity risk premium in a mature market (US S&P 500).',
+        },
+        {
+          label: id ? 'Country Risk Premium (CRP)' : 'Indonesia Country Risk Premium',
+          value: '2.465%',
+          source: 'Damodaran • Jan 1, 2026',
+          note: id ? 'Tambahan premi risiko volatilitas saham pasar berkembang Indonesia.' : 'Extra equity-volatility risk bonus required for Indonesian stocks.',
+        },
+      ],
+      steps: [
+        { step: '1', expr: 'Total Indonesia ERP = 4.230% (Mature ERP) + 2.465% (CRP)', out: '6.695%' },
+        { step: '2', expr: 'GoTo Equity Risk Charge = 0.59 (Beta) × 6.695%', out: '+3.950%' },
+        { step: '3', expr: 'Ke = 4.502% (Rf) + 3.950%', out: '8.452% Cost of Equity' },
+      ],
+    },
+    {
+      id: 'kd',
+      shortLabel: id ? '3. Biaya Utang (5,390%)' : '3. Cost of Debt (5.390%)',
+      title: id ? 'Biaya Utang Setelah Pajak (After-Tax Cost of Debt)' : 'After-Tax Cost of Debt (Kd)',
+      result: '5.390%',
+      formula: 'After-Tax Kd = (Finance Costs Rp 535.15B ÷ Total Debt Rp 7,742.64B) × (1 − 22% Tax)',
+      summary: id
+        ? 'Suku bunga efektif GoTo berasal dari beban keuangan aktual 2025 dibagi total pinjaman & liabilitas sewa, lalu dikurangi penghematan pajak (tax shield) 22% karena bunga dapat mengurangi pajak.'
+        : 'GoTo\'s effective interest rate comes from actual FY2025 finance costs divided by total borrowings & leases, then adjusted for the 22% Indonesian corporate tax shield because interest is tax-deductible.',
+      usedIn: id ? 'Masuk ke langkah 5: WACC (bobot utang 22,58%). Cek nol-tax-shield: Kd = 6,912% → WACC 8,101%.' : 'Feeds Step 5: WACC (22.58% debt weight). Zero-tax-shield check: Kd = 6.912% → WACC 8.101%.',
+      sources: [
+        {
+          label: id ? 'Beban Keuangan FY2025' : 'FY2025 Finance Costs',
+          value: 'Rp 535.15B',
+          source: 'Audited FS Note 27b • p. 131',
+          note: id ? 'Total bunga pinjaman (Rp510,3M), bunga sewa (Rp12,4M), dan biaya bank (Rp12,4M).' : 'Borrowing interest (Rp 510.3B) + lease interest (Rp 12.4B) + bank fees (Rp 12.4B).',
+        },
+        {
+          label: id ? 'Total Utang & Liabilitas Sewa' : 'Total Debt & Lease Liabilities',
+          value: 'Rp 7,742.64B',
+          source: 'Audited FS Notes 19 & 20 • pp. 105–111',
+          note: id ? 'Pinjaman bank jangka pendek/panjang, non-bank, dan seluruh liabilitas sewa.' : 'Short-term & long-term bank/non-bank loans plus all lease liabilities.',
+        },
+        {
+          label: id ? 'Tarif Pajak Badan Indonesia' : 'Indonesia Corporate Tax Rate',
+          value: '22.00%',
+          source: id ? 'UU HPP / Pajak Badan RI' : 'Statutory ID Corporate Tax',
+          note: id ? 'Bunga mengurangi laba kena pajak sebesar 22% (juga diuji 0% tax shield di Tabel 14).' : 'Interest reduces taxable income by 22% (also tested at 0% tax shield in Table 14).',
+        },
+      ],
+      steps: [
+        { step: '1', expr: 'Pre-Tax Kd = Rp 535.15B (Note 27b) ÷ Rp 7,742.64B (Notes 19–20)', out: '6.912% Pre-Tax Kd' },
+        { step: '2', expr: 'After-Tax Kd = 6.912% × (1 − 22.0%) = 6.912% × 0.78', out: '5.390% After-Tax Kd' },
+      ],
+    },
+    {
+      id: 'weights',
+      shortLabel: id ? '4. Bobot Modal (77,4% / 22,6%)' : '4. Capital Weights (77.4% / 22.6%)',
+      title: id ? 'Struktur & Bobot Modal (Market Value Weights)' : 'Capital Structure Weights (Equity vs. Debt)',
+      result: '77.42% E / 22.58% D',
+      formula: 'Total Capital = Market Cap (Rp 26,550.3B) + Total Debt (Rp 7,742.6B) = Rp 34,292.9B',
+      summary: id
+        ? 'Bobot WACC menggunakan nilai pasar ekuitas pada harga Rp25,00 (bukan nilai buku) dibagi total modal bersama utang dan sewa.'
+        : 'WACC weights use GoTo\'s market capitalization at the Rp 25.00 share price alongside total borrowings and leases.',
+      usedIn: id ? 'Masuk ke langkah 5: Menggabungkan Ke (8,452%) dan Kd (5,390%) menjadi WACC.' : 'Feeds Step 5: Blends Ke (8.452%) and After-Tax Kd (5.390%) into WACC.',
+      sources: [
+        {
+          label: id ? 'Harga Saham Pasar (GOTO)' : 'Market Share Price (IDX: GOTO)',
+          value: 'Rp 25.00',
+          source: 'Investing.com • Dec 30, 2025',
+          note: id ? 'Harga penutupan pasar pada tanggal valuasi.' : 'Market closing share price on valuation date.',
+        },
+        {
+          label: id ? 'Saham Beredar (Excl. Treasuri)' : 'Shares Outstanding (Excl. Treasury)',
+          value: '1,062.01B sh',
+          source: 'Audited FS Note 31 • p. 16',
+          note: id ? '1.062.010,2 juta saham biasa beredar di luar saham treasuri.' : '1,062,010.2 million ordinary shares excluding treasury stock.',
+        },
+        {
+          label: id ? 'Total Utang & Liabilitas Sewa' : 'Total Debt & Leases',
+          value: 'Rp 7,742.6B',
+          source: 'Audited FS Notes 19 & 20',
+          note: id ? 'Konsisten dengan definisi utang pada perhitungan Kd dan Net Cash.' : 'Matches exact debt definition used in Kd and Net Cash.',
+        },
+      ],
+      steps: [
+        { step: '1', expr: 'Market Value of Equity (E) = Rp 25.00 × 1,062.01B shares', out: 'Rp 26,550.3B' },
+        { step: '2', expr: 'Total Capital (E + D) = Rp 26,550.3B + Rp 7,742.6B', out: 'Rp 34,292.9B' },
+        { step: '3', expr: 'wE = 26,550.3 ÷ 34,292.9 | wD = 7,742.6 ÷ 34,292.9', out: '77.42% Equity / 22.58% Debt' },
+      ],
+    },
+    {
+      id: 'wacc',
+      shortLabel: id ? '5. WACC (7,761%)' : '5. WACC (7.761%)',
+      title: id ? 'Weighted Average Cost of Capital (WACC)' : 'Baseline Weighted Average Cost of Capital (WACC)',
+      result: '7.761%',
+      formula: 'WACC = (77.42% × 8.452%) + (22.58% × 5.390%) = 6.544% + 1.217% = 7.761%',
+      summary: id
+        ? 'Biaya modal rata-rata tertimbang GoTo lintas pemegang saham dan kreditur. Menjadi batas imbal hasil (hurdle rate) untuk mendiskontokan FCFF di DCF; ROIC 2028F GoTo (+2,70%) tertinggal 506 bps di bawah WACC.'
+        : 'GoTo\'s blended financing cost across shareholders and lenders. Used to discount DCF Free Cash Flows; GoTo\'s 2028F ROIC (+2.70%) trails this 7.761% hurdle by 506 bps, which is why operating EV is negative.',
+      usedIn: id ? 'Digunakan langsung di Slide 10 (Model DCF -> +Rp 10,38/saham) & uji sensitivitas WACC 6,76%–8,76%.' : 'Directly discounts Slide 10 DCF (+Rp 10.38/sh) and anchors the 6.76%–8.76% WACC sensitivity grid.',
+      sources: [
+        {
+          label: id ? 'Kontribusi Ekuitas (wE × Ke)' : 'Equity Component (wE × Ke)',
+          value: '6.544%',
+          source: id ? 'Langkah 2 & 4 (77,42% × 8,452%)' : 'Steps 2 & 4 (77.42% × 8.452%)',
+          note: id ? 'Porsi biaya modal dari pemegang saham publik.' : 'Weighted return required by equity shareholders.',
+        },
+        {
+          label: id ? 'Kontribusi Utang (wD × Kd after-tax)' : 'Debt Component (wD × After-Tax Kd)',
+          value: '1.217%',
+          source: id ? 'Langkah 3 & 4 (22,58% × 5,390%)' : 'Steps 3 & 4 (22.58% × 5.390%)',
+          note: id ? 'Porsi biaya modal dari pinjaman bank & sewa setelah tax shield 22%.' : 'Weighted after-tax cost of bank loans & leases.',
+        },
+        {
+          label: id ? 'Uji Tanpa Tax Shield (0% Tax)' : 'Zero-Tax-Shield Check (0% Tax)',
+          value: '8.101%',
+          source: 'Valuation Workbook • Cost of Capital',
+          note: id ? 'Jika rugi fiskal menghapus tax shield, WACC naik +34 bps ke 8,101%.' : 'If past tax losses remove the tax shield, WACC rises +34 bps to 8.101%.',
+        },
+      ],
+      steps: [
+        { step: '1', expr: 'Equity Weight × Cost of Equity = 77.42% × 8.452%', out: '6.544%' },
+        { step: '2', expr: 'Debt Weight × After-Tax Kd = 22.58% × 5.390%', out: '1.217%' },
+        { step: '3', expr: 'Baseline WACC = 6.544% + 1.217%', out: '7.761% (Zero-Tax-Shield: 8.101%)' },
+      ],
+    },
+    {
+      id: 'growth',
+      shortLabel: id ? '6. Terminal g (3,00%)' : '6. Terminal Growth g (3.00%)',
+      title: id ? 'Tingkat Pertumbuhan Terminal (g = Reinvestment Rate × ROIC)' : 'Fundamental Terminal Growth Rate (g)',
+      result: '3.00% (Fund. +3.41%)',
+      formula: 'Fundamental g = Reinvestment Rate (126.42%) × ROIC (+2.70%) = +3.41% → Selected 3.00%',
+      summary: id
+        ? 'Tidak dipilih sembarangan: kami menghitung pertumbuhan fundamental dari proyeksi 2028F (+3,41%), lalu memakai 3,00% secara konservatif agar berada di bawah batas Rf (4,502%) dan selaras dengan target inflasi Bank Indonesia (2,5% ± 1%).'
+        : 'Not an arbitrary guess: we derive GoTo\'s fundamental growth (+3.41%) directly from 2028F Reinvestment Rate × ROIC, then cap steady-state g conservatively at 3.00% — below the 4.502% Rf cap and inside Bank Indonesia\'s 2.5% ± 1% inflation target.',
+      usedIn: id ? 'Digunakan konsisten di DCF & Residual Income (juga diuji sensitivitas 1,0%–4,0% di Tabel 17).' : 'Used consistently in both DCF and Residual Income (stress-tested across 1.0%–4.0% in Table 17).',
+      sources: [
+        {
+          label: id ? 'NOPAT 2028F' : '2028F NOPAT',
+          value: '+Rp 442.4B',
+          source: 'Pro Forma 2028F • Table 12 & 15',
+          note: id ? 'EBIT Rp 567,2M × (1 − 22% pajak).' : '2028F EBIT Rp 567.2B × (1 − 22% tax).',
+        },
+        {
+          label: id ? 'Net Reinvestment 2028F' : '2028F Net Reinvestment',
+          value: 'Rp 559.3B',
+          source: 'Pro Forma 2028F • Table 15',
+          note: id ? 'CapEx 1.811,1 − D&A 1.111,1 − arus masuk NWC 140,6.' : 'CapEx 1,811.1 − D&A 1,111.1 − NWC inflow 140.6.',
+        },
+        {
+          label: id ? 'Invested Capital Awal 2028F' : 'Beginning 2028F Invested Capital',
+          value: 'Rp 16,380.8B',
+          source: 'Valuation Workbook • Terminal Growth',
+          note: id ? 'Book Equity + Net Debt yang digulirkan dari 2026F–2027F.' : 'Book Equity + Net Debt rolled forward through 2026F–2027F.',
+        },
+        {
+          label: id ? 'Batas Inflasi BI & Rf Cap' : 'BI Inflation Target & Rf Cap',
+          value: '2.5% ± 1% | 4.502%',
+          source: 'Bank Indonesia • Investing.com',
+          note: id ? '3,00% berada aman di dalam target inflasi BI & di bawah Rf 4,502%.' : '3.00% sits inside BI\'s 1.5%–3.5% inflation band & below 4.502% Rf.',
+        },
+      ],
+      steps: [
+        { step: '1', expr: 'Reinvestment Rate = Net Reinvestment (559.3B) ÷ NOPAT (442.4B)', out: '126.42%' },
+        { step: '2', expr: 'ROIC = NOPAT (442.4B) ÷ Beg. Invested Capital (16,380.8B)', out: '+2.70%' },
+        { step: '3', expr: 'Fundamental g = 126.42% × 2.70%', out: '+3.41% Formula Ceiling' },
+        { step: '4', expr: 'Steady-State Cap (< +3.41% & < 4.502% Rf; fits BI 2.5% ± 1%)', out: '3.00% Selected Terminal g' },
+      ],
+    },
+  ]
+})
+
+const currentSlide9Comp = computed(() =>
+  slide9Components.value.find((c) => c.id === activeSlide9Comp.value) || slide9Components.value[4]
+)
+const currentSlide9Idx = computed(() =>
+  slide9Components.value.findIndex((c) => c.id === activeSlide9Comp.value)
+)
+const prevSlide9Comp = computed(() =>
+  currentSlide9Idx.value > 0 ? slide9Components.value[currentSlide9Idx.value - 1] : null
+)
+const nextSlide9Comp = computed(() =>
+  currentSlide9Idx.value >= 0 && currentSlide9Idx.value < slide9Components.value.length - 1
+    ? slide9Components.value[currentSlide9Idx.value + 1]
+    : null
+)
+
 const toggleSchedule = (idx) => {
   openSchedules.value = {
     ...openSchedules.value,
@@ -34,14 +289,16 @@ const toggleSchedule = (idx) => {
 
 watch(
   () => props.item,
-  () => {
+  (newItem) => {
     activeTab.value = 'overview'
+    activeSlide9Comp.value = detectInitialSlide9Comp(newItem)
     showMoreAnalysis.value = false
     showRightPanel.value = false
     showAllCalcRows.value = false
     showAllTraces.value = false
     openSchedules.value = { 0: true }
-  }
+  },
+  { immediate: true }
 )
 
 const hasChartBasisSwitch = computed(() => {
@@ -766,9 +1023,8 @@ const svgChartData = computed(() => {
 const yoySectionTitle = computed(() => {
   const sn = props.item.slide?.slide_num
   const id = isId.value
-  const postOnly = chartBasis.value === 'current'
-  const span = postOnly ? (id ? '2024–2025 Pasca-Exit' : '2024–2025 Post-Exit') : '2023–2025'
-  const span1H = postOnly ? (id ? '2024–1H26 Pasca-Exit' : '2024–1H26 Post-Exit') : '2023–1H26'
+  const span = id ? '2023* | 2024–2025 Pasca-Exit' : '2023* | 2024–2025 Post-Exit'
+  const span1H = id ? '2023* | 2024–1H26 Pasca-Exit' : '2023* | 2024–1H26 Post-Exit'
   const titles = {
     2: id ? `Perubahan Segmen YoY (${span} · Catatan 29)` : `Segment YoY Trajectory (${span} · Note 29)`,
     3: id ? `Tekanan Biaya & Risiko Kredit YoY (${span})` : `Competitive Cost & Credit Risk YoY (${span})`,
@@ -993,11 +1249,12 @@ const yoyRatioCards = computed(() => {
         delta: '+Rp929B YoY',
         tone: 'pos',
         note: id
-          ? 'CFO positif pertama, namun baru menutup 25,97% CapEx FY2025.'
-          : 'First positive CFO, but funds only 25.97% of FY25 CapEx.',
+          ? 'CFO membaik dari −Rp4,33T (2023*) ke +Rp307B, namun baru menutup 25,97% CapEx FY25.'
+          : 'Recovered from −Rp4.33T (2023*) to +Rp307B, but funds only 25.97% of FY25 CapEx.',
         bars: [
-          { yr: '2024', val: '−Rp622.1B', pct: 100 },
-          { yr: '2025', val: '+Rp307.0B', pct: 49, current: true },
+          { yr: '2023*', val: '−Rp4.33T', pct: 100 },
+          { yr: '2024', val: '−Rp622.1B', pct: 34 },
+          { yr: '2025', val: '+Rp307.0B', pct: 22, current: true },
         ],
       },
       {
@@ -1018,11 +1275,12 @@ const yoyRatioCards = computed(() => {
         delta: '+726 bps YoY',
         tone: 'warn',
         note: id
-          ? 'Penurunan nilai non-tunai menyusut tajam pasca-dekonsolidasi.'
-          : 'Non-cash write-downs shrank sharply post-deconsolidation.',
+          ? '2023* terdistorsi goodwill Rp78,8T; non-tunai menyusut tajam pasca-exit.'
+          : '2023* distorted by Rp78.8T goodwill write-off; non-cash charges shrank post-exit.',
         bars: [
-          { yr: '2024', val: '−11.21%', pct: 100 },
-          { yr: '2025', val: '−3.95%', pct: 35, current: true },
+          { yr: '2023*', val: '−159.3%', pct: 100 },
+          { yr: '2024', val: '−11.21%', pct: 32 },
+          { yr: '2025', val: '−3.95%', pct: 16, current: true },
         ],
       },
       {
@@ -1030,11 +1288,12 @@ const yoyRatioCards = computed(() => {
         delta: '+175 bps YoY',
         tone: 'warn',
         note: id
-          ? 'Tetap menahan SBC (Rp593B) & provisi kredit sebagai biaya riil.'
-          : 'Retains SBC (Rp593B) & loan provisions as real recurring costs.',
+          ? '2023* tanpa goodwill; tetap menahan SBC (Rp593B) & provisi kredit sebagai biaya riil.'
+          : '2023* ex-goodwill; retains SBC (Rp593B) & loan provisions as real recurring costs.',
         bars: [
-          { yr: '2024', val: '−3.69%', pct: 100 },
-          { yr: '2025', val: '−1.94%', pct: 53, current: true },
+          { yr: '2023*', val: '−13.73%', pct: 100 },
+          { yr: '2024', val: '−3.69%', pct: 36 },
+          { yr: '2025', val: '−1.94%', pct: 20, current: true },
         ],
       },
     ]
@@ -1167,24 +1426,8 @@ const yoyRatioCards = computed(() => {
   return null
 })
 
-// Hide 2023* pre-exit bars whenever Current Report (Post-Exit) is active, and re-normalize bar widths
-const visibleYoyRatioCards = computed(() => {
-  const cards = yoyRatioCards.value
-  if (!cards) return null
-  if (chartBasis.value === 'previous') return cards
-  return cards.map((card) => {
-    const filtered = card.bars.filter((b) => !String(b.yr).startsWith('2023'))
-    if (!filtered.length || filtered.length === card.bars.length) return card
-    const maxPct = Math.max(...filtered.map((b) => b.pct), 1)
-    return {
-      ...card,
-      bars: filtered.map((b) => ({
-        ...b,
-        pct: Math.max(8, Math.round((b.pct / maxPct) * 100)),
-      })),
-    }
-  })
-})
+// Keep all 3 years visible (with a vertical Post-Exit divider after 2023*) so the structural break is clear
+const visibleYoyRatioCards = computed(() => yoyRatioCards.value)
 </script>
 
 <template>
@@ -1220,90 +1463,91 @@ const visibleYoyRatioCards = computed(() => {
           </div>
         </header>
 
-        <!-- Top Navigation Tab Bar -->
+        <!-- Top Navigation Tab Bar (Clean Icon-Only Tabs with Tooltips) -->
         <nav class="glass-tab-bar" role="tablist" :aria-label="isId ? 'Bagian Analisis' : 'Insight Sections'">
           <div class="glass-tab-group">
             <button
               type="button"
               role="tab"
-              class="glass-tab-btn"
+              class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'overview' }"
               :aria-selected="activeTab === 'overview'"
+              :title="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : (isId ? 'Grafik & Data' : 'Charts & Data')"
+              :aria-label="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : (isId ? 'Grafik & Data' : 'Charts & Data')"
               @click="activeTab = 'overview'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" />
               </svg>
-              <span>{{ isId ? 'Grafik & Data' : 'Charts & Data' }}</span>
             </button>
 
             <button
               v-if="hasCompareTab"
               type="button"
               role="tab"
-              class="glass-tab-btn"
+              class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'compare' }"
               :aria-selected="activeTab === 'compare'"
+              :title="comparisonData.tabLabel"
+              :aria-label="comparisonData.tabLabel"
               @click="activeTab = 'compare'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="m16 3 4 4-4 4" /><path d="M20 7H4" /><path d="m8 21-4-4 4-4" /><path d="M4 17h16" />
               </svg>
-              <span>{{ comparisonData.tabLabel }}</span>
-              <span class="glass-tab-count">{{ comparisonData.rows.length }}</span>
             </button>
 
             <button
               v-if="hasCalcTab"
               type="button"
               role="tab"
-              class="glass-tab-btn"
+              class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'calc' }"
               :aria-selected="activeTab === 'calc'"
+              :title="isId ? 'Perhitungan & Rumus' : 'Calculations & Formula'"
+              :aria-label="isId ? 'Perhitungan & Rumus' : 'Calculations & Formula'"
               @click="activeTab = 'calc'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="8" x2="10" y1="11" y2="11" /><line x1="14" x2="16" y1="11" y2="11" /><line x1="8" x2="10" y1="15" y2="15" /><line x1="14" x2="16" y1="15" y2="15" /><line x1="8" x2="16" y1="19" y2="19" />
               </svg>
-              <span>{{ isId ? 'Perhitungan & Rumus' : 'Calculations & Formula' }}</span>
-              <span class="glass-tab-count">{{ calcTabCount }}</span>
             </button>
 
             <button
               v-if="hasSchedulesTab"
               type="button"
               role="tab"
-              class="glass-tab-btn"
+              class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'schedules' }"
               :aria-selected="activeTab === 'schedules'"
+              :title="isId ? 'Jadwal & Bukti' : 'Schedules & Proof'"
+              :aria-label="isId ? 'Jadwal & Bukti' : 'Schedules & Proof'"
               @click="activeTab = 'schedules'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M8 13h8" /><path d="M8 17h8" />
               </svg>
-              <span>{{ isId ? 'Jadwal & Bukti' : 'Schedules & Proof' }}</span>
-              <span class="glass-tab-count">{{ schedulesTabCount }}</span>
             </button>
 
             <button
               v-if="hasTracesTab"
               type="button"
               role="tab"
-              class="glass-tab-btn"
+              class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'traces' }"
               :aria-selected="activeTab === 'traces'"
+              :title="isId ? 'Jejak Tugas & Materi' : 'Workbook & Lectures'"
+              :aria-label="isId ? 'Jejak Tugas & Materi' : 'Workbook & Lectures'"
               @click="activeTab = 'traces'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
               </svg>
-              <span>{{ isId ? 'Jejak Tugas & Materi' : 'Workbook & Lectures' }}</span>
-              <span class="glass-tab-count">{{ tracesTabCount }}</span>
             </button>
           </div>
 
           <button
-            v-if="activeTab === 'overview' && hasAnalysisTab"
+            v-if="activeTab === 'overview' && hasAnalysisTab && !isSlide9Walkthrough"
             type="button"
             class="glass-panel-toggle"
             :class="{ 'is-on': showRightPanel }"
@@ -1316,11 +1560,102 @@ const visibleYoyRatioCards = computed(() => {
           </button>
         </nav>
 
+        <!-- Slide 9 Interactive Component Sub-Menu Bar (directly below main top bar) -->
+        <div
+          v-if="isSlide9Walkthrough && activeTab === 'overview'"
+          class="glass-sub-nav"
+          role="tablist"
+          :aria-label="isId ? 'Komponen Biaya Modal' : 'Cost of Capital Components'"
+        >
+          <button
+            v-for="comp in slide9Components"
+            :key="comp.id"
+            type="button"
+            role="tab"
+            class="glass-sub-pill"
+            :class="{ 'is-active': activeSlide9Comp === comp.id }"
+            :aria-selected="activeSlide9Comp === comp.id"
+            @click="activeSlide9Comp = comp.id"
+          >
+            {{ comp.shortLabel }}
+          </button>
+        </div>
+
         <!-- Independent Vertical-Scrolling Tab Panels -->
         <div class="glass-modal-body">
+          <!-- SLIDE 9 SPECIAL VIEW: Clean Zero-Scroll Side-by-Side (Left: Big Result, Right: Compact Source Table) -->
+          <div
+            v-if="activeTab === 'overview' && isSlide9Walkthrough"
+            class="glass-s9-split"
+            :key="'tab-s9-' + currentSlide9Comp.id"
+          >
+            <!-- Left: Big Result + Formula + One-Line Meaning -->
+            <div class="glass-card glass-s9-left">
+              <div class="glass-s9-left-top">
+                <span class="glass-s9-eyebrow">{{ currentSlide9Comp.title }}</span>
+                <div class="glass-s9-big-val">{{ currentSlide9Comp.result }}</div>
+                <div class="glass-s9-formula-bar">
+                  <code>{{ currentSlide9Comp.formula }}</code>
+                </div>
+                <p class="glass-s9-one-liner">{{ currentSlide9Comp.usedIn }}</p>
+              </div>
+              <div class="glass-s9-nav-btns">
+                <button
+                  v-if="prevSlide9Comp"
+                  type="button"
+                  class="glass-s9-nav-btn"
+                  @click="activeSlide9Comp = prevSlide9Comp.id"
+                >
+                  ← {{ prevSlide9Comp.shortLabel }}
+                </button>
+                <button
+                  v-if="nextSlide9Comp"
+                  type="button"
+                  class="glass-s9-nav-btn is-next"
+                  @click="activeSlide9Comp = nextSlide9Comp.id"
+                >
+                  {{ nextSlide9Comp.shortLabel }} →
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Clean Compact Table (Inputs, Sources & Math Steps — Zero Cards, Zero Scroll) -->
+            <div class="glass-card glass-s9-right">
+              <table class="glass-s9-table">
+                <thead>
+                  <tr>
+                    <th>{{ isId ? 'Komponen / Langkah' : 'Input / Step' }}</th>
+                    <th class="is-num">{{ isId ? 'Nilai' : 'Value' }}</th>
+                    <th>{{ isId ? 'Sumber / Keterangan' : 'Source / Note' }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(src, sIdx) in currentSlide9Comp.sources"
+                    :key="currentSlide9Comp.id + '-r-' + sIdx"
+                  >
+                    <td class="is-lbl">{{ src.label }}</td>
+                    <td class="is-num is-val">{{ src.value }}</td>
+                    <td class="is-src">{{ src.source }}</td>
+                  </tr>
+                  <tr
+                    v-for="(st, stIdx) in currentSlide9Comp.steps"
+                    :key="currentSlide9Comp.id + '-st-' + stIdx"
+                    class="is-step-row"
+                    :class="{ 'is-final-row': stIdx === currentSlide9Comp.steps.length - 1 }"
+                  >
+                    <td class="is-lbl">{{ st.expr }}</td>
+                    <td class="is-num is-out">{{ st.out }}</td>
+                    <td class="is-src">{{ stIdx === currentSlide9Comp.steps.length - 1 ? (isId ? 'Hasil Akhir' : 'Final Result') : (isId ? 'Langkah ' + st.step : 'Step ' + st.step) }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <!-- TAB 1: Side-by-Side Independent Vertical Scrollers (Left: Charts & Data, Right: Deep Analysis) -->
           <div
-            v-if="activeTab === 'overview'"
+            v-else-if="activeTab === 'overview'"
             class="glass-split-view"
             :class="{ 'is-single': !hasAnalysisTab || !showRightPanel }"
             key="tab-overview"
@@ -1383,20 +1718,30 @@ const visibleYoyRatioCards = computed(() => {
                       <span class="glass-yoy-delta" :class="`tone-${vc.tone}`">{{ vc.delta }}</span>
                     </div>
                     <div class="glass-vchart-plot">
-                      <div v-for="(bar, bIdx) in vc.bars" :key="bar.label" class="glass-vchart-col">
-                        <span
-                          class="glass-vchart-val"
-                          :class="{ 'is-warn': bar.warn || String(bar.display).startsWith('−'), 'is-accent': bar.accent }"
-                        >{{ bar.display }}</span>
-                        <div class="glass-vchart-bar-wrap">
+                      <template v-for="(bar, bIdx) in vc.bars" :key="bar.label">
+                        <div class="glass-vchart-col">
                           <span
-                            class="glass-vchart-bar"
+                            class="glass-vchart-val"
                             :class="{ 'is-warn': bar.warn || String(bar.display).startsWith('−'), 'is-accent': bar.accent }"
-                            :style="{ height: `${bar.heightPct}%`, animationDelay: `${vIdx * 60 + bIdx * 55}ms` }"
-                          ></span>
+                          >{{ bar.display }}</span>
+                          <div class="glass-vchart-bar-wrap">
+                            <span
+                              class="glass-vchart-bar"
+                              :class="{ 'is-warn': bar.warn || String(bar.display).startsWith('−'), 'is-accent': bar.accent }"
+                              :style="{ height: `${bar.heightPct}%`, animationDelay: `${vIdx * 60 + bIdx * 55}ms` }"
+                            ></span>
+                          </div>
+                          <span class="glass-vchart-lbl">{{ bar.label }}</span>
                         </div>
-                        <span class="glass-vchart-lbl">{{ bar.label }}</span>
-                      </div>
+                        <div
+                          v-if="String(bar.label).startsWith('2023') && bIdx < vc.bars.length - 1"
+                          class="glass-vchart-divider"
+                          :title="isId ? 'Dekonsolidasi Tokopedia (Jan 2024)' : 'Tokopedia Deconsolidation (Jan 2024)'"
+                        >
+                          <span class="glass-vchart-div-tag">{{ isId ? 'Exit' : 'Exit' }}</span>
+                          <span class="glass-vchart-div-line" aria-hidden="true"></span>
+                        </div>
+                      </template>
                     </div>
                     <p v-if="vc.note" class="glass-yoy-note">{{ vc.note }}</p>
                   </div>
@@ -1505,27 +1850,37 @@ const visibleYoyRatioCards = computed(() => {
                       <span class="glass-yoy-delta" :class="`tone-${card.tone}`">{{ card.delta }}</span>
                     </div>
                     <div class="glass-vchart-plot">
-                      <div v-for="(b, bIdx) in card.bars" :key="b.yr" class="glass-vchart-col">
-                        <span
-                          class="glass-vchart-val"
-                          :class="{
-                            'is-warn': String(b.val).startsWith('−') || (card.tone === 'warn' && b.current),
-                            'is-accent': !String(b.val).startsWith('−') && card.tone !== 'warn' && b.current,
-                          }"
-                        >{{ b.val }}</span>
-                        <div class="glass-vchart-bar-wrap">
+                      <template v-for="(b, bIdx) in card.bars" :key="b.yr">
+                        <div class="glass-vchart-col">
                           <span
-                            class="glass-vchart-bar"
-                            :class="[
-                              card.tone === 'warn' || String(b.val).startsWith('−') ? 'is-warn' : '',
-                              !String(b.val).startsWith('−') && b.current && card.tone === 'pos' ? 'is-accent' : '',
-                              !String(b.val).startsWith('−') && b.current && card.tone === 'accent' ? 'is-amber' : '',
-                            ]"
-                            :style="{ height: `${Math.max(14, b.pct)}%`, animationDelay: `${yIdx * 55 + bIdx * 50}ms` }"
-                          ></span>
+                            class="glass-vchart-val"
+                            :class="{
+                              'is-warn': String(b.val).startsWith('−') || (card.tone === 'warn' && b.current),
+                              'is-accent': !String(b.val).startsWith('−') && card.tone !== 'warn' && b.current,
+                            }"
+                          >{{ b.val }}</span>
+                          <div class="glass-vchart-bar-wrap">
+                            <span
+                              class="glass-vchart-bar"
+                              :class="[
+                                card.tone === 'warn' || String(b.val).startsWith('−') ? 'is-warn' : '',
+                                !String(b.val).startsWith('−') && b.current && card.tone === 'pos' ? 'is-accent' : '',
+                                !String(b.val).startsWith('−') && b.current && card.tone === 'accent' ? 'is-amber' : '',
+                              ]"
+                              :style="{ height: `${Math.max(14, b.pct)}%`, animationDelay: `${yIdx * 55 + bIdx * 50}ms` }"
+                            ></span>
+                          </div>
+                          <span class="glass-vchart-lbl">{{ b.yr }}</span>
                         </div>
-                        <span class="glass-vchart-lbl">{{ b.yr }}</span>
-                      </div>
+                        <div
+                          v-if="String(b.yr).startsWith('2023') && bIdx < card.bars.length - 1"
+                          class="glass-vchart-divider"
+                          :title="isId ? 'Dekonsolidasi Tokopedia (Jan 2024)' : 'Tokopedia Deconsolidation (Jan 2024)'"
+                        >
+                          <span class="glass-vchart-div-tag">{{ isId ? 'Exit' : 'Exit' }}</span>
+                          <span class="glass-vchart-div-line" aria-hidden="true"></span>
+                        </div>
+                      </template>
                     </div>
                     <p v-if="card.note" class="glass-yoy-note">{{ card.note }}</p>
                   </div>
@@ -2415,6 +2770,36 @@ const visibleYoyRatioCards = computed(() => {
   gap: 6px;
 }
 
+.glass-vchart-divider {
+  flex: 0 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 0 2px 18px;
+}
+
+.glass-vchart-div-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.14);
+  border: 1px solid rgba(251, 191, 36, 0.34);
+  border-radius: 4px;
+  padding: 1px 4px;
+  line-height: 1.2;
+}
+
+.glass-vchart-div-line {
+  width: 0;
+  flex: 1;
+  border-left: 1.5px dashed rgba(251, 191, 36, 0.55);
+}
+
 .glass-vchart-val {
   font-size: 11px;
   font-weight: 700;
@@ -2975,6 +3360,221 @@ const visibleYoyRatioCards = computed(() => {
   .glass-anim-row,
   .svg-anim-bar {
     animation: none;
+  }
+}
+
+/* Slide 9 Interactive Sub-Menu & Source-to-Result Panels */
+.glass-tab-btn.is-icon-only {
+  padding: 8px 11px;
+  min-width: 38px;
+  justify-content: center;
+}
+
+.glass-tab-btn.is-icon-only .glass-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.glass-sub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 24px;
+  background: rgba(8, 22, 16, 0.72);
+  border-bottom: 1px solid rgba(74, 222, 128, 0.16);
+}
+
+.glass-sub-pill {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cfe9d7;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-sub-pill:hover {
+  background: rgba(74, 222, 128, 0.14);
+  border-color: rgba(74, 222, 128, 0.45);
+  color: #ffffff;
+}
+
+.glass-sub-pill.is-active {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.32), rgba(16, 185, 129, 0.24));
+  border-color: #4ade80;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(74, 222, 128, 0.22);
+}
+
+.glass-s9-split {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(380px, 1.65fr);
+  gap: 16px;
+  padding: 18px 24px;
+  align-items: stretch;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.glass-s9-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  border-color: rgba(74, 222, 128, 0.34);
+  background: linear-gradient(155deg, rgba(16, 46, 32, 0.78), rgba(9, 22, 16, 0.88));
+}
+
+.glass-s9-left-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.glass-s9-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #86efac;
+}
+
+.glass-s9-big-val {
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 850;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.glass-s9-formula-bar {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-s9-formula-bar code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  color: #e2fbe8;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.glass-s9-one-liner {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cfe9d7;
+}
+
+.glass-s9-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 16px;
+}
+
+.glass-s9-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.glass-s9-table th {
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ed3b4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-s9-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: middle;
+}
+
+.glass-s9-table .is-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.glass-s9-table .is-lbl {
+  color: #eef9f2;
+  font-weight: 550;
+}
+
+.glass-s9-table .is-val {
+  color: #4ade80;
+  font-weight: 750;
+}
+
+.glass-s9-table .is-src {
+  color: #a9d5bc;
+  font-size: 11.5px;
+}
+
+.glass-s9-table tr.is-step-row td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.glass-s9-table tr.is-final-row td {
+  background: rgba(34, 197, 94, 0.15);
+  border-top: 1px solid rgba(74, 222, 128, 0.45);
+  border-bottom: none;
+  color: #ffffff;
+  font-weight: 750;
+}
+
+.glass-s9-table .is-out {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.glass-s9-nav-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.glass-s9-nav-btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e6f6ec;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 6px 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.glass-s9-nav-btn:hover {
+  background: rgba(74, 222, 128, 0.18);
+  border-color: #4ade80;
+  color: #ffffff;
+}
+
+.glass-s9-nav-btn.is-next {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: rgba(74, 222, 128, 0.55);
+}
+
+@media (max-width: 820px) {
+  .glass-s9-split {
+    grid-template-columns: 1fr;
   }
 }
 </style>
