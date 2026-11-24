@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { useReportMode } from '../composables/useReportMode'
+import { findAbbrTerms, getInlineAbbrHint } from '../composables/useAbbrGlossary'
 
 const props = defineProps({
   item: { type: Object, required: true },
@@ -1639,8 +1640,8 @@ const slide11ScenarioMatrix = computed(() => {
   const id = isId.value
   return {
     title: id
-      ? 'Matriks Valuasi 3 Skenario & Rekonsiliasi Rentang Nilai Wajar (Rp / saham · Tabel 16)'
-      : '3-Scenario Valuation Matrix & Defensible Range Reconciliation (Rp / share · Table 16)',
+      ? 'Matriks Valuasi 3 Skenario & Rekonsiliasi Rentang Nilai Wajar (Rp / saham · Appendix A6)'
+      : '3-Scenario Valuation Matrix & Defensible Range Reconciliation (Rp / share · Appendix A6)',
     headers: id
       ? ['Skenario / Tolok Ukur', 'DCF / Saham', 'RI / Saham', 'Interpretasi Ekonomi']
       : ['Scenario / Benchmark', 'DCF / Share', 'RI / Share', 'Economic Driver & Role'],
@@ -1678,6 +1679,26 @@ const slide11ScenarioMatrix = computed(() => {
     ],
   }
 })
+const titleAbbrHint = computed(() => getInlineAbbrHint(props.item.title || '', props.lang))
+
+const modalAbbrGlossary = computed(() => {
+  const cfg = chartConfig.value || {}
+  const chartLabels = [
+    cfg.title,
+    cfg.subtitle,
+    ...(cfg.items || []).map((i) => i.label),
+    ...(cfg.cards || []).map((c) => c.title),
+  ]
+  const blob = [
+    props.item.title,
+    props.item.value,
+    ...chartLabels,
+    ...(explanationParagraphs.value || []).slice(0, 2),
+  ]
+    .filter(Boolean)
+    .join(' ')
+  return findAbbrTerms(blob, props.lang, 8)
+})
 </script>
 
 <template>
@@ -1698,6 +1719,7 @@ const slide11ScenarioMatrix = computed(() => {
               {{ isId ? 'SLIDE' : 'SLIDE' }} {{ item.slide?.slide_num }} · {{ item.slide?.section_tag || (isId ? 'Analisis Mendalam' : 'Deep Insight') }}
             </span>
             <h2 id="glass-modal-title">{{ item.title }}</h2>
+            <div v-if="titleAbbrHint" class="glass-abbr-sub">{{ titleAbbrHint }}</div>
             <div v-if="item.value" class="glass-value-pill">{{ item.value }}</div>
           </div>
           <div class="glass-hdr-actions">
@@ -2657,7 +2679,14 @@ const slide11ScenarioMatrix = computed(() => {
             </div>
           </div>
         </div>
-        </section>
+          <!-- Compact Abbreviation Glossary Strip -->
+        <footer v-if="modalAbbrGlossary.length" class="glass-abbr-footer">
+          <span class="glass-abbr-key-lbl">{{ isId ? 'Istilah:' : 'Terms:' }}</span>
+          <span v-for="t in modalAbbrGlossary" :key="t.key" class="glass-abbr-chip">
+            <strong>{{ t.key }}</strong> {{ t.full }}
+          </span>
+        </footer>
+      </section>
       </div>
     </Transition>
   </Teleport>
@@ -2799,6 +2828,42 @@ const slide11ScenarioMatrix = computed(() => {
   background: rgba(34, 197, 94, 0.28);
   border-color: rgba(134, 239, 172, 0.72);
   color: #ffffff;
+}
+
+.glass-abbr-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a7d9b8;
+  margin-top: -2px;
+  line-height: 1.3;
+}
+
+.glass-abbr-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  padding: 8px 24px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+  font-size: 11px;
+  line-height: 1.35;
+  color: #a9d5b8;
+  flex-shrink: 0;
+}
+
+.glass-abbr-key-lbl {
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #86efac;
+  font-size: 10px;
+}
+
+.glass-abbr-chip strong {
+  color: #e8f8ed;
+  font-weight: 700;
+  margin-right: 3px;
 }
 
 .glass-tab-bar::-webkit-scrollbar {
