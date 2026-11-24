@@ -1428,6 +1428,138 @@ const yoyRatioCards = computed(() => {
 
 // Keep all 3 years visible (with a vertical Post-Exit divider after 2023*) so the structural break is clear
 const visibleYoyRatioCards = computed(() => yoyRatioCards.value)
+
+// Slide 7: Pro Forma Key Financial Statement Charts (placed ABOVE historical driver charts)
+const slide7ProFormaCards = computed(() => {
+  if (props.item.slide?.slide_num !== 7) return null
+  const id = isId.value
+  const isOld = chartBasis.value === 'previous'
+  if (isOld) {
+    return [
+      {
+        title: id ? 'Pendapatan Pro Forma (IS)' : 'Pro Forma Revenue (IS)',
+        delta: '+11.40%/yr',
+        tone: 'accent',
+        note: id ? 'Basis dek lama 2023–2025 (rata-rata 3 tahun).' : 'Old 3-year average growth basis (2023–2025).',
+        bars: [
+          { yr: '2025A', val: 'Rp18.32T', pct: 72 },
+          { yr: '2026F', val: 'Rp20.41T', pct: 81 },
+          { yr: '2027F', val: 'Rp22.73T', pct: 90 },
+          { yr: '2028F', val: 'Rp25.32T', pct: 100, current: true },
+        ],
+      },
+      {
+        title: id ? 'Laba Operasi / EBIT (IS)' : 'Operating Profit / EBIT (IS)',
+        delta: '−Rp4.97T (28F)',
+        tone: 'warn',
+        note: id ? 'OpEx 78,5% memperdalam rugi operasi setiap tahun.' : '78.5% OpEx ratio deepens operating losses every year.',
+        bars: [
+          { yr: '2025A', val: '−Rp378B', pct: 14 },
+          { yr: '2026F', val: '−Rp4.00T', pct: 80 },
+          { yr: '2027F', val: '−Rp4.46T', pct: 90 },
+          { yr: '2028F', val: '−Rp4.97T', pct: 100, current: true },
+        ],
+      },
+      {
+        title: id ? 'Laba Bersih Konsolidasi (IS)' : 'Consolidated Net Income (IS)',
+        delta: '−Rp4.35T (28F)',
+        tone: 'warn',
+        note: id ? 'Rugi bersih melebar akibat beban operasi pra-exit.' : 'Net losses widen due to pre-exit operating cost drag.',
+        bars: [
+          { yr: '2025A', val: '−Rp1.50T', pct: 35 },
+          { yr: '2026F', val: '−Rp3.54T', pct: 81 },
+          { yr: '2027F', val: '−Rp3.92T', pct: 90 },
+          { yr: '2028F', val: '−Rp4.35T', pct: 100, current: true },
+        ],
+      },
+      {
+        title: id ? 'Saldo Kas Akhir (BS)' : 'Ending Cash Balance (BS)',
+        delta: '−Rp20.8T Burn',
+        tone: 'warn',
+        note: id ? 'Kas terkuras buatan hingga Rp968M pada 2028F.' : 'Artificially drains cash down to Rp968B by 2028F.',
+        bars: [
+          { yr: '2025A', val: 'Rp21.76T', pct: 100 },
+          { yr: '2026F', val: 'Rp14.50T', pct: 67 },
+          { yr: '2027F', val: 'Rp7.40T', pct: 34 },
+          { yr: '2028F', val: 'Rp0.97T', pct: 8, current: true },
+        ],
+      },
+    ]
+  }
+  return [
+    {
+      title: id ? 'Pendapatan Pro Forma (IS)' : 'Pro Forma Revenue (IS)',
+      delta: '+15.27%/yr',
+      tone: 'pos',
+      note: id ? 'Bertumbuh majemuk pada basis pasca-Tokopedia yang bersih.' : 'Compounds on clean 2024→2025 post-Tokopedia growth.',
+      bars: [
+        { yr: '2025A', val: 'Rp18.32T', pct: 65 },
+        { yr: '2026F', val: 'Rp21.12T', pct: 75 },
+        { yr: '2027F', val: 'Rp24.35T', pct: 87 },
+        { yr: '2028F', val: 'Rp28.07T', pct: 100, current: true },
+      ],
+    },
+    {
+      title: id ? 'Laba Operasi / EBIT (IS)' : 'Operating Profit / EBIT (IS)',
+      delta: id ? 'Berbalik + di 2026F' : 'Flips + in 2026F',
+      tone: 'pos',
+      note: id ? 'Margin kotor 57,72% melampaui Cash OpEx 55,70% (+202 bps).' : '57.72% Gross Margin exceeds 55.70% Cash OpEx (+202 bps).',
+      bars: [
+        { yr: '2025A', val: '−Rp378B', pct: 67 },
+        { yr: '2026F', val: '+Rp427B', pct: 75 },
+        { yr: '2027F', val: '+Rp492B', pct: 87 },
+        { yr: '2028F', val: '+Rp567B', pct: 100, current: true },
+      ],
+    },
+    {
+      title: id ? 'Laba Bersih Konsolidasi (IS)' : 'Consolidated Net Income (IS)',
+      delta: id ? 'Laba + di 2028F' : 'GAAP + in 2028F',
+      tone: 'pos',
+      note: id ? 'Menutup bunga utang Rp535B dan mencetak laba pada Tahun ke-3.' : 'Covers Rp535B interest expense and turns profitable in Year 3.',
+      bars: [
+        { yr: '2025A', val: '−Rp1.50T', pct: 100 },
+        { yr: '2026F', val: '−Rp84.5B', pct: 18 },
+        { yr: '2027F', val: '−Rp33.6B', pct: 10 },
+        { yr: '2028F', val: '+Rp25.0B', pct: 8, current: true },
+      ],
+    },
+    {
+      title: id ? 'Saldo Kas Akhir (BS)' : 'Ending Cash Balance (BS)',
+      delta: 'Rp19.4T Kept',
+      tone: 'pos',
+      note: id ? 'Likuiditas terjaga Rp19,42T di 2028F tanpa pembakaran kas buatan.' : 'Preserves Rp19.42T liquidity in 2028F without artificial burn.',
+      bars: [
+        { yr: '2025A', val: 'Rp21.76T', pct: 100 },
+        { yr: '2026F', val: 'Rp20.69T', pct: 95 },
+        { yr: '2027F', val: 'Rp19.96T', pct: 92 },
+        { yr: '2028F', val: 'Rp19.42T', pct: 89, current: true },
+      ],
+    },
+  ]
+})
+
+// Slide 7: Focused Financial-Statement Forecast Assumptions Table (placed BELOW charts)
+const slide7AssumptionsTable = computed(() => {
+  if (props.item.slide?.slide_num !== 7) return null
+  const id = isId.value
+  return {
+    title: id
+      ? 'Tabel Asumsi Kunci Laporan Keuangan (Pasca-Tokopedia · Tabel 11)'
+      : 'Key Financial Statement Forecast Assumptions (Post-Tokopedia · Table 11)',
+    headers: id
+      ? ['Driver Laporan Keuangan', '2024A', '2025A', 'Base (24→25)', 'Optimis (1H26)', 'Konservatif (24)']
+      : ['Financial Statement Driver', '2024A', '2025A', 'Base (24→25)', 'Optimistic (1H26)', 'Conservative (24)'],
+    rows: [
+      [id ? 'Pertumbuhan Pendapatan (IS)' : 'Revenue Growth Rate (IS)', '+7.50%', '+15.27%', '15.27%', '18.00%', '7.50%'],
+      [id ? 'Beban Pokok / COGS (% Rev)' : 'Cost of Goods Sold (% Rev)', '46.64%', '42.28%', '42.28%', '38.10%', '46.64%'],
+      [id ? 'Cash OpEx di luar D&A (% Rev)' : 'Cash OpEx Excl. D&A (% Rev)', '62.78%', '55.70%', '55.70%', '51.20%', '62.78%'],
+      [id ? 'Belanja Modal Lanjutan (% Rev)' : 'Continuing CapEx (% Rev)', '6.63%', '6.45%', '6.45%', '5.50%', '6.63%'],
+      [id ? 'Modal Kerja (DSO / DPO)' : 'Working Capital (DSO / DPO)', '10.6d / 61.1d', '10.9d / 59.1d', '10.9d / 59.1d', '10.5d / 65.0d', '10.6d / 61.1d'],
+      [id ? 'Suku Bunga Utang Efektif (Kd)' : 'Effective Debt Interest Rate', '10.25%', '6.91%', '6.91%', '6.91%', '10.25%'],
+      [id ? 'Tarif Pajak Penghasilan Badan' : 'Corporate Income Tax Rate', '22.00%', '22.00%', '22.00%', '22.00%', '22.00%'],
+    ],
+  }
+})
 </script>
 
 <template>
@@ -1829,6 +1961,59 @@ const visibleYoyRatioCards = computed(() => yoyRatioCards.value)
                 </svg>
               </div>
 
+              <!-- Slide 7: Pro Forma Key Financial Statement Outcomes (ABOVE driver charts) -->
+              <div v-if="slide7ProFormaCards" class="glass-card glass-yoy-wrap">
+                <div class="glass-sec-label">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 3v18h18" /><path d="M7 16l4-4 4 3 5-7" />
+                  </svg>
+                  <span>
+                    {{
+                      chartBasis === 'previous'
+                        ? (isId ? 'Hasil Pro Forma Laporan Keuangan — Dek Lama (2025A → 2028F)' : 'Pro Forma Key Financial Statement Outcomes — Old Deck (2025A → 2028F)')
+                        : (isId ? 'Hasil Pro Forma Laporan Keuangan — Pasca-Tokopedia (2025A → 2028F · Tabel 12)' : 'Pro Forma Key Financial Statement Outcomes — Post-Tokopedia (2025A → 2028F · Table 12)')
+                    }}
+                  </span>
+                </div>
+                <div class="glass-vchart-grid">
+                  <div
+                    v-for="(card, pIdx) in slide7ProFormaCards"
+                    :key="`pf-${card.title}-${chartBasis}`"
+                    class="glass-vchart-card"
+                    :style="{ animationDelay: `${pIdx * 55}ms` }"
+                  >
+                    <div class="glass-vchart-hdr">
+                      <strong>{{ card.title }}</strong>
+                      <span class="glass-yoy-delta" :class="`tone-${card.tone}`">{{ card.delta }}</span>
+                    </div>
+                    <div class="glass-vchart-plot">
+                      <div v-for="(b, bIdx) in card.bars" :key="b.yr" class="glass-vchart-col">
+                        <span
+                          class="glass-vchart-val"
+                          :class="{
+                            'is-warn': String(b.val).startsWith('−') || (card.tone === 'warn' && b.current),
+                            'is-accent': !String(b.val).startsWith('−') && card.tone !== 'warn' && b.current,
+                          }"
+                        >{{ b.val }}</span>
+                        <div class="glass-vchart-bar-wrap">
+                          <span
+                            class="glass-vchart-bar"
+                            :class="[
+                              card.tone === 'warn' || String(b.val).startsWith('−') ? 'is-warn' : '',
+                              !String(b.val).startsWith('−') && b.current && card.tone === 'pos' ? 'is-accent' : '',
+                              !String(b.val).startsWith('−') && b.current && card.tone === 'accent' ? 'is-amber' : '',
+                            ]"
+                            :style="{ height: `${Math.max(14, b.pct)}%`, animationDelay: `${pIdx * 55 + bIdx * 50}ms` }"
+                          ></span>
+                        </div>
+                        <span class="glass-vchart-lbl">{{ b.yr }}</span>
+                      </div>
+                    </div>
+                    <p v-if="card.note" class="glass-yoy-note">{{ card.note }}</p>
+                  </div>
+                </div>
+              </div>
+
               <!-- Year-over-Year Trajectory Grid (Slides 2–8, hidden when top chart already renders vertical ratio cards) -->
               <div v-if="visibleYoyRatioCards && svgChartData.mode !== 'vertical_cards'" class="glass-card glass-yoy-wrap">
                 <div class="glass-sec-label">
@@ -1884,6 +2069,30 @@ const visibleYoyRatioCards = computed(() => yoyRatioCards.value)
                     </div>
                     <p v-if="card.note" class="glass-yoy-note">{{ card.note }}</p>
                   </div>
+                </div>
+              </div>
+
+              <!-- Slide 7: Key Financial Statement Assumptions Table (BELOW charts) -->
+              <div v-if="slide7AssumptionsTable" class="glass-card glass-assumptions-card">
+                <div class="glass-sec-label">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
+                  </svg>
+                  <span>{{ slide7AssumptionsTable.title }}</span>
+                </div>
+                <div class="glass-table-scroll">
+                  <table class="glass-data-table glass-assumptions-tbl">
+                    <thead>
+                      <tr>
+                        <th v-for="(h, hIdx) in slide7AssumptionsTable.headers" :key="hIdx" :class="{ 'is-base-col': hIdx === 3 }">{{ h }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(row, rIdx) in slide7AssumptionsTable.rows" :key="rIdx">
+                        <td v-for="(cell, cIdx) in row" :key="cIdx" :class="{ 'is-base-col': cIdx === 3 }">{{ cell }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -2798,6 +3007,24 @@ const visibleYoyRatioCards = computed(() => yoyRatioCards.value)
   width: 0;
   flex: 1;
   border-left: 1.5px dashed rgba(251, 191, 36, 0.55);
+}
+
+.glass-assumptions-tbl th,
+.glass-assumptions-tbl td {
+  white-space: nowrap;
+}
+
+.glass-assumptions-tbl th:not(:first-child),
+.glass-assumptions-tbl td:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-assumptions-tbl th.is-base-col,
+.glass-assumptions-tbl td.is-base-col {
+  background: rgba(34, 197, 94, 0.14);
+  color: #bbf7d0;
+  font-weight: 700;
 }
 
 .glass-vchart-val {
