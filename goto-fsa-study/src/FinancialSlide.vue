@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useReportMode } from './composables/useReportMode'
+import { getInlineAbbrHint } from './composables/useAbbrGlossary'
 
 const { reportViewMode } = useReportMode()
 
@@ -562,7 +563,7 @@ const restatedPointsMap = computed(() => {
         heading: id ? 'SELL / AVOID Tetap Konsisten' : 'SELL / AVOID Confirmed at Rp25.00',
         text: id
           ? 'Meski 5 kesalahan historis sudah dikoreksi dan Base Case berbalik laba pada 2028F (+Rp25,0M), harga Rp25,00 (2,41x Base DCF Rp10,38 & 1,90x Kas Bersih) masih terlalu mahal.'
-          : 'Even after fixing all 5 errors and turning GAAP net-positive in 2028F (+Rp25.0bn), Rp25.00 (2.41x Base DCF & 1.90x Net Cash) prices in unachieved upside.',
+          : 'Even after fixing all 5 errors and turning net-profitable in 2028F (+Rp25.0bn), Rp25.00 (2.41x Base DCF & 1.90x Net Cash) prices in unachieved upside.',
         formula: 'Market Rp25.00 vs Defensible Range Rp10.38–Rp16.75 (−33% to −58% gap)',
         data_origin: 'Final Report §6.1',
       },
@@ -769,7 +770,7 @@ const editorialRows = computed(() => {
         value: '−506 bps',
         text: id
           ? '2028F ROIC (+2,70%) tertinggal di bawah WACC (7,76%)\nLaba akuntansi positif (+Rp25M) belum ciptakan nilai'
-          : '2028F Base ROIC (+2.70%) trails WACC (7.76%)\nGAAP net profit (+Rp25bn) still destroys economic value',
+          : '2028F Base ROIC (+2.70%) trails WACC (7.76%)\nNet profit (+Rp25bn) still destroys economic value',
         detail_explanation: id
           ? 'Meskipun perbaikan pasca-Tokopedia membalik EBIT 2026F (+Rp426,9M) dan Laba Bersih 2028F (+Rp25,0M) menjadi positif, ROIC 2028F (+2,70%) tetap jauh di bawah WACC (7,76%) dan ROE (+0,09%) di bawah Ke (8,45%).'
           : 'Although removing 2023 distortions turns Base EBIT (+Rp426.9bn in 2026F) and Net Income (+Rp25.0bn in 2028F) positive, 2028F ROIC (+2.70%) still trails WACC (7.76%) by 506 bps.',
@@ -1312,6 +1313,7 @@ const provisionGrowth = computed(() => {
                   />
                   <div>
                     <h2>{{ row.name }}</h2>
+                    <small v-if="getInlineAbbrHint(row.name, lang)" class="slide-abbr-sub">{{ getInlineAbbrHint(row.name, lang) }}</small>
                     <p v-if="row.text && row.text.includes('\n')">
                       <em class="slide-editorial-formula">{{ row.text.split('\n')[0] }}</em>
                       <span class="slide-editorial-calc">{{ row.text.split('\n').slice(1).join('\n') }}</span>
@@ -1365,10 +1367,13 @@ const provisionGrowth = computed(() => {
                       @keydown.enter="isRestated ? emit('explain', $event, 'claim', restatedRowDetail(row)) : emit('explain', $event, 'row', table.rows[r])"
                     >
                       <td
-                      v-for="(cell, c) in row"
-                      :key="c"
-                      :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
-                    >{{ cell }}</td>
+                        v-for="(cell, c) in row"
+                        :key="c"
+                        :class="c === 1 ? (/high|tinggi/i.test(cell) ? 'rating-bad' : /medium|sedang/i.test(cell) ? 'rating-mid' : '') : ''"
+                      >
+                        <span>{{ cell }}</span>
+                        <small v-if="c === 0 && !slide.is_appendix && getInlineAbbrHint(cell, lang)" class="slide-abbr-sub">{{ getInlineAbbrHint(cell, lang) }}</small>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1785,4 +1790,5 @@ button:focus-visible, tr:focus-visible, [role="button"]:focus-visible { outline:
 .slide-apx-dot { border: 1px solid rgba(255, 255, 255, 0.26); background: rgba(0, 0, 0, 0.22); color: #d1fae5; font: inherit; font-size: .68cqw; font-weight: 700; padding: .18cqw .42cqw; border-radius: .26cqw; cursor: pointer; transition: background-color .14s ease, color .14s ease; }
 .slide-apx-dot:hover { background: rgba(255, 255, 255, 0.20); color: #ffffff; }
 .slide-apx-dot.active { background: #4ade80; border-color: #4ade80; color: #052e16; }
+.slide-abbr-sub { display: block; font-size: .68cqw; font-weight: 500; color: #547560; line-height: 1.25; margin-top: .1cqw; letter-spacing: 0; }
 </style>

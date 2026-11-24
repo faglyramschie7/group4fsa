@@ -460,7 +460,7 @@ const comparisonData = computed(() => {
       rightLabel: id ? 'Laporan Akhir (Base Pasca-Exit)' : 'Final Report (Post-Exit Base)',
       rows: [
         { metric: id ? '2028F Laba Operasi (EBIT)' : '2028F Operating Profit (EBIT)', before: '−Rp 4,967B', after: '+Rp 567.2B', delta: '+Rp 5.53T swing', tone: 'pos', pctA: 100, pctB: 22, note: id ? 'Berbalik positif sejak 2026F (+Rp426,9M) karena margin kotor > Cash OpEx.' : 'Turns positive in 2026F (+Rp426.9B) as Gross Margin exceeds Cash OpEx.' },
-        { metric: id ? '2028F Laba Bersih (GAAP)' : '2028F GAAP Net Income', before: '−Rp 4,348B', after: '+Rp 25.0B', delta: 'Reaches GAAP +', tone: 'pos', pctA: 100, pctB: 10, note: id ? 'Mencapai laba bersih positif pada Tahun ke-3 meski ROE hanya +0,09%.' : 'Reaches GAAP profitability in Year 3, though ROE is only +0.09%.' },
+        { metric: id ? '2028F Laba Bersih' : '2028F Net Income', before: '−Rp 4,348B', after: '+Rp 25.0B', delta: 'Turns Profitable', tone: 'pos', pctA: 100, pctB: 10, note: id ? 'Mencapai laba bersih positif pada Tahun ke-3 meski ROE hanya +0,09%.' : 'Reaches positive net profit in Year 3, though ROE is only +0.09%.' },
         { metric: id ? '2028F Saldo Kas Akhir' : '2028F Ending Cash Balance', before: 'Rp 0.97T', after: 'Rp 19.42T', delta: '+Rp 18.45T saved', tone: 'pos', pctA: 8, pctB: 100, note: id ? 'Menghilangkan ilusi kebangkrutan kas akibat asumsi OpEx 78,5%.' : 'Eliminates artificial cash depletion caused by the 78.5% OpEx error.' },
         { metric: id ? '2028F ROIC vs. WACC' : '2028F ROIC vs. WACC', before: 'Negative', after: '+2.70% vs 7.76%', delta: '−506 bps spread', tone: 'warn', pctA: 10, pctB: 35, note: id ? 'Masih menghancurkan nilai ekonomi meski operasional sudah untung.' : 'Still earns below cost of capital despite turning operationally profitable.' },
       ],
@@ -1551,7 +1551,7 @@ const slide7ProFormaCards = computed(() => {
     },
     {
       title: id ? 'Laba Bersih Konsolidasi (IS)' : 'Consolidated Net Income (IS)',
-      delta: id ? 'Laba + di 2028F' : 'GAAP + in 2028F',
+      delta: id ? 'Laba + di 2028F' : 'Profitable in 2028F',
       tone: 'pos',
       note: id ? 'Menutup bunga utang Rp535B dan mencetak laba pada Tahun ke-3.' : 'Covers Rp535B interest expense and turns profitable in Year 3.',
       bars: [
