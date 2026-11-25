@@ -1743,6 +1743,7 @@ const buildPresItemPayload = (kind, item, idx = 0) => {
     }
 
     return {
+      kind: 'five_force',
       title: force,
       value: rating,
       explanation: `${basis}. ${detail}`,

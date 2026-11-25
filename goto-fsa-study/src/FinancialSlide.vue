@@ -199,12 +199,12 @@ const restatedSlideTables = computed(() => {
         ? ['Rasio / DuPont (Appendix A2)', '2023*', '2024', '2025', 'YoY 24→25']
         : ['Ratio / DuPont (Appendix A2)', '2023*', '2024', '2025', 'YoY 24→25'],
       rows: [
-        [id ? 'Margin Operasi (EBIT %)' : 'Operating Margin (EBIT %)', '−69.5%', '−14.10%', '−2.06%', '+1,204 bps'],
-        [id ? 'Margin Laba Bersih' : 'Net Profit Margin', '−612.2%', '−34.38%', '−8.20%', '+2,618 bps'],
+        [id ? 'Margin Operasi (EBIT %)' : 'Operating Margin (EBIT %)', '−69.5%', '−14.10%', '−2.06%', '+12.04%'],
+        [id ? 'Margin Laba Bersih' : 'Net Profit Margin', '−612.2%', '−34.38%', '−8.20%', '+26.18%'],
         [id ? 'Perputaran Aset (ATO)' : 'Asset Turnover (Rev / Assets)', '0.27x', '0.37x', '0.40x', '+8.8%'],
         [id ? 'Multiplier Ekuitas (EM)' : 'Equity Multiplier (Assets / Eq)', '1.51x', '1.42x', '1.59x', '+0.17x'],
-        ['ROA (Cons.)', '−167.3%', '−12.65%', '−3.28%', '+937 bps'],
-        [id ? 'ROE (Kons. / Induk)' : 'ROE (Cons. / Parent)', '−253.4%', '−17.97%', '−5.23% / −3.73%', '+1,274 bps'],
+        ['ROA (Cons.)', '−167.3%', '−12.65%', '−3.28%', '+9.37%'],
+        [id ? 'ROE (Kons. / Induk)' : 'ROE (Cons. / Parent)', '−253.4%', '−17.97%', '−5.23% / −3.73%', '+12.74%'],
       ],
     },
     7: {
@@ -323,184 +323,184 @@ const restatedPointsMap = computed(() => {
   const s8ByScenario = {
     base: [
       {
-        heading: id ? 'EBIT Positif di 2026F–2028F' : 'Positive EBIT in 2026F–2028F',
+        heading: id ? 'Laba Operasi Positif (2026F–2028F)' : 'Operating Profit Turns Positive',
         text: id
-          ? 'Tanpa distorsi 2023, pendapatan Base tumbuh ke Rp28,07T pada 2028F, EBIT berbalik positif (+Rp426,9M → +Rp567,2M), dan laba bersih mencapai +Rp25,0M.'
-          : 'Excluding 2023 distortions, Base revenue grows to Rp28.07T by 2028F, EBIT flips positive (+Rp426.9bn → +Rp567.2bn), and Net Income turns +Rp25.0bn.',
+          ? 'Tanpa angka 2023, pendapatan tumbuh ke Rp28,07T di 2028F. Laba operasi (EBIT) jadi positif (+Rp426,9M ke +Rp567,2M), dan laba bersih mencapai +Rp25,0M.'
+          : 'Without 2023 noise, revenue reaches Rp28.07T by 2028F. Operating profit turns positive (+Rp426.9B to +Rp567.2B), and net income reaches +Rp25.0B.',
         formula: '2026F EBIT = Rp21,120.6bn × (57.72% GM − 55.70% Cash OpEx) = +Rp426.9bn',
         data_origin: 'Final Report §4.2 (Table 12)',
       },
       {
-        heading: id ? 'Titik Impas Tipis & DOL 28,56x' : 'Tight Breakeven & 28.56x DOL',
+        heading: id ? 'Titik Impas Sangat Tipis' : 'Very Thin Profit Cushion',
         text: id
-          ? 'Titik impas operasi 2026F adalah Rp20,38T, menyisakan Margin of Safety +3,50% (+Rp739,5M). Setiap kenaikan atau penurunan biaya langsung mengayunkan EBIT 28,56x.'
-          : '2026F operating breakeven is Rp20,381.1bn, leaving just a +3.50% (+Rp739.5bn) Margin of Safety and a high 28.56x cost-structure DOL.',
+          ? 'GoTo butuh pendapatan Rp20,38T untuk impas di 2026F, jadi bantalan aman hanya 3,5%. Karena itu, perubahan kecil di penjualan menggeser laba 28,6x (DOL).'
+          : 'GoTo needs Rp20.38T in sales just to break even in 2026F, leaving only a 3.5% safety cushion. A small dip in sales swings profit by 28.6x (DOL).',
         formula: 'Breakeven = Rp11,764.6bn / 57.723% = Rp20,381.1bn (+3.50% Margin of Safety)',
-        data_origin: 'Final Report §4.3 (Eq. 4)',
+        data_origin: 'Final Report §4.3',
       },
       {
-        heading: id ? 'ROIC 2028F (+2,70%) < WACC (7,76%)' : '2028F ROIC (+2.70%) < WACC (7.76%)',
+        heading: id ? 'Hasil Modal Masih Kalah dari Biaya Modal' : 'Returns Still Below Cost of Capital',
         text: id
-          ? 'Kas akhir 2028F terjaga kuat di Rp19,42T (vs Rp968M pada dek lama), namun ROIC (+2,70%) tetap 506 bps di bawah WACC (7,76%).'
-          : '2028F ending cash stays resilient at Rp19.42T (vs Rp968bn in the old deck), yet ROIC (+2.70%) still trails WACC (7.76%) by 506 bps.',
+          ? 'Kas tetap aman di Rp19,42T pada 2028F. Namun hasil modal (ROIC +2,70%) masih jauh di bawah biaya modal GoTo (WACC 7,76%).'
+          : 'Cash stays strong at Rp19.42T by 2028F. Still, GoTo only earns +2.70% on its capital (ROIC), well below its 7.76% cost of capital (WACC).',
         formula: '2028F ROIC = NOPAT Rp442.42bn / Beginning IC Rp16,380.8bn = +2.70% vs 7.76% WACC',
-        data_origin: 'Final Report §5.1 & Table 14',
+        data_origin: 'Final Report §5.1 (Tables 14–15)',
       },
     ],
     optimistic: [
       {
-        heading: id ? 'Skenario Optimistis (OpEx 1H 2026)' : 'Optimistic Case (1H 2026 OpEx)',
+        heading: id ? 'Skenario Optimistis (Biaya 1H 2026)' : 'Optimistic Case (1H 2026 Costs)',
         text: id
-          ? 'Memakai rasio biaya aktual 1H 2026 (COGS 38,10%, Cash OpEx 51,20%) dengan pertumbuhan 18,0%, EBIT 2028F melonjak 5,7x menjadi +Rp3.221,1M.'
-          : 'Applying 1H 2026 interim cost ratios (38.10% COGS, 51.20% Cash OpEx) at 18.0% growth lifts 2028F EBIT 5.7x to +Rp3,221.1bn.',
+          ? 'Jika efisiensi biaya 1H 2026 bertahan (COGS 38,1%, OpEx 51,2%) dengan pertumbuhan 18%, laba operasi 2028F naik hampir 6x menjadi +Rp3,22T.'
+          : 'If GoTo keeps its lower 1H 2026 costs (38.1% COGS, 51.2% OpEx) and grows 18% a year, 2028F operating profit jumps to +Rp3.22T.',
         formula: '2028F Opt EBIT = Rp30,103.8bn × (61.90% GM − 51.20% OpEx) = +Rp3,221.1bn',
         data_origin: 'Final Report §4.1 & Table 13',
       },
       {
-        heading: id ? 'Laba & Arus Kas Bebas Positif' : 'Positive Net Income & FCFF',
+        heading: id ? 'Laba & Arus Kas Jadi Kuat' : 'Strong Profit & Positive Cash Flow',
         text: id
-          ? 'Laba bersih mencapai +Rp2.095,0M dan kas akhir tumbuh ke Rp24,80T pada 2028F dengan FCFF positif (+Rp1.887,0M).'
-          : 'Net income reaches +Rp2,095.0bn and ending cash builds to Rp24.80T by 2028F with positive FCFF (+Rp1,887.0bn).',
+          ? 'Laba bersih naik ke +Rp2,10T, arus kas bebas (FCFF) positif +Rp1,89T, dan kas akhir bertambah menjadi Rp24,80T di 2028F.'
+          : 'Net income reaches +Rp2.10T, free cash flow turns positive (+Rp1.89T), and cash grows to Rp24.80T by 2028F.',
         formula: '2028F Opt NI = +Rp2,095.0bn | 2028F Opt FCFF = +Rp1,887.0bn',
         data_origin: 'Final Report Table 13',
       },
       {
-        heading: id ? 'Batas Atas Nilai Intrinsik' : 'Intrinsic Value Ceiling',
+        heading: id ? 'Batas Atas Nilai Saham' : 'Upside Fair Value',
         text: id
-          ? 'Jika efisiensi 1H 2026 bertahan penuh setahun, nilai intrinsik naik ke Rp16,75/saham (RI Optimistis) hingga Rp47,34/saham (DCF Optimistis).'
-          : 'Sustaining 1H 2026 cost containment lifts intrinsic equity value to Rp16.75/share (Optimistic RI) and Rp47.34/share (Optimistic DCF).',
+          ? 'Jika efisiensi 1H 2026 benar-benar bertahan penuh setahun, nilai saham naik ke Rp16,75 (RI) hingga Rp47,34 per saham (DCF).'
+          : 'Only if GoTo sustains 1H 2026 cost cuts all year does fair value rise to Rp16.75 (RI) or Rp47.34 per share (DCF).',
         formula: 'Optimistic RI = Rp16.75/sh | Optimistic DCF = Rp47.34/sh',
-        data_origin: 'Final Report Table 16',
+        data_origin: 'Final Report Table 17',
       },
     ],
     conservative: [
       {
-        heading: id ? 'Skenario Konservatif (Lantai 2024)' : 'Conservative Case (2024 Floor)',
+        heading: id ? 'Skenario Konservatif (Pola 2024)' : 'Conservative Case (2024 Costs)',
         text: id
-          ? 'Kembali ke rasio biaya pasca-exit 2024 (COGS 46,64%, OpEx 62,78%, utang 10,25%) tanpa menyentuh 2023 menghasilkan rugi EBIT 2028F −Rp2.143,4M.'
-          : 'Reverting to GoTo’s 2024 post-exit floor (46.64% COGS, 62.78% OpEx, 10.25% debt cost) without touching 2023 yields −Rp2,143.4bn 2028F EBIT.',
+          ? 'Jika biaya naik lagi ke level 2024 (COGS 46,6%, OpEx 62,8%, bunga 10,3%), GoTo kembali rugi operasi −Rp2,14T di 2028F.'
+          : 'If costs slip back to 2024 levels (46.6% COGS, 62.8% OpEx, 10.3% interest), GoTo returns to a −Rp2.14T operating loss in 2028F.',
         formula: '2028F Cons EBIT = Rp22,761.8bn × (53.36% GM − 62.78% OpEx) = −Rp2,143.4bn',
         data_origin: 'Final Report Table 11 & Table 13',
       },
       {
-        heading: id ? 'Erosi Kas Tanpa Defisit (−Rp5T)' : 'Cash Erosion Without Insolvency',
+        heading: id ? 'Kas Berkurang, Tapi Tidak Habis' : 'Cash Drops, But No Bankruptcy',
         text: id
-          ? 'Berbeda dengan dek lama yang menguras kas ke −Rp5,0T, model bersih 2024 menjaga kas akhir 2028F tetap positif di Rp13,52T.'
-          : 'Unlike the old 2023-polluted model (−Rp5.0T cash), the clean 2024 floor preserves Rp13.52T of ending cash in 2028F.',
+          ? 'Kas turun karena rugi, tapi masih tersisa Rp13,52T di 2028F. Jadi GoTo tidak langsung kehabisan kas seperti perkiraan lama.'
+          : 'Losses drain cash, but GoTo still ends 2028F with Rp13.52T in the bank, so it does not run out of cash like our old model showed.',
         formula: '2028F Cons Ending Cash = Rp13,516.5bn (vs −Rp5,000bn old deck)',
-        data_origin: 'Final Report Table 13 & Appendix B #5',
+        data_origin: 'Final Report Table 13 & Appendix B',
       },
       {
-        heading: id ? 'Batas Bawah Valuasi' : 'Downside Valuation Floor',
+        heading: id ? 'Risiko Penurunan Nilai Saham' : 'Downside Value Risk',
         text: id
-          ? 'Kembalinya intensitas subsidi seperti 2024 menekan nilai wajar turun ke −Rp33,95/sh (DCF) dan −Rp44,42/sh (RI).'
-          : 'Reverting to 2024 promotional intensity drops intrinsic value to −Rp33.95/share (DCF) and −Rp44.42/share (RI).',
+          ? 'Jika perang promo kembali seperti 2024, nilai saham turun jauh menjadi negatif (−Rp33,95 DCF dan −Rp44,42 RI).'
+          : 'If promo spending returns to 2024 levels, fair value drops sharply into negative territory (−Rp33.95 DCF and −Rp44.42 RI).',
         formula: 'Conservative DCF = −Rp33.95/sh | Conservative RI = −Rp44.42/sh',
-        data_origin: 'Final Report Table 16',
+        data_origin: 'Final Report Table 17',
       },
     ],
   }
   return {
     4: [
       {
-        heading: id ? 'Isolasi 2023 & Lonjakan EBIT Gojek' : '2023 Quarantine & Gojek EBIT Surge',
+        heading: id ? 'Laba Gojek Melonjak di 2025' : 'Gojek Profit Jumped 13x in 2025',
         text: id
-          ? 'Angka 2023 (−253,4% ROE) mencerminkan pra-Tokopedia. Pada 2025, EBIT Gojek melesat 12,8x ke +Rp888,6M berkat pangkas insentif (−Rp504,2M), take-rate +149 bps, efisiensi cloud >50%, dan keluar dari Vietnam.'
-          : '2023 (−253.4% ROE) reflects pre-Tokopedia operations. In 2025, Gojek EBIT jumped 12.8x to +Rp888.6bn via a −Rp504.2bn incentive cut, +149 bps net take rate, >50% cloud savings, and Vietnam exit.',
+          ? 'Angka 2023 masih tercampur Tokopedia. Di 2025, laba Gojek melonjak ke +Rp888,6M berkat pangkas promo, hemat biaya cloud, dan keluar dari Vietnam.'
+          : '2023 still included Tokopedia. In 2025, Gojek operating profit jumped to +Rp888.6B thanks to lower promos, cloud savings, and exiting Vietnam.',
         formula: 'Gojek 2025 EBIT: +Rp69.4bn → +Rp888.6bn (+1,180% YoY)',
-        data_origin: 'Final Report §1.1 & LK GOTO FY2025 Note 29 pp. 133–134',
+        data_origin: 'Final Report §1.1 & Note 29 pp. 133–134',
       },
       {
-        heading: id ? 'Restatement Aset 2024 (+Rp1.582M)' : '2024 Asset Restatement (+Rp1,582B)',
+        heading: id ? 'Perbaikan Data Aset 2024' : 'Fixed 2024 Assets (+Rp1.58T)',
         text: id
-          ? 'Menambahkan piutang pinjaman Catatan 7 (Rp1.581,8M) memulihkan Total Aset 2024 ke Rp43.207,9M, mengubah Asset Turnover 2024 dari 0,3818x menjadi 0,3679x dan EM dari 1,369x menjadi 1,421x.'
-          : 'Restoring Rp1,581.8bn of omitted Note 7 lending receivables adjusts 2024 Total Assets to Rp43,207.9bn, shifting 2024 Asset Turnover (0.3818x→0.3679x) and Equity Multiplier (1.369x→1.421x).',
+          ? 'Kami menambahkan kembali Rp1,58T piutang pinjaman 2024 yang sempat terlewat agar Total Aset 2024 pas Rp43,21T sesuai laporan audit.'
+          : 'We added back Rp1.58T of 2024 consumer loans that were missed earlier, restoring 2024 Total Assets to the audited Rp43.21T.',
         formula: '2024 Assets = Rp43,207,884m (Check = 0); 2024 ROE = −17.97%',
-        data_origin: 'Final Report Appendix B Table B1 #2 & §3.1',
+        data_origin: 'Final Report Appendix B & §3.1',
       },
       {
-        heading: id ? 'DuPont Induk vs. Grab' : 'Parent DuPont vs. Grab Peer',
+        heading: id ? 'ROE GoTo Masih Kalah dari Grab' : 'GoTo ROE Still Trails Grab',
         text: id
-          ? 'ROE Konsolidasian 2025 −5,23% (−3,73% ekuitas induk) tetap jauh di bawah Grab (+2,96% konsolidasian, +3,98% induk) akibat margin bersih negatif (−8,20%).'
-          : '2025 Consolidated ROE (−5.23%; −3.73% parent) lags Grab (+2.96% consolidated; +3.98% parent) because negative Net Margin (−8.20%) offsets GoTo’s 0.40x asset turnover.',
+          ? 'GoTo memakai aset lebih efisien dari Grab (0,40x vs 0,28x), tapi margin GoTo masih minus (−8,20%) sehingga ROE tetap negatif (−5,23% vs Grab +2,96%).'
+          : 'GoTo uses its assets more efficiently than Grab (0.40x vs 0.28x), but negative profit margins (−8.20%) keep GoTo ROE negative (−5.23% vs Grab +2.96%).',
         formula: 'Cons. ROE = −8.20% × 0.4004x × 1.5937x = −5.23%',
         data_origin: 'Final Report §3.3 (Table 9)',
       },
     ],
     5: [
       {
-        heading: id ? 'Likuiditas 2024 & DSO Diperbaiki' : '2024 Liquidity & Trade DSO Fixed',
+        heading: id ? 'Kas Kuat & Tagihan Lancar' : 'Strong Liquidity & Fast Collections',
         text: id
-          ? 'Current Ratio 2024 naik dari 2,46x menjadi 2,62x (2025: 2,73x). Memisahkan piutang usaha Catatan 6 memperbaiki DSO 2024 dari 46,88 hari menjadi 10,56 hari (2025: 10,90 hari).'
-          : '2024 Current Ratio rises from 2.46x to 2.62x (2025: 2.73x). Aligning AR strictly to Note 6 fixes 2024 DSO from 46.88d to 10.56d (2025: 10.90d; −47.54d CCC).',
+          ? 'Current Ratio tetap sehat di 2,73x (2025). Setelah memisahkan piutang usaha Catatan 6, waktu tagih (DSO) sangat cepat di 10,9 hari.'
+          : 'Short-term liquidity is strong (2.73x Current Ratio in 2025). Using Note 6 trade receivables shows fast collections at 10.9 days (DSO).',
         formula: '2024 Current Ratio = 2.62x | DSO = 10.56d (2024) → 10.90d (2025)',
-        data_origin: 'Final Report Appendix B Table B1 #2–#3 & §3.2',
+        data_origin: 'Final Report Appendix B & §3.2',
       },
       {
-        heading: id ? 'Utang Penuh & TIE Langsung' : 'Full Debt Basis & Live TIE',
+        heading: id ? 'Utang Naik & Bunga Belum Tertutup' : 'Higher Debt & Negative Interest Coverage',
         text: id
-          ? 'Memasukkan seluruh utang jangka pendek & liabilitas sewa (Catatan 19–20: Rp4,82T→Rp7,74T) serta beban bunga Catatan 27b mengganti "N/M" dengan TIE langsung: −4,54x (2024) → −0,71x (2025).'
-          : 'Including current borrowings and all leases (Notes 19–20: Rp4.82T→Rp7.74T) with Note 27b interest replaces "N/M" with live TIE: −4.54x (2024) → −0.71x (2025).',
-        formula: '2024 D/E = 15.85% (was 12.57%); 2025 D/E = 26.97%; TIE = −0.71x',
-        data_origin: 'Final Report Appendix B Table B1 #4 & Table 8',
+          ? 'Total utang dan sewa naik dari Rp4,82T ke Rp7,74T di 2025 (D/E 27,0%). Karena EBIT masih minus, laba operasi belum cukup menutup bunga (TIE −0,71x).'
+          : 'Total debt and leases rose from Rp4.82T to Rp7.74T in 2025 (27.0% D/E). Because EBIT is still negative, operations do not yet cover interest (−0.71x TIE).',
+        formula: '2024 D/E = 15.85%; 2025 D/E = 26.97%; TIE = −0.71x',
+        data_origin: 'Final Report Table 8',
       },
       {
-        heading: id ? 'Sensitivitas Z-Score (Buku vs. Pasar)' : 'Altman Z-Score X4 Sensitivity',
+        heading: id ? 'Z-Score Rendah Karena Rugi Lama' : 'Low Z-Score Driven by Past Losses',
         text: id
-          ? 'Z-Score FY2025 berada di −4,72 (Nilai Buku) atau −4,80 (Harga Pasar Rp25); faktor X2 (−6,59) dipicu akumulasi rugi historis 2023, bukan risiko gagal bayar 12 bulan.'
-          : 'FY2025 Z-Score runs −4.72 (Book) vs −4.80 (Market at Rp25); X2 (−6.59 weight) reflects sunk 2023 losses while X1 (+0.40) & X4 (1.56x–1.68x) stay healthy.',
-        formula: 'Z (Book) = −4.72 | Z (Market Rp25.00) = −4.80 (< 1.81 distress cutoff)',
+          ? 'Z-Score memang negatif (−4,72 buku / −4,80 pasar), tapi itu karena akumulasi rugi lama dari 2023. Kas GoTo masih kuat sehingga tidak ada risiko gagal bayar jangka pendek.'
+          : 'The Z-Score is negative (−4.72 book / −4.80 market), mostly due to past 2023 losses. Strong cash reserves mean there is no immediate default risk.',
+        formula: 'Z (Book) = −4.72 | Z (Market Rp25.00) = −4.80 (< 1.81 cutoff)',
         data_origin: 'Final Report §3.4 (Table 10)',
       },
     ],
     6: [
       {
-        heading: id ? 'Red Flag 1: Asosiasi & Aset Level 3' : 'Red Flag 1: Associates & Level 3 Assets',
+        heading: id ? 'Risiko 1: Nilai Investasi Tokopedia & Jago' : 'Risk 1: Heavy Tokopedia & Bank Jago Stakes',
         text: id
-          ? 'Tokopedia (Rp7,43T) & Bank Jago (Rp2,89T) mencapai 22,57% aset; investasi Level 3 Rp1,67T mencatat rugi nilai wajar Rp596,7M. Penurunan nilai 20% memangkas ekuitas 6,34%.'
-          : 'Tokopedia (Rp7.43T) & Bank Jago (Rp2.89T) represent 22.57% of assets, while Rp1.67T Level 3 stakes posted a Rp596.7bn FV loss. A 20% write-down cuts equity by 6.34%.',
-        formula: '20% Stress on Rp9,100.9bn (Tokopedia + L3) = −Rp1,820.2bn (−3.98% assets / −6.34% equity)',
+          ? 'Saham Tokopedia (Rp7,43T) dan Bank Jago (Rp2,89T) mencapai 22,6% total aset. Jika nilai Tokopedia & aset privat turun 20%, ekuitas GoTo terpotong 6,3%.'
+          : 'Tokopedia (Rp7.43T) and Bank Jago (Rp2.89T) make up 22.6% of total assets. A 20% write-down on Tokopedia and private stakes cuts equity by 6.3%.',
+        formula: '20% Stress on Rp9,100.9bn (Tokopedia + L3) = −Rp1,820.2bn (−6.34% equity)',
         data_origin: 'Final Report §2.1 (Table 4; Notes 14 & 15)',
       },
       {
-        heading: id ? 'Red Flag 2: Insentif & Pihak Berelasi' : 'Red Flag 2: Incentives & Related Parties',
+        heading: id ? 'Risiko 2: Biaya Promo & Pihak Berelasi' : 'Risk 2: Promo Costs & Related-Party Fees',
         text: id
-          ? 'Sebagai agen (PSAK 72), insentif pelanggan Rp1.076,9M dibebankan ke pemasaran (Catatan 26), sementara pendapatan pihak berelasi (jasa Tokopedia) naik dari 5,20% menjadi 7,13% (Rp1.306,1M).'
-          : 'Under agent accounting (Note 2s), Rp1,076.9bn of excess customer incentives moved into sales & marketing (Note 26), while related-party revenue rose from 5.20% to 7.13% (Rp1,306.1bn).',
+          ? 'Promo berlebih Rp1,08T dicatat di biaya pemasaran (Catatan 26), dan pendapatan dari pihak berelasi (terutama Tokopedia) naik menjadi 7,13% dari total pendapatan.'
+          : 'Rp1.08T of customer promos sit inside marketing expenses (Note 26), and related-party revenue (mostly Tokopedia fees) rose to 7.13% of total revenue.',
         formula: 'Related-Party Rev = Rp1,306.1bn (7.13% of Rev) | Expensed Incentives = Rp1,076.9bn',
         data_origin: 'Final Report §2.1 (Notes 2s, 25 & 26)',
       },
       {
-        heading: id ? 'Red Flag 3: Pinjaman & Provisi Kredit (+134,9%)' : 'Red Flag 3: Lending & Credit Loss (+134.9%)',
+        heading: id ? 'Risiko 3: Kredit Macet GoPay Naik Cepat' : 'Risk 3: Rising GoPay Loan Losses',
         text: id
-          ? 'Piutang pinjaman Catatan 7 melonjak +72,64% ke Rp2,73T (menyerap −Rp2,02T CFO), sementara cadangan kerugian kredit naik +134,9% ke Rp407,7M (12,99% pinjaman bruto).'
-          : 'Note 7 consumer lending jumped +72.64% to Rp2.73T (absorbing −Rp2.02T CFO), while expected credit loss provisions surged +134.9% to Rp407.7bn (12.99% of gross loans).',
-        formula: 'ECL Allowance: Rp173.6bn → Rp407.7bn (+134.9%) | +500 bps loss = −Rp136.5bn (32% of 2026F EBIT)',
+          ? 'Pinjaman konsumen GoPay naik 72,6% ke Rp2,73T (memakai kas Rp2,02T), sementara cadangan kredit macet melonjak lebih dari 2x (+134,9%) ke Rp407,7M.'
+          : 'GoPay consumer loans grew 72.6% to Rp2.73T (using Rp2.02T of cash), while bad-loan provisions more than doubled (+134.9%) to Rp407.7B.',
+        formula: 'ECL Allowance: Rp173.6bn → Rp407.7bn (+134.9%) | +500 bps loss = −Rp136.5bn',
         data_origin: 'Final Report §2.1 (Note 7 & Cash Flow p. 21)',
       },
     ],
     7: [
       {
-        heading: id ? 'Driver Dasar Pasca-Tokopedia' : 'Post-Tokopedia Base Drivers',
+        heading: id ? 'Dasar Proyeksi 2024–2025' : 'Clean 2024–2025 Base Case',
         text: id
-          ? 'Mengaitkan Base Case murni ke kinerja lanjutan 2024–2025: pertumbuhan +15,27%, COGS 42,28%, Cash OpEx 55,70% (−708 bps YoY), dan CapEx 6,45%.'
-          : 'Anchoring Base Case strictly on continuing 2024–2025 trends sets growth at +15.27%, COGS 42.28%, Cash OpEx 55.70% (−708 bps YoY), and CapEx 6.45%.',
+          ? 'Proyeksi Base memakai tren pasca-Tokopedia: pendapatan tumbuh 15,27%, COGS 42,28%, Cash OpEx 55,70%, dan CapEx 6,45%.'
+          : 'Our Base Case uses GoTo’s actual post-Tokopedia track record: 15.27% sales growth, 42.28% COGS, 55.70% Cash OpEx, and 6.45% CapEx.',
         formula: '2025 Margin Spread = 57.72% Gross Margin − 55.70% Cash OpEx = +202 bps',
         data_origin: 'Final Report §4.1 (Table 11)',
       },
       {
-        heading: id ? 'Mengapa 2023 Dikeluarkan' : 'Why 2023 Averages Were Dropped',
+        heading: id ? 'Kenapa Data 2023 Dibuang' : 'Why We Dropped 2023 Data',
         text: id
-          ? 'Dek awal mencampur OpEx pra-exit 2023 (117,01%) dan CapEx Tokopedia 2024 (41,0%), menciptakan rata-rata buatan 78,5% OpEx dan 16,3% CapEx yang merusak proyeksi.'
-          : 'The earlier deck averaged 2023 pre-exit OpEx (117.01%) and 2024 Tokopedia intangibles (41.0% CapEx), inflating Base drivers to 78.5% OpEx and 16.3% CapEx.',
+          ? 'Model lama merata-ratakan biaya tinggi 2023 (OpEx 117%) dan aset Tokopedia 2024, sehingga proyeksi dulu terlihat membakar kas jauh berlebihan.'
+          : 'Our earlier draft averaged in 2023 pre-exit costs (117% OpEx) and Tokopedia intangibles, which exaggerated cash burn in the old forecast.',
         formula: 'Cash OpEx Restated: 78.5% (3-yr old) → 55.70% (FY2025 clean)',
-        data_origin: 'Final Report §1.3 & Appendix B Table B1 #1',
+        data_origin: 'Final Report §1.3 & Appendix B',
       },
       {
-        heading: id ? 'Tiga Skenario Terukur' : 'Non-Arbitrary Scenario Anchors',
+        heading: id ? 'Tiga Skenario yang Jelas' : 'Three Clear Scenarios',
         text: id
-          ? 'Optimistis memakai rasio biaya interim 1H 2026 (COGS 38,10%, OpEx 51,20%); Konservatif memakai lantai transisi 2024 (OpEx 62,78%, utang 10,25%).'
-          : 'Optimistic adopts audited 1H 2026 cost ratios (38.10% COGS, 51.20% OpEx); Conservative reverts to the clean 2024 post-exit floor (62.78% OpEx, 10.25% debt).',
+          ? 'Optimistis memakai efisiensi biaya 1H 2026 (OpEx 51,2%); Konservatif memakai pola biaya 2024 (OpEx 62,8%) jika promo kembali tinggi.'
+          : 'Optimistic uses GoTo’s lower 1H 2026 costs (51.2% OpEx); Conservative returns to 2024 costs (62.8% OpEx) if heavy promos come back.',
         formula: 'Scenarios: Opt (51.2% OpEx) | Base (55.7% OpEx) | Cons (62.8% OpEx)',
         data_origin: 'Final Report §4.1 (Table 11)',
       },
@@ -508,79 +508,79 @@ const restatedPointsMap = computed(() => {
     8: s8ByScenario[scenKey] || s8ByScenario.base,
     10: [
       {
-        heading: id ? 'DCF Berbalik Positif (+Rp10,38)' : 'DCF Flips Positive (+Rp10.38)',
+        heading: id ? 'DCF Jadi Positif (+Rp10,38/saham)' : 'DCF Turns Positive (+Rp10.38/share)',
         text: id
-          ? 'Menghapus pembakaran kas 2023 menaikkan DCF Dasar dari −Rp121,1 menjadi +Rp10,38/saham (Nilai Perusahaan −Rp2.988,5M ditambah Kas Bersih +Rp14.012,5M).'
-          : 'Stripping out 2023 distortions lifts Base DCF from −Rp121.1 to +Rp10.38/share (−Rp2,988.5bn Enterprise Value plus +Rp14,012.5bn Net Cash).',
+          ? 'Setelah membuang data 2023, nilai DCF naik dari −Rp121,1 menjadi +Rp10,38 per saham (Kas Bersih +Rp14,01T dikurangi nilai operasi −Rp2,99T).'
+          : 'Removing 2023 noise lifts Base DCF from −Rp121.1 to +Rp10.38 per share (+Rp14.01T Net Cash minus −Rp2.99T operating value).',
         formula: 'Equity Value = −Rp2,988.5bn EV + Rp14,012.5bn Net Cash = +Rp11,024.0bn (+Rp10.38/sh)',
-        data_origin: 'Final Report §5.2 (Table 15)',
+        data_origin: 'Final Report §5.2 (Table 16)',
       },
       {
-        heading: id ? 'Nilai Perusahaan Negatif vs. Kas' : 'Negative EV vs. Net Cash Cushion',
+        heading: id ? 'Kenapa Nilai Operasi Masih Negatif' : 'Why Operating Value Is Still Negative',
         text: id
-          ? 'Meski EBIT positif, CapEx (Rp1,36T–1,81T) melebihi EBIT+D&A sehingga FCFF tetap negatif (−Rp651M hingga −Rp117M), membuat nilai DCF berada di bawah Kas Bersih Rp13,19/saham.'
-          : 'Even with positive EBIT, CapEx exceeds EBIT+D&A so explicit FCFF stays negative (−Rp651bn to −Rp117bn), leaving DCF below Rp13.19/sh Net Cash.',
-        formula: 'PV Explicit FCFF (−Rp967.9bn) + PV Terminal Value (−Rp2,020.6bn, 67.6% EV) = −Rp2,988.5bn',
+          ? 'Meski EBIT positif, biaya CapEx (Rp1,36T–1,81T/thn) masih lebih besar sehingga arus kas bebas tetap minus. Nilai +Rp10,38 datang dari kas GoTo (Rp13,19/saham).'
+          : 'Even with positive EBIT, annual CapEx (Rp1.36T–1.81T) keeps free cash flow negative. The +Rp10.38 value comes from GoTo’s Rp13.19/share net cash.',
+        formula: 'PV Explicit FCFF (−Rp967.9bn) + PV Terminal Value (−Rp2,020.6bn) = −Rp2,988.5bn EV',
         data_origin: 'Final Report §5.2',
       },
       {
-        heading: id ? 'Penalti Residual Income (−Rp12,23)' : 'Residual Income Penalty (−Rp12.23)',
+        heading: id ? 'Residual Income Tetap Negatif (−Rp12,23)' : 'Residual Income Is Still Negative (−Rp12.23)',
         text: id
-          ? 'ROE 2028F hanya +0,09% melawan beban Ke 8,452% (~Rp2,42T/thn), menghasilkan RI −Rp12,23/saham (atau +Rp0,24/sh pada g = 0%; +Rp21,13/sh jika ROE = Ke setelah Tahun 3).'
-          : 'With 2028F ROE at just +0.09% vs an 8.452% Ke hurdle (~Rp2.42T/yr), perpetual RI is −Rp12.23/sh (+Rp0.24/sh at g = 0%; +Rp21.13/sh if ROE = Ke in Yr 4+).',
-        formula: 'g_fund = 126.42% × 2.70% ROIC = +3.41% (capped at 3.00% < 4.502% Rf)',
-        data_origin: 'Final Report §5.1–5.2 (Tables 14–15)',
+          ? 'ROE 2028F hanya +0,09%, jauh di bawah target investor 8,45%. Hasilnya −Rp12,23/saham (atau +Rp0,24 jika g = 0%; +Rp21,13 jika ROE = Ke di Tahun 4+).'
+          : '2028F ROE (+0.09%) is far below the 8.45% return investors require. That gives −Rp12.23/share (+Rp0.24 at 0% growth; +Rp21.13 if ROE hits 8.45% in Yr 4+).',
+        formula: 'Fundamental g = 126.42% × 2.70% ROIC = +3.41% (selected 3.00%)',
+        data_origin: 'Final Report §5.1–5.2 (Tables 15–16)',
       },
     ],
     11: [
       {
-        heading: id ? 'Rentang Nilai Wajar: Rp10,38–Rp16,75' : 'Defensible Range: Rp10.38–Rp16.75',
+        heading: id ? 'Rentang Nilai Wajar: Rp10,38–Rp16,75' : 'Fair Value Range: Rp10.38–Rp16.75',
         text: id
-          ? 'Rentang intrinsik Laporan Akhir mencakup Base DCF (+Rp10,38/sh) hingga Optimistic RI (+Rp16,75/sh), berpusat di sekitar Kas Bersih Rp13,19/sh—jauh di bawah Rp25,00.'
-          : 'Our defensible range spans Base DCF (+Rp10.38/sh) to Optimistic RI (+Rp16.75/sh), centered around Rp13.19/sh Net Cash—well below the Rp25.00 market price.',
-        formula: 'Intrinsic Floor Rp10.38 (Base DCF) to Ceiling Rp16.75 (Opt. RI) vs Rp25.00 Market',
-        data_origin: 'Final Report §5.3 (Table 16)',
+          ? 'Nilai wajar GoTo berada di Rp10,38 (DCF Base) hingga Rp16,75 (RI Optimistis), di sekitar Kas Bersih Rp13,19. Harga pasar Rp25,00 jauh terlalu tinggi.'
+          : 'GoTo’s fair value sits between Rp10.38 (Base DCF) and Rp16.75 (Optimistic RI), centered around Rp13.19 Net Cash. The Rp25.00 market price is too high.',
+        formula: 'Value Range: Rp10.38 (Base DCF) to Rp16.75 (Opt. RI) vs Rp25.00 Market',
+        data_origin: 'Final Report §5.3 (Table 17)',
       },
       {
-        heading: id ? 'Mengapa P/B Grab (Rp91,02) Ditolak' : 'Why Grab P/B (Rp91.02) Is Rejected',
+        heading: id ? 'Kenapa Kelipatan Grab (Rp91,02) Tidak Dipakai' : 'Why We Do Not Use Grab’s Multiple (Rp91.02)',
         text: id
-          ? 'Kelipatan P/B 3,04x Grab mencerminkan emiten dengan ROE +2,96% dan EBIT positif; memakainya untuk GoTo (ROIC 2,70% < WACC 7,76%) tidak valid secara ekonomi.'
-          : 'Grab’s 3.04x P/B reflects +2.96% ROE and positive EBIT; blending it with GoTo (2.70% ROIC < 7.76% WACC; +0.09% ROE) is economically invalid.',
-        formula: 'Grab P/B = US$4.99 / US$1.6419 = 3.0391x × Rp29.95 BVPS = Rp91.02/sh (Rejected)',
+          ? 'Grab sudah untung (ROE +2,96%), sehingga wajar dihargai 3,04x P/B. GoTo belum menutup biaya modalnya, jadi tidak adil memakai kelipatan Grab.'
+          : 'Grab is already profitable (+2.96% ROE), which justifies its 3.04x P/B multiple. GoTo still earns below its cost of capital, so Grab’s multiple does not fit.',
+        formula: 'Grab P/B = US$4.99 / US$1.6419 = 3.0391x × Rp29.95 BVPS = Rp91.02/sh',
         data_origin: 'Final Report §5.3 & Grab FY2025 20-F',
       },
       {
-        heading: id ? 'Penyelarasan Tanggal Informasi' : 'Information-Date Alignment',
+        heading: id ? 'Catatan Tanggal Data' : 'Pricing Date vs. Audited Results',
         text: id
-          ? 'Harga acuan Rp25,00 (30 Des 2025) dibandingkan terhadap LK Auditan FY2025 (terbit Maret 2026) serta rasio biaya interim 1H 2026 khusus untuk skenario Optimistis.'
-          : 'Benchmarks the Dec 30, 2025 Rp25.00 share price against March 2026 audited FY2025 results (and 1H 2026 cost ratios in the Optimistic scenario only).',
+          ? 'Harga Rp25,00 (30 Des 2025) kami bandingkan dengan laporan audit FY2025 (terbit Maret 2026), serta data biaya 1H 2026 khusus untuk skenario Optimistis.'
+          : 'We compare the Dec 30, 2025 Rp25.00 share price against audited FY2025 statements (published March 2026), using 1H 2026 costs only in the Optimistic case.',
         formula: 'Market Quote: Dec 30, 2025 | FY2025 Audited Filing: March 2026',
-        data_origin: 'Final Report §5.3 (Rubric C4)',
+        data_origin: 'Final Report §5.3',
       },
     ],
     12: [
       {
-        heading: id ? 'SELL / AVOID Tetap Konsisten' : 'SELL / AVOID Confirmed at Rp25.00',
+        heading: id ? 'Kesimpulan: Tetap SELL / AVOID di Rp25' : 'Verdict: SELL / AVOID at Rp25.00',
         text: id
-          ? 'Meski 5 kesalahan historis sudah dikoreksi dan Base Case berbalik laba pada 2028F (+Rp25,0M), harga Rp25,00 (2,41x Base DCF Rp10,38 & 1,90x Kas Bersih) masih terlalu mahal.'
-          : 'Even after fixing all 5 errors and turning net-profitable in 2028F (+Rp25.0bn), Rp25.00 (2.41x Base DCF & 1.90x Net Cash) prices in unachieved upside.',
-        formula: 'Market Rp25.00 vs Defensible Range Rp10.38–Rp16.75 (−33% to −58% gap)',
+          ? 'Walau Base Case mulai untung kecil di 2028F (+Rp25M), harga Rp25,00 (2,4x nilai DCF dan 1,9x kas bersih) terlalu mahal untuk investor jangka pendek.'
+          : 'Even though the Base Case turns slightly profitable in 2028F (+Rp25B), paying Rp25.00 (2.4x DCF and 1.9x Net Cash) is too expensive for a short-term investor.',
+        formula: 'Market Rp25.00 vs Fair Value Rp10.38–Rp16.75 (−33% to −58% downside)',
         data_origin: 'Final Report §6.1',
       },
       {
-        heading: id ? 'Ambang Re-Rating Terukur (Appendix A6)' : 'Quantitative Re-Rating Triggers (Appendix A6)',
+        heading: id ? 'Kapan Rekomendasi Berubah?' : 'When Would We Change Our Rating?',
         text: id
-          ? 'Upgrade BUY jika Cash OpEx ≤ 51,2% & GM ≥ 61,9% dua kuartal beruntun; HOLD jika harga ≤ Rp13,20 (1,0x Kas Bersih) dengan FCF positif; Perkuat SELL jika OpEx ≥ 60% atau provisi ≥ Rp650M.'
-          : 'BUY trigger: Cash OpEx ≤ 51.2% & GM ≥ 61.9% for 2 quarters. HOLD trigger: Price ≤ Rp13.20 (1.0x Net Cash) with FCF > 0. Reinforce SELL: OpEx ≥ 60% or provisions ≥ Rp650bn.',
+          ? 'Naik ke BUY jika Cash OpEx ≤ 51,2% & GM ≥ 61,9% dua kuartal beruntun. HOLD jika harga turun ≤ Rp13,20 dengan arus kas positif. Tetap SELL jika OpEx ≥ 60%.'
+          : 'Move to BUY if Cash OpEx stays ≤ 51.2% and Gross Margin ≥ 61.9% for two quarters. Move to HOLD if price drops ≤ Rp13.20 with positive FCF. Stay SELL if OpEx ≥ 60%.',
         formula: 'BUY: OpEx ≤ 51.2% & GM ≥ 61.9% | HOLD: Price ≤ Rp13.20 & FCF > 0',
-        data_origin: 'Appendix A6 · Re-Rating Triggers',
+        data_origin: 'Final Report §6.2 (Table 18)',
       },
       {
-        heading: id ? 'Risiko Utama & Pengembalian Modal' : 'ROIC Spread & Key Thesis Risks',
+        heading: id ? 'Risiko Utama yang Perlu Dipantau' : 'Key Risks to Watch',
         text: id
-          ? 'Risiko naik: efisiensi biaya 1H 2026 bertahan penuh atau M&A strategis. Risiko turun: provisi kredit Catatan 7 (+134,9%) dan potensi penurunan nilai Tokopedia.'
-          : 'Upside risks: full-year 1H 2026 cost containment or strategic M&A. Downside risks: Note 7 credit losses (+134.9%) and Tokopedia associate write-downs.',
-        formula: '2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps economic spread',
+          ? 'Risiko naik: efisiensi biaya 1H 2026 bertahan penuh atau ada merger/akuisisi. Risiko turun: kredit macet GoPay makin naik atau penurunan nilai Tokopedia.'
+          : 'Upside risks: faster cost cuts matching 1H 2026 or an M&A buyout. Downside risks: rising GoPay loan losses or a write-down on Tokopedia.',
+        formula: '2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps gap',
         data_origin: 'Final Report §6.3',
       },
     ],
@@ -971,7 +971,7 @@ const bannerMap = {
 }
 const slideBannerUrl = computed(() => props.slide.hide_banner ? '' : bannerMap[layoutSlide.value] || '')
 const lossScale = computed(() => Math.max(...(props.slide.loss_chart?.series || []).map(row => Math.abs(row.value)), 1))
-const rangeX = value => 118 + (value + 140) / 260 * 370
+const rangeX = value => 145 + (value + 140) / 260 * 345
 
 const pointIcons = {
   '2-2': {
@@ -1426,18 +1426,19 @@ const provisionGrowth = computed(() => {
                   <option value="2yr">{{ lang === 'id' ? '2-Thn (2024–2025)' : '2-Yr Avg (2024–2025)' }}</option>
                 </select>
               </figcaption>
-              <svg viewBox="0 0 560 154" role="img" :aria-label="isRestated ? (lang === 'id' ? 'DCF plus 10,4; RI minus 12,2; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF plus 10.4; RI minus 12.2; Grab P/B 91.0; reference price 25 rupiah per share.') : (lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.')">
-                <line :x1="rangeX(0)" :x2="rangeX(0)" y1="20" y2="128" stroke="#a4bfae" />
-                <line :x1="rangeX(25)" :x2="rangeX(25)" y1="20" y2="128" stroke="#173d25" stroke-dasharray="4 4" />
+              <svg viewBox="0 0 560 176" role="img" :aria-label="isRestated ? (lang === 'id' ? 'DCF plus 10,4; RI minus 12,2; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF plus 10.4; RI minus 12.2; Grab P/B 91.0; reference price 25 rupiah per share.') : (lang === 'id' ? 'DCF minus 121,1; RI minus 75,1; P/B Grab 91,0; acuan 25 rupiah per saham.' : 'DCF minus 121.1; RI minus 75.1; Grab P/B 91.0; reference price 25 rupiah per share.')">
+                <line :x1="rangeX(0)" :x2="rangeX(0)" y1="20" y2="148" stroke="#a4bfae" />
+                <line :x1="rangeX(25)" :x2="rangeX(25)" y1="20" y2="148" stroke="#173d25" stroke-dasharray="4 4" />
                 <text :x="rangeX(25)" y="13" text-anchor="middle" fill="#526a59" font-size="12">{{ lang === 'id' ? 'Acuan Rp25' : 'Ref. Rp25' }}</text>
                 <g v-for="(row,i) in visibleValuationRange" :key="row.label">
-                  <text x="0" :y="42+i*33" fill="#173d25" font-size="15">{{ row.label }}</text>
-                  <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="27+i*33" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="21" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
-                  <text x="552" :y="42+i*33" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
+                  <text x="0" :y="40+i*40" fill="#173d25" font-size="14.5" font-weight="650">{{ row.label }}</text>
+                  <text v-if="getInlineAbbrHint(row.label, lang)" x="0" :y="53+i*40" fill="#5a7363" font-size="10">{{ getInlineAbbrHint(row.label, lang).replace(' (Economic Profit)', '').replace(' (Laba Ekonomi)', '') }}</text>
+                  <rect :x="Math.min(rangeX(row.value),rangeX(0))" :y="28+i*40" :width="Math.abs(rangeX(row.value)-rangeX(0))" height="22" :fill="row.value < 0 ? '#a8cdb3' : '#008c2c'" />
+                  <text x="554" :y="44+i*40" text-anchor="end" fill="#173d25" font-size="15" font-weight="650">{{ row.value > 0 ? '+' : '−' }}{{ Math.abs(row.value).toFixed(1) }}</text>
                 </g>
-                <text :x="rangeX(-140)" y="144" fill="#63786a" font-size="12">−140</text>
-                <text :x="rangeX(0)" y="144" text-anchor="middle" fill="#63786a" font-size="12">0</text>
-                <text :x="rangeX(120)" y="144" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
+                <text :x="rangeX(-140)" y="166" fill="#63786a" font-size="12">−140</text>
+                <text :x="rangeX(0)" y="166" text-anchor="middle" fill="#63786a" font-size="12">0</text>
+                <text :x="rangeX(120)" y="166" text-anchor="end" fill="#63786a" font-size="12">+120 Rp/share</text>
               </svg>
               <p v-if="isRestated && isGrabSlide" class="slide-chart-formula">{{ lang === 'id' ? 'Rentang Nilai Wajar: Base DCF (+Rp10,38) – Opt. RI (+Rp16,75) · Kas Bersih Rp13,19/sh vs Harga Pasar Rp25,00' : 'Defensible Range: Base DCF (+Rp10.38) – Opt. RI (+Rp16.75) · Net Cash Rp13.19/sh vs Market Rp25.00' }}</p>
               <p v-else-if="slide.chart_formula" class="slide-chart-formula">{{ slide.chart_formula }}</p>

@@ -51,6 +51,155 @@ const openSchedules = ref({ 0: true })
 const isSlide9Walkthrough = computed(() => (props.item.slide?.slide_num || 0) === 9)
 const activeSlide9Comp = ref('wacc')
 
+// Slide 3 (Porter's Five Forces) interactive visual dialogue walk-through sub-menu
+const isPorterWalkthrough = computed(() => {
+  if (props.item.kind === 'five_force') return true
+  if ((props.item.slide?.slide_num || 0) !== 3) return false
+  const t = `${props.item.title || ''}`.toLowerCase()
+  return /entrant|supplier|buyer|substitut|rivalry|pendatang|pemasok|pembeli|substitusi|rivalitas/.test(t)
+})
+const activePorterForce = ref('entrants')
+
+const detectInitialPorterForce = (item) => {
+  const txt = `${item?.title || ''} ${item?.keywords || ''} ${item?.value || ''}`.toLowerCase()
+  if (txt.includes('supplier') || txt.includes('pemasok')) return 'suppliers'
+  if (txt.includes('buyer') || txt.includes('pembeli')) return 'buyers'
+  if (txt.includes('substitut') || txt.includes('substitusi')) return 'substitutes'
+  if (txt.includes('rival') || txt.includes('persaingan')) return 'rivalry'
+  return 'entrants'
+}
+
+const porterForces = computed(() => {
+  const id = isId.value
+  return [
+    {
+      id: 'entrants',
+      shortLabel: id ? '1. Pendatang Baru (Rendah–Sedang)' : '1. New Entrants (Low–Mod)',
+      title: id ? 'Ancaman Pendatang Baru' : 'Threat of New Entrants',
+      rating: id ? 'Rendah–Sedang' : 'Low–Moderate',
+      ratingTone: 'pos',
+      image: '/visuals/force_entrants.png',
+      headline: id
+        ? 'Membuat aplikasi mudah, tetapi meniru izin keuangan, teknologi Rp 5,94T, dan jaringan GoTo sangat sulit.'
+        : 'Building an app is easy, but replicating GoTo’s licenses, Rp 5.94T tech stack, and nationwide network is hard.',
+      evidence: id
+        ? [
+            'Izin Bank Indonesia (BI): PT Dompet Anak Bangsa (GoPay) & PT Midtrans memegang izin sistem pembayaran & uang elektronik dengan syarat modal minimum berbasis risiko.',
+            'Izin OJK & PSE: PT Multifinance Anak Bangsa memegang izin pembiayaan OJK untuk pinjaman konsumen, ditambah wajib daftar PSE Komdigi & aturan Permendag e-commerce.',
+            'Skala Teknologi & Jaringan: Rp 5,94T aset perangkat lunak (vs. Rp 114,5M Bukalapak), 66 juta pengguna tahunan, 6,4 juta merchant, dan 3 juta+ pengemudi.',
+          ]
+        : [
+            'Bank Indonesia (BI) Licenses: PT Dompet Anak Bangsa (GoPay) & PT Midtrans hold payment/e-money authorizations with risk-weighted capital rules.',
+            'OJK & Komdigi Registrations: PT Multifinance Anak Bangsa holds an OJK financing-company license, plus mandatory Komdigi PSE and Permendag compliance.',
+            'Tech & Ecosystem Moat: Rp 5.94T software assets (vs. Bukalapak Rp 114.5B), 66M annual users, 6.4M merchants, and 3M+ driver partners.',
+          ],
+    },
+    {
+      id: 'suppliers',
+      shortLabel: id ? '2. Pemasok (Rendah)' : '2. Suppliers (Low)',
+      title: id ? 'Daya Tawar Pemasok' : 'Bargaining Power of Suppliers',
+      rating: id ? 'Rendah' : 'Low',
+      ratingTone: 'pos',
+      image: '/visuals/force_suppliers.png',
+      headline: id
+        ? 'Jutaan mitra pengemudi, merchant, dan vendor tersebar luas sehingga tidak ada satu pihak pun yang bisa mendikte harga.'
+        : 'Millions of fragmented drivers, merchants, and vendors mean no single supplier can dictate pricing or terms.',
+      evidence: id
+        ? [
+            'Basis Mitra Tersebar: Lebih dari 3 juta pengemudi dan 6,4 juta merchant; tidak ada satu pemasok pun yang melebihi 10% pendapatan bersih.',
+            'Ketergantungan Platform: Mitra kecil bergantung pada volume pesanan harian GoTo, sehingga GoTo dapat memangkas insentif Gojek 15,9% di 2025.',
+            'Disiplin Pengadaan & Cloud: Renegosiasi infrastruktur cloud memangkas biaya >50% pada 2025 dengan ketergantungan rendah pada barang impor.',
+          ]
+        : [
+            'Fragmented Base: 3M+ drivers and 6.4M merchants; zero single vendor exceeds 10% of net revenue.',
+            'Platform Dependency: Small merchants and drivers rely on GoTo’s daily order flow, allowing GoTo to cut Gojek incentives by 15.9% in 2025.',
+            'Tech Procurement Discipline: Cloud renegotiations delivered >50% savings in 2025 with minimal exposure to physical imported inputs.',
+          ],
+    },
+    {
+      id: 'buyers',
+      shortLabel: id ? '3. Pembeli (Sedang)' : '3. Buyers (Medium)',
+      title: id ? 'Daya Tawar Pembeli' : 'Bargaining Power of Buyers',
+      rating: id ? 'Sedang' : 'Medium',
+      ratingTone: 'accent',
+      image: '/visuals/force_buyers.png',
+      headline: id
+        ? 'Pengguna tersebar luas, tetapi biaya pindah aplikasi nyaris nol sehingga konsumen sangat sensitif terhadap promo dan tarif.'
+        : 'Individual users are fragmented, yet near-zero switching costs make Indonesian consumers highly price-sensitive.',
+      evidence: id
+        ? [
+            'Biaya Pindah Hampir Nol: Pengguna membandingkan tarif, ongkos kirim, dan transfer gratis GoPay dengan pesaing dalam hitungan detik.',
+            'Sensitivitas Harga Tinggi: Laporan Tahunan 2025 (hal. 46 & 168) menegaskan persaingan harga dan promo sangat menentukan retensi pengguna.',
+            'Penyeimbang Skala: Basis 66 juta pengguna (+24% YoY) yang tersebar menjaga agar tidak ada pembeli tunggal yang mendominasi.',
+          ]
+        : [
+            'Near-Zero Switching Cost: Users compare fares, delivery promos, and free GoPay transfers across competing apps in seconds.',
+            'High Price Sensitivity: GoTo’s 2025 Annual Report (pp. 46, 168) explicitly cites price competition and promo sensitivity as core risks.',
+            'Fragmented User Counterweight: 66M annual users (+24% YoY) prevent any single customer from exerting direct pricing leverage.',
+          ],
+    },
+    {
+      id: 'substitutes',
+      shortLabel: id ? '4. Substitusi (Sedang)' : '4. Substitutes (Medium)',
+      title: id ? 'Ancaman Produk Substitusi' : 'Threat of Substitutes',
+      rating: id ? 'Sedang' : 'Medium',
+      ratingTone: 'accent',
+      image: '/visuals/force_substitutes.png',
+      headline: id
+        ? 'Masyarakat selalu punya alternatif di luar aplikasi: transportasi umum, makan di tempat, atau transfer bank biasa.'
+        : 'Consumers always have offline or non-super-app alternatives: public transit, dine-in, or standard bank transfers.',
+      evidence: id
+        ? [
+            'Substitusi Transportasi: MRT, TransJakarta, KRL, angkutan lokal, dan kepemilikan motor/mobil pribadi yang tinggi di Indonesia.',
+            'Substitusi Pesan-Antar: Makan di tempat (dine-in), masak sendiri, atau pesan langsung ke restoran sekitar tanpa biaya aplikasi.',
+            'Substitusi Pembayaran: Uang tunai, kartu debit/kredit, serta mobile banking BI-FAST dan QRIS bank.',
+          ]
+        : [
+            'Mobility Alternatives: Public transit (MRT, TransJakarta, KRL) and high private motorbike/car ownership across Indonesia.',
+            'Food Alternatives: Dining in at restaurants, home cooking, or direct walk-in takeaway avoiding platform fees.',
+            'Payment Alternatives: Cash, bank cards, and standard mobile-banking BI-FAST / QRIS transfers.',
+          ],
+    },
+    {
+      id: 'rivalry',
+      shortLabel: id ? '5. Rivalitas (Tinggi)' : '5. Rivalry (High)',
+      title: id ? 'Rivalitas Persaingan (Paling Membatasi)' : 'Competitive Rivalry (Most Binding Force)',
+      rating: id ? 'Tinggi' : 'High',
+      ratingTone: 'warn',
+      image: '/visuals/force_rivalry.png',
+      headline: id
+        ? 'Persaingan langsung yang ketat di setiap lini bisnis menahan daya harga dan memaksa belanja S&M Rp 3,09T + R&D Rp 2,15T.'
+        : 'Fierce head-to-head competition across every vertical caps pricing power and forces Rp 3.09T S&M + Rp 2.15T R&D spend.',
+      evidence: id
+        ? [
+            'Pangsa Pasar Ketat: Food delivery 2025 — GrabFood 46% vs. GoFood 31% vs. ShopeeFood 23%; transportasi bersaing dengan Grab, Maxim & inDrive.',
+            'Dampak Langsung ke Laba Rugi: Beban Penjualan & Pemasaran Rp 3,09T (+8% YoY) + Pengembangan Produk Rp 2,15T (+23% YoY) + Insentif Rp 1,08T.',
+            'Pergeseran ke Risiko Kredit: Di tengah ketatnya persaingan, pinjaman GoPay naik +72,6% ke Rp 2,73T dan provisi kredit melonjak +134,9% ke Rp 408M.',
+          ]
+        : [
+            'Crowded Market Shares: 2025 food delivery — GrabFood 46% vs. GoFood 31% vs. ShopeeFood 23%; rides pressured by Grab, Maxim & inDrive.',
+            'Direct P&L Cost: Forced Rp 3.09T Sales & Marketing (+8% YoY), Rp 2.15T Product Dev (+23% YoY), and Rp 1.08T expensed incentives.',
+            'Push Into Credit Risk: Seeking higher-margin growth amid rivalry, GoPay consumer loans jumped +72.6% to Rp 2.73T while credit provisions surged +134.9% to Rp 408B.',
+          ],
+    },
+  ]
+})
+
+const currentPorterForce = computed(() =>
+  porterForces.value.find((f) => f.id === activePorterForce.value) || porterForces.value[0]
+)
+const currentPorterIdx = computed(() =>
+  porterForces.value.findIndex((f) => f.id === activePorterForce.value)
+)
+const prevPorterForce = computed(() =>
+  currentPorterIdx.value > 0 ? porterForces.value[currentPorterIdx.value - 1] : null
+)
+const nextPorterForce = computed(() =>
+  currentPorterIdx.value >= 0 && currentPorterIdx.value < porterForces.value.length - 1
+    ? porterForces.value[currentPorterIdx.value + 1]
+    : null
+)
+
 const detectInitialSlide9Comp = (item) => {
   const txt = `${item?.title || ''} ${item?.value || ''} ${item?.keywords || ''} ${item?.detail || ''}`.toLowerCase()
   if (txt.includes('risk-free') || txt.includes('risk free') || txt.includes('4.502') || txt.includes('6.120') || txt.includes('sovereign')) return 'rf'
@@ -314,6 +463,7 @@ watch(
   (newItem) => {
     activeTab.value = 'overview'
     activeSlide9Comp.value = detectInitialSlide9Comp(newItem)
+    activePorterForce.value = detectInitialPorterForce(newItem)
     showMoreAnalysis.value = false
     showRightPanel.value = false
     showAllCalcRows.value = false
@@ -615,21 +765,68 @@ const chartConfig = computed(() => {
     }
   }
 
-  // Slide 4: Profitability & DuPont ROE
+  // Slide 4: Profitability & Three-Step DuPont ROE Decomposition
   if (sn === 4) {
     return {
-      type: 'diverging',
-      title: id ? 'Lintasan ROE GoTo (2023–2025) vs. Pembanding Grab' : 'DuPont ROE Trajectory (2023–2025) vs. Grab Peer',
-      subtitle: id ? 'Margin bersih negatif menahan ROE meski perputaran aset 0,40x' : 'Negative Net Margin keeps GoTo ROE below Grab (+2.96%) despite 0.40x turnover',
-      unit: '%',
-      clampMin: -30,
-      items: [
-        { label: id ? '2024 Pasca-Exit' : '2024 Post-Exit ROE', val: -17.97, display: '−17.97%' },
-        { label: id ? '2025 Konsolidasian' : '2025 Consol. ROE', val: -5.23, display: '−5.23%', accent: true },
-        { label: id ? '2025 Ekuitas Induk' : '2025 Parent ROE', val: -3.73, display: '−3.73%' },
-        { label: 'Grab FY2025 Cons.', val: 2.96, display: '+2.96%', accent: true },
-        { label: 'Grab FY2025 Parent', val: 3.98, display: '+3.98%' },
-        { label: id ? 'Batas Cost of Equity' : 'GoTo Cost of Equity (Ke)', val: 8.45, display: '8.45% Hurdle' },
+      type: 'dupont_3step',
+      title: id ? 'Dekomposisi DuPont 3-Langkah: GoTo vs. Grab' : 'Three-Step DuPont ROE: GoTo vs. Grab',
+      subtitle: id
+        ? 'ROE = Margin Bersih × Perputaran Aset × Equity Multiplier'
+        : 'ROE = Net Margin × Asset Turnover × Equity Multiplier',
+      unit: 'Ke = 8.45%',
+      rows: [
+        {
+          label: id ? 'GoTo 2024 (Konsol.)' : 'GoTo 2024 (Consol.)',
+          shortLabel: "GoTo '24\nCons.",
+          tone: 'crimson',
+          margin: -34.38,
+          marginDisp: '−34.38%',
+          turnover: 0.37,
+          turnoverDisp: '0.37x',
+          leverage: 1.42,
+          leverageDisp: '1.42x',
+          roe: -17.97,
+          roeDisp: '−17.97%',
+        },
+        {
+          label: id ? 'GoTo 2025 (Konsol.)' : 'GoTo 2025 (Consol.)',
+          shortLabel: "GoTo '25\nCons.",
+          tone: 'amber',
+          margin: -8.20,
+          marginDisp: '−8.20%',
+          turnover: 0.40,
+          turnoverDisp: '0.40x',
+          leverage: 1.59,
+          leverageDisp: '1.59x',
+          roe: -5.23,
+          roeDisp: '−5.23%',
+        },
+        {
+          label: id ? 'GoTo 2025 (Induk)' : 'GoTo 2025 (Parent)',
+          shortLabel: "GoTo '25\nParent",
+          tone: 'blue',
+          margin: -6.47,
+          marginDisp: '−6.47%',
+          turnover: 0.40,
+          turnoverDisp: '0.40x',
+          leverage: 1.44,
+          leverageDisp: '1.44x',
+          roe: -3.73,
+          roeDisp: '−3.73%',
+        },
+        {
+          label: id ? 'Grab 2025 (Konsol.)' : 'Grab 2025 (Consol.)',
+          shortLabel: "Grab '25\nCons.",
+          tone: 'emerald',
+          margin: 5.93,
+          marginDisp: '+5.93%',
+          turnover: 0.28,
+          turnoverDisp: '0.28x',
+          leverage: 1.77,
+          leverageDisp: '1.77x',
+          roe: 2.96,
+          roeDisp: '+2.96%',
+        },
       ],
     }
   }
@@ -992,6 +1189,41 @@ const chartConfig = computed(() => {
 // Compute SVG geometry for diverging / horizontal / grouped charts
 const svgChartData = computed(() => {
   const cfg = chartConfig.value
+  if (cfg.type === 'dupont_3step') {
+    const marginMaxNeg = 40
+    const marginMaxPos = 15
+    const marginSpan = marginMaxNeg + marginMaxPos
+    const marginZeroPct = (marginMaxNeg / marginSpan) * 100
+
+    const roeMaxNeg = 22
+    const roeMaxPos = 10
+    const roeSpan = roeMaxNeg + roeMaxPos
+    const roeZeroPct = (roeMaxNeg / roeSpan) * 100
+
+    const multMax = 2.0
+
+    const rows = (cfg.rows || []).map((r) => {
+      const mW = (Math.abs(r.margin) / marginSpan) * 100
+      const mLeft = r.margin < 0 ? marginZeroPct - mW : marginZeroPct
+      const rW = (Math.abs(r.roe) / roeSpan) * 100
+      const rLeft = r.roe < 0 ? roeZeroPct - rW : roeZeroPct
+      return {
+        ...r,
+        marginBarLeft: `${Math.max(0, mLeft).toFixed(2)}%`,
+        marginBarWidth: `${Math.max(2, mW).toFixed(2)}%`,
+        roeBarLeft: `${Math.max(0, rLeft).toFixed(2)}%`,
+        roeBarWidth: `${Math.max(2, rW).toFixed(2)}%`,
+        turnoverHeight: `${Math.max(10, Math.round((r.turnover / multMax) * 100))}%`,
+        leverageHeight: `${Math.max(10, Math.round((r.leverage / multMax) * 100))}%`,
+      }
+    })
+    return {
+      mode: 'dupont_3step',
+      marginZeroPct: `${marginZeroPct.toFixed(2)}%`,
+      roeZeroPct: `${roeZeroPct.toFixed(2)}%`,
+      rows,
+    }
+  }
   if (cfg.type === 'vertical_cards') {
     const cards = (cfg.cards || []).map((card) => {
       const maxVal = Math.max(...card.bars.map((b) => Math.abs(b.val)), 1)
@@ -1171,7 +1403,7 @@ const yoyRatioCards = computed(() => {
     return [
       {
         title: id ? 'Margin Operasi (EBIT %)' : 'Operating Margin (EBIT %)',
-        delta: '+1,204 bps YoY',
+        delta: '+12.04% YoY',
         tone: 'warn',
         note: id
           ? 'Efisiensi insentif & cloud mengangkat margin inti ke ambang impas.'
@@ -1184,7 +1416,7 @@ const yoyRatioCards = computed(() => {
       },
       {
         title: id ? 'Margin Laba Bersih' : 'Net Profit Margin',
-        delta: '+2,618 bps YoY',
+        delta: '+26.18% YoY',
         tone: 'warn',
         note: id
           ? 'Rugi bersih menyusut, namun kompensasi berbasis saham Rp593B & bunga masih membebani.'
@@ -1210,7 +1442,7 @@ const yoyRatioCards = computed(() => {
       },
       {
         title: id ? 'ROE Konsolidasian (vs Grab +2,96%)' : 'Cons. ROE (vs Grab +2.96%)',
-        delta: '+1,274 bps YoY',
+        delta: '+12.74% YoY',
         tone: 'warn',
         note: id
           ? 'Leverage moderat (1,59x) belum membantu saat margin masih negatif.'
@@ -1578,6 +1810,29 @@ const slide7ProFormaCards = computed(() => {
 })
 
 // Slide 7: Focused Financial-Statement Forecast Assumptions Table (placed BELOW charts)
+const hoverTip = ref({ visible: false, x: 0, y: 0, title: '', detail: '' })
+
+const showHoverTip = (evt, title, detail) => {
+  if (!detail) return
+  hoverTip.value = {
+    visible: true,
+    x: evt.clientX,
+    y: evt.clientY,
+    title,
+    detail,
+  }
+}
+
+const moveHoverTip = (evt) => {
+  if (!hoverTip.value.visible) return
+  hoverTip.value.x = evt.clientX
+  hoverTip.value.y = evt.clientY
+}
+
+const hideHoverTip = () => {
+  hoverTip.value.visible = false
+}
+
 const slide7AssumptionsTable = computed(() => {
   if (props.item.slide?.slide_num !== 7) return null
   const id = isId.value
@@ -1597,6 +1852,123 @@ const slide7AssumptionsTable = computed(() => {
       [id ? 'Suku Bunga Utang Efektif (Kd)' : 'Effective Debt Interest Rate', '10.25%', '6.91%', '6.91%', '6.91%', '10.25%'],
       [id ? 'Tarif Pajak Penghasilan Badan' : 'Corporate Income Tax Rate', '22.00%', '22.00%', '22.00%', '22.00%', '22.00%'],
     ],
+    tooltips: id
+      ? [
+          [
+            'Pertumbuhan pendapatan bersih YoY untuk proyeksi 2026F–2028F (Catatan 25).',
+            'Audit 2024 vs 2023: Rp 15,89T vs Rp 14,79T.',
+            'Audit 2025 vs 2024: Rp 18,32T vs Rp 15,89T (Catatan 25).',
+            'Dipertahankan pada laju organik pasca-Tokopedia 2025 (tanpa 2023).',
+            'Skenario akselerasi FinTech & On-Demand (+273 bps di atas Base).',
+            'Kembali ke lantai transisi pasca-exit 2024.',
+          ],
+          [
+            'Biaya langsung pengiriman & platform dibagi pendapatan bersih (Catatan 26).',
+            'Audit 2024: COGS Rp 7.413M ÷ Pendapatan Rp 15.894M.',
+            'Audit 2025: COGS Rp 7.746M ÷ Pendapatan Rp 18.322M (Gross Margin 57,72%).',
+            'Mengikuti rasio audit FY2025 (Gross Margin 57,72%).',
+            'Mengacu laporan interim 1H 2026 GoTo (Gross Margin 61,90%).',
+            'Kembali ke rasio COGS pasca-exit FY2024 (Gross Margin 53,36%).',
+          ],
+          [
+            'Beban operasional di luar D&A non-kas (G&A, S&M, Produk, Ops; Catatan 26).',
+            'Audit 2024: Cash OpEx Rp 9.978M ÷ Pendapatan Rp 15.894M.',
+            'Audit 2025: Cash OpEx Rp 10.206M ÷ Pendapatan Rp 18.322M (−708 bps YoY).',
+            'Mengikuti rasio berulang FY2025 (202 bps di bawah Gross Margin).',
+            'Mengacu efisiensi biaya laporan interim 1H 2026 (−450 bps vs Base).',
+            'Kembali ke belanja FY2024 jika perang promo berulang.',
+          ],
+          [
+            'Belanja modal kas aset tetap & takberwujud di luar aset Tokopedia (Catatan 12).',
+            'CapEx kas 2024 Rp 1.054M setelah mengeluarkan Rp 5.465M aset Tokopedia (Catatan 12).',
+            'Audit 2025: CapEx kas Rp 1.182M (hal. 21) ÷ Pendapatan Rp 18.322M.',
+            'Mengikuti intensitas CapEx lanjutan audit FY2025.',
+            'Efisiensi CapEx moderat seiring skala cloud & platform.',
+            'Kembali ke rasio CapEx lanjutan FY2024.',
+          ],
+          [
+            'Piutang usaha Catatan 6 (DSO) & utang usaha (DPO); mengecualikan pinjaman Catatan 7.',
+            'Audit 2024: Piutang Catatan 6 (Rp 460M) & utang usaha (Rp 1.241M).',
+            'Audit 2025: Piutang Catatan 6 (Rp 547M) & utang usaha (Rp 1.254M).',
+            'Mengikuti siklus penagihan & pembayaran audit FY2025 (CCC negatif).',
+            'Penagihan sedikit lebih cepat & termin pemasok lebih panjang.',
+            'Kembali ke hari modal kerja audit FY2024.',
+          ],
+          [
+            'Beban keuangan (Catatan 27b) dibagi total pinjaman & sewa (Catatan 19–20).',
+            'Audit 2024: Beban bunga Rp 494M ÷ Total utang & sewa Rp 4.819M.',
+            'Audit 2025: Beban bunga Rp 535M (Catatan 27b) ÷ Total utang Rp 7.743M.',
+            'Mengikuti suku bunga efektif FY2025 atas utang tetap Rp 7,74T.',
+            'Sama dengan suku bunga efektif FY2025.',
+            'Uji stres kembali ke suku bunga lebih tinggi FY2024.',
+          ],
+          [
+            'Tarif pajak penghasilan badan statutori Indonesia (UU HPP).',
+            'Tarif pajak badan Indonesia statutori (22%).',
+            'Tarif pajak badan Indonesia statutori (22%).',
+            'Tarif pajak badan statutori 22% diterapkan konsisten.',
+            'Tarif pajak badan statutori 22% diterapkan konsisten.',
+            'Tarif pajak badan statutori 22% diterapkan konsisten.',
+          ],
+        ]
+      : [
+          [
+            'YoY net revenue growth driving 2026F–2028F sales (Note 25).',
+            'Audited FY2024 vs FY2023: Rp 15.89T vs Rp 14.79T.',
+            'Audited FY2025 vs FY2024: Rp 18.32T vs Rp 15.89T (Note 25).',
+            'Held at FY2025 post-Tokopedia YoY growth (excludes 2023).',
+            'Upside FinTech & On-Demand momentum (+273 bps above Base).',
+            'Reverts to GoTo\'s FY2024 post-exit transition growth floor.',
+          ],
+          [
+            'Direct delivery & platform costs as % of net revenue (Note 26).',
+            'Audited FY2024: COGS Rp 7,413B ÷ Revenue Rp 15,894B.',
+            'Audited FY2025: COGS Rp 7,746B ÷ Revenue Rp 18,322B (57.72% Gross Margin).',
+            'Held at FY2025 audited ratio (57.72% gross margin).',
+            'From GoTo 1H 2026 interim financial statements (61.90% gross margin).',
+            'Reverts to FY2024 post-exit COGS ratio (53.36% gross margin).',
+          ],
+          [
+            'Operating costs excl. non-cash D&A (G&A, S&M, R&D, Ops; Note 26).',
+            'Audited FY2024: Cash OpEx Rp 9,978B ÷ Revenue Rp 15,894B.',
+            'Audited FY2025: Cash OpEx Rp 10,206B ÷ Revenue Rp 18,322B (−708 bps YoY).',
+            'Held at FY2025 recurring ratio (202 bps below Gross Margin).',
+            'From GoTo 1H 2026 interim cost ratio (−450 bps vs Base).',
+            'Reverts to FY2024 spending if promo intensity returns.',
+          ],
+          [
+            'Cash CapEx for PP&E & intangibles excl. Tokopedia exit (Note 12).',
+            '2024 cash CapEx Rp 1,054B after removing Rp 5,465B Tokopedia intangibles (Note 12).',
+            'Audited FY2025: Cash CapEx Rp 1,182B (p. 21) ÷ Revenue Rp 18,322B.',
+            'Held at FY2025 audited continuing CapEx intensity.',
+            'Modest CapEx discipline as cloud & platform scale.',
+            'Reverts to FY2024 continuing CapEx ratio.',
+          ],
+          [
+            'Note 6 trade receivables (DSO) & trade payables (DPO); excludes Note 7 loans.',
+            'Audited FY2024: Note 6 receivables (Rp 460B) & payables (Rp 1,241B).',
+            'Audited FY2025: Note 6 receivables (Rp 547B) & payables (Rp 1,254B).',
+            'Held at FY2025 audited collection & payable timing (negative CCC).',
+            'Slightly faster collections and extended supplier terms.',
+            'Reverts to FY2024 audited working capital days.',
+          ],
+          [
+            'Finance costs (Note 27b) divided by total debt & leases (Notes 19–20).',
+            'Audited FY2024: Finance costs Rp 494B ÷ Total debt Rp 4,819B.',
+            'Audited FY2025: Finance costs Rp 535B (Note 27b) ÷ Total debt Rp 7,743B.',
+            'Held at FY2025 effective rate on fixed Rp 7.74T debt.',
+            'Same FY2025 effective borrowing rate.',
+            'Stress rate reverting to FY2024 higher borrowing cost.',
+          ],
+          [
+            'Statutory Indonesian corporate income tax rate (UU HPP).',
+            'Statutory Indonesian corporate tax rate (22%).',
+            'Statutory Indonesian corporate tax rate (22%).',
+            '22% statutory corporate tax rate applied consistently.',
+            '22% statutory corporate tax rate applied consistently.',
+            '22% statutory corporate tax rate applied consistently.',
+          ],
+        ],
   }
 })
 
@@ -1718,9 +2090,9 @@ const modalAbbrGlossary = computed(() => {
             <span class="glass-slide-pill">
               {{ isId ? 'SLIDE' : 'SLIDE' }} {{ item.slide?.slide_num }} · {{ item.slide?.section_tag || (isId ? 'Analisis Mendalam' : 'Deep Insight') }}
             </span>
-            <h2 id="glass-modal-title">{{ item.title }}</h2>
-            <div v-if="titleAbbrHint" class="glass-abbr-sub">{{ titleAbbrHint }}</div>
-            <div v-if="item.value" class="glass-value-pill">{{ item.value }}</div>
+            <h2 id="glass-modal-title">{{ isPorterWalkthrough ? currentPorterForce.title : item.title }}</h2>
+            <div v-if="titleAbbrHint && !isPorterWalkthrough" class="glass-abbr-sub">{{ titleAbbrHint }}</div>
+            <div v-if="isPorterWalkthrough ? currentPorterForce.rating : item.value" class="glass-value-pill">{{ isPorterWalkthrough ? currentPorterForce.rating : item.value }}</div>
           </div>
           <div class="glass-hdr-actions">
             <button
@@ -1744,8 +2116,8 @@ const modalAbbrGlossary = computed(() => {
               class="glass-tab-btn is-icon-only"
               :class="{ 'is-active': activeTab === 'overview' }"
               :aria-selected="activeTab === 'overview'"
-              :title="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : (isId ? 'Grafik & Data' : 'Charts & Data')"
-              :aria-label="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : (isId ? 'Grafik & Data' : 'Charts & Data')"
+              :title="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : isPorterWalkthrough ? (isId ? 'Lima Kekuatan Porter' : 'Porter Five Forces') : (isId ? 'Grafik & Data' : 'Charts & Data')"
+              :aria-label="isSlide9Walkthrough ? (isId ? 'Sumber & Perhitungan' : 'Sources & Math') : isPorterWalkthrough ? (isId ? 'Lima Kekuatan Porter' : 'Porter Five Forces') : (isId ? 'Grafik & Data' : 'Charts & Data')"
               @click="activeTab = 'overview'"
             >
               <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1833,7 +2205,7 @@ const modalAbbrGlossary = computed(() => {
             </button>
 
             <button
-              v-if="activeTab === 'overview' && hasAnalysisTab && !isSlide9Walkthrough"
+              v-if="activeTab === 'overview' && hasAnalysisTab && !isSlide9Walkthrough && !isPorterWalkthrough"
               type="button"
               class="glass-panel-toggle"
               :class="{ 'is-on': showRightPanel }"
@@ -1868,11 +2240,88 @@ const modalAbbrGlossary = computed(() => {
           </button>
         </div>
 
+        <!-- Slide 3 Porter's Five Forces Sub-Menu Bar (directly below main top bar) -->
+        <div
+          v-if="isPorterWalkthrough && activeTab === 'overview'"
+          class="glass-sub-nav"
+          role="tablist"
+          :aria-label="isId ? 'Lima Kekuatan Porter' : 'Porter Five Forces'"
+        >
+          <button
+            v-for="pf in porterForces"
+            :key="pf.id"
+            type="button"
+            role="tab"
+            class="glass-sub-pill"
+            :class="{ 'is-active': activePorterForce === pf.id }"
+            :aria-selected="activePorterForce === pf.id"
+            @click="activePorterForce = pf.id"
+          >
+            {{ pf.shortLabel }}
+          </button>
+        </div>
+
         <!-- Independent Vertical-Scrolling Tab Panels -->
         <div class="glass-modal-body">
+          <!-- SLIDE 3 PORTER FIVE FORCES SPECIAL VIEW: Visual Picture + Presenter Dialogue & Evidence -->
+          <div
+            v-if="activeTab === 'overview' && isPorterWalkthrough"
+            class="glass-porter-split"
+            :key="'tab-porter-' + currentPorterForce.id"
+          >
+            <!-- Left: Custom Illustration + Rating Pill + Headline + Prev/Next -->
+            <div class="glass-card glass-porter-left">
+              <div class="glass-porter-img-wrap">
+                <img :src="currentPorterForce.image" :alt="currentPorterForce.title" class="glass-porter-img" />
+                <span class="glass-porter-rating" :class="`tone-${currentPorterForce.ratingTone}`">
+                  {{ isId ? 'Peringkat:' : 'Rating:' }} {{ currentPorterForce.rating }}
+                </span>
+              </div>
+              <div class="glass-porter-left-copy">
+                <span class="glass-s9-eyebrow">{{ currentPorterForce.title }}</span>
+                <p class="glass-porter-headline">{{ currentPorterForce.headline }}</p>
+              </div>
+              <div class="glass-s9-nav-btns">
+                <button
+                  v-if="prevPorterForce"
+                  type="button"
+                  class="glass-s9-nav-btn"
+                  @click="activePorterForce = prevPorterForce.id"
+                >
+                  ← {{ prevPorterForce.shortLabel }}
+                </button>
+                <button
+                  v-if="nextPorterForce"
+                  type="button"
+                  class="glass-s9-nav-btn is-next"
+                  @click="activePorterForce = nextPorterForce.id"
+                >
+                  {{ nextPorterForce.shortLabel }} →
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Key Points Only -->
+            <div class="glass-card glass-porter-right">
+              <div class="glass-porter-facts-box">
+                <div class="glass-sec-label" style="margin-bottom: 10px;">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                  </svg>
+                  <span>{{ isId ? 'Poin Utama' : 'Key Points' }}</span>
+                </div>
+                <ul class="glass-porter-facts">
+                  <li v-for="(ev, eIdx) in currentPorterForce.evidence" :key="currentPorterForce.id + '-ev-' + eIdx">
+                    {{ ev }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <!-- SLIDE 9 SPECIAL VIEW: Clean Zero-Scroll Side-by-Side (Left: Big Result, Right: Compact Source Table) -->
           <div
-            v-if="activeTab === 'overview' && isSlide9Walkthrough"
+            v-else-if="activeTab === 'overview' && isSlide9Walkthrough"
             class="glass-s9-split"
             :key="'tab-s9-' + currentSlide9Comp.id"
           >
@@ -2031,6 +2480,89 @@ const modalAbbrGlossary = computed(() => {
                       </template>
                     </div>
                     <p v-if="vc.note" class="glass-yoy-note">{{ vc.note }}</p>
+                  </div>
+                </div>
+
+                <!-- Three-Step DuPont ROE 3-Panel Breakdown (Slide 4) -->
+                <div
+                  v-else-if="svgChartData.mode === 'dupont_3step'"
+                  :key="`dupont-${item.slide?.slide_num}-${chartBasis}`"
+                  class="glass-dupont-wrap"
+                >
+                  <div class="glass-dupont-grid">
+                    <!-- Panel 1: Profitability (Net Margin %) -->
+                    <div class="glass-dupont-panel">
+                      <div class="glass-dupont-panel-hdr">
+                        <strong>{{ isId ? '1. Profitabilitas (Margin Bersih)' : '1. Profitability (Net Margin)' }}</strong>
+                        <span class="glass-dupont-axis-tag">%</span>
+                      </div>
+                      <div class="glass-dupont-hrows">
+                        <div v-for="row in svgChartData.rows" :key="`m-${row.label}`" class="glass-dupont-hrow">
+                          <span class="glass-dupont-rlbl">{{ row.label }}</span>
+                          <div class="glass-dupont-htrack">
+                            <span class="glass-dupont-zero" :style="{ left: svgChartData.marginZeroPct }"></span>
+                            <span
+                              class="glass-dupont-hbar"
+                              :class="`tone-${row.tone}`"
+                              :style="{ left: row.marginBarLeft, width: row.marginBarWidth }"
+                            ></span>
+                          </div>
+                          <span class="glass-dupont-rval" :class="`tone-${row.tone}`">{{ row.marginDisp }}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Panel 2: Efficiency × Leverage (Multiple x) -->
+                    <div class="glass-dupont-panel">
+                      <div class="glass-dupont-panel-hdr">
+                        <strong>{{ isId ? '2. Efisiensi × Leverage' : '2. Efficiency × Leverage' }}</strong>
+                        <div class="glass-dupont-mini-leg">
+                          <span><i class="leg-dot is-turn"></i>{{ isId ? 'Perputaran Aset' : 'Asset Turnover' }}</span>
+                          <span><i class="leg-dot is-lev"></i>{{ isId ? 'Equity Mult.' : 'Equity Mult.' }}</span>
+                        </div>
+                      </div>
+                      <div class="glass-dupont-vplot">
+                        <div v-for="row in svgChartData.rows" :key="`el-${row.label}`" class="glass-dupont-vgroup">
+                          <div class="glass-dupont-vpair">
+                            <div class="glass-dupont-vcol">
+                              <span class="glass-dupont-vval">{{ row.turnoverDisp }}</span>
+                              <div class="glass-dupont-vbar-wrap">
+                                <span class="glass-dupont-vbar is-turn" :style="{ height: row.turnoverHeight }"></span>
+                              </div>
+                            </div>
+                            <div class="glass-dupont-vcol">
+                              <span class="glass-dupont-vval is-lev">{{ row.leverageDisp }}</span>
+                              <div class="glass-dupont-vbar-wrap">
+                                <span class="glass-dupont-vbar is-lev" :style="{ height: row.leverageHeight }"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="glass-dupont-vlbl">{{ row.shortLabel }}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Panel 3: Result: ROE (= 1 × 2) -->
+                    <div class="glass-dupont-panel">
+                      <div class="glass-dupont-panel-hdr">
+                        <strong>{{ isId ? '3. Hasil: ROE (= 1 × 2)' : '3. Result: ROE (= 1 × 2)' }}</strong>
+                        <span class="glass-dupont-axis-tag">ROE %</span>
+                      </div>
+                      <div class="glass-dupont-hrows">
+                        <div v-for="row in svgChartData.rows" :key="`r-${row.label}`" class="glass-dupont-hrow">
+                          <span class="glass-dupont-rlbl">{{ row.label }}</span>
+                          <div class="glass-dupont-htrack">
+                            <span class="glass-dupont-zero" :style="{ left: svgChartData.roeZeroPct }"></span>
+                            <span
+                              class="glass-dupont-hbar"
+                              :class="`tone-${row.tone}`"
+                              :style="{ left: row.roeBarLeft, width: row.roeBarWidth }"
+                            ></span>
+                          </div>
+                          <span class="glass-dupont-rval" :class="`tone-${row.tone}`">{{ row.roeDisp }}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -2319,12 +2851,34 @@ const modalAbbrGlossary = computed(() => {
                     </thead>
                     <tbody>
                       <tr v-for="(row, rIdx) in slide7AssumptionsTable.rows" :key="rIdx">
-                        <td v-for="(cell, cIdx) in row" :key="cIdx" :class="{ 'is-base-col': cIdx === 3 }">{{ cell }}</td>
+                        <td
+                          v-for="(cell, cIdx) in row"
+                          :key="cIdx"
+                          class="is-hoverable-cell"
+                          :class="{ 'is-base-col': cIdx === 3 }"
+                          @mouseenter="showHoverTip($event, `${row[0]} · ${slide7AssumptionsTable.headers[cIdx]}`, slide7AssumptionsTable.tooltips[rIdx][cIdx])"
+                          @mousemove="moveHoverTip($event)"
+                          @mouseleave="hideHoverTip"
+                        >
+                          {{ cell }}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
+
+              <!-- Cursor-Following Hover Card (positioned directly above cursor) -->
+              <Teleport to="body">
+                <div
+                  v-if="hoverTip.visible"
+                  class="glass-cursor-tip"
+                  :style="{ left: `${hoverTip.x}px`, top: `${hoverTip.y}px` }"
+                >
+                  <div class="glass-cursor-tip-title">{{ hoverTip.title }}</div>
+                  <div class="glass-cursor-tip-body">{{ hoverTip.detail }}</div>
+                </div>
+              </Teleport>
               <!-- Slide 10: Restated Sensitivity Analysis (2D WACC x g + Beta & RI Checks) -->
               <template v-if="slide10SensitivityTables">
                 <div class="glass-card glass-assumptions-card">
@@ -4238,6 +4792,412 @@ const modalAbbrGlossary = computed(() => {
 
 @media (max-width: 820px) {
   .glass-s9-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cursor-Following Hover Card for Slide 7 Assumptions Table */
+.glass-assumptions-tbl td.is-hoverable-cell {
+  cursor: help;
+  transition: background 0.14s ease, color 0.14s ease;
+}
+
+.glass-assumptions-tbl td.is-hoverable-cell:hover {
+  background: rgba(74, 222, 128, 0.18) !important;
+  color: #ffffff;
+}
+
+.glass-cursor-tip {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 14px));
+  max-width: 290px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: rgba(9, 25, 18, 0.96);
+  border: 1px solid rgba(74, 222, 128, 0.55);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.glass-cursor-tip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(74, 222, 128, 0.55);
+}
+
+.glass-cursor-tip-title {
+  font-size: 11px;
+  font-weight: 750;
+  color: #86efac;
+  margin-bottom: 3px;
+  letter-spacing: 0.02em;
+}
+
+.glass-cursor-tip-body {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #eef9f2;
+  font-weight: 500;
+}
+
+/* Slide 3 Porter's Five Forces Visual Dialogue Walkthrough */
+.glass-porter-split {
+  display: grid;
+  grid-template-columns: minmax(290px, 1.05fr) minmax(380px, 1.45fr);
+  gap: 16px;
+  padding: 18px 24px;
+  align-items: stretch;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.glass-porter-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.glass-porter-img-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  background: rgba(5, 18, 11, 0.85);
+}
+
+.glass-porter-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.glass-porter-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-porter-rating.tone-pos {
+  background: rgba(16, 185, 129, 0.85);
+  color: #ffffff;
+}
+
+.glass-porter-rating.tone-accent {
+  background: rgba(245, 158, 11, 0.88);
+  color: #0b1610;
+}
+
+.glass-porter-rating.tone-warn {
+  background: rgba(239, 68, 68, 0.88);
+  color: #ffffff;
+}
+
+.glass-porter-left-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.glass-porter-headline {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #eefaf1;
+  font-weight: 600;
+}
+
+.glass-porter-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 22px;
+  overflow-y: auto;
+}
+
+.glass-porter-facts-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.glass-porter-facts {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.glass-porter-facts li {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #e4f5eb;
+}
+
+@media (max-width: 820px) {
+  .glass-porter-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Three-Step DuPont ROE 3-Panel Breakdown (Slide 4) */
+.glass-dupont-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.glass-dupont-eq-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.glass-dupont-eq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fde68a;
+}
+
+.glass-dupont-eq-pill.is-peer {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: #a7f3d0;
+}
+
+.glass-dupont-eq-pill.is-hurdle {
+  background: rgba(148, 163, 184, 0.12);
+  border-color: rgba(148, 163, 184, 0.28);
+  color: #e2e8f0;
+}
+
+.glass-dupont-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.glass-dupont-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(110, 231, 183, 0.14);
+  border-radius: 14px;
+  padding: 13px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.glass-dupont-panel-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.glass-dupont-panel-hdr strong {
+  font-size: 12.5px;
+  color: #ecfdf5;
+  letter-spacing: 0.01em;
+}
+
+.glass-dupont-axis-tag {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.glass-dupont-mini-leg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  color: #a7f3d0;
+}
+
+.glass-dupont-mini-leg .leg-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.glass-dupont-mini-leg .leg-dot.is-turn {
+  background: rgba(167, 243, 208, 0.45);
+}
+
+.glass-dupont-mini-leg .leg-dot.is-lev {
+  background: #34d399;
+}
+
+.glass-dupont-hrows {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  justify-content: center;
+  flex: 1;
+}
+
+.glass-dupont-hrow {
+  display: grid;
+  grid-template-columns: 92px 1fr 56px;
+  align-items: center;
+  gap: 7px;
+}
+
+.glass-dupont-rlbl {
+  font-size: 11px;
+  color: #d1fae5;
+  line-height: 1.2;
+}
+
+.glass-dupont-htrack {
+  position: relative;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.glass-dupont-zero {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: rgba(236, 253, 245, 0.35);
+  z-index: 2;
+}
+
+.glass-dupont-hbar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.glass-dupont-hbar.tone-crimson { background: rgba(244, 63, 94, 0.85); }
+.glass-dupont-hbar.tone-amber   { background: rgba(251, 113, 133, 0.72); }
+.glass-dupont-hbar.tone-blue    { background: rgba(253, 164, 175, 0.62); }
+.glass-dupont-hbar.tone-emerald { background: linear-gradient(90deg, #34d399, #10b981); }
+
+.glass-dupont-rval {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-dupont-rval.tone-crimson { color: #fda4af; }
+.glass-dupont-rval.tone-amber   { color: #fecdd3; }
+.glass-dupont-rval.tone-blue    { color: #ffe4e6; }
+.glass-dupont-rval.tone-emerald { color: #6ee7b7; }
+
+.glass-dupont-vplot {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  align-items: end;
+  flex: 1;
+  padding-top: 6px;
+}
+
+.glass-dupont-vgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.glass-dupont-vpair {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 118px;
+}
+
+.glass-dupont-vcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 3px;
+}
+
+.glass-dupont-vval {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: rgba(209, 250, 229, 0.75);
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-dupont-vval.is-lev {
+  color: #6ee7b7;
+}
+
+.glass-dupont-vbar-wrap {
+  width: 14px;
+  height: 94px;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.glass-dupont-vbar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+
+.glass-dupont-vbar.is-turn {
+  background: rgba(167, 243, 208, 0.42);
+}
+
+.glass-dupont-vbar.is-lev {
+  background: linear-gradient(180deg, #34d399, #059669);
+}
+
+.glass-dupont-vlbl {
+  font-size: 10px;
+  color: rgba(209, 250, 229, 0.72);
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.15;
+}
+
+@media (max-width: 1080px) {
+  .glass-dupont-grid {
     grid-template-columns: 1fr;
   }
 }
