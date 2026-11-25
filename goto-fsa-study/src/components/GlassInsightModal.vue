@@ -2404,11 +2404,49 @@ const slide10SensitivityTables = computed(() => {
   }
 })
 
-// Slide 11: 3-Scenario Valuation Matrix & Defensible Range Reconciliation (Table 16 & Workbook 3)
+// Slide 11: Grab P/B Market Multiples Quick Math + 3-Scenario Valuation Matrix & Defensible Range Reconciliation (Table 16 & Workbook 3)
 const slide11ScenarioMatrix = computed(() => {
   if (props.item.slide?.slide_num !== 11) return null
   const id = isId.value
   return {
+    pbBridgeTitle: id
+      ? 'Ringkasan Perhitungan Market Multiples: P/B Grab (Basis Aktual FY2025)'
+      : 'Market Multiples Quick Math: Grab P/B Benchmark (FY2025 Actual Basis)',
+    pbBridgeHeaders: id
+      ? ['Langkah', 'Perhitungan Singkat', 'Hasil']
+      : ['Step', 'Simple Math', 'Result'],
+    pbBridgeRows: [
+      {
+        step: id ? '1. BVPS Induk Grab (FY2025)' : '1. Grab Parent BVPS (FY2025)',
+        formula: id ? 'Ekuitas Induk Grab ÷ Saham Beredar (Kelas A + B)' : 'Grab Parent Equity ÷ Shares Outstanding (Class A + B)',
+        math: 'US$6,728m ÷ 4,097.647m sh',
+        result: 'US$1.6419',
+      },
+      {
+        step: id ? '2. Kelipatan P/B Grab (31 Des 2025)' : '2. Grab P/B Multiple (31 Dec 2025)',
+        formula: id ? 'Harga Saham Grab ÷ BVPS Grab (basis USD, tanpa konversi kurs)' : 'Grab Share Price ÷ Grab BVPS (same USD basis, no FX)',
+        math: 'US$4.99 ÷ US$1.6419',
+        result: '3.0391x',
+      },
+      {
+        step: id ? '3. BVPS Induk GoTo (FY2025)' : '3. GoTo Parent BVPS (FY2025)',
+        formula: id ? 'Ekuitas Induk GoTo (LK hal. 16) ÷ Saham Beredar' : 'GoTo Parent Equity (FS p. 16) ÷ Shares Outstanding',
+        math: 'Rp 31,805.0B ÷ 1,062.01B sh',
+        result: 'Rp 29.9479',
+      },
+      {
+        step: id ? '4. Nilai Implied P/B GoTo (Kondisional)' : '4. GoTo Implied P/B Benchmark',
+        formula: id ? 'P/B Grab × BVPS Induk GoTo (basis aktual yang sama)' : 'Grab P/B Multiple × GoTo Parent BVPS (same actual basis)',
+        math: '3.0391x × Rp 29.9479',
+        result: 'Rp 91.02',
+      },
+      {
+        step: id ? '↳ Kenapa P/E & EV/EBITDA Dikecualikan' : '↳ Why P/E & EV/EBITDA Are Excluded',
+        formula: id ? 'Kelipatan laba positif tidak bermakna pada laba negatif / beda model bisnis' : 'Positive peer multiples distort negative earnings / differing business mixes',
+        math: id ? 'Laba bersih GoTo −Rp 1,50T · Sea/BUKA/BELI tidak setara' : 'GoTo Net Loss −Rp 1.50T · Sea/BUKA/BELI mix differs',
+        result: id ? 'Dikecualikan' : 'Excluded',
+      },
+    ],
     title: id
       ? 'Matriks Valuasi 3 Skenario & Rekonsiliasi Rentang Nilai Wajar (Rp / saham · Appendix A6)'
       : '3-Scenario Valuation Matrix & Defensible Range Reconciliation (Rp / share · Appendix A6)',
@@ -3490,29 +3528,63 @@ const modalAbbrGlossary = computed(() => {
                 </div>
               </template>
 
-              <!-- Slide 11: 3-Scenario Valuation Matrix & Range Reconciliation -->
-              <div v-if="slide11ScenarioMatrix" class="glass-card glass-assumptions-card">
-                <div class="glass-sec-label">
-                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
-                  </svg>
-                  <span>{{ slide11ScenarioMatrix.title }}</span>
+              <!-- Slide 11: Market Multiples (Grab P/B) Quick Math + 3-Scenario Valuation Matrix & Range Reconciliation -->
+              <template v-if="slide11ScenarioMatrix">
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="8" x2="10" y1="11" y2="11" /><line x1="14" x2="16" y1="11" y2="11" /><line x1="8" x2="10" y1="15" y2="15" /><line x1="14" x2="16" y1="15" y2="15" /><line x1="8" x2="16" y1="19" y2="19" />
+                    </svg>
+                    <span>{{ slide11ScenarioMatrix.pbBridgeTitle }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-assumptions-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide11ScenarioMatrix.pbBridgeHeaders" :key="hIdx">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          v-for="(row, rIdx) in slide11ScenarioMatrix.pbBridgeRows"
+                          :key="rIdx"
+                          :class="{ 'is-base-row': rIdx === 3 }"
+                        >
+                          <td>
+                            <div>{{ row.step }}</div>
+                            <div style="font-size: 11px; opacity: 0.68; font-weight: 400; margin-top: 2px;">{{ row.formula }}</div>
+                          </td>
+                          <td>{{ row.math }}</td>
+                          <td>{{ row.result }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-                <div class="glass-table-scroll">
-                  <table class="glass-data-table glass-scenario-tbl">
-                    <thead>
-                      <tr>
-                        <th v-for="(h, hIdx) in slide11ScenarioMatrix.headers" :key="hIdx">{{ h }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="(row, rIdx) in slide11ScenarioMatrix.rows" :key="rIdx" :class="{ 'is-base-row': rIdx === 0 }">
-                        <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
+                    </svg>
+                    <span>{{ slide11ScenarioMatrix.title }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-scenario-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide11ScenarioMatrix.headers" :key="hIdx">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(row, rIdx) in slide11ScenarioMatrix.rows" :key="rIdx" :class="{ 'is-base-row': rIdx === 0 }">
+                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-              </div>
+              </template>
             </div>
 
             <!-- Panel 2 (Right): Executive Takeaway & Deep Analysis (Independent Vertical Scroller + View More) -->
