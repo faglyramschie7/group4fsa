@@ -2155,7 +2155,7 @@ const slide10SensitivityTables = computed(() => {
         '−Rp 2,528.6B',
       ],
       [
-        id ? '3. PV Terminal Value (67,6% EV)' : '3. PV of Terminal Value (67.6% EV)',
+        id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
         '−2,528.6 ÷ (1.0776)³',
         '−Rp 2,020.6B',
       ],
@@ -2163,6 +2163,11 @@ const slide10SensitivityTables = computed(() => {
         id ? '4. Enterprise Value (EV)' : '4. Enterprise Value (EV)',
         '−967.9 + (−2,020.6)',
         '−Rp 2,988.5B',
+      ],
+      [
+        id ? '↳ Porsi TV terhadap EV' : '↳ TV Share of EV (Check)',
+        '−2,020.6 ÷ −2,988.5',
+        '67.6% EV',
       ],
       [
         id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
@@ -2188,7 +2193,7 @@ const slide10SensitivityTables = computed(() => {
         '−Rp 45,184.7B',
       ],
       [
-        id ? '3. PV Terminal Value (85,0% PV)' : '3. PV of Terminal Value (85.0% PV)',
+        id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
         '−45,184.7 ÷ (1.0845)³',
         '−Rp 35,422.4B',
       ],
@@ -2196,6 +2201,11 @@ const slide10SensitivityTables = computed(() => {
         id ? '4. Total PV Residual Income' : '4. Total PV of Residual Income',
         '−6,276.2 + (−35,422.4)',
         '−Rp 41,698.6B',
+      ],
+      [
+        id ? '↳ Porsi TV terhadap Total PV' : '↳ TV Share of Total PV (Check)',
+        '−35,422.4 ÷ −41,698.6',
+        '85.0% PV',
       ],
       [
         id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
@@ -3367,7 +3377,7 @@ const modalAbbrGlossary = computed(() => {
                         <tr
                           v-for="(row, rIdx) in slide10SensitivityTables.dcfBridgeRows"
                           :key="rIdx"
-                          :class="{ 'is-base-row': rIdx === 2 || rIdx === 4 }"
+                          :class="{ 'is-base-row': rIdx === 4 || rIdx === 5 }"
                         >
                           <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
                         </tr>
@@ -3394,7 +3404,7 @@ const modalAbbrGlossary = computed(() => {
                         <tr
                           v-for="(row, rIdx) in slide10SensitivityTables.riBridgeRows"
                           :key="rIdx"
-                          :class="{ 'is-base-row': rIdx === 2 || rIdx === 4 }"
+                          :class="{ 'is-base-row': rIdx === 4 || rIdx === 5 }"
                         >
                           <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
                         </tr>
