@@ -413,8 +413,8 @@ const restatedPointsMap = computed(() => {
       {
         heading: id ? 'Perbaikan Data Aset 2024' : 'Fixed 2024 Assets (+Rp1.58T)',
         text: id
-          ? 'Kami menambahkan kembali Rp1,58T piutang pinjaman 2024 yang sempat terlewat agar Total Aset 2024 pas Rp43,21T sesuai laporan audit.'
-          : 'We added back Rp1.58T of 2024 consumer loans that were missed earlier, restoring 2024 Total Assets to the audited Rp43.21T.',
+          ? 'Kami menambahkan kembali Rp1,58T piutang pinjaman 2024 yang terlewat, memulihkan Total Aset 2024 dari Rp41,63T menjadi Rp43,21T (ROE 2024 tetap −17,97%).'
+          : 'We added back Rp1.58T of 2024 consumer loans that were missed earlier, restoring 2024 Total Assets from Rp41.63T to the audited Rp43.21T (2024 ROE unchanged at −17.97%).',
         formula: '2024 Assets = Rp43,207,884m (Check = 0); 2024 ROE = −17.97%',
         data_origin: 'Final Report Appendix B & §3.1',
       },

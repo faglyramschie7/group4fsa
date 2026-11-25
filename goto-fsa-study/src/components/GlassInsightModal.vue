@@ -919,22 +919,42 @@ const chartConfig = computed(() => {
         },
         {
           title: id ? 'Utang / Ekuitas' : 'Debt / Equity',
-          delta: '+1,112 bps',
+          delta: '+11.12% YoY',
           tone: 'accent',
           note: id ? 'Pinjaman bank baru FY25 (+Rp3,72T) naikkan rasio utang.' : 'New FY25 bank borrowings (+Rp3.72T) lifted full debt+lease ratio.',
           bars: [
             { label: '2024', val: 15.85, display: '15.85%' },
-            { label: '2025', val: 26.97, display: '26.97%', accent: true },
+            { label: '2025', val: 26.97, display: '26.97%', amber: true },
           ],
         },
         {
           title: id ? 'DSO Piutang' : 'Trade DSO',
           delta: '+0.34d YoY',
           tone: 'pos',
-          note: id ? 'Basis piutang usaha Cat. 6 hapus lonjakan buatan 46,88h.' : 'Note 6 trade-only alignment removes 2024 artificial 46.88d spike.',
+          note: id ? 'Koreksi salah klasifikasi Cat. 6 vs Cat. 7 (46,9h → 10,6h); di 2025 naik tipis +0,34h.' : 'Fixed our earlier Note 6 vs Note 7 mix-up (46.9d → 10.6d); 2025 edged up +0.34d.',
           bars: [
             { label: '2024', val: 10.56, display: '10.6d' },
             { label: '2025', val: 10.90, display: '10.9d', accent: true },
+          ],
+        },
+        {
+          title: id ? 'Utang Usaha (DPO)' : 'Payables (DPO)',
+          delta: '−2.0d YoY',
+          tone: 'pos',
+          note: id ? 'GoTo membayar pemasok dalam ~59 hari, menjaga kas tetap di dalam.' : 'GoTo pays suppliers in ~59 days, keeping cash inside the business longer.',
+          bars: [
+            { label: '2024', val: 61.1, display: '61.1d' },
+            { label: '2025', val: 59.1, display: '59.1d', accent: true },
+          ],
+        },
+        {
+          title: id ? 'Siklus Kas (CCC)' : 'Cash Conversion (CCC)',
+          delta: id ? 'Negatif (Sehat)' : 'Negative (Strong)',
+          tone: 'pos',
+          note: id ? 'Kas masuk 47,5 hari lebih cepat sebelum GoTo membayar pemasok.' : 'Cash arrives 47.5 days before GoTo has to pay suppliers.',
+          bars: [
+            { label: '2024', val: 49.2, display: '−49.2d', goodNeg: true },
+            { label: '2025', val: 47.5, display: '−47.5d', accent: true, goodNeg: true },
           ],
         },
         {
@@ -1476,8 +1496,8 @@ const yoyRatioCards = computed(() => {
         delta: '+0.34d YoY',
         tone: 'pos',
         note: id
-          ? 'Penyelarasan ke Catatan 6 hilangkan anomali 46,88 hari di 2024.'
-          : 'Note 6 trade-only alignment removes 2024’s artificial 46.88d spike.',
+          ? 'Koreksi salah klasifikasi Cat. 6 vs Cat. 7 (46,88h → 10,56h); di 2025 naik tipis +0,34h.'
+          : 'Fixed our earlier Note 6 vs Note 7 mix-up (46.88d → 10.56d); 2025 edged up +0.34d.',
         bars: [
           { yr: '2023*', val: '14.84d', pct: 92 },
           { yr: '2024', val: '10.56d', pct: 66 },
@@ -2458,12 +2478,12 @@ const modalAbbrGlossary = computed(() => {
                         <div class="glass-vchart-col">
                           <span
                             class="glass-vchart-val"
-                            :class="{ 'is-warn': bar.warn || String(bar.display).startsWith('−'), 'is-accent': bar.accent }"
+                            :class="{ 'is-warn': bar.warn || (!bar.goodNeg && String(bar.display).startsWith('−')), 'is-accent': bar.accent, 'is-amber': bar.amber }"
                           >{{ bar.display }}</span>
                           <div class="glass-vchart-bar-wrap">
                             <span
                               class="glass-vchart-bar"
-                              :class="{ 'is-warn': bar.warn || String(bar.display).startsWith('−'), 'is-accent': bar.accent }"
+                              :class="{ 'is-warn': bar.warn || (!bar.goodNeg && String(bar.display).startsWith('−')), 'is-accent': bar.accent, 'is-amber': bar.amber }"
                               :style="{ height: `${bar.heightPct}%`, animationDelay: `${vIdx * 60 + bIdx * 55}ms` }"
                             ></span>
                           </div>
@@ -5200,5 +5220,14 @@ const modalAbbrGlossary = computed(() => {
   .glass-dupont-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.glass-vchart-val.is-amber {
+  color: #fcd34d;
+}
+
+.glass-vchart-bar.is-amber {
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.28);
 }
 </style>
