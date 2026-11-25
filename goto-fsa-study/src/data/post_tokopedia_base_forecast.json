@@ -1,0 +1,310 @@
+{
+  "source_path": "ASSIGNMENTS/FINAL REPORT/Group4_FinalReport_GOTO.docx",
+  "source_table": 12,
+  "headers": [
+    "Pro Forma Financial Statement Line (Rp billion)",
+    "2025A Audited",
+    "2026F Base",
+    "2027F Base",
+    "2028F Base"
+  ],
+  "rows": [
+    {
+      "label": "INCOME STATEMENT",
+      "label_id": "Laporan laba rugi",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "is_section": true
+    },
+    {
+      "label": "Net Revenue (+15.27% YoY)",
+      "label_id": "Pendapatan bersih (+15,27% YoY)",
+      "values": [
+        "18,322.1",
+        "21,120.6",
+        "24,346.4",
+        "28,065.0"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Cost of Goods Sold (42.28% of Revenue)",
+      "label_id": "Beban pokok pendapatan (42,28%)",
+      "values": [
+        "(7,746.0)",
+        "(8,929.1)",
+        "(10,292.9)",
+        "(11,865.0)"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Gross Profit (57.72% Margin)",
+      "label_id": "Laba kotor (margin 57,72%)",
+      "values": [
+        "10,576.1",
+        "12,191.4",
+        "14,053.5",
+        "16,200.0"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Operating Expenses (55.70% Base Cash OpEx)",
+      "label_id": "Beban operasi (55,70% Base Cash OpEx)",
+      "values": [
+        "(10,954.3)",
+        "(11,764.6)",
+        "(13,561.4)",
+        "(15,632.8)"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Operating Profit / EBIT",
+      "label_id": "Laba operasi / EBIT",
+      "values": [
+        "(378.3)",
+        "426.9",
+        "492.1",
+        "567.2"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Interest Expense (6.91% on Total Debt)",
+      "label_id": "Beban bunga (6,91% dari total utang)",
+      "values": [
+        "(535.2)",
+        "(535.2)",
+        "(535.2)",
+        "(535.2)"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Earnings Before Tax (EBT)",
+      "label_id": "Laba sebelum pajak (EBT)",
+      "values": [
+        "(1,086.6)",
+        "(108.3)",
+        "(43.1)",
+        "32.1"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Income Tax Expense / (Benefit) at 22.0%",
+      "label_id": "Beban / (manfaat) pajak penghasilan 22%",
+      "values": [
+        "(415.1)",
+        "23.8",
+        "9.5",
+        "(7.1)"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Consolidated Net Income / (Loss)",
+      "label_id": "Laba / (rugi) bersih konsolidasian",
+      "values": [
+        "(1,501.7)",
+        "(84.5)",
+        "(33.6)",
+        "25.0"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "BALANCE SHEET",
+      "label_id": "Neraca",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "is_section": true
+    },
+    {
+      "label": "Cash and Cash Equivalents (Plug)",
+      "label_id": "Kas dan setara kas (penyeimbang)",
+      "values": [
+        "21,755.2",
+        "20,686.7",
+        "19,955.4",
+        "19,421.1"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Trade Receivables (10.90 DSO)",
+      "label_id": "Piutang usaha (DSO 10,90 hari)",
+      "values": [
+        "547.3",
+        "630.9",
+        "727.2",
+        "838.3"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Inventories (0.66 DIO)",
+      "label_id": "Persediaan (DIO 0,66 hari)",
+      "values": [
+        "14.1",
+        "16.2",
+        "18.7",
+        "21.6"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Net PP&E (43.89% Beg. D&A)",
+      "label_id": "Aset tetap bersih (D&A 43,89% saldo awal)",
+      "values": [
+        "622.4",
+        "1,712.2",
+        "2,531.9",
+        "3,231.8"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Other Assets (Constant Non-Operating & Lending)",
+      "label_id": "Aset lainnya (nonoperasi & pinjaman tetap)",
+      "values": [
+        "22,818.7",
+        "22,818.7",
+        "22,818.7",
+        "22,818.7"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "TOTAL ASSETS",
+      "label_id": "TOTAL ASET",
+      "values": [
+        "45,757.6",
+        "45,864.7",
+        "46,052.0",
+        "46,331.6"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Accounts Payable (59.11 DPO)",
+      "label_id": "Utang usaha (DPO 59,11 hari)",
+      "values": [
+        "1,254.4",
+        "1,446.0",
+        "1,666.8",
+        "1,921.4"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Short-Term Debt (Constant)",
+      "label_id": "Utang jangka pendek (tetap)",
+      "values": [
+        "1,523.8",
+        "1,523.8",
+        "1,523.8",
+        "1,523.8"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Long-Term Debt (Constant)",
+      "label_id": "Utang jangka panjang (tetap)",
+      "values": [
+        "6,218.9",
+        "6,218.9",
+        "6,218.9",
+        "6,218.9"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Other Liabilities (Constant)",
+      "label_id": "Liabilitas lainnya (tetap)",
+      "values": [
+        "8,049.0",
+        "8,049.0",
+        "8,049.0",
+        "8,049.0"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Total Shareholders' Equity",
+      "label_id": "Total ekuitas pemegang saham",
+      "values": [
+        "28,711.7",
+        "28,627.2",
+        "28,593.6",
+        "28,618.6"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "TOTAL LIABILITIES AND EQUITY",
+      "label_id": "TOTAL LIABILITAS DAN EKUITAS",
+      "values": [
+        "45,757.6",
+        "45,864.7",
+        "46,052.0",
+        "46,331.6"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "CASH FLOW STATEMENT",
+      "label_id": "Laporan arus kas",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "is_section": true
+    },
+    {
+      "label": "Operating Cash Flow (NI + D&A + dWC)",
+      "label_id": "Arus kas operasi (laba bersih + D&A + modal kerja)",
+      "values": [
+        "307.0",
+        "294.5",
+        "839.8",
+        "1,276.8"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Capital Expenditures (CFI)",
+      "label_id": "Belanja modal (investasi)",
+      "values": [
+        "(1,182.4)",
+        "(1,362.9)",
+        "(1,571.1)",
+        "(1,811.1)"
+      ],
+      "is_section": false
+    },
+    {
+      "label": "Net Change in Cash (CFO + CFI)",
+      "label_id": "Perubahan kas bersih (operasi + investasi)",
+      "values": [
+        "2,713.7 (incl. Fin)",
+        "(1,068.4)",
+        "(731.3)",
+        "(534.3)"
+      ],
+      "is_section": false
+    }
+  ]
+}
