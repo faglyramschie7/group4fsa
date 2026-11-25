@@ -2,6 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useReportMode } from '../composables/useReportMode'
 import { findAbbrTerms, getInlineAbbrHint } from '../composables/useAbbrGlossary'
+import postTokopediaBaseForecast from '../data/post_tokopedia_base_forecast.json'
 
 const props = defineProps({
   item: { type: Object, required: true },
@@ -530,7 +531,91 @@ const hiddenCalcCount = computed(() => Math.max(0, calcNotesCount.value - 3))
 const hasCalcTab = computed(() => hasFormulaBlock.value || calcNotesCount.value > 0)
 const calcTabCount = computed(() => calcNotesCount.value + (hasFormulaBlock.value ? 1 : 0))
 
-const schedulesCount = computed(() => props.item.slide?.supporting_schedules?.length || 0)
+const displayedSchedules = computed(() => {
+  const sNum = props.item.slide?.slide_num
+  const id = isId.value
+  if ((sNum === 8 || sNum === 19) && chartBasis.value === 'current') {
+    const hdr = [id ? 'Pos Laporan (Rp miliar)' : 'Line Item (Rp billion)', '2026F', '2027F', '2028F']
+    return [
+      {
+        title: id
+          ? 'Laporan Laba Rugi Pro Forma — Base Case Final Report (Pasca-Tokopedia)'
+          : 'Base Projected Income Statement — Final Report (Post-Tokopedia)',
+        headers: hdr,
+        rows: [
+          [id ? 'Pendapatan (+15,27% YoY pasca-Tokopedia)' : 'Revenue (+15.27% post-Tokopedia YoY)', '21,121', '24,346', '28,065'],
+          [id ? 'Beban Pokok Pendapatan (42,28% dari Pendapatan)' : 'Cost of Goods Sold (42.28% of Revenue)', '8,929', '10,293', '11,865'],
+          [id ? 'Laba Kotor (Margin Kotor 57,72%)' : 'Gross Profit (57.72% Gross Margin)', '12,191', '14,053', '16,200'],
+          [id ? 'Beban Operasi (55,70% dari Pendapatan)' : 'Operating Expenses (55.70% of Revenue)', '11,765', '13,561', '15,633'],
+          ['EBIT', '+427', '+492', '+567'],
+          [id ? 'Beban Bunga (Rp 535,2M tetap, Catatan 27b)' : 'Interest Expense (Rp 535.2B fixed, Note 27b)', '535', '535', '535'],
+          [id ? 'Laba / (Rugi) Sebelum Pajak (EBT)' : 'Earnings Before Tax (EBT)', '(108)', '(43)', '+32'],
+          [id ? 'Beban / (Manfaat) Pajak (22,0%)' : 'Tax Expense / (Benefit) (22.0%)', '(24)', '(9)', '7'],
+          [id ? 'Laba / (Rugi) Bersih' : 'Net Income', '(84)', '(34)', '+25'],
+        ],
+      },
+      {
+        title: id
+          ? 'Neraca Pro Forma — Base Case Final Report (Pasca-Tokopedia)'
+          : 'Base Projected Balance Sheet — Final Report (Post-Tokopedia)',
+        headers: hdr,
+        rows: [
+          [id ? 'Kas & Setara Kas (plug)' : 'Cash & Equivalents (plug)', '20,687', '19,955', '19,421'],
+          [id ? 'Piutang Usaha (10,90 hari)' : 'Accounts Receivable (10.90 days)', '631', '727', '838'],
+          [id ? 'Persediaan (0,66 hari)' : 'Inventory (0.66 days)', '16', '19', '22'],
+          [id ? 'Total Aset Lancar' : 'Total Current Assets', '21,334', '20,701', '20,281'],
+          [id ? 'Aset Tetap Bersih (Net PP&E)' : 'Net PP&E', '1,712', '2,532', '3,232'],
+          [id ? 'Aset Lainnya (tetap)' : 'Other Assets (held constant)', '22,819', '22,819', '22,819'],
+          [id ? 'TOTAL ASET' : 'TOTAL ASSETS', '45,865', '46,052', '46,332'],
+          [id ? 'Utang Usaha (59,11 hari)' : 'Accounts Payable (59.11 days)', '1,446', '1,667', '1,921'],
+          [id ? 'Utang Jangka Pendek (tetap)' : 'Short-Term Debt (held constant)', '1,524', '1,524', '1,524'],
+          [id ? 'Utang Jangka Panjang (tetap)' : 'Long-Term Debt (held constant)', '6,219', '6,219', '6,219'],
+          [id ? 'Liabilitas Lainnya (tetap)' : 'Other Liabilities (held constant)', '8,049', '8,049', '8,049'],
+          [id ? 'Total Liabilitas' : 'Total Liabilities', '17,238', '17,458', '17,713'],
+          [id ? 'Total Ekuitas Pemegang Saham' : "Total Shareholders' Equity", '28,627', '28,594', '28,619'],
+          [id ? 'TOTAL LIABILITAS & EKUITAS' : 'TOTAL LIABILITIES & EQUITY', '45,865', '46,052', '46,332'],
+        ],
+      },
+      {
+        title: id
+          ? 'Laporan Arus Kas Pro Forma — Base Case Final Report (Pasca-Tokopedia)'
+          : 'Base Projected Cash Flow Statement — Final Report (Post-Tokopedia)',
+        headers: hdr,
+        rows: [
+          [id ? 'Laba / (Rugi) Bersih' : 'Net Income', '(84)', '(34)', '+25'],
+          [id ? 'Tambah: Depresiasi & Amortisasi' : 'Add: Depreciation & Amortization', '+273', '+751', '+1,111'],
+          [id ? 'Perubahan Piutang Usaha' : '(Increase)/Decrease in Receivables', '(84)', '(96)', '(111)'],
+          [id ? 'Perubahan Persediaan' : '(Increase)/Decrease in Inventory', '(2)', '(2)', '(3)'],
+          [id ? 'Perubahan Utang Usaha' : 'Increase/(Decrease) in Payables', '+192', '+221', '+255'],
+          [id ? 'Arus Kas Operasi (CFO)' : 'Cash Flow from Operations (CFO)', '+295', '+840', '+1,277'],
+          [id ? 'Belanja Modal (CapEx 6,45% Pendapatan)' : 'Capital Expenditures (6.45% of Revenue)', '(1,363)', '(1,571)', '(1,811)'],
+          [id ? 'Arus Kas Investasi (CFI)' : 'Cash Flow from Investing (CFI)', '(1,363)', '(1,571)', '(1,811)'],
+          [id ? 'Arus Kas Pendanaan (CFF)' : 'Cash Flow from Financing (CFF)', '0', '0', '0'],
+          [id ? 'Perubahan Bersih Kas' : 'Net Change in Cash', '(1,068)', '(731)', '(534)'],
+          [id ? 'Kas Awal' : 'Beginning Cash', '21,755', '20,687', '19,955'],
+          [id ? 'Kas Akhir (cocok dengan Neraca)' : 'Ending Cash (reconciles to Balance Sheet)', '20,687', '19,955', '19,421'],
+        ],
+      },
+      {
+        title: id
+          ? 'Uji Titik Impas (Breakeven) & Leverage Operasi — Final Report'
+          : 'Breakeven Check & Operating Leverage — Final Report',
+        headers: hdr,
+        rows: [
+          [id ? 'Margin Kotor (%)' : 'Gross Margin (%)', '57.72%', '57.72%', '57.72%'],
+          [id ? 'Pendapatan Titik Impas (OpEx ÷ Margin Kotor)' : 'Breakeven Revenue (OpEx ÷ Gross Margin)', '20,381', '23,494', '27,082'],
+          [id ? 'Surplus Pendapatan di Atas Titik Impas' : 'Revenue Surplus Above Breakeven', '+739', '+852', '+983'],
+          [id ? 'Status Titik Impas' : 'Breakeven Status', id ? 'Di Atas Impas' : 'Above Breakeven', id ? 'Di Atas Impas' : 'Above Breakeven', id ? 'Di Atas Impas' : 'Above Breakeven'],
+          [id ? 'Margin of Safety (%)' : 'Margin of Safety (%)', '+3.50%', '+3.50%', '+3.50%'],
+          [id ? 'Degree of Operating Leverage (DOL = GP ÷ EBIT)' : 'Degree of Operating Leverage (DOL = GP ÷ EBIT)', '28.56x', '28.56x', '28.56x'],
+        ],
+      },
+    ]
+  }
+  return props.item.slide?.supporting_schedules || []
+})
+
+const schedulesCount = computed(() => displayedSchedules.value.length)
 const hasSchedulesTab = computed(() => schedulesCount.value > 0 || Boolean(props.item.evidence_img))
 const schedulesTabCount = computed(() => schedulesCount.value + (props.item.evidence_img ? 1 : 0))
 
@@ -2026,6 +2111,27 @@ const slide7AssumptionsTable = computed(() => {
   }
 })
 
+// Keep the final-report forecast visible below Slide 8's trajectory charts.
+const slide8ForecastTable = computed(() => {
+  if (props.item.slide?.slide_num !== 8) return null
+  const id = isId.value
+  return {
+    title: id
+      ? 'Proyeksi Tiga Laporan Keuangan · Base Case · Tabel 12'
+      : 'Three-Statement Forecast · Base Case · Table 12',
+    note: id
+      ? 'Rp miliar · A = aktual, F = proyeksi. Angka dalam kurung menunjukkan nilai negatif. Sumber: Laporan Akhir, Tabel 12; Appendix A5.'
+      : 'Rp billion · A = actual, F = forecast. Parentheses indicate negative amounts. Source: Final Report, Table 12; Appendix A5.',
+    headers: id
+      ? ['Pos laporan keuangan', '2025A Auditan', '2026F Base', '2027F Base', '2028F Base']
+      : ['Financial statement line', ...postTokopediaBaseForecast.headers.slice(1)],
+    rows: postTokopediaBaseForecast.rows.map((row) => ({
+      ...row,
+      label: id ? row.label_id : row.label,
+    })),
+  }
+})
+
 // Slide 10: Restated Sensitivity Analysis (2D WACC x g Grid + Beta / WACC / RI Boundary Checks, Table 16)
 const slide10SensitivityTables = computed(() => {
   if (props.item.slide?.slide_num !== 10) return null
@@ -3135,6 +3241,35 @@ const modalAbbrGlossary = computed(() => {
                 </div>
               </div>
 
+              <!-- Slide 8: Full base forecast stays in the overview below its charts. -->
+              <section v-if="slide8ForecastTable" class="glass-card glass-assumptions-card glass-forecast-card" aria-labelledby="slide8-forecast-table-title">
+                <div class="glass-sec-label" id="slide8-forecast-table-title">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18M3 15h18M9 3v18" />
+                  </svg>
+                  <span>{{ slide8ForecastTable.title }}</span>
+                </div>
+                <p class="glass-yoy-note">{{ slide8ForecastTable.note }}</p>
+                <div class="glass-table-scroll">
+                  <table class="glass-data-table glass-forecast-tbl">
+                    <thead>
+                      <tr>
+                        <th v-for="(header, index) in slide8ForecastTable.headers" :key="index" scope="col">{{ header }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(row, index) in slide8ForecastTable.rows" :key="index" :class="{ 'is-statement-section': row.is_section }">
+                        <th v-if="row.is_section" :colspan="slide8ForecastTable.headers.length" scope="rowgroup">{{ row.label }}</th>
+                        <template v-else>
+                          <th scope="row">{{ row.label }}</th>
+                          <td v-for="(value, yearIndex) in row.values" :key="yearIndex">{{ value }}</td>
+                        </template>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
               <!-- Cursor-Following Hover Card (positioned directly above cursor) -->
               <Teleport to="body">
                 <div
@@ -3420,13 +3555,33 @@ const modalAbbrGlossary = computed(() => {
             </div>
 
             <div v-if="schedulesCount > 0" class="glass-card">
-              <div class="glass-sec-label">
-                <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /><path d="M9 3v18" />
-                </svg>
-                <span>{{ isId ? 'Jadwal Pendukung' : 'Supporting Schedules' }}</span>
+              <div class="glass-chart-head" style="margin-bottom: 10px;">
+                <div class="glass-sec-label" style="margin-bottom: 0;">
+                  <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /><path d="M9 3v18" />
+                  </svg>
+                  <span>{{ isId ? 'Jadwal Pendukung' : 'Supporting Schedules' }}</span>
+                </div>
+                <div v-if="item.slide?.slide_num === 8 || item.slide?.slide_num === 19" class="glass-basis-toggle" role="group" :aria-label="isId ? 'Pilih basis laporan' : 'Select report basis'">
+                  <button
+                    type="button"
+                    class="glass-basis-btn is-prev"
+                    :class="{ 'is-active': chartBasis === 'previous' }"
+                    @click="chartBasis = 'previous'"
+                  >
+                    {{ isId ? 'Dek Lama (Dengan 2023)' : 'Original Deck (With 2023)' }}
+                  </button>
+                  <button
+                    type="button"
+                    class="glass-basis-btn"
+                    :class="{ 'is-active': chartBasis === 'current' }"
+                    @click="chartBasis = 'current'"
+                  >
+                    {{ isId ? 'Laporan Akhir (Pasca-Exit)' : 'Final Report (Post-Exit)' }}
+                  </button>
+                </div>
               </div>
-              <div v-for="(sched, sIdx) in item.slide.supporting_schedules" :key="'gs-' + sIdx" class="glass-sched-block">
+              <div v-for="(sched, sIdx) in displayedSchedules" :key="'gs-' + chartBasis + '-' + sIdx" class="glass-sched-block">
                 <div class="glass-card-top-row">
                   <h4>{{ sched.title }}</h4>
                   <button type="button" class="glass-toggle-pill" @click="toggleSchedule(sIdx)">
@@ -4273,6 +4428,13 @@ const modalAbbrGlossary = computed(() => {
   color: #bbf7d0;
   font-weight: 700;
 }
+
+.glass-forecast-card > .glass-yoy-note { margin: 0 0 14px; }
+.glass-forecast-tbl { min-width: 720px; }
+.glass-forecast-tbl tbody th { padding: 10px 14px; text-align: left; font-weight: 500; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.glass-forecast-tbl td,
+.glass-forecast-tbl thead th:not(:first-child) { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.glass-forecast-tbl .is-statement-section th { background: rgba(34, 197, 94, 0.14); color: #a7f3d0; font-weight: 750; text-transform: uppercase; letter-spacing: .04em; }
 
 .glass-assumptions-tbl tr.is-base-row td,
 .glass-scenario-tbl tr.is-base-row td {
