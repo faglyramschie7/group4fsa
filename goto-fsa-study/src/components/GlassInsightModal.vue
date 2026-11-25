@@ -2144,36 +2144,42 @@ const slide10SensitivityTables = computed(() => {
       ? ['Langkah', 'Perhitungan Singkat', 'Hasil']
       : ['Step', 'Simple Math', 'Result'],
     dcfBridgeRows: [
-      [
-        id ? '1. PV Arus Kas 2026F–2028F' : '1. PV of 2026F–2028F Cash Flows',
-        id ? 'Didiskonto 7,76% (−604 − 270 − 93)' : 'Discounted at 7.76% (−604 − 270 − 93)',
-        '−Rp 967.9B',
-      ],
-      [
-        id ? '2. Terminal Value (Setelah 2028F)' : '2. Terminal Value (After 2028F)',
-        '−116.9 × 1.03 ÷ (7.76% − 3.00%)',
-        '−Rp 2,528.6B',
-      ],
-      [
-        id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
-        '−2,528.6 ÷ (1.0776)³',
-        '−Rp 2,020.6B',
-      ],
-      [
-        id ? '4. Enterprise Value (EV)' : '4. Enterprise Value (EV)',
-        '−967.9 + (−2,020.6)',
-        '−Rp 2,988.5B',
-      ],
-      [
-        id ? '↳ Porsi TV terhadap EV' : '↳ TV Share of EV (Check)',
-        '−2,020.6 ÷ −2,988.5',
-        '67.6% EV',
-      ],
-      [
-        id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
-        id ? '(−2,988.5 + 14,012.5 Kas Bersih) ÷ 1,062M sh' : '(−2,988.5 + 14,012.5 Net Cash) ÷ 1,062B sh',
-        '+Rp 10.38',
-      ],
+      {
+        step: id ? '1. PV Arus Kas 2026F–2028F' : '1. PV of 2026F–2028F Cash Flows',
+        formula: '2026F (−651.0÷1.0776¹) + 2027F (−313.9÷1.0776²) + 2028F (−116.9÷1.0776³)',
+        math: id ? 'Didiskonto 7,76% (−604 − 270 − 93)' : 'Discounted at 7.76% (−604 − 270 − 93)',
+        result: '−Rp 967.9B',
+      },
+      {
+        step: id ? '2. Terminal Value (Setelah 2028F)' : '2. Terminal Value (After 2028F)',
+        formula: 'FCFF₂₀₂₈ (−116.9 = 442.4 + 1,111.1 − 1,811.1 + 140.6) × (1 + g) ÷ (WACC − g)',
+        math: '−116.9 × 1.03 ÷ (7.76% − 3.00%)',
+        result: '−Rp 2,528.6B',
+      },
+      {
+        step: id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
+        formula: 'TV ÷ (1 + WACC)³',
+        math: '−2,528.6 ÷ (1.0776)³',
+        result: '−Rp 2,020.6B',
+      },
+      {
+        step: id ? '4. Enterprise Value (EV)' : '4. Enterprise Value (EV)',
+        formula: id ? 'PV Arus Kas 3 Thn + PV Terminal Value' : 'PV of 3-Yr Cash Flows + PV of TV',
+        math: '−967.9 + (−2,020.6)',
+        result: '−Rp 2,988.5B',
+      },
+      {
+        step: id ? '↳ Porsi TV terhadap EV' : '↳ TV Share of EV (Check)',
+        formula: 'PV of TV ÷ Enterprise Value (EV)',
+        math: '−2,020.6 ÷ −2,988.5',
+        result: '67.6% EV',
+      },
+      {
+        step: id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
+        formula: id ? '(EV + Kas Bersih Rp 14.012,5M) ÷ Saham Beredar' : '(EV + Net Cash Rp 14,012.5B) ÷ Shares',
+        math: id ? '(−2,988.5 + 14,012.5 Kas Bersih) ÷ 1,062M sh' : '(−2,988.5 + 14,012.5 Net Cash) ÷ 1,062B sh',
+        result: '+Rp 10.38',
+      },
     ],
     riBridgeTitle: id
       ? 'Ringkasan Perhitungan Residual Income: PV & Terminal Value (Ke 8,45% · g 3,00%)'
@@ -2182,36 +2188,42 @@ const slide10SensitivityTables = computed(() => {
       ? ['Langkah', 'Perhitungan Singkat', 'Hasil']
       : ['Step', 'Simple Math', 'Result'],
     riBridgeRows: [
-      [
-        id ? '1. PV RI 2026F–2028F' : '1. PV of 2026F–2028F RI',
-        id ? 'Didiskonto 8,45% (−2,316 − 2,086 − 1,875)' : 'Discounted at 8.45% (−2,316 − 2,086 − 1,875)',
-        '−Rp 6,276.2B',
-      ],
-      [
-        id ? '2. Terminal Value (Setelah 2028F)' : '2. Terminal Value (After 2028F)',
-        '−2,391.7 × 1.03 ÷ (8.45% − 3.00%)',
-        '−Rp 45,184.7B',
-      ],
-      [
-        id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
-        '−45,184.7 ÷ (1.0845)³',
-        '−Rp 35,422.4B',
-      ],
-      [
-        id ? '4. Total PV Residual Income' : '4. Total PV of Residual Income',
-        '−6,276.2 + (−35,422.4)',
-        '−Rp 41,698.6B',
-      ],
-      [
-        id ? '↳ Porsi TV terhadap Total PV' : '↳ TV Share of Total PV (Check)',
-        '−35,422.4 ÷ −41,698.6',
-        '85.0% PV',
-      ],
-      [
-        id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
-        id ? '(28,711.7 Ekuitas Buku − 41,698.6) ÷ 1,062M sh' : '(28,711.7 Book Eq − 41,698.6) ÷ 1,062B sh',
-        '−Rp 12.23',
-      ],
+      {
+        step: id ? '1. PV RI 2026F–2028F' : '1. PV of 2026F–2028F RI',
+        formula: '2026F (−2,511÷1.0845¹) + 2027F (−2,453÷1.0845²) + 2028F (−2,392÷1.0845³)',
+        math: id ? 'Didiskonto 8,45% (−2,316 − 2,086 − 1,875)' : 'Discounted at 8.45% (−2,316 − 2,086 − 1,875)',
+        result: '−Rp 6,276.2B',
+      },
+      {
+        step: id ? '2. Terminal Value (Setelah 2028F)' : '2. Terminal Value (After 2028F)',
+        formula: 'RI₂₀₂₈ (−2,391.7 = +25.0 NI − 2,416.7 Eq Charge) × (1 + g) ÷ (Ke − g)',
+        math: '−2,391.7 × 1.03 ÷ (8.45% − 3.00%)',
+        result: '−Rp 45,184.7B',
+      },
+      {
+        step: id ? '3. PV Terminal Value' : '3. PV of Terminal Value',
+        formula: 'TV ÷ (1 + Ke)³',
+        math: '−45,184.7 ÷ (1.0845)³',
+        result: '−Rp 35,422.4B',
+      },
+      {
+        step: id ? '4. Total PV Residual Income' : '4. Total PV of Residual Income',
+        formula: id ? 'PV RI 3 Thn + PV Terminal RI' : 'PV of 3-Yr RI + PV of Terminal RI',
+        math: '−6,276.2 + (−35,422.4)',
+        result: '−Rp 41,698.6B',
+      },
+      {
+        step: id ? '↳ Porsi TV terhadap Total PV' : '↳ TV Share of Total PV (Check)',
+        formula: 'PV of Terminal RI ÷ Total PV(RI)',
+        math: '−35,422.4 ÷ −41,698.6',
+        result: '85.0% PV',
+      },
+      {
+        step: id ? '5. Nilai Ekuitas / Saham' : '5. Equity Value / Share',
+        formula: id ? '(Ekuitas Buku Awal + Total PV RI) ÷ Saham' : '(Beg. Book Equity + Total PV RI) ÷ Shares',
+        math: id ? '(28,711.7 Ekuitas Buku − 41,698.6) ÷ 1,062M sh' : '(28,711.7 Book Eq − 41,698.6) ÷ 1,062B sh',
+        result: '−Rp 12.23',
+      },
     ],
     gridTitle: id
       ? 'Uji Sensitivitas DCF Base Case: WACC × Pertumbuhan Terminal g (Rp / saham · Tabel 16)'
@@ -3379,7 +3391,12 @@ const modalAbbrGlossary = computed(() => {
                           :key="rIdx"
                           :class="{ 'is-base-row': rIdx === 4 || rIdx === 5 }"
                         >
-                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                          <td>
+                            <div>{{ row.step }}</div>
+                            <div style="font-size: 11px; opacity: 0.68; font-weight: 400; margin-top: 2px;">{{ row.formula }}</div>
+                          </td>
+                          <td>{{ row.math }}</td>
+                          <td>{{ row.result }}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -3406,7 +3423,12 @@ const modalAbbrGlossary = computed(() => {
                           :key="rIdx"
                           :class="{ 'is-base-row': rIdx === 4 || rIdx === 5 }"
                         >
-                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                          <td>
+                            <div>{{ row.step }}</div>
+                            <div style="font-size: 11px; opacity: 0.68; font-weight: 400; margin-top: 2px;">{{ row.formula }}</div>
+                          </td>
+                          <td>{{ row.math }}</td>
+                          <td>{{ row.result }}</td>
                         </tr>
                       </tbody>
                     </table>
