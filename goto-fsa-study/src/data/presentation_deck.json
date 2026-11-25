@@ -5340,8 +5340,8 @@
     },
     "analysis_points": [
       {
-        "heading": "Why Acknowledge Earlier Mistakes",
-        "text": "Rather than hiding superseded Milestone 2/4 and Assignment 14 errors, Appendix B of our Final Report documents all 5 fixes—showing intellectual honesty and auditability.",
+        "heading": "Auditability of Restated Numbers",
+        "text": "Appendix B of our Final Report documents all 5 corrections from Milestone 2/4 and Assignment 14 for full auditability.",
         "formula": "5 Audit Fixes → Balance Check = 0 & Cash Check = 0.0000",
         "calc_steps": [
           "Removed 2023 regime break",

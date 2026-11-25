@@ -1125,11 +1125,11 @@ const chartConfig = computed(() => {
       unit: 'Rp/sh',
       refLine: { val: 13.19, label: id ? 'Kas Bersih Rp13,19' : 'Net Cash Rp13.19' },
       items: [
-        { label: id ? 'Base RI (g = 3,0%)' : 'Base RI (g = 3.0%)', val: -12.23, display: '−Rp12.23', cause: id ? 'Karena ROE (0,09%) jauh di bawah Ke (8,45%), pertumbuhan permanen g=3% justru menghancurkan nilai.' : 'Because 2028F ROE (0.09%) trails Ke (8.45%), growing at g=3% forever actually destroys equity value.' },
-        { label: id ? 'Base RI (g = 0%)' : 'Base RI (g = 0%)', val: 0.24, display: '+Rp0.24', cause: id ? 'Jika pertumbuhan terminal dihentikan (g=0%), penghancuran nilai melambat dan RI mendekati Rp0.' : 'Stopping perpetual value-destructive growth (g=0%) brings Residual Income near zero.' },
-        { label: id ? 'Base DCF (Pasca-Exit)' : 'Base DCF (Post-Exit)', val: 10.38, display: '+Rp10.38', accent: true, cause: id ? 'PV Arus Kas Bebas (−Rp3,0T) + Kas Bersih (+Rp14,0T) = Rp11,0T ekuitas (+Rp10,38/lembar).' : 'Operating EV is slightly negative (−Rp 3.0T), but +Rp 14.0T Net Cash lifts fair value to +Rp 10.38/sh.' },
-        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19', cause: id ? 'Nilai likuidasi kas bersih GoTo; lebih tinggi dari Base DCF karena operasi membakar kas di tahun awal.' : 'Pure net-cash backing per share — higher than Base DCF because operations still burn cash early on.' },
-        { label: id ? 'RI Konvergensi Thn 4+' : 'RI (Yr4+ Convergence)', val: 21.13, display: '+Rp21.13', cause: id ? 'Jika ROE pelan-pelan menyamai Ke (8,45%) di masa depan, nilai wajar naik ke Rp21,13 — masih di bawah Rp25.' : 'Even if ROE converges to Ke (8.45%) after Year 4, fair value reaches Rp 21.13 — still below Rp 25.' },
+        { label: id ? 'Base RI (g = 3,0%)' : 'Base RI (g = 3.0%)', val: -12.23, display: '−Rp12.23', cause: id ? 'Mengasumsikan defisit laba (ROE 0,09% vs. Ke 8,45%) terus membesar 3% selamanya pasca-2028 (TV = 85,0% PV). Penalti −Rp41,7T ini menggerus habis ekuitas buku Rp28,7T.' : 'Assumes GoTo’s profit shortfall (0.09% ROE vs. 8.45% Ke) keeps growing 3% bigger forever after 2028 (TV = 85.0% of PV). That −Rp 41.7T compounding penalty wipes out Rp 28.7T of book equity.' },
+        { label: id ? 'Base RI (g = 0%)' : 'Base RI (g = 0%)', val: 0.24, display: '+Rp0.24', cause: id ? 'Model RI yang sama, tetapi menghentikan pertumbuhan defisit pasca-2028 (g = 0%). Mematikan g = 3% saja menaikkan nilai +Rp12,47/sh—bukti tingginya sensitivitas Terminal Value (85% PV).' : 'Same Residual Income model, but stops growing the post-2028 shortfall (g = 0%). Turning off 3% terminal growth alone swings fair value by +Rp 12.47/sh—showing how sensitive RI is to Terminal Value (85% of PV).' },
+        { label: id ? 'Base DCF (Pasca-Exit)' : 'Base DCF (Post-Exit)', val: 10.38, display: '+Rp10.38', accent: true, cause: id ? 'Rp2,81/sh di bawah garis Kas Bersih Rp13,19 karena CapEx membuat FCF operasi tetap negatif (EV −Rp2,99T atau −Rp2,81/sh), menggerus kas bersih +Rp14,01T (+Rp13,19/sh).' : 'Stops Rp 2.81/sh below the Rp 13.19 Net Cash line because ongoing CapEx keeps core Free Cash Flow negative (EV −Rp 2.99T, or −Rp 2.81/sh), eating into GoTo’s +Rp 14.01T (+Rp 13.19/sh) cash pile.' },
+        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19', cause: id ? 'Batas bawah kas likuidasi (Kas Rp21,76T − Utang & sewa Rp7,74T = Rp14,01T). Jika operasi berhenti hari ini dan kas bersih dibagikan, tiap lembar saham ditopang Rp13,19.' : 'The liquidation cash floor (Rp 21.76T cash minus Rp 7.74T debt & leases = Rp 14.01T). If GoTo shut down operations today and returned net cash to shareholders, each share has Rp 13.19 behind it.' },
+        { label: id ? 'RI Konvergensi Thn 4+' : 'RI (Yr4+ Convergence)', val: 21.13, display: '+Rp21.13', cause: id ? 'Skenario terbaik: mengasumsikan ROE GoTo menyamai Ke 8,45% mulai Thn 4 (2029+), sehingga RI pasca-2028 menjadi Rp0. Ekuitas buku Rp28,7T hanya dikurangi defisit 2026–2028 (+Rp21,13/sh—satu-satunya yang melampaui kas Rp13,19, namun masih di bawah Rp25).' : 'Best case: assumes GoTo finally catches up to its 8.45% ROE hurdle from Year 4 (2029+) onward, making post-2028 Residual Income Rp 0. Keeps Rp 28.7T book equity minus only 2026–2028 shortfalls (+Rp 21.13/sh—only scenario beating the Rp 13.19 cash floor, yet still below Rp 25).' },
       ],
     }
   }
@@ -2056,6 +2056,156 @@ const slide10SensitivityTables = computed(() => {
       [id ? 'Beta Volatilitas Tinggi (1,30)' : 'High-Volatility Beta (1.30)', '13.21% / 11.45%', '+Rp 11.36', '−Rp 6.00'],
       [id ? 'Batas RI Tanpa Pertumbuhan (g = 0%)' : 'Residual Income Floor (g = 0% forever)', id ? 'Tanpa rugi tumbuh kekal' : 'No perpetual loss growth', '—', '+Rp 0.24'],
       [id ? 'Konvergensi RI Tahun 4+ (ROE = Ke)' : 'Residual Income Yr 4+ Convergence', id ? 'ROE menyamai Ke (8,45%)' : 'ROE converges to Ke (8.45%)', '—', '+Rp 21.13'],
+    ],
+    stressTooltips: [
+      [
+        {
+          title: id ? 'Sumber Beta Dasar (0,59)' : 'Base Beta Source (0.59)',
+          detail: id
+            ? 'Beta levered historis 5Y GOTO dari Investing.com (30 Des 2025). Mengukur sensitivitas saham GOTO terhadap IHSG.'
+            : 'Historical 5Y levered beta for GOTO from Investing.com (30 Dec 2025). Measures GOTO stock sensitivity vs. the market.',
+        },
+        {
+          title: id ? 'Rumus Ke & WACC Dasar' : 'Base Ke & WACC Math',
+          detail: id
+            ? 'Ke = 4,502% (Rf) + 0,59 × 6,695% (ERP+CRP) = 8,45%. WACC = (77,42% × 8,45%) + (22,58% × 5,39%) = 7,76%.'
+            : 'Ke = 4.502% (Rf) + 0.59 × 6.695% (ERP+CRP) = 8.45%. WACC = (77.42% × 8.45%) + (22.58% × 5.39%) = 7.76%.',
+        },
+        {
+          title: id ? 'DCF Base Case (+Rp 10,38)' : 'Base Case DCF (+Rp 10.38)',
+          detail: id
+            ? '(PV FCF −Rp 2,99T + Kas Bersih Rp 14,01T) = Ekuitas Rp 11,02T ÷ 1.062,01M saham = +Rp 10,38/saham.'
+            : '(PV of FCF −Rp 2.99T + Net Cash Rp 14.01T) = Rp 11.02T Equity ÷ 1,062.01B shares = +Rp 10.38/share.',
+        },
+        {
+          title: id ? 'RI Base Case (−Rp 12,23)' : 'Base Case RI (−Rp 12.23)',
+          detail: id
+            ? 'BVE Rp 28,71T + PV RI 3 thn (−Rp 6,28T) + PV RI Terminal (−Rp 35,42T) = −Rp 12,99T ÷ 1.062,01M saham = −Rp 12,23/saham.'
+            : 'BVE Rp 28.71T + 3-Yr PV RI (−Rp 6.28T) + Terminal PV RI (−Rp 35.42T) = −Rp 12.99T ÷ 1,062.01B shares = −Rp 12.23/share.',
+        },
+      ],
+      [
+        {
+          title: id ? 'Asal Uji Stres Pajak 0%' : 'Origin of 0% Tax-Shield Check',
+          detail: id
+            ? 'Menguji skenario jika rugi fiskal (NOL/loss carryforward) GOTO membuat perusahaan tidak mendapat manfaat penghematan pajak bunga (tax shield = 0%).'
+            : 'Tests the reality check where GOTO tax loss carryforwards (NOLs) eliminate the near-term interest tax shield (effective tax rate = 0%).',
+        },
+        {
+          title: id ? 'Ke Tetap 8,45% / WACC Naik ke 8,10%' : 'Ke Unchanged 8.45% / WACC Rises to 8.10%',
+          detail: id
+            ? 'Kd setelah pajak naik dari 5,39% menjadi 6,91% (6,91% × (1 − 0%)). WACC = (77,42% × 8,45%) + (22,58% × 6,91%) = 8,10% (+34 bps).'
+            : 'After-tax Kd rises from 5.39% to 6.91% (6.91% × (1 − 0%)). WACC = (77.42% × 8.45%) + (22.58% × 6.91%) = 8.10% (+34 bps).',
+        },
+        {
+          title: id ? 'Dampak DCF (+Rp 10,52)' : 'DCF Impact (+Rp 10.52)',
+          detail: id
+            ? 'WACC lebih tinggi (8,10% vs 7,76%) mendiskonto PV FCF negatif lebih kecil sehingga Ekuitas sedikit naik ke +Rp 10,52/saham.'
+            : 'Higher WACC (8.10% vs 7.76%) shrinks the negative PV of FCF slightly, nudging Equity Value to +Rp 10.52/share.',
+        },
+        {
+          title: id ? 'RI Tetap −Rp 12,23' : 'RI Unchanged (−Rp 12.23)',
+          detail: id
+            ? 'Residual Income didiskonto memakai Ke (8,45%), bukan WACC, sehingga tarif pajak utang tidak mengubah nilai RI.'
+            : 'Residual Income discounts equity cash flows at Ke (8.45%), not WACC, so removing the debt tax shield leaves RI unchanged.',
+        },
+      ],
+      [
+        {
+          title: id ? 'Asal Beta Teknologi Normal (1,01)' : 'Where Normalized Tech Beta (1.01) Comes From',
+          detail: id
+            ? 'Tolok ukur beta pasar/peer teknologi yang ternormalisasi (~1,01, sekitar beta pasar = 1,0) untuk menguji jika beta GOTO (0,59) naik ke level normal industri.'
+            : 'Normalized peer/market-level tech beta benchmark (~1.01, near market beta 1.0) used to stress-test if GOTO’s low 0.59 beta mean-reverts.',
+        },
+        {
+          title: id
+            ? 'Perhitungan Ke 11,26% & WACC 9,94%'
+            : 'Ke 11.26% & WACC 9.94% Math',
+          detail: id
+            ? 'Ke = 4,502% + 1,01 × 6,695% = 11,26%. WACC = (77,42% × 11,26%) + (22,58% × 5,39%) = 9,94%.'
+            : 'Ke = 4.502% + 1.01 × 6.695% = 11.26%. WACC = (77.42% × 11.26%) + (22.58% × 5.39%) = 9.94%.',
+        },
+        {
+          title: id ? 'Dampak DCF (+Rp 11,09)' : 'DCF Impact (+Rp 11.09)',
+          detail: id
+            ? 'WACC 9,94% mengecilkan EV negatif lebih jauh terhadap Kas Bersih Rp 14,01T tetap, sehingga DCF naik tipis ke +Rp 11,09/saham.'
+            : '9.94% WACC shrinks negative EV further against fixed Rp 14.01T Net Cash, lifting DCF slightly to +Rp 11.09/share.',
+        },
+        {
+          title: id ? 'Dampak RI (−Rp 8,45)' : 'RI Impact (−Rp 8.45)',
+          detail: id
+            ? 'Ke lebih tinggi (11,26%) menaikkan beban ekuitas tahunan tetapi sangat menekan faktor diskonto atas rugi RI terminal jangka panjang.'
+            : 'Higher Ke (11.26%) raises annual equity charge but heavily discounts long-term negative terminal RI, reducing the negative PV.',
+        },
+      ],
+      [
+        {
+          title: id ? 'Asal Beta Volatilitas Tinggi (1,30)' : 'Where High-Volatility Beta (1.30) Comes From',
+          detail: id
+            ? 'Asumsi stres platform teknologi berisiko tinggi (1,30 = +30% di atas beta pasar 1,0) untuk menguji batas atas risiko ekuitas GOTO.'
+            : 'High-beta tech platform stress assumption (1.30 = +30% above market beta 1.0) testing an aggressive upper bound for GOTO equity risk.',
+        },
+        {
+          title: id ? 'Perhitungan Ke 13,21% & WACC 11,45%' : 'Ke 13.21% & WACC 11.45% Math',
+          detail: id
+            ? 'Ke = 4,502% + 1,30 × 6,695% = 13,21%. WACC = (77,42% × 13,21%) + (22,58% × 5,39%) = 11,45%.'
+            : 'Ke = 4.502% + 1.30 × 6.695% = 13.21%. WACC = (77.42% × 13.21%) + (22.58% × 5.39%) = 11.45%.',
+        },
+        {
+          title: id ? 'Dampak DCF (+Rp 11,36)' : 'DCF Impact (+Rp 11.36)',
+          detail: id
+            ? 'WACC 11,45% hampir menghapus nilai kini EV negatif, membuat nilai DCF mendekati lantai Kas Bersih per saham (+Rp 11,36).'
+            : '11.45% WACC compresses negative EV even further, leaving DCF anchored near Net Cash per share (+Rp 11.36).',
+        },
+        {
+          title: id ? 'Dampak RI (−Rp 6,00)' : 'RI Impact (−Rp 6.00)',
+          detail: id
+            ? 'Diskonto Ke 13,21% menekan nilai kini RI terminal negatif, mempersempit nilai RI negatif dari −Rp 12,23 menjadi −Rp 6,00/saham.'
+            : '13.21% Ke discount rate compresses the PV of negative terminal RI, narrowing RI from −Rp 12.23 to −Rp 6.00/share.',
+        },
+      ],
+      [
+        {
+          title: id ? 'Asal Batas RI Tanpa Pertumbuhan (g = 0%)' : 'Origin of RI Floor (g = 0% forever)',
+          detail: id
+            ? 'Uji batas model agar kerugian residual (−Rp 2,39T di 2028F) tidak dianggap terus membesar 3%/tahun selamanya dalam perpetuitas.'
+            : 'Model boundary check ensuring negative residual income (−Rp 2.39T in 2028F) does not compound at +3%/yr forever in perpetuity.',
+        },
+        {
+          title: id ? 'Formula Terminal g = 0%' : 'Terminal g = 0% Formula',
+          detail: id
+            ? 'PV Terminal RI = (−Rp 2,39T ÷ 8,452%) × 0,7839 = −Rp 22,18T (jauh lebih kecil dari −Rp 35,42T saat g = 3%).'
+            : 'Terminal PV RI = (−Rp 2.39T ÷ 8.452%) × 0.7839 = −Rp 22.18T (vs. −Rp 35.42T when negative RI grows at g = 3%).',
+        },
+        null,
+        {
+          title: id ? 'Perhitungan RI (+Rp 0,24)' : 'RI Calculation (+Rp 0.24)',
+          detail: id
+            ? 'BVE Rp 28,71T + PV RI 3 thn (−Rp 6,28T) + PV Terminal (−Rp 22,18T) = +Rp 251,5M ÷ 1.062,01M saham = +Rp 0,24/saham.'
+            : 'BVE Rp 28.71T + 3-Yr PV RI (−Rp 6.28T) + Terminal PV (−Rp 22.18T) = +Rp 251.5B ÷ 1,062.01B shares = +Rp 0.24/share.',
+        },
+      ],
+      [
+        {
+          title: id ? 'Asal Konvergensi Tahun 4+ (ROE = Ke)' : 'Origin of Yr 4+ Convergence (ROE = Ke)',
+          detail: id
+            ? 'Asumsi ekonomi standar bahwa setelah 2028F persaingan mendorong ROE menyamai Ke (8,45%), sehingga laba residual setelah Tahun ke-3 = 0.'
+            : 'Standard economic fade assumption: after 2028F, ROE converges to Ke (8.45%) so post-Year 3 Residual Income equals zero.',
+        },
+        {
+          title: id ? 'Terminal RI = Rp 0' : 'Terminal RI = Rp 0',
+          detail: id
+            ? 'Jika ROE = Ke (8,45%) mulai 2029F+, maka Ekuitas tidak menciptakan maupun menghancurkan nilai lagi (PV Terminal RI = 0).'
+            : 'When ROE = Ke (8.45%) from 2029F+, equity neither creates nor destroys economic value (Terminal PV RI = 0).',
+        },
+        null,
+        {
+          title: id ? 'Perhitungan RI (+Rp 21,13)' : 'RI Calculation (+Rp 21.13)',
+          detail: id
+            ? 'BVE Rp 28,71T + PV RI 3 thn (−Rp 6,28T) + Terminal Rp 0 = +Rp 22,44T ÷ 1.062,01M saham = +Rp 21,13/saham.'
+            : 'BVE Rp 28.71T + 3-Yr PV RI (−Rp 6.28T) + Rp 0 Terminal = +Rp 22.44T ÷ 1,062.01B shares = +Rp 21.13/share.',
+        },
+      ],
     ],
   }
 })
@@ -3038,7 +3188,14 @@ const modalAbbrGlossary = computed(() => {
                       </thead>
                       <tbody>
                         <tr v-for="(row, rIdx) in slide10SensitivityTables.stressRows" :key="rIdx" :class="{ 'is-base-row': rIdx === 0 }">
-                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                          <td
+                            v-for="(cell, cIdx) in row"
+                            :key="cIdx"
+                            :class="{ 'is-hoverable-cell': Boolean(slide10SensitivityTables.stressTooltips?.[rIdx]?.[cIdx]) }"
+                            @mouseenter="slide10SensitivityTables.stressTooltips?.[rIdx]?.[cIdx] && showHoverTip($event, slide10SensitivityTables.stressTooltips[rIdx][cIdx].title, slide10SensitivityTables.stressTooltips[rIdx][cIdx].detail)"
+                            @mousemove="moveHoverTip($event)"
+                            @mouseleave="hideHoverTip"
+                          >{{ cell }}</td>
                         </tr>
                       </tbody>
                     </table>

@@ -5304,8 +5304,8 @@
     },
     "analysis_points": [
       {
-        "heading": "Mengapa Mengakui Kesalahan Awal",
-        "text": "Alih-alih menyembunyikan kesalahan Milestone 2/4 dan Tugas 14 sebelumnya, Lampiran B Laporan Akhir mendokumentasikan kelima koreksi secara transparan dan dapat diaudit.",
+        "heading": "Auditabilitas Angka Revisi",
+        "text": "Lampiran B Laporan Akhir mendokumentasikan kelima koreksi dari Milestone 2/4 dan Tugas 14 agar mudah diaudit.",
         "formula": "5 Audit Fixes → Balance Check = 0 & Cash Check = 0.0000",
         "calc_steps": [
           "Removed 2023 regime break",
