@@ -718,10 +718,12 @@ const editorialRows = computed(() => {
       {
         ...base[0],
         name: id ? 'Likuiditas & Siklus Modal Kerja' : 'Liquidity & Working Capital Cycle',
-        value: '2.73x (+0.11x)',
+        value: id ? '2,73 kali' : '2.73 times',
+        value_label: id ? 'Rasio lancar · 2025' : 'Current ratio · 2025',
+        value_note: id ? '2024: 2,62 → 2025: 2,73' : '2024: 2.62 → 2025: 2.73',
         text: id
-          ? 'Current Ratio: 2,62x (23) → 2,62x (24) → 2,73x (25)\nDSO 10,56h → 10,90h | DPO 61,1h → 59,1h | CCC −49,2h → −47,5h'
-          : 'Current Ratio: 2.62x (23) → 2.62x (24) → 2.73x (25)\nDSO 10.56d → 10.90d | DPO 61.1d → 59.1d | CCC −49.2d → −47.5d',
+          ? 'Aset lancar Rp2,73 untuk setiap Rp1 kewajiban lancar.\nNaik 0,11 dari 2024, bukan tumbuh 11%. Piutang tertagih dalam 10,9 hari; utang usaha dibayar dalam 59,1 hari (2025).'
+          : 'Rp2.73 in current assets for every Rp1 of current liabilities.\nUp by 0.11 from 2024, not 11% growth. Receivables collected in 10.9 days; trade payables paid in 59.1 days (2025).',
         detail_explanation: id
           ? 'Menambahkan piutang pinjaman Catatan 7 (+Rp1.581,8M) memulihkan Current Ratio 2024 ke 2,62x dan 2025 meningkat +0,11x ke 2,73x (Modal Kerja naik Rp16,29T → Rp18,41T). Memisahkan piutang usaha Catatan 6 memperbaiki DSO YoY menjadi 14,84h (2023) → 10,56h (2024) → 10,90h (2025), dengan DPO 59,11h menjaga siklus kas negatif −47,54 hari.'
           : 'Restoring Rp1,581.8bn of omitted Note 7 lending receivables adjusts 2024 Current Ratio to 2.62x before rising +0.11x YoY to 2.73x in 2025 (Working Capital Rp16.29T → Rp18.41T). Aligning AR to Note 6 sets Trade DSO at 14.84d (2023) → 10.56d (2024) → 10.90d (2025), while 59.11d DPO keeps CCC negative at −47.54d.',
@@ -729,21 +731,25 @@ const editorialRows = computed(() => {
       {
         ...base[1],
         name: id ? 'Solvabilitas & Cakupan Bunga' : 'Leverage & Interest Coverage',
-        value: '26.97% / −0.71x',
+        value: id ? '26,97%' : '26.97%',
+        value_label: id ? 'Utang / ekuitas · 2025' : 'Debt / equity · 2025',
+        value_note: id ? 'Cakupan bunga: −0,71 kali' : 'Interest coverage: −0.71 times',
         text: id
-          ? 'Debt/Equity: 12,14% → 15,85% → 26,97% (+11,12 pp YoY)\nTIE: −27,83x → −4,54x → −0,71x (+3,83x YoY, Cat. 27b)'
-          : 'Debt/Equity: 12.14% → 15.85% → 26.97% (+11.12 pp YoY)\nTIE: −27.83x → −4.54x → −0.71x (+3.83x YoY, Note 27b)',
+          ? 'Utang Rp26,97 untuk setiap Rp100 ekuitas, naik dari Rp15,85 pada 2024.\nCakupan bunga = EBIT ÷ beban bunga. Nilai negatif berarti operasi masih rugi dan belum menghasilkan laba untuk menutup bunga.'
+          : 'Rp26.97 of debt for every Rp100 of equity, up from Rp15.85 in 2024.\nInterest coverage = EBIT ÷ interest expense. A negative value means operations are loss-making and do not earn enough to cover interest.',
         detail_explanation: id
           ? 'Memasukkan porsi utang jangka pendek dan semua liabilitas sewa (Catatan 19–20: Rp4,34T di 2023 → Rp4,82T di 2024 → Rp7,74T di 2025) mencatat D/E YoY 12,14% → 15,85% → 26,97% (+11,12 pp YoY), serta menautkan bunga Catatan 27b sehingga TIE membaik YoY dari −27,83x → −4,54x → −0,71x (+3,83x YoY).'
           : 'Harmonizing all short/long-term borrowings and leases (Notes 19–20: Rp4.34T → Rp4.82T → Rp7.74T) tracks Debt/Equity YoY at 12.14% → 15.85% → 26.97% (+11.12 pp YoY) and links Note 27b finance costs for live TIE improvement from −27.83x (2023) → −4.54x (2024) → −0.71x (2025, +3.83x YoY).',
       },
       {
         ...base[2],
-        name: id ? 'Altman Z-Score (Buku / Pasar)' : 'Altman Z-Score (Book / Mkt)',
-        value: '−4.72 / −4.80',
+        name: id ? 'Altman Z-Score: Indikator Risiko Keuangan' : 'Altman Z-Score: Financial Distress Screen',
+        value: id ? '−4,72' : '−4.72',
+        value_label: id ? 'Z-score · ekuitas buku' : 'Z-score · book equity',
+        value_note: id ? 'Ekuitas pasar: −4,80' : 'Market equity: −4.80',
         text: id
-          ? 'Sensitivitas X4: Buku 1,68x (−4,72) vs Pasar Rp25 1,56x (−4,80)\nX2 (−6,59 rugi historis 2023) mendominasi; X1 (+0,40) sehat'
-          : 'X4 Sensitivity: Book 1.68x (−4.72) vs Mkt Rp25 1.56x (−4.80)\nX2 (−6.59 sunk 2023 losses) dominates; X1 (+0.40) healthy',
+          ? 'Kedua skor berada di bawah ambang distress model sebesar 1,81.\nAkumulasi rugi historis sangat menekan skor. Ini bukan probabilitas bangkrut atau bukti gagal bayar dalam 12 bulan.'
+          : 'Both scores fall below the model’s 1.81 distress threshold.\nAccumulated historical losses weigh heavily on the score. It is not a bankruptcy probability or proof of default within 12 months.',
         detail_explanation: id
           ? 'Uji sensitivitas X4 antara Ekuitas Buku (1,6844x → Z = −4,72) dan Nilai Pasar Rp25,00 (1,5576x → Z = −4,80) membuktikan zona distress (< 1,81) berasal dari X2 (−6,59 akibat akumulasi rugi historis 2023) alih-alih krisis kas jangka pendek (X1 tetap kuat +0,40).'
           : 'Testing X4 sensitivity between Book Equity (1.6844x → Z = −4.72) and Market Cap at Rp25.00 (1.5576x → Z = −4.80) confirms the distress score (< 1.81) stems from sunk 2023 accumulated losses (X2 = −6.59) rather than 12-month liquidity risk (X1 stays healthy at +0.40).',
@@ -1321,7 +1327,12 @@ const provisionGrowth = computed(() => {
                     <p v-else>{{ row.text }}</p>
                   </div>
                 </div>
-                <strong>{{ row.value }}</strong>
+                <div v-if="row.value_label" class="slide-editorial-metric">
+                  <span class="slide-editorial-metric-label">{{ row.value_label }}</span>
+                  <strong>{{ row.value }}</strong>
+                  <span v-if="row.value_note" class="slide-editorial-metric-note">{{ row.value_note }}</span>
+                </div>
+                <strong v-else>{{ row.value }}</strong>
               </div>
             </div>
             <template v-else-if="table">
@@ -1643,6 +1654,9 @@ const provisionGrowth = computed(() => {
 .slide-editorial-formula { display: block; font-style: italic; }
 .slide-editorial-calc { display: block; font-style: normal; }
 .slide-editorial-row strong { flex-shrink: 0; font-size: 1.75cqw; font-weight: 750; color: #008c2c; letter-spacing: -.07cqw; }
+.slide-editorial-metric { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: .35cqw; max-width: 19cqw; text-align: right; }
+.slide-editorial-metric-label { font-size: .9cqw; line-height: 1.3; font-weight: 650; color: #173d25; }
+.slide-editorial-metric-note { font-size: .9cqw; line-height: 1.35; color: #63786a; }
 .slide-chart { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: white; cursor: zoom-in; }
 .slide-chart img { width: 100%; height: 100%; display: block; object-fit: contain; }
 .slide-loss-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1cqw; align-items: center; margin-top: .8cqw; }
