@@ -66,8 +66,8 @@ const restatementSummary = computed(() => {
       ? 'Restatement: Rentang Nilai Wajar Rp10,38–Rp16,75/sh vs harga pasar Rp25,00 (P/B Grab Rp91,02 ditolak)'
       : 'Restatement: Defensible Range Rp10.38–Rp16.75/sh vs Rp25.00 market (Grab P/B Rp91.02 rejected)',
     12: id
-      ? 'Restatement: SELL / AVOID tetap berlaku — ROIC 2028F (+2,70%) tertinggal 506 bps di bawah WACC (7,76%)'
-      : 'Restatement: SELL / AVOID holds — 2028F ROIC (+2.70%) trails WACC (7.76%) by 506 bps',
+      ? 'Restatement: SELL / AVOID tetap berlaku — ROIC 2028F (+2,70%) tertinggal 5.06% di bawah WACC (7,76%)'
+      : 'Restatement: SELL / AVOID holds — 2028F ROIC (+2.70%) trails WACC (7.76%) by 5.06%',
   }
   return map[sn] || ''
 })
@@ -475,7 +475,7 @@ const restatedPointsMap = computed(() => {
         text: id
           ? 'Pinjaman konsumen GoPay naik 72,6% ke Rp2,73T (memakai kas Rp2,02T), sementara cadangan kredit macet melonjak lebih dari 2x (+134,9%) ke Rp407,7M.'
           : 'GoPay consumer loans grew 72.6% to Rp2.73T (using Rp2.02T of cash), while bad-loan provisions more than doubled (+134.9%) to Rp407.7B.',
-        formula: 'ECL Allowance: Rp173.6bn → Rp407.7bn (+134.9%) | +500 bps loss = −Rp136.5bn',
+        formula: 'ECL Allowance: Rp173.6bn → Rp407.7bn (+134.9%) | +5.00% loss = −Rp136.5bn',
         data_origin: 'Final Report §2.1 (Note 7 & Cash Flow p. 21)',
       },
     ],
@@ -485,7 +485,7 @@ const restatedPointsMap = computed(() => {
         text: id
           ? 'Proyeksi Base memakai tren pasca-Tokopedia: pendapatan tumbuh 15,27%, COGS 42,28%, Cash OpEx 55,70%, dan CapEx 6,45%.'
           : 'Our Base Case uses GoTo’s actual post-Tokopedia track record: 15.27% sales growth, 42.28% COGS, 55.70% Cash OpEx, and 6.45% CapEx.',
-        formula: '2025 Margin Spread = 57.72% Gross Margin − 55.70% Cash OpEx = +202 bps',
+        formula: '2025 Margin Spread = 57.72% Gross Margin − 55.70% Cash OpEx = +2.02%',
         data_origin: 'Final Report §4.1 (Table 11)',
       },
       {
@@ -580,7 +580,7 @@ const restatedPointsMap = computed(() => {
         text: id
           ? 'Risiko naik: efisiensi biaya 1H 2026 bertahan penuh atau ada merger/akuisisi. Risiko turun: kredit macet GoPay makin naik atau penurunan nilai Tokopedia.'
           : 'Upside risks: faster cost cuts matching 1H 2026 or an M&A buyout. Downside risks: rising GoPay loan losses or a write-down on Tokopedia.',
-        formula: '2028F ROIC (+2.70%) − WACC (7.76%) = −506 bps gap',
+        formula: '2028F ROIC (+2.70%) − WACC (7.76%) = −5.06% gap',
         data_origin: 'Final Report §6.3',
       },
     ],
@@ -767,13 +767,13 @@ const editorialRows = computed(() => {
       {
         ...base[1],
         name: id ? 'Spread nilai ekonomi (ROIC vs WACC)' : 'Economic spread (ROIC vs WACC)',
-        value: '−506 bps',
+        value: '−5.06%',
         text: id
           ? '2028F ROIC (+2,70%) tertinggal di bawah WACC (7,76%)\nLaba akuntansi positif (+Rp25M) belum ciptakan nilai'
           : '2028F Base ROIC (+2.70%) trails WACC (7.76%)\nNet profit (+Rp25bn) still destroys economic value',
         detail_explanation: id
           ? 'Meskipun perbaikan pasca-Tokopedia membalik EBIT 2026F (+Rp426,9M) dan Laba Bersih 2028F (+Rp25,0M) menjadi positif, ROIC 2028F (+2,70%) tetap jauh di bawah WACC (7,76%) dan ROE (+0,09%) di bawah Ke (8,45%).'
-          : 'Although removing 2023 distortions turns Base EBIT (+Rp426.9bn in 2026F) and Net Income (+Rp25.0bn in 2028F) positive, 2028F ROIC (+2.70%) still trails WACC (7.76%) by 506 bps.',
+          : 'Although removing 2023 distortions turns Base EBIT (+Rp426.9bn in 2026F) and Net Income (+Rp25.0bn in 2028F) positive, 2028F ROIC (+2.70%) still trails WACC (7.76%) by 5.06%.',
       },
       {
         ...base[2],

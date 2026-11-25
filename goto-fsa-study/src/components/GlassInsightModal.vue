@@ -46,6 +46,29 @@ const showRightPanel = ref(false)
 const showAllCalcRows = ref(false)
 const showAllTraces = ref(false)
 const openSchedules = ref({ 0: true })
+const hoveredBar = ref(null)
+const tooltipPos = ref({ x: 0, y: 0 })
+function updateTooltipPos(evt) {
+  if (!evt) return
+  const pad = 16
+  const maxW = 340
+  const vw = typeof window !== 'undefined' ? window.innerWidth : 1280
+  const x = Math.min(Math.max(evt.clientX, maxW / 2 + pad), vw - maxW / 2 - pad)
+  const y = Math.max(evt.clientY, 110)
+  tooltipPos.value = { x, y }
+}
+function setHoveredBar(label, value, cause, evt) {
+  if (!cause) return
+  hoveredBar.value = { label, value, cause }
+  updateTooltipPos(evt)
+}
+function moveHoveredBar(evt) {
+  if (!hoveredBar.value) return
+  updateTooltipPos(evt)
+}
+function clearHoveredBar() {
+  hoveredBar.value = null
+}
 
 // Slide 9 (Cost of Capital) interactive Source & Math walk-through sub-menu
 const isSlide9Walkthrough = computed(() => (props.item.slide?.slide_num || 0) === 9)
@@ -361,8 +384,8 @@ const slide9Components = computed(() => {
       result: '7.761%',
       formula: 'WACC = (77.42% × 8.452%) + (22.58% × 5.390%) = 6.544% + 1.217% = 7.761%',
       summary: id
-        ? 'Biaya modal rata-rata tertimbang GoTo lintas pemegang saham dan kreditur. Menjadi batas imbal hasil (hurdle rate) untuk mendiskontokan FCFF di DCF; ROIC 2028F GoTo (+2,70%) tertinggal 506 bps di bawah WACC.'
-        : 'GoTo\'s blended financing cost across shareholders and lenders. Used to discount DCF Free Cash Flows; GoTo\'s 2028F ROIC (+2.70%) trails this 7.761% hurdle by 506 bps, which is why operating EV is negative.',
+        ? 'Biaya modal rata-rata tertimbang GoTo lintas pemegang saham dan kreditur. Menjadi batas imbal hasil (hurdle rate) untuk mendiskontokan FCFF di DCF; ROIC 2028F GoTo (+2,70%) tertinggal 5.06% di bawah WACC.'
+        : 'GoTo\'s blended financing cost across shareholders and lenders. Used to discount DCF Free Cash Flows; GoTo\'s 2028F ROIC (+2.70%) trails this 7.761% hurdle by 5.06%, which is why operating EV is negative.',
       usedIn: id ? 'Digunakan langsung di Slide 10 (Model DCF -> +Rp 10,38/saham) & uji sensitivitas WACC 6,76%–8,76%.' : 'Directly discounts Slide 10 DCF (+Rp 10.38/sh) and anchors the 6.76%–8.76% WACC sensitivity grid.',
       sources: [
         {
@@ -381,7 +404,7 @@ const slide9Components = computed(() => {
           label: id ? 'Uji Tanpa Tax Shield (0% Tax)' : 'Zero-Tax-Shield Check (0% Tax)',
           value: '8.101%',
           source: 'Valuation Workbook • Cost of Capital',
-          note: id ? 'Jika rugi fiskal menghapus tax shield, WACC naik +34 bps ke 8,101%.' : 'If past tax losses remove the tax shield, WACC rises +34 bps to 8.101%.',
+          note: id ? 'Jika rugi fiskal menghapus tax shield, WACC naik +0.34% ke 8,101%.' : 'If past tax losses remove the tax shield, WACC rises +0.34% to 8.101%.',
         },
       ],
       steps: [
@@ -469,9 +492,14 @@ watch(
     showAllCalcRows.value = false
     showAllTraces.value = false
     openSchedules.value = { 0: true }
+    hoveredBar.value = null
   },
   { immediate: true }
 )
+
+watch([chartBasis, activeTab], () => {
+  hoveredBar.value = null
+})
 
 const hasChartBasisSwitch = computed(() => {
   const sn = props.item.slide?.slide_num || 0
@@ -531,7 +559,7 @@ const comparisonData = computed(() => {
       rightLabel: id ? '2025 Pasca-Exit (Berlanjut)' : '2025 Post-Exit (Continuing)',
       rows: [
         { metric: id ? 'Pendapatan Bersih' : 'Net Revenue', before: 'Rp 14.79T', after: 'Rp 18.32T', delta: '+23.9% (23→25)', tone: 'pos', pctA: 81, pctB: 100, note: id ? '+15,27% YoY di 2025 dipimpin GoPay (+74,1%) & Gojek (+13,8%).' : '+15.27% YoY in 2025 led by GoPay (+74.1%) & Gojek (+13.8%).' },
-        { metric: id ? 'Cash OpEx (% Pendapatan)' : 'Cash OpEx (% Revenue)', before: '117.01%', after: '55.70%', delta: '−6,131 bps', tone: 'pos', pctA: 100, pctB: 48, note: id ? 'Subsidi e-commerce pra-exit tereliminasi; turun −708 bps lagi di 2025.' : 'Pre-exit e-commerce subsidies removed; fell another −708 bps in 2025.' },
+        { metric: id ? 'Cash OpEx (% Pendapatan)' : 'Cash OpEx (% Revenue)', before: '117.01%', after: '55.70%', delta: '−61.31%', tone: 'pos', pctA: 100, pctB: 48, note: id ? 'Subsidi e-commerce pra-exit tereliminasi; turun −7.08% lagi di 2025.' : 'Pre-exit e-commerce subsidies removed; fell another −7.08% in 2025.' },
         { metric: id ? 'Laba Operasi (EBIT)' : 'Operating Profit (EBIT)', before: '−Rp 10.28T', after: '−Rp 0.38T', delta: '+96.3% loss cut', tone: 'pos', pctA: 100, pctB: 10, note: id ? 'Rugi operasi menyusut 83,1% YoY dari −Rp2,24T (2024) ke −Rp378M (2025).' : 'Operating loss narrowed 83.1% YoY from −Rp2.24T (2024) to −Rp378B (2025).' },
         { metric: id ? 'Laba Bersih Konsolidasian' : 'Consolidated Net Income', before: '−Rp 90.52T', after: '−Rp 1.50T', delta: 'Ex-Rp78.8T goodwill', tone: 'accent', pctA: 100, pctB: 12, note: id ? '2023 terdistorsi penurunan nilai goodwill Rp78,77T (Catatan 34a).' : '2023 distorted by Rp78.77T goodwill impairment write-off (Note 34a).' },
       ],
@@ -546,8 +574,8 @@ const comparisonData = computed(() => {
       leftLabel: id ? '2023 Pra-Exit' : '2023 Pre-Exit',
       rightLabel: id ? '2025 Pasca-Exit' : '2025 Post-Exit',
       rows: [
-        { metric: id ? 'Margin Laba Kotor' : 'Gross Profit Margin', before: '65.55%', after: '57.72%', delta: '−783 bps mix', tone: 'accent', pctA: 100, pctB: 88, note: id ? 'Pergeseran bauran segmen pasca-exit, namun naik +436 bps YoY dari 2024.' : 'Post-exit segment mix shift, yet expanded +436 bps YoY vs. 2024 (53.36%).' },
-        { metric: id ? 'Margin Operasi (EBIT)' : 'Operating Margin (EBIT)', before: '−69.52%', after: '−2.06%', delta: '+6,746 bps', tone: 'pos', pctA: 100, pctB: 8, note: id ? 'Mendekati titik impas operasi setelah keluar dari Tokopedia & Vietnam.' : 'Approaching operating breakeven after Tokopedia & Vietnam exits.' },
+        { metric: id ? 'Margin Laba Kotor' : 'Gross Profit Margin', before: '65.55%', after: '57.72%', delta: '−7.83% mix', tone: 'accent', pctA: 100, pctB: 88, note: id ? 'Pergeseran bauran segmen pasca-exit, namun naik +4.36% YoY dari 2024.' : 'Post-exit segment mix shift, yet expanded +4.36% YoY vs. 2024 (53.36%).' },
+        { metric: id ? 'Margin Operasi (EBIT)' : 'Operating Margin (EBIT)', before: '−69.52%', after: '−2.06%', delta: '+67.46%', tone: 'pos', pctA: 100, pctB: 8, note: id ? 'Mendekati titik impas operasi setelah keluar dari Tokopedia & Vietnam.' : 'Approaching operating breakeven after Tokopedia & Vietnam exits.' },
         { metric: id ? 'Perputaran Aset (ATO)' : 'Total Asset Turnover', before: '0.273x', after: '0.400x', delta: '+46.5%', tone: 'pos', pctA: 68, pctB: 100, note: id ? 'Mengungguli Grab (0,28x) dan Bukalapak (0,25x) pada FY2025.' : 'Outperforms regional peer Grab (0.28x) and Bukalapak (0.25x) in FY2025.' },
         { metric: id ? 'ROE Konsolidasian' : 'Consolidated ROE', before: '−253.4%', after: '−5.23%', delta: 'Parent: −3.73%', tone: 'pos', pctA: 100, pctB: 10, note: id ? 'Membaik tajam dari −17,97% (2024), namun masih tertinggal dari Grab (+2,96%).' : 'Improved sharply from −17.97% (2024), still lagging Grab (+2.96%).' },
       ],
@@ -564,7 +592,7 @@ const comparisonData = computed(() => {
       rows: [
         { metric: id ? 'Rasio Lancar 2024' : '2024 Current Ratio', before: '2.46x', after: '2.62x', delta: '+0.16x fix', tone: 'pos', pctA: 94, pctB: 100, note: id ? 'Menambahkan Rp1.581,8M piutang pinjaman Catatan 7 (2025: 2,73x).' : 'Restored Rp1,581.8B omitted Note 7 lending receivables (2025: 2.73x).' },
         { metric: id ? 'DSO Piutang Usaha 2024' : '2024 Trade DSO', before: '46.88 days', after: '10.56 days', delta: '−36.3 days', tone: 'pos', pctA: 100, pctB: 23, note: id ? 'Memisahkan piutang usaha Catatan 6 dari kredit konsumen Catatan 7 (2025: 10,90d).' : 'Separated Note 6 trade receivables from Note 7 loans (2025: 10.90d).' },
-        { metric: id ? 'Utang / Ekuitas 2024' : '2024 Debt / Equity', before: '12.57%', after: '15.85%', delta: '+328 bps', tone: 'accent', pctA: 79, pctB: 100, note: id ? 'Memasukkan porsi lancar & liabilitas sewa penuh (2025 naik ke 26,97%).' : 'Included current maturities & full leases (rose to 26.97% in 2025).' },
+        { metric: id ? 'Utang / Ekuitas 2024' : '2024 Debt / Equity', before: '12.57%', after: '15.85%', delta: '+3.28%', tone: 'accent', pctA: 79, pctB: 100, note: id ? 'Memasukkan porsi lancar & liabilitas sewa penuh (2025 naik ke 26,97%).' : 'Included current maturities & full leases (rose to 26.97% in 2025).' },
         { metric: id ? 'Interest Coverage (TIE)' : 'Times Interest Earned', before: 'N/M', after: '−0.71x (25)', delta: 'Live Note 27b', tone: 'accent', pctA: 15, pctB: 75, note: id ? 'Menautkan biaya bunga Catatan 27b (Rp535,2M): −27,83x (23) → −4,54x (24) → −0,71x (25).' : 'Linked Note 27b finance costs (Rp535.2B): −27.83x (23) → −4.54x (24) → −0.71x (25).' },
       ],
     }
@@ -578,10 +606,10 @@ const comparisonData = computed(() => {
       leftLabel: id ? '2024 Tidak Disesuaikan' : '2024 Unadjusted (Distorted)',
       rightLabel: id ? '2025 Berlanjut (Pasca-Exit)' : '2025 Continuing (Post-Exit)',
       rows: [
-        { metric: id ? 'CapEx Tunai (% Pendapatan)' : 'Cash CapEx (% Revenue)', before: '41.01%', after: '6.45%', delta: '−3,456 bps', tone: 'pos', pctA: 100, pctB: 16, note: id ? '2024 berlanjut sebenarnya 6,63% setelah mengeluarkan Rp5.464,9M Tokopedia.' : '2024 continuing CapEx was actually 6.63% ex-Rp5,464.9B Tokopedia transfer.' },
+        { metric: id ? 'CapEx Tunai (% Pendapatan)' : 'Cash CapEx (% Revenue)', before: '41.01%', after: '6.45%', delta: '−34.56%', tone: 'pos', pctA: 100, pctB: 16, note: id ? '2024 berlanjut sebenarnya 6,63% setelah mengeluarkan Rp5.464,9M Tokopedia.' : '2024 continuing CapEx was actually 6.63% ex-Rp5,464.9B Tokopedia transfer.' },
         { metric: id ? 'Arus Kas Operasi (CFO)' : 'Operating Cash Flow', before: '−Rp 622.1B', after: '+Rp 307.0B', delta: '+Rp 929.1B YoY', tone: 'pos', pctA: 65, pctB: 100, note: id ? 'Berbalik positif meski ekspansi pinjaman GoPay menyerap −Rp2,02T.' : 'Turned positive despite −Rp2.02T working-capital outflow for GoPay lending.' },
         { metric: id ? 'Arus Kas Bebas (FCF)' : 'Free Cash Flow (FCF)', before: '−Rp 7,141B', after: '−Rp 875.3B', delta: 'Cont. 24: −1,676B', tone: 'accent', pctA: 100, pctB: 14, note: id ? 'CFO 2025 baru menutup 25,97% CapEx tunai (Rp1,18T); kas masih tergerus.' : '2025 CFO covered only 25.97% of cash CapEx (Rp1.18T); FCF remains negative.' },
-        { metric: id ? 'Rasio Akrual (Dilaporkan)' : 'Reported Accrual Ratio', before: '−11.21%', after: '−3.95%', delta: '+726 bps YoY', tone: 'pos', pctA: 100, pctB: 35, note: id ? 'Akrual berulang yang disesuaikan juga menyempit dari −3,69% ke −1,94%.' : 'Adjusted recurring accrual ratio also tightened from −3.69% to −1.94%.' },
+        { metric: id ? 'Rasio Akrual (Dilaporkan)' : 'Reported Accrual Ratio', before: '−11.21%', after: '−3.95%', delta: '+7.26% YoY', tone: 'pos', pctA: 100, pctB: 35, note: id ? 'Akrual berulang yang disesuaikan juga menyempit dari −3,69% ke −1,94%.' : 'Adjusted recurring accrual ratio also tightened from −3.69% to −1.94%.' },
       ],
     }
   }
@@ -594,10 +622,10 @@ const comparisonData = computed(() => {
       leftLabel: id ? 'Dek Awal (Rata-rata 2023–25)' : 'Original Deck (2023–25 Avg)',
       rightLabel: id ? 'Laporan Akhir (Pasca-Exit)' : 'Final Report (Post-Exit)',
       rows: [
-        { metric: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth Rate', before: '11.40%', after: '15.27%', delta: '+387 bps', tone: 'pos', pctA: 75, pctB: 100, note: id ? 'Mencerminkan pertumbuhan organik 2024→2025 tanpa seretan dekonsolidasi.' : 'Reflects clean 2024→2025 organic growth without deconsolidation drag.' },
-        { metric: id ? 'COGS / Pendapatan' : 'COGS / Revenue', before: '41.10%', after: '42.28%', delta: '+118 bps', tone: 'accent', pctA: 97, pctB: 100, note: id ? 'Menggunakan basis aktual FY2025 pasca-exit (1H26 membaik ke 38,10%).' : 'Anchored on actual FY2025 post-exit mix (1H26 improved further to 38.10%).' },
-        { metric: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', before: '78.50%', after: '55.70%', delta: '−2,280 bps', tone: 'pos', pctA: 100, pctB: 71, note: id ? 'Menghapus OpEx 2023 (117,01%) yang menyebabkan pembakaran kas buatan.' : 'Eliminates 2023 OpEx (117.01%) that caused artificial cash depletion.' },
-        { metric: id ? 'CapEx / Pendapatan' : 'CapEx / Revenue', before: '16.30%', after: '6.45%', delta: '−985 bps', tone: 'pos', pctA: 100, pctB: 40, note: id ? 'Menghapus anomali 41,0% di 2024 akibat transfer takberwujud Tokopedia.' : 'Removes the 41.0% 2024 distortion from Tokopedia intangible transfers.' },
+        { metric: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth Rate', before: '11.40%', after: '15.27%', delta: '+3.87%', tone: 'pos', pctA: 75, pctB: 100, note: id ? 'Mencerminkan pertumbuhan organik 2024→2025 tanpa seretan dekonsolidasi.' : 'Reflects clean 2024→2025 organic growth without deconsolidation drag.' },
+        { metric: id ? 'COGS / Pendapatan' : 'COGS / Revenue', before: '41.10%', after: '42.28%', delta: '+1.18%', tone: 'accent', pctA: 97, pctB: 100, note: id ? 'Menggunakan basis aktual FY2025 pasca-exit (1H26 membaik ke 38,10%).' : 'Anchored on actual FY2025 post-exit mix (1H26 improved further to 38.10%).' },
+        { metric: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', before: '78.50%', after: '55.70%', delta: '−22.80%', tone: 'pos', pctA: 100, pctB: 71, note: id ? 'Menghapus OpEx 2023 (117,01%) yang menyebabkan pembakaran kas buatan.' : 'Eliminates 2023 OpEx (117.01%) that caused artificial cash depletion.' },
+        { metric: id ? 'CapEx / Pendapatan' : 'CapEx / Revenue', before: '16.30%', after: '6.45%', delta: '−9.85%', tone: 'pos', pctA: 100, pctB: 40, note: id ? 'Menghapus anomali 41,0% di 2024 akibat transfer takberwujud Tokopedia.' : 'Removes the 41.0% 2024 distortion from Tokopedia intangible transfers.' },
       ],
     }
   }
@@ -613,7 +641,7 @@ const comparisonData = computed(() => {
         { metric: id ? '2028F Laba Operasi (EBIT)' : '2028F Operating Profit (EBIT)', before: '−Rp 4,967B', after: '+Rp 567.2B', delta: '+Rp 5.53T swing', tone: 'pos', pctA: 100, pctB: 22, note: id ? 'Berbalik positif sejak 2026F (+Rp426,9M) karena margin kotor > Cash OpEx.' : 'Turns positive in 2026F (+Rp426.9B) as Gross Margin exceeds Cash OpEx.' },
         { metric: id ? '2028F Laba Bersih' : '2028F Net Income', before: '−Rp 4,348B', after: '+Rp 25.0B', delta: 'Turns Profitable', tone: 'pos', pctA: 100, pctB: 10, note: id ? 'Mencapai laba bersih positif pada Tahun ke-3 meski ROE hanya +0,09%.' : 'Reaches positive net profit in Year 3, though ROE is only +0.09%.' },
         { metric: id ? '2028F Saldo Kas Akhir' : '2028F Ending Cash Balance', before: 'Rp 0.97T', after: 'Rp 19.42T', delta: '+Rp 18.45T saved', tone: 'pos', pctA: 8, pctB: 100, note: id ? 'Menghilangkan ilusi kebangkrutan kas akibat asumsi OpEx 78,5%.' : 'Eliminates artificial cash depletion caused by the 78.5% OpEx error.' },
-        { metric: id ? '2028F ROIC vs. WACC' : '2028F ROIC vs. WACC', before: 'Negative', after: '+2.70% vs 7.76%', delta: '−506 bps spread', tone: 'warn', pctA: 10, pctB: 35, note: id ? 'Masih menghancurkan nilai ekonomi meski operasional sudah untung.' : 'Still earns below cost of capital despite turning operationally profitable.' },
+        { metric: id ? '2028F ROIC vs. WACC' : '2028F ROIC vs. WACC', before: 'Negative', after: '+2.70% vs 7.76%', delta: '−5.06% spread', tone: 'warn', pctA: 10, pctB: 35, note: id ? 'Masih menghancurkan nilai ekonomi meski operasional sudah untung.' : 'Still earns below cost of capital despite turning operationally profitable.' },
       ],
     }
   }
@@ -654,14 +682,14 @@ const explanationParagraphs = computed(() => {
     if (t.includes('cogs') || t.includes('pokok')) {
       paras.push(
         id
-          ? 'Pergerakan YoY: COGS naik dari 34,45% (2023 pra-exit) ke 46,64% (2024 pasca-exit) karena pergeseran bauran segmen, lalu turun −436 bps ke 42,28% di FY2025 berkat efisiensi biaya cloud >50% dan skala Gojek, serta membaik lagi ke 38,10% pada 1H 2026.'
-          : 'YoY Driver Story: COGS jumped from 34.45% (2023 pre-exit) to 46.64% (2024 post-exit) on segment mix shift after deconsolidation, then fell −436 bps YoY to 42.28% in FY2025 via >50% cloud cost savings and Gojek scale, reaching 38.10% in 1H 2026.'
+          ? 'Pergerakan YoY: COGS naik dari 34,45% (2023 pra-exit) ke 46,64% (2024 pasca-exit) karena pergeseran bauran segmen, lalu turun −4.36% ke 42,28% di FY2025 berkat efisiensi biaya cloud >50% dan skala Gojek, serta membaik lagi ke 38,10% pada 1H 2026.'
+          : 'YoY Driver Story: COGS jumped from 34.45% (2023 pre-exit) to 46.64% (2024 post-exit) on segment mix shift after deconsolidation, then fell −4.36% YoY to 42.28% in FY2025 via >50% cloud cost savings and Gojek scale, reaching 38.10% in 1H 2026.'
       )
     } else if (t.includes('opex') || t.includes('operating')) {
       paras.push(
         id
-          ? 'Pergerakan YoY: Cash OpEx turun drastis dari 117,01% (2023) → 62,78% (2024) → 55,70% (2025, −708 bps YoY) melalui pemangkasan insentif (−Rp504,2M di Gojek) dan efisiensi korporasi, hingga menyentuh 51,20% pada 1H 2026.'
-          : 'YoY Driver Story: Cash OpEx compressed sharply from 117.01% (2023) → 62.78% (2024) → 55.70% (2025, −708 bps YoY) through incentive cuts (−Rp504.2B at Gojek) and leaner corporate overhead, tightening further to 51.20% in 1H 2026.'
+          ? 'Pergerakan YoY: Cash OpEx turun drastis dari 117,01% (2023) → 62,78% (2024) → 55,70% (2025, −7.08% YoY) melalui pemangkasan insentif (−Rp504,2M di Gojek) dan efisiensi korporasi, hingga menyentuh 51,20% pada 1H 2026.'
+          : 'YoY Driver Story: Cash OpEx compressed sharply from 117.01% (2023) → 62.78% (2024) → 55.70% (2025, −7.08% YoY) through incentive cuts (−Rp504.2B at Gojek) and leaner corporate overhead, tightening further to 51.20% in 1H 2026.'
       )
     } else if (t.includes('growth') || t.includes('pertumbuhan') || t.includes('revenue')) {
       paras.push(
@@ -672,14 +700,14 @@ const explanationParagraphs = computed(() => {
     } else if (t.includes('capex') || t.includes('modal')) {
       paras.push(
         id
-          ? 'Pergerakan YoY: Setelah mengeluarkan transfer aset takberwujud Tokopedia Rp5.464,9M dari 2024 (Catatan 12), CapEx lanjutan stabil dari 6,63% (2024) ke 6,45% (2025, −18 bps YoY), mematahkan ilusi lonjakan 41,0% di dek lama.'
-          : 'YoY Driver Story: Once Rp5,464.9B of pre-deconsolidation Tokopedia intangible transfers are stripped out of 2024 (Note 12), continuing CapEx holds steady at 6.63% (2024) → 6.45% (2025, −18 bps YoY), correcting the 41.0% old-deck distortion.'
+          ? 'Pergerakan YoY: Setelah mengeluarkan transfer aset takberwujud Tokopedia Rp5.464,9M dari 2024 (Catatan 12), CapEx lanjutan stabil dari 6,63% (2024) ke 6,45% (2025, −0.18% YoY), mematahkan ilusi lonjakan 41,0% di dek lama.'
+          : 'YoY Driver Story: Once Rp5,464.9B of pre-deconsolidation Tokopedia intangible transfers are stripped out of 2024 (Note 12), continuing CapEx holds steady at 6.63% (2024) → 6.45% (2025, −0.18% YoY), correcting the 41.0% old-deck distortion.'
       )
     } else if (t.includes('debt') || t.includes('borrow') || t.includes('interest') || t.includes('bunga') || t.includes('utang')) {
       paras.push(
         id
-          ? 'Pergerakan YoY: Biaya bunga efektif atas total utang dan liabilitas sewa penuh (Catatan 19–20 & 27b) bergerak 8,52% (2023) → 10,25% (2024) → 6,91% (2025, −334 bps YoY) seiring fasilitas pinjaman baru berbiaya lebih rendah.'
-          : 'YoY Driver Story: Effective borrowing cost on full debt and lease liabilities (Notes 19–20 & 27b) moved 8.52% (2023) → 10.25% (2024) → 6.91% (2025, −334 bps YoY) as lower-cost bank facilities scaled in FY2025.'
+          ? 'Pergerakan YoY: Biaya bunga efektif atas total utang dan liabilitas sewa penuh (Catatan 19–20 & 27b) bergerak 8,52% (2023) → 10,25% (2024) → 6,91% (2025, −3.34% YoY) seiring fasilitas pinjaman baru berbiaya lebih rendah.'
+          : 'YoY Driver Story: Effective borrowing cost on full debt and lease liabilities (Notes 19–20 & 27b) moved 8.52% (2023) → 10.25% (2024) → 6.91% (2025, −3.34% YoY) as lower-cost bank facilities scaled in FY2025.'
       )
     }
   }
@@ -723,13 +751,13 @@ const chartConfig = computed(() => {
         subtitle: id ? 'Note 29 (Rp miliar) · Lonjakan +1.180% didorong efisiensi insentif & cloud' : 'Note 29 (Rp billion) · +1,180% surge driven by incentive cuts & cloud savings',
         unit: 'Rp bn',
         items: [
-          { label: 'FY2024 EBIT', val: 69.4, display: '+69.4B' },
-          { label: id ? 'Pendapatan Bruto 3P' : '3P Gross Revenue', val: 995.8, display: '+995.8B' },
-          { label: id ? 'Pangkas Insentif (−15,9%)' : 'Incentive Cut (−15.9%)', val: 504.2, display: '+504.2B' },
-          { label: id ? 'Antar-Segmen Bersih' : 'Inter-Segment Net', val: 67.8, display: '+67.8B' },
-          { label: id ? 'Alokasi Korporasi' : 'Corp. Alloc. Cut', val: 32.5, display: '+32.5B' },
-          { label: id ? 'Kenaikan Biaya 3P' : '3P Cost Growth', val: -781.1, display: '−781.1B' },
-          { label: 'FY2025 EBIT', val: 888.6, display: '+888.6B', accent: true },
+          { label: 'FY2024 EBIT', val: 69.4, display: '+69.4B', cause: id ? 'Laba awal segmen On-Demand setelah pemisahan Tokopedia di 2024.' : 'Initial On-Demand profit base right after Tokopedia deconsolidation in 2024.' },
+          { label: id ? 'Pendapatan Bruto 3P' : '3P Gross Revenue', val: 995.8, display: '+995.8B', cause: id ? 'Tambahan pendapatan komisi & layanan ekosistem Gojek sepanjang FY2025.' : 'Higher trip volume and take-rate commissions added Rp 995.8B of revenue.' },
+          { label: id ? 'Pangkas Insentif (−15,9%)' : 'Incentive Cut (−15.9%)', val: 504.2, display: '+504.2B', cause: id ? 'Pemangkasan promo & subsidi mitra sebesar Rp504M langsung menambah laba.' : 'Cutting promo & driver subsidies by 15.9% flowed straight to operating profit.' },
+          { label: id ? 'Antar-Segmen Bersih' : 'Inter-Segment Net', val: 67.8, display: '+67.8B', cause: id ? 'Kontribusi bersih penagihan silang antar unit ekosistem GoTo.' : 'Net benefit from ecosystem cross-segment service billing.' },
+          { label: id ? 'Alokasi Korporasi' : 'Corp. Alloc. Cut', val: 32.5, display: '+32.5B', cause: id ? 'Penurunan alokasi biaya overhead pusat yang dibebankan ke segmen Gojek.' : 'Lower corporate overhead allocation charged to Gojek segment.' },
+          { label: id ? 'Kenaikan Biaya 3P' : '3P Cost Growth', val: -781.1, display: '−781.1B', cause: id ? 'Kenaikan biaya operasional & teknologi untuk mendukung pertumbuhan pesanan.' : 'Higher direct cost of revenue and server/ops scaling for increased trip volume.' },
+          { label: 'FY2025 EBIT', val: 888.6, display: '+888.6B', accent: true, cause: id ? 'Laba operasi Gojek melonjak 12,8x (+1.180% YoY) menjadi penopang utama grup.' : 'Gojek EBIT jumped +1,180% YoY to +Rp 888.6B, becoming GoTo’s core profit pillar.' },
         ],
       }
     }
@@ -739,11 +767,11 @@ const chartConfig = computed(() => {
       subtitle: id ? 'Dalam Rp miliar · Gojek & Tokopedia Fee positif tertutup biaya korporasi' : 'In Rp billion · Positive Gojek & E-Commerce offset by Fintech & Corporate',
       unit: 'Rp bn',
       items: [
-        { label: 'On-Demand (Gojek)', val: 888.6, display: '+888.6B', accent: true },
-        { label: 'E-Commerce Fee', val: 572.2, display: '+572.2B' },
-        { label: 'Fintech (GoPay)', val: -396.6, display: '−396.6B' },
-        { label: id ? 'Biaya Korporasi' : 'Unalloc. Corporate', val: -1442.5, display: '−1,442.5B' },
-        { label: id ? 'EBIT Konsolidasian' : 'Consolidated EBIT', val: -378.3, display: '−378.3B', accent: true },
+        { label: 'On-Demand (Gojek)', val: 888.6, display: '+888.6B', accent: true, cause: id ? 'Mesin laba utama GoTo: pertumbuhan 3P + pemangkasan insentif & biaya cloud.' : 'GoTo’s main profit engine: tighter incentive discipline and cloud/ops savings.' },
+        { label: 'E-Commerce Fee', val: 572.2, display: '+572.2B', cause: id ? 'Biaya layanan pasca-exit dari Tokopedia/TikTok (margin tinggi tanpa beban OpEx).' : 'High-margin post-exit service fee from Tokopedia/TikTok with no e-commerce OpEx drag.' },
+        { label: 'Fintech (GoPay)', val: -396.6, display: '−396.6B', cause: id ? 'Masih rugi akibat ekspansi agresif pinjaman & lonjakan provisi kredit (+134,9%).' : 'Still loss-making due to GoPay loan expansion and +134.9% surge in bad-debt provisions.' },
+        { label: id ? 'Biaya Korporasi' : 'Unalloc. Corporate', val: -1442.5, display: '−1,442.5B', cause: id ? 'Beban kantor pusat, kompensasi saham (SBC), & infrastruktur menghapus laba segmen.' : 'Head-office overhead, share-based comp (SBC), and shared tech wipe out segment profits.' },
+        { label: id ? 'EBIT Konsolidasian' : 'Consolidated EBIT', val: -378.3, display: '−378.3B', accent: true, cause: id ? 'Rugi operasi menyempit drastis ke −Rp378M, namun belum menutup biaya korporasi.' : 'Operating loss narrowed sharply to −Rp378B, but corporate costs still keep it negative.' },
       ],
     }
   }
@@ -756,11 +784,11 @@ const chartConfig = computed(() => {
       subtitle: id ? 'FY2025 (Rp miliar) · Provisi kredit Catatan 7 melonjak +134,9% YoY' : 'FY2025 (Rp billion) · Note 7 credit-loss provisions surged +134.9% YoY',
       unit: 'Rp bn',
       items: [
-        { label: id ? 'Penjualan & Pemasaran' : 'Sales & Marketing', val: 3090.1, display: 'Rp 3,090B' },
-        { label: id ? 'Pengembangan Produk' : 'Product Development', val: 2152.3, display: 'Rp 2,152B' },
-        { label: id ? 'Insentif Beban S&M' : 'Expensed Incentives', val: 1076.9, display: 'Rp 1,077B' },
-        { label: id ? 'Provisi Kredit 2024' : '2024 Loan Provisions', val: 173.6, display: 'Rp 174B' },
-        { label: id ? 'Provisi Kredit 2025 (+134,9%)' : '2025 Provisions (+134.9%)', val: 407.7, display: 'Rp 408B', warn: true },
+        { label: id ? 'Penjualan & Pemasaran' : 'Sales & Marketing', val: 3090.1, display: 'Rp 3,090B', cause: id ? '16,9% pendapatan untuk melawan Grab, Maxim, inDriver, & ShopeeFood.' : '16.9% of revenue spent defending market share against Grab, Maxim, inDriver & ShopeeFood.' },
+        { label: id ? 'Pengembangan Produk' : 'Product Development', val: 2152.3, display: 'Rp 2,152B', cause: id ? '11,7% pendapatan agar teknologi super-app GoTo tetap bersaing vs pesaing spesialis.' : '11.7% of revenue needed to maintain super-app tech against specialized rivals.' },
+        { label: id ? 'Insentif Beban S&M' : 'Expensed Incentives', val: 1076.9, display: 'Rp 1,077B', cause: id ? 'Promo pelanggan & mitra karena biaya pindah sangat rendah sehingga harga sulit dinaikkan.' : 'Promo subsidies GoTo cannot cut deeply because customer switching costs are very low.' },
+        { label: id ? 'Provisi Kredit 2024' : '2024 Loan Provisions', val: 173.6, display: 'Rp 174B', cause: id ? 'Cadangan kredit macet awal saat portofolio pinjaman GoPay masih Rp1,58T di 2024.' : 'Baseline bad-debt buffer in 2024 when GoPay’s net consumer loan book was Rp1.58T.' },
+        { label: id ? 'Provisi Kredit 2025 (+134,9%)' : '2025 Provisions (+134.9%)', val: 407.7, display: 'Rp 408B', warn: true, cause: id ? 'Naik hampir 2x lebih cepat (+134,9%) dari lonjakan pinjaman GoPay (+72,6% ke Rp2,73T).' : 'Jumped +134.9% — nearly 2x faster than GoPay consumer loan growth (+72.6% to Rp2.73T).' },
       ],
     }
   }
@@ -787,6 +815,7 @@ const chartConfig = computed(() => {
           leverageDisp: '1.42x',
           roe: -17.97,
           roeDisp: '−17.97%',
+          cause: id ? 'Tahun transisi tepat setelah pemisahan Tokopedia: rugi bersih Rp5,47T menekan ROE ke −17,97%.' : 'First post-Tokopedia transition year: −Rp5.47T net loss pulled ROE down to −17.97%.',
         },
         {
           label: id ? 'GoTo 2025 (Konsol.)' : 'GoTo 2025 (Consol.)',
@@ -800,6 +829,7 @@ const chartConfig = computed(() => {
           leverageDisp: '1.59x',
           roe: -5.23,
           roeDisp: '−5.23%',
+          cause: id ? 'Perputaran aset (0,40x) kalahkan Grab; satu-satunya penghambat ROE adalah margin bersih negatif −8,20%.' : 'Asset turnover (0.40x) beats Grab and leverage (1.59x) is safe; negative Net Margin (−8.20%) is the sole bottleneck.',
         },
         {
           label: id ? 'GoTo 2025 (Induk)' : 'GoTo 2025 (Parent)',
@@ -813,6 +843,7 @@ const chartConfig = computed(() => {
           leverageDisp: '1.44x',
           roe: -3.73,
           roeDisp: '−3.73%',
+          cause: id ? 'Tanpa porsi kepentingan non-pengendali (NCI), ROE khusus pemegang saham induk membaik ke −3,73%.' : 'Excluding Non-Controlling Interests (NCI), Parent shareholders’ ROE improves to −3.73%, though still below Ke 8.45%.',
         },
         {
           label: id ? 'Grab 2025 (Konsol.)' : 'Grab 2025 (Consol.)',
@@ -826,6 +857,7 @@ const chartConfig = computed(() => {
           leverageDisp: '1.77x',
           roe: 2.96,
           roeDisp: '+2.96%',
+          cause: id ? 'Meski perputaran aset Grab (0,28x) lebih rendah, margin bersih positif (+5,93%) membuat ROE positif +2,96%.' : 'Even with lower asset turnover (0.28x), Grab’s positive +5.93% net margin gives it positive +2.96% ROE.',
         },
       ],
     }
@@ -840,12 +872,12 @@ const chartConfig = computed(() => {
         subtitle: id ? 'X2 (rugi historis 2023) mendominasi skor −4,72; likuiditas X1 & X4 tetap positif' : 'X2 (sunk 2023 losses) drives Z = −4.72 while X1 working capital & X4 stay healthy',
         unit: 'Score',
         items: [
-          { label: '1.2 × X1 (WC / Assets)', val: 0.483, display: '+0.48' },
-          { label: '1.4 × X2 (Ret. Earn.)', val: -6.588, display: '−6.59', warn: true },
-          { label: '3.3 × X3 (EBIT / Assets)', val: -0.027, display: '−0.03' },
-          { label: '0.6 × X4 (Book Eq / Liab)', val: 1.008, display: '+1.01' },
-          { label: '1.0 × X5 (Rev / Assets)', val: 0.400, display: '+0.40' },
-          { label: 'Total Z (Book / Market)', val: -4.72, display: '−4.72 / −4.80', accent: true },
+          { label: '1.2 × X1 (WC / Assets)', val: 0.483, display: '+0.48', cause: id ? 'Modal kerja bersih Rp18,41T sangat sehat dibanding total aset (X1 positif kuat).' : 'Healthy Rp 18.41T working capital buffer supported by Rp 21.76T cash.' },
+          { label: '1.4 × X2 (Ret. Earn.)', val: -6.588, display: '−6.59', warn: true, cause: id ? 'PENYEBAB UTAMA Z negatif: akumulasi rugi historis 2023 (hapus buku goodwill Tokopedia Rp78,8T).' : 'MAIN DRIVER of negative Z-score: sunk 2023 Tokopedia Rp 78.8T goodwill write-off carried in Retained Earnings.' },
+          { label: '3.3 × X3 (EBIT / Assets)', val: -0.027, display: '−0.03', cause: id ? 'EBIT hampir impas (−Rp378M), hanya menyumbang sedikit angka negatif pada Z-Score.' : 'Near-breakeven EBIT (−Rp 378B) barely pulls the Z-Score down anymore.' },
+          { label: '0.6 × X4 (Book Eq / Liab)', val: 1.008, display: '+1.01', cause: id ? 'Ekuitas Rp28,7T jauh melampaui total liabilitas Rp17,1T (solvabilitas jangka panjang aman).' : 'Strong equity base (Rp 28.7T) vs. total liabilities (Rp 17.1T) keeps solvency healthy.' },
+          { label: '1.0 × X5 (Rev / Assets)', val: 0.400, display: '+0.40', cause: id ? 'Perputaran aset 0,40x (lebih tinggi dari Grab 0,28x) menambah +0,40 ke skor.' : 'Asset turnover of 0.40x (above Grab’s 0.28x) adds a solid +0.40 to the score.' },
+          { label: 'Total Z (Book / Market)', val: -4.72, display: '−4.72 / −4.80', accent: true, cause: id ? 'Tampak "bangkrut" hanya karena rugi lama X2 (−6,59); empat komponen lain justru positif (+1,86).' : 'Screams "distress" purely from sunk X2 (−6.59); the other 4 components sum to a healthy +1.86.' },
         ],
       }
     }
@@ -860,20 +892,22 @@ const chartConfig = computed(() => {
             title: id ? 'Rasio Lancar' : 'Current Ratio',
             delta: id ? '2024 keliru' : '2024 understated',
             tone: 'warn',
+            note: id ? 'Aset lancar 2024 belum memasukkan Rp1,58T pinjaman GoPay Catatan 7.' : '2024 Current Assets accidentally omitted Rp 1.58T of Note 7 GoPay loans.',
             bars: [
-              { label: '2023', val: 2.62, display: '2.62x' },
-              { label: '2024', val: 2.46, display: '2.46x', warn: true },
-              { label: '2025', val: 2.73, display: '2.73x', accent: true },
+              { label: '2023', val: 2.62, display: '2.62x', cause: id ? 'Rasio lancar 2023 sebelum dekonsolidasi Tokopedia.' : '2023 Current Ratio prior to Tokopedia deconsolidation.' },
+              { label: '2024', val: 2.46, display: '2.46x', warn: true, cause: id ? 'Terlalu rendah karena Rp1,58T piutang GoPay Catatan 7 terlewat (direvisi jadi 2,62x).' : 'Understated because Rp 1.58T Note 7 GoPay loans were left out (restated to 2.62x).' },
+              { label: '2025', val: 2.73, display: '2.73x', accent: true, cause: id ? 'Didukung kas Rp21,76T (hampir 3x aset lancar dibanding utang jangka pendek).' : 'Backed by Rp 21.76T cash cushion covering short-term obligations nearly 3x.' },
             ],
           },
           {
             title: id ? 'Utang / Ekuitas' : 'Debt / Equity',
             delta: id ? 'Tanpa sewa' : 'Excl. leases',
             tone: 'warn',
+            note: id ? 'Dek lama 2023–2024 belum memasukkan liabilitas sewa (IFRS 16).' : 'Old 2023–2024 figures omitted lease liabilities (IFRS 16).',
             bars: [
-              { label: '2023', val: 9.69, display: '9.69%', warn: true },
-              { label: '2024', val: 12.57, display: '12.57%', warn: true },
-              { label: '2025', val: 26.97, display: '26.97%', accent: true },
+              { label: '2023', val: 9.69, display: '9.69%', warn: true, cause: id ? 'Hanya menghitung pinjaman bank tanpa liabilitas sewa.' : 'Counted bank borrowings only without IFRS 16 lease obligations.' },
+              { label: '2024', val: 12.57, display: '12.57%', warn: true, cause: id ? 'Belum memasukkan sewa; setelah sewa dimasukkan menjadi 15,85%.' : 'Excludes leases; rises to 15.85% once full lease debt is included.' },
+              { label: '2025', val: 26.97, display: '26.97%', accent: true, cause: id ? 'Naik karena pinjaman bank baru FY25 (+Rp3,72T), tetap tergolong rendah.' : 'Lifted by +Rp 3.72T new FY25 bank borrowings, still very conservative overall.' },
             ],
           },
           {
@@ -913,8 +947,8 @@ const chartConfig = computed(() => {
           tone: 'pos',
           note: id ? 'Restorasi Cat. 7 (+Rp1,58T) & kas Rp21,8T jaga likuiditas.' : 'Note 7 restoration (+Rp1.58T) & Rp21.8T cash back WC buffer.',
           bars: [
-            { label: '2024', val: 2.62, display: '2.62x' },
-            { label: '2025', val: 2.73, display: '2.73x', accent: true },
+            { label: '2024', val: 2.62, display: '2.62x', cause: id ? 'Direvisi naik dari 2,46x setelah memulihkan Rp1,58T pinjaman GoPay Catatan 7 ke Aset Lancar.' : 'Restated up from 2.46x after restoring Rp 1.58T of Note 7 GoPay loans into Current Assets.' },
+            { label: '2025', val: 2.73, display: '2.73x', accent: true, cause: id ? 'Naik ke 2,73x berkat kas Rp21,76T & modal kerja Rp18,41T (hampir 3x lipat utang lancar).' : 'Rose to 2.73x backed by Rp 21.76T cash & Rp 18.41T working capital (nearly 3x short-term bills).' },
           ],
         },
         {
@@ -923,8 +957,8 @@ const chartConfig = computed(() => {
           tone: 'accent',
           note: id ? 'Pinjaman bank baru FY25 (+Rp3,72T) naikkan rasio utang.' : 'New FY25 bank borrowings (+Rp3.72T) lifted full debt+lease ratio.',
           bars: [
-            { label: '2024', val: 15.85, display: '15.85%' },
-            { label: '2025', val: 26.97, display: '26.97%', amber: true },
+            { label: '2024', val: 15.85, display: '15.85%', cause: id ? 'Sudah memasukkan liabilitas sewa IFRS 16 (naik dari angka dek lama 12,57% tanpa sewa).' : 'Includes full IFRS 16 lease liabilities (up from old deck’s 12.57% ex-leases).' },
+            { label: '2025', val: 26.97, display: '26.97%', amber: true, cause: id ? 'Naik akibat pinjaman bank baru FY25 (+Rp3,72T), tapi rasio 27% masih tergolong rendah.' : 'Increased due to +Rp 3.72T new FY25 bank borrowings, though 27% leverage remains low.' },
           ],
         },
         {
@@ -933,8 +967,8 @@ const chartConfig = computed(() => {
           tone: 'pos',
           note: id ? 'Koreksi salah klasifikasi Cat. 6 vs Cat. 7 (46,9h → 10,6h); di 2025 naik tipis +0,34h.' : 'Fixed our earlier Note 6 vs Note 7 mix-up (46.9d → 10.6d); 2025 edged up +0.34d.',
           bars: [
-            { label: '2024', val: 10.56, display: '10.6d' },
-            { label: '2025', val: 10.90, display: '10.9d', accent: true },
+            { label: '2024', val: 10.56, display: '10.6d', cause: id ? 'Memisahkan piutang usaha Catatan 6 saja (Rp460M) memperbaiki salah hitung lama 46,9h.' : 'Separated Note 6 trade receivables only (Rp 460B), fixing our earlier 46.9d mix-up.' },
+            { label: '2025', val: 10.90, display: '10.9d', accent: true, cause: id ? 'Naik tipis +0,34 hari ke 10,9 hari; penagihan dari pelanggan masih sangat cepat.' : 'Edged up slightly (+0.34d) to 10.9 days — customer cash collection remains super fast.' },
           ],
         },
         {
@@ -943,8 +977,8 @@ const chartConfig = computed(() => {
           tone: 'pos',
           note: id ? 'GoTo membayar pemasok dalam ~59 hari, menjaga kas tetap di dalam.' : 'GoTo pays suppliers in ~59 days, keeping cash inside the business longer.',
           bars: [
-            { label: '2024', val: 61.1, display: '61.1d' },
-            { label: '2025', val: 59.1, display: '59.1d', accent: true },
+            { label: '2024', val: 61.1, display: '61.1d', cause: id ? 'Rata-rata tempo pembayaran GoTo ke pemasok sekitar 61 hari pasca-exit Tokopedia.' : 'GoTo took ~61 days on average to pay suppliers right after Tokopedia exit.' },
+            { label: '2025', val: 59.1, display: '59.1d', accent: true, cause: id ? 'Lebih cepat 2 hari ke 59,1 hari, masih memberi kelonggaran kredit ~2 bulan.' : '2 days shorter at 59.1 days, still giving GoTo nearly 2 months of supplier credit.' },
           ],
         },
         {
@@ -953,8 +987,8 @@ const chartConfig = computed(() => {
           tone: 'pos',
           note: id ? 'Kas masuk 47,5 hari lebih cepat sebelum GoTo membayar pemasok.' : 'Cash arrives 47.5 days before GoTo has to pay suppliers.',
           bars: [
-            { label: '2024', val: 49.2, display: '−49.2d', goodNeg: true },
-            { label: '2025', val: 47.5, display: '−47.5d', accent: true, goodNeg: true },
+            { label: '2024', val: 49.2, display: '−49.2d', goodNeg: true, cause: id ? 'Kas pelanggan masuk ~49 hari sebelum tagihan pemasok jatuh tempo.' : 'Customer cash arrived ~49 days before supplier bills came due.' },
+            { label: '2025', val: 47.5, display: '−47.5d', accent: true, goodNeg: true, cause: id ? 'Tetap negatif kuat (−47,5h): pemasok ikut membantu membiayai modal kerja GoTo.' : 'Still strongly negative (−47.5d): suppliers effectively help finance GoTo’s working capital.' },
           ],
         },
         {
@@ -963,8 +997,8 @@ const chartConfig = computed(() => {
           tone: 'warn',
           note: id ? 'Rugi EBIT menyusut (−Rp2,24T → −Rp378M) vs bunga Rp535M.' : 'Narrowing EBIT loss (−Rp2.24T → −Rp378B) vs Rp535B interest.',
           bars: [
-            { label: '2024', val: 4.54, display: '−4.54x', warn: true },
-            { label: '2025', val: 0.71, display: '−0.71x', warn: true },
+            { label: '2024', val: 4.54, display: '−4.54x', warn: true, cause: id ? 'Rugi EBIT besar (−Rp2,24T) membuat cakupan bunga sangat negatif (−4,54x).' : 'Large −Rp 2.24T EBIT loss meant operating profit couldn’t cover interest (−4.54x).' },
+            { label: '2025', val: 0.71, display: '−0.71x', warn: true, cause: id ? 'Rugi EBIT menyusut tajam ke −Rp378M vs beban bunga Rp535M; hampir menutup bunga.' : 'EBIT loss narrowed to −Rp 378B vs Rp 535B interest — almost breakeven on coverage.' },
           ],
         },
       ],
@@ -979,11 +1013,11 @@ const chartConfig = computed(() => {
       subtitle: id ? 'CFO (+Rp307M) hanya menutup 25,97% CapEx; CapEx 2024 turun 41% → 6,63%' : 'CFO (+Rp307B) covers 25.97% of CapEx; 2024 continuing CapEx drops 41.0% → 6.63%',
       unit: 'Rp bn',
       items: [
-        { label: id ? 'CFO FY2025' : 'FY2025 Operating CF', val: 307.0, display: '+307.0B', accent: true },
-        { label: id ? 'CapEx Tunai FY2025' : 'FY2025 Cash CapEx', val: -1182.4, display: '−1,182.4B' },
-        { label: id ? 'Arus Kas Bebas (FCF)' : 'FY2025 Free Cash Flow', val: -875.3, display: '−875.3B', warn: true },
-        { label: id ? 'Pencairan Deposito' : 'Time Deposit Maturities', val: 1386.5, display: '+1,386.5B' },
-        { label: id ? 'CFI Inti (Ex-Deposito)' : 'Core CFI (Ex-Deposits)', val: -867.4, display: '−867.4B' },
+        { label: id ? 'CFO FY2025' : 'FY2025 Operating CF', val: 307.0, display: '+307.0B', accent: true, cause: id ? 'Akhirnya positif berkat efisiensi biaya pasca-Tokopedia, tapi baru menutup 26% kebutuhan CapEx.' : 'Finally turned positive after post-Tokopedia cost cuts, but still only covers 26% of ongoing CapEx.' },
+        { label: id ? 'CapEx Tunai FY2025' : 'FY2025 Cash CapEx', val: -1182.4, display: '−1,182.4B', cause: id ? 'Belanja rutin aplikasi, server & software (6,45% pendapatan) — terpisah dari biaya deal 2024.' : 'Normal ongoing app, server, and software spending (6.45% of revenue), separate from 2024’s deal.' },
+        { label: id ? 'Arus Kas Bebas (FCF)' : 'FY2025 Free Cash Flow', val: -875.3, display: '−875.3B', warn: true, cause: id ? 'CFO (+Rp307M) dikurangi CapEx (Rp1.182M) = −Rp875M; bisnis inti masih membakar kas.' : 'Operating CF (+Rp 307B) minus CapEx (Rp 1,182B) = −Rp 875B; GoTo still burns cash overall.' },
+        { label: id ? 'Pencairan Deposito' : 'Time Deposit Maturities', val: 1386.5, display: '+1,386.5B', cause: id ? 'Pencairan deposito bank GoTo sendiri — sekadar pindah rekening, BUKAN laba operasional baru.' : 'GoTo’s own bank depositos maturing — moving cash from one pocket to another, NOT new business profit.' },
+        { label: id ? 'CFI Inti (Ex-Deposito)' : 'Core CFI (Ex-Deposits)', val: -867.4, display: '−867.4B', cause: id ? 'Arus kas investasi riil setelah deposito bank (+Rp1,39T) dikeluarkan agar kas masuk tidak tampak semu.' : 'True investing cash outflow once maturing bank deposits (+Rp 1,386.5B) are stripped out.' },
       ],
     }
   }
@@ -997,10 +1031,10 @@ const chartConfig = computed(() => {
         subtitle: id ? 'Rata-rata 3 tahun (2023–2025) sebelum 2023 pra-Tokopedia dikeluarkan' : 'Original 3-year averages (2023–2025) before removing pre-exit 2023 distortions',
         unit: '%',
         items: [
-          { label: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth', val: 11.4, display: '11.40%' },
-          { label: 'COGS / Revenue', val: 41.1, display: '41.10%' },
-          { label: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', val: 78.5, display: '78.50%', warn: true },
-          { label: 'CapEx / Revenue', val: 16.3, display: '16.30%', warn: true },
+          { label: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth', val: 11.4, display: '11.40%', cause: id ? 'Rata-rata terdistorsi dekonsolidasi Tokopedia pada 2023–2024.' : '3-year average pulled down by Tokopedia deconsolidation revenue drop.' },
+          { label: 'COGS / Revenue', val: 41.1, display: '41.10%', cause: id ? 'Mencampur struktur biaya e-commerce 2023 dengan pasca-exit 2024–2025.' : 'Blends 2023 e-commerce cost structure with post-exit 2024–2025.' },
+          { label: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', val: 78.5, display: '78.50%', warn: true, cause: id ? 'Lonjakan buatan akibat memasukkan OpEx berat Tokopedia 2023 (>100%).' : 'Artificially inflated by including heavy 2023 pre-exit Tokopedia OpEx (>100%).' },
+          { label: 'CapEx / Revenue', val: 16.3, display: '16.30%', warn: true, cause: id ? 'Terdongkrak aset takberwujud 1x Tokopedia Rp5,46T pada tahun 2024.' : 'Inflated by 2024’s one-time Rp 5.46T Tokopedia separation intangibles.' },
         ],
       }
     }
@@ -1010,10 +1044,10 @@ const chartConfig = computed(() => {
       subtitle: id ? 'Berbasis murni pada lintasan operasional pasca-Tokopedia 2024–2025' : 'Anchored strictly on clean post-Tokopedia 2024–2025 continuing operations',
       unit: '%',
       items: [
-        { label: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth', val: 15.27, display: '15.27%', accent: true },
-        { label: 'COGS / Revenue', val: 42.28, display: '42.28%' },
-        { label: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', val: 55.70, display: '55.70%', accent: true },
-        { label: 'CapEx / Revenue', val: 6.45, display: '6.45%' },
+        { label: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth', val: 15.27, display: '15.27%', accent: true, cause: id ? 'Pertumbuhan organik pasca-exit FY2025 (+15,27%): Gojek + GoPay + Service Fee.' : 'Pure FY2025 post-exit organic revenue growth (+15.27%) without 2023 noise.' },
+        { label: 'COGS / Revenue', val: 42.28, display: '42.28%', cause: id ? 'Rasio beban pokok FY2025 yang mencerminkan margin kotor 57,7% pasca-Tokopedia.' : 'Audited FY2025 COGS ratio reflecting GoTo’s cleaner 57.7% post-exit gross margin.' },
+        { label: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue', val: 55.70, display: '55.70%', accent: true, cause: id ? 'Turun dari 78,5% karena beban 2023 dikeluarkan (FY25: 55,70%, masih konservatif vs 1H26 51,2%).' : 'Dropped from 78.5% after removing 2023; anchored on FY25 55.70% (1H26 ran even leaner at 51.2%).' },
+        { label: 'CapEx / Revenue', val: 6.45, display: '6.45%', cause: id ? 'Belanja modal berkelanjutan riil FY2025 (konsisten dengan 2024 bersih 6,63%).' : 'True ongoing FY2025 CapEx intensity (matching clean continuing 2024 at 6.63%).' },
       ],
     }
   }
@@ -1027,11 +1061,11 @@ const chartConfig = computed(() => {
         subtitle: id ? 'OpEx 78,5% & CapEx 16,3% menciptakan rugi operasi −Rp4,97T dan menguras kas ke Rp968M' : '78.5% OpEx & 16.3% CapEx produced −Rp4.97T operating loss and artificial cash depletion',
         unit: 'Rp bn',
         items: [
-          { label: id ? '2026F EBIT (Dek Lama)' : '2026F EBIT (Old 3-Yr)', val: -3854.0, display: '−3,854B', warn: true },
-          { label: id ? '2027F EBIT (Dek Lama)' : '2027F EBIT (Old 3-Yr)', val: -4376.0, display: '−4,376B', warn: true },
-          { label: id ? '2028F EBIT (Dek Lama)' : '2028F EBIT (Old 3-Yr)', val: -4967.4, display: '−4,967B', warn: true },
-          { label: id ? '2028F Laba Bersih' : '2028F Net Income', val: -4347.9, display: '−4,348B', warn: true },
-          { label: id ? '2028F Kas Akhir' : '2028F Ending Cash', val: 968.0, display: '+968B' },
+          { label: id ? '2026F EBIT (Dek Lama)' : '2026F EBIT (Old 3-Yr)', val: -3854.0, display: '−3,854B', warn: true, cause: id ? 'Dipicu asumsi OpEx 78,5% yang membawa kerugian 2023 ke dalam proyeksi.' : 'Driven by 78.5% OpEx assumption carrying 2023 pre-exit losses forward.' },
+          { label: id ? '2027F EBIT (Dek Lama)' : '2027F EBIT (Old 3-Yr)', val: -4376.0, display: '−4,376B', warn: true, cause: id ? 'Skala pendapatan tumbuh tapi margin tetap negatif karena beban 2023 masih terbawa.' : 'Higher revenue multiplied by negative margin keeps EBIT sinking further.' },
+          { label: id ? '2028F EBIT (Dek Lama)' : '2028F EBIT (Old 3-Yr)', val: -4967.4, display: '−4,967B', warn: true, cause: id ? 'Rugi operasi melebar hampir −Rp5T sebelum koreksi pasca-Tokopedia.' : 'Operating loss balloons toward −Rp 5T before removing 2023 distortions.' },
+          { label: id ? '2028F Laba Bersih' : '2028F Net Income', val: -4347.9, display: '−4,348B', warn: true, cause: id ? 'Proyeksi rugi bersih terus membengkak dan menggerus ekuitas.' : 'Compounding operating losses pull bottom-line Net Income deeply negative.' },
+          { label: id ? '2028F Kas Akhir' : '2028F Ending Cash', val: 968.0, display: '+968B', cause: id ? 'Kas Rp21,8T habis terkuras secara semu akibat asumsi CapEx 16,3% & rugi 78,5% OpEx.' : 'Artificially drains GoTo’s Rp 21.8T cash down to Rp 968B due to 78.5% OpEx & 16.3% CapEx.' },
         ],
       }
     }
@@ -1041,11 +1075,11 @@ const chartConfig = computed(() => {
       subtitle: id ? 'Base Case berbalik EBIT positif (+Rp567M) & menjaga kas Rp19,42T; Optimis 1H26 +Rp3,22T' : 'Base Case turns EBIT-positive (+Rp567B) & preserves Rp19.4T cash; 1H26 Opt hits +Rp3.22T',
       unit: 'Rp bn',
       items: [
-        { label: id ? '2028F EBIT Konservatif' : 'Conservative 2028F EBIT', val: -2143.4, display: '−2,143B', warn: true },
-        { label: id ? '2026F EBIT Base' : 'Base 2026F EBIT', val: 426.9, display: '+426.9B' },
-        { label: id ? '2028F EBIT Base' : 'Base 2028F EBIT', val: 567.2, display: '+567.2B', accent: true },
-        { label: id ? '2028F NI Base' : 'Base 2028F Net Income', val: 25.0, display: '+25.0B' },
-        { label: id ? '2028F EBIT Optimis 1H26' : 'Optimistic 2028F EBIT', val: 3221.1, display: '+3,221B', accent: true },
+        { label: id ? '2028F EBIT Konservatif' : 'Conservative 2028F EBIT', val: -2143.4, display: '−2,143B', warn: true, cause: id ? 'Skenario stres jika perang promo Grab/Shopee kembali memaksa OpEx naik ke ~60%.' : 'Downside stress test if renewed Grab/Shopee promo wars push Cash OpEx back near 60%.' },
+        { label: id ? '2026F EBIT Base' : 'Base 2026F EBIT', val: 426.9, display: '+426.9B', cause: id ? 'Berbalik positif dari −Rp378M (2025) seiring skala pendapatan +15% & OpEx 55,7%.' : 'Flips positive from −Rp 378B (2025) as +15% revenue scale meets 55.7% Cash OpEx.' },
+        { label: id ? '2028F EBIT Base' : 'Base 2028F EBIT', val: 567.2, display: '+567.2B', accent: true, cause: id ? 'EBIT berbalik positif +Rp567M, namun ROIC (2,70%) masih jauh di bawah WACC (7,76%).' : 'Turns EBIT-positive (+Rp 567B), but ROIC (2.70%) still trails WACC (7.76%) by 5.06%.' },
+        { label: id ? '2028F NI Base' : 'Base 2028F Net Income', val: 25.0, display: '+25.0B', cause: id ? 'Laba bersih hampir impas (+Rp25M) karena beban bunga & pajak masih menggerus EBIT.' : 'Net Income barely breaks even (+Rp 25B) as interest and taxes absorb most of EBIT.' },
+        { label: id ? '2028F EBIT Optimis 1H26' : 'Optimistic 2028F EBIT', val: 3221.1, display: '+3,221B', accent: true, cause: id ? 'Jika efisiensi 1H26 (Cash OpEx 51,2%) bertahan penuh 3 tahun, EBIT melonjak ke +Rp3,22T.' : 'Shows upside if 1H26 lean run-rate (51.2% Cash OpEx) sustains across 2026F–2028F.' },
       ],
     }
   }
@@ -1058,12 +1092,12 @@ const chartConfig = computed(() => {
       subtitle: id ? 'SUN 10T (30 Des 2025) & Spread Damodaran (1 Jan 2026); bobot 77,4% E / 22,6% D' : 'Dated Dec 30, 2025 bond yield & Jan 1, 2026 Damodaran ERP/CRP (77.4% E / 22.6% D)',
       unit: '%',
       items: [
-        { label: id ? 'Imbal Hasil SUN 10Y' : 'ID 10Y Bond Yield', val: 6.12, display: '6.120%' },
-        { label: id ? 'IDR Risk-Free (Rf)' : 'IDR Risk-Free (Rf)', val: 4.502, display: '4.502%' },
-        { label: id ? 'Biaya Ekuitas (Ke)' : 'Cost of Equity (Ke)', val: 8.452, display: '8.452%', accent: true },
-        { label: id ? 'Biaya Utang Setelah Pajak' : 'After-Tax Kd (22% tax)', val: 5.39, display: '5.390%' },
-        { label: 'Base WACC', val: 7.761, display: '7.761%', accent: true },
-        { label: id ? 'WACC Tanpa Tax Shield' : 'WACC (0% Tax Shield)', val: 8.101, display: '8.101%' },
+        { label: id ? 'Imbal Hasil SUN 10Y' : 'ID 10Y Bond Yield', val: 6.12, display: '6.120%', cause: id ? 'Imbal hasil obligasi pemerintah RI 10 tahun per 30 Des 2025 (masih memuat risiko gagal bayar negara).' : 'Indonesia 10-year government bond yield on Dec 30, 2025 (before stripping default spread).' },
+        { label: id ? 'IDR Risk-Free (Rf)' : 'IDR Risk-Free (Rf)', val: 4.502, display: '4.502%', cause: id ? 'SUN 10Y (6,120%) dikurangi Default Spread Indonesia Damodaran (1,618%) = 4,502%.' : 'ID 10Y Bond Yield (6.120%) minus Damodaran Baa2 sovereign default spread (1.618%).' },
+        { label: id ? 'Biaya Ekuitas (Ke)' : 'Cost of Equity (Ke)', val: 8.452, display: '8.452%', accent: true, cause: id ? 'CAPM: Rf 4,502% + Beta (0,59) × Total ERP Indonesia (6,70%) = 8,452% batas minimal ROE.' : 'CAPM: Rf (4.502%) + Beta (0.59) × Indonesia Total ERP (6.70%) = 8.452% shareholder hurdle.' },
+        { label: id ? 'Biaya Utang Setelah Pajak' : 'After-Tax Kd (22% tax)', val: 5.39, display: '5.390%', cause: id ? 'Bunga utang efektif 6,91% (Catatan 27b/19-20) dikali (1 − tarif pajak 22%).' : 'Effective borrowing rate (6.91% from Notes 19–20/27b) × (1 − 22% statutory tax rate).' },
+        { label: 'Base WACC', val: 7.761, display: '7.761%', accent: true, cause: id ? 'Rata-rata tertimbang: 77,4% Ekuitas (8,45%) + 22,6% Utang (5,39%) = batas minimum ROIC.' : 'Weighted hurdle: 77.4% Equity (8.45%) + 22.6% Debt (5.39%); GoTo must beat 7.76% ROIC to create value.' },
+        { label: id ? 'WACC Tanpa Tax Shield' : 'WACC (0% Tax Shield)', val: 8.101, display: '8.101%', cause: id ? 'Uji sensitivitas jika rugi pajak membuat GoTo belum menikmati penghematan pajak bunga.' : 'Stress check assuming GoTo’s accumulated tax losses mean zero immediate debt tax shield.' },
       ],
     }
   }
@@ -1078,9 +1112,9 @@ const chartConfig = computed(() => {
         unit: 'Rp/sh',
         refLine: { val: 13.19, label: id ? 'Kas Bersih Rp13,19' : 'Net Cash Rp13.19' },
         items: [
-          { label: id ? 'DCF Dek Lama (3 Thn)' : 'Previous DCF (3-Yr Avg)', val: -121.1, display: '−Rp121.10', warn: true },
-          { label: id ? 'RI Dek Lama (3 Thn)' : 'Previous RI (3-Yr Avg)', val: -75.1, display: '−Rp75.10', warn: true },
-          { label: id ? 'Kas Bersih / Saham' : 'Net Cash Floor / sh', val: 13.19, display: '+Rp13.19', accent: true },
+          { label: id ? 'DCF Dek Lama (3 Thn)' : 'Previous DCF (3-Yr Avg)', val: -121.1, display: '−Rp121.10', warn: true, cause: id ? 'Negatif tajam akibat proyeksi OpEx 78,5% & CapEx 16,3% dari data pra-exit 2023.' : 'Deeply negative due to 78.5% OpEx & 16.3% CapEx distorted by 2023 Tokopedia data.' },
+          { label: id ? 'RI Dek Lama (3 Thn)' : 'Previous RI (3-Yr Avg)', val: -75.1, display: '−Rp75.10', warn: true, cause: id ? 'Rugi terus-menerus membuat Residual Income jauh di bawah biaya ekuitas 8,45%.' : 'Projected perpetual losses drag Residual Income far below zero.' },
+          { label: id ? 'Kas Bersih / Saham' : 'Net Cash Floor / sh', val: 13.19, display: '+Rp13.19', accent: true, cause: id ? 'Kas Rp21,76T − Utang Rp7,74T = Rp14,01T kas bersih riil (Rp13,19 per lembar).' : 'Cash (Rp 21.76T) minus Debt (Rp 7.74T) = Rp 14.01T net cash floor per share.' },
         ],
       }
     }
@@ -1091,11 +1125,11 @@ const chartConfig = computed(() => {
       unit: 'Rp/sh',
       refLine: { val: 13.19, label: id ? 'Kas Bersih Rp13,19' : 'Net Cash Rp13.19' },
       items: [
-        { label: id ? 'Base RI (g = 3,0%)' : 'Base RI (g = 3.0%)', val: -12.23, display: '−Rp12.23' },
-        { label: id ? 'Base RI (g = 0%)' : 'Base RI (g = 0%)', val: 0.24, display: '+Rp0.24' },
-        { label: id ? 'Base DCF (Pasca-Exit)' : 'Base DCF (Post-Exit)', val: 10.38, display: '+Rp10.38', accent: true },
-        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19' },
-        { label: id ? 'RI Konvergensi Thn 4+' : 'RI (Yr4+ Convergence)', val: 21.13, display: '+Rp21.13' },
+        { label: id ? 'Base RI (g = 3,0%)' : 'Base RI (g = 3.0%)', val: -12.23, display: '−Rp12.23', cause: id ? 'Karena ROE (0,09%) jauh di bawah Ke (8,45%), pertumbuhan permanen g=3% justru menghancurkan nilai.' : 'Because 2028F ROE (0.09%) trails Ke (8.45%), growing at g=3% forever actually destroys equity value.' },
+        { label: id ? 'Base RI (g = 0%)' : 'Base RI (g = 0%)', val: 0.24, display: '+Rp0.24', cause: id ? 'Jika pertumbuhan terminal dihentikan (g=0%), penghancuran nilai melambat dan RI mendekati Rp0.' : 'Stopping perpetual value-destructive growth (g=0%) brings Residual Income near zero.' },
+        { label: id ? 'Base DCF (Pasca-Exit)' : 'Base DCF (Post-Exit)', val: 10.38, display: '+Rp10.38', accent: true, cause: id ? 'PV Arus Kas Bebas (−Rp3,0T) + Kas Bersih (+Rp14,0T) = Rp11,0T ekuitas (+Rp10,38/lembar).' : 'Operating EV is slightly negative (−Rp 3.0T), but +Rp 14.0T Net Cash lifts fair value to +Rp 10.38/sh.' },
+        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19', cause: id ? 'Nilai likuidasi kas bersih GoTo; lebih tinggi dari Base DCF karena operasi membakar kas di tahun awal.' : 'Pure net-cash backing per share — higher than Base DCF because operations still burn cash early on.' },
+        { label: id ? 'RI Konvergensi Thn 4+' : 'RI (Yr4+ Convergence)', val: 21.13, display: '+Rp21.13', cause: id ? 'Jika ROE pelan-pelan menyamai Ke (8,45%) di masa depan, nilai wajar naik ke Rp21,13 — masih di bawah Rp25.' : 'Even if ROE converges to Ke (8.45%) after Year 4, fair value reaches Rp 21.13 — still below Rp 25.' },
       ],
     }
   }
@@ -1109,13 +1143,13 @@ const chartConfig = computed(() => {
       unit: 'Rp/sh',
       refLine: { val: 25.0, label: id ? 'Pasar Rp25,00' : 'Market Rp25.00' },
       items: [
-        { label: id ? 'RI Konservatif' : 'Conservative RI', val: -44.42, display: '−Rp44.42' },
-        { label: 'Base RI (g=3.0%)', val: -12.23, display: '−Rp12.23' },
-        { label: 'Base DCF (Floor)', val: 10.38, display: '+Rp10.38', accent: true },
-        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19' },
-        { label: 'Opt. RI (Ceiling)', val: 16.75, display: '+Rp16.75', accent: true },
-        { label: 'Opt. DCF (1H26)', val: 47.34, display: '+Rp47.34' },
-        { label: 'Grab P/B (3.04x)', val: 91.02, display: '+Rp91.02' },
+        { label: id ? 'RI Konservatif' : 'Conservative RI', val: -44.42, display: '−Rp44.42', cause: id ? 'Skenario stres perang promo membuat ROE sangat negatif sehingga nilai ekuitas turun −Rp44,42.' : 'Downside stress if promo wars return — deeply negative ROE drags Residual Income to −Rp 44.42.' },
+        { label: 'Base RI (g=3.0%)', val: -12.23, display: '−Rp12.23', cause: id ? 'ROE dasar (+0,09%) < Ke (8,45%) menyebabkan ekspansi terminal menggerus nilai buku.' : 'Base ROE (+0.09%) below Ke (8.45%) means growing below cost of equity erodes book value.' },
+        { label: 'Base DCF (Floor)', val: 10.38, display: '+Rp10.38', accent: true, cause: id ? 'Batas bawah rentang wajar utama kami (+Rp10,38/sh), ditopang kuat oleh kas bersih Rp13,19/sh.' : 'Lower bound of our Defensible Range (+Rp 10.38/sh), anchored by GoTo’s net cash pile.' },
+        { label: id ? 'Kas Bersih / Saham' : 'Net Cash / Share', val: 13.19, display: '+Rp13.19', cause: id ? 'Kas Rp21,76T dikurangi total utang & sewa Rp7,74T dibagi 1,06T lembar saham.' : 'Rp 21.76T cash minus Rp 7.74T debt & leases divided by 1.06T diluted shares.' },
+        { label: 'Opt. RI (Ceiling)', val: 16.75, display: '+Rp16.75', accent: true, cause: id ? 'Batas atas rentang wajar (+Rp16,75/sh): jika efisiensi 1H26 bertahan — tetap −33% di bawah Rp25.' : 'Upper bound of our Defensible Range (+Rp 16.75/sh) under 1H26 efficiency — still 33% below Rp 25.' },
+        { label: 'Opt. DCF (1H26)', val: 47.34, display: '+Rp47.34', cause: id ? 'Hanya tercapai jika OpEx 1H26 (51,2%) + g=3% bertahan selamanya tanpa perlawanan Grab/Shopee.' : 'Only reached if 1H26 ultra-lean OpEx (51.2%) lasts forever with zero competitive pushback.' },
+        { label: 'Grab P/B (3.04x)', val: 91.02, display: '+Rp91.02', cause: id ? 'DITOLAK: Grab layak 3,04x P/B karena sudah untung (+2,96% ROE), sedangkan GoTo masih −5,23% ROE.' : 'REJECTED outlier: Grab earns 3.04x P/B because it is already profitable (+2.96% ROE vs. GoTo −5.23%).' },
       ],
     }
   }
@@ -1125,15 +1159,15 @@ const chartConfig = computed(() => {
     return {
       type: 'diverging',
       title: id ? 'Spread Ekonomi (ROIC vs. WACC) & Gap Harga Pasar' : 'Economic Return Spread (ROIC vs. WACC) & Valuation Gap',
-      subtitle: id ? 'ROIC 2028F (+2,70%) tertinggal 506 bps di bawah WACC (7,76%) → SELL / AVOID di Rp25' : '2028F ROIC (+2.70%) trails WACC (7.76%) by 506 bps → SELL / AVOID holds at Rp25.00',
+      subtitle: id ? 'ROIC 2028F (+2,70%) tertinggal 5.06% di bawah WACC (7,76%) → SELL / AVOID di Rp25' : '2028F ROIC (+2.70%) trails WACC (7.76%) by 5.06% → SELL / AVOID holds at Rp25.00',
       unit: '%',
       items: [
-        { label: '2028F Base ROIC', val: 2.70, display: '+2.70%', accent: true },
-        { label: 'Base WACC Hurdle', val: 7.76, display: '7.76%' },
-        { label: 'ROIC − WACC Spread', val: -5.06, display: '−5.06%', warn: true },
-        { label: '2028F Base ROE', val: 0.09, display: '+0.09%' },
-        { label: 'Cost of Equity (Ke)', val: 8.45, display: '8.45%' },
-        { label: 'ROE − Ke Spread', val: -8.36, display: '−8.36%', warn: true },
+        { label: '2028F Base ROIC', val: 2.70, display: '+2.70%', accent: true, cause: id ? 'Imbal hasil operasi proyeksi tahun 2028 sudah berbalik positif (+2,70%), bukti perbaikan operasional.' : 'Projected 2028F return on invested capital flips positive (+2.70%), proving real turnaround.' },
+        { label: 'Base WACC Hurdle', val: 7.76, display: '7.76%', cause: id ? 'Biaya modal rata-rata tertimbang yang wajib dilampaui GoTo agar menciptakan nilai.' : 'Minimum blended cost of capital GoTo must beat to create economic value.' },
+        { label: 'ROIC − WACC Spread', val: -5.06, display: '−5.06%', warn: true, cause: id ? 'Spread negatif −5,06% berarti pada 2028F GoTo masih menghancurkan nilai ekonomi → rekomendasi SELL.' : 'Negative −5.06% economic spread explains why SELL/AVOID holds even after Tokopedia exit.' },
+        { label: '2028F Base ROE', val: 0.09, display: '+0.09%', cause: id ? 'Laba bersih 2028F (+Rp25M) nyaris nol dibanding ekuitas Rp28,7T.' : 'Base 2028F Net Income (+Rp 25B) yields barely +0.09% ROE on Rp 28.7T equity.' },
+        { label: 'Cost of Equity (Ke)', val: 8.45, display: '8.45%', cause: id ? 'Kompensasi risiko minimum yang dituntut pemegang saham GoTo (CAPM).' : 'Minimum return required by equity investors given GoTo’s risk profile.' },
+        { label: 'ROE − Ke Spread', val: -8.36, display: '−8.36%', warn: true, cause: id ? 'Spread ekuitas negatif −8,36% mengonfirmasi harga pasar Rp25 masih terlalu mahal vs nilai wajar.' : 'Negative −8.36% equity spread confirms Rp 25.00 market price outruns GoTo’s fundamentals.' },
       ],
     }
   }
@@ -1147,10 +1181,10 @@ const chartConfig = computed(() => {
         subtitle: id ? 'OpEx 78,5%, CapEx 41,0% & DSO 46,9 hari sebelum pembersihan forensik' : '78.5% OpEx, 41.0% CapEx & 46.9d DSO before forensic restatement',
         unit: id ? 'Pra-Revisi' : 'Prior Deck',
         items: [
-          { label: 'Base Cash OpEx (%)', val: 78.5, display: '78.50%', warn: true },
-          { label: '2024 Raw CapEx (%)', val: 41.0, display: '41.00%', warn: true },
-          { label: '2024 Mixed DSO (d)', val: 46.88, display: '46.88d', warn: true },
-          { label: '2024 Current Ratio', val: 2.46, display: '2.46x' },
+          { label: 'Base Cash OpEx (%)', val: 78.5, display: '78.50%', warn: true, cause: id ? 'Salah memasukkan tahun 2023 sebelum pemisahan Tokopedia ke dalam rata-rata historis.' : 'Erroneously included pre-Tokopedia-exit 2023 in the 3-year historical average.' },
+          { label: '2024 Raw CapEx (%)', val: 41.0, display: '41.00%', warn: true, cause: id ? 'Memasukkan Rp5,46T pembelian aset takberwujud 1x Tokopedia (Catatan 12) sebagai CapEx normal.' : 'Included Rp 5.46T one-time Tokopedia intangibles (Note 12) inside recurring CapEx.' },
+          { label: '2024 Mixed DSO (d)', val: 46.88, display: '46.88d', warn: true, cause: id ? 'Mencampurkan pinjaman konsumen GoPay (Cat. 7) ke dalam piutang usaha (Cat. 6).' : 'Mixed GoPay consumer loans (Note 7) into trade receivables (Note 6).' },
+          { label: '2024 Current Ratio', val: 2.46, display: '2.46x', cause: id ? 'Terlalu rendah karena lupa memasukkan Rp1,58T pinjaman lancar GoPay Catatan 7 ke Aset Lancar.' : 'Understated because Rp 1.58T of current Note 7 GoPay loans was omitted from Current Assets.' },
         ],
       }
     }
@@ -1160,10 +1194,10 @@ const chartConfig = computed(() => {
       subtitle: id ? 'Basis pasca-Tokopedia yang bersih tanpa distorsi 2023 & aset takberwujud' : 'Clean post-Tokopedia audited basis with zero 2023 or intangible distortions',
       unit: id ? 'Laporan Akhir' : 'Final Report',
       items: [
-        { label: 'Base Cash OpEx (%)', val: 55.70, display: '55.70%', accent: true },
-        { label: '2024 Cont. CapEx (%)', val: 6.63, display: '6.63%' },
-        { label: '2024 Trade DSO (d)', val: 10.56, display: '10.56d' },
-        { label: '2024 Current Ratio', val: 2.62, display: '2.62x', accent: true },
+        { label: 'Base Cash OpEx (%)', val: 55.70, display: '55.70%', accent: true, cause: id ? 'Dibangun ulang dari biaya operasi kas FY2025 murni pasca-exit Tokopedia.' : 'Rebuilt strictly on clean FY2025 post-Tokopedia continuing Cash OpEx.' },
+        { label: '2024 Cont. CapEx (%)', val: 6.63, display: '6.63%', cause: id ? 'Rp5,46T aset takberwujud 1x dikeluarkan; CapEx 2024 murni (6,63%) selaras dengan FY2025 (6,45%).' : 'Stripped out Rp 5.46T one-time intangibles; clean 2024 (6.63%) aligns with 2025 (6.45%).' },
+        { label: '2024 Trade DSO (d)', val: 10.56, display: '10.56d', cause: id ? 'Memisahkan piutang usaha Catatan 6 saja (10,56h di 2024; 10,90h di 2025).' : 'Aligned strictly to Note 6 trade receivables (10.56d in 2024; 10.90d in 2025).' },
+        { label: '2024 Current Ratio', val: 2.62, display: '2.62x', accent: true, cause: id ? 'Mengembalikan Rp1,58T piutang GoPay Catatan 7 ke Aset Lancar sehingga neraca 2024 cocok 100%.' : 'Restored Rp 1.58T of Note 7 GoPay loans to Current Assets, matching audited 2024 totals.' },
       ],
     }
   }
@@ -1177,7 +1211,7 @@ const chartConfig = computed(() => {
     if (m) {
       const v = parseFloat(m[1].replace('−', '-'))
       if (Number.isFinite(v)) {
-        parsed.push({ label: c.label, val: v, display: String(c.result) })
+        parsed.push({ label: c.label, val: v, display: String(c.result), cause: c.formula ? `${c.formula} (${c.data_origin || 'Audited'})` : '' })
       }
     }
   }
@@ -1197,11 +1231,11 @@ const chartConfig = computed(() => {
     unit: 'Rp/sh',
     refLine: { val: 25.0, label: 'Market Rp25' },
     items: [
-      { label: 'Base RI', val: -12.23, display: '−Rp12.23' },
-      { label: 'Base DCF', val: 10.38, display: '+Rp10.38', accent: true },
-      { label: 'Net Cash / sh', val: 13.19, display: '+Rp13.19' },
-      { label: 'Opt. RI Ceiling', val: 16.75, display: '+Rp16.75', accent: true },
-      { label: 'Grab P/B Ref.', val: 91.02, display: '+Rp91.02' },
+      { label: 'Base RI', val: -12.23, display: '−Rp12.23', cause: id ? 'ROE 2028F (0,09%) di bawah Ke (8,45%) menekan nilai Residual Income.' : '2028F ROE (0.09%) trailing Ke (8.45%) weighs on Residual Income.' },
+      { label: 'Base DCF', val: 10.38, display: '+Rp10.38', accent: true, cause: id ? 'Nilai DCF dasar pasca-Tokopedia (+Rp10,38/sh), ditopang kas bersih.' : 'Post-Tokopedia Base DCF fair value (+Rp 10.38/sh), backed by net cash.' },
+      { label: 'Net Cash / sh', val: 13.19, display: '+Rp13.19', cause: id ? 'Kas bersih Rp14,01T dibagi total saham terdilusi.' : 'Rp 14.01T net cash divided by total diluted shares.' },
+      { label: 'Opt. RI Ceiling', val: 16.75, display: '+Rp16.75', accent: true, cause: id ? 'Batas atas rentang wajar (+Rp16,75/sh) dengan efisiensi 1H26.' : 'Upper bound of Defensible Range (+Rp 16.75/sh) using 1H26 cost efficiency.' },
+      { label: 'Grab P/B Ref.', val: 91.02, display: '+Rp91.02', cause: id ? 'Ditolak karena Grab sudah untung (+2,96% ROE) sedangkan GoTo −5,23% ROE.' : 'Rejected outlier: Grab earns +2.96% ROE vs. GoTo −5.23% ROE.' },
     ],
   }
 })
@@ -1344,8 +1378,8 @@ const yoyRatioCards = computed(() => {
           ? 'Pangkas insentif (−Rp504M), hemat cloud >50% & keluar Vietnam.'
           : 'Incentive cuts (−Rp504B), >50% cloud savings & Vietnam exit.',
         bars: [
-          { yr: '2024', val: '+Rp69.4B', pct: 8 },
-          { yr: '2025', val: '+Rp888.6B', pct: 100, current: true },
+          { yr: '2024', val: '+Rp69.4B', pct: 8, cause: id ? 'Baru saja menyentuh impas positif pasca-restrukturisasi awal & keluar Vietnam.' : 'Barely reached positive EBIT (+Rp 69.4B) right after early restructuring & Vietnam exit.' },
+          { yr: '2025', val: '+Rp888.6B', pct: 100, current: true, cause: id ? 'Lonjakan +1.180% didorong efisiensi insentif (−Rp504M), cloud >50%, & take-rate 3P.' : 'Jumped 12.8x (+1,180%) from −Rp 504B incentive cuts, >50% cloud savings & 3P take-rate growth.' },
         ],
       },
       {
@@ -1356,8 +1390,8 @@ const yoyRatioCards = computed(() => {
           ? '90,96% pertumbuhan grup. Rugi segmen menyusut −64,3% (−Rp1,11T → −Rp397B).'
           : '90.96% of group growth. Segment loss narrowed −64.3% (−Rp1.11T → −Rp397B).',
         bars: [
-          { yr: '2024', val: 'Rp2.98T', pct: 57 },
-          { yr: '2025', val: 'Rp5.19T', pct: 100, current: true },
+          { yr: '2024', val: 'Rp2.98T', pct: 57, cause: id ? 'Skala awal kredit konsumen GoPay sebesar Rp1,58T dengan rugi segmen −Rp1,11T.' : 'Early consumer-lending ramp (Rp 1.58T loan book) while segment still lost −Rp 1.11T.' },
+          { yr: '2025', val: 'Rp5.19T', pct: 100, current: true, cause: id ? 'Menyumbang 90,96% pertumbuhan pendapatan grup saat pinjaman melonjak +72,6% ke Rp2,73T.' : 'Drove 90.96% of total group revenue growth as loans surged +72.6% to Rp 2.73T.' },
         ],
       },
       {
@@ -1368,9 +1402,9 @@ const yoyRatioCards = computed(() => {
           ? 'Pertumbuhan inti pasca-exit berlipat dua dari +7,5% (2024).'
           : 'Post-exit core growth more than doubled from +7.5% (2024).',
         bars: [
-          { yr: '2023*', val: 'Rp14.79T', pct: 81 },
-          { yr: '2024', val: 'Rp15.89T', pct: 87 },
-          { yr: '2025', val: 'Rp18.32T', pct: 100, current: true },
+          { yr: '2023*', val: 'Rp14.79T', pct: 81, cause: id ? 'Basis pra-exit yang masih mencakup Tokopedia sebelum dekonsolidasi Jan 2024.' : 'Pre-exit reported base still including Tokopedia before Jan 2024 deconsolidation.' },
+          { yr: '2024', val: 'Rp15.89T', pct: 87, cause: id ? 'Tahun pertama pasca-Tokopedia: tumbuh moderat +7,5% dengan service fee baru.' : 'First post-Tokopedia year: grew a modest +7.5% with the new e-commerce service fee.' },
+          { yr: '2025', val: 'Rp18.32T', pct: 100, current: true, cause: id ? 'Kecepatan tumbuh berlipat dua ke +15,27%, didorong GoPay +74% & Gojek +14%.' : 'Growth more than doubled to +15.27%, led by GoPay (+74%) and Gojek (+14%).' },
         ],
       },
       {
@@ -1381,9 +1415,9 @@ const yoyRatioCards = computed(() => {
           ? 'Segmen inti positif (+Rp1,46T), tertutup biaya korporasi −Rp1,44T.'
           : 'Core segments positive (+Rp1.46T), offset by −Rp1.44T corporate overhead.',
         bars: [
-          { yr: '2023*', val: '−Rp10.28T', pct: 100 },
-          { yr: '2024', val: '−Rp2.24T', pct: 28 },
-          { yr: '2025', val: '−Rp378B', pct: 10, current: true },
+          { yr: '2023*', val: '−Rp10.28T', pct: 100, cause: id ? 'Rugi operasi raksasa sebelum exit akibat subsidi bakar uang & beban penuh Tokopedia.' : 'Massive pre-exit operating loss from Tokopedia’s heavy subsidies & cash burn.' },
+          { yr: '2024', val: '−Rp2.24T', pct: 28, cause: id ? 'Pemangkasan rugi 78% langsung setelah Tokopedia didekonsolidasi pada 2024.' : 'Loss plunged 78% right after deconsolidating Tokopedia’s cash-burning operations.' },
+          { yr: '2025', val: '−Rp378B', pct: 10, current: true, cause: id ? 'Laba Gojek (+Rp889M) + Tokopedia Fee (+Rp572M) nyaris menutup biaya korporasi (−Rp1,44T).' : 'Gojek (+Rp 889B) + Tokopedia Fee (+Rp 572B) almost offset corporate overhead (−Rp 1.44T).' },
         ],
       },
     ]
@@ -1399,21 +1433,21 @@ const yoyRatioCards = computed(() => {
           ? 'Mencapai 12,99% pinjaman bruto seiring ekspansi kredit GoPay.'
           : '12.99% of gross loans as GoPay scales consumer credit.',
         bars: [
-          { yr: '2024', val: 'Rp173.6B', pct: 43 },
-          { yr: '2025', val: 'Rp407.7B', pct: 100, current: true },
+          { yr: '2024', val: 'Rp173.6B', pct: 43, cause: id ? 'Cadangan kredit macet awal saat portofolio pinjaman GoPay masih Rp1,58T.' : '2024 bad-debt buffer when net GoPay consumer loans stood at Rp 1.58T.' },
+          { yr: '2025', val: 'Rp407.7B', pct: 100, current: true, cause: id ? 'Melonjak +134,9% — hampir 2x lebih cepat dari kenaikan pinjaman (+72,6%), bukti risiko kredit naik.' : 'Surged +134.9% — nearly 2x faster than loan growth (+72.6%), signaling rising credit risk.' },
         ],
       },
       {
         title: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue',
-        delta: '−708 bps YoY',
+        delta: '−7.08% YoY',
         tone: 'pos',
         note: id
           ? 'Disiplin promo memangkas bakar kas, tetapi rivalitas batasi harga.'
           : 'Promo discipline narrowed burn, but rivalry caps pricing power.',
         bars: [
-          { yr: '2023*', val: '117.0%', pct: 100 },
-          { yr: '2024', val: '62.78%', pct: 54 },
-          { yr: '2025', val: '55.70%', pct: 48, current: true },
+          { yr: '2023*', val: '117.0%', pct: 100, cause: id ? 'Beban operasi pra-exit melebihi pendapatan (117%) akibat perang subsidi e-commerce.' : 'Pre-exit OpEx exceeded 100% of revenue due to Tokopedia subsidy battles.' },
+          { yr: '2024', val: '62.78%', pct: 54, cause: id ? 'Turun drastis ke 62,8% pasca-exit, meski S&M & promo tetap besar untuk lawan Grab.' : 'Fell sharply to 62.8% post-Tokopedia, though competitive S&M remained heavy.' },
+          { yr: '2025', val: '55.70%', pct: 48, current: true, cause: id ? 'Disiplin insentif memangkas rasio −7,08%, tapi rivalitas menjaga S&M tetap Rp3,09T.' : 'Promo & headcount discipline cut −7.08%, yet rivalry keeps S&M at Rp 3.09T.' },
         ],
       },
     ]
@@ -1429,9 +1463,9 @@ const yoyRatioCards = computed(() => {
           ? 'Efisiensi insentif & cloud mengangkat margin inti ke ambang impas.'
           : 'Incentive cuts & cloud savings lifted core margin near breakeven.',
         bars: [
-          { yr: '2023*', val: '−69.5%', pct: 100 },
-          { yr: '2024', val: '−14.10%', pct: 32 },
-          { yr: '2025', val: '−2.06%', pct: 10, current: true },
+          { yr: '2023*', val: '−69.5%', pct: 100, cause: id ? 'Margin tertekan hebat sebelum pemisahan Tokopedia.' : 'Deeply underwater before separating Tokopedia’s heavy OpEx.' },
+          { yr: '2024', val: '−14.10%', pct: 32, cause: id ? 'Lonjakan perbaikan +55 poin setelah keluar dari e-commerce berbiaya tinggi.' : 'Massive +55 pp rebound immediately after exiting high-burn e-commerce.' },
+          { yr: '2025', val: '−2.06%', pct: 10, current: true, cause: id ? 'Mendekati impas (−Rp378M EBIT) berkat efisiensi insentif & cloud.' : 'Nearly breakeven (−Rp 378B EBIT) thanks to incentive discipline & cloud savings.' },
         ],
       },
       {
@@ -1442,9 +1476,9 @@ const yoyRatioCards = computed(() => {
           ? 'Rugi bersih menyusut, namun kompensasi berbasis saham Rp593B & bunga masih membebani.'
           : 'Bottom line improved sharply, yet Rp593B share-based compensation & finance costs weigh.',
         bars: [
-          { yr: '2023*', val: '−612.2%', pct: 100 },
-          { yr: '2024', val: '−34.38%', pct: 28 },
-          { yr: '2025', val: '−8.20%', pct: 11, current: true },
+          { yr: '2023*', val: '−612.2%', pct: 100, cause: id ? 'Terdistorsi penghapusan goodwill Tokopedia Rp78,8T (non-tunai) di bawah EBIT.' : 'Distorted by the non-cash Rp 78.8T Tokopedia goodwill write-off below EBIT.' },
+          { yr: '2024', val: '−34.38%', pct: 28, cause: id ? 'Rugi bersih menyempit ke −Rp5,47T di tahun pertama pasca-exit.' : 'Net loss narrowed to −Rp 5.47T in the first full post-exit year.' },
+          { yr: '2025', val: '−8.20%', pct: 11, current: true, cause: id ? 'Naik +26,2% ke −8,20%, namun beban SBC (Rp593M) & bunga masih menahan laba.' : 'Improved +26.2% to −8.20%, still weighed down by Rp 593B SBC & finance costs.' },
         ],
       },
       {
@@ -1455,9 +1489,9 @@ const yoyRatioCards = computed(() => {
           ? 'Aset bersih 2024 direvisi (+Rp1,58T Cat. 7) & pertumbuhan +15,3%.'
           : 'Restated 2024 assets (+Rp1.58T Note 7) plus +15.3% revenue scale.',
         bars: [
-          { yr: '2023*', val: '0.27x', pct: 68 },
-          { yr: '2024', val: '0.37x', pct: 92 },
-          { yr: '2025', val: '0.40x', pct: 100, current: true },
+          { yr: '2023*', val: '0.27x', pct: 68, cause: id ? 'Basis aset lama masih terbebani goodwill raksasa sebelum penghapusan buku.' : 'Pre-exit asset base weighed down by bloated goodwill before write-off.' },
+          { yr: '2024', val: '0.37x', pct: 92, cause: id ? 'Efisiensi aset langsung naik setelah goodwill Tokopedia keluar (aset Rp43,21T).' : 'Asset efficiency jumped post-exit on audited Rp 43.21T asset base.' },
+          { yr: '2025', val: '0.40x', pct: 100, current: true, cause: id ? 'Pendapatan +15,3% mendorong ATO ke 0,40x — kini mengungguli Grab (0,28x).' : '+15.3% revenue scale pushed ATO to 0.40x, beating peer Grab (0.28x).' },
         ],
       },
       {
@@ -1468,9 +1502,9 @@ const yoyRatioCards = computed(() => {
           ? 'Leverage moderat (1,59x) belum membantu saat margin masih negatif.'
           : 'Higher EM (1.59x) still amplifies negative margins below Ke (8.45%).',
         bars: [
-          { yr: '2023*', val: '−253.4%', pct: 100 },
-          { yr: '2024', val: '−17.97%', pct: 30 },
-          { yr: '2025', val: '−5.23%', pct: 12, current: true },
+          { yr: '2023*', val: '−253.4%', pct: 100, cause: id ? 'Hapus buku goodwill Rp78,8T menggerus ekuitas dan menjatuhkan ROE ke −253,4%.' : 'Rp 78.8T goodwill write-off hammered equity and pushed ROE to −253.4%.' },
+          { yr: '2024', val: '−17.97%', pct: 30, cause: id ? 'Membaik tajam ke −17,97% begitu distorsi non-tunai 2023 berlalu.' : 'Improved dramatically to −17.97% once non-cash 2023 write-offs cleared.' },
+          { yr: '2025', val: '−5.23%', pct: 12, current: true, cause: id ? 'Naik ke −5,23% konsolidasi (−3,73% induk), namun masih kalah dari Grab (+2,96%) & Ke (8,45%).' : 'Reached −5.23% cons. (−3.73% parent), still trailing Grab (+2.96%) and Ke (8.45%).' },
         ],
       },
     ]
@@ -1486,9 +1520,9 @@ const yoyRatioCards = computed(() => {
           ? 'Pemulihan Catatan 7 (+Rp1,58T) & kas kuat jaga penyangga modal kerja Rp18,41T.'
           : 'Note 7 restoration (+Rp1.58T) & Rp21.8T cash support Rp18.41T WC buffer.',
         bars: [
-          { yr: '2023*', val: '2.62x', pct: 87 },
-          { yr: '2024', val: '2.62x', pct: 87 },
-          { yr: '2025', val: '2.73x', pct: 91, current: true },
+          { yr: '2023*', val: '2.62x', pct: 87, cause: id ? 'Posisi likuiditas kas jangka pendek sudah cukup tebal sebelum exit.' : 'Short-term cash buffer was already solid pre-exit.' },
+          { yr: '2024', val: '2.62x', pct: 87, cause: id ? 'Direvisi dari 2,46x ke 2,62x setelah memulihkan Rp1,58T pinjaman GoPay Catatan 7.' : 'Restated up from 2.46x to 2.62x after restoring Rp 1.58T Note 7 GoPay loans.' },
+          { yr: '2025', val: '2.73x', pct: 91, current: true, cause: id ? 'Naik ke 2,73x didukung kas Rp21,76T dan modal kerja bersih Rp18,41T.' : 'Improved to 2.73x backed by Rp 21.76T cash & Rp 18.41T working capital.' },
         ],
       },
       {
@@ -1499,9 +1533,9 @@ const yoyRatioCards = computed(() => {
           ? 'Koreksi salah klasifikasi Cat. 6 vs Cat. 7 (46,88h → 10,56h); di 2025 naik tipis +0,34h.'
           : 'Fixed our earlier Note 6 vs Note 7 mix-up (46.88d → 10.56d); 2025 edged up +0.34d.',
         bars: [
-          { yr: '2023*', val: '14.84d', pct: 92 },
-          { yr: '2024', val: '10.56d', pct: 66 },
-          { yr: '2025', val: '10.90d', pct: 68, current: true },
+          { yr: '2023*', val: '14.84d', pct: 92, cause: id ? 'Tempo tagih pra-exit sedikit lebih panjang (~15 hari) karena bauran e-commerce.' : 'Slightly slower ~15d collection pre-exit due to Tokopedia merchant mix.' },
+          { yr: '2024', val: '10.56d', pct: 66, cause: id ? 'Memisahkan piutang usaha Catatan 6 saja (Rp460M) memperbaiki salah hitung 46,88h.' : 'Trade-only Note 6 basis (Rp 460B) corrected our earlier 46.88d mix-up.' },
+          { yr: '2025', val: '10.90d', pct: 68, current: true, cause: id ? 'Naik tipis +0,34h ke 10,9h (tetap sangat cepat dibanding DPO pemasok 59,1h).' : 'Edged up +0.34d to 10.9d — still ultra-fast vs. 59.1d supplier DPO.' },
         ],
       },
       {
@@ -1512,9 +1546,9 @@ const yoyRatioCards = computed(() => {
           ? 'Penarikan utang baru (+Rp3,72T) tingkatkan leverage ke 26,97%.'
           : 'New FY2025 bank borrowings (+Rp3.72T) lifted full debt+lease ratio.',
         bars: [
-          { yr: '2023*', val: '12.14%', pct: 45 },
-          { yr: '2024', val: '15.85%', pct: 59 },
-          { yr: '2025', val: '26.97%', pct: 100, current: true },
+          { yr: '2023*', val: '12.14%', pct: 45, cause: id ? 'Rasio utang penuh (termasuk sewa IFRS 16) sangat rendah pada 2023.' : 'Full debt-plus-lease ratio started very low at 12.14% in 2023.' },
+          { yr: '2024', val: '15.85%', pct: 59, cause: id ? 'Naik sedikit ke 15,85% seiring berkurangnya ekuitas dari rugi 2024.' : 'Ticked up to 15.85% as 2024 net loss slightly trimmed equity.' },
+          { yr: '2025', val: '26.97%', pct: 100, current: true, cause: id ? 'Penarikan pinjaman bank baru FY25 (+Rp3,72T) mengangkat leverage ke 26,97% (0,27x).' : '+Rp 3.72T new FY25 bank borrowings lifted Debt/Equity to 26.97% (0.27x, still low).' },
         ],
       },
       {
@@ -1525,9 +1559,9 @@ const yoyRatioCards = computed(() => {
           ? 'EBIT membaik −Rp2,24T → −Rp378B. Bunga Catatan 27b sebesar Rp535,2B.'
           : 'Narrowing EBIT loss (−Rp2.24T → −Rp378B) vs. Rp535.2B Note 27b interest.',
         bars: [
-          { yr: '2023*', val: '−27.83x', pct: 100 },
-          { yr: '2024', val: '−4.54x', pct: 26 },
-          { yr: '2025', val: '−0.71x', pct: 8, current: true },
+          { yr: '2023*', val: '−27.83x', pct: 100, cause: id ? 'Rugi EBIT raksasa −Rp10,28T menyebabkan rasio cakupan bunga sangat negatif.' : 'Massive −Rp 10.28T EBIT loss produced −27.83x coverage.' },
+          { yr: '2024', val: '−4.54x', pct: 26, cause: id ? 'Membaik tajam ke −4,54x seiring mengecilnya rugi operasi menjadi −Rp2,24T.' : 'Improved sharply to −4.54x as EBIT loss shrank to −Rp 2.24T.' },
+          { yr: '2025', val: '−0.71x', pct: 8, current: true, cause: id ? 'Rugi EBIT tinggal −Rp378M vs bunga Rp535,2M — selangkah lagi menutup penuh beban bunga.' : 'EBIT loss narrowed to −Rp 378B vs. Rp 535.2B interest — almost back to breakeven.' },
         ],
       },
     ]
@@ -1543,48 +1577,48 @@ const yoyRatioCards = computed(() => {
           ? 'CFO membaik dari −Rp4,33T (2023*) ke +Rp307B, namun baru menutup 25,97% CapEx FY25.'
           : 'Recovered from −Rp4.33T (2023*) to +Rp307B, but funds only 25.97% of FY25 CapEx.',
         bars: [
-          { yr: '2023*', val: '−Rp4.33T', pct: 100 },
-          { yr: '2024', val: '−Rp622.1B', pct: 34 },
-          { yr: '2025', val: '+Rp307.0B', pct: 22, current: true },
+          { yr: '2023*', val: '−Rp4.33T', pct: 100, cause: id ? 'Pembakaran kas berat pra-exit akibat subsidi & biaya operasional Tokopedia.' : 'Heavy pre-exit cash burn from Tokopedia subsidies and e-commerce operating overhead.' },
+          { yr: '2024', val: '−Rp622.1B', pct: 34, cause: id ? 'Arus kas keluar menyusut −86% pasca-dekonsolidasi Tokopedia, namun masih minus.' : 'Operating cash burn dropped −86% right after Tokopedia exit, though still negative.' },
+          { yr: '2025', val: '+Rp307.0B', pct: 22, current: true, cause: id ? 'Pertama kali positif (+Rp307M) berkat pangkas insentif & cloud, tapi baru menutup 26% CapEx.' : 'First positive CFO (+Rp 307B) via incentive & cloud cuts, still covering only 26% of CapEx.' },
         ],
       },
       {
         title: id ? 'CapEx Lanjutan / Pendapatan' : 'Continuing CapEx / Rev',
-        delta: '−18 bps YoY',
+        delta: '−0.18% YoY',
         tone: 'pos',
         note: id
           ? 'Tanpa transfer takberwujud Tokopedia Rp5,46T Catatan 12 di 2024.'
           : 'Excludes Rp5.46T Tokopedia Note 12 intangible transfer in 2024.',
         bars: [
-          { yr: '2023*', val: '1.49%', pct: 22 },
-          { yr: '2024', val: '6.63%', pct: 100 },
-          { yr: '2025', val: '6.45%', pct: 97, current: true },
+          { yr: '2023*', val: '1.49%', pct: 22, cause: id ? 'Di 2023, GoTo hanya belanja CapEx Rp 220M (Rp 171M perangkat keras + Rp 49M software) — hampir tidak ada software yang dikapitalisasi.' : 'In 2023, GoTo spent only Rp 220B on CapEx (Rp 171B hardware + Rp 49B software) — almost no software was capitalized.' },
+          { yr: '2024', val: '6.63%', pct: 100, cause: id ? 'CapEx mentah 2024 adalah Rp 6,52T (41%), namun setelah mengeluarkan Rp 5,46T aset Tokopedia (Cat. 12), CapEx lanjutan adalah Rp 1,05T (6,63%, terutama Rp 874M software).' : 'Raw 2024 CapEx was Rp 6.52T (41%); after removing Rp 5.46T of Tokopedia intangibles (Note 12), continuing CapEx was Rp 1.05T (6.63%, mostly Rp 874B software).' },
+          { yr: '2025', val: '6.45%', pct: 97, current: true, cause: id ? 'Stabil di 6,45% (Rp 1,18T): Rp 302M server/perangkat IT + Rp 880M kapitalisasi software & hubungan pelanggan (Cat. 12).' : 'Steady at 6.45% (Rp 1.18T): Rp 302B IT hardware + Rp 880B capitalized software & customer intangibles (Note 12).' },
         ],
       },
       {
         title: id ? 'Rasio Akrual Dilaporkan' : 'Reported Accrual Ratio',
-        delta: '+726 bps YoY',
-        tone: 'warn',
+        delta: id ? 'Makin dekat 0%' : 'Closer to 0%',
+        tone: 'pos',
         note: id
-          ? '2023* terdistorsi goodwill Rp78,8T. Beban non-tunai menyusut tajam pasca-exit.'
-          : '2023* distorted by Rp78.8T goodwill write-off. Non-cash charges shrank post-exit.',
+          ? 'Semakin dekat 0% semakin bersih. 2023* (−159%) terdistorsi goodwill Rp78,8T; kini membaik ke −3,95%.'
+          : 'Closer to 0% = cleaner earnings quality. 2023* (−159%) was distorted by Rp78.8T goodwill write-off; now normalized to −3.95%.',
         bars: [
-          { yr: '2023*', val: '−159.3%', pct: 100 },
-          { yr: '2024', val: '−11.21%', pct: 32 },
-          { yr: '2025', val: '−3.95%', pct: 16, current: true },
+          { yr: '2023*', val: '−159.3%', pct: 100, cause: id ? 'Meledak ke −159,3% karena hapus buku goodwill Tokopedia Rp78,8T (100% beban non-tunai).' : 'Blown out to −159.3% by the 100% non-cash Rp 78.8T Tokopedia goodwill write-off.' },
+          { yr: '2024', val: '−11.21%', pct: 32, cause: id ? 'Turun drastis ke −11,21% pasca-exit, masih memuat penyusutan & biaya non-tunai transisi.' : 'Fell sharply to −11.21% post-exit, still reflecting D&A and post-deal non-cash charges.' },
+          { yr: '2025', val: '−3.95%', pct: 16, current: true, cause: id ? 'Kualitas laba jauh membaik (−3,95%): selisih rugi akuntansi & arus kas makin tipis.' : 'Much cleaner earnings quality (−3.95%): accounting losses and cash flow moved closely together.' },
         ],
       },
       {
         title: id ? 'Akrual Laba Berulang' : 'Adj. Recurring Accrual',
-        delta: '+175 bps YoY',
-        tone: 'warn',
+        delta: id ? 'Makin dekat 0%' : 'Closer to 0%',
+        tone: 'pos',
         note: id
-          ? '2023* tanpa goodwill. Tetap menahan kompensasi berbasis saham (Rp593B) & provisi kredit.'
-          : '2023* ex-goodwill. Retains share-based compensation (Rp593B) & loan provisions as real costs.',
+          ? 'Penyesuaian sama di semua tahun (hapus penurunan nilai 1x); tetap menahan SBC (Rp593M) & provisi kredit.'
+          : 'Same adjustment across all 3 years (strips one-off write-offs); retains SBC (Rp593B) & loan provisions as real costs.',
         bars: [
-          { yr: '2023*', val: '−13.73%', pct: 100 },
-          { yr: '2024', val: '−3.69%', pct: 36 },
-          { yr: '2025', val: '−1.94%', pct: 20, current: true },
+          { yr: '2023*', val: '−13.73%', pct: 100, cause: id ? 'Dari −159,3% dilaporkan → setelah mengeluarkan hapus buku goodwill Rp78,8T, akrual berulang 2023* menjadi −13,73%.' : 'From −159.3% reported → stripping out the Rp 78.8T goodwill write-off brings 2023* recurring accruals to −13.73%.' },
+          { yr: '2024', val: '−3.69%', pct: 36, cause: id ? 'Dari −11,21% dilaporkan → setelah mengeluarkan penurunan nilai & volatilitas asosiasi 2024, menyusut ke −3,69%.' : 'From −11.21% reported → stripping out 2024 impairments & associate swings brings recurring accruals to −3.69%.' },
+          { yr: '2025', val: '−1.94%', pct: 20, current: true, cause: id ? 'Dari −3,95% dilaporkan → setelah mengeluarkan penurunan nilai & rugi nilai wajar 2025, turun ke −1,94% (sangat dekat 0% = kualitas laba bersih).' : 'From −3.95% reported → stripping out 2025 impairments & fair-value losses brings recurring accruals to −1.94% (near 0% = clean earnings).' },
         ],
       },
     ]
@@ -1594,61 +1628,61 @@ const yoyRatioCards = computed(() => {
     return [
       {
         title: 'COGS / Revenue',
-        delta: id ? '−436 bps YoY 24→25' : '−436 bps YoY 24→25',
+        delta: id ? '−4.36% YoY 24→25' : '−4.36% YoY 24→25',
         tone: 'pos',
         focused: titleText.includes('cogs') || titleText.includes('pokok'),
         note: id
           ? 'Bauran segmen lonjakkan 2024. Efisiensi cloud >50% pangkas COGS 2025 & 1H26.'
           : 'Mix shift spiked 2024 post-exit. Over 50% cloud savings cut COGS in 2025 & 1H26.',
         bars: [
-          { yr: '2023*', val: '34.45%', pct: 74 },
-          { yr: '2024', val: '46.64%', pct: 100 },
-          { yr: '2025', val: '42.28%', pct: 91, current: true },
-          { yr: '1H26', val: '38.10%', pct: 82 },
+          { yr: '2023*', val: '34.45%', pct: 74, cause: id ? 'Rasio lama masih mencampur margin komisi marketplace Tokopedia.' : 'Pre-exit blend reflected Tokopedia’s lower-COGS marketplace revenue mix.' },
+          { yr: '2024', val: '46.64%', pct: 100, warn: true, cause: id ? 'Lonjakan COGS pasca-exit akibat bauran bisnis bergeser ke Gojek/GoPay sebelum efisiensi cloud.' : 'Bad post-exit COGS spike as mix shifted to Gojek/GoPay before cloud cost cuts.' },
+          { yr: '2025', val: '42.28%', pct: 91, warn: true, cause: id ? 'Membaik −4,36% berkat penghematan cloud >50%, tapi masih lebih tinggi dari 2023* (34,45%).' : 'Improved −4.36% from >50% cloud savings, though still elevated vs. 2023* (34.45%).' },
+          { yr: '1H26', val: '38.10%', pct: 82, good: true, cause: id ? 'Akhirnya turun signifikan ke 38,10% di 1H26 seiring efisiensi server & teknologi berlanjut.' : 'Finally trending down cleanly to 38.10% in 1H26 as tech & cloud savings compound.' },
         ],
       },
       {
         title: id ? 'Cash OpEx / Pendapatan' : 'Cash OpEx / Revenue',
-        delta: '−708 bps YoY 24→25',
+        delta: '−7.08% YoY 24→25',
         tone: 'pos',
         focused: titleText.includes('opex') || titleText.includes('operating') || titleText.includes('operasi'),
         note: id
-          ? 'Pemangkasan insentif & korporasi mendorong spread operasi +202 bps.'
-          : 'Incentive cuts & leaner headcount drive the +202 bps operating spread.',
+          ? 'Pemangkasan insentif & korporasi mendorong spread operasi +2.02%.'
+          : 'Incentive cuts & leaner headcount drive the +2.02% operating spread.',
         bars: [
-          { yr: '2023*', val: '117.01%', pct: 100 },
-          { yr: '2024', val: '62.78%', pct: 54 },
-          { yr: '2025', val: '55.70%', pct: 48, current: true },
-          { yr: '1H26', val: '51.20%', pct: 44 },
+          { yr: '2023*', val: '117.01%', pct: 100, cause: id ? 'Kontaminasi tahun 2023 pra-exit membuat rata-rata dek lama melonjak ke 78,5%.' : 'Pre-exit Tokopedia burn (117%) caused old deck’s 3-yr average OpEx to blow up to 78.5%.' },
+          { yr: '2024', val: '62.78%', pct: 54, cause: id ? 'Anjlok −54 poin di tahun pertama pasca-Tokopedia berkat efisiensi promo.' : 'Plunged −54 pp right after Tokopedia exit on deep subsidy cuts.' },
+          { yr: '2025', val: '55.70%', pct: 48, current: true, cause: id ? 'Menyentuh 55,70% di FY2025 — menjadi dasar konservatif Base Case kami (+2,02% margin EBIT).' : 'Reached 55.70% in audited FY25 — our Base Case anchor delivering +2.02% operating spread.' },
+          { yr: '1H26', val: '51.20%', pct: 44, cause: id ? 'Lebih ramping di 1H26 (51,20%); menjadi patokan Skenario Optimis kami.' : 'Trimmed further in 1H26 to 51.20% — used as our Optimistic Case driver.' },
         ],
       },
       {
         title: id ? 'Pertumbuhan Pendapatan' : 'Revenue Growth Rate',
-        delta: '+777 bps YoY',
+        delta: '+7.77% YoY',
         tone: 'pos',
         focused: titleText.includes('growth') || titleText.includes('pertumbuhan') || titleText.includes('revenue'),
         note: id
           ? 'Pertumbuhan inti berlipat dua saat pinjaman GoPay (+74%) & Gojek (+14%) melesat.'
           : 'Post-exit core growth doubled as GoPay loans (+74%) & Gojek (+14%) scaled.',
         bars: [
-          { yr: '2024', val: '+7.50%', pct: 42 },
-          { yr: '2025', val: '+15.27%', pct: 85, current: true },
-          { yr: 'Base', val: '+15.27%', pct: 85 },
-          { yr: 'Opt', val: '+18.00%', pct: 100 },
+          { yr: '2024', val: '+7.50%', pct: 42, cause: id ? 'Pertumbuhan tahun transisi pasca-exit masih moderat di +7,50%.' : 'Modest +7.50% growth during the 2024 Tokopedia transition year.' },
+          { yr: '2025', val: '+15.27%', pct: 85, current: true, cause: id ? 'Berlipat dua ke +15,27% berkat GoPay (+74%) dan Gojek (+14%).' : 'Doubled to +15.27% powered by GoPay FinTech (+74%) and Gojek (+14%).' },
+          { yr: 'Base', val: '+15.27%', pct: 85, cause: id ? 'Kami mengunci proyeksi pertumbuhan Base Case 2026F–2028F di laju aktual FY25 (+15,27%/thn).' : 'Base Case locks 2026F–2028F growth directly to audited FY25 pace (+15.27%/yr).' },
+          { yr: 'Opt', val: '+18.00%', pct: 100, cause: id ? 'Asumsi Skenario Optimis jika akselerasi pinjaman GoPay & Gojek melampaui FY25.' : 'Optimistic upside case (+18%/yr) if GoPay & mobility accelerate faster than FY25.' },
         ],
       },
       {
         title: id ? 'CapEx Lanjutan / Pendapatan' : 'Continuing CapEx / Rev',
-        delta: '−18 bps YoY 24→25',
+        delta: '−0.18% YoY 24→25',
         tone: 'accent',
         focused: titleText.includes('capex') || titleText.includes('modal'),
         note: id
           ? 'Stabil ~6,5% setelah transfer Tokopedia Rp5,46T dikeluarkan dari 2024.'
           : 'Stable ~6.5% run-rate once Rp5.46T Tokopedia intangibles are removed.',
         bars: [
-          { yr: '2023*', val: '1.49%', pct: 22 },
-          { yr: '2024', val: '6.63%', pct: 100 },
-          { yr: '2025', val: '6.45%', pct: 97, current: true },
+          { yr: '2023*', val: '1.49%', pct: 22, cause: id ? 'Di 2023, GoTo hanya belanja CapEx Rp 220M (Rp 171M perangkat keras + Rp 49M software) sebelum kapitalisasi software naik di 2024.' : 'In 2023, GoTo spent only Rp 220B (Rp 171B hardware + Rp 49B software) before ramping up capitalized software in 2024.' },
+          { yr: '2024', val: '6.63%', pct: 100, cause: id ? 'CapEx mentah 2024 adalah 41,0%; setelah Rp 5,46T aset Tokopedia dikeluarkan, CapEx lanjutan adalah Rp 1,05T (6,63%, terutama Rp 874M software).' : 'Raw 2024 CapEx was 41.0%; stripping Rp 5.46T Tokopedia intangibles leaves Rp 1.05T (6.63%, mostly Rp 874B software).' },
+          { yr: '2025', val: '6.45%', pct: 97, current: true, cause: id ? 'Stabil di 6,45% (Rp 1,18T: Rp 302M hardware + Rp 880M software) — patokan bersih Base Case 2026F–2028F.' : 'Steady at 6.45% (Rp 1.18T: Rp 302B hardware + Rp 880B software) — anchored as our Base Case CapEx rate.' },
         ],
       },
     ]
@@ -1664,10 +1698,10 @@ const yoyRatioCards = computed(() => {
           ? 'Bertumbuh majemuk pada basis pasca-Tokopedia yang bersih.'
           : 'Compounds on clean post-Tokopedia growth run-rate.',
         bars: [
-          { yr: '2025A', val: 'Rp18.32T', pct: 65 },
-          { yr: '2026F', val: 'Rp21.12T', pct: 75 },
-          { yr: '2027F', val: 'Rp24.35T', pct: 87 },
-          { yr: '2028F', val: 'Rp28.07T', pct: 100, current: true },
+          { yr: '2025A', val: 'Rp18.32T', pct: 65, cause: id ? 'Pendapatan auditan FY2025 murni pasca-Tokopedia sebagai titik awal proyeksi.' : 'Audited FY2025 post-Tokopedia revenue serves as the clean starting baseline.' },
+          { yr: '2026F', val: 'Rp21.12T', pct: 75, cause: id ? 'Tumbuh +15,27% mengikuti momentum GoPay FinTech & Gojek.' : 'Compounds +15.27% on continuing GoPay FinTech and Gojek momentum.' },
+          { yr: '2027F', val: 'Rp24.35T', pct: 87, cause: id ? 'Skala pendapatan menembus Rp24,35T dengan asumsi pangsa pasar terjaga.' : 'Scales past Rp 24.35T assuming stable market share and pricing.' },
+          { yr: '2028F', val: 'Rp28.07T', pct: 100, current: true, cause: id ? 'Mencapai Rp28,07T di Tahun ke-3 (+53% lebih besar dibanding FY2025).' : 'Reaches Rp 28.07T in Year 3 (+53% larger than FY2025 revenue).' },
         ],
       },
       {
@@ -1678,10 +1712,10 @@ const yoyRatioCards = computed(() => {
           ? 'Margin of Safety tipis (+3,50%) & leverage operasi 28,56x tinggi.'
           : 'Tight +3.50% Margin of Safety & high 28.56x DOL.',
         bars: [
-          { yr: '2025A', val: '−Rp378B', pct: 48 },
-          { yr: '2026F', val: '+Rp427B', pct: 75 },
-          { yr: '2027F', val: '+Rp492B', pct: 87 },
-          { yr: '2028F', val: '+Rp567B', pct: 100, current: true },
+          { yr: '2025A', val: '−Rp378B', pct: 48, cause: id ? 'Masih sedikit rugi (−Rp378M) karena biaya korporasi Rp1,44T belum tertutup penuh.' : 'Still slightly negative (−Rp 378B) due to Rp 1.44T corporate overhead.' },
+          { yr: '2026F', val: '+Rp427B', pct: 75, cause: id ? 'Berbalik untung operasi (+Rp427M) karena margin kotor 57,72% > Cash OpEx 55,70% (+2,02%).' : 'Flips EBIT-positive (+Rp 427B) as 57.72% Gross Margin exceeds 55.70% Cash OpEx (+2.02%).' },
+          { yr: '2027F', val: '+Rp492B', pct: 87, cause: id ? 'Laba operasi naik proporsional seiring ekspansi skala pendapatan +15,27%.' : 'Operating profit scales proportionally alongside +15.27% revenue growth.' },
+          { yr: '2028F', val: '+Rp567B', pct: 100, current: true, cause: id ? 'Mencapai +Rp567M, tapi ROIC (+2,70%) masih di bawah WACC (7,76%) — nilai belum tercipta.' : 'Hits +Rp 567B, yet ROIC (+2.70%) still trails WACC (7.76%) — no economic profit yet.' },
         ],
       },
       {
@@ -1689,13 +1723,13 @@ const yoyRatioCards = computed(() => {
         delta: id ? 'Positif di 2028F' : 'Turns + in 2028F',
         tone: 'accent',
         note: id
-          ? 'ROIC 2028F (+2,70%) masih tertinggal −506 bps di bawah WACC (7,76%).'
-          : '2028F ROIC (+2.70%) still trails WACC (7.76%) by −506 bps.',
+          ? 'ROIC 2028F (+2,70%) masih tertinggal −5.06% di bawah WACC (7,76%).'
+          : '2028F ROIC (+2.70%) still trails WACC (7.76%) by −5.06%.',
         bars: [
-          { yr: '2025A', val: '−Rp1,502B', pct: 100 },
-          { yr: '2026F', val: '−Rp84.5B', pct: 18 },
-          { yr: '2027F', val: '−Rp33.6B', pct: 10 },
-          { yr: '2028F', val: '+Rp25.0B', pct: 8, current: true },
+          { yr: '2025A', val: '−Rp1,502B', pct: 100, cause: id ? 'EBIT −Rp378M ditambah beban bunga & pajak membuat rugi bersih FY25 −Rp1,50T.' : 'Negative EBIT (−Rp 378B) plus interest & charges led to −Rp 1.50T FY25 net loss.' },
+          { yr: '2026F', val: '−Rp84.5B', pct: 18, cause: id ? 'Meski EBIT +Rp427M, beban bunga Rp535M & pajak membuat laba bersih masih tipis minus.' : 'Even with +Rp 427B EBIT, interest expense & taxes keep bottom line slightly negative.' },
+          { yr: '2027F', val: '−Rp33.6B', pct: 10, cause: id ? 'Nyaris impas (−Rp33,6M) seiring kenaikan EBIT ke +Rp492M.' : 'Approaching bottom-line breakeven (−Rp 33.6B) as EBIT rises to +Rp 492B.' },
+          { yr: '2028F', val: '+Rp25.0B', pct: 8, current: true, cause: id ? 'Akhirnya positif tipis (+Rp25M), tapi ROE cuma +0,09% vs batas Ke 8,45%!' : 'Finally barely positive (+Rp 25B), yet ROE is just +0.09% vs. 8.45% Ke hurdle!' },
         ],
       },
       {
@@ -1706,10 +1740,10 @@ const yoyRatioCards = computed(() => {
           ? 'Menjaga kas Rp19,4T vs. hanya Rp968M pada dek awal.'
           : 'Preserves Rp19.4T liquidity vs. Rp968B in the old 2023-polluted deck.',
         bars: [
-          { yr: '2025A', val: 'Rp21.76T', pct: 100 },
-          { yr: '2026F', val: 'Rp20.69T', pct: 95 },
-          { yr: '2027F', val: 'Rp19.96T', pct: 92 },
-          { yr: '2028F', val: 'Rp19.42T', pct: 89, current: true },
+          { yr: '2025A', val: 'Rp21.76T', pct: 100, cause: id ? 'Saldo kas auditan awal Rp21,76T memberi bantalan likuiditas sangat tebal.' : 'Starting audited Rp 21.76T cash pile provides a huge liquidity runway.' },
+          { yr: '2026F', val: 'Rp20.69T', pct: 95, cause: id ? 'Berkurang wajar (~Rp1,07T) karena CapEx rutin 6,45% masih melampaui CFO tahun awal.' : 'Modest −Rp 1.07T drawdown as ongoing 6.45% CapEx slightly exceeds Year 1 CFO.' },
+          { yr: '2027F', val: 'Rp19.96T', pct: 92, cause: id ? 'Laju bakar kas melambat saat pendapatan dan laba operasi tumbuh.' : 'Cash burn slows down further as EBIT scales up.' },
+          { yr: '2028F', val: 'Rp19.42T', pct: 89, current: true, cause: id ? 'Menjaga Rp19,42T kas akhir (hampir 20x lebih aman daripada dek lama Rp968M).' : 'Preserves Rp 19.42T cash (vs. false Rp 968B cash wipeout in old 2023-based deck).' },
         ],
       },
     ]
@@ -1733,10 +1767,10 @@ const slide7ProFormaCards = computed(() => {
         tone: 'accent',
         note: id ? 'Basis dek lama 2023–2025 (rata-rata 3 tahun).' : 'Old 3-year average growth basis (2023–2025).',
         bars: [
-          { yr: '2025A', val: 'Rp18.32T', pct: 72 },
-          { yr: '2026F', val: 'Rp20.41T', pct: 81 },
-          { yr: '2027F', val: 'Rp22.73T', pct: 90 },
-          { yr: '2028F', val: 'Rp25.32T', pct: 100, current: true },
+          { yr: '2025A', val: 'Rp18.32T', pct: 72, cause: id ? 'Pendapatan aktual FY2025 sebagai basis awal.' : 'Audited FY2025 actual revenue starting point.' },
+          { yr: '2026F', val: 'Rp20.41T', pct: 81, cause: id ? 'Menggunakan rata-rata lama +11,4% yang tertahan angka dekonsolidasi 2023–2024.' : 'Uses old +11.4%/yr average dragged down by 2023–2024 Tokopedia exit.' },
+          { yr: '2027F', val: 'Rp22.73T', pct: 90, cause: id ? 'Proyeksi pertumbuhan majemuk 11,4% di Tahun ke-2.' : 'Year 2 compounding at the understated 11.4% legacy growth rate.' },
+          { yr: '2028F', val: 'Rp25.32T', pct: 100, current: true, cause: id ? 'Tertinggal Rp2,75T dibanding Base Case pasca-exit (Rp28,07T).' : 'Trails clean post-exit Base Case (Rp 28.07T) by Rp 2.75T.' },
         ],
       },
       {
@@ -1745,10 +1779,10 @@ const slide7ProFormaCards = computed(() => {
         tone: 'warn',
         note: id ? 'OpEx 78,5% memperdalam rugi operasi setiap tahun.' : '78.5% OpEx ratio deepens operating losses every year.',
         bars: [
-          { yr: '2025A', val: '−Rp378B', pct: 14 },
-          { yr: '2026F', val: '−Rp4.00T', pct: 80 },
-          { yr: '2027F', val: '−Rp4.46T', pct: 90 },
-          { yr: '2028F', val: '−Rp4.97T', pct: 100, current: true },
+          { yr: '2025A', val: '−Rp378B', pct: 14, cause: id ? 'Rugi aktual FY2025 yang sudah nyaris impas.' : 'Actual FY2025 loss already near breakeven.' },
+          { yr: '2026F', val: '−Rp4.00T', pct: 80, cause: id ? 'Tiba-tiba anjlok 10x lipat karena model lama memakai rata-rata OpEx 78,5% (bawaan 2023).' : 'Jumps back to −Rp 4.00T because legacy 78.5% OpEx assumes 2023 burn returns.' },
+          { yr: '2027F', val: '−Rp4.46T', pct: 90, cause: id ? 'Makin besar pendapatan, makin dalam ruginya selama margin tetap negatif.' : 'Higher revenue only widens losses while OpEx is stuck at 78.5%.' },
+          { yr: '2028F', val: '−Rp4.97T', pct: 100, current: true, cause: id ? 'Rugi semu −Rp4,97T akibat kontaminasi pra-exit 2023.' : 'Artificial −Rp 4.97T operating loss driven by pre-exit 2023 contamination.' },
         ],
       },
       {
@@ -1757,10 +1791,10 @@ const slide7ProFormaCards = computed(() => {
         tone: 'warn',
         note: id ? 'Rugi bersih melebar akibat beban operasi pra-exit.' : 'Net losses widen due to pre-exit operating cost drag.',
         bars: [
-          { yr: '2025A', val: '−Rp1.50T', pct: 35 },
-          { yr: '2026F', val: '−Rp3.54T', pct: 81 },
-          { yr: '2027F', val: '−Rp3.92T', pct: 90 },
-          { yr: '2028F', val: '−Rp4.35T', pct: 100, current: true },
+          { yr: '2025A', val: '−Rp1.50T', pct: 35, cause: id ? 'Rugi bersih auditan FY2025.' : 'Audited FY2025 consolidated net loss baseline.' },
+          { yr: '2026F', val: '−Rp3.54T', pct: 81, cause: id ? 'Rugi operasi semu −Rp4T langsung menjatuhkan laba bersih ke −Rp3,54T.' : 'Artificial −Rp 4T EBIT loss immediately drags Net Income down to −Rp 3.54T.' },
+          { yr: '2027F', val: '−Rp3.92T', pct: 90, cause: id ? 'Akumulasi kerugian makin dalam tiap tahun di dek lama.' : 'Losses keep compounding negatively every year in the legacy model.' },
+          { yr: '2028F', val: '−Rp4.35T', pct: 100, current: true, cause: id ? 'Mengakibatkan valuasi dek lama anjlok semu ke −Rp121/saham.' : 'Responsible for legacy deck’s distorted −Rp 121/sh DCF valuation.' },
         ],
       },
       {
@@ -1769,10 +1803,10 @@ const slide7ProFormaCards = computed(() => {
         tone: 'warn',
         note: id ? 'Kas terkuras buatan hingga Rp968M pada 2028F.' : 'Artificially drains cash down to Rp968B by 2028F.',
         bars: [
-          { yr: '2025A', val: 'Rp21.76T', pct: 100 },
-          { yr: '2026F', val: 'Rp14.50T', pct: 67 },
-          { yr: '2027F', val: 'Rp7.40T', pct: 34 },
-          { yr: '2028F', val: 'Rp0.97T', pct: 8, current: true },
+          { yr: '2025A', val: 'Rp21.76T', pct: 100, cause: id ? 'Saldo kas aktual Rp21,76T di akhir FY2025.' : 'Actual Rp 21.76T ending cash at FY2025.' },
+          { yr: '2026F', val: 'Rp14.50T', pct: 67, cause: id ? 'Kas Rp7,26T habis terbakar dalam setahun akibat asumsi OpEx 78,5% & CapEx 16,3%.' : 'Assumed −Rp 7.26T cash drain in a single year from 78.5% OpEx & 16.3% CapEx.' },
+          { yr: '2027F', val: 'Rp7.40T', pct: 34, cause: id ? 'Tersisa sepertiga saja di Tahun ke-2 akibat asumsi CapEx aset takberwujud 2024.' : 'Drops to Rp 7.40T as 2024 one-time intangibles are wrongly projected every year.' },
+          { yr: '2028F', val: 'Rp0.97T', pct: 8, current: true, cause: id ? 'Krisis kas semu (tinggal Rp968M) — kesalahan utama yang diperbaiki Laporan Akhir.' : 'False cash crisis (only Rp 968B left) — the exact distortion our Final Report fixed.' },
         ],
       },
     ]
@@ -1784,22 +1818,22 @@ const slide7ProFormaCards = computed(() => {
       tone: 'pos',
       note: id ? 'Bertumbuh majemuk pada basis pasca-Tokopedia yang bersih.' : 'Compounds on clean 2024→2025 post-Tokopedia growth.',
       bars: [
-        { yr: '2025A', val: 'Rp18.32T', pct: 65 },
-        { yr: '2026F', val: 'Rp21.12T', pct: 75 },
-        { yr: '2027F', val: 'Rp24.35T', pct: 87 },
-        { yr: '2028F', val: 'Rp28.07T', pct: 100, current: true },
+        { yr: '2025A', val: 'Rp18.32T', pct: 65, cause: id ? 'Pendapatan auditan FY2025 bersih pasca-exit Tokopedia.' : 'Audited FY2025 post-Tokopedia continuing revenue.' },
+        { yr: '2026F', val: 'Rp21.12T', pct: 75, cause: id ? 'Naik +15,27% dipimpin ekspansi pinjaman GoPay & komisi Gojek.' : 'Grows +15.27% led by GoPay lending & Gojek take-rate.' },
+        { yr: '2027F', val: 'Rp24.35T', pct: 87, cause: id ? 'Melanjutkan pertumbuhan organik dua digit tanpa beban Tokopedia.' : 'Continues double-digit post-exit organic compounding.' },
+        { yr: '2028F', val: 'Rp28.07T', pct: 100, current: true, cause: id ? 'Tumbuh +53% dalam 3 tahun menuju Rp28,07T.' : 'Expands +53% over 3 years to Rp 28.07T.' },
       ],
     },
     {
       title: id ? 'Laba Operasi / EBIT (IS)' : 'Operating Profit / EBIT (IS)',
       delta: id ? 'Berbalik + di 2026F' : 'Flips + in 2026F',
       tone: 'pos',
-      note: id ? 'Margin kotor 57,72% melampaui Cash OpEx 55,70% (+202 bps).' : '57.72% Gross Margin exceeds 55.70% Cash OpEx (+202 bps).',
+      note: id ? 'Margin kotor 57,72% melampaui Cash OpEx 55,70% (+2.02%).' : '57.72% Gross Margin exceeds 55.70% Cash OpEx (+2.02%).',
       bars: [
-        { yr: '2025A', val: '−Rp378B', pct: 67 },
-        { yr: '2026F', val: '+Rp427B', pct: 75 },
-        { yr: '2027F', val: '+Rp492B', pct: 87 },
-        { yr: '2028F', val: '+Rp567B', pct: 100, current: true },
+        { yr: '2025A', val: '−Rp378B', pct: 67, cause: id ? 'Rugi operasi FY25 tinggal −Rp378M setelah pemangkasan biaya.' : 'FY25 EBIT loss already narrowed to −Rp 378B.' },
+        { yr: '2026F', val: '+Rp427B', pct: 75, cause: id ? 'Berbalik positif (+Rp427M) saat margin kotor 57,72% mengungguli Cash OpEx 55,70%.' : 'Flips positive (+Rp 427B) once 57.72% Gross Margin beats 55.70% Cash OpEx.' },
+        { yr: '2027F', val: '+Rp492B', pct: 87, cause: id ? 'Laba operasi naik ke +Rp492M seiring skala pendapatan.' : 'Operating profit climbs to +Rp 492B on revenue scale.' },
+        { yr: '2028F', val: '+Rp567B', pct: 100, current: true, cause: id ? 'Untung +Rp567M, namun ROIC 2,70% masih di bawah WACC 7,76% (tetap SELL).' : 'Reaches +Rp 567B, though 2.70% ROIC still lags 7.76% WACC.' },
       ],
     },
     {
@@ -1808,10 +1842,10 @@ const slide7ProFormaCards = computed(() => {
       tone: 'pos',
       note: id ? 'Menutup bunga utang Rp535B dan mencetak laba pada Tahun ke-3.' : 'Covers Rp535B interest expense and turns profitable in Year 3.',
       bars: [
-        { yr: '2025A', val: '−Rp1.50T', pct: 100 },
-        { yr: '2026F', val: '−Rp84.5B', pct: 18 },
-        { yr: '2027F', val: '−Rp33.6B', pct: 10 },
-        { yr: '2028F', val: '+Rp25.0B', pct: 8, current: true },
+        { yr: '2025A', val: '−Rp1.50T', pct: 100, cause: id ? 'Rugi bersih FY25 masih −Rp1,50T akibat beban bunga, SBC, & pajak.' : 'FY25 Net Loss (−Rp 1.50T) weighed by interest, SBC & taxes.' },
+        { yr: '2026F', val: '−Rp84.5B', pct: 18, cause: id ? 'Rugi menyusut drastis ke −Rp84,5M begitu EBIT berbalik positif.' : 'Net loss shrinks −94% to −Rp 84.5B once EBIT turns positive.' },
+        { yr: '2027F', val: '−Rp33.6B', pct: 10, cause: id ? 'Nyaris impas (−Rp33,6M) karena EBIT mulai menutupi bunga utang.' : 'Near breakeven (−Rp 33.6B) as growing EBIT covers interest.' },
+        { yr: '2028F', val: '+Rp25.0B', pct: 8, current: true, cause: id ? 'Mencetak laba bersih +Rp25M — tapi ROE cuma 0,09% jauh di bawah Ke 8,45%.' : 'First bottom-line profit (+Rp 25B), yet 0.09% ROE far trails 8.45% Ke.' },
       ],
     },
     {
@@ -1820,10 +1854,10 @@ const slide7ProFormaCards = computed(() => {
       tone: 'pos',
       note: id ? 'Likuiditas terjaga Rp19,42T di 2028F tanpa pembakaran kas buatan.' : 'Preserves Rp19.42T liquidity in 2028F without artificial burn.',
       bars: [
-        { yr: '2025A', val: 'Rp21.76T', pct: 100 },
-        { yr: '2026F', val: 'Rp20.69T', pct: 95 },
-        { yr: '2027F', val: 'Rp19.96T', pct: 92 },
-        { yr: '2028F', val: 'Rp19.42T', pct: 89, current: true },
+        { yr: '2025A', val: 'Rp21.76T', pct: 100, cause: id ? 'Kas awal Rp21,76T menjadi penyangga utama valuasi (kas bersih Rp13,19/sh).' : 'Starting Rp 21.76T cash backs our Rp 13.19/sh net-cash valuation floor.' },
+        { yr: '2026F', val: 'Rp20.69T', pct: 95, cause: id ? 'Penurunan kas tipis (−Rp1,07T) dari CapEx rutin 6,45%.' : 'Controlled −Rp 1.07T dip as normal 6.45% CapEx slightly exceeds Year 1 CFO.' },
+        { yr: '2027F', val: 'Rp19.96T', pct: 92, cause: id ? 'Arus kas keluar melambat tajam ke ~Rp730M seiring membaiknya laba operasi.' : 'Net cash drawdown slows to ~Rp 730B as operating cash flow grows.' },
+        { yr: '2028F', val: 'Rp19.42T', pct: 89, current: true, cause: id ? 'Tetap mengantongi Rp19,42T kas — tidak bangkrut, tapi uang menganggur di bawah WACC.' : 'Holds Rp 19.42T cash — GoTo won’t go bankrupt, it simply earns below WACC.' },
       ],
     },
   ]
@@ -1879,7 +1913,7 @@ const slide7AssumptionsTable = computed(() => {
             'Audit 2024 vs 2023: Rp 15,89T vs Rp 14,79T.',
             'Audit 2025 vs 2024: Rp 18,32T vs Rp 15,89T (Catatan 25).',
             'Dipertahankan pada laju organik pasca-Tokopedia 2025 (tanpa 2023).',
-            'Skenario akselerasi FinTech & On-Demand (+273 bps di atas Base).',
+            'Skenario akselerasi FinTech & On-Demand (+2.73% di atas Base).',
             'Kembali ke lantai transisi pasca-exit 2024.',
           ],
           [
@@ -1893,9 +1927,9 @@ const slide7AssumptionsTable = computed(() => {
           [
             'Beban operasional di luar D&A non-kas (G&A, S&M, Produk, Ops; Catatan 26).',
             'Audit 2024: Cash OpEx Rp 9.978M ÷ Pendapatan Rp 15.894M.',
-            'Audit 2025: Cash OpEx Rp 10.206M ÷ Pendapatan Rp 18.322M (−708 bps YoY).',
-            'Mengikuti rasio berulang FY2025 (202 bps di bawah Gross Margin).',
-            'Mengacu efisiensi biaya laporan interim 1H 2026 (−450 bps vs Base).',
+            'Audit 2025: Cash OpEx Rp 10.206M ÷ Pendapatan Rp 18.322M (−7.08% YoY).',
+            'Mengikuti rasio berulang FY2025 (2.02% di bawah Gross Margin).',
+            'Mengacu efisiensi biaya laporan interim 1H 2026 (−4.50% vs Base).',
             'Kembali ke belanja FY2024 jika perang promo berulang.',
           ],
           [
@@ -1937,7 +1971,7 @@ const slide7AssumptionsTable = computed(() => {
             'Audited FY2024 vs FY2023: Rp 15.89T vs Rp 14.79T.',
             'Audited FY2025 vs FY2024: Rp 18.32T vs Rp 15.89T (Note 25).',
             'Held at FY2025 post-Tokopedia YoY growth (excludes 2023).',
-            'Upside FinTech & On-Demand momentum (+273 bps above Base).',
+            'Upside FinTech & On-Demand momentum (+2.73% above Base).',
             'Reverts to GoTo\'s FY2024 post-exit transition growth floor.',
           ],
           [
@@ -1951,9 +1985,9 @@ const slide7AssumptionsTable = computed(() => {
           [
             'Operating costs excl. non-cash D&A (G&A, S&M, R&D, Ops; Note 26).',
             'Audited FY2024: Cash OpEx Rp 9,978B ÷ Revenue Rp 15,894B.',
-            'Audited FY2025: Cash OpEx Rp 10,206B ÷ Revenue Rp 18,322B (−708 bps YoY).',
-            'Held at FY2025 recurring ratio (202 bps below Gross Margin).',
-            'From GoTo 1H 2026 interim cost ratio (−450 bps vs Base).',
+            'Audited FY2025: Cash OpEx Rp 10,206B ÷ Revenue Rp 18,322B (−7.08% YoY).',
+            'Held at FY2025 recurring ratio (2.02% below Gross Margin).',
+            'From GoTo 1H 2026 interim cost ratio (−4.50% vs Base).',
             'Reverts to FY2024 spending if promo intensity returns.',
           ],
           [
@@ -2002,9 +2036,9 @@ const slide10SensitivityTables = computed(() => {
       : 'Base DCF Sensitivity Matrix: WACC × Terminal Growth g (Rp / share · Table 16)',
     gridHeaders: ['WACC \\ g', '1.0%', '2.0%', '3.0% (Base)', '3.5%', '4.0%'],
     gridRows: [
-      ['6.76% (−100 bps)', 'Rp 10.68', 'Rp 10.33', 'Rp 9.79', 'Rp 9.40', 'Rp 8.86'],
+      ['6.76% (−1.00%)', 'Rp 10.68', 'Rp 10.33', 'Rp 9.79', 'Rp 9.40', 'Rp 8.86'],
       ['7.76% (Baseline)', 'Rp 10.97', 'Rp 10.73', 'Rp 10.38', 'Rp 10.15', 'Rp 9.85'],
-      ['8.76% (+100 bps)', 'Rp 11.18', 'Rp 11.00', 'Rp 10.77', 'Rp 10.61', 'Rp 10.43'],
+      ['8.76% (+1.00%)', 'Rp 11.18', 'Rp 11.00', 'Rp 10.77', 'Rp 10.61', 'Rp 10.43'],
     ],
     gridNote: id
       ? 'Nilai DCF bergerak sempit di Rp 8,86–Rp 11,18/saham. WACC lebih tinggi sedikit menaikkan DCF karena diskonto mengecilkan Enterprise Value negatif (−Rp 2,99T) terhadap Kas Bersih Rp 14,01T.'
@@ -2475,7 +2509,12 @@ const modalAbbrGlossary = computed(() => {
                     </div>
                     <div class="glass-vchart-plot">
                       <template v-for="(bar, bIdx) in vc.bars" :key="bar.label">
-                        <div class="glass-vchart-col">
+                        <div
+                          class="glass-vchart-col is-hoverable"
+                          @mouseenter="setHoveredBar(`${vc.title} (${bar.label})`, bar.display, bar.cause || vc.note, $event)"
+                          @mousemove="moveHoveredBar($event)"
+                          @mouseleave="clearHoveredBar()"
+                        >
                           <span
                             class="glass-vchart-val"
                             :class="{ 'is-warn': bar.warn || (!bar.goodNeg && String(bar.display).startsWith('−')), 'is-accent': bar.accent, 'is-amber': bar.amber }"
@@ -2517,7 +2556,14 @@ const modalAbbrGlossary = computed(() => {
                         <span class="glass-dupont-axis-tag">%</span>
                       </div>
                       <div class="glass-dupont-hrows">
-                        <div v-for="row in svgChartData.rows" :key="`m-${row.label}`" class="glass-dupont-hrow">
+                        <div
+                          v-for="row in svgChartData.rows"
+                          :key="`m-${row.label}`"
+                          class="glass-dupont-hrow is-hoverable"
+                          @mouseenter="setHoveredBar(row.label, `Margin ${row.marginDisp}`, row.cause, $event)"
+                          @mousemove="moveHoveredBar($event)"
+                          @mouseleave="clearHoveredBar()"
+                        >
                           <span class="glass-dupont-rlbl">{{ row.label }}</span>
                           <div class="glass-dupont-htrack">
                             <span class="glass-dupont-zero" :style="{ left: svgChartData.marginZeroPct }"></span>
@@ -2542,7 +2588,14 @@ const modalAbbrGlossary = computed(() => {
                         </div>
                       </div>
                       <div class="glass-dupont-vplot">
-                        <div v-for="row in svgChartData.rows" :key="`el-${row.label}`" class="glass-dupont-vgroup">
+                        <div
+                          v-for="row in svgChartData.rows"
+                          :key="`el-${row.label}`"
+                          class="glass-dupont-vgroup is-hoverable"
+                          @mouseenter="setHoveredBar(row.label, `ATO ${row.turnoverDisp} · EM ${row.leverageDisp}`, row.cause, $event)"
+                          @mousemove="moveHoveredBar($event)"
+                          @mouseleave="clearHoveredBar()"
+                        >
                           <div class="glass-dupont-vpair">
                             <div class="glass-dupont-vcol">
                               <span class="glass-dupont-vval">{{ row.turnoverDisp }}</span>
@@ -2569,7 +2622,14 @@ const modalAbbrGlossary = computed(() => {
                         <span class="glass-dupont-axis-tag">ROE %</span>
                       </div>
                       <div class="glass-dupont-hrows">
-                        <div v-for="row in svgChartData.rows" :key="`r-${row.label}`" class="glass-dupont-hrow">
+                        <div
+                          v-for="row in svgChartData.rows"
+                          :key="`r-${row.label}`"
+                          class="glass-dupont-hrow is-hoverable"
+                          @mouseenter="setHoveredBar(row.label, `ROE ${row.roeDisp}`, row.cause, $event)"
+                          @mousemove="moveHoveredBar($event)"
+                          @mouseleave="clearHoveredBar()"
+                        >
                           <span class="glass-dupont-rlbl">{{ row.label }}</span>
                           <div class="glass-dupont-htrack">
                             <span class="glass-dupont-zero" :style="{ left: svgChartData.roeZeroPct }"></span>
@@ -2596,7 +2656,15 @@ const modalAbbrGlossary = computed(() => {
                 >
                   <!-- Horizontal Bars -->
                   <template v-if="svgChartData.mode === 'horizontal'">
-                    <g v-for="(r, idx) in svgChartData.rows" :key="r.label">
+                    <g
+                      v-for="(r, idx) in svgChartData.rows"
+                      :key="r.label"
+                      class="svg-hover-row"
+                      @mouseenter="setHoveredBar(r.label, r.display, r.cause, $event)"
+                      @mousemove="moveHoveredBar($event)"
+                      @mouseleave="clearHoveredBar()"
+                    >
+                      <rect x="0" :y="r.y - 2" :width="svgChartData.W" height="32" rx="6" class="svg-hit-row" />
                       <text x="0" :y="r.y + 18" class="svg-lbl">{{ r.label }}</text>
                       <rect :x="svgChartData.labelW" :y="r.y + 3" :width="svgChartData.plotW" height="22" rx="5" class="svg-track" />
                       <rect
@@ -2634,7 +2702,15 @@ const modalAbbrGlossary = computed(() => {
                         {{ chartConfig.refLine.label }}
                       </text>
                     </template>
-                    <g v-for="(r, idx) in svgChartData.rows" :key="r.label">
+                    <g
+                      v-for="(r, idx) in svgChartData.rows"
+                      :key="r.label"
+                      class="svg-hover-row"
+                      @mouseenter="setHoveredBar(r.label, r.display, r.cause, $event)"
+                      @mousemove="moveHoveredBar($event)"
+                      @mouseleave="clearHoveredBar()"
+                    >
+                      <rect x="0" :y="r.y - 2" :width="svgChartData.W" height="32" rx="6" class="svg-hit-row" />
                       <text x="0" :y="r.y + 18" class="svg-lbl">{{ r.label }}</text>
                       <rect
                         :x="r.x"
@@ -2657,7 +2733,15 @@ const modalAbbrGlossary = computed(() => {
 
                   <!-- Grouped Comparison Bars -->
                   <template v-else-if="svgChartData.mode === 'grouped'">
-                    <g v-for="(r, idx) in svgChartData.rows" :key="r.label">
+                    <g
+                      v-for="(r, idx) in svgChartData.rows"
+                      :key="r.label"
+                      class="svg-hover-row"
+                      @mouseenter="setHoveredBar(r.label, `${r.displayA} → ${r.displayB}`, r.cause, $event)"
+                      @mousemove="moveHoveredBar($event)"
+                      @mouseleave="clearHoveredBar()"
+                    >
+                      <rect x="0" :y="r.y - 2" :width="svgChartData.W" height="38" rx="6" class="svg-hit-row" />
                       <text x="0" :y="r.y + 21" class="svg-lbl">{{ r.label }}</text>
                       <rect :x="svgChartData.labelW" :y="r.y + 2" :width="r.wA" height="13" rx="3.5" class="svg-bar-old svg-anim-bar" :style="{ animationDelay: `${idx * 55}ms` }" />
                       <text :x="svgChartData.labelW + r.wA + 8" :y="r.y + 13" class="svg-val-sm">{{ r.displayA }}</text>
@@ -2694,7 +2778,14 @@ const modalAbbrGlossary = computed(() => {
                       <span class="glass-yoy-delta" :class="`tone-${card.tone}`">{{ card.delta }}</span>
                     </div>
                     <div class="glass-vchart-plot">
-                      <div v-for="(b, bIdx) in card.bars" :key="b.yr" class="glass-vchart-col">
+                      <div
+                        v-for="(b, bIdx) in card.bars"
+                        :key="b.yr"
+                        class="glass-vchart-col is-hoverable"
+                        @mouseenter="setHoveredBar(`${card.title} (${b.yr})`, b.val, b.cause || card.note || `${card.title}: ${card.delta}`, $event)"
+                        @mousemove="moveHoveredBar($event)"
+                        @mouseleave="clearHoveredBar()"
+                      >
                         <span
                           class="glass-vchart-val"
                           :class="{
@@ -2818,21 +2909,27 @@ const modalAbbrGlossary = computed(() => {
                     </div>
                     <div class="glass-vchart-plot">
                       <template v-for="(b, bIdx) in card.bars" :key="b.yr">
-                        <div class="glass-vchart-col">
+                        <div
+                          class="glass-vchart-col is-hoverable"
+                          @mouseenter="setHoveredBar(`${card.title} (${b.yr})`, b.val, b.cause || card.note || `${card.title}: ${card.delta}`, $event)"
+                          @mousemove="moveHoveredBar($event)"
+                          @mouseleave="clearHoveredBar()"
+                        >
                           <span
                             class="glass-vchart-val"
                             :class="{
-                              'is-warn': String(b.val).startsWith('−') || (card.tone === 'warn' && b.current),
-                              'is-accent': !String(b.val).startsWith('−') && card.tone !== 'warn' && b.current,
+                              'is-warn': b.warn || String(b.val).startsWith('−') || (card.tone === 'warn' && b.current),
+                              'is-accent': !b.warn && (b.good || (!String(b.val).startsWith('−') && card.tone !== 'warn' && b.current)),
+                              'is-amber': b.amber,
                             }"
                           >{{ b.val }}</span>
                           <div class="glass-vchart-bar-wrap">
                             <span
                               class="glass-vchart-bar"
                               :class="[
-                                card.tone === 'warn' || String(b.val).startsWith('−') ? 'is-warn' : '',
-                                !String(b.val).startsWith('−') && b.current && card.tone === 'pos' ? 'is-accent' : '',
-                                !String(b.val).startsWith('−') && b.current && card.tone === 'accent' ? 'is-amber' : '',
+                                b.warn || card.tone === 'warn' || String(b.val).startsWith('−') ? 'is-warn' : '',
+                                !b.warn && (b.good || (!String(b.val).startsWith('−') && b.current && card.tone === 'pos')) ? 'is-accent' : '',
+                                b.amber || (!b.warn && !String(b.val).startsWith('−') && b.current && card.tone === 'accent') ? 'is-amber' : '',
                               ]"
                               :style="{ height: `${Math.max(14, b.pct)}%`, animationDelay: `${yIdx * 55 + bIdx * 50}ms` }"
                             ></span>
@@ -3261,6 +3358,18 @@ const modalAbbrGlossary = computed(() => {
           </span>
         </footer>
       </section>
+      <div
+        v-if="hoveredBar"
+        class="glass-float-tooltip"
+        :style="{ left: `${tooltipPos.x}px`, top: `${tooltipPos.y}px` }"
+        role="tooltip"
+      >
+        <div class="glass-ft-hdr">
+          <strong>{{ hoveredBar.label }}</strong>
+          <span class="glass-ft-val">{{ hoveredBar.value }}</span>
+        </div>
+        <p class="glass-ft-cause">{{ hoveredBar.cause }}</p>
+      </div>
       </div>
     </Transition>
   </Teleport>
@@ -5229,5 +5338,90 @@ const modalAbbrGlossary = computed(() => {
 .glass-vchart-bar.is-amber {
   background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
   box-shadow: 0 4px 14px rgba(245, 158, 11, 0.28);
+}
+
+/* Floating Mouse-Following Tooltip */
+.glass-float-tooltip {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  width: max-content;
+  max-width: 330px;
+  transform: translate(-50%, calc(-100% - 14px));
+  background: rgba(6, 28, 18, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(52, 211, 153, 0.48);
+  border-radius: 11px;
+  padding: 9px 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.58);
+}
+
+.glass-float-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: rgba(52, 211, 153, 0.48) transparent transparent transparent;
+}
+
+.glass-ft-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.glass-ft-hdr strong {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ecfdf5;
+}
+
+.glass-ft-val {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #6ee7b7;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.glass-ft-cause {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #d1fae5;
+}
+
+.is-hoverable {
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s ease, transform 0.15s ease, filter 0.15s ease;
+}
+
+.is-hoverable:hover {
+  background: rgba(52, 211, 153, 0.09);
+  filter: brightness(1.08);
+}
+
+.svg-hover-row {
+  cursor: pointer;
+}
+
+.svg-hit-row {
+  fill: transparent;
+  transition: fill 0.15s ease;
+}
+
+.svg-hover-row:hover .svg-hit-row {
+  fill: rgba(52, 211, 153, 0.1);
+}
+
+.svg-hover-row:hover .svg-anim-bar {
+  filter: brightness(1.14);
 }
 </style>
