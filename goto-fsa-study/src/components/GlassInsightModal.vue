@@ -2132,11 +2132,87 @@ const slide8ForecastTable = computed(() => {
   }
 })
 
-// Slide 10: Restated Sensitivity Analysis (2D WACC x g Grid + Beta / WACC / RI Boundary Checks, Table 16)
+// Slide 10: Restated Sensitivity Analysis (TV/PV Calculation Bridges + 2D WACC x g Grid + Beta / WACC / RI Boundary Checks, Table 16)
 const slide10SensitivityTables = computed(() => {
   if (props.item.slide?.slide_num !== 10) return null
   const id = isId.value
   return {
+    dcfBridgeTitle: id
+      ? 'Perhitungan Langkah-demi-Langkah DCF: FCFF, PV & Terminal Value (WACC 7,761% · g 3,00%)'
+      : 'DCF Step-by-Step Calculation: FCFF, PV & Terminal Value (WACC 7.761% · g 3.00%)',
+    dcfBridgeHeaders: id
+      ? ['Tahap Perhitungan', 'Rumus & Substitusi', 'Hasil (Rp Miliar)']
+      : ['Calculation Step', 'Formula & Substitution', 'Result (Rp Billion)'],
+    dcfBridgeRows: [
+      [
+        id ? '1. FCFF Tahunan (2026F–2028F)' : '1. Annual FCFF (2026F–2028F)',
+        'NOPAT + D&A − CapEx + ΔNWC → 2026F: 332.9 + 273.1 − 1,362.9 + 105.8 | 2027F: 383.8 + 751.4 − 1,571.1 + 122.0 | 2028F: 442.4 + 1,111.1 − 1,811.1 + 140.6',
+        '−651.0 | −313.9 | −116.9',
+      ],
+      [
+        id ? '2. PV FCFF 3 Tahun (Eksplisit)' : '2. PV of 3-Yr Explicit FCFF',
+        '−651.0÷1.07761¹ (−604.1) + −313.9÷1.07761² (−270.3) + −116.9÷1.07761³ (−93.4)',
+        '−967.9',
+      ],
+      [
+        id ? '3. Terminal Value (TV di Akhir 2028F)' : '3. Terminal Value (TV at End of 2028F)',
+        'FCFF₂₀₂₈ × (1 + g) ÷ (WACC − g) = −116.88 × 1.03 ÷ (7.761% − 3.00%) = −120.38 ÷ 4.761%',
+        '−2,528.6',
+      ],
+      [
+        id ? '4. Present Value of TV (PV TV)' : '4. Present Value of TV (PV of TV)',
+        'TV ÷ (1 + WACC)³ = −2,528.6 ÷ (1.07761)³ = −2,528.6 × 0.7991  (TV Share = 67.6% of EV)',
+        '−2,020.6',
+      ],
+      [
+        id ? '5. Enterprise Value (EV)' : '5. Enterprise Value (EV)',
+        'PV FCFF 3 Thn (−967.9) + PV of TV (−2,020.6)',
+        '−2,988.5',
+      ],
+      [
+        id ? '6. Nilai Ekuitas & Nilai per Saham' : '6. Equity Value & Value per Share',
+        'EV (−2,988.5) + Net Cash (+14,012.5) = +11,024.0B ÷ 1,062.01B shares',
+        '+Rp 10.38 / sh',
+      ],
+    ],
+    riBridgeTitle: id
+      ? 'Perhitungan Langkah-demi-Langkah Residual Income: RI, PV & Terminal Value (Ke 8,452% · g 3,00%)'
+      : 'Residual Income Step-by-Step Calculation: RI, PV & Terminal Value (Ke 8.452% · g 3.00%)',
+    riBridgeHeaders: id
+      ? ['Tahap Perhitungan', 'Rumus & Substitusi', 'Hasil (Rp Miliar)']
+      : ['Calculation Step', 'Formula & Substitution', 'Result (Rp Billion)'],
+    riBridgeRows: [
+      [
+        id ? '1. Residual Income Tahunan (2026F–2028F)' : '1. Annual Residual Income (2026F–2028F)',
+        'NI − (Beg. BVE × 8.452%) → 2026F: −84.5 − 2,426.7 | 2027F: −33.6 − 2,419.6 | 2028F: +25.0 − 2,416.7',
+        '−2,511.2 | −2,453.2 | −2,391.7',
+      ],
+      [
+        id ? '2. PV RI 3 Tahun (Eksplisit)' : '2. PV of 3-Yr Explicit RI',
+        '−2,511.2÷1.08452¹ (−2,315.5) + −2,453.2÷1.08452² (−2,085.7) + −2,391.7÷1.08452³ (−1,875.0)',
+        '−6,276.2',
+      ],
+      [
+        id ? '3. Terminal Value RI (TV di Akhir 2028F)' : '3. Terminal Value of RI (TV at End of 2028F)',
+        'RI₂₀₂₈ × (1 + g) ÷ (Ke − g) = −2,391.74 × 1.03 ÷ (8.452% − 3.00%) = −2,463.49 ÷ 5.452%',
+        '−45,184.7',
+      ],
+      [
+        id ? '4. Present Value of Terminal RI (PV TV)' : '4. Present Value of Terminal RI (PV of TV)',
+        'TV ÷ (1 + Ke)³ = −45,184.7 ÷ (1.08452)³ = −45,184.7 × 0.7839  (TV Share = 85.0% of Total PV)',
+        '−35,422.4',
+      ],
+      [
+        id ? '5. Total PV Residual Income' : '5. Total PV of Residual Income',
+        'PV RI 3 Thn (−6,276.2) + PV Terminal RI (−35,422.4)',
+        '−41,698.6',
+      ],
+      [
+        id ? '6. Nilai Ekuitas & Nilai per Saham' : '6. Equity Value & Value per Share',
+        'Beg. BVE (+28,711.7) + Total PV(RI) (−41,698.6) = −12,987.0B ÷ 1,062.01B shares',
+        '−Rp 12.23 / sh',
+      ],
+    ],
     gridTitle: id
       ? 'Uji Sensitivitas DCF Base Case: WACC × Pertumbuhan Terminal g (Rp / saham · Tabel 16)'
       : 'Base DCF Sensitivity Matrix: WACC × Terminal Growth g (Rp / share · Table 16)',
@@ -3281,8 +3357,62 @@ const modalAbbrGlossary = computed(() => {
                   <div class="glass-cursor-tip-body">{{ hoverTip.detail }}</div>
                 </div>
               </Teleport>
-              <!-- Slide 10: Restated Sensitivity Analysis (2D WACC x g + Beta & RI Checks) -->
+              <!-- Slide 10: Restated Sensitivity Analysis (TV/PV Calculation Bridges + 2D WACC x g + Beta & RI Checks) -->
               <template v-if="slide10SensitivityTables">
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="8" x2="10" y1="11" y2="11" /><line x1="14" x2="16" y1="11" y2="11" /><line x1="8" x2="10" y1="15" y2="15" /><line x1="14" x2="16" y1="15" y2="15" /><line x1="8" x2="16" y1="19" y2="19" />
+                    </svg>
+                    <span>{{ slide10SensitivityTables.dcfBridgeTitle }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-assumptions-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide10SensitivityTables.dcfBridgeHeaders" :key="hIdx">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          v-for="(row, rIdx) in slide10SensitivityTables.dcfBridgeRows"
+                          :key="rIdx"
+                          :class="{ 'is-base-row': rIdx === 3 || rIdx === 5 }"
+                        >
+                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="glass-card glass-assumptions-card">
+                  <div class="glass-sec-label">
+                    <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="8" x2="10" y1="11" y2="11" /><line x1="14" x2="16" y1="11" y2="11" /><line x1="8" x2="10" y1="15" y2="15" /><line x1="14" x2="16" y1="15" y2="15" /><line x1="8" x2="16" y1="19" y2="19" />
+                    </svg>
+                    <span>{{ slide10SensitivityTables.riBridgeTitle }}</span>
+                  </div>
+                  <div class="glass-table-scroll">
+                    <table class="glass-data-table glass-assumptions-tbl">
+                      <thead>
+                        <tr>
+                          <th v-for="(h, hIdx) in slide10SensitivityTables.riBridgeHeaders" :key="hIdx">{{ h }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          v-for="(row, rIdx) in slide10SensitivityTables.riBridgeRows"
+                          :key="rIdx"
+                          :class="{ 'is-base-row': rIdx === 3 || rIdx === 5 }"
+                        >
+                          <td v-for="(cell, cIdx) in row" :key="cIdx">{{ cell }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
                 <div class="glass-card glass-assumptions-card">
                   <div class="glass-sec-label">
                     <svg class="glass-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
